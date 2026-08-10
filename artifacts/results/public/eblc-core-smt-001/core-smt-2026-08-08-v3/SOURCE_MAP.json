@@ -1,0 +1,271 @@
+{
+  "clauses": {
+    "admissible_action_partition": {
+      "assertion_ids": [
+        "clause__admissible_action_partition__t0",
+        "clause__admissible_action_partition__t1",
+        "clause__admissible_action_partition__t2",
+        "clause__admissible_action_partition__t3",
+        "clause__admissible_action_partition__t4"
+      ],
+      "compiled": true,
+      "description": "At least one stop/progress action class remains admissible.",
+      "enforcement": "EACH_FRAME",
+      "kind": "PROGRESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "bind_deceleration": {
+      "assertion_ids": [
+        "clause__bind_deceleration__t0"
+      ],
+      "compiled": true,
+      "description": "Synthetic service deceleration, not a vehicle assurance claim.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    "bind_position_uncertainty": {
+      "assertion_ids": [
+        "clause__bind_position_uncertainty__t0"
+      ],
+      "compiled": true,
+      "description": "Synthetic position uncertainty, not a vehicle assurance claim.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    "bind_release_threshold": {
+      "assertion_ids": [
+        "clause__bind_release_threshold__t0"
+      ],
+      "compiled": true,
+      "description": "Two consecutive clear frames release the obligation.",
+      "enforcement": "INITIAL",
+      "kind": "RELEASE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "bind_response_time": {
+      "assertion_ids": [
+        "clause__bind_response_time__t0"
+      ],
+      "compiled": true,
+      "description": "Synthetic response time, not a vehicle assurance claim.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    "bind_stop_position": {
+      "assertion_ids": [
+        "clause__bind_stop_position__t0"
+      ],
+      "compiled": true,
+      "description": "Synthetic stop position for mechanism testing.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "clear_count_nonnegative": {
+      "assertion_ids": [
+        "clause__clear_count_nonnegative__t0",
+        "clause__clear_count_nonnegative__t1",
+        "clause__clear_count_nonnegative__t2",
+        "clause__clear_count_nonnegative__t3",
+        "clause__clear_count_nonnegative__t4"
+      ],
+      "compiled": true,
+      "description": "Clear-evidence counter is nonnegative.",
+      "enforcement": "EACH_FRAME",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "clear_count_transition": {
+      "assertion_ids": [
+        "clause__clear_count_transition__t0",
+        "clause__clear_count_transition__t1",
+        "clause__clear_count_transition__t2",
+        "clause__clear_count_transition__t3"
+      ],
+      "compiled": true,
+      "description": "Count consecutive false hazard frames only while the obligation is live.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "RELEASE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "dynamic_stopping_bound": {
+      "assertion_ids": [],
+      "compiled": false,
+      "description": "Property under test: reaction plus braking distance fits available distance.",
+      "enforcement": "DECLARATIVE",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    "enforce_allowed_transition": {
+      "assertion_ids": [
+        "clause__enforce_allowed_transition__t0",
+        "clause__enforce_allowed_transition__t1",
+        "clause__enforce_allowed_transition__t2",
+        "clause__enforce_allowed_transition__t3"
+      ],
+      "compiled": true,
+      "description": "All generated lifecycle transitions must use an allowed edge.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    "exclude_conflicting_fixture": {
+      "assertion_ids": [
+        "clause__exclude_conflicting_fixture__t0",
+        "clause__exclude_conflicting_fixture__t1",
+        "clause__exclude_conflicting_fixture__t2",
+        "clause__exclude_conflicting_fixture__t3",
+        "clause__exclude_conflicting_fixture__t4"
+      ],
+      "compiled": true,
+      "description": "The bounded lifecycle queries exclude conflict verdict handling.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ASSUMPTION",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    "initial_clear_count": {
+      "assertion_ids": [
+        "clause__initial_clear_count__t0"
+      ],
+      "compiled": true,
+      "description": "Clear-evidence counter starts at zero.",
+      "enforcement": "INITIAL",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "initial_state": {
+      "assertion_ids": [
+        "clause__initial_state__t0"
+      ],
+      "compiled": true,
+      "description": "Lifecycle starts inactive.",
+      "enforcement": "INITIAL",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "lifecycle_transition": {
+      "assertion_ids": [
+        "clause__lifecycle_transition__t0",
+        "clause__lifecycle_transition__t1",
+        "clause__lifecycle_transition__t2",
+        "clause__lifecycle_transition__t3"
+      ],
+      "compiled": true,
+      "description": "Activation, maintenance, release, reactivation and approved UNKNOWN fallback.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "stop_position_invariant": {
+      "assertion_ids": [],
+      "compiled": false,
+      "description": "Property under test: a live obligation must not pass the stop position.",
+      "enforcement": "DECLARATIVE",
+      "kind": "INVARIANT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "transition_allowed_definition": {
+      "assertion_ids": [
+        "clause__transition_allowed_definition__t0",
+        "clause__transition_allowed_definition__t1",
+        "clause__transition_allowed_definition__t2",
+        "clause__transition_allowed_definition__t3"
+      ],
+      "compiled": true,
+      "description": "Independent allowed-edge relation used by the consistency query.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    }
+  },
+  "compiler_version": "eblc-core-smt-compiler-v0.1",
+  "grammar_version": "eblc-core-v0.1",
+  "model_id": "p0b_pedestrian_conflict_zone_core",
+  "queries": {
+    "active_stop_position_violation": {
+      "classification": "UNDERCONSTRAINT",
+      "description": "Find a trace that violates the declarative stop-position invariant while active.",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    "clear_counter_always_nonnegative": {
+      "classification": "BOUNDARY",
+      "description": "Exercise bounded always over the nonnegative counter invariant.",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    "dynamic_stopping_bound_violation": {
+      "classification": "UNDERCONSTRAINT",
+      "description": "Find a live trace whose stopping demand exceeds available distance.",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    "inactive_until_activation": {
+      "classification": "EXAMPLE",
+      "description": "Exercise bounded until with a delayed activation witness.",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    "lifecycle_transition_inconsistency": {
+      "classification": "CONSISTENCY",
+      "description": "Search for a lifecycle edge outside the allowed relation.",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    "missing_reactivation": {
+      "classification": "UNDERCONSTRAINT",
+      "description": "Search for released hazard reappearance without reactivation.",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    "safe_progress_false_deadlock": {
+      "classification": "OVERCONSTRAINT",
+      "description": "Search for an empty admissible set despite an available safe-progress action.",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    }
+  }
+}

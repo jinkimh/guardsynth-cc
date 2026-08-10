@@ -1,0 +1,91 @@
+{
+  "program_version": "eblc-program-v0.2",
+  "program_id": "p0b_pedestrian_conflict_zone_program_v02",
+  "frames": 8,
+  "claim_scope": "P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY",
+  "source_refs": [
+    "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+    "P0B-SYNTHETIC-PREDICATE-SPEC-v0",
+    "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+    "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+  ],
+  "binding": {
+    "contract_id": "EBLC-P0B-PED-CZ-0001",
+    "rule_id": "P0B-SYS-PED-CZ-001",
+    "subject_id": "ego",
+    "target_entity_id": "synthetic-pedestrian:P17",
+    "zone_id": "synthetic-zone:CZ4",
+    "coordinate_frame": "ego_path_s",
+    "distance_unit": "m",
+    "evidence_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"]
+  },
+  "predicate": {
+    "predicate_id": "pedestrian_conflict",
+    "allowed_epistemic": ["OBSERVED", "PREDICTED", "DERIVED"],
+    "maximum_age_s": 0.2,
+    "failure_value": "UNKNOWN",
+    "evidence_refs": ["P0B-SYNTHETIC-PREDICATE-SPEC-v0"]
+  },
+  "lifecycle": {
+    "initial_state": "INACTIVE",
+    "release_clear_frames": 2,
+    "release_enabled": true,
+    "reactivation_enabled": true,
+    "fallback_action": "HOLD_PRIOR_LIVE_OBLIGATION_ON_FRESH_UNKNOWN",
+    "fallback_approved": true,
+    "unknown_policy": "APPROVED_HOLD",
+    "always_active": false,
+    "expiry_timestamp_s": null,
+    "evidence_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"]
+  },
+  "constraints": {
+    "position_uncertainty": {"value": 0.5, "unit": "m", "frame": "ego_path_s", "evidence_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0"]},
+    "response_time": {"value": 0.5, "unit": "s", "frame": null, "evidence_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0"]},
+    "deceleration": {"value": 3.0, "unit": "m/s^2", "frame": "ego_path_s", "evidence_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0"]},
+    "enforce_invariant": true,
+    "position_epsilon": {"value": 0.000000001, "unit": "m", "frame": "ego_path_s", "evidence_refs": ["P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"]},
+    "speed_epsilon": {"value": 0.000000001, "unit": "m/s", "frame": "ego_path_s", "evidence_refs": ["P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"]},
+    "time_epsilon": {"value": 0.000000001, "unit": "s", "frame": null, "evidence_refs": ["P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"]},
+    "force_deadlock": false
+  },
+  "typed_derivation": {
+    "derivation_version": "eblc-derivation-v0.1",
+    "derivation_id": "p0b_full_stopping_derivation",
+    "horizon": 9,
+    "claim_scope": "P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY",
+    "source_refs": [
+      "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+      "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+      "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+    ],
+    "symbols": [
+      {"symbol_id": "zone_entry_x", "kind": "SOURCED_VALUE", "sort": "REAL", "time_varying": false, "value": 0.0, "core_name": null, "unit": "m", "frame": "ego_path_s", "evidence_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"]},
+      {"symbol_id": "stop_margin", "kind": "SOURCED_VALUE", "sort": "REAL", "time_varying": false, "value": 1.5, "core_name": null, "unit": "m", "frame": "ego_path_s", "evidence_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"]},
+      {"symbol_id": "factor_two", "kind": "SOURCED_VALUE", "sort": "REAL", "time_varying": false, "value": 2.0, "core_name": null, "unit": "1", "frame": null, "evidence_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0"]},
+      {"symbol_id": "zero_speed", "kind": "SOURCED_VALUE", "sort": "REAL", "time_varying": false, "value": 0.0, "core_name": null, "unit": "m/s", "frame": "ego_path_s", "evidence_refs": ["P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"]},
+      {"symbol_id": "ego_speed", "kind": "CORE_VARIABLE", "sort": "REAL", "time_varying": true, "value": null, "core_name": "ego_speed", "unit": "m/s", "frame": "ego_path_s", "evidence_refs": ["P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"]},
+      {"symbol_id": "speed_epsilon", "kind": "CORE_VARIABLE", "sort": "REAL", "time_varying": false, "value": null, "core_name": "speed_epsilon", "unit": "m/s", "frame": "ego_path_s", "evidence_refs": ["P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"]},
+      {"symbol_id": "response_time", "kind": "CORE_VARIABLE", "sort": "REAL", "time_varying": false, "value": null, "core_name": "response_time", "unit": "s", "frame": null, "evidence_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0"]},
+      {"symbol_id": "deceleration", "kind": "CORE_VARIABLE", "sort": "REAL", "time_varying": false, "value": null, "core_name": "deceleration", "unit": "m/s^2", "frame": "ego_path_s", "evidence_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0"]}
+    ],
+    "nodes": [
+      {"node_id": "stop_position", "operation": "SUB", "inputs": ["symbol:zone_entry_x", "symbol:stop_margin"], "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"]},
+      {"node_id": "adjusted_speed", "operation": "SUB", "inputs": ["symbol:ego_speed", "symbol:speed_epsilon"], "source_refs": ["P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"]},
+      {"node_id": "effective_speed", "operation": "MAX", "inputs": ["node:adjusted_speed", "symbol:zero_speed"], "source_refs": ["P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"]},
+      {"node_id": "response_distance", "operation": "MUL", "inputs": ["node:effective_speed", "symbol:response_time"], "source_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0", "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"]},
+      {"node_id": "speed_squared", "operation": "MUL", "inputs": ["node:effective_speed", "node:effective_speed"], "source_refs": ["P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"]},
+      {"node_id": "twice_deceleration", "operation": "MUL", "inputs": ["symbol:factor_two", "symbol:deceleration"], "source_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0"]},
+      {"node_id": "braking_distance", "operation": "DIV", "inputs": ["node:speed_squared", "node:twice_deceleration"], "source_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0", "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"]},
+      {"node_id": "stopping_distance", "operation": "ADD", "inputs": ["node:response_distance", "node:braking_distance"], "source_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0", "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"]}
+    ],
+    "outputs": [
+      {"output_id": "stop_position", "node_ref": "node:stop_position", "target_declaration": "stop_position", "sort": "REAL", "time_varying": false, "unit": "m", "frame": "ego_path_s", "replace_clause_ids": [], "evidence_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"]},
+      {"output_id": "stopping_distance", "node_ref": "node:stopping_distance", "target_declaration": "stopping_distance", "sort": "REAL", "time_varying": true, "unit": "m", "frame": "ego_path_s", "replace_clause_ids": [], "evidence_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0", "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"]}
+    ]
+  },
+  "priority": {
+    "class": "MANDATORY_SYSTEM",
+    "overrides": ["ROUTE_PROGRESS", "COMFORT_SERVICE", "STATISTICAL_HEURISTIC"],
+    "evidence_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"]
+  }
+}

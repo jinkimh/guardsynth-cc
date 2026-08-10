@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+  <declaration>// Milliseconds relative to the observed first trusted DECELERATE request.
+const int DECEL_DEADLINE = 3000;
+const int STOP_DEADLINE = 1500;
+const int RECOVER_DEADLINE = 1500;
+clock episode;
+broadcast chan decel_req, decel_ack, stop_req, stop_ack;
+broadcast chan clearance, recover_req, recover_ack;
+bool clearance_granted = false;
+bool premature_recovery = false;</declaration>
+  <template>
+    <name>ScenarioSource</name>
+    <declaration />
+    <location id="s0" x="0" y="0">
+      <name x="-20" y="-30">Before1</name>
+      <label kind="invariant" x="-20" y="20">episode &lt;= 0</label>
+    </location>
+    <location id="s1" x="150" y="0">
+      <name x="130" y="-30">Before2</name>
+      <label kind="invariant" x="130" y="20">episode &lt;= 2160</label>
+    </location>
+    <location id="s2" x="300" y="0">
+      <name x="280" y="-30">Before3</name>
+      <label kind="invariant" x="280" y="20">episode &lt;= 5000</label>
+    </location>
+    <location id="s3" x="450" y="0">
+      <name x="430" y="-30">Before4</name>
+      <label kind="invariant" x="430" y="20">episode &lt;= 6400</label>
+    </location>
+    <location id="s4" x="600" y="0">
+      <name x="580" y="-30">Before5</name>
+      <label kind="invariant" x="580" y="20">episode &lt;= 8000</label>
+    </location>
+    <location id="s5" x="750" y="0">
+      <name x="730" y="-30">Before6</name>
+      <label kind="invariant" x="730" y="20">episode &lt;= 8100</label>
+    </location>
+    <location id="s6" x="900" y="0">
+      <name x="880" y="-30">Done</name>
+    </location>
+    <init ref="s0" />
+    <transition>
+      <source ref="s0" />
+      <target ref="s1" />
+      <label kind="guard" x="0" y="0">episode == 0</label>
+      <label kind="synchronisation" x="0" y="20">decel_req!</label>
+    </transition>
+    <transition>
+      <source ref="s1" />
+      <target ref="s2" />
+      <label kind="guard" x="0" y="0">episode == 2160</label>
+      <label kind="synchronisation" x="0" y="20">decel_ack!</label>
+    </transition>
+    <transition>
+      <source ref="s2" />
+      <target ref="s3" />
+      <label kind="guard" x="0" y="0">episode == 5000</label>
+      <label kind="synchronisation" x="0" y="20">stop_req!</label>
+    </transition>
+    <transition>
+      <source ref="s3" />
+      <target ref="s4" />
+      <label kind="guard" x="0" y="0">episode == 6400</label>
+      <label kind="synchronisation" x="0" y="20">stop_ack!</label>
+    </transition>
+    <transition>
+      <source ref="s4" />
+      <target ref="s5" />
+      <label kind="guard" x="0" y="0">episode == 8000</label>
+      <label kind="synchronisation" x="0" y="20">clearance!</label>
+    </transition>
+    <transition>
+      <source ref="s5" />
+      <target ref="s6" />
+      <label kind="guard" x="0" y="0">episode == 8100</label>
+      <label kind="synchronisation" x="0" y="20">recover_req!</label>
+    </transition>
+    <transition>
+      <source ref="s6" />
+      <target ref="s6" />
+    </transition>
+  </template>
+  <template>
+    <name>ChainProtocol</name>
+    <declaration />
+    <location id="p0" x="0" y="250">
+      <name x="-20" y="220">Follow</name>
+    </location>
+    <location id="p1" x="220" y="250">
+      <name x="200" y="220">DecelPending</name>
+    </location>
+    <location id="p2" x="440" y="250">
+      <name x="420" y="220">Decelerating</name>
+    </location>
+    <location id="p3" x="660" y="250">
+      <name x="640" y="220">StopPending</name>
+    </location>
+    <location id="p4" x="0" y="400">
+      <name x="-20" y="370">Hold</name>
+    </location>
+    <location id="p5" x="220" y="400">
+      <name x="200" y="370">RecoverPending</name>
+    </location>
+    <location id="p6" x="440" y="400">
+      <name x="420" y="370">Recovered</name>
+    </location>
+    <location id="p7" x="660" y="400">
+      <name x="640" y="370">OrderViolation</name>
+    </location>
+    <init ref="p0" />
+    <transition>
+      <source ref="p0" />
+      <target ref="p1" />
+      <label kind="synchronisation" x="0" y="0">decel_req?</label>
+    </transition>
+    <transition>
+      <source ref="p1" />
+      <target ref="p2" />
+      <label kind="synchronisation" x="0" y="0">decel_ack?</label>
+    </transition>
+    <transition>
+      <source ref="p2" />
+      <target ref="p3" />
+      <label kind="synchronisation" x="0" y="0">stop_req?</label>
+    </transition>
+    <transition>
+      <source ref="p3" />
+      <target ref="p4" />
+      <label kind="synchronisation" x="0" y="0">stop_ack?</label>
+    </transition>
+    <transition>
+      <source ref="p4" />
+      <target ref="p5" />
+      <label kind="synchronisation" x="0" y="0">recover_req?</label>
+    </transition>
+    <transition>
+      <source ref="p5" />
+      <target ref="p6" />
+      <label kind="synchronisation" x="0" y="0">recover_ack?</label>
+    </transition>
+    <transition>
+      <source ref="p3" />
+      <target ref="p7" />
+      <label kind="synchronisation" x="0" y="0">recover_req?</label>
+    </transition>
+    <transition>
+      <source ref="p6" />
+      <target ref="p6" />
+    </transition>
+    <transition>
+      <source ref="p7" />
+      <target ref="p7" />
+    </transition>
+  </template>
+  <template>
+    <name>DeadlineMonitor</name>
+    <declaration>clock phase;</declaration>
+    <location id="d0" x="0" y="560">
+      <name x="-20" y="530">Idle</name>
+    </location>
+    <location id="d1" x="180" y="560">
+      <name x="160" y="530">WaitDecel</name>
+      <label kind="invariant" x="160" y="580">phase &lt;= DECEL_DEADLINE</label>
+    </location>
+    <location id="d2" x="360" y="560">
+      <name x="340" y="530">DecelDone</name>
+    </location>
+    <location id="d3" x="540" y="560">
+      <name x="520" y="530">WaitStop</name>
+      <label kind="invariant" x="520" y="580">phase &lt;= STOP_DEADLINE</label>
+    </location>
+    <location id="d4" x="720" y="560">
+      <name x="700" y="530">Hold</name>
+    </location>
+    <location id="d5" x="900" y="560">
+      <name x="880" y="530">WaitRecover</name>
+      <label kind="invariant" x="880" y="580">phase &lt;= RECOVER_DEADLINE</label>
+    </location>
+    <location id="d6" x="1080" y="500">
+      <name x="1060" y="470">Done</name>
+    </location>
+    <location id="d7" x="1080" y="640">
+      <name x="1060" y="610">Miss</name>
+    </location>
+    <init ref="d0" />
+    <transition>
+      <source ref="d0" />
+      <target ref="d1" />
+      <label kind="synchronisation" x="0" y="0">decel_req?</label>
+      <label kind="assignment" x="0" y="20">phase = 0</label>
+    </transition>
+    <transition>
+      <source ref="d1" />
+      <target ref="d2" />
+      <label kind="synchronisation" x="0" y="0">decel_ack?</label>
+    </transition>
+    <transition>
+      <source ref="d1" />
+      <target ref="d7" />
+      <label kind="guard" x="0" y="0">phase &gt;= DECEL_DEADLINE</label>
+    </transition>
+    <transition>
+      <source ref="d2" />
+      <target ref="d3" />
+      <label kind="synchronisation" x="0" y="0">stop_req?</label>
+      <label kind="assignment" x="0" y="20">phase = 0</label>
+    </transition>
+    <transition>
+      <source ref="d3" />
+      <target ref="d4" />
+      <label kind="synchronisation" x="0" y="0">stop_ack?</label>
+    </transition>
+    <transition>
+      <source ref="d3" />
+      <target ref="d7" />
+      <label kind="guard" x="0" y="0">phase &gt;= STOP_DEADLINE</label>
+    </transition>
+    <transition>
+      <source ref="d4" />
+      <target ref="d5" />
+      <label kind="synchronisation" x="0" y="0">recover_req?</label>
+      <label kind="assignment" x="0" y="20">phase = 0</label>
+    </transition>
+    <transition>
+      <source ref="d5" />
+      <target ref="d6" />
+      <label kind="synchronisation" x="0" y="0">recover_ack?</label>
+    </transition>
+    <transition>
+      <source ref="d5" />
+      <target ref="d7" />
+      <label kind="guard" x="0" y="0">phase &gt;= RECOVER_DEADLINE</label>
+    </transition>
+    <transition>
+      <source ref="d6" />
+      <target ref="d6" />
+    </transition>
+    <transition>
+      <source ref="d7" />
+      <target ref="d7" />
+    </transition>
+  </template>
+  <template>
+    <name>SafetyGate</name>
+    <declaration />
+    <location id="g0" x="0" y="760">
+      <name x="-20" y="730">Blocked</name>
+    </location>
+    <location id="g1" x="240" y="760">
+      <name x="220" y="730">Clear</name>
+    </location>
+    <init ref="g0" />
+    <transition>
+      <source ref="g0" />
+      <target ref="g1" />
+      <label kind="synchronisation" x="0" y="0">clearance?</label>
+      <label kind="assignment" x="0" y="20">clearance_granted = true</label>
+    </transition>
+    <transition>
+      <source ref="g0" />
+      <target ref="g0" />
+      <label kind="synchronisation" x="0" y="0">recover_req?</label>
+      <label kind="assignment" x="0" y="20">premature_recovery = true</label>
+    </transition>
+    <transition>
+      <source ref="g1" />
+      <target ref="g1" />
+      <label kind="synchronisation" x="0" y="0">recover_req?</label>
+    </transition>
+  </template>
+  <system>Source = ScenarioSource();
+Protocol = ChainProtocol();
+Deadline = DeadlineMonitor();
+Gate = SafetyGate();
+system Source, Protocol, Deadline, Gate;</system>
+</nta>

@@ -1,0 +1,9 @@
+{
+  "collection_expansion_verdict": "VALIDATED",
+  "contract_instance_count": 2,
+  "core_query_agreement": 1.0,
+  "core_query_count": 1,
+  "generator_verdict": "VALIDATED",
+  "grounded_scene_count": 2,
+  "z3_version": "5.0.0"
+}

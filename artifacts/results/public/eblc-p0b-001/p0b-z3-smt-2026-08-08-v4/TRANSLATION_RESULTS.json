@@ -1,0 +1,283 @@
+{
+  "canonical_bounded_target_agreement": 1.0,
+  "canonical_bounded_target_matches": 8,
+  "canonical_runtime_agreement": 1.0,
+  "canonical_runtime_matches": 8,
+  "claim_boundary": "BOUNDED_TRANSLATION_AGREEMENT_NOT_INDEPENDENT_VEHICLE_SAFETY_VERIFICATION",
+  "engine": "Z3_BOUNDED_SMT",
+  "engine_version": "5.0.0",
+  "records": [
+    {
+      "bounded_target": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED",
+          "MAINTAINED",
+          "RELEASED",
+          "REACTIVATED",
+          "MAINTAINED",
+          "RELEASED",
+          "RELEASED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "canonical": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED",
+          "MAINTAINED",
+          "RELEASED",
+          "REACTIVATED",
+          "MAINTAINED",
+          "RELEASED",
+          "RELEASED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "canonical_bounded_target_agree": true,
+      "canonical_runtime_agree": true,
+      "runtime_monitor": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED",
+          "MAINTAINED",
+          "RELEASED",
+          "REACTIVATED",
+          "MAINTAINED",
+          "RELEASED",
+          "RELEASED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "trace_id": "safe_release_reactivation"
+    },
+    {
+      "bounded_target": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "canonical": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "canonical_bounded_target_agree": true,
+      "canonical_runtime_agree": true,
+      "runtime_monitor": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "trace_id": "one_frame_false_no_release"
+    },
+    {
+      "bounded_target": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "canonical": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "canonical_bounded_target_agree": true,
+      "canonical_runtime_agree": true,
+      "runtime_monitor": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "trace_id": "unknown_active_fallback"
+    },
+    {
+      "bounded_target": {
+        "accepted": false,
+        "lifecycle": [
+          "INACTIVE"
+        ],
+        "verdict": "CONFLICT",
+        "violations": []
+      },
+      "canonical": {
+        "accepted": false,
+        "lifecycle": [
+          "INACTIVE"
+        ],
+        "verdict": "CONFLICT",
+        "violations": []
+      },
+      "canonical_bounded_target_agree": true,
+      "canonical_runtime_agree": true,
+      "runtime_monitor": {
+        "accepted": false,
+        "lifecycle": [
+          "INACTIVE"
+        ],
+        "verdict": "CONFLICT",
+        "violations": []
+      },
+      "trace_id": "conflicting_evidence"
+    },
+    {
+      "bounded_target": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      },
+      "canonical": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      },
+      "canonical_bounded_target_agree": true,
+      "canonical_runtime_agree": true,
+      "runtime_monitor": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      },
+      "trace_id": "active_zone_entry_violation"
+    },
+    {
+      "bounded_target": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "DYNAMIC_STOPPING_SPEED_BOUND_EXCEEDED"
+        ]
+      },
+      "canonical": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "DYNAMIC_STOPPING_SPEED_BOUND_EXCEEDED"
+        ]
+      },
+      "canonical_bounded_target_agree": true,
+      "canonical_runtime_agree": true,
+      "runtime_monitor": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "DYNAMIC_STOPPING_SPEED_BOUND_EXCEEDED"
+        ]
+      },
+      "trace_id": "dynamic_speed_violation"
+    },
+    {
+      "bounded_target": {
+        "accepted": true,
+        "lifecycle": [
+          "CANDIDATE"
+        ],
+        "verdict": "REVIEW_REQUIRED",
+        "violations": []
+      },
+      "canonical": {
+        "accepted": true,
+        "lifecycle": [
+          "CANDIDATE"
+        ],
+        "verdict": "REVIEW_REQUIRED",
+        "violations": []
+      },
+      "canonical_bounded_target_agree": true,
+      "canonical_runtime_agree": true,
+      "runtime_monitor": {
+        "accepted": true,
+        "lifecycle": [
+          "CANDIDATE"
+        ],
+        "verdict": "REVIEW_REQUIRED",
+        "violations": []
+      },
+      "trace_id": "stale_fact"
+    },
+    {
+      "bounded_target": {
+        "accepted": true,
+        "lifecycle": [
+          "INACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "canonical": {
+        "accepted": true,
+        "lifecycle": [
+          "INACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "canonical_bounded_target_agree": true,
+      "canonical_runtime_agree": true,
+      "runtime_monitor": {
+        "accepted": true,
+        "lifecycle": [
+          "INACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "trace_id": "safe_progress"
+    }
+  ],
+  "trace_count": 8
+}

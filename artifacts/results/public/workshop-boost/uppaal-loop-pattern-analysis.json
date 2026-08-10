@@ -1,0 +1,448 @@
+{
+  "source": "experiments/results/baseline/multiscene-chain/uppaal-loop-batch-all-strict-1s.json",
+  "chain_count": 13,
+  "pass_chain_count": 4,
+  "fail_chain_count": 9,
+  "boundary_fail_count": 0,
+  "deadline_fail_count": 8,
+  "responded_fail_count": 7,
+  "tag_table": [
+    {
+      "tag": "speed_bump",
+      "pass_events": 0,
+      "fail_events": 7,
+      "total_events": 7,
+      "fail_share": 1.0
+    },
+    {
+      "tag": "parked_vehicle",
+      "pass_events": 0,
+      "fail_events": 5,
+      "total_events": 5,
+      "fail_share": 1.0
+    },
+    {
+      "tag": "accelerate",
+      "pass_events": 6,
+      "fail_events": 20,
+      "total_events": 26,
+      "fail_share": 0.769
+    },
+    {
+      "tag": "construction",
+      "pass_events": 2,
+      "fail_events": 6,
+      "total_events": 8,
+      "fail_share": 0.75
+    },
+    {
+      "tag": "decelerate",
+      "pass_events": 8,
+      "fail_events": 18,
+      "total_events": 26,
+      "fail_share": 0.692
+    },
+    {
+      "tag": "yield",
+      "pass_events": 1,
+      "fail_events": 2,
+      "total_events": 3,
+      "fail_share": 0.667
+    },
+    {
+      "tag": "lead_vehicle",
+      "pass_events": 6,
+      "fail_events": 11,
+      "total_events": 17,
+      "fail_share": 0.647
+    },
+    {
+      "tag": "intersection",
+      "pass_events": 10,
+      "fail_events": 16,
+      "total_events": 26,
+      "fail_share": 0.615
+    },
+    {
+      "tag": "curve",
+      "pass_events": 6,
+      "fail_events": 5,
+      "total_events": 11,
+      "fail_share": 0.455
+    }
+  ],
+  "channel_table": [
+    {
+      "status": "FAIL",
+      "channel": "accel_req",
+      "count": 13
+    },
+    {
+      "status": "FAIL",
+      "channel": "slow_req",
+      "count": 24
+    },
+    {
+      "status": "PASS",
+      "channel": "accel_req",
+      "count": 4
+    },
+    {
+      "status": "PASS",
+      "channel": "slow_req",
+      "count": 8
+    }
+  ],
+  "interesting_cases": [
+    {
+      "scenes": [
+        "scene-0027",
+        "scene-0028"
+      ],
+      "scene_count": 2,
+      "duration_s": 31.42,
+      "event_count": 16,
+      "status": "FAIL",
+      "responded": false,
+      "no_deadline_miss": false,
+      "first_deadline_candidate": {
+        "time_ms": 3900,
+        "label": "scene-0027:0:accel",
+        "channel": "accel_req",
+        "cot": "Maintain lane and accelerate through the intersection as the traffic light is green and the path is clear.",
+        "tags": [
+          "accelerate",
+          "intersection"
+        ]
+      },
+      "first_unclosed_obligation": null,
+      "interpretation": "scene boundaries are within the 1s continuity gate; at least one obligation misses the 3s response deadline; no accepted obligation reaches the Responded location; first deadline candidate: scene-0027:0:accel at 3900ms",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0027-to-scene-0028-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0130",
+        "scene-0131",
+        "scene-0132",
+        "scene-0133"
+      ],
+      "scene_count": 4,
+      "duration_s": 72.301,
+      "event_count": 16,
+      "status": "FAIL",
+      "responded": false,
+      "no_deadline_miss": false,
+      "first_deadline_candidate": {
+        "time_ms": 4500,
+        "label": "scene-0130:0:slow",
+        "channel": "slow_req",
+        "cot": "Yield to pedestrians crossing the street at the crosswalk and then accelerate to proceed.",
+        "tags": [
+          "accelerate",
+          "yield"
+        ]
+      },
+      "first_unclosed_obligation": {
+        "time_ms": 62601,
+        "label": "scene-0133:0:slow",
+        "channel": "slow_req",
+        "cot": "Maintain lane and accelerate to pass the stopped bus on the left while keeping a safe distance from parked vehicles on the right.",
+        "tags": [
+          "accelerate",
+          "lead_vehicle",
+          "parked_vehicle"
+        ]
+      },
+      "interpretation": "scene boundaries are within the 1s continuity gate; at least one obligation misses the 3s response deadline; no accepted obligation reaches the Responded location; first deadline candidate: scene-0130:0:slow at 4500ms",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0130-to-scene-0133-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0150",
+        "scene-0151"
+      ],
+      "scene_count": 2,
+      "duration_s": 32.569,
+      "event_count": 10,
+      "status": "FAIL",
+      "responded": false,
+      "no_deadline_miss": false,
+      "first_deadline_candidate": {
+        "time_ms": 3200,
+        "label": "scene-0150:0:slow",
+        "channel": "slow_req",
+        "cot": "Adapt speed for the upcoming speed bump while keeping lane and maintaining a safe distance from the lead vehicle.",
+        "tags": [
+          "decelerate",
+          "lead_vehicle",
+          "speed_bump"
+        ]
+      },
+      "first_unclosed_obligation": {
+        "time_ms": 3200,
+        "label": "scene-0150:0:slow",
+        "channel": "slow_req",
+        "cot": "Adapt speed for the upcoming speed bump while keeping lane and maintaining a safe distance from the lead vehicle.",
+        "tags": [
+          "decelerate",
+          "lead_vehicle",
+          "speed_bump"
+        ]
+      },
+      "interpretation": "scene boundaries are within the 1s continuity gate; at least one obligation misses the 3s response deadline; no accepted obligation reaches the Responded location; first deadline candidate: scene-0150:0:slow at 3200ms",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0150-to-scene-0151-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0051",
+        "scene-0052"
+      ],
+      "scene_count": 2,
+      "duration_s": 29.998,
+      "event_count": 8,
+      "status": "FAIL",
+      "responded": true,
+      "no_deadline_miss": false,
+      "first_deadline_candidate": {
+        "time_ms": 25199,
+        "label": "scene-0052:1:slow",
+        "channel": "slow_req",
+        "cot": "Keep lane and maintain a safe speed on the curvy road while following the lead vehicle and navigating around the stopped black van on the left.",
+        "tags": [
+          "curve",
+          "decelerate",
+          "lead_vehicle"
+        ]
+      },
+      "first_unclosed_obligation": null,
+      "interpretation": "scene boundaries are within the 1s continuity gate; at least one obligation misses the 3s response deadline; first deadline candidate: scene-0052:1:slow at 25199ms",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0051-to-scene-0052-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0179",
+        "scene-0180"
+      ],
+      "scene_count": 2,
+      "duration_s": 34.881,
+      "event_count": 7,
+      "status": "FAIL",
+      "responded": true,
+      "no_deadline_miss": false,
+      "first_deadline_candidate": {
+        "time_ms": 23402,
+        "label": "scene-0180:0:slow",
+        "channel": "slow_req",
+        "cot": "Decelerate to maintain a safe distance from the parked vehicles ahead and then accelerate to proceed along the route.",
+        "tags": [
+          "accelerate",
+          "decelerate",
+          "lead_vehicle",
+          "parked_vehicle"
+        ]
+      },
+      "first_unclosed_obligation": null,
+      "interpretation": "scene boundaries are within the 1s continuity gate; at least one obligation misses the 3s response deadline; first deadline candidate: scene-0180:0:slow at 23402ms",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0179-to-scene-0180-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0124",
+        "scene-0125"
+      ],
+      "scene_count": 2,
+      "duration_s": 19.2,
+      "event_count": 3,
+      "status": "FAIL",
+      "responded": false,
+      "no_deadline_miss": false,
+      "first_deadline_candidate": {
+        "time_ms": 3900,
+        "label": "scene-0124:0:slow",
+        "channel": "slow_req",
+        "cot": "Decelerate to maintain a safe distance from the stopped blue bus ahead and the black car in the left lane, while keeping lane position.",
+        "tags": [
+          "decelerate",
+          "lead_vehicle"
+        ]
+      },
+      "first_unclosed_obligation": {
+        "time_ms": 3900,
+        "label": "scene-0124:0:slow",
+        "channel": "slow_req",
+        "cot": "Decelerate to maintain a safe distance from the stopped blue bus ahead and the black car in the left lane, while keeping lane position.",
+        "tags": [
+          "decelerate",
+          "lead_vehicle"
+        ]
+      },
+      "interpretation": "scene boundaries are within the 1s continuity gate; at least one obligation misses the 3s response deadline; no accepted obligation reaches the Responded location; first deadline candidate: scene-0124:0:slow at 3900ms",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0124-to-scene-0125-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0025",
+        "scene-0026"
+      ],
+      "scene_count": 2,
+      "duration_s": 30.099,
+      "event_count": 2,
+      "status": "FAIL",
+      "responded": false,
+      "no_deadline_miss": false,
+      "first_deadline_candidate": {
+        "time_ms": 30099,
+        "label": "scene-0026:1:slow",
+        "channel": "slow_req",
+        "cot": "Decelerate to maintain a safe distance from the cyclist ahead while navigating the curvy road.",
+        "tags": [
+          "curve",
+          "decelerate",
+          "lead_vehicle"
+        ]
+      },
+      "first_unclosed_obligation": {
+        "time_ms": 30099,
+        "label": "scene-0026:1:slow",
+        "channel": "slow_req",
+        "cot": "Decelerate to maintain a safe distance from the cyclist ahead while navigating the curvy road.",
+        "tags": [
+          "curve",
+          "decelerate",
+          "lead_vehicle"
+        ]
+      },
+      "interpretation": "scene boundaries are within the 1s continuity gate; at least one obligation misses the 3s response deadline; no accepted obligation reaches the Responded location; first deadline candidate: scene-0026:1:slow at 30099ms",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0025-to-scene-0026-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0063",
+        "scene-0064"
+      ],
+      "scene_count": 2,
+      "duration_s": 27.8,
+      "event_count": 2,
+      "status": "FAIL",
+      "responded": false,
+      "no_deadline_miss": false,
+      "first_deadline_candidate": {
+        "time_ms": 27800,
+        "label": "scene-0064:1:slow",
+        "channel": "slow_req",
+        "cot": "Maintain lane and decelerate to maintain a safe distance from the lead vehicle ahead.",
+        "tags": [
+          "decelerate",
+          "lead_vehicle"
+        ]
+      },
+      "first_unclosed_obligation": {
+        "time_ms": 27800,
+        "label": "scene-0064:1:slow",
+        "channel": "slow_req",
+        "cot": "Maintain lane and decelerate to maintain a safe distance from the lead vehicle ahead.",
+        "tags": [
+          "decelerate",
+          "lead_vehicle"
+        ]
+      },
+      "interpretation": "scene boundaries are within the 1s continuity gate; at least one obligation misses the 3s response deadline; no accepted obligation reaches the Responded location; first deadline candidate: scene-0064:1:slow at 27800ms",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0063-to-scene-0064-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0048",
+        "scene-0049"
+      ],
+      "scene_count": 2,
+      "duration_s": 19.4,
+      "event_count": 1,
+      "status": "FAIL",
+      "responded": false,
+      "no_deadline_miss": true,
+      "first_deadline_candidate": null,
+      "first_unclosed_obligation": null,
+      "interpretation": "scene boundaries are within the 1s continuity gate; no accepted obligation reaches the Responded location",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0048-to-scene-0049-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0007",
+        "scene-0008",
+        "scene-0009"
+      ],
+      "scene_count": 3,
+      "duration_s": 39.002,
+      "event_count": 14,
+      "status": "PASS",
+      "responded": true,
+      "no_deadline_miss": true,
+      "first_deadline_candidate": null,
+      "first_unclosed_obligation": null,
+      "interpretation": "all protocol queries passed; scene boundaries are within the 1s continuity gate",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0007-to-scene-0009-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0134",
+        "scene-0135"
+      ],
+      "scene_count": 2,
+      "duration_s": 34.038,
+      "event_count": 7,
+      "status": "PASS",
+      "responded": true,
+      "no_deadline_miss": true,
+      "first_deadline_candidate": null,
+      "first_unclosed_obligation": null,
+      "interpretation": "all protocol queries passed; scene boundaries are within the 1s continuity gate",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0134-to-scene-0135-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0056",
+        "scene-0057"
+      ],
+      "scene_count": 2,
+      "duration_s": 19.501,
+      "event_count": 5,
+      "status": "PASS",
+      "responded": true,
+      "no_deadline_miss": true,
+      "first_deadline_candidate": null,
+      "first_unclosed_obligation": null,
+      "interpretation": "all protocol queries passed; scene boundaries are within the 1s continuity gate",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0056-to-scene-0057-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0031",
+        "scene-0032"
+      ],
+      "scene_count": 2,
+      "duration_s": 22.1,
+      "event_count": 3,
+      "status": "PASS",
+      "responded": true,
+      "no_deadline_miss": true,
+      "first_deadline_candidate": null,
+      "first_unclosed_obligation": null,
+      "interpretation": "all protocol queries passed; scene boundaries are within the 1s continuity gate",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0031-to-scene-0032-loop-result.json"
+    }
+  ],
+  "cross_model_inferences": [
+    {
+      "claim": "Boundary continuity is not the limiting factor for this strict subset.",
+      "evidence": "All 13 chains satisfy A[] not boundary_violation under MAX_BOUNDARY_GAP=1000ms."
+    },
+    {
+      "claim": "Connected-scene verification adds information beyond continuity audit.",
+      "evidence": "Although all boundaries pass, 8 of 13 chains fail the 3s deadline property."
+    },
+    {
+      "claim": "PASS and FAIL chains can share similar surface vocabulary.",
+      "evidence": "Lead-vehicle, intersection, and speed-bump tags appear in both PASS and FAIL groups, so keyword presence alone is not a sufficient oracle."
+    }
+  ]
+}

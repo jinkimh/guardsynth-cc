@@ -1,0 +1,19 @@
+{
+  "assignments": {
+    "c0__ego_speed@0": 6.000000001,
+    "c1__ego_speed@0": 3.000000001
+  },
+  "claim_scope": "EXACT_SYNTHETIC_BOUNDED_DERIVATION_REPLAY_NOT_VEHICLE_SAFETY",
+  "definedness_assertion_count": 18,
+  "definedness_clause_ids": [
+    "c0__derive__output__stopping_distance",
+    "c1__derive__output__stopping_distance"
+  ],
+  "exact_outputs": {
+    "c0__stop_position": "-3/2",
+    "c0__stopping_distance@0": "9",
+    "c1__stop_position": "-3/2",
+    "c1__stopping_distance@0": "3"
+  },
+  "status": "SAT"
+}

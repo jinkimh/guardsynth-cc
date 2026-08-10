@@ -1,0 +1,155 @@
+{
+  "scenes": [
+    "scene-0179",
+    "scene-0180"
+  ],
+  "scene_count": 2,
+  "duration_ms": 34881,
+  "event_count": 7,
+  "channel_counts": {
+    "accel_req": 1,
+    "accel_resp": 1,
+    "scene_boundary": 1,
+    "slow_req": 3,
+    "slow_resp": 1
+  },
+  "all_queries_satisfied": false,
+  "responded": true,
+  "no_deadline_miss": false,
+  "no_contradiction": true,
+  "no_boundary_violation": true,
+  "no_deadlock": true,
+  "source_done": true,
+  "scene_summary": [
+    {
+      "scene": "scene-0179",
+      "global_start_ms": 0,
+      "global_end_ms": 19452,
+      "trusted_obligation_events": 1,
+      "derived_response_witnesses": 1
+    },
+    {
+      "scene": "scene-0180",
+      "global_start_ms": 20002,
+      "global_end_ms": 39100,
+      "trusted_obligation_events": 3,
+      "derived_response_witnesses": 1
+    }
+  ],
+  "events": [
+    {
+      "time_ms": 8900,
+      "channel": "accel_req",
+      "label": "scene-0179:0:accel",
+      "scene": "scene-0179",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Keep lane and accelerate through the intersection as the path ahead is clear.",
+        "local_timestamp_us": 8900000
+      }
+    },
+    {
+      "time_ms": 9120,
+      "channel": "accel_resp",
+      "label": "scene-0179:0:accel:response",
+      "scene": "scene-0179",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 8900000,
+        "response_local_ms": 9120,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 19452,
+      "channel": "scene_boundary",
+      "label": "scene-0179->scene-0180",
+      "scene": "scene-0180",
+      "provenance": "DERIVED_NUSCENES_METADATA",
+      "detail": {
+        "gap_ms": 550,
+        "from": "scene-0179",
+        "to": "scene-0180"
+      }
+    },
+    {
+      "time_ms": 23402,
+      "channel": "slow_req",
+      "label": "scene-0180:0:slow",
+      "scene": "scene-0180",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Decelerate to maintain a safe distance from the parked vehicles ahead and then accelerate to proceed along the route.",
+        "local_timestamp_us": 3400000
+      }
+    },
+    {
+      "time_ms": 23602,
+      "channel": "slow_req",
+      "label": "scene-0180:1:slow",
+      "scene": "scene-0180",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Decelerate to maintain a safe distance from the parked vehicles ahead and then accelerate to proceed along the route.",
+        "local_timestamp_us": 3600000
+      }
+    },
+    {
+      "time_ms": 32002,
+      "channel": "slow_req",
+      "label": "scene-0180:7:slow",
+      "scene": "scene-0180",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Adapt speed for the curvy road while keeping lane.",
+        "local_timestamp_us": 12000000
+      }
+    },
+    {
+      "time_ms": 34881,
+      "channel": "slow_resp",
+      "label": "scene-0180:7:slow:response",
+      "scene": "scene-0180",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 12000000,
+        "response_local_ms": 14879,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    }
+  ],
+  "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0179-to-scene-0180-loop.xml",
+  "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0179-to-scene-0180-loop.txt",
+  "queries": [
+    {
+      "query": "E<> Source.Done",
+      "satisfied": true
+    },
+    {
+      "query": "E<> MonitorProc.Responded",
+      "satisfied": true
+    },
+    {
+      "query": "A[] not deadline_miss",
+      "satisfied": false
+    },
+    {
+      "query": "A[] not contradiction",
+      "satisfied": true
+    },
+    {
+      "query": "A[] not boundary_violation",
+      "satisfied": true
+    },
+    {
+      "query": "A[] not deadlock",
+      "satisfied": true
+    }
+  ]
+}

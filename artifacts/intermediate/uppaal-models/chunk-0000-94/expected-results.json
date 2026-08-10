@@ -1,0 +1,1892 @@
+{
+  "query_order": [
+    "E<> Source.Done",
+    "A[] not provenance_violation",
+    "A[] not weak_response_violation",
+    "A[] not deadlock"
+  ],
+  "expected_satisfaction": {
+    "scene-0001": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0002": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0004": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0005": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0006": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0007": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0008": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0009": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0010": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0011": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0019": {
+      "baseline": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0020": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0021": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0022": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0023": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0024": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0025": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0026": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0027": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0028": {
+      "baseline": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0030": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0031": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0032": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0033": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0034": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0041": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0042": {
+      "baseline": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0043": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0044": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0045": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0046": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0047": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0048": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0049": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0050": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0051": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0052": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0053": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0054": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0055": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0056": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0057": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0058": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0062": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0063": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0064": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0065": {
+      "baseline": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0066": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0067": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0068": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0069": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0070": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0071": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0072": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0073": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0074": {
+      "baseline": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0075": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0076": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0120": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0121": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0122": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0123": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0124": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0125": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0126": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0127": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0128": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0129": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0130": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0131": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0132": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0133": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0134": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0135": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0138": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0139": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0149": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0150": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0151": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0152": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0154": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0155": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0157": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0158": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0159": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0160": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0177": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0178": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0179": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0180": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0181": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0182": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0183": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0184": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    }
+  },
+  "source": "artifacts/results/public/workshop-boost/weak-kinematic-chunk0.json",
+  "model_count": 282
+}

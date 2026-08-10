@@ -1,0 +1,122 @@
+{
+  "bounded_queries": {
+    "active_stop_position_invariant_query_status": "SAT",
+    "active_stop_position_invariant_violation_witness_exists": true,
+    "active_stop_position_invariant_witness": {
+      "ego_front_x_m": "0"
+    },
+    "claim_boundary": "BOUNDED_SMT_FALSIFICATION_NOT_VEHICLE_SAFETY_PROOF",
+    "encoding_version": "eblc-z3-bounded-v0.1",
+    "engine": "Z3_BOUNDED_SMT",
+    "engine_version": "5.0.0",
+    "lifecycle_transition_consistency": {
+      "consistent": true,
+      "counterexample_status": "UNSAT",
+      "invalid_transition_count": 0,
+      "sequences_checked": 81
+    },
+    "release_hazard_reappearance_missing_reactivation_witness_exists": false,
+    "release_hazard_reappearance_query_status": "UNSAT",
+    "safe_progress_false_deadlock_query_status": "UNSAT",
+    "safe_progress_false_deadlock_witness_exists": false,
+    "solver_constructions": 4
+  },
+  "claim_scope": "P0B_SCHEMA_AND_BOUNDED_EXECUTION_NOT_VEHICLE_SAFETY",
+  "experiment_id": "EBLC-P0B-001",
+  "limitations": [
+    "SYNTHETIC_SYSTEM_REQUIREMENT_AND_VEHICLE_PROFILE_ONLY",
+    "CONTROLLED_MUTATION_ORACLE",
+    "NOT_INDEPENDENT_SAFETY_ORACLE",
+    "NO_REAL_LAW_OR_SENSOR_OR_VEHICLE_SAFETY_VALIDATION"
+  ],
+  "missing_input_cases": {
+    "correct": 4,
+    "rate": 1.0,
+    "total": 4
+  },
+  "mutation_summary": {
+    "over_detected": 5,
+    "over_recall": 1.0,
+    "over_total": 5,
+    "under_detected": 5,
+    "under_recall": 1.0,
+    "under_total": 5
+  },
+  "next_decision": "DATA-GAP PIVOT",
+  "normal_fixture_false_alarms": 0,
+  "real_scene_adapter": {
+    "ready_candidate_count": 0,
+    "status": "P0B_REAL_ADAPTER_BLOCKED_DATA_GAP",
+    "synthetic_fill_performed": false
+  },
+  "run_id": "p0b-fail-closed-2026-08-08-v1",
+  "schema_validation": {
+    "rate": 1.0,
+    "records": [
+      {
+        "fixture": "context_frame.json",
+        "schema": "context_graph.schema.json",
+        "valid": true
+      },
+      {
+        "fixture": "rule_template.json",
+        "schema": "rule_template.schema.json",
+        "valid": true
+      },
+      {
+        "fixture": "eblc_contract.json",
+        "schema": "eblc_contract.schema.json",
+        "valid": true
+      },
+      {
+        "fixture": "predicate_spec.json",
+        "schema": "predicate_spec.schema.json",
+        "valid": true
+      }
+    ],
+    "total": 4,
+    "valid": 4
+  },
+  "solver_execution": {
+    "actual_solver_encoding": true,
+    "encoding_version": "eblc-z3-bounded-v0.1",
+    "engine": "Z3_BOUNDED_SMT",
+    "engine_version": "5.0.0",
+    "solver_construction_count": 22
+  },
+  "status": "EXECUTED",
+  "tests": {
+    "p0a": {
+      "command": "python3 -m unittest experiments.eblc_pilot.test_pilot -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 7,
+      "test_count": 7,
+      "total_count": 7
+    },
+    "p0b": {
+      "command": "python3 -m unittest discover -s experiments/eblc_p0b -p test_*.py -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 43,
+      "test_count": 43,
+      "total_count": 43
+    }
+  },
+  "translation_summary": {
+    "canonical_bounded_target_agreement": 1.0,
+    "canonical_bounded_target_matches": 8,
+    "canonical_runtime_agreement": 1.0,
+    "canonical_runtime_matches": 8,
+    "engine": "Z3_BOUNDED_SMT",
+    "trace_count": 8
+  },
+  "unsourced_normative_or_numeric_values": 0,
+  "z3_runtime": {
+    "module_path": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages/z3/__init__.py",
+    "prefix": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36",
+    "python_site_packages": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages",
+    "source": "PROJECT_LOCAL_ISOLATED_BUILD",
+    "version": "5.0.0"
+  }
+}

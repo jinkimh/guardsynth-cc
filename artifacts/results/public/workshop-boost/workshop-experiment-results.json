@@ -1,0 +1,263 @@
+{
+  "generated_at": "2026-08-01",
+  "scope": "international_workshop_boost_experiments",
+  "experiment_outputs": {
+    "local_negative_control": "experiments/results/baseline/workshop-boost/local-scene-continuity-negative-control.json",
+    "weak_kinematic": "experiments/results/baseline/workshop-boost/weak-kinematic-chunk0.json",
+    "uppaal_cohort": "experiments/results/baseline/workshop-boost/uppaal-cohort-verification-result.json",
+    "uppaal_loop": "experiments/results/baseline/workshop-boost/uppaal-loop-verification-result.json",
+    "official_mini": "experiments/results/baseline/workshop-boost/nuscenes-official-mini-continuity-audit.json",
+    "pattern_analysis": "experiments/results/baseline/workshop-boost/uppaal-loop-pattern-analysis.json"
+  },
+  "local_negative_control": {
+    "inter_scene_connection_supported_by_local_metadata": false,
+    "safe_policy": "Treat scenes as independent episodes unless additional continuity metadata is provided. Use scene-boundary checks as a negative-control data gate.",
+    "egomotion_file_count": 98,
+    "all_timestamps_start_at_zero": true,
+    "all_start_poses_near_zero": true
+  },
+  "trainval_metadata_mirror_audit": {
+    "source": "local symlinked flymin/MagicDriveDiT-nuScenes-metadata nuscenes/interp_12Hz_trainval mirror",
+    "official_status": "metadata_mirror_not_official_nuscenes_download",
+    "scene_count": 850,
+    "sample_count": 200644,
+    "log_count": 68,
+    "adjacent_same_log_pair_count": 782,
+    "strict_gap_le_1s_pair_count": 391,
+    "strict_gap_le_1s_local_coc_pair_count": 384,
+    "strict_gap_le_1s_local_reasoning_egomotion_pair_count": 16,
+    "derived_chain_count": 13,
+    "derived_chain_lengths": {
+      "3": 1,
+      "2": 11,
+      "4": 1
+    },
+    "longest_chains": [
+      [
+        "scene-0130",
+        "scene-0131",
+        "scene-0132",
+        "scene-0133"
+      ],
+      [
+        "scene-0007",
+        "scene-0008",
+        "scene-0009"
+      ],
+      [
+        "scene-0025",
+        "scene-0026"
+      ],
+      [
+        "scene-0027",
+        "scene-0028"
+      ],
+      [
+        "scene-0031",
+        "scene-0032"
+      ],
+      [
+        "scene-0048",
+        "scene-0049"
+      ],
+      [
+        "scene-0051",
+        "scene-0052"
+      ],
+      [
+        "scene-0056",
+        "scene-0057"
+      ],
+      [
+        "scene-0063",
+        "scene-0064"
+      ],
+      [
+        "scene-0124",
+        "scene-0125"
+      ]
+    ],
+    "smallest_gap_examples": [
+      {
+        "from": "scene-1077",
+        "to": "scene-1078",
+        "gap_s": 0.049802,
+        "log_token": "8fefc430cbfa4c2191978c0df302eb98",
+        "from_desc": "Night, big street, bus stop, high speed, construction vehicle",
+        "to_desc": "Night, big street, high speed, scooters, bus, lane change"
+      },
+      {
+        "from": "scene-0519",
+        "to": "scene-0520",
+        "gap_s": 0.049805,
+        "log_token": "ca6d14b008ed4e0bb6b1eaaedadbd6c1",
+        "from_desc": "Passing under flyover, oncoming truck, pedestrians, parked cars",
+        "to_desc": "Pedestrian, parked vehicles"
+      },
+      {
+        "from": "scene-1076",
+        "to": "scene-1077",
+        "gap_s": 0.050324,
+        "log_token": "8fefc430cbfa4c2191978c0df302eb98",
+        "from_desc": "Night, trash cans, scooter, ped, turn left",
+        "to_desc": "Night, big street, bus stop, high speed, construction vehicle"
+      },
+      {
+        "from": "scene-0962",
+        "to": "scene-0963",
+        "gap_s": 0.050333,
+        "log_token": "ee155e99938a4c2698fed50fc5b5d16a",
+        "from_desc": "Bus, many peds, changing lane, parked van, cones, low traffic",
+        "to_desc": "Motorcycle, wait at intersection, cones, cars, bus"
+      },
+      {
+        "from": "scene-1084",
+        "to": "scene-1085",
+        "gap_s": 0.050336,
+        "log_token": "8fefc430cbfa4c2191978c0df302eb98",
+        "from_desc": "Night, scooter, peds, bus stop, parked cars, wait",
+        "to_desc": "Night, many peds, parked bicycles, turn left, parked scooters, congestion, peds with bags, cars in parking garage on second floor, trash cans"
+      },
+      {
+        "from": "scene-0999",
+        "to": "scene-1000",
+        "gap_s": 0.099533,
+        "log_token": "6175c3299ae0482791f4ab1e9d54b326",
+        "from_desc": "Night, ped, slope, distant cars, view down",
+        "to_desc": "Night, turn right, peds, lights"
+      },
+      {
+        "from": "scene-0553",
+        "to": "scene-0554",
+        "gap_s": 0.099538,
+        "log_token": "881dd2f8aaec49b681eb54be5bf3b3e2",
+        "from_desc": "Wait at intersection, bicycle, large truck, peds crossing crosswalk, ped with stroller",
+        "to_desc": "Wait at intersection, ped crossing, ped with stroller, cyclist, barriers"
+      },
+      {
+        "from": "scene-0926",
+        "to": "scene-0927",
+        "gap_s": 0.099541,
+        "log_token": "f61e86a4241b484484da143725dce8fc",
+        "from_desc": "Intersection, turn right, ped on the sidewalk, cars, stopped car, parked vehicles",
+        "to_desc": "Parked cars, peds on sidewalk, peds, trees, intersection"
+      },
+      {
+        "from": "scene-0453",
+        "to": "scene-0454",
+        "gap_s": 0.099544,
+        "log_token": "b2685a235700404581dc7354dd5b4eda",
+        "from_desc": "Rain, turn right, truck",
+        "to_desc": "Rain, turn left, bike rack, parking lot"
+      },
+      {
+        "from": "scene-1057",
+        "to": "scene-1058",
+        "gap_s": 0.09958,
+        "log_token": "853a9f9fe7e84bb8b24bff8ebf23f287",
+        "from_desc": "Night, trash cans, dark, nature, slope, bump, car, low traffic, high speed",
+        "to_desc": "Night, nature, car, turn, peds in sidewalk, trash bin"
+      }
+    ]
+  },
+  "detector_ablation": {
+    "evaluable_records": 130,
+    "verdict_counts": {
+      "PASS": 125,
+      "FAIL": 5
+    },
+    "robustness_buckets": {
+      "18-26/27": 51,
+      "27/27": 72,
+      "9-17/27": 2,
+      "1-8/27": 4,
+      "0/27": 1
+    },
+    "review_priority_counts": {
+      "THRESHOLD_SENSITIVE_CAMERA_REVIEW": 53,
+      "None": 72,
+      "CAMERA_AND_RAW_ACTUATOR_CONFIRMATION_REQUIRED": 5
+    }
+  },
+  "script_baseline_vs_uppaal_loop_batch": {
+    "item_count": 13,
+    "comparable_all_match_count": 13,
+    "non_matching_items": [],
+    "note": "With UPPAAL terminal-miss semantics mirrored, a timestamp script reproduces deterministic trace verdicts for selected Boolean properties. It still does not evaluate deadlock or provide the timed-automata composition and mutation-oracle structure used in the paper."
+  },
+  "uppaal_loop_pattern": {
+    "chain_count": 13,
+    "pass_chain_count": 4,
+    "fail_chain_count": 9,
+    "boundary_fail_count": 0,
+    "deadline_fail_count": 8,
+    "responded_fail_count": 7,
+    "cross_model_inferences": [
+      {
+        "claim": "Boundary continuity is not the limiting factor for this strict subset.",
+        "evidence": "All 13 chains satisfy A[] not boundary_violation under MAX_BOUNDARY_GAP=1000ms."
+      },
+      {
+        "claim": "Connected-scene verification adds information beyond continuity audit.",
+        "evidence": "Although all boundaries pass, 8 of 13 chains fail the 3s deadline property."
+      },
+      {
+        "claim": "PASS and FAIL chains can share similar surface vocabulary.",
+        "evidence": "Lead-vehicle, intersection, and speed-bump tags appear in both PASS and FAIL groups, so keyword presence alone is not a sufficient oracle."
+      }
+    ]
+  },
+  "video_spot_check": {
+    "review_type": "AI_VISUAL_TRIAGE_NOT_INDEPENDENT_GOLD",
+    "reviewed_fail_event_count_before_revision": 8,
+    "resolved_false_positive_events": [
+      "scene-0046@10000000",
+      "scene-0159@4500000",
+      "scene-0159@4900000"
+    ],
+    "remaining_candidate_count": 5,
+    "remaining_candidates": [
+      {
+        "event_id": "scene-0019@10600000",
+        "visual_grounding": "SUPPORTED_PEDESTRIAN_AND_SPEED_BUMP_VISIBLE",
+        "triage": "LIKELY_REPEATED_OR_STALE_COC_AFTER_PRIOR_YIELD",
+        "reason": "A similar trusted YIELD CoC occurs at 9.9 s; speed is already increasing at the 10.6 s repeat.",
+        "contact_sheet": "experiments/results/baseline/chunk-0000-94/video-review/scene-0019-t10_6-contact-sheet.jpg",
+        "safety_status": "UNKNOWN"
+      },
+      {
+        "event_id": "scene-0028@6500000",
+        "visual_grounding": "PARTIAL_INTERSECTION_AND_SIGNAL_VISIBLE_LATER",
+        "triage": "ANTICIPATORY_OR_DELAYED_RESPONSE_CANDIDATE",
+        "reason": "The vehicle continues accelerating for roughly 3 s and the red-light context becomes clearer later in the window.",
+        "contact_sheet": "experiments/results/baseline/chunk-0000-94/video-review/scene-0028-t6_5-contact-sheet.jpg",
+        "safety_status": "UNKNOWN"
+      },
+      {
+        "event_id": "scene-0042@6500000",
+        "visual_grounding": "SUPPORTED_LEAD_VEHICLE_VISIBLE",
+        "triage": "DELAYED_RESPONSE_OR_ANTICIPATORY_LABEL_CANDIDATE",
+        "reason": "Speed rises for about 3 s after the deceleration CoC before decreasing.",
+        "contact_sheet": "experiments/results/baseline/chunk-0000-94/video-review/scene-0042-t6_5-contact-sheet.jpg",
+        "safety_status": "UNKNOWN"
+      },
+      {
+        "event_id": "scene-0065@13200000",
+        "visual_grounding": "BUS_VISIBLE_BUT_CAUSAL_DIRECTION_INCONCLUSIVE",
+        "triage": "SEMANTIC_GROUNDING_AND_RESPONSE_REVIEW",
+        "reason": "A bus is visible, but the CoC description of oncoming/left-adjacent traffic is not established by the sampled frames.",
+        "contact_sheet": "experiments/results/baseline/chunk-0000-94/video-review/scene-0065-t13_2-contact-sheet.jpg",
+        "safety_status": "UNKNOWN"
+      },
+      {
+        "event_id": "scene-0074@3400000",
+        "visual_grounding": "GENERIC_ROUTE_CONTEXT_ONLY",
+        "triage": "ACTION_TRAJECTORY_MISMATCH_CANDIDATE",
+        "reason": "The acceleration CoC is followed by lower speed until a later repeated acceleration event.",
+        "contact_sheet": "experiments/results/baseline/chunk-0000-94/video-review/scene-0074-t3_4-contact-sheet.jpg",
+        "safety_status": "UNKNOWN"
+      }
+    ],
+    "claim_limit": "Visual triage is based on four sampled front-camera frames and ego speed. Raw actuator, obstacle distance, and independent human annotation remain unavailable."
+  }
+}

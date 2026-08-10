@@ -1,0 +1,64 @@
+{
+  "audit": "official-nuscenes-mini-scene-continuity",
+  "metadata_root": "evidence/data/nuscenes_official/v1.0-mini",
+  "table_counts": {
+    "scene": 10,
+    "sample": 404,
+    "sample_data": 31206,
+    "ego_pose": 31206,
+    "log": 8
+  },
+  "official_scene_names": [
+    "scene-0061",
+    "scene-0103",
+    "scene-0553",
+    "scene-0655",
+    "scene-0757",
+    "scene-0796",
+    "scene-0916",
+    "scene-1077",
+    "scene-1094",
+    "scene-1100"
+  ],
+  "local_coc_scene_count": 835,
+  "local_coc_scene_overlap": [
+    "scene-0061",
+    "scene-0103",
+    "scene-0553",
+    "scene-0655",
+    "scene-0757",
+    "scene-0796",
+    "scene-0916",
+    "scene-1077",
+    "scene-1094",
+    "scene-1100"
+  ],
+  "candidate_pair_source": "experiments/results/baseline/nuscenes-scene-continuity-candidates.json",
+  "candidate_pair_overlap": [],
+  "same_log_adjacent_pair_count": 2,
+  "same_log_adjacent_pairs": [
+    {
+      "from": "scene-1094",
+      "to": "scene-1100",
+      "log_token": "8fefc430cbfa4c2191978c0df302eb98",
+      "logfile": "n015-2018-11-21-19-38-26+0800",
+      "location": "singapore-hollandvillage",
+      "gap_seconds": 120.500011
+    },
+    {
+      "from": "scene-1077",
+      "to": "scene-1094",
+      "log_token": "8fefc430cbfa4c2191978c0df302eb98",
+      "logfile": "n015-2018-11-21-19-38-26+0800",
+      "location": "singapore-hollandvillage",
+      "gap_seconds": 460.050296
+    }
+  ],
+  "conclusion": {
+    "official_mini_has_continuity_fields": true,
+    "official_mini_can_demonstrate_schema": true,
+    "official_mini_overlaps_local_coc_scenes": true,
+    "official_mini_can_validate_coc_trainval_candidate_pairs": false,
+    "reason": "The official mini archive includes scene, sample, log, sample_data, and ego_pose tables, so it confirms the nuScenes continuity schema and overlaps with several local CoC-Nusc scene names. However, mini is a subset and omits many trainval scenes between those names, so adjacent scenes inside mini must not be interpreted as physically contiguous trainval pairs. It does not confirm the previously found CoC trainval candidate pairs."
+  }
+}

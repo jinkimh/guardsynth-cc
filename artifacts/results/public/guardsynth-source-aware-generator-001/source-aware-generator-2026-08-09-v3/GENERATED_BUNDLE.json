@@ -1,0 +1,785 @@
+{
+  "action_domain": [
+    "STOP",
+    "CREEP",
+    "PROCEED"
+  ],
+  "bundle_id": "p0b_source_aware_two_actor_request__indexed_collection__bundle",
+  "bundle_version": "eblc-bundle-v0.1",
+  "claim_scope": "P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY",
+  "composition_evidence_refs": [
+    "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+  ],
+  "contracts": [
+    {
+      "allowed_actions": [
+        "STOP"
+      ],
+      "contract_id": "C0",
+      "evidence_refs": [
+        "P0B-SYNTHETIC-ASSOCIATION-A-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+        "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0"
+      ],
+      "overrides_contracts": [],
+      "priority_tier": "HARD",
+      "program": {
+        "binding": {
+          "contract_id": "C0",
+          "coordinate_frame": "ego_path_s",
+          "distance_unit": "m",
+          "evidence_refs": [
+            "P0B-SYNTHETIC-ASSOCIATION-A-v0",
+            "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+            "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0"
+          ],
+          "rule_id": "P0B-SYS-PED-CZ-001",
+          "subject_id": "ego",
+          "target_entity_id": "synthetic-pedestrian:P17",
+          "zone_id": "synthetic-zone:CZ4"
+        },
+        "claim_scope": "P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY",
+        "constraints": {
+          "deceleration": {
+            "evidence_refs": [
+              "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+            ],
+            "frame": "ego_path_s",
+            "unit": "m/s^2",
+            "value": 3.0
+          },
+          "enforce_invariant": true,
+          "force_deadlock": false,
+          "position_epsilon": {
+            "evidence_refs": [
+              "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+            ],
+            "frame": "ego_path_s",
+            "unit": "m",
+            "value": 1e-09
+          },
+          "position_uncertainty": {
+            "evidence_refs": [
+              "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+            ],
+            "frame": "ego_path_s",
+            "unit": "m",
+            "value": 0.5
+          },
+          "response_time": {
+            "evidence_refs": [
+              "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+            ],
+            "frame": null,
+            "unit": "s",
+            "value": 0.5
+          },
+          "speed_epsilon": {
+            "evidence_refs": [
+              "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+            ],
+            "frame": "ego_path_s",
+            "unit": "m/s",
+            "value": 1e-09
+          },
+          "time_epsilon": {
+            "evidence_refs": [
+              "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+            ],
+            "frame": null,
+            "unit": "s",
+            "value": 1e-09
+          }
+        },
+        "frames": 8,
+        "lifecycle": {
+          "always_active": false,
+          "evidence_refs": [
+            "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+          ],
+          "expiry_timestamp_s": null,
+          "fallback_action": "HOLD_PRIOR_LIVE_OBLIGATION_ON_FRESH_UNKNOWN",
+          "fallback_approved": true,
+          "initial_state": "INACTIVE",
+          "reactivation_enabled": true,
+          "release_clear_frames": 2,
+          "release_enabled": true,
+          "unknown_policy": "APPROVED_HOLD"
+        },
+        "predicate": {
+          "allowed_epistemic": [
+            "OBSERVED",
+            "PREDICTED",
+            "DERIVED"
+          ],
+          "evidence_refs": [
+            "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+          ],
+          "failure_value": "UNKNOWN",
+          "maximum_age_s": 0.2,
+          "predicate_id": "pedestrian_conflict"
+        },
+        "priority": {
+          "class": "MANDATORY_SYSTEM",
+          "evidence_refs": [
+            "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+          ],
+          "overrides": [
+            "ROUTE_PROGRESS",
+            "COMFORT_SERVICE",
+            "STATISTICAL_HEURISTIC"
+          ]
+        },
+        "program_id": "p0b_source_aware_two_actor_request__program_template__ped17_zone4",
+        "program_version": "eblc-program-v0.2",
+        "source_refs": [
+          "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+          "P0B-SYNTHETIC-PREDICATE-SPEC-v0",
+          "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+          "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+          "P0B-SYNTHETIC-ASSOCIATION-A-v0",
+          "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+          "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0"
+        ],
+        "typed_derivation": {
+          "claim_scope": "P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY",
+          "derivation_id": "p0b_source_aware_two_actor_request_stopping_derivation",
+          "derivation_version": "eblc-derivation-v0.1",
+          "horizon": 9,
+          "nodes": [
+            {
+              "inputs": [
+                "symbol:zone_entry_x",
+                "symbol:stop_margin"
+              ],
+              "node_id": "stop_position",
+              "operation": "SUB",
+              "source_refs": [
+                "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+                "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+              ]
+            },
+            {
+              "inputs": [
+                "symbol:ego_speed",
+                "symbol:speed_epsilon"
+              ],
+              "node_id": "adjusted_speed",
+              "operation": "SUB",
+              "source_refs": [
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ]
+            },
+            {
+              "inputs": [
+                "node:adjusted_speed",
+                "symbol:zero_speed"
+              ],
+              "node_id": "effective_speed",
+              "operation": "MAX",
+              "source_refs": [
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ]
+            },
+            {
+              "inputs": [
+                "node:effective_speed",
+                "symbol:response_time"
+              ],
+              "node_id": "response_distance",
+              "operation": "MUL",
+              "source_refs": [
+                "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ]
+            },
+            {
+              "inputs": [
+                "node:effective_speed",
+                "node:effective_speed"
+              ],
+              "node_id": "speed_squared",
+              "operation": "MUL",
+              "source_refs": [
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ]
+            },
+            {
+              "inputs": [
+                "symbol:factor_two",
+                "symbol:deceleration"
+              ],
+              "node_id": "twice_deceleration",
+              "operation": "MUL",
+              "source_refs": [
+                "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ]
+            },
+            {
+              "inputs": [
+                "node:speed_squared",
+                "node:twice_deceleration"
+              ],
+              "node_id": "braking_distance",
+              "operation": "DIV",
+              "source_refs": [
+                "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ]
+            },
+            {
+              "inputs": [
+                "node:response_distance",
+                "node:braking_distance"
+              ],
+              "node_id": "stopping_distance",
+              "operation": "ADD",
+              "source_refs": [
+                "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "evidence_refs": [
+                "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+                "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+              ],
+              "frame": "ego_path_s",
+              "node_ref": "node:stop_position",
+              "output_id": "stop_position",
+              "replace_clause_ids": [],
+              "sort": "REAL",
+              "target_declaration": "stop_position",
+              "time_varying": false,
+              "unit": "m"
+            },
+            {
+              "evidence_refs": [
+                "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ],
+              "frame": "ego_path_s",
+              "node_ref": "node:stopping_distance",
+              "output_id": "stopping_distance",
+              "replace_clause_ids": [],
+              "sort": "REAL",
+              "target_declaration": "stopping_distance",
+              "time_varying": true,
+              "unit": "m"
+            }
+          ],
+          "source_refs": [
+            "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+            "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+            "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+            "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+          ],
+          "symbols": [
+            {
+              "core_name": null,
+              "evidence_refs": [
+                "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+              ],
+              "frame": "ego_path_s",
+              "kind": "SOURCED_VALUE",
+              "sort": "REAL",
+              "symbol_id": "zone_entry_x",
+              "time_varying": false,
+              "unit": "m",
+              "value": 0.0
+            },
+            {
+              "core_name": null,
+              "evidence_refs": [
+                "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+              ],
+              "frame": "ego_path_s",
+              "kind": "SOURCED_VALUE",
+              "sort": "REAL",
+              "symbol_id": "stop_margin",
+              "time_varying": false,
+              "unit": "m",
+              "value": 1.5
+            },
+            {
+              "core_name": null,
+              "evidence_refs": [
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ],
+              "frame": null,
+              "kind": "SOURCED_VALUE",
+              "sort": "REAL",
+              "symbol_id": "factor_two",
+              "time_varying": false,
+              "unit": "1",
+              "value": 2.0
+            },
+            {
+              "core_name": null,
+              "evidence_refs": [
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ],
+              "frame": "ego_path_s",
+              "kind": "SOURCED_VALUE",
+              "sort": "REAL",
+              "symbol_id": "zero_speed",
+              "time_varying": false,
+              "unit": "m/s",
+              "value": 0.0
+            },
+            {
+              "core_name": "ego_speed",
+              "evidence_refs": [
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ],
+              "frame": "ego_path_s",
+              "kind": "CORE_VARIABLE",
+              "sort": "REAL",
+              "symbol_id": "ego_speed",
+              "time_varying": true,
+              "unit": "m/s",
+              "value": null
+            },
+            {
+              "core_name": "speed_epsilon",
+              "evidence_refs": [
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ],
+              "frame": "ego_path_s",
+              "kind": "CORE_VARIABLE",
+              "sort": "REAL",
+              "symbol_id": "speed_epsilon",
+              "time_varying": false,
+              "unit": "m/s",
+              "value": null
+            },
+            {
+              "core_name": "response_time",
+              "evidence_refs": [
+                "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+              ],
+              "frame": null,
+              "kind": "CORE_VARIABLE",
+              "sort": "REAL",
+              "symbol_id": "response_time",
+              "time_varying": false,
+              "unit": "s",
+              "value": null
+            },
+            {
+              "core_name": "deceleration",
+              "evidence_refs": [
+                "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+              ],
+              "frame": "ego_path_s",
+              "kind": "CORE_VARIABLE",
+              "sort": "REAL",
+              "symbol_id": "deceleration",
+              "time_varying": false,
+              "unit": "m/s^2",
+              "value": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "allowed_actions": [
+        "STOP"
+      ],
+      "contract_id": "C1",
+      "evidence_refs": [
+        "P0B-SYNTHETIC-ASSOCIATION-B-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+        "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0"
+      ],
+      "overrides_contracts": [],
+      "priority_tier": "HARD",
+      "program": {
+        "binding": {
+          "contract_id": "C1",
+          "coordinate_frame": "ego_path_s",
+          "distance_unit": "m",
+          "evidence_refs": [
+            "P0B-SYNTHETIC-ASSOCIATION-B-v0",
+            "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+            "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0"
+          ],
+          "rule_id": "P0B-SYS-PED-CZ-001",
+          "subject_id": "ego",
+          "target_entity_id": "synthetic-pedestrian:P18",
+          "zone_id": "synthetic-zone:CZ5"
+        },
+        "claim_scope": "P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY",
+        "constraints": {
+          "deceleration": {
+            "evidence_refs": [
+              "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+            ],
+            "frame": "ego_path_s",
+            "unit": "m/s^2",
+            "value": 3.0
+          },
+          "enforce_invariant": true,
+          "force_deadlock": false,
+          "position_epsilon": {
+            "evidence_refs": [
+              "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+            ],
+            "frame": "ego_path_s",
+            "unit": "m",
+            "value": 1e-09
+          },
+          "position_uncertainty": {
+            "evidence_refs": [
+              "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+            ],
+            "frame": "ego_path_s",
+            "unit": "m",
+            "value": 0.5
+          },
+          "response_time": {
+            "evidence_refs": [
+              "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+            ],
+            "frame": null,
+            "unit": "s",
+            "value": 0.5
+          },
+          "speed_epsilon": {
+            "evidence_refs": [
+              "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+            ],
+            "frame": "ego_path_s",
+            "unit": "m/s",
+            "value": 1e-09
+          },
+          "time_epsilon": {
+            "evidence_refs": [
+              "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+            ],
+            "frame": null,
+            "unit": "s",
+            "value": 1e-09
+          }
+        },
+        "frames": 8,
+        "lifecycle": {
+          "always_active": false,
+          "evidence_refs": [
+            "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+          ],
+          "expiry_timestamp_s": null,
+          "fallback_action": "HOLD_PRIOR_LIVE_OBLIGATION_ON_FRESH_UNKNOWN",
+          "fallback_approved": true,
+          "initial_state": "INACTIVE",
+          "reactivation_enabled": true,
+          "release_clear_frames": 2,
+          "release_enabled": true,
+          "unknown_policy": "APPROVED_HOLD"
+        },
+        "predicate": {
+          "allowed_epistemic": [
+            "OBSERVED",
+            "PREDICTED",
+            "DERIVED"
+          ],
+          "evidence_refs": [
+            "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+          ],
+          "failure_value": "UNKNOWN",
+          "maximum_age_s": 0.2,
+          "predicate_id": "pedestrian_conflict"
+        },
+        "priority": {
+          "class": "MANDATORY_SYSTEM",
+          "evidence_refs": [
+            "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+          ],
+          "overrides": [
+            "ROUTE_PROGRESS",
+            "COMFORT_SERVICE",
+            "STATISTICAL_HEURISTIC"
+          ]
+        },
+        "program_id": "p0b_source_aware_two_actor_request__program_template__ped18_zone5",
+        "program_version": "eblc-program-v0.2",
+        "source_refs": [
+          "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+          "P0B-SYNTHETIC-PREDICATE-SPEC-v0",
+          "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+          "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+          "P0B-SYNTHETIC-ASSOCIATION-B-v0",
+          "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+          "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0"
+        ],
+        "typed_derivation": {
+          "claim_scope": "P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY",
+          "derivation_id": "p0b_source_aware_two_actor_request_stopping_derivation",
+          "derivation_version": "eblc-derivation-v0.1",
+          "horizon": 9,
+          "nodes": [
+            {
+              "inputs": [
+                "symbol:zone_entry_x",
+                "symbol:stop_margin"
+              ],
+              "node_id": "stop_position",
+              "operation": "SUB",
+              "source_refs": [
+                "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+                "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+              ]
+            },
+            {
+              "inputs": [
+                "symbol:ego_speed",
+                "symbol:speed_epsilon"
+              ],
+              "node_id": "adjusted_speed",
+              "operation": "SUB",
+              "source_refs": [
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ]
+            },
+            {
+              "inputs": [
+                "node:adjusted_speed",
+                "symbol:zero_speed"
+              ],
+              "node_id": "effective_speed",
+              "operation": "MAX",
+              "source_refs": [
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ]
+            },
+            {
+              "inputs": [
+                "node:effective_speed",
+                "symbol:response_time"
+              ],
+              "node_id": "response_distance",
+              "operation": "MUL",
+              "source_refs": [
+                "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ]
+            },
+            {
+              "inputs": [
+                "node:effective_speed",
+                "node:effective_speed"
+              ],
+              "node_id": "speed_squared",
+              "operation": "MUL",
+              "source_refs": [
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ]
+            },
+            {
+              "inputs": [
+                "symbol:factor_two",
+                "symbol:deceleration"
+              ],
+              "node_id": "twice_deceleration",
+              "operation": "MUL",
+              "source_refs": [
+                "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ]
+            },
+            {
+              "inputs": [
+                "node:speed_squared",
+                "node:twice_deceleration"
+              ],
+              "node_id": "braking_distance",
+              "operation": "DIV",
+              "source_refs": [
+                "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ]
+            },
+            {
+              "inputs": [
+                "node:response_distance",
+                "node:braking_distance"
+              ],
+              "node_id": "stopping_distance",
+              "operation": "ADD",
+              "source_refs": [
+                "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "evidence_refs": [
+                "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+                "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+              ],
+              "frame": "ego_path_s",
+              "node_ref": "node:stop_position",
+              "output_id": "stop_position",
+              "replace_clause_ids": [],
+              "sort": "REAL",
+              "target_declaration": "stop_position",
+              "time_varying": false,
+              "unit": "m"
+            },
+            {
+              "evidence_refs": [
+                "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ],
+              "frame": "ego_path_s",
+              "node_ref": "node:stopping_distance",
+              "output_id": "stopping_distance",
+              "replace_clause_ids": [],
+              "sort": "REAL",
+              "target_declaration": "stopping_distance",
+              "time_varying": true,
+              "unit": "m"
+            }
+          ],
+          "source_refs": [
+            "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+            "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+            "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+            "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+          ],
+          "symbols": [
+            {
+              "core_name": null,
+              "evidence_refs": [
+                "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+              ],
+              "frame": "ego_path_s",
+              "kind": "SOURCED_VALUE",
+              "sort": "REAL",
+              "symbol_id": "zone_entry_x",
+              "time_varying": false,
+              "unit": "m",
+              "value": 12.0
+            },
+            {
+              "core_name": null,
+              "evidence_refs": [
+                "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+              ],
+              "frame": "ego_path_s",
+              "kind": "SOURCED_VALUE",
+              "sort": "REAL",
+              "symbol_id": "stop_margin",
+              "time_varying": false,
+              "unit": "m",
+              "value": 1.5
+            },
+            {
+              "core_name": null,
+              "evidence_refs": [
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ],
+              "frame": null,
+              "kind": "SOURCED_VALUE",
+              "sort": "REAL",
+              "symbol_id": "factor_two",
+              "time_varying": false,
+              "unit": "1",
+              "value": 2.0
+            },
+            {
+              "core_name": null,
+              "evidence_refs": [
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ],
+              "frame": "ego_path_s",
+              "kind": "SOURCED_VALUE",
+              "sort": "REAL",
+              "symbol_id": "zero_speed",
+              "time_varying": false,
+              "unit": "m/s",
+              "value": 0.0
+            },
+            {
+              "core_name": "ego_speed",
+              "evidence_refs": [
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ],
+              "frame": "ego_path_s",
+              "kind": "CORE_VARIABLE",
+              "sort": "REAL",
+              "symbol_id": "ego_speed",
+              "time_varying": true,
+              "unit": "m/s",
+              "value": null
+            },
+            {
+              "core_name": "speed_epsilon",
+              "evidence_refs": [
+                "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+              ],
+              "frame": "ego_path_s",
+              "kind": "CORE_VARIABLE",
+              "sort": "REAL",
+              "symbol_id": "speed_epsilon",
+              "time_varying": false,
+              "unit": "m/s",
+              "value": null
+            },
+            {
+              "core_name": "response_time",
+              "evidence_refs": [
+                "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+              ],
+              "frame": null,
+              "kind": "CORE_VARIABLE",
+              "sort": "REAL",
+              "symbol_id": "response_time",
+              "time_varying": false,
+              "unit": "s",
+              "value": null
+            },
+            {
+              "core_name": "deceleration",
+              "evidence_refs": [
+                "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+              ],
+              "frame": "ego_path_s",
+              "kind": "CORE_VARIABLE",
+              "sort": "REAL",
+              "symbol_id": "deceleration",
+              "time_varying": false,
+              "unit": "m/s^2",
+              "value": null
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "frames": 8,
+  "source_refs": [
+    "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+    "P0B-SYNTHETIC-PREDICATE-SPEC-v0",
+    "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+    "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+    "P0B-SYNTHETIC-COMPOSITION-POLICY-v0",
+    "P0B-SYNTHETIC-OBSERVATION-A-v0",
+    "P0B-SYNTHETIC-OBSERVATION-B-v0",
+    "P0B-SYNTHETIC-ASSOCIATION-A-v0",
+    "P0B-SYNTHETIC-ASSOCIATION-B-v0",
+    "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+    "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+    "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0",
+    "P0B-SYNTHETIC-COC-CLAIM-v0"
+  ]
+}

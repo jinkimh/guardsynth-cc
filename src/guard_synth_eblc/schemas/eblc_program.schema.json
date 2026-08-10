@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:eblc:program:v0.1",
+  "title": "High-level EBLC program v0.1",
+  "type": "object",
+  "required": ["program_version", "program_id", "frames", "claim_scope", "source_refs", "binding", "predicate", "lifecycle", "constraints", "derivation_dag", "priority"],
+  "additionalProperties": false,
+  "properties": {
+    "program_version": {"const": "eblc-program-v0.1"},
+    "program_id": {"type": "string", "minLength": 1},
+    "frames": {"type": "integer", "minimum": 1},
+    "claim_scope": {"type": "string", "minLength": 1},
+    "source_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "binding": {
+      "type": "object",
+      "required": ["contract_id", "rule_id", "subject_id", "target_entity_id", "zone_id", "coordinate_frame", "distance_unit", "evidence_refs"],
+      "additionalProperties": false,
+      "properties": {
+        "contract_id": {"type": "string", "minLength": 1},
+        "rule_id": {"type": "string", "minLength": 1},
+        "subject_id": {"type": "string", "minLength": 1},
+        "target_entity_id": {"type": "string", "minLength": 1},
+        "zone_id": {"type": "string", "minLength": 1},
+        "coordinate_frame": {"type": "string", "minLength": 1},
+        "distance_unit": {"type": "string", "minLength": 1},
+        "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "predicate": {
+      "type": "object",
+      "required": ["predicate_id", "allowed_epistemic", "maximum_age_s", "failure_value", "evidence_refs"],
+      "additionalProperties": false,
+      "properties": {
+        "predicate_id": {"type": "string", "minLength": 1},
+        "allowed_epistemic": {"type": "array", "minItems": 1, "items": {"type": "string", "enum": ["OBSERVED", "PREDICTED", "DERIVED", "CLAIMED"]}},
+        "maximum_age_s": {"type": "number", "minimum": 0},
+        "failure_value": {"const": "UNKNOWN"},
+        "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "lifecycle": {
+      "type": "object",
+      "required": ["initial_state", "release_clear_frames", "release_enabled", "reactivation_enabled", "fallback_action", "fallback_approved", "unknown_policy", "always_active", "expiry_timestamp_s", "evidence_refs"],
+      "additionalProperties": false,
+      "properties": {
+        "initial_state": {"const": "INACTIVE"},
+        "release_clear_frames": {"type": "integer", "minimum": 1},
+        "release_enabled": {"type": "boolean"},
+        "reactivation_enabled": {"type": "boolean"},
+        "fallback_action": {"type": "string", "minLength": 1},
+        "fallback_approved": {"type": "boolean"},
+        "unknown_policy": {"type": "string", "enum": ["APPROVED_HOLD", "AS_FALSE", "AS_TRUE"]},
+        "always_active": {"type": "boolean"},
+        "expiry_timestamp_s": {"type": ["number", "null"], "minimum": 0},
+        "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "required": ["stop_position", "position_uncertainty", "response_time", "deceleration", "enforce_invariant", "position_epsilon", "speed_epsilon", "time_epsilon", "force_deadlock"],
+      "additionalProperties": false,
+      "properties": {
+        "stop_position": {"$ref": "#/$defs/sourced_quantity"},
+        "position_uncertainty": {"$ref": "#/$defs/sourced_quantity"},
+        "response_time": {"$ref": "#/$defs/sourced_quantity"},
+        "deceleration": {"$ref": "#/$defs/sourced_quantity"},
+        "enforce_invariant": {"type": "boolean"},
+        "position_epsilon": {"$ref": "#/$defs/sourced_quantity"},
+        "speed_epsilon": {"$ref": "#/$defs/sourced_quantity"},
+        "time_epsilon": {"$ref": "#/$defs/sourced_quantity"},
+        "force_deadlock": {"type": "boolean"}
+      }
+    },
+    "derivation_dag": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["node_id", "operation", "inputs", "output", "source_refs"],
+        "additionalProperties": false,
+        "properties": {
+          "node_id": {"type": "string", "minLength": 1},
+          "operation": {"type": "string", "minLength": 1},
+          "inputs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "output": {"type": "string", "minLength": 1},
+          "source_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    },
+    "priority": {
+      "type": "object",
+      "required": ["class", "overrides", "evidence_refs"],
+      "additionalProperties": false,
+      "properties": {
+        "class": {"type": "string", "minLength": 1},
+        "overrides": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    }
+  },
+  "$defs": {
+    "sourced_quantity": {
+      "type": "object",
+      "required": ["value", "unit", "frame", "evidence_refs"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {"type": "number"},
+        "unit": {"type": ["string", "null"]},
+        "frame": {"type": ["string", "null"]},
+        "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    }
+  }
+}

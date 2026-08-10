@@ -1,0 +1,216 @@
+{
+  "checker": "UPPAAL_CHAINED_PROTOCOL_MUTATION_FEASIBILITY",
+  "models": [
+    {
+      "variant": "normal",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "mutation_oracle_match": true,
+      "violated_queries": [],
+      "trace_path": "experiments/results/baseline/scene-0001/uppaal-chained-traces/normal.txt"
+    },
+    {
+      "variant": "late_stop",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "mutation_oracle_match": true,
+      "violated_queries": [
+        {
+          "index": 4,
+          "query": "A[] not Deadline.Miss"
+        }
+      ],
+      "trace_path": "experiments/results/baseline/scene-0001/uppaal-chained-traces/late_stop.txt"
+    },
+    {
+      "variant": "skip_hold",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "mutation_oracle_match": true,
+      "violated_queries": [
+        {
+          "index": 2,
+          "query": "E<> Protocol.Hold"
+        },
+        {
+          "index": 3,
+          "query": "E<> Protocol.Recovered"
+        },
+        {
+          "index": 4,
+          "query": "A[] not Deadline.Miss"
+        },
+        {
+          "index": 5,
+          "query": "A[] not Protocol.OrderViolation"
+        }
+      ],
+      "trace_path": "experiments/results/baseline/scene-0001/uppaal-chained-traces/skip_hold.txt"
+    },
+    {
+      "variant": "premature_recovery",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "mutation_oracle_match": true,
+      "violated_queries": [
+        {
+          "index": 6,
+          "query": "A[] not premature_recovery"
+        }
+      ],
+      "trace_path": "experiments/results/baseline/scene-0001/uppaal-chained-traces/premature_recovery.txt"
+    },
+    {
+      "variant": "no_recovery",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "mutation_oracle_match": true,
+      "violated_queries": [
+        {
+          "index": 3,
+          "query": "E<> Protocol.Recovered"
+        },
+        {
+          "index": 4,
+          "query": "A[] not Deadline.Miss"
+        }
+      ],
+      "trace_path": "experiments/results/baseline/scene-0001/uppaal-chained-traces/no_recovery.txt"
+    }
+  ],
+  "overall": "PASS",
+  "provenance_assessment": {
+    "source_artifact": {
+      "artifact": "experiments/results/baseline/scene-0001/episode-check-result.json",
+      "sha256": "7ea9bb4b77d8e7a0b137c9605ad44aa1e0cc439f809ab361584bd27931104846",
+      "dataset_class": "PUBLIC_COMPATIBILITY_DATASET_NOT_OFFICIAL_NVIDIA_COC",
+      "clip_id": "scene-0001"
+    },
+    "source_reference_validation": {
+      "status": "PASS",
+      "validated_reference_count": 9,
+      "note": "References shared by both model families are validated per use."
+    },
+    "chained_four_phase": {
+      "traceability": {
+        "total_events": 7,
+        "source_backed_events": 2,
+        "source_coverage": 0.2857142857142857,
+        "observed": 1,
+        "derived": 1,
+        "synthetic": 5
+      },
+      "gates": {
+        "lineage_complete": "PASS",
+        "mutation_verification_eligible": "PASS",
+        "positive_sequence_training_eligible": "FAIL",
+        "raw_control_supervision_eligible": "FAIL"
+      }
+    },
+    "source_trace_episode": {
+      "traceability": {
+        "total_events": 7,
+        "source_backed_events": 7,
+        "source_coverage": 1.0,
+        "observed": 6,
+        "derived": 1,
+        "synthetic": 0
+      },
+      "gates": {
+        "lineage_complete": "PASS",
+        "positive_sequence_training_eligible": "PASS_WITH_WEAK_RESPONSE_LABEL",
+        "raw_control_supervision_eligible": "FAIL"
+      }
+    },
+    "policy": {
+      "synthetic_as_positive_training_label": "FORBIDDEN",
+      "synthetic_mutation_as_hard_negative": "ALLOWED",
+      "derived_response_label_requires_quality_weight": true
+    }
+  }
+}

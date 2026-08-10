@@ -1,0 +1,143 @@
+{
+  "claim_scope": "ADVERSARIAL_SOFTWARE_ROBUSTNESS_AUDIT_NOT_VEHICLE_SAFETY_VALIDATION",
+  "engine": "Z3_BOUNDED_SMT",
+  "experiment_id": "EBLC-ROBUSTNESS-AUDIT-001",
+  "gap_count": 8,
+  "gaps_by_severity": {
+    "CRITICAL": 3,
+    "HIGH": 5,
+    "LOW": 0,
+    "MEDIUM": 0
+  },
+  "passed_probe_count": 5,
+  "probe_count": 13,
+  "probes": [
+    {
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "passed": true,
+      "probe_id": "SCHEMA_REJECTS_ADDITIONAL_PROPERTY",
+      "severity_if_failed": "HIGH"
+    },
+    {
+      "expected": "REJECT",
+      "observed": "ACCEPT",
+      "passed": false,
+      "probe_id": "SCHEMA_REJECTS_NONFINITE_NUMBER",
+      "severity_if_failed": "HIGH"
+    },
+    {
+      "expected": "REJECT",
+      "observed": "REJECT",
+      "passed": true,
+      "probe_id": "SCHEMA_FAILS_CLOSED_ON_UNKNOWN_KEYWORD",
+      "severity_if_failed": "MEDIUM"
+    },
+    {
+      "expected": "UNSUPPORTED",
+      "observed": "VALIDATED",
+      "passed": false,
+      "probe_id": "BINDER_REJECTS_NONFINITE_VEHICLE_PROFILE",
+      "severity_if_failed": "CRITICAL"
+    },
+    {
+      "expected": "ALL_REJECT",
+      "observed": {
+        "bounded": true,
+        "canonical": true,
+        "runtime": true
+      },
+      "passed": false,
+      "probe_id": "MONITORS_REJECT_NONFINITE_SCENE_VALUE",
+      "severity_if_failed": "CRITICAL"
+    },
+    {
+      "expected": "ALL_REJECT",
+      "observed": {
+        "bounded": true,
+        "canonical": true,
+        "runtime": true
+      },
+      "passed": false,
+      "probe_id": "MONITORS_REJECT_EMPTY_TRACE",
+      "severity_if_failed": "HIGH"
+    },
+    {
+      "expected": "ALL_REJECT",
+      "observed": {
+        "bounded": true,
+        "canonical": true,
+        "runtime": true
+      },
+      "passed": false,
+      "probe_id": "MONITORS_REJECT_NONMONOTONIC_TIMESTAMPS",
+      "severity_if_failed": "HIGH"
+    },
+    {
+      "expected": "NO_MISSING_FIELDS",
+      "observed": [
+        "derivation_dag",
+        "maximum_service_deceleration_mps2",
+        "position_uncertainty_m",
+        "predicate_maximum_age_s",
+        "response_time_s"
+      ],
+      "passed": false,
+      "probe_id": "CONTRACT_SCHEMA_COVERS_RUNTIME_PARAMETERS",
+      "severity_if_failed": "HIGH"
+    },
+    {
+      "expected": "1024",
+      "observed": {
+        "examples": [],
+        "matches": 1024
+      },
+      "passed": true,
+      "probe_id": "EXHAUSTIVE_FOUR_VALUED_LENGTH5_AGREEMENT",
+      "severity_if_failed": "CRITICAL"
+    },
+    {
+      "expected": "10/10",
+      "observed": "10/10",
+      "passed": true,
+      "probe_id": "CONTROLLED_MUTATIONS_DETECTED",
+      "severity_if_failed": "HIGH"
+    },
+    {
+      "expected": "NO_CANONICAL_IMPORT",
+      "observed": {
+        "runtime_monitor.py": [
+          "__future__",
+          "math",
+          "types",
+          "typing"
+        ],
+        "z3_bounded_checker.py": [
+          "__future__",
+          "itertools",
+          "math",
+          "types",
+          "typing"
+        ]
+      },
+      "passed": true,
+      "probe_id": "TARGETS_DO_NOT_IMPORT_CANONICAL_SEMANTICS",
+      "severity_if_failed": "CRITICAL"
+    },
+    {
+      "expected": "AT_LEAST_ONE_Z3_SOLVER_CONSTRUCTION",
+      "observed": [],
+      "passed": false,
+      "probe_id": "Z3_ENGINE_HAS_ACTUAL_SOLVER_ENCODING",
+      "severity_if_failed": "CRITICAL"
+    },
+    {
+      "expected": "REPORT_TEXT_DERIVED_FROM_ENGINE",
+      "observed": "UNCONDITIONAL_NO_Z3_TEXT",
+      "passed": false,
+      "probe_id": "REPORT_ENGINE_DESCRIPTION_IS_ENVIRONMENT_CONDITIONAL",
+      "severity_if_failed": "HIGH"
+    }
+  ],
+  "status": "EXECUTED_WITH_GAPS"
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "source_clip": "scene-0001",
+  "policy": {
+    "synthetic_as_positive_training_label": "FORBIDDEN",
+    "synthetic_mutation_as_hard_negative": "ALLOWED",
+    "derived_response_label_requires_quality_weight": true
+  },
+  "positive_sequence_candidates": [
+    {
+      "sample_id": "scene-0001-source-trace-episode",
+      "eligibility": "PASS_WITH_WEAK_RESPONSE_LABEL",
+      "event_ids": [
+        "decelerate_initial",
+        "decelerate_repeat_1",
+        "speed_response_onset",
+        "decelerate_repeat_2",
+        "adapt_speed_nudge_left",
+        "low_quality_event_1",
+        "low_quality_event_2"
+      ],
+      "supervision": {
+        "sequence_order": "ENABLED",
+        "coc_decision_labels": "ENABLED",
+        "response_timing": "ENABLED_WITH_QUALITY_WEIGHT",
+        "raw_actuator_target": "DISABLED"
+      },
+      "source_coverage": 1.0
+    }
+  ],
+  "excluded_positive_sequences": [
+    {
+      "sample_id": "scene-0001-chained-four-phase",
+      "eligibility": "FAIL",
+      "source_coverage": 0.2857142857142857,
+      "reason": "Five of seven normal-path events are synthetic assumptions.",
+      "allowed_role": "MODEL_CHECKING_AND_MUTATION_ONLY"
+    }
+  ],
+  "hard_negative_templates": [
+    {
+      "variant": "late_stop",
+      "operator": "DELAY_EVENT",
+      "target_event_id": "stop_confirmation",
+      "property": "A[] not Deadline.Miss",
+      "provenance_class": "SYNTHETIC_MUTATION",
+      "training_role": "HARD_NEGATIVE_ONLY"
+    },
+    {
+      "variant": "skip_hold",
+      "operator": "DELETE_EVENT",
+      "target_event_id": "stop_confirmation",
+      "property": "A[] not Protocol.OrderViolation",
+      "provenance_class": "SYNTHETIC_MUTATION",
+      "training_role": "HARD_NEGATIVE_ONLY"
+    },
+    {
+      "variant": "premature_recovery",
+      "operator": "REORDER_EVENTS",
+      "target_event_id": "recover_request",
+      "property": "A[] not premature_recovery",
+      "provenance_class": "SYNTHETIC_MUTATION",
+      "training_role": "HARD_NEGATIVE_ONLY"
+    },
+    {
+      "variant": "no_recovery",
+      "operator": "DELETE_EVENT",
+      "target_event_id": "recover_confirmation",
+      "property": "E<> Protocol.Recovered",
+      "provenance_class": "SYNTHETIC_MUTATION",
+      "training_role": "HARD_NEGATIVE_ONLY"
+    }
+  ],
+  "claim_limit": "This manifest routes labels by provenance; it does not execute model fine-tuning or establish vehicle-level safety."
+}

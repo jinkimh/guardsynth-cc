@@ -1,0 +1,140 @@
+{
+  "counts": {
+    "DATA_ADAPTER_GAP": 1,
+    "DEFERRED_V0_3": 1,
+    "NEXT_LAYER_GUARDSYNTH": 1,
+    "NOT_CLAIMED": 1,
+    "OUT_OF_SCOPE_V0_2": 2,
+    "SUPPORTED": 15
+  },
+  "entries": [
+    {
+      "implementation_or_boundary": "types.py; semantics.py",
+      "requirement": "Four-valued fact truth",
+      "requirement_id": "REQ-TRUTH",
+      "status": "SUPPORTED"
+    },
+    {
+      "implementation_or_boundary": "types.py; program.py",
+      "requirement": "Observed/predicted/derived/claimed evidence kinds",
+      "requirement_id": "REQ-EPISTEMIC",
+      "status": "SUPPORTED"
+    },
+    {
+      "implementation_or_boundary": "types.py; semantics.py",
+      "requirement": "Validated/review/unsupported/conflict verdicts",
+      "requirement_id": "REQ-VERDICT",
+      "status": "SUPPORTED"
+    },
+    {
+      "implementation_or_boundary": "semantics.py; elaborator.py",
+      "requirement": "Activation, maintenance, release, reactivation and expiry",
+      "requirement_id": "REQ-LIFECYCLE",
+      "status": "SUPPORTED"
+    },
+    {
+      "implementation_or_boundary": "types.py; rule_template.schema.json",
+      "requirement": "Source/version/scope/precondition/exception RuleTemplate representation",
+      "requirement_id": "REQ-RULE",
+      "status": "SUPPORTED"
+    },
+    {
+      "implementation_or_boundary": "binders.py; indexed_collection.py",
+      "requirement": "Target-zone binding with ambiguity reasons",
+      "requirement_id": "REQ-BINDING",
+      "status": "SUPPORTED"
+    },
+    {
+      "implementation_or_boundary": "types.py; binders.py",
+      "requirement": "Value/Interval/Set/Unsupported binder results",
+      "requirement_id": "REQ-PARTIAL",
+      "status": "SUPPORTED"
+    },
+    {
+      "implementation_or_boundary": "semantics.py; elaborator.py",
+      "requirement": "Freshness and failure-to-UNKNOWN contract",
+      "requirement_id": "REQ-OBSERVABILITY",
+      "status": "SUPPORTED"
+    },
+    {
+      "implementation_or_boundary": "derivation.py; program.py",
+      "requirement": "Evidence refs and typed parameter derivation DAG",
+      "requirement_id": "REQ-EVIDENCE",
+      "status": "SUPPORTED"
+    },
+    {
+      "implementation_or_boundary": "composition.py; bundle_elaborator.py",
+      "requirement": "Non-scalar priority and action composition",
+      "requirement_id": "REQ-PRIORITY",
+      "status": "SUPPORTED"
+    },
+    {
+      "implementation_or_boundary": "elaborator.py; smt_compiler.py",
+      "requirement": "High-level EBLC to typed Core to bounded SMT",
+      "requirement_id": "REQ-CORE-SMT",
+      "status": "SUPPORTED"
+    },
+    {
+      "implementation_or_boundary": "translation_validator.py; conformance.py",
+      "requirement": "Canonical/runtime/Z3 translation agreement",
+      "requirement_id": "REQ-TARGETS",
+      "status": "SUPPORTED"
+    },
+    {
+      "implementation_or_boundary": "mutations.py",
+      "requirement": "Controlled under/overconstraint mutation witnesses",
+      "requirement_id": "REQ-BCV",
+      "status": "SUPPORTED"
+    },
+    {
+      "implementation_or_boundary": "composition.py; indexed_collection.py",
+      "requirement": "Multi-contract and indexed actor-zone expansion",
+      "requirement_id": "REQ-MULTI",
+      "status": "SUPPORTED"
+    },
+    {
+      "implementation_or_boundary": "cnl_renderer.py",
+      "requirement": "Deterministic EBLC-to-CNL prompt projection",
+      "requirement_id": "REQ-CNL",
+      "status": "SUPPORTED"
+    },
+    {
+      "implementation_or_boundary": "Rule field is represented; general execution algebra is not",
+      "requirement": "General operational exception algebra",
+      "requirement_id": "REQ-EXCEPTION-ALGEBRA",
+      "status": "DEFERRED_V0_3"
+    },
+    {
+      "implementation_or_boundary": "Use finite indexed collections",
+      "requirement": "Unbounded collections and quantifiers",
+      "requirement_id": "REQ-QUANTIFIERS",
+      "status": "OUT_OF_SCOPE_V0_2"
+    },
+    {
+      "implementation_or_boundary": "Bounded discrete semantics only",
+      "requirement": "Continuous/hybrid dynamics and unbounded time",
+      "requirement_id": "REQ-HYBRID",
+      "status": "OUT_OF_SCOPE_V0_2"
+    },
+    {
+      "implementation_or_boundary": "Not part of EBLC execution language",
+      "requirement": "CoC/natural-language to source-grounded EBLC generation",
+      "requirement_id": "REQ-NL-GENERATOR",
+      "status": "NEXT_LAYER_GUARDSYNTH"
+    },
+    {
+      "implementation_or_boundary": "No values are inferred or defaulted",
+      "requirement": "Perception association and vehicle assurance authoring",
+      "requirement_id": "REQ-REAL-ASSURANCE",
+      "status": "DATA_ADAPTER_GAP"
+    },
+    {
+      "implementation_or_boundary": "Requires independent physics/simulator/vehicle evidence",
+      "requirement": "Independent vehicle-safety proof",
+      "requirement_id": "REQ-SAFETY-PROOF",
+      "status": "NOT_CLAIMED"
+    }
+  ],
+  "release": "EBLC-v0.2-rc1",
+  "scope_decision": "FEATURE_COMPLETE_SCOPED_RELEASE_CANDIDATE"
+}

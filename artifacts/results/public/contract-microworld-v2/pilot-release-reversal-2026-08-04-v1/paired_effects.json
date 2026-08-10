@@ -1,0 +1,66 @@
+[
+  {
+    "left": "A_STATE",
+    "right": "C_CONTRACT",
+    "fixed": 352,
+    "harmed": 50,
+    "same_bad": 207,
+    "same_good": 591
+  },
+  {
+    "left": "B_COC",
+    "right": "C_CONTRACT",
+    "fixed": 352,
+    "harmed": 26,
+    "same_bad": 231,
+    "same_good": 591
+  },
+  {
+    "left": "C_CONTRACT",
+    "right": "C2_PHASE_CONTRACT",
+    "fixed": 26,
+    "harmed": 224,
+    "same_bad": 231,
+    "same_good": 719
+  },
+  {
+    "left": "C2_PHASE_CONTRACT",
+    "right": "D_CORRECT_CONTRACT",
+    "fixed": 406,
+    "harmed": 9,
+    "same_bad": 49,
+    "same_good": 736
+  },
+  {
+    "left": "D_CORRECT_CONTRACT",
+    "right": "D_ORACLE_LOOKAHEAD_0P8",
+    "fixed": 58,
+    "harmed": 1,
+    "same_bad": 0,
+    "same_good": 1141
+  },
+  {
+    "left": "D_ORACLE_LOOKAHEAD_0P8",
+    "right": "D_ORACLE_LOOKAHEAD_1P2",
+    "fixed": 1,
+    "harmed": 0,
+    "same_bad": 0,
+    "same_good": 1199
+  },
+  {
+    "left": "C_CONTRACT",
+    "right": "C_STALE_CONTRACT_0P4",
+    "fixed": 90,
+    "harmed": 410,
+    "same_bad": 167,
+    "same_good": 533
+  },
+  {
+    "left": "D_CORRECT_CONTRACT",
+    "right": "D_STALE_CONTRACT_0P4",
+    "fixed": 30,
+    "harmed": 389,
+    "same_bad": 28,
+    "same_good": 753
+  }
+]

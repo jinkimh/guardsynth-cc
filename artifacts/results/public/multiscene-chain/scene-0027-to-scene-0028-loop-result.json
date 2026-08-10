@@ -1,0 +1,266 @@
+{
+  "scenes": [
+    "scene-0027",
+    "scene-0028"
+  ],
+  "scene_count": 2,
+  "duration_ms": 31420,
+  "event_count": 16,
+  "channel_counts": {
+    "accel_req": 5,
+    "accel_resp": 2,
+    "scene_boundary": 1,
+    "slow_req": 5,
+    "slow_resp": 3
+  },
+  "all_queries_satisfied": false,
+  "responded": false,
+  "no_deadline_miss": false,
+  "no_contradiction": true,
+  "no_boundary_violation": true,
+  "no_deadlock": true,
+  "source_done": true,
+  "scene_summary": [
+    {
+      "scene": "scene-0027",
+      "global_start_ms": 0,
+      "global_end_ms": 19500,
+      "trusted_obligation_events": 5,
+      "derived_response_witnesses": 2
+    },
+    {
+      "scene": "scene-0028",
+      "global_start_ms": 20100,
+      "global_end_ms": 39499,
+      "trusted_obligation_events": 5,
+      "derived_response_witnesses": 3
+    }
+  ],
+  "events": [
+    {
+      "time_ms": 3900,
+      "channel": "accel_req",
+      "label": "scene-0027:0:accel",
+      "scene": "scene-0027",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Maintain lane and accelerate through the intersection as the traffic light is green and the path is clear.",
+        "local_timestamp_us": 3900000
+      }
+    },
+    {
+      "time_ms": 4900,
+      "channel": "accel_req",
+      "label": "scene-0027:1:accel",
+      "scene": "scene-0027",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Maintain lane and accelerate through the intersection as the traffic light is green and the path is clear.",
+        "local_timestamp_us": 4900000
+      }
+    },
+    {
+      "time_ms": 6100,
+      "channel": "accel_req",
+      "label": "scene-0027:2:accel",
+      "scene": "scene-0027",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Maintain lane and accelerate through the intersection as the traffic light is green and the path is clear.",
+        "local_timestamp_us": 6100000
+      }
+    },
+    {
+      "time_ms": 7900,
+      "channel": "accel_req",
+      "label": "scene-0027:3:accel",
+      "scene": "scene-0027",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Maintain lane and accelerate through the intersection as the traffic light is green and the road ahead is clear.",
+        "local_timestamp_us": 7900000
+      }
+    },
+    {
+      "time_ms": 8600,
+      "channel": "accel_req",
+      "label": "scene-0027:4:accel",
+      "scene": "scene-0027",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Maintain lane and accelerate through the intersection as the traffic light is green and the road ahead is clear.",
+        "local_timestamp_us": 8600000
+      }
+    },
+    {
+      "time_ms": 9540,
+      "channel": "accel_resp",
+      "label": "scene-0027:3:accel:response",
+      "scene": "scene-0027",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 7900000,
+        "response_local_ms": 9540,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 9540,
+      "channel": "accel_resp",
+      "label": "scene-0027:4:accel:response",
+      "scene": "scene-0027",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 8600000,
+        "response_local_ms": 9540,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 19500,
+      "channel": "scene_boundary",
+      "label": "scene-0027->scene-0028",
+      "scene": "scene-0028",
+      "provenance": "DERIVED_NUSCENES_METADATA",
+      "detail": {
+        "gap_ms": 600,
+        "from": "scene-0027",
+        "to": "scene-0028"
+      }
+    },
+    {
+      "time_ms": 24700,
+      "channel": "slow_req",
+      "label": "scene-0028:0:slow",
+      "scene": "scene-0028",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Maintain lane and accelerate to pass the stopped vehicle on the left while approaching the intersection.",
+        "local_timestamp_us": 4600000
+      }
+    },
+    {
+      "time_ms": 26600,
+      "channel": "slow_req",
+      "label": "scene-0028:1:slow",
+      "scene": "scene-0028",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Maintain lane and decelerate to stop for the red traffic light at the intersection.",
+        "local_timestamp_us": 6500000
+      }
+    },
+    {
+      "time_ms": 28600,
+      "channel": "slow_req",
+      "label": "scene-0028:2:slow",
+      "scene": "scene-0028",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Decelerate to stop for the red traffic light at the intersection.",
+        "local_timestamp_us": 8500000
+      }
+    },
+    {
+      "time_ms": 30700,
+      "channel": "slow_req",
+      "label": "scene-0028:3:slow",
+      "scene": "scene-0028",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Stop for the red traffic light at the intersection.",
+        "local_timestamp_us": 10600000
+      }
+    },
+    {
+      "time_ms": 31120,
+      "channel": "slow_resp",
+      "label": "scene-0028:2:slow:response",
+      "scene": "scene-0028",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 8500000,
+        "response_local_ms": 11020,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 31120,
+      "channel": "slow_resp",
+      "label": "scene-0028:3:slow:response",
+      "scene": "scene-0028",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 10600000,
+        "response_local_ms": 11020,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 31400,
+      "channel": "slow_req",
+      "label": "scene-0028:4:slow",
+      "scene": "scene-0028",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Stop for the red traffic light at the intersection.",
+        "local_timestamp_us": 11300000
+      }
+    },
+    {
+      "time_ms": 31420,
+      "channel": "slow_resp",
+      "label": "scene-0028:4:slow:response",
+      "scene": "scene-0028",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 11300000,
+        "response_local_ms": 11320,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    }
+  ],
+  "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0027-to-scene-0028-loop.xml",
+  "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0027-to-scene-0028-loop.txt",
+  "queries": [
+    {
+      "query": "E<> Source.Done",
+      "satisfied": true
+    },
+    {
+      "query": "E<> MonitorProc.Responded",
+      "satisfied": false
+    },
+    {
+      "query": "A[] not deadline_miss",
+      "satisfied": false
+    },
+    {
+      "query": "A[] not contradiction",
+      "satisfied": true
+    },
+    {
+      "query": "A[] not boundary_violation",
+      "satisfied": true
+    },
+    {
+      "query": "A[] not deadlock",
+      "satisfied": true
+    }
+  ]
+}

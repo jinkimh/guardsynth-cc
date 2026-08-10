@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:eblc:p0b:rule-template:v0.1",
+  "title": "Public EBLC v0 RuleTemplate",
+  "type": "object",
+  "required": ["rule_id", "source", "scope", "precondition", "exception", "roles", "binder_id", "lifecycle", "fallback", "observability", "priority", "stop_margin_m", "release_clear_frames"],
+  "additionalProperties": false,
+  "properties": {
+    "rule_id": {"type": "string", "minLength": 1},
+    "source": {
+      "type": "object",
+      "required": ["evidence_id", "source_class", "uri", "version", "scope", "section", "content_hash"],
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {"type": "string", "minLength": 1},
+        "source_class": {"type": "string", "enum": ["LEGAL", "PHYSICS_DERIVED", "SYSTEM_REQUIREMENT", "ODD_REQUIREMENT", "HUMAN_CONVENTION", "STATISTICAL_HEURISTIC", "COMFORT_SERVICE", "UNKNOWN"]},
+        "uri": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "scope": {"type": "string", "minLength": 1},
+        "section": {"type": "string", "minLength": 1},
+        "content_hash": {"type": "string", "minLength": 1}
+      }
+    },
+    "scope": {"type": "string", "minLength": 1},
+    "precondition": {"type": "string", "minLength": 1},
+    "exception": {"type": "string", "minLength": 1},
+    "roles": {
+      "type": "object",
+      "required": ["subject", "target", "zone"],
+      "additionalProperties": false,
+      "properties": {"subject": {"type": "string", "minLength": 1}, "target": {"type": "string", "minLength": 1}, "zone": {"type": "string", "minLength": 1}}
+    },
+    "binder_id": {"type": "string", "minLength": 1},
+    "lifecycle": {
+      "type": "object",
+      "required": ["activation", "invariant", "bound", "release", "reactivation", "expiry"],
+      "additionalProperties": false,
+      "properties": {"activation": {"type": "string", "minLength": 1}, "invariant": {"type": "string", "minLength": 1}, "bound": {"type": "string", "minLength": 1}, "release": {"type": "string", "minLength": 1}, "reactivation": {"type": "string", "minLength": 1}, "expiry": {"type": "string", "minLength": 1}}
+    },
+    "fallback": {
+      "type": "object",
+      "required": ["action", "approved"],
+      "additionalProperties": false,
+      "properties": {"action": {"type": "string", "minLength": 1}, "approved": {"type": "boolean"}}
+    },
+    "observability": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "priority": {
+      "type": "object",
+      "required": ["class", "overrides"],
+      "additionalProperties": false,
+      "properties": {
+        "class": {"type": "string", "enum": ["HARD_PHYSICAL", "ODD_FALLBACK", "MANDATORY_SYSTEM", "ROUTE_PROGRESS", "HUMAN_CONVENTION", "COMFORT_SERVICE", "STATISTICAL_HEURISTIC"]},
+        "overrides": {"type": "array", "items": {"type": "string", "enum": ["HARD_PHYSICAL", "ODD_FALLBACK", "MANDATORY_SYSTEM", "ROUTE_PROGRESS", "HUMAN_CONVENTION", "COMFORT_SERVICE", "STATISTICAL_HEURISTIC"]}}
+      }
+    },
+    "stop_margin_m": {"type": "number", "minimum": 0},
+    "release_clear_frames": {"type": "integer", "minimum": 1}
+  }
+}

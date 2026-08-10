@@ -1,0 +1,6225 @@
+{
+  "core_model_id": "p0b_pedestrian_conflict_zone_program_core",
+  "frame_agreement": 1.0,
+  "frame_count": 266,
+  "limitations": [
+    "GENERATED_FINITE_TRACE_CONFORMANCE",
+    "ELABORATOR_DERIVED_FROM_CANONICAL_SPECIFICATION",
+    "NOT_AN_INDEPENDENT_SAFETY_ORACLE"
+  ],
+  "matching_frames": 266,
+  "matching_traces": 129,
+  "program_id": "p0b_pedestrian_conflict_zone_program",
+  "records": [
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 2,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "RELEASED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "REACTIVATED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 2,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "RELEASED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 2,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "RELEASED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 2,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "RELEASED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "REACTIVATED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 2,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "RELEASED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 2,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "RELEASED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 8,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "safe_release_reactivation"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 2,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "one_frame_false_no_release"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 2,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "unknown_active_fallback"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "conflicting_evidence"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": true,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": true,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "active_zone_entry_violation"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": true,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": true,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "dynamic_speed_violation"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "stale_fact"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "safe_progress"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_000"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_001"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_002"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_003"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_004"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 2,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "RELEASED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 2,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "RELEASED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_005"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_006"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_007"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_008"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_009"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_010"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_011"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_012"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_013"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_014"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_015"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_016"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_017"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_018"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_019"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_020"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_021"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_022"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_023"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_024"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_025"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_026"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_027"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_028"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_029"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_030"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_031"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_032"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_033"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_034"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_035"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_036"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_037"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_038"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_039"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_040"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_041"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_042"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_043"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_044"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_045"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_046"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_047"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_048"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_049"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_050"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_051"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_052"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_053"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_054"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_055"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_056"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_057"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_058"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_059"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_060"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_061"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_062"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 3,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "truth_product_3_063"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_TRUE_OBSERVED_fresh"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_TRUE_OBSERVED_stale"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_TRUE_OBSERVED_future"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_TRUE_PREDICTED_fresh"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_TRUE_PREDICTED_stale"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_TRUE_PREDICTED_future"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_TRUE_DERIVED_fresh"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_TRUE_DERIVED_stale"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_TRUE_DERIVED_future"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_TRUE_CLAIMED_fresh"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_TRUE_CLAIMED_stale"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_TRUE_CLAIMED_future"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_FALSE_OBSERVED_fresh"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_FALSE_OBSERVED_stale"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_FALSE_OBSERVED_future"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_FALSE_PREDICTED_fresh"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_FALSE_PREDICTED_stale"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_FALSE_PREDICTED_future"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_FALSE_DERIVED_fresh"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_FALSE_DERIVED_stale"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_FALSE_DERIVED_future"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_FALSE_CLAIMED_fresh"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_FALSE_CLAIMED_stale"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_FALSE_CLAIMED_future"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_UNKNOWN_OBSERVED_fresh"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_UNKNOWN_OBSERVED_stale"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_UNKNOWN_OBSERVED_future"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_UNKNOWN_PREDICTED_fresh"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_UNKNOWN_PREDICTED_stale"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_UNKNOWN_PREDICTED_future"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_UNKNOWN_DERIVED_fresh"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_UNKNOWN_DERIVED_stale"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_UNKNOWN_DERIVED_future"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_UNKNOWN_CLAIMED_fresh"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_UNKNOWN_CLAIMED_stale"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_UNKNOWN_CLAIMED_future"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_CONFLICT_OBSERVED_fresh"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_CONFLICT_OBSERVED_stale"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_CONFLICT_OBSERVED_future"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_CONFLICT_PREDICTED_fresh"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_CONFLICT_PREDICTED_stale"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_CONFLICT_PREDICTED_future"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_CONFLICT_DERIVED_fresh"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_CONFLICT_DERIVED_stale"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_CONFLICT_DERIVED_future"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_CONFLICT_CLAIMED_fresh"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_CONFLICT_CLAIMED_stale"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "epistemic_CONFLICT_CLAIMED_future"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "target_mismatch"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "zone_mismatch"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "UNSUPPORTED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "UNSUPPORTED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "unit_mismatch"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "UNSUPPORTED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "UNSUPPORTED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "coordinate_mismatch"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "EXPIRED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "EXPIRED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "scope_expiry"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "entry_boundary_equal"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": true,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": true,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "entry_boundary_above"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": true,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": true,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "speed_high"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "safe_progress_available"
+    }
+  ],
+  "trace_agreement": 1.0,
+  "trace_count": 129,
+  "version": "eblc-generated-conformance-v0.1"
+}

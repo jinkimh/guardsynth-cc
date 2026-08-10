@@ -1,0 +1,50 @@
+{
+  "core_horizon": 9,
+  "core_model_id": "p0b_pedestrian_conflict_zone_program_core",
+  "elaborator_version": "eblc-program-elaborator-v0.1",
+  "frames": 8,
+  "generated_from": {
+    "binding": [
+      "unit_ok",
+      "coordinate_ok",
+      "target_ok"
+    ],
+    "constraints": [
+      "generated_entry_violation",
+      "generated_speed_violation",
+      "generated_deadlock_violation",
+      "generated_progress_permission"
+    ],
+    "derivation_nodes": [
+      "derive-stop-position",
+      "derive-dynamic-speed-bound"
+    ],
+    "lifecycle": [
+      "generated_lifecycle_transition",
+      "generated_clear_counter_transition"
+    ],
+    "predicate": [
+      "effective_truth_from_freshness_and_epistemic"
+    ],
+    "priority": {
+      "class": "MANDATORY_SYSTEM",
+      "compiled_as_scalar_weight": false,
+      "overrides": [
+        "ROUTE_PROGRESS",
+        "COMFORT_SERVICE",
+        "STATISTICAL_HEURISTIC"
+      ]
+    },
+    "verdict": [
+      "generated_verdict"
+    ]
+  },
+  "limitations": [
+    "SINGLE_BOUND_CONTRACT",
+    "BOUNDED_DISCRETE_TIME",
+    "PRIORITY_PRESERVED_NOT_COMPOSED",
+    "DERIVATION_PROVENANCE_PRESERVED_NOT_SYMBOLICALLY_REPLAYED"
+  ],
+  "program_id": "p0b_pedestrian_conflict_zone_program",
+  "program_version": "eblc-program-v0.1"
+}

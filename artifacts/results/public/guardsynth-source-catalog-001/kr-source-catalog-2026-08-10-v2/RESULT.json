@@ -1,0 +1,84 @@
+{
+  "audit": {
+    "binder_count": 7,
+    "catalog_id": "guardsynth-kr-structured-road-v0.1",
+    "catalog_version": "guardsynth-source-catalog-v0.1",
+    "claim_scope": "P0_SOURCE_CATALOG_TRACEABILITY_NOT_LEGAL_ADVICE_SENSOR_ACCURACY_VEHICLE_ASSURANCE_OR_SAFETY",
+    "failure_to_unknown_coverage": {
+      "denominator": 11,
+      "numerator": 11
+    },
+    "family_coverage": [
+      "CUT_IN_LANE_CHANGE",
+      "CYCLIST_YIELD",
+      "LONGITUDINAL_FOLLOWING",
+      "PEDESTRIAN_YIELD",
+      "SIGNAL_CAUTION_PROCEED",
+      "SIGNAL_STOP"
+    ],
+    "family_coverage_count": 6,
+    "jurisdiction": {
+      "as_of_date": "2026-08-10",
+      "country_code": "KR",
+      "name": "Republic of Korea"
+    },
+    "lifecycle_profile_count": 5,
+    "predicate_count": 11,
+    "reference_closure": true,
+    "rule_template_count": 15,
+    "slice_counts": {
+      "FOLLOWING_CUT_IN": 4,
+      "PEDESTRIAN_CYCLIST_YIELD": 5,
+      "STOP_SIGNALS": 6
+    },
+    "source_claim_count": 16,
+    "source_record_count": 6,
+    "unsourced_normative_or_numeric_value_count": 0,
+    "unsupported_numeric_output_count": 1
+  },
+  "claim_scope": "P0_SOURCE_CATALOG_TRACEABILITY_NOT_LEGAL_ADVICE_SENSOR_ACCURACY_VEHICLE_ASSURANCE_OR_SAFETY",
+  "decision": "M12_CATALOG_GATE_PASS",
+  "experiment_id": "GUARDSYNTH-SOURCE-CATALOG-001",
+  "gates": {
+    "all_tests_pass": true,
+    "each_slice_at_least_four": true,
+    "failure_to_unknown_complete": true,
+    "no_unsourced_normative_or_numeric_value": true,
+    "six_family_coverage": true,
+    "source_reference_closure": true,
+    "template_count_12_to_20": true
+  },
+  "run_date": "2026-08-10",
+  "run_id": "kr-source-catalog-2026-08-10-v2",
+  "status": "EXECUTED",
+  "tests": {
+    "focused": {
+      "command": "/usr/bin/python3 -m unittest tests.guard_synth_eblc.test_source_catalog -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 10,
+      "test_count": 10
+    },
+    "full": {
+      "command": "/usr/bin/python3 -m unittest discover -s tests/guard_synth_eblc -p test_*.py -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 202,
+      "test_count": 202
+    },
+    "p0a": {
+      "command": "/usr/bin/python3 -m unittest experiments.eblc_pilot.test_pilot -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 7,
+      "test_count": 7
+    },
+    "structure": {
+      "command": "/usr/bin/python3 -m unittest tests.structure.test_project_layout -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 10,
+      "test_count": 10
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "grammar_version": "eblc-core-v0.1",
+  "model_id": "p0b_pedestrian_conflict_zone_core",
+  "horizon": 5,
+  "source_refs": [
+    "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+    "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+    "P0B-CONTROLLED-QUERY-ORACLE-v0"
+  ],
+  "claim_scope": "BOUNDED_CORE_GRAMMAR_AND_COMPILER_NOT_VEHICLE_SAFETY",
+  "declarations": [
+    {"name": "state", "sort": "ENUM", "time_varying": true, "enum_name": "Lifecycle", "enum_values": ["INACTIVE", "CANDIDATE", "ACTIVE", "MAINTAINED", "RELEASED", "REACTIVATED", "EXPIRED"], "unit": null, "frame": null, "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"]},
+    {"name": "truth", "sort": "ENUM", "time_varying": true, "enum_name": "Truth", "enum_values": ["TRUE", "FALSE", "UNKNOWN", "CONFLICT"], "unit": null, "frame": null, "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"]},
+    {"name": "clear_count", "sort": "INT", "time_varying": true, "enum_name": null, "enum_values": [], "unit": "1", "frame": null, "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"]},
+    {"name": "transition_allowed", "sort": "BOOL", "time_varying": true, "enum_name": null, "enum_values": [], "unit": null, "frame": null, "source_refs": ["P0B-CONTROLLED-QUERY-ORACLE-v0"]},
+    {"name": "ego_front_x", "sort": "REAL", "time_varying": true, "enum_name": null, "enum_values": [], "unit": "m", "frame": "ego_path_s", "source_refs": ["P0B-CONTROLLED-QUERY-ORACLE-v0"]},
+    {"name": "ego_speed", "sort": "REAL", "time_varying": true, "enum_name": null, "enum_values": [], "unit": "m/s", "frame": "ego_path_s", "source_refs": ["P0B-CONTROLLED-QUERY-ORACLE-v0"]},
+    {"name": "safe_progress", "sort": "BOOL", "time_varying": true, "enum_name": null, "enum_values": [], "unit": null, "frame": null, "source_refs": ["P0B-CONTROLLED-QUERY-ORACLE-v0"]},
+    {"name": "stop_allowed", "sort": "BOOL", "time_varying": true, "enum_name": null, "enum_values": [], "unit": null, "frame": null, "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"]},
+    {"name": "progress_allowed", "sort": "BOOL", "time_varying": true, "enum_name": null, "enum_values": [], "unit": null, "frame": null, "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"]},
+    {"name": "stop_position", "sort": "REAL", "time_varying": false, "enum_name": null, "enum_values": [], "unit": "m", "frame": "ego_path_s", "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"]},
+    {"name": "position_uncertainty", "sort": "REAL", "time_varying": false, "enum_name": null, "enum_values": [], "unit": "m", "frame": "ego_path_s", "source_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0"]},
+    {"name": "response_time", "sort": "REAL", "time_varying": false, "enum_name": null, "enum_values": [], "unit": "s", "frame": null, "source_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0"]},
+    {"name": "deceleration", "sort": "REAL", "time_varying": false, "enum_name": null, "enum_values": [], "unit": "m/s^2", "frame": "ego_path_s", "source_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0"]},
+    {"name": "release_threshold", "sort": "INT", "time_varying": false, "enum_name": null, "enum_values": [], "unit": "1", "frame": null, "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"]}
+  ],
+  "clauses": [
+    {
+      "id": "initial_state", "kind": "LIFECYCLE", "enforcement": "INITIAL",
+      "formula": {"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "INACTIVE", "enum_name": "Lifecycle", "unit": null, "frame": null}},
+      "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"], "description": "Lifecycle starts inactive."
+    },
+    {
+      "id": "initial_clear_count", "kind": "LIFECYCLE", "enforcement": "INITIAL",
+      "formula": {"op": "eq", "left": {"op": "var", "name": "clear_count", "offset": 0}, "right": {"op": "literal", "sort": "INT", "value": 0, "enum_name": null, "unit": "1", "frame": null}},
+      "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"], "description": "Clear-evidence counter starts at zero."
+    },
+    {
+      "id": "bind_stop_position", "kind": "BOUND", "enforcement": "INITIAL",
+      "formula": {"op": "eq", "left": {"op": "var", "name": "stop_position", "offset": 0}, "right": {"op": "literal", "sort": "REAL", "value": -1.5, "enum_name": null, "unit": "m", "frame": "ego_path_s"}},
+      "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"], "description": "Synthetic stop position for mechanism testing."
+    },
+    {
+      "id": "bind_position_uncertainty", "kind": "BOUND", "enforcement": "INITIAL",
+      "formula": {"op": "eq", "left": {"op": "var", "name": "position_uncertainty", "offset": 0}, "right": {"op": "literal", "sort": "REAL", "value": 0.5, "enum_name": null, "unit": "m", "frame": "ego_path_s"}},
+      "source_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0"], "description": "Synthetic position uncertainty, not a vehicle assurance claim."
+    },
+    {
+      "id": "bind_response_time", "kind": "BOUND", "enforcement": "INITIAL",
+      "formula": {"op": "eq", "left": {"op": "var", "name": "response_time", "offset": 0}, "right": {"op": "literal", "sort": "REAL", "value": 0.5, "enum_name": null, "unit": "s", "frame": null}},
+      "source_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0"], "description": "Synthetic response time, not a vehicle assurance claim."
+    },
+    {
+      "id": "bind_deceleration", "kind": "BOUND", "enforcement": "INITIAL",
+      "formula": {"op": "eq", "left": {"op": "var", "name": "deceleration", "offset": 0}, "right": {"op": "literal", "sort": "REAL", "value": 3.0, "enum_name": null, "unit": "m/s^2", "frame": "ego_path_s"}},
+      "source_refs": ["P0B-SYNTHETIC-VEHICLE-PROFILE-v0"], "description": "Synthetic service deceleration, not a vehicle assurance claim."
+    },
+    {
+      "id": "bind_release_threshold", "kind": "RELEASE", "enforcement": "INITIAL",
+      "formula": {"op": "eq", "left": {"op": "var", "name": "release_threshold", "offset": 0}, "right": {"op": "literal", "sort": "INT", "value": 2, "enum_name": null, "unit": "1", "frame": null}},
+      "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"], "description": "Two consecutive clear frames release the obligation."
+    },
+    {
+      "id": "exclude_conflicting_fixture", "kind": "ASSUMPTION", "enforcement": "EACH_FRAME",
+      "formula": {"op": "ne", "left": {"op": "var", "name": "truth", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "CONFLICT", "enum_name": "Truth", "unit": null, "frame": null}},
+      "source_refs": ["P0B-CONTROLLED-QUERY-ORACLE-v0"], "description": "The bounded lifecycle queries exclude conflict verdict handling."
+    },
+    {
+      "id": "clear_count_nonnegative", "kind": "LIFECYCLE", "enforcement": "EACH_FRAME",
+      "formula": {"op": "ge", "left": {"op": "var", "name": "clear_count", "offset": 0}, "right": {"op": "literal", "sort": "INT", "value": 0, "enum_name": null, "unit": "1", "frame": null}},
+      "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"], "description": "Clear-evidence counter is nonnegative."
+    },
+    {
+      "id": "lifecycle_transition", "kind": "LIFECYCLE", "enforcement": "EACH_TRANSITION",
+      "formula": {
+        "op": "eq", "left": {"op": "var", "name": "state", "offset": 1},
+        "right": {
+          "op": "ite",
+          "condition": {"op": "or", "args": [
+            {"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "INACTIVE", "enum_name": "Lifecycle", "unit": null, "frame": null}},
+            {"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "CANDIDATE", "enum_name": "Lifecycle", "unit": null, "frame": null}}
+          ]},
+          "then": {
+            "op": "ite", "condition": {"op": "eq", "left": {"op": "var", "name": "truth", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "TRUE", "enum_name": "Truth", "unit": null, "frame": null}},
+            "then": {"op": "literal", "sort": "ENUM", "value": "ACTIVE", "enum_name": "Lifecycle", "unit": null, "frame": null},
+            "else": {"op": "ite", "condition": {"op": "eq", "left": {"op": "var", "name": "truth", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "FALSE", "enum_name": "Truth", "unit": null, "frame": null}}, "then": {"op": "literal", "sort": "ENUM", "value": "INACTIVE", "enum_name": "Lifecycle", "unit": null, "frame": null}, "else": {"op": "literal", "sort": "ENUM", "value": "CANDIDATE", "enum_name": "Lifecycle", "unit": null, "frame": null}}
+          },
+          "else": {
+            "op": "ite", "condition": {"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "RELEASED", "enum_name": "Lifecycle", "unit": null, "frame": null}},
+            "then": {"op": "ite", "condition": {"op": "eq", "left": {"op": "var", "name": "truth", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "TRUE", "enum_name": "Truth", "unit": null, "frame": null}}, "then": {"op": "literal", "sort": "ENUM", "value": "REACTIVATED", "enum_name": "Lifecycle", "unit": null, "frame": null}, "else": {"op": "literal", "sort": "ENUM", "value": "RELEASED", "enum_name": "Lifecycle", "unit": null, "frame": null}},
+            "else": {
+              "op": "ite", "condition": {"op": "or", "args": [
+                {"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "ACTIVE", "enum_name": "Lifecycle", "unit": null, "frame": null}},
+                {"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "MAINTAINED", "enum_name": "Lifecycle", "unit": null, "frame": null}},
+                {"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "REACTIVATED", "enum_name": "Lifecycle", "unit": null, "frame": null}}
+              ]},
+              "then": {
+                "op": "ite", "condition": {"op": "eq", "left": {"op": "var", "name": "truth", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "TRUE", "enum_name": "Truth", "unit": null, "frame": null}},
+                "then": {"op": "literal", "sort": "ENUM", "value": "MAINTAINED", "enum_name": "Lifecycle", "unit": null, "frame": null},
+                "else": {"op": "ite", "condition": {"op": "eq", "left": {"op": "var", "name": "truth", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "FALSE", "enum_name": "Truth", "unit": null, "frame": null}}, "then": {"op": "ite", "condition": {"op": "ge", "left": {"op": "add", "left": {"op": "var", "name": "clear_count", "offset": 0}, "right": {"op": "literal", "sort": "INT", "value": 1, "enum_name": null, "unit": "1", "frame": null}}, "right": {"op": "var", "name": "release_threshold", "offset": 0}}, "then": {"op": "literal", "sort": "ENUM", "value": "RELEASED", "enum_name": "Lifecycle", "unit": null, "frame": null}, "else": {"op": "literal", "sort": "ENUM", "value": "MAINTAINED", "enum_name": "Lifecycle", "unit": null, "frame": null}}, "else": {"op": "literal", "sort": "ENUM", "value": "MAINTAINED", "enum_name": "Lifecycle", "unit": null, "frame": null}}
+              },
+              "else": {"op": "var", "name": "state", "offset": 0}
+            }
+          }
+        }
+      },
+      "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"], "description": "Activation, maintenance, release, reactivation and approved UNKNOWN fallback."
+    },
+    {
+      "id": "clear_count_transition", "kind": "RELEASE", "enforcement": "EACH_TRANSITION",
+      "formula": {
+        "op": "eq", "left": {"op": "var", "name": "clear_count", "offset": 1},
+        "right": {"op": "ite", "condition": {"op": "and", "args": [
+          {"op": "or", "args": [
+            {"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "ACTIVE", "enum_name": "Lifecycle", "unit": null, "frame": null}},
+            {"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "MAINTAINED", "enum_name": "Lifecycle", "unit": null, "frame": null}},
+            {"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "REACTIVATED", "enum_name": "Lifecycle", "unit": null, "frame": null}}
+          ]},
+          {"op": "eq", "left": {"op": "var", "name": "truth", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "FALSE", "enum_name": "Truth", "unit": null, "frame": null}}
+        ]}, "then": {"op": "add", "left": {"op": "var", "name": "clear_count", "offset": 0}, "right": {"op": "literal", "sort": "INT", "value": 1, "enum_name": null, "unit": "1", "frame": null}}, "else": {"op": "literal", "sort": "INT", "value": 0, "enum_name": null, "unit": "1", "frame": null}}
+      },
+      "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"], "description": "Count consecutive false hazard frames only while the obligation is live."
+    },
+    {
+      "id": "transition_allowed_definition", "kind": "LIFECYCLE", "enforcement": "EACH_TRANSITION",
+      "formula": {"op": "eq", "left": {"op": "var", "name": "transition_allowed", "offset": 0}, "right": {"op": "or", "args": [
+        {"op": "and", "args": [{"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "INACTIVE", "enum_name": "Lifecycle", "unit": null, "frame": null}}, {"op": "or", "args": [{"op": "eq", "left": {"op": "var", "name": "state", "offset": 1}, "right": {"op": "literal", "sort": "ENUM", "value": "INACTIVE", "enum_name": "Lifecycle", "unit": null, "frame": null}}, {"op": "eq", "left": {"op": "var", "name": "state", "offset": 1}, "right": {"op": "literal", "sort": "ENUM", "value": "CANDIDATE", "enum_name": "Lifecycle", "unit": null, "frame": null}}, {"op": "eq", "left": {"op": "var", "name": "state", "offset": 1}, "right": {"op": "literal", "sort": "ENUM", "value": "ACTIVE", "enum_name": "Lifecycle", "unit": null, "frame": null}}]}]},
+        {"op": "and", "args": [{"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "CANDIDATE", "enum_name": "Lifecycle", "unit": null, "frame": null}}, {"op": "or", "args": [{"op": "eq", "left": {"op": "var", "name": "state", "offset": 1}, "right": {"op": "literal", "sort": "ENUM", "value": "INACTIVE", "enum_name": "Lifecycle", "unit": null, "frame": null}}, {"op": "eq", "left": {"op": "var", "name": "state", "offset": 1}, "right": {"op": "literal", "sort": "ENUM", "value": "CANDIDATE", "enum_name": "Lifecycle", "unit": null, "frame": null}}, {"op": "eq", "left": {"op": "var", "name": "state", "offset": 1}, "right": {"op": "literal", "sort": "ENUM", "value": "ACTIVE", "enum_name": "Lifecycle", "unit": null, "frame": null}}]}]},
+        {"op": "and", "args": [{"op": "or", "args": [{"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "ACTIVE", "enum_name": "Lifecycle", "unit": null, "frame": null}}, {"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "MAINTAINED", "enum_name": "Lifecycle", "unit": null, "frame": null}}, {"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "REACTIVATED", "enum_name": "Lifecycle", "unit": null, "frame": null}}]}, {"op": "or", "args": [{"op": "eq", "left": {"op": "var", "name": "state", "offset": 1}, "right": {"op": "literal", "sort": "ENUM", "value": "MAINTAINED", "enum_name": "Lifecycle", "unit": null, "frame": null}}, {"op": "eq", "left": {"op": "var", "name": "state", "offset": 1}, "right": {"op": "literal", "sort": "ENUM", "value": "RELEASED", "enum_name": "Lifecycle", "unit": null, "frame": null}}]}]},
+        {"op": "and", "args": [{"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "RELEASED", "enum_name": "Lifecycle", "unit": null, "frame": null}}, {"op": "or", "args": [{"op": "eq", "left": {"op": "var", "name": "state", "offset": 1}, "right": {"op": "literal", "sort": "ENUM", "value": "RELEASED", "enum_name": "Lifecycle", "unit": null, "frame": null}}, {"op": "eq", "left": {"op": "var", "name": "state", "offset": 1}, "right": {"op": "literal", "sort": "ENUM", "value": "REACTIVATED", "enum_name": "Lifecycle", "unit": null, "frame": null}}]}]},
+        {"op": "and", "args": [{"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "EXPIRED", "enum_name": "Lifecycle", "unit": null, "frame": null}}, {"op": "eq", "left": {"op": "var", "name": "state", "offset": 1}, "right": {"op": "literal", "sort": "ENUM", "value": "EXPIRED", "enum_name": "Lifecycle", "unit": null, "frame": null}}]}
+      ]}},
+      "source_refs": ["P0B-CONTROLLED-QUERY-ORACLE-v0"], "description": "Independent allowed-edge relation used by the consistency query."
+    },
+    {
+      "id": "enforce_allowed_transition", "kind": "LIFECYCLE", "enforcement": "EACH_TRANSITION",
+      "formula": {"op": "var", "name": "transition_allowed", "offset": 0},
+      "source_refs": ["P0B-CONTROLLED-QUERY-ORACLE-v0"], "description": "All generated lifecycle transitions must use an allowed edge."
+    },
+    {
+      "id": "admissible_action_partition", "kind": "PROGRESS", "enforcement": "EACH_FRAME",
+      "formula": {"op": "and", "args": [
+        {"op": "eq", "left": {"op": "var", "name": "stop_allowed", "offset": 0}, "right": {"op": "or", "args": [{"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "ACTIVE", "enum_name": "Lifecycle", "unit": null, "frame": null}}, {"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "MAINTAINED", "enum_name": "Lifecycle", "unit": null, "frame": null}}, {"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "REACTIVATED", "enum_name": "Lifecycle", "unit": null, "frame": null}}]}},
+        {"op": "eq", "left": {"op": "var", "name": "progress_allowed", "offset": 0}, "right": {"op": "not", "arg": {"op": "var", "name": "stop_allowed", "offset": 0}}}
+      ]},
+      "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"], "description": "At least one stop/progress action class remains admissible."
+    },
+    {
+      "id": "stop_position_invariant", "kind": "INVARIANT", "enforcement": "DECLARATIVE",
+      "formula": {"op": "implies", "left": {"op": "var", "name": "stop_allowed", "offset": 0}, "right": {"op": "le", "left": {"op": "var", "name": "ego_front_x", "offset": 0}, "right": {"op": "var", "name": "stop_position", "offset": 0}}},
+      "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"], "description": "Property under test: a live obligation must not pass the stop position."
+    },
+    {
+      "id": "dynamic_stopping_bound", "kind": "BOUND", "enforcement": "DECLARATIVE",
+      "formula": {"op": "implies", "left": {"op": "var", "name": "stop_allowed", "offset": 0}, "right": {"op": "le", "left": {"op": "add", "left": {"op": "mul", "left": {"op": "var", "name": "ego_speed", "offset": 0}, "right": {"op": "var", "name": "response_time", "offset": 0}}, "right": {"op": "div", "left": {"op": "mul", "left": {"op": "var", "name": "ego_speed", "offset": 0}, "right": {"op": "var", "name": "ego_speed", "offset": 0}}, "right": {"op": "mul", "left": {"op": "literal", "sort": "REAL", "value": 2.0, "enum_name": null, "unit": "1", "frame": null}, "right": {"op": "var", "name": "deceleration", "offset": 0}}}}, "right": {"op": "sub", "left": {"op": "sub", "left": {"op": "var", "name": "stop_position", "offset": 0}, "right": {"op": "var", "name": "ego_front_x", "offset": 0}}, "right": {"op": "var", "name": "position_uncertainty", "offset": 0}}}},
+      "source_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0", "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"], "description": "Property under test: reaction plus braking distance fits available distance."
+    }
+  ],
+  "queries": [
+    {
+      "id": "lifecycle_transition_inconsistency", "formula": {"op": "eventually", "start": 0, "end": 3, "arg": {"op": "not", "arg": {"op": "var", "name": "transition_allowed", "offset": 0}}},
+      "expected": "UNSAT", "classification": "CONSISTENCY", "source_refs": ["P0B-CONTROLLED-QUERY-ORACLE-v0"], "description": "Search for a lifecycle edge outside the allowed relation."
+    },
+    {
+      "id": "active_stop_position_violation", "formula": {"op": "eventually", "start": 0, "end": 3, "arg": {"op": "and", "args": [{"op": "var", "name": "stop_allowed", "offset": 1}, {"op": "gt", "left": {"op": "var", "name": "ego_front_x", "offset": 0}, "right": {"op": "var", "name": "stop_position", "offset": 0}}]}},
+      "expected": "SAT", "classification": "UNDERCONSTRAINT", "source_refs": ["P0B-CONTROLLED-QUERY-ORACLE-v0"], "description": "Find a trace that violates the declarative stop-position invariant while active."
+    },
+    {
+      "id": "missing_reactivation", "formula": {"op": "eventually", "start": 0, "end": 3, "arg": {"op": "and", "args": [{"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "RELEASED", "enum_name": "Lifecycle", "unit": null, "frame": null}}, {"op": "eq", "left": {"op": "var", "name": "truth", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "TRUE", "enum_name": "Truth", "unit": null, "frame": null}}, {"op": "ne", "left": {"op": "var", "name": "state", "offset": 1}, "right": {"op": "literal", "sort": "ENUM", "value": "REACTIVATED", "enum_name": "Lifecycle", "unit": null, "frame": null}}]}},
+      "expected": "UNSAT", "classification": "UNDERCONSTRAINT", "source_refs": ["P0B-CONTROLLED-QUERY-ORACLE-v0"], "description": "Search for released hazard reappearance without reactivation."
+    },
+    {
+      "id": "safe_progress_false_deadlock", "formula": {"op": "eventually", "start": 0, "end": 4, "arg": {"op": "and", "args": [{"op": "var", "name": "safe_progress", "offset": 0}, {"op": "not", "arg": {"op": "var", "name": "stop_allowed", "offset": 0}}, {"op": "not", "arg": {"op": "var", "name": "progress_allowed", "offset": 0}}]}},
+      "expected": "UNSAT", "classification": "OVERCONSTRAINT", "source_refs": ["P0B-CONTROLLED-QUERY-ORACLE-v0"], "description": "Search for an empty admissible set despite an available safe-progress action."
+    },
+    {
+      "id": "dynamic_stopping_bound_violation", "formula": {"op": "eventually", "start": 0, "end": 3, "arg": {"op": "and", "args": [{"op": "var", "name": "stop_allowed", "offset": 1}, {"op": "gt", "left": {"op": "add", "left": {"op": "mul", "left": {"op": "var", "name": "ego_speed", "offset": 0}, "right": {"op": "var", "name": "response_time", "offset": 0}}, "right": {"op": "div", "left": {"op": "mul", "left": {"op": "var", "name": "ego_speed", "offset": 0}, "right": {"op": "var", "name": "ego_speed", "offset": 0}}, "right": {"op": "mul", "left": {"op": "literal", "sort": "REAL", "value": 2.0, "enum_name": null, "unit": "1", "frame": null}, "right": {"op": "var", "name": "deceleration", "offset": 0}}}}, "right": {"op": "sub", "left": {"op": "sub", "left": {"op": "var", "name": "stop_position", "offset": 0}, "right": {"op": "var", "name": "ego_front_x", "offset": 0}}, "right": {"op": "var", "name": "position_uncertainty", "offset": 0}}}]}},
+      "expected": "SAT", "classification": "UNDERCONSTRAINT", "source_refs": ["P0B-CONTROLLED-QUERY-ORACLE-v0"], "description": "Find a live trace whose stopping demand exceeds available distance."
+    },
+    {
+      "id": "clear_counter_always_nonnegative", "formula": {"op": "always", "start": 0, "end": 4, "arg": {"op": "ge", "left": {"op": "var", "name": "clear_count", "offset": 0}, "right": {"op": "literal", "sort": "INT", "value": 0, "enum_name": null, "unit": "1", "frame": null}}},
+      "expected": "SAT", "classification": "BOUNDARY", "source_refs": ["P0B-CONTROLLED-QUERY-ORACLE-v0"], "description": "Exercise bounded always over the nonnegative counter invariant."
+    },
+    {
+      "id": "inactive_until_activation", "formula": {"op": "until", "start": 1, "end": 3, "left": {"op": "or", "args": [{"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "INACTIVE", "enum_name": "Lifecycle", "unit": null, "frame": null}}, {"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "CANDIDATE", "enum_name": "Lifecycle", "unit": null, "frame": null}}]}, "right": {"op": "eq", "left": {"op": "var", "name": "state", "offset": 0}, "right": {"op": "literal", "sort": "ENUM", "value": "ACTIVE", "enum_name": "Lifecycle", "unit": null, "frame": null}}},
+      "expected": "SAT", "classification": "EXAMPLE", "source_refs": ["P0B-CONTROLLED-QUERY-ORACLE-v0"], "description": "Exercise bounded until with a delayed activation witness."
+    }
+  ]
+}

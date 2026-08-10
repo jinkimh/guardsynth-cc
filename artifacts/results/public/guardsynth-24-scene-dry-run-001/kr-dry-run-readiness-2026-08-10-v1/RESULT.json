@@ -1,0 +1,298 @@
+{
+  "claim_scope": "M13_SLOT_AND_INPUT_READINESS_NOT_REAL_SCENE_EXECUTION_ASSOCIATION_ACCURACY_OR_VEHICLE_SAFETY",
+  "decision": "M13_BLOCKED_SOURCE_COMPLETE_SCENES",
+  "experiment_id": "GUARDSYNTH-24-SCENE-DRY-RUN-001",
+  "readiness": {
+    "blockers": {
+      "MISSING_OR_AMBIGUOUS_TARGET_ZONE_ASSOCIATION": 4,
+      "MISSING_SCENE_INPUT": 19,
+      "MISSING_SOURCE_COMPLETE_SCENE_SLOTS": 24,
+      "MISSING_VEHICLE_ASSURANCE_PROFILE": 4,
+      "UNVERIFIED_COORDINATE_TRANSFORM": 4
+    },
+    "catalog_gate": {
+      "catalog_id": "guardsynth-kr-structured-road-v0.1",
+      "ready": true,
+      "rule_template_count": 15
+    },
+    "claim_scope": "M13_SLOT_AND_INPUT_READINESS_NOT_REAL_SCENE_EXECUTION_ASSOCIATION_ACCURACY_OR_VEHICLE_SAFETY",
+    "decision": "M13_BLOCKED_SOURCE_COMPLETE_SCENES",
+    "execution": {
+      "guardsynth_eblc_core_z3_scene_runs": 0,
+      "reason": "No source-complete real scene input; execution was not fabricated."
+    },
+    "input_readiness": {
+      "actual_candidate_event_count": 5,
+      "adapted_candidate_count": 4,
+      "source_complete_required": 24,
+      "source_complete_scene_count": 0,
+      "synthetic_scene_fill_performed": false
+    },
+    "readiness_version": "guardsynth-24-scene-readiness-v0.1",
+    "required_scene_fields": [
+      "timestamps",
+      "ego_pose_and_speed",
+      "relevant_actor_tracks",
+      "target_zone_or_lane_association",
+      "conflict_or_stop_geometry",
+      "verified_coordinate_transform",
+      "applicable_rule_source_refs",
+      "exact_vehicle_binding",
+      "source_bearing_vehicle_assurance_profile"
+    ],
+    "slot_count": 24,
+    "slot_plan": [
+      {
+        "real_scene_ref": null,
+        "slice": "PEDESTRIAN_CYCLIST_YIELD",
+        "slot_id": "S1-01",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "HAZARD_VISIBLE",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "PEDESTRIAN_CYCLIST_YIELD",
+        "slot_id": "S1-02",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "HAZARD_OCCLUDED_OR_REAPPEARING",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "PEDESTRIAN_CYCLIST_YIELD",
+        "slot_id": "S1-03",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "NOMINAL_CLEAR",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "PEDESTRIAN_CYCLIST_YIELD",
+        "slot_id": "S1-04",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "RELEASE_OR_REACTIVATION",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "PEDESTRIAN_CYCLIST_YIELD",
+        "slot_id": "S1-05",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "HAZARD_VISIBLE",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "PEDESTRIAN_CYCLIST_YIELD",
+        "slot_id": "S1-06",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "HAZARD_OCCLUDED_OR_REAPPEARING",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "PEDESTRIAN_CYCLIST_YIELD",
+        "slot_id": "S1-07",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "NOMINAL_CLEAR",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "PEDESTRIAN_CYCLIST_YIELD",
+        "slot_id": "S1-08",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "RELEASE_OR_REACTIVATION",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "STOP_SIGNALS",
+        "slot_id": "S2-01",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "HAZARD_VISIBLE",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "STOP_SIGNALS",
+        "slot_id": "S2-02",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "HAZARD_OCCLUDED_OR_REAPPEARING",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "STOP_SIGNALS",
+        "slot_id": "S2-03",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "NOMINAL_CLEAR",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "STOP_SIGNALS",
+        "slot_id": "S2-04",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "RELEASE_OR_REACTIVATION",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "STOP_SIGNALS",
+        "slot_id": "S2-05",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "HAZARD_VISIBLE",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "STOP_SIGNALS",
+        "slot_id": "S2-06",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "HAZARD_OCCLUDED_OR_REAPPEARING",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "STOP_SIGNALS",
+        "slot_id": "S2-07",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "NOMINAL_CLEAR",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "STOP_SIGNALS",
+        "slot_id": "S2-08",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "RELEASE_OR_REACTIVATION",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "FOLLOWING_CUT_IN",
+        "slot_id": "S3-01",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "HAZARD_VISIBLE",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "FOLLOWING_CUT_IN",
+        "slot_id": "S3-02",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "HAZARD_OCCLUDED_OR_REAPPEARING",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "FOLLOWING_CUT_IN",
+        "slot_id": "S3-03",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "NOMINAL_CLEAR",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "FOLLOWING_CUT_IN",
+        "slot_id": "S3-04",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "RELEASE_OR_REACTIVATION",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "FOLLOWING_CUT_IN",
+        "slot_id": "S3-05",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "HAZARD_VISIBLE",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "FOLLOWING_CUT_IN",
+        "slot_id": "S3-06",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "HAZARD_OCCLUDED_OR_REAPPEARING",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "FOLLOWING_CUT_IN",
+        "slot_id": "S3-07",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "NOMINAL_CLEAR",
+        "synthetic_fill": false
+      },
+      {
+        "real_scene_ref": null,
+        "slice": "FOLLOWING_CUT_IN",
+        "slot_id": "S3-08",
+        "source_complete": false,
+        "status": "UNASSIGNED_REAL_INPUT",
+        "stratum": "RELEASE_OR_REACTIVATION",
+        "synthetic_fill": false
+      }
+    ],
+    "slots_per_slice": 8,
+    "status": "BLOCKED_INPUT"
+  },
+  "run_date": "2026-08-10",
+  "run_id": "kr-dry-run-readiness-2026-08-10-v1",
+  "status": "PARTIAL",
+  "tests": {
+    "focused": {
+      "command": "/usr/bin/python3 -m unittest tests.guard_synth_eblc.test_dry_run_readiness tests.guard_synth_eblc.test_source_catalog -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 15,
+      "test_count": 15
+    },
+    "full": {
+      "command": "/usr/bin/python3 -m unittest discover -s tests/guard_synth_eblc -p test_*.py -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 202,
+      "test_count": 202
+    },
+    "p0a": {
+      "command": "/usr/bin/python3 -m unittest experiments.eblc_pilot.test_pilot -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 7,
+      "test_count": 7
+    },
+    "structure": {
+      "command": "/usr/bin/python3 -m unittest tests.structure.test_project_layout -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 10,
+      "test_count": 10
+    }
+  }
+}

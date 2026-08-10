@@ -1,0 +1,272 @@
+{
+  "query_order": [
+    "E<> Source.Done",
+    "A[] not provenance_violation",
+    "A[] not weak_response_violation",
+    "A[] not deadlock"
+  ],
+  "expected_satisfaction": {
+    "scene-0001": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0011": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0027": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0028": {
+      "baseline": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0055": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0129": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0133": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0138": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0151": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0178": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0180": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0181": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    },
+    "scene-0183": {
+      "baseline": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "provenance_mutation": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "response_mutation": [
+        true,
+        true,
+        false,
+        true
+      ]
+    }
+  },
+  "source": "artifacts/results/public/cohort-13/weak-kinematic-cohort-result.json",
+  "model_count": 39
+}

@@ -1,0 +1,73 @@
+{
+  "claim_scope": "EBLC_V02_LANGUAGE_AND_TOOLING_RELEASE_CANDIDATE_NOT_VEHICLE_SAFETY",
+  "code_revision": "WORKSPACE_WITHOUT_GIT_METADATA",
+  "enumeration": "DETERMINISTIC_FIXTURES_AND_GENERATED_BOUNDED_CONFORMANCE",
+  "experiment_id": "EBLC-RELEASE-CANDIDATE-001",
+  "file_hashes": {
+    "cli/pipelines/eblc/release_candidate/run.py": "d4aa5785d8b72fb88f6c546485556a32e04ace469b751c9f3bbbac105bd958f2",
+    "docs/guides/eblc/EBLC_USER_GUIDE_V02.md": "e14fc73756845cb3a5410e6cb5e9c47d0b6c6d8b7bcf8113e71a26898b8a541e",
+    "docs/releases/EBLC_RELEASE_NOTES_V02.md": "262776abaa9c38ceff37ff993131b1ace1afed3efb50858ac27b30456cf3d47b",
+    "docs/reports/EBLC_REQUIREMENT_TRACEABILITY_V02.md": "faf5cbd79199280d7be32f2a5908c18860e5befd8c3af3be7e01a2eab92b12b8",
+    "docs/specifications/eblc/EBLC_LANGUAGE_SPEC_V02.md": "0a77d84c8d8fbbb51b5329c16298a63ec9dc8ed97e10e926862031cf8cc67ccc",
+    "src/guard_synth_eblc/cnl_renderer.py": "aece17222a30c5e434c8d9430813e281799e3ea556abcf1b82f8c9c3737f606f",
+    "src/guard_synth_eblc/fixtures/eblc_program_p0b_v0_2.json": "a4e47eb536437c43a164b345ea1027430946eb3c36f590163e946613bb84f9be",
+    "tests/guard_synth_eblc/test_cnl_renderer.py": "8b3b1f81841acd6eed3f3d943ca0866c7d025d6de29ac4a1f9e7690072f81bf5"
+  },
+  "input_class": "SYNTHETIC",
+  "python_version": "3.11.2",
+  "random_seed": null,
+  "run_date": "2026-08-09",
+  "run_id": "eblc-v0.2-rc1-2026-08-09",
+  "test_commands": {
+    "cnl_renderer": {
+      "command": "python3 -m unittest tests.guard_synth_eblc.test_cnl_renderer -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 10,
+      "test_count": 10
+    },
+    "full_eblc": {
+      "command": "python3 -m unittest discover -s tests/guard_synth_eblc -p test_*.py -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 138,
+      "test_count": 138
+    },
+    "p0a": {
+      "command": "python3 -m unittest experiments.eblc_pilot.test_pilot -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 7,
+      "test_count": 7
+    },
+    "stable_baseline": {
+      "command": "python3 -m unittest tests.guard_synth_eblc.test_composition_compilation tests.guard_synth_eblc.test_composition_v02_derivation tests.guard_synth_eblc.test_core_smt_compiler tests.guard_synth_eblc.test_derivation_compiler tests.guard_synth_eblc.test_elaboration_conformance tests.guard_synth_eblc.test_indexed_collection tests.guard_synth_eblc.test_program_v02_typed_derivation tests.guard_synth_eblc.test_public_layout tests.guard_synth_eblc.test_real_scene_adapter tests.guard_synth_eblc.test_robustness tests.guard_synth_eblc.test_scenario_matrix tests.guard_synth_eblc.test_schema_binding tests.guard_synth_eblc.test_semantics tests.guard_synth_eblc.test_translation_mutations -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 128,
+      "test_count": 128
+    },
+    "structure": {
+      "command": "python3 -m unittest tests.structure.test_project_layout -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 8,
+      "test_count": 8
+    }
+  },
+  "versions": {
+    "bundle": "eblc-bundle-v0.1",
+    "cnl_language": "EBLC-CNL-EN-v0.1",
+    "cnl_renderer": "eblc-cnl-renderer-v0.1",
+    "core": "eblc-core-v0.1",
+    "core_smt_compiler": "eblc-core-smt-compiler-v0.1",
+    "program": "eblc-program-v0.2"
+  },
+  "z3_runtime": {
+    "module_path": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages/z3/__init__.py",
+    "prefix": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36",
+    "python_site_packages": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages",
+    "source": "PROJECT_LOCAL_ISOLATED_BUILD",
+    "version": "5.0.0"
+  }
+}

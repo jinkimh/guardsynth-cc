@@ -1,0 +1,56 @@
+{
+  "AMBIGUOUS_TARGET": {
+    "collection_generated": false,
+    "probe_id": "AMBIGUOUS_TARGET",
+    "program_generated": true,
+    "reason_codes": [
+      "AMBIGUOUS_TARGET_ASSOCIATION"
+    ],
+    "verdict": "REVIEW_REQUIRED"
+  },
+  "CLAIMED_ONLY": {
+    "collection_generated": false,
+    "probe_id": "CLAIMED_ONLY",
+    "program_generated": true,
+    "reason_codes": [
+      "COC_CLAIM_NOT_OBSERVED_FACT"
+    ],
+    "verdict": "REVIEW_REQUIRED"
+  },
+  "DUPLICATE_BINDING": {
+    "collection_generated": false,
+    "probe_id": "DUPLICATE_BINDING",
+    "program_generated": true,
+    "reason_codes": [
+      "DUPLICATE_TARGET_ZONE_BINDING"
+    ],
+    "verdict": "CONFLICT"
+  },
+  "MISSING_GEOMETRY": {
+    "collection_generated": false,
+    "probe_id": "MISSING_GEOMETRY",
+    "program_generated": true,
+    "reason_codes": [
+      "MISSING_ZONE_GEOMETRY"
+    ],
+    "verdict": "UNSUPPORTED"
+  },
+  "MISSING_PROFILE": {
+    "collection_generated": false,
+    "probe_id": "MISSING_PROFILE",
+    "program_generated": false,
+    "reason_codes": [
+      "MISSING_VEHICLE_ASSURANCE_PROFILE"
+    ],
+    "verdict": "UNSUPPORTED"
+  },
+  "UNIT_MISMATCH": {
+    "collection_generated": false,
+    "probe_id": "UNIT_MISMATCH",
+    "program_generated": true,
+    "reason_codes": [
+      "ZONE_ENTRY_UNIT_OR_FRAME_MISMATCH"
+    ],
+    "verdict": "UNSUPPORTED"
+  }
+}

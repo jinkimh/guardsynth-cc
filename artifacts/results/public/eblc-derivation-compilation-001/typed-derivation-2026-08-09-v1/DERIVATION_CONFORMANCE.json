@@ -1,0 +1,405 @@
+{
+  "agreement": 1.0,
+  "limitations": [
+    "GENERATED_FINITE_TRACE_CONFORMANCE",
+    "NOT_AN_INDEPENDENT_SAFETY_ORACLE"
+  ],
+  "matching_traces": 8,
+  "records": [
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 2,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "RELEASED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "REACTIVATED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 2,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "RELEASED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 2,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "RELEASED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 2,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "RELEASED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "REACTIVATED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 2,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "RELEASED",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 2,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "RELEASED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 8,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "safe_release_reactivation"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 1,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 2,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "one_frame_false_no_release"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        },
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "MAINTAINED",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 2,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "unknown_active_fallback"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "conflicting_evidence"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": true,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": true,
+          "progress_allowed": false,
+          "speed_violation": false,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "active_zone_entry_violation"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": true,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": false,
+          "speed_violation": true,
+          "state": "ACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "dynamic_speed_violation"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "CANDIDATE",
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "stale_fact"
+    },
+    {
+      "canonical": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "clear_count": 0,
+          "deadlock_violation": false,
+          "entry_violation": false,
+          "progress_allowed": true,
+          "speed_violation": false,
+          "state": "INACTIVE",
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "matches": true,
+      "mismatches": [],
+      "solver_status": "SAT",
+      "trace_id": "safe_progress"
+    }
+  ],
+  "trace_count": 8
+}

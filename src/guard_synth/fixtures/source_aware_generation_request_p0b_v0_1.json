@@ -1,0 +1,134 @@
+{
+  "generator_version": "guard-synth-source-aware-generator-v0.1",
+  "request_id": "p0b_source_aware_two_actor_request",
+  "template_program_ref": "p0b_pedestrian_conflict_zone_program_v02",
+  "rule_template_ref": "P0B-SYS-PED-CZ-001",
+  "predicate_spec_ref": "pedestrian_conflict",
+  "frames": 8,
+  "claim_scope": "P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY",
+  "source_refs": [
+    "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+    "P0B-SYNTHETIC-PREDICATE-SPEC-v0",
+    "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+    "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+    "P0B-SYNTHETIC-COMPOSITION-POLICY-v0",
+    "P0B-SYNTHETIC-OBSERVATION-A-v0",
+    "P0B-SYNTHETIC-OBSERVATION-B-v0",
+    "P0B-SYNTHETIC-ASSOCIATION-A-v0",
+    "P0B-SYNTHETIC-ASSOCIATION-B-v0",
+    "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+    "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+    "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0",
+    "P0B-SYNTHETIC-COC-CLAIM-v0"
+  ],
+  "policy": {
+    "subject_id": "ego",
+    "predicate_evidence_ref": "P0B-SYNTHETIC-PREDICATE-SPEC-v0",
+    "compiler_policy_evidence_ref": "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+    "composition_evidence_refs": ["P0B-SYNTHETIC-COMPOSITION-POLICY-v0"],
+    "action_domain": ["STOP", "CREEP", "PROCEED"],
+    "allowed_actions": ["STOP"],
+    "release_enabled": true,
+    "reactivation_enabled": true,
+    "unknown_policy": "APPROVED_HOLD",
+    "always_active": false,
+    "expiry_timestamp_s": null,
+    "enforce_invariant": true,
+    "force_deadlock": false,
+    "position_epsilon_m": 0.000000001,
+    "speed_epsilon_mps": 0.000000001,
+    "time_epsilon_s": 0.000000001
+  },
+  "vehicle_profile": {
+    "profile_id": "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+    "maximum_service_deceleration_mps2": 3.0,
+    "response_time_s": 0.5,
+    "position_uncertainty_m": 0.5,
+    "evidence_ref": "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+  },
+  "context_graph": {
+    "graph_id": "p0b_source_aware_context_graph",
+    "timestamp_s": 0.0,
+    "source_refs": [
+      "P0B-SYNTHETIC-OBSERVATION-A-v0",
+      "P0B-SYNTHETIC-OBSERVATION-B-v0",
+      "P0B-SYNTHETIC-ASSOCIATION-A-v0",
+      "P0B-SYNTHETIC-ASSOCIATION-B-v0",
+      "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+      "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+      "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0",
+      "P0B-SYNTHETIC-COC-CLAIM-v0"
+    ],
+    "coc_claims": [
+      {
+        "claim_id": "synthetic-coc-claim:pedestrian-risk",
+        "epistemic_kind": "CLAIMED",
+        "evidence_ref": "P0B-SYNTHETIC-COC-CLAIM-v0"
+      }
+    ],
+    "instances": [
+      {
+        "instance_id": "ped17_zone4",
+        "contract_id": "C0",
+        "hazard_fact": {
+          "truth": "TRUE",
+          "epistemic_kind": "OBSERVED",
+          "source_ref": "P0B-SYNTHETIC-OBSERVATION-A-v0",
+          "timestamp_s": 0.0,
+          "maximum_age_s": 0.2
+        },
+        "association": {
+          "selected_target_entity_id": "synthetic-pedestrian:P17",
+          "selected_zone_id": "synthetic-zone:CZ4",
+          "candidate_target_entity_ids": ["synthetic-pedestrian:P17"],
+          "candidate_zone_ids": ["synthetic-zone:CZ4"],
+          "zone_geometry_ref": "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+          "coordinate_transform_ref": "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0",
+          "evidence_refs": [
+            "P0B-SYNTHETIC-ASSOCIATION-A-v0",
+            "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+            "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0"
+          ]
+        },
+        "zone_entry": {
+          "value": 0.0,
+          "unit": "m",
+          "frame": "ego_path_s",
+          "evidence_refs": ["P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"]
+        },
+        "overrides_contracts": []
+      },
+      {
+        "instance_id": "ped18_zone5",
+        "contract_id": "C1",
+        "hazard_fact": {
+          "truth": "TRUE",
+          "epistemic_kind": "PREDICTED",
+          "source_ref": "P0B-SYNTHETIC-OBSERVATION-B-v0",
+          "timestamp_s": 0.0,
+          "maximum_age_s": 0.2
+        },
+        "association": {
+          "selected_target_entity_id": "synthetic-pedestrian:P18",
+          "selected_zone_id": "synthetic-zone:CZ5",
+          "candidate_target_entity_ids": ["synthetic-pedestrian:P18"],
+          "candidate_zone_ids": ["synthetic-zone:CZ5"],
+          "zone_geometry_ref": "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+          "coordinate_transform_ref": "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0",
+          "evidence_refs": [
+            "P0B-SYNTHETIC-ASSOCIATION-B-v0",
+            "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+            "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0"
+          ]
+        },
+        "zone_entry": {
+          "value": 12.0,
+          "unit": "m",
+          "frame": "ego_path_s",
+          "evidence_refs": ["P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"]
+        },
+        "overrides_contracts": []
+      }
+    ]
+  }
+}

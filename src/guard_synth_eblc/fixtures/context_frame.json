@@ -1,0 +1,11 @@
+{
+  "timestamp_s": 0.00,
+  "hazard_fact": {"truth": "TRUE", "epistemic_kind": "OBSERVED", "source": "SYNTHETIC-P0B-SENSOR", "timestamp_s": 0.0, "maximum_age_s": 0.2},
+  "ego_front_x_m": -12.0,
+  "ego_speed_mps": 6.0,
+  "zone_entry_x_m": 0.0,
+  "target_entity_id": "synthetic-pedestrian:P17",
+  "zone_id": "synthetic-zone:CZ4",
+  "coordinate_frame": "ego_path_s",
+  "distance_unit": "m"
+}

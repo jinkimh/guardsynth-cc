@@ -1,0 +1,65 @@
+{
+  "claim_scope": "SOURCE_AWARE_SYNTHETIC_GENERATION_AND_BOUNDED_TRANSLATION_NOT_VEHICLE_SAFETY",
+  "code_revision": "WORKSPACE_WITHOUT_GIT_METADATA",
+  "enumeration": "DETERMINISTIC_TWO_INSTANCE_FIXTURE_AND_SIX_ABSTENTION_PROBES",
+  "experiment_id": "GUARDSYNTH-SOURCE-AWARE-GENERATOR-001",
+  "file_hashes": {
+    "cli/pipelines/guardsynth/source_aware_generate/run.py": "299d1274097b29d55d6c65ce83c2b47c8811761b3788c78705533beefa6730e1",
+    "src/guard_synth/fixtures/source_aware_generation_request_p0b_v0_1.json": "199b285f551f6cb0393390f6acff57bdb1c8dc6844ba055423875145070ba3fa",
+    "src/guard_synth/schemas/source_aware_generation_request.schema.json": "4f7adc3d9b86f769552a7687f982a2b7617649f15bc62b09159712aac58a7a87",
+    "src/guard_synth/source_aware_generator.py": "3c6535503d79e576d0ae970d6f0ac5ef2ebaf6c3495bb9f7f80ded887f76e90a",
+    "tests/guard_synth_eblc/test_source_aware_generator.py": "31eea9ae0b81d9bb5bd6fe795c115815d44477656497220f11cd359c96df9f40"
+  },
+  "input_class": "SYNTHETIC",
+  "python_version": "3.11.2",
+  "random_seed": null,
+  "run_date": "2026-08-09",
+  "run_id": "source-aware-generator-2026-08-09-v3",
+  "test_commands": {
+    "full": {
+      "command": "python3 -m unittest discover -s tests/guard_synth_eblc -p test_*.py -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 150,
+      "test_count": 150
+    },
+    "p0a": {
+      "command": "python3 -m unittest experiments.eblc_pilot.test_pilot -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 7,
+      "test_count": 7
+    },
+    "source_aware_generator": {
+      "command": "python3 -m unittest tests.guard_synth_eblc.test_source_aware_generator -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 12,
+      "test_count": 12
+    },
+    "stable_baseline": {
+      "command": "python3 -m unittest tests.guard_synth_eblc.test_cnl_renderer tests.guard_synth_eblc.test_composition_compilation tests.guard_synth_eblc.test_composition_v02_derivation tests.guard_synth_eblc.test_core_smt_compiler tests.guard_synth_eblc.test_derivation_compiler tests.guard_synth_eblc.test_elaboration_conformance tests.guard_synth_eblc.test_indexed_collection tests.guard_synth_eblc.test_program_v02_typed_derivation tests.guard_synth_eblc.test_public_layout tests.guard_synth_eblc.test_real_scene_adapter tests.guard_synth_eblc.test_robustness tests.guard_synth_eblc.test_scenario_matrix tests.guard_synth_eblc.test_schema_binding tests.guard_synth_eblc.test_semantics tests.guard_synth_eblc.test_translation_mutations -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 138,
+      "test_count": 138
+    },
+    "structure": {
+      "command": "python3 -m unittest tests.structure.test_project_layout -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 9,
+      "test_count": 9
+    }
+  },
+  "versions": {
+    "source_aware_generator": "guard-synth-source-aware-generator-v0.1"
+  },
+  "z3_runtime": {
+    "module_path": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages/z3/__init__.py",
+    "prefix": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36",
+    "python_site_packages": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages",
+    "source": "PROJECT_LOCAL_ISOLATED_BUILD",
+    "version": "5.0.0"
+  }
+}

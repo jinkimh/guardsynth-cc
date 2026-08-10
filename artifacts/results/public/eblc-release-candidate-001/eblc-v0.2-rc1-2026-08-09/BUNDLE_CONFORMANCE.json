@@ -1,0 +1,28 @@
+{
+  "canonical": [
+    {
+      "admissible_actions": [
+        "STOP"
+      ],
+      "false_deadlock": false,
+      "selected_contracts": [
+        "C0"
+      ],
+      "verdict": "VALIDATED"
+    }
+  ],
+  "core_smt": [
+    {
+      "admissible_actions": [
+        "STOP"
+      ],
+      "false_deadlock": false,
+      "selected_contracts": [
+        "C0"
+      ],
+      "verdict": "VALIDATED"
+    }
+  ],
+  "matches": true,
+  "mismatches": []
+}

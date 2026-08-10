@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:eblc:p0b:context-graph:v0.1",
+  "title": "Public EBLC v0 ContextFrame fixture",
+  "type": "object",
+  "required": ["timestamp_s", "hazard_fact", "ego_front_x_m", "ego_speed_mps", "zone_entry_x_m", "target_entity_id", "zone_id", "coordinate_frame", "distance_unit"],
+  "additionalProperties": false,
+  "properties": {
+    "timestamp_s": {"type": "number", "minimum": 0},
+    "hazard_fact": {
+      "type": "object",
+      "required": ["truth", "epistemic_kind", "source", "timestamp_s", "maximum_age_s"],
+      "additionalProperties": false,
+      "properties": {
+        "truth": {"type": "string", "enum": ["TRUE", "FALSE", "UNKNOWN", "CONFLICT"]},
+        "epistemic_kind": {"type": "string", "enum": ["OBSERVED", "PREDICTED", "DERIVED", "CLAIMED"]},
+        "source": {"type": "string", "minLength": 1},
+        "timestamp_s": {"type": "number", "minimum": 0},
+        "maximum_age_s": {"type": "number", "minimum": 0}
+      }
+    },
+    "ego_front_x_m": {"type": "number"},
+    "ego_speed_mps": {"type": "number", "minimum": 0},
+    "zone_entry_x_m": {"type": "number"},
+    "target_entity_id": {"type": "string", "minLength": 1},
+    "zone_id": {"type": "string", "minLength": 1},
+    "coordinate_frame": {"type": "string", "minLength": 1},
+    "distance_unit": {"type": "string", "minLength": 1}
+  }
+}

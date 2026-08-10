@@ -1,0 +1,13 @@
+{
+  "auto_confirmed": 1,
+  "automatic_confirmation_rate": 0.125,
+  "claim_scope": "LABEL_LIGHT_WORKFLOW_METRICS_NOT_ASSOCIATION_ACCURACY_OR_VEHICLE_SAFETY",
+  "conflict": 1,
+  "human_confirmed": 1,
+  "human_corrections": 0,
+  "review_request_rate": 0.5,
+  "review_required": 4,
+  "total": 8,
+  "unsupported": 1,
+  "unsupported_rate": 0.125
+}

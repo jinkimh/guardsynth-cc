@@ -1,0 +1,82 @@
+
+Verifying formula 1 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/boundary-negative-control/boundary-negative-control.q:1
+ -- Formula is satisfied.
+ -- Showing witness trace:
+
+State:
+( Source.BeforeReq Monitor.Idle )
+boundary_seen=0 discarded_at_boundary=0 boundary_carryover=0 cross_boundary_completion=0 t=0 age=0
+
+Transition:
+  Source.BeforeReq->Source.BeforeBoundary { t == REQ_AT, req!, 1 }
+  Monitor.Idle->Monitor.Active { 1, req?, age := 0 }
+
+State:
+( Source.BeforeBoundary Monitor.Active )
+boundary_seen=0 discarded_at_boundary=0 boundary_carryover=0 cross_boundary_completion=0 t=0 age=0
+
+Delay: 1000
+
+State:
+( Source.BeforeBoundary Monitor.Active )
+boundary_seen=0 discarded_at_boundary=0 boundary_carryover=0 cross_boundary_completion=0 t=1000 age=1000
+
+Transition:
+  Source.BeforeBoundary->Source.BeforeResp { t == BOUNDARY_AT, scene_boundary!, 1 }
+  Monitor.Active->Monitor.Discarded { 1, scene_boundary?, boundary_seen := true, discarded_at_boundary := true }
+
+State:
+( Source.BeforeResp Monitor.Discarded )
+boundary_seen=1 discarded_at_boundary=1 boundary_carryover=0 cross_boundary_completion=0 t=1000 age=1000
+
+Delay: 500
+
+State:
+( Source.BeforeResp Monitor.Discarded )
+boundary_seen=1 discarded_at_boundary=1 boundary_carryover=0 cross_boundary_completion=0 t=1500 age=1500
+
+Transition:
+  Source.BeforeResp->Source.Done { t == RESP_AT, resp!, 1 }
+
+State:
+( Source.Done Monitor.Discarded )
+boundary_seen=1 discarded_at_boundary=1 boundary_carryover=0 cross_boundary_completion=0 t=1500 age=1500
+
+Verifying formula 2 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/boundary-negative-control/boundary-negative-control.q:2
+ -- Formula is satisfied.
+ -- Showing witness trace:
+
+State:
+( Source.BeforeReq Monitor.Idle )
+boundary_seen=0 discarded_at_boundary=0 boundary_carryover=0 cross_boundary_completion=0 t=0 age=0
+
+Transition:
+  Source.BeforeReq->Source.BeforeBoundary { t == REQ_AT, req!, 1 }
+  Monitor.Idle->Monitor.Active { 1, req?, age := 0 }
+
+State:
+( Source.BeforeBoundary Monitor.Active )
+boundary_seen=0 discarded_at_boundary=0 boundary_carryover=0 cross_boundary_completion=0 t=0 age=0
+
+Delay: 1000
+
+State:
+( Source.BeforeBoundary Monitor.Active )
+boundary_seen=0 discarded_at_boundary=0 boundary_carryover=0 cross_boundary_completion=0 t=1000 age=1000
+
+Transition:
+  Source.BeforeBoundary->Source.BeforeResp { t == BOUNDARY_AT, scene_boundary!, 1 }
+  Monitor.Active->Monitor.Discarded { 1, scene_boundary?, boundary_seen := true, discarded_at_boundary := true }
+
+State:
+( Source.BeforeResp Monitor.Discarded )
+boundary_seen=1 discarded_at_boundary=1 boundary_carryover=0 cross_boundary_completion=0 t=1000 age=1000
+
+Verifying formula 3 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/boundary-negative-control/boundary-negative-control.q:3
+ -- Formula is satisfied.
+
+Verifying formula 4 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/boundary-negative-control/boundary-negative-control.q:4
+ -- Formula is satisfied.
+
+Verifying formula 5 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/boundary-negative-control/boundary-negative-control.q:5
+ -- Formula is satisfied.

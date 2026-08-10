@@ -1,0 +1,110 @@
+{
+  "generated_at": "2026-08-01",
+  "scope": "remaining_international_workshop_experiments",
+  "checks": [
+    {
+      "experiment": "official_full_trainval_validation",
+      "status": "not_completed",
+      "local_evidence": [
+        {
+          "path": "evidence/data/nuscenes_official/v1.0-trainval",
+          "exists": false,
+          "size_bytes": null
+        },
+        {
+          "path": "evidence/data/nuscenes_official/v1.0-trainval_meta.tgz",
+          "exists": false,
+          "size_bytes": null
+        }
+      ],
+      "reason": "Official full trainval archive is not available locally. Current full-scale continuity evidence comes from a metadata mirror, while official mini only supports schema-level sanity checks.",
+      "next_step": "Download official nuScenes trainval metadata after account/license access, then rerun continuity audit against the official archive."
+    },
+    {
+      "experiment": "dedicated_boundary_carryover_negative_control",
+      "status": "completed",
+      "output": "experiments/results/baseline/workshop-boost/boundary-negative-control-result.json",
+      "reason": "A correct discard model and a buggy carry-over mutation were generated and checked with UPPAAL. The oracle matched both variants."
+    },
+    {
+      "experiment": "independent_human_visual_review",
+      "status": "not_completed",
+      "available_evidence": [
+        {
+          "path": "experiments/results/baseline/chunk-0000-94/video-review-result.json",
+          "exists": true,
+          "size_bytes": 3106
+        },
+        {
+          "path": "experiments/results/baseline/chunk-0000-94/video-review/scene-0019-t10_6-contact-sheet.jpg",
+          "exists": true,
+          "size_bytes": 51088
+        }
+      ],
+      "reason": "Contact-sheet based visual triage exists, but it is not an independent human gold review.",
+      "next_step": "Prepare five remaining candidates for human review and record reviewer identity/protocol separately."
+    },
+    {
+      "experiment": "raw_actuator_or_can_validation",
+      "status": "not_completed",
+      "local_evidence": [
+        {
+          "path": "data/baseline/coc_nusc/can_bus",
+          "exists": false,
+          "size_bytes": null
+        },
+        {
+          "path": "data/baseline/coc_nusc/vehicle_monitor",
+          "exists": false,
+          "size_bytes": null
+        },
+        {
+          "path": "data/restricted/nvidia_physicalai/can_bus",
+          "exists": false,
+          "size_bytes": null
+        },
+        {
+          "path": "data/restricted/nvidia_physicalai/vehicle_monitor",
+          "exists": false,
+          "size_bytes": null
+        }
+      ],
+      "reason": "No brake, throttle, steering, CAN, or actuator-command trace is available in the local CoC-Nusc/NVIDIA PhysicalAI copies.",
+      "next_step": "Use a dataset split that exposes raw actuator or CAN signals, or keep ego-speed response as a weak witness."
+    },
+    {
+      "experiment": "object_or_hazard_continuity",
+      "status": "not_completed_for_trainval_chains",
+      "local_evidence": [
+        {
+          "path": "evidence/data/nuscenes_metadata/interp_12Hz_trainval/sample_annotation.json",
+          "exists": false,
+          "size_bytes": null
+        },
+        {
+          "path": "evidence/data/nuscenes_metadata/interp_12Hz_trainval/instance.json",
+          "exists": false,
+          "size_bytes": null
+        },
+        {
+          "path": "evidence/data/nuscenes_official/v1.0-mini/sample_annotation.json",
+          "exists": true,
+          "size_bytes": 9307571
+        },
+        {
+          "path": "evidence/data/nuscenes_official/v1.0-mini/instance.json",
+          "exists": true,
+          "size_bytes": 226647
+        }
+      ],
+      "reason": "The trainval metadata mirror used for connected chains lacks sample_annotation and instance tables. Official mini has them, but it is a subset and does not validate the trainval chains.",
+      "next_step": "Obtain official trainval annotations or a mirror with sample_annotation/instance tables; then compare persistent instance/hazard identity across scene boundaries."
+    },
+    {
+      "experiment": "learning_use_ablation",
+      "status": "not_completed",
+      "reason": "No training/evaluation pipeline for policy or trajectory learning is present in this project scope, and current evidence is designed as a data-audit gate rather than a learning benchmark.",
+      "next_step": "Define a small downstream task and compare unfiltered vs audit-routed training subsets."
+    }
+  ]
+}

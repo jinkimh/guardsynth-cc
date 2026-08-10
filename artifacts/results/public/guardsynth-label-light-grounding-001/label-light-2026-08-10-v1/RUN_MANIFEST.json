@@ -1,0 +1,58 @@
+{
+  "claim_scope": "LABEL_LIGHT_SYNTHETIC_GROUNDING_AND_BOUNDED_HANDOFF_NOT_ASSOCIATION_ACCURACY_OR_VEHICLE_SAFETY",
+  "code_revision": "WORKSPACE_WITHOUT_GIT_METADATA",
+  "deterministic_scenarios": true,
+  "experiment_id": "GUARDSYNTH-LABEL-LIGHT-GROUNDING-001",
+  "file_hashes": {
+    "cli/pipelines/guardsynth/label_light_grounding/run.py": "06d120b173ab207e8a0fddbe612439673e703bca4526429baba389d0679da71b",
+    "src/guard_synth/fixtures/label_light_grounding_packet_v0_1.json": "2bfe84c06f54dd640ef956dc815a0414718a88619e5707795c6322628ef4b496",
+    "src/guard_synth/fixtures/vehicle_assurance_registry_synthetic_test_v0_1.json": "204f369eb19fc1495ea54f0c2cb990a9ca18e19975b139caf8bc03deece2961d",
+    "src/guard_synth/label_light_grounding.py": "654d28469f5e0c3160b9ee58c815e842d493d996cd2292b7ec57b8b8e562f4c1"
+  },
+  "input_class": "SYNTHETIC_PLUS_LICENSE_RESTRICTED_AGGREGATES_ONLY",
+  "python_version": "3.11.2",
+  "random_seed": null,
+  "raw_restricted_identifiers_included": false,
+  "run_date": "2026-08-10",
+  "run_id": "label-light-2026-08-10-v1",
+  "test_commands": {
+    "full": {
+      "command": "/usr/bin/python3 -m unittest discover -s tests/guard_synth_eblc -p test_*.py -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 185,
+      "test_count": 185
+    },
+    "label_light": {
+      "command": "/usr/bin/python3 -m unittest tests.guard_synth_eblc.test_label_light_grounding -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 13,
+      "test_count": 13
+    },
+    "p0a": {
+      "command": "/usr/bin/python3 -m unittest experiments.eblc_pilot.test_pilot -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 7,
+      "test_count": 7
+    },
+    "structure": {
+      "command": "/usr/bin/python3 -m unittest tests.structure.test_project_layout -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 9,
+      "test_count": 9
+    }
+  },
+  "versions": {
+    "label_light_grounding": "guardsynth-label-light-grounding-v0.1"
+  },
+  "z3_runtime": {
+    "module_path": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages/z3/__init__.py",
+    "prefix": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36",
+    "python_site_packages": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages",
+    "source": "PROJECT_LOCAL_ISOLATED_BUILD",
+    "version": "5.0.0"
+  }
+}

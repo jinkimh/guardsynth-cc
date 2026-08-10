@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+  <declaration>// Time unit: milliseconds relative to the first trusted truck DECELERATE event.
+const int RESPONSE_AT = 2160;
+const int REPEAT_1_AT = 1000;
+const int REPEAT_2_AT = 2300;
+const int UNTRUSTED_AT = 6800;
+const int RESPONSE_DEADLINE = 3000;
+const bool EMIT_RESPONSE = true;
+const bool RESET_ON_REPEAT = false;
+const bool OVERWRITE_ON_UNTRUSTED = true;
+
+clock episode;
+broadcast chan first_trigger, repeat_trigger, response, untrusted_event;
+bool obligation_active = false;
+bool obligation_responded = false;
+bool clock_reset_violation = false;
+bool untrusted_overwrite = false;</declaration>
+  <template>
+    <name>CoCSource</name>
+    <declaration />
+    <location id="c0" x="0" y="0">
+      <name x="-20" y="-30">BeforeFirst</name>
+      <label kind="invariant" x="-20" y="20">episode &lt;= 0</label>
+    </location>
+    <location id="c1" x="180" y="0">
+      <name x="160" y="-30">BeforeRepeat1</name>
+      <label kind="invariant" x="160" y="20">episode &lt;= REPEAT_1_AT</label>
+    </location>
+    <location id="c2" x="360" y="0">
+      <name x="340" y="-30">BeforeRepeat2</name>
+      <label kind="invariant" x="340" y="20">episode &lt;= REPEAT_2_AT</label>
+    </location>
+    <location id="c3" x="540" y="0">
+      <name x="520" y="-30">BeforeUntrusted</name>
+      <label kind="invariant" x="520" y="20">episode &lt;= UNTRUSTED_AT</label>
+    </location>
+    <location id="c4" x="720" y="0">
+      <name x="700" y="-30">Done</name>
+    </location>
+    <init ref="c0" />
+    <transition>
+      <source ref="c0" />
+      <target ref="c1" />
+      <label kind="guard" x="0" y="0">episode == 0</label>
+      <label kind="synchronisation" x="0" y="20">first_trigger!</label>
+    </transition>
+    <transition>
+      <source ref="c1" />
+      <target ref="c2" />
+      <label kind="guard" x="0" y="0">episode == REPEAT_1_AT</label>
+      <label kind="synchronisation" x="0" y="20">repeat_trigger!</label>
+    </transition>
+    <transition>
+      <source ref="c2" />
+      <target ref="c3" />
+      <label kind="guard" x="0" y="0">episode == REPEAT_2_AT</label>
+      <label kind="synchronisation" x="0" y="20">repeat_trigger!</label>
+    </transition>
+    <transition>
+      <source ref="c3" />
+      <target ref="c4" />
+      <label kind="guard" x="0" y="0">episode == UNTRUSTED_AT</label>
+      <label kind="synchronisation" x="0" y="20">untrusted_event!</label>
+    </transition>
+    <transition>
+      <source ref="c4" />
+      <target ref="c4" />
+    </transition>
+  </template>
+  <template>
+    <name>EgoTrace</name>
+    <declaration />
+    <location id="e0" x="0" y="150">
+      <name x="-20" y="120">Waiting</name>
+      <label kind="invariant" x="-20" y="170">episode &lt;= RESPONSE_AT</label>
+    </location>
+    <location id="e1" x="220" y="150">
+      <name x="200" y="120">ResponseObserved</name>
+    </location>
+    <init ref="e0" />
+    <transition>
+      <source ref="e0" />
+      <target ref="e1" />
+      <label kind="guard" x="0" y="0">episode == RESPONSE_AT</label>
+      <label kind="synchronisation" x="0" y="20">response!</label>
+    </transition>
+  </template>
+  <template>
+    <name>ObligationManager</name>
+    <declaration />
+    <location id="o0" x="0" y="300">
+      <name x="-20" y="270">Idle</name>
+    </location>
+    <location id="o1" x="220" y="300">
+      <name x="200" y="270">Active</name>
+    </location>
+    <location id="o2" x="440" y="300">
+      <name x="420" y="270">Responded</name>
+    </location>
+    <init ref="o0" />
+    <transition>
+      <source ref="o0" />
+      <target ref="o1" />
+      <label kind="synchronisation" x="0" y="0">first_trigger?</label>
+      <label kind="assignment" x="0" y="20">obligation_active = true</label>
+    </transition>
+    <transition>
+      <source ref="o1" />
+      <target ref="o2" />
+      <label kind="synchronisation" x="0" y="0">response?</label>
+      <label kind="assignment" x="0" y="20">obligation_active = false, obligation_responded = true</label>
+    </transition>
+  </template>
+  <template>
+    <name>ReactionObserver</name>
+    <declaration>clock reaction;</declaration>
+    <location id="r0" x="0" y="450">
+      <name x="-20" y="420">Idle</name>
+    </location>
+    <location id="r1" x="220" y="450">
+      <name x="200" y="420">Armed</name>
+      <label kind="invariant" x="200" y="470">reaction &lt;= RESPONSE_DEADLINE</label>
+    </location>
+    <location id="r2" x="440" y="400">
+      <name x="420" y="370">Done</name>
+    </location>
+    <location id="r3" x="440" y="520">
+      <name x="420" y="490">DeadlineMiss</name>
+    </location>
+    <init ref="r0" />
+    <transition>
+      <source ref="r0" />
+      <target ref="r1" />
+      <label kind="synchronisation" x="0" y="0">first_trigger?</label>
+      <label kind="assignment" x="0" y="20">reaction = 0</label>
+    </transition>
+    <transition>
+      <source ref="r1" />
+      <target ref="r1" />
+      <label kind="synchronisation" x="0" y="0">repeat_trigger?</label>
+    </transition>
+    <transition>
+      <source ref="r1" />
+      <target ref="r2" />
+      <label kind="synchronisation" x="0" y="0">response?</label>
+    </transition>
+    <transition>
+      <source ref="r1" />
+      <target ref="r3" />
+      <label kind="guard" x="0" y="0">reaction &gt;= RESPONSE_DEADLINE</label>
+    </transition>
+  </template>
+  <template>
+    <name>DecisionValidator</name>
+    <declaration />
+    <location id="d0" x="0" y="650">
+      <name x="-20" y="620">Clean</name>
+    </location>
+    <init ref="d0" />
+    <transition>
+      <source ref="d0" />
+      <target ref="d0" />
+      <label kind="synchronisation" x="0" y="0">untrusted_event?</label>
+      <label kind="assignment" x="0" y="20">untrusted_overwrite = OVERWRITE_ON_UNTRUSTED</label>
+    </transition>
+  </template>
+  <system>CoC = CoCSource();
+Ego = EgoTrace();
+Obligation = ObligationManager();
+Reaction = ReactionObserver();
+Decision = DecisionValidator();
+system CoC, Ego, Obligation, Reaction, Decision;</system>
+</nta>

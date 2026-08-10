@@ -1,0 +1,280 @@
+
+Verifying formula 1 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/multiscene-chain/multiscene-chain.q:1
+ -- Formula is satisfied.
+ -- Showing witness trace:
+
+State:
+( Source.Before0 MonitorProc.Idle )
+deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=0 t=0 obligation_clock=0
+
+Delay: 4500
+
+State:
+( Source.Before0 MonitorProc.Idle )
+deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=0 t=4500 obligation_clock=4500
+
+Transition:
+  Source.Before0->Source.Before1 { t == 4500, slow_req!, 1 }
+  MonitorProc.Idle->MonitorProc.ActiveSlow { 1, slow_req?, active_intent := 1, obligation_clock := 0 }
+
+State:
+( Source.Before1 MonitorProc.ActiveSlow )
+deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=1 t=4500 obligation_clock=0
+
+Delay: 100
+
+State:
+( Source.Before1 MonitorProc.ActiveSlow )
+deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=1 t=4600 obligation_clock=100
+
+Transition:
+  Source.Before1->Source.Before2 { t == 4600, slow_req!, 1 }
+  MonitorProc.ActiveSlow->MonitorProc.ActiveSlow { 1, slow_req?, 1 }
+
+State:
+( Source.Before2 MonitorProc.ActiveSlow )
+deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=1 t=4600 obligation_clock=100
+
+Delay: 2900
+
+State:
+( Source.Before2 MonitorProc.ActiveSlow )
+deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=1 t=7500 obligation_clock=3000
+
+Transition:
+  MonitorProc.ActiveSlow->MonitorProc.Miss { obligation_clock >= DEADLINE, tau, deadline_miss := true }
+
+State:
+( Source.Before2 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=7500 obligation_clock=3000
+
+Delay: 11850
+
+State:
+( Source.Before2 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=19350 obligation_clock=14850
+
+Transition:
+  Source.Before2->Source.Before3 { t == 19350, scene_boundary!, boundary_violation := boundary_violation || 650 > MAX_BOUNDARY_GAP }
+
+State:
+( Source.Before3 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=19350 obligation_clock=14850
+
+Delay: 9151
+
+State:
+( Source.Before3 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=28501 obligation_clock=24001
+
+Transition:
+  Source.Before3->Source.Before4 { t == 28501, slow_req!, 1 }
+
+State:
+( Source.Before4 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=28501 obligation_clock=24001
+
+Delay: 1500
+
+State:
+( Source.Before4 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=30001 obligation_clock=25501
+
+Transition:
+  Source.Before4->Source.Before5 { t == 30001, slow_req!, 1 }
+
+State:
+( Source.Before5 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=30001 obligation_clock=25501
+
+Delay: 1000
+
+State:
+( Source.Before5 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=31001 obligation_clock=26501
+
+Transition:
+  Source.Before5->Source.Before6 { t == 31001, slow_req!, 1 }
+
+State:
+( Source.Before6 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=31001 obligation_clock=26501
+
+Delay: 1400
+
+State:
+( Source.Before6 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=32401 obligation_clock=27901
+
+Transition:
+  Source.Before6->Source.Before7 { t == 32401, slow_req!, 1 }
+
+State:
+( Source.Before7 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=32401 obligation_clock=27901
+
+Delay: 502
+
+State:
+( Source.Before7 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=32903 obligation_clock=28403
+
+Transition:
+  Source.Before7->Source.Before8 { t == 32903, slow_resp!, 1 }
+
+State:
+( Source.Before8 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=32903 obligation_clock=28403
+
+Transition:
+  Source.Before8->Source.Before9 { t == 32903, slow_resp!, 1 }
+
+State:
+( Source.Before9 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=32903 obligation_clock=28403
+
+Transition:
+  Source.Before9->Source.Before10 { t == 32903, slow_resp!, 1 }
+
+State:
+( Source.Before10 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=32903 obligation_clock=28403
+
+Delay: 6498
+
+State:
+( Source.Before10 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=39401 obligation_clock=34901
+
+Transition:
+  Source.Before10->Source.Before11 { t == 39401, scene_boundary!, boundary_violation := boundary_violation || 600 > MAX_BOUNDARY_GAP }
+
+State:
+( Source.Before11 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=39401 obligation_clock=34901
+
+Delay: 19950
+
+State:
+( Source.Before11 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=59351 obligation_clock=54851
+
+Transition:
+  Source.Before11->Source.Before12 { t == 59351, scene_boundary!, boundary_violation := boundary_violation || 650 > MAX_BOUNDARY_GAP }
+
+State:
+( Source.Before12 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=59351 obligation_clock=54851
+
+Delay: 3250
+
+State:
+( Source.Before12 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=62601 obligation_clock=58101
+
+Transition:
+  Source.Before12->Source.Before13 { t == 62601, slow_req!, 1 }
+
+State:
+( Source.Before13 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=62601 obligation_clock=58101
+
+Delay: 3600
+
+State:
+( Source.Before13 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=66201 obligation_clock=61701
+
+Transition:
+  Source.Before13->Source.Before14 { t == 66201, accel_req!, 1 }
+
+State:
+( Source.Before14 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=66201 obligation_clock=61701
+
+Delay: 5800
+
+State:
+( Source.Before14 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=72001 obligation_clock=67501
+
+Transition:
+  Source.Before14->Source.Before15 { t == 72001, slow_req!, 1 }
+
+State:
+( Source.Before15 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=72001 obligation_clock=67501
+
+Delay: 300
+
+State:
+( Source.Before15 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=72301 obligation_clock=67801
+
+Transition:
+  Source.Before15->Source.Done { t == 72301, slow_req!, 1 }
+
+State:
+( Source.Done MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=72301 obligation_clock=67801
+
+Verifying formula 2 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/multiscene-chain/multiscene-chain.q:2
+ -- Formula is NOT satisfied.
+
+Verifying formula 3 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/multiscene-chain/multiscene-chain.q:3
+ -- Formula is NOT satisfied.
+ -- Showing witness trace:
+
+State:
+( Source.Before0 MonitorProc.Idle )
+deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=0 t=0 obligation_clock=0
+
+Delay: 4500
+
+State:
+( Source.Before0 MonitorProc.Idle )
+deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=0 t=4500 obligation_clock=4500
+
+Transition:
+  Source.Before0->Source.Before1 { t == 4500, slow_req!, 1 }
+  MonitorProc.Idle->MonitorProc.ActiveSlow { 1, slow_req?, active_intent := 1, obligation_clock := 0 }
+
+State:
+( Source.Before1 MonitorProc.ActiveSlow )
+deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=1 t=4500 obligation_clock=0
+
+Delay: 100
+
+State:
+( Source.Before1 MonitorProc.ActiveSlow )
+deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=1 t=4600 obligation_clock=100
+
+Transition:
+  Source.Before1->Source.Before2 { t == 4600, slow_req!, 1 }
+  MonitorProc.ActiveSlow->MonitorProc.ActiveSlow { 1, slow_req?, 1 }
+
+State:
+( Source.Before2 MonitorProc.ActiveSlow )
+deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=1 t=4600 obligation_clock=100
+
+Delay: 2900
+
+State:
+( Source.Before2 MonitorProc.ActiveSlow )
+deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=1 t=7500 obligation_clock=3000
+
+Transition:
+  MonitorProc.ActiveSlow->MonitorProc.Miss { obligation_clock >= DEADLINE, tau, deadline_miss := true }
+
+State:
+( Source.Before2 MonitorProc.Miss )
+deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=7500 obligation_clock=3000
+
+Verifying formula 4 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/multiscene-chain/multiscene-chain.q:4
+ -- Formula is satisfied.
+
+Verifying formula 5 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/multiscene-chain/multiscene-chain.q:5
+ -- Formula is satisfied.
+
+Verifying formula 6 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/multiscene-chain/multiscene-chain.q:6
+ -- Formula is satisfied.

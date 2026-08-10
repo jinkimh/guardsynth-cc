@@ -1,0 +1,156 @@
+{
+  "checker": "UPPAAL_VERIFYTA",
+  "verifyta": "/home/jin/prj_ws/coc-modelchcking/uppaal-5.0.0-linux64/bin/verifyta",
+  "models": [
+    {
+      "variant": "normal",
+      "status": "EXECUTED",
+      "exit_code": 0,
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "mutation_oracle_match": true,
+      "violated_queries": [],
+      "trace_path": "experiments/results/baseline/scene-0001/uppaal-traces/normal.txt",
+      "diagnostic_excerpt": "Verifying formula 1 at /home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/scene-0001.q:1\n -- Formula is satisfied.\n -- Showing witness trace:\n\nState:\n( CoC.BeforeFirst Ego.Waiting Obligation.Idle Reaction.Idle Decision.Clean )\nobligation_active=0 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=0 Reaction.reaction=0\n\nTransition:\n  CoC.BeforeFirst->CoC.BeforeRepeat1 { episode == 0, first_trigger!, 1 }\n  Obligation.Idle->Obligation.Active { 1, first_trigger?, obligation_active := true }\n  Reaction.Idle->Reaction.Armed { 1, first_trigger?, reaction := 0 }\n\nState:\n( CoC.BeforeRepeat1 Ego.Waiting Obligation.Active Reaction.Armed Decision.Clean )\nobligation_active=1 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=0 Reaction.reaction=0\n\nVerifying formula 2 at /home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/scene-0001.q:2\n -- Formula is satisfied.\n -- Showing witness trace:\n\nState:\n( CoC.BeforeFirst Ego.Waiting Obligation.Idle Reaction.Idle"
+    },
+    {
+      "variant": "deadline_2s",
+      "status": "EXECUTED",
+      "exit_code": 0,
+      "verdicts": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "mutation_oracle_match": true,
+      "violated_queries": [
+        {
+          "index": 3,
+          "query": "A[] not Reaction.DeadlineMiss"
+        }
+      ],
+      "trace_path": "experiments/results/baseline/scene-0001/uppaal-traces/deadline_2s.txt",
+      "diagnostic_excerpt": "Verifying formula 1 at /home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/scene-0001.q:1\n -- Formula is satisfied.\n -- Showing witness trace:\n\nState:\n( CoC.BeforeFirst Ego.Waiting Obligation.Idle Reaction.Idle Decision.Clean )\nobligation_active=0 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=0 Reaction.reaction=0\n\nTransition:\n  CoC.BeforeFirst->CoC.BeforeRepeat1 { episode == 0, first_trigger!, 1 }\n  Obligation.Idle->Obligation.Active { 1, first_trigger?, obligation_active := true }\n  Reaction.Idle->Reaction.Armed { 1, first_trigger?, reaction := 0 }\n\nState:\n( CoC.BeforeRepeat1 Ego.Waiting Obligation.Active Reaction.Armed Decision.Clean )\nobligation_active=1 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=0 Reaction.reaction=0\n\nVerifying formula 2 at /home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/scene-0001.q:2\n -- Formula is satisfied.\n -- Showing witness trace:\n\nState:\n( CoC.BeforeFirst Ego.Waiting Obligation.Idle Reaction.Idle"
+    },
+    {
+      "variant": "clock_reset",
+      "status": "EXECUTED",
+      "exit_code": 0,
+      "verdicts": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ],
+      "mutation_oracle_match": true,
+      "violated_queries": [
+        {
+          "index": 4,
+          "query": "A[] not clock_reset_violation"
+        }
+      ],
+      "trace_path": "experiments/results/baseline/scene-0001/uppaal-traces/clock_reset.txt",
+      "diagnostic_excerpt": "Verifying formula 1 at /home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/scene-0001.q:1\n -- Formula is satisfied.\n -- Showing witness trace:\n\nState:\n( CoC.BeforeFirst Ego.Waiting Obligation.Idle Reaction.Idle Decision.Clean )\nobligation_active=0 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=0 Reaction.reaction=0\n\nTransition:\n  CoC.BeforeFirst->CoC.BeforeRepeat1 { episode == 0, first_trigger!, 1 }\n  Obligation.Idle->Obligation.Active { 1, first_trigger?, obligation_active := true }\n  Reaction.Idle->Reaction.Armed { 1, first_trigger?, reaction := 0 }\n\nState:\n( CoC.BeforeRepeat1 Ego.Waiting Obligation.Active Reaction.Armed Decision.Clean )\nobligation_active=1 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=0 Reaction.reaction=0\n\nVerifying formula 2 at /home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/scene-0001.q:2\n -- Formula is satisfied.\n -- Showing witness trace:\n\nState:\n( CoC.BeforeFirst Ego.Waiting Obligation.Idle Reaction.Idle"
+    },
+    {
+      "variant": "no_response",
+      "status": "EXECUTED",
+      "exit_code": 0,
+      "verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "mutation_oracle_match": true,
+      "violated_queries": [
+        {
+          "index": 2,
+          "query": "E<> Obligation.Responded"
+        },
+        {
+          "index": 3,
+          "query": "A[] not Reaction.DeadlineMiss"
+        }
+      ],
+      "trace_path": "experiments/results/baseline/scene-0001/uppaal-traces/no_response.txt",
+      "diagnostic_excerpt": "Verifying formula 1 at /home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/scene-0001.q:1\n -- Formula is satisfied.\n -- Showing witness trace:\n\nState:\n( CoC.BeforeFirst Ego.Waiting Obligation.Idle Reaction.Idle Decision.Clean )\nobligation_active=0 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=0 Reaction.reaction=0\n\nTransition:\n  CoC.BeforeFirst->CoC.BeforeRepeat1 { episode == 0, first_trigger!, 1 }\n  Obligation.Idle->Obligation.Active { 1, first_trigger?, obligation_active := true }\n  Reaction.Idle->Reaction.Armed { 1, first_trigger?, reaction := 0 }\n\nState:\n( CoC.BeforeRepeat1 Ego.Waiting Obligation.Active Reaction.Armed Decision.Clean )\nobligation_active=1 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=0 Reaction.reaction=0\n\nVerifying formula 2 at /home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/scene-0001.q:2\n -- Formula is NOT satisfied.\n\nVerifying formula 3 at /home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/scene-0001.q:3\n --"
+    },
+    {
+      "variant": "untrusted_overwrite",
+      "status": "EXECUTED",
+      "exit_code": 0,
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "mutation_oracle_match": true,
+      "violated_queries": [
+        {
+          "index": 5,
+          "query": "A[] not untrusted_overwrite"
+        }
+      ],
+      "trace_path": "experiments/results/baseline/scene-0001/uppaal-traces/untrusted_overwrite.txt",
+      "diagnostic_excerpt": "Verifying formula 1 at /home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/scene-0001.q:1\n -- Formula is satisfied.\n -- Showing witness trace:\n\nState:\n( CoC.BeforeFirst Ego.Waiting Obligation.Idle Reaction.Idle Decision.Clean )\nobligation_active=0 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=0 Reaction.reaction=0\n\nTransition:\n  CoC.BeforeFirst->CoC.BeforeRepeat1 { episode == 0, first_trigger!, 1 }\n  Obligation.Idle->Obligation.Active { 1, first_trigger?, obligation_active := true }\n  Reaction.Idle->Reaction.Armed { 1, first_trigger?, reaction := 0 }\n\nState:\n( CoC.BeforeRepeat1 Ego.Waiting Obligation.Active Reaction.Armed Decision.Clean )\nobligation_active=1 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=0 Reaction.reaction=0\n\nVerifying formula 2 at /home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/scene-0001.q:2\n -- Formula is satisfied.\n -- Showing witness trace:\n\nState:\n( CoC.BeforeFirst Ego.Waiting Obligation.Idle Reaction.Idle"
+    }
+  ],
+  "overall": "PASS"
+}

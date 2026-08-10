@@ -1,0 +1,81 @@
+{
+  "boundary_semantics": {
+    "binary_float_roundoff_guard": 1e-15,
+    "policy": "STRICT_BEYOND_EPSILON_AND_ROUNDOFF_ONLY",
+    "semantic_epsilon": 1e-09
+  },
+  "explicit_case_count": 44,
+  "groups": [
+    {
+      "case_count": 9,
+      "examples": [
+        "duplicate source reference",
+        "duplicate derivation node",
+        "four invalid numeric ranges",
+        "nonfinite value",
+        "scalarized priority",
+        "missing quantity evidence"
+      ],
+      "group": "PROGRAM_AND_SCHEMA_NEGATIVE_INPUTS",
+      "targets": [
+        "JSON_SCHEMA",
+        "PROGRAM_PARSER"
+      ]
+    },
+    {
+      "case_count": 9,
+      "examples": [
+        "release disabled",
+        "reactivation disabled",
+        "UNKNOWN as FALSE",
+        "UNKNOWN as TRUE",
+        "always active",
+        "explicit expiry",
+        "invariant disabled",
+        "forced false deadlock",
+        "one-frame release"
+      ],
+      "group": "LIFECYCLE_AND_POLICY_VARIANTS",
+      "targets": [
+        "CANONICAL",
+        "RUNTIME",
+        "Z3_BOUNDED",
+        "CORE_SMT",
+        "ENUMERATOR"
+      ]
+    },
+    {
+      "case_count": 23,
+      "examples": [
+        "stop position before/equal/after tolerance",
+        "freshness before/equal/after tolerance",
+        "future timestamp boundary",
+        "dynamic speed bounds at three distances"
+      ],
+      "group": "NUMERIC_AND_FRESHNESS_BOUNDARIES",
+      "targets": [
+        "CANONICAL",
+        "RUNTIME",
+        "Z3_BOUNDED",
+        "CORE_SMT",
+        "ENUMERATOR"
+      ]
+    },
+    {
+      "case_count": 3,
+      "examples": [
+        "scope plus unit failure",
+        "disallowed predicted evidence",
+        "one-frame bounded horizon"
+      ],
+      "group": "FAILURE_PRECEDENCE_EPISTEMIC_AND_HORIZON",
+      "targets": [
+        "CANONICAL",
+        "RUNTIME",
+        "Z3_BOUNDED",
+        "CORE_SMT",
+        "ENUMERATOR"
+      ]
+    }
+  ]
+}

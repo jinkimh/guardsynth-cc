@@ -1,0 +1,1189 @@
+{
+  "experiment_id": "SMALL-VLM-MANEUVER-GUARD-MULTISEED-V0",
+  "seeds": [
+    42,
+    17,
+    123
+  ],
+  "scope": "synthetic paired-contract candidate-selection feasibility; not real-road safety validation",
+  "hard_challenges": [
+    "boundary equality",
+    "negation/prohibition",
+    "clause reordering",
+    "m-to-cm conversion"
+  ],
+  "aggregate": {
+    "Requirement CoC": {
+      "test": {
+        "accuracy": {
+          "values": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "mean": 0.5,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.5,
+            0.5
+          ]
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.25,
+            0.25,
+            0.375
+          ],
+          "mean": 0.2916666666666667,
+          "sample_std": 0.07216878364870322,
+          "seed_cluster_bootstrap_95ci": [
+            0.25,
+            0.375
+          ]
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            0.75,
+            0.75,
+            0.625
+          ],
+          "mean": 0.7083333333333334,
+          "sample_std": 0.07216878364870322,
+          "seed_cluster_bootstrap_95ci": [
+            0.625,
+            0.75
+          ]
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "deadlock_rate": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "paraphrase": {
+        "accuracy": {
+          "values": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "mean": 0.5,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.5,
+            0.5
+          ]
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.25,
+            0.25,
+            0.375
+          ],
+          "mean": 0.2916666666666667,
+          "sample_std": 0.07216878364870322,
+          "seed_cluster_bootstrap_95ci": [
+            0.25,
+            0.375
+          ]
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            0.75,
+            0.75,
+            0.625
+          ],
+          "mean": 0.7083333333333334,
+          "sample_std": 0.07216878364870322,
+          "seed_cluster_bootstrap_95ci": [
+            0.625,
+            0.75
+          ]
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "deadlock_rate": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "unseen": {
+        "accuracy": {
+          "values": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "mean": 0.5,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.5,
+            0.5
+          ]
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.25,
+            0.3333333333333333,
+            0.375
+          ],
+          "mean": 0.3194444444444444,
+          "sample_std": 0.06364688465216445,
+          "seed_cluster_bootstrap_95ci": [
+            0.25,
+            0.375
+          ]
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            0.75,
+            0.6666666666666666,
+            0.625
+          ],
+          "mean": 0.6805555555555556,
+          "sample_std": 0.06364688465216445,
+          "seed_cluster_bootstrap_95ci": [
+            0.625,
+            0.75
+          ]
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "deadlock_rate": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "hard": {
+        "accuracy": {
+          "values": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "mean": 0.5,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.5,
+            0.5
+          ]
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.25,
+            0.28125,
+            0.375
+          ],
+          "mean": 0.3020833333333333,
+          "sample_std": 0.06505206248331664,
+          "seed_cluster_bootstrap_95ci": [
+            0.25,
+            0.375
+          ]
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            0.75,
+            0.71875,
+            0.625
+          ],
+          "mean": 0.6979166666666666,
+          "sample_std": 0.06505206248331664,
+          "seed_cluster_bootstrap_95ci": [
+            0.625,
+            0.75
+          ]
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "deadlock_rate": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "Safety-Constrained CoC": {
+      "test": {
+        "accuracy": {
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            1.0,
+            1.0
+          ]
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            1.0,
+            1.0
+          ]
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            1.0,
+            1.0
+          ]
+        },
+        "deadlock_rate": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "paraphrase": {
+        "accuracy": {
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            1.0,
+            1.0
+          ]
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            1.0,
+            1.0
+          ]
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            1.0,
+            1.0
+          ]
+        },
+        "deadlock_rate": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "unseen": {
+        "accuracy": {
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            1.0,
+            1.0
+          ]
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            1.0,
+            1.0
+          ]
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            1.0,
+            1.0
+          ]
+        },
+        "deadlock_rate": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "hard": {
+        "accuracy": {
+          "values": [
+            0.875,
+            0.9895833333333334,
+            0.9791666666666666
+          ],
+          "mean": 0.9479166666666666,
+          "sample_std": 0.06336210969060646,
+          "seed_cluster_bootstrap_95ci": [
+            0.875,
+            0.9895833333333334
+          ]
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.0,
+            0.010416666666666666,
+            0.020833333333333332
+          ],
+          "mean": 0.010416666666666666,
+          "sample_std": 0.010416666666666666,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.020833333333333332
+          ]
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            1.0,
+            0.9895833333333334,
+            0.9791666666666666
+          ],
+          "mean": 0.9895833333333334,
+          "sample_std": 0.010416666666666685,
+          "seed_cluster_bootstrap_95ci": [
+            0.9791666666666666,
+            1.0
+          ]
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            0.75,
+            0.9791666666666666,
+            0.9583333333333334
+          ],
+          "mean": 0.8958333333333334,
+          "sample_std": 0.1267242193812129,
+          "seed_cluster_bootstrap_95ci": [
+            0.75,
+            0.9791666666666666
+          ]
+        },
+        "deadlock_rate": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "Shuffled constraint": {
+      "test": {
+        "accuracy": {
+          "values": [
+            0.5104166666666666,
+            0.5,
+            0.5
+          ],
+          "mean": 0.5034722222222222,
+          "sample_std": 0.00601406530405858,
+          "seed_cluster_bootstrap_95ci": [
+            0.5,
+            0.5104166666666666
+          ]
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.23958333333333334,
+            0.25,
+            0.3125
+          ],
+          "mean": 0.2673611111111111,
+          "sample_std": 0.0394368635125019,
+          "seed_cluster_bootstrap_95ci": [
+            0.23958333333333334,
+            0.3125
+          ]
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            0.7604166666666666,
+            0.75,
+            0.6875
+          ],
+          "mean": 0.7326388888888888,
+          "sample_std": 0.039436863512501884,
+          "seed_cluster_bootstrap_95ci": [
+            0.6875,
+            0.7604166666666666
+          ]
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            0.020833333333333332,
+            0.0,
+            0.0625
+          ],
+          "mean": 0.027777777777777776,
+          "sample_std": 0.031823442326082224,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0625
+          ]
+        },
+        "deadlock_rate": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "paraphrase": {
+        "accuracy": {
+          "values": [
+            0.5729166666666666,
+            0.5,
+            0.5208333333333334
+          ],
+          "mean": 0.53125,
+          "sample_std": 0.037557825786083195,
+          "seed_cluster_bootstrap_95ci": [
+            0.5,
+            0.5729166666666666
+          ]
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.17708333333333334,
+            0.25,
+            0.2604166666666667
+          ],
+          "mean": 0.22916666666666669,
+          "sample_std": 0.04540519732854868,
+          "seed_cluster_bootstrap_95ci": [
+            0.17708333333333334,
+            0.2604166666666667
+          ]
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            0.8229166666666666,
+            0.75,
+            0.7395833333333334
+          ],
+          "mean": 0.7708333333333334,
+          "sample_std": 0.04540519732854865,
+          "seed_cluster_bootstrap_95ci": [
+            0.7395833333333334,
+            0.8229166666666666
+          ]
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            0.14583333333333334,
+            0.0,
+            0.041666666666666664
+          ],
+          "mean": 0.0625,
+          "sample_std": 0.07511565157216644,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.14583333333333334
+          ]
+        },
+        "deadlock_rate": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "unseen": {
+        "accuracy": {
+          "values": [
+            0.5520833333333334,
+            0.5,
+            0.5520833333333334
+          ],
+          "mean": 0.5347222222222222,
+          "sample_std": 0.03007032652029303,
+          "seed_cluster_bootstrap_95ci": [
+            0.5,
+            0.5520833333333334
+          ]
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.19791666666666666,
+            0.25,
+            0.28125
+          ],
+          "mean": 0.24305555555555555,
+          "sample_std": 0.04209845712841022,
+          "seed_cluster_bootstrap_95ci": [
+            0.19791666666666666,
+            0.28125
+          ]
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            0.8020833333333334,
+            0.75,
+            0.71875
+          ],
+          "mean": 0.7569444444444444,
+          "sample_std": 0.04209845712841023,
+          "seed_cluster_bootstrap_95ci": [
+            0.71875,
+            0.8020833333333334
+          ]
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            0.10416666666666667,
+            0.0,
+            0.10416666666666667
+          ],
+          "mean": 0.06944444444444445,
+          "sample_std": 0.06014065304058602,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.10416666666666667
+          ]
+        },
+        "deadlock_rate": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "hard": {
+        "accuracy": {
+          "values": [
+            0.625,
+            0.5,
+            0.4791666666666667
+          ],
+          "mean": 0.5347222222222222,
+          "sample_std": 0.0788737270250038,
+          "seed_cluster_bootstrap_95ci": [
+            0.4791666666666667,
+            0.625
+          ]
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.25,
+            0.25,
+            0.28125
+          ],
+          "mean": 0.2604166666666667,
+          "sample_std": 0.018042195912175804,
+          "seed_cluster_bootstrap_95ci": [
+            0.25,
+            0.28125
+          ]
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            0.75,
+            0.75,
+            0.71875
+          ],
+          "mean": 0.7395833333333334,
+          "sample_std": 0.018042195912175804,
+          "seed_cluster_bootstrap_95ci": [
+            0.71875,
+            0.75
+          ]
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            0.25,
+            0.0,
+            0.020833333333333332
+          ],
+          "mean": 0.09027777777777778,
+          "sample_std": 0.13871516913498735,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.25
+          ]
+        },
+        "deadlock_rate": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0,
+          "seed_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    }
+  },
+  "contrasts": {
+    "test": {
+      "violation_reduction_vs_requirement": {
+        "values": [
+          0.25,
+          0.25,
+          0.375
+        ],
+        "mean": 0.2916666666666667,
+        "sample_std": 0.07216878364870322,
+        "seed_cluster_bootstrap_95ci": [
+          0.25,
+          0.375
+        ]
+      },
+      "pair_accuracy_gain_vs_shuffled": {
+        "values": [
+          0.9791666666666666,
+          1.0,
+          0.9375
+        ],
+        "mean": 0.9722222222222222,
+        "sample_std": 0.03182344232608222,
+        "seed_cluster_bootstrap_95ci": [
+          0.9375,
+          1.0
+        ]
+      }
+    },
+    "hard": {
+      "violation_reduction_vs_requirement": {
+        "values": [
+          0.25,
+          0.2708333333333333,
+          0.3541666666666667
+        ],
+        "mean": 0.2916666666666667,
+        "sample_std": 0.05511981898051232,
+        "seed_cluster_bootstrap_95ci": [
+          0.25,
+          0.3541666666666667
+        ]
+      },
+      "pair_accuracy_gain_vs_shuffled": {
+        "values": [
+          0.5,
+          0.9791666666666666,
+          0.9375
+        ],
+        "mean": 0.8055555555555556,
+        "sample_std": 0.26543770630022767,
+        "seed_cluster_bootstrap_95ci": [
+          0.5,
+          0.9791666666666666
+        ]
+      }
+    }
+  },
+  "hard_by_maneuver": {
+    "Requirement CoC": {
+      "cruise_stop": {
+        "accuracy": {
+          "values": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "mean": 0.5,
+          "sample_std": 0.0
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.25,
+            0.2708333333333333,
+            0.5
+          ],
+          "mean": 0.3402777777777778,
+          "sample_std": 0.13871516913498735
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            0.75,
+            0.7291666666666666,
+            0.5
+          ],
+          "mean": 0.6597222222222222,
+          "sample_std": 0.13871516913498735
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0
+        }
+      },
+      "lane_change": {
+        "accuracy": {
+          "values": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "mean": 0.5,
+          "sample_std": 0.0
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.25,
+            0.2916666666666667,
+            0.25
+          ],
+          "mean": 0.2638888888888889,
+          "sample_std": 0.024056261216234418
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            0.75,
+            0.7083333333333334,
+            0.75
+          ],
+          "mean": 0.7361111111111112,
+          "sample_std": 0.024056261216234387
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0
+        }
+      }
+    },
+    "Safety-Constrained CoC": {
+      "cruise_stop": {
+        "accuracy": {
+          "values": [
+            1.0,
+            0.9791666666666666,
+            0.9583333333333334
+          ],
+          "mean": 0.9791666666666666,
+          "sample_std": 0.020833333333333315
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.0,
+            0.020833333333333332,
+            0.041666666666666664
+          ],
+          "mean": 0.020833333333333332,
+          "sample_std": 0.020833333333333332
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            1.0,
+            0.9791666666666666,
+            0.9583333333333334
+          ],
+          "mean": 0.9791666666666666,
+          "sample_std": 0.020833333333333315
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            1.0,
+            0.9583333333333334,
+            0.9166666666666666
+          ],
+          "mean": 0.9583333333333334,
+          "sample_std": 0.041666666666666685
+        }
+      },
+      "lane_change": {
+        "accuracy": {
+          "values": [
+            0.75,
+            1.0,
+            1.0
+          ],
+          "mean": 0.9166666666666666,
+          "sample_std": 0.14433756729740643
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "sample_std": 0.0
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "sample_std": 0.0
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            0.5,
+            1.0,
+            1.0
+          ],
+          "mean": 0.8333333333333334,
+          "sample_std": 0.28867513459481287
+        }
+      }
+    },
+    "Shuffled constraint": {
+      "cruise_stop": {
+        "accuracy": {
+          "values": [
+            0.5,
+            0.5,
+            0.4583333333333333
+          ],
+          "mean": 0.4861111111111111,
+          "sample_std": 0.024056261216234418
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.25,
+            0.25,
+            0.3125
+          ],
+          "mean": 0.2708333333333333,
+          "sample_std": 0.03608439182435161
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            0.75,
+            0.75,
+            0.6875
+          ],
+          "mean": 0.7291666666666666,
+          "sample_std": 0.03608439182435161
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            0.0,
+            0.0,
+            0.041666666666666664
+          ],
+          "mean": 0.013888888888888888,
+          "sample_std": 0.024056261216234404
+        }
+      },
+      "lane_change": {
+        "accuracy": {
+          "values": [
+            0.75,
+            0.5,
+            0.5
+          ],
+          "mean": 0.5833333333333334,
+          "sample_std": 0.14433756729740643
+        },
+        "guard_violation_rate": {
+          "values": [
+            0.25,
+            0.25,
+            0.25
+          ],
+          "mean": 0.25,
+          "sample_std": 0.0
+        },
+        "safe_goal_completion_rate": {
+          "values": [
+            0.75,
+            0.75,
+            0.75
+          ],
+          "mean": 0.75,
+          "sample_std": 0.0
+        },
+        "contract_swap_pair_accuracy": {
+          "values": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "mean": 0.16666666666666666,
+          "sample_std": 0.28867513459481287
+        }
+      }
+    }
+  },
+  "hard_failure_analysis": {
+    "Requirement CoC": {
+      "negative_reject_scope": {
+        "examples": 72,
+        "wrong": 24,
+        "violations": 12
+      },
+      "unit_conversion": {
+        "examples": 72,
+        "wrong": 34,
+        "violations": 24
+      },
+      "prohibition_and_reordered_clauses": {
+        "examples": 72,
+        "wrong": 37,
+        "violations": 26
+      },
+      "explicit_inequality_and_boundary": {
+        "examples": 72,
+        "wrong": 49,
+        "violations": 25
+      }
+    },
+    "Safety-Constrained CoC": {
+      "negative_reject_scope": {
+        "examples": 72,
+        "wrong": 0,
+        "violations": 0
+      },
+      "unit_conversion": {
+        "examples": 72,
+        "wrong": 15,
+        "violations": 3
+      },
+      "prohibition_and_reordered_clauses": {
+        "examples": 72,
+        "wrong": 0,
+        "violations": 0
+      },
+      "explicit_inequality_and_boundary": {
+        "examples": 72,
+        "wrong": 0,
+        "violations": 0
+      }
+    },
+    "Shuffled constraint": {
+      "negative_reject_scope": {
+        "examples": 72,
+        "wrong": 35,
+        "violations": 12
+      },
+      "unit_conversion": {
+        "examples": 72,
+        "wrong": 27,
+        "violations": 15
+      },
+      "prohibition_and_reordered_clauses": {
+        "examples": 72,
+        "wrong": 36,
+        "violations": 24
+      },
+      "explicit_inequality_and_boundary": {
+        "examples": 72,
+        "wrong": 36,
+        "violations": 24
+      }
+    }
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "claim_scope": "SYNTHETIC_EBLC_SOFTWARE_UNIT_INTEGRATION_VALIDATION_NOT_VEHICLE_SAFETY",
+  "experiment_id": "EBLC-SCENARIO-TEST-001",
+  "gates": {
+    "all_test_commands_pass": true,
+    "core_smt_12_of_12": true,
+    "full_p0b_77_of_77": true,
+    "p0a_7_of_7": true,
+    "robustness_10_of_10": true,
+    "scenario_matrix_11_of_11": true
+  },
+  "input_class": "SYNTHETIC",
+  "limitations": [
+    "FINITE_SYNTHETIC_SCENARIOS_ONLY",
+    "TARGET_AGREEMENT_NOT_INDEPENDENT_SAFETY_ORACLE",
+    "NOT_LEGAL_VALIDATION",
+    "NOT_VEHICLE_SAFETY_PROOF"
+  ],
+  "observed_and_fixed_discrepancy": {
+    "affected_cases": [
+      "freshness at +epsilon",
+      "future age at -epsilon"
+    ],
+    "class": "BINARY_FLOAT_BOUNDARY_ROUNDOFF",
+    "count": 2,
+    "post_fix_status": "REGRESSION_PASS"
+  },
+  "run_date": "2026-08-08",
+  "run_id": "scenario-matrix-2026-08-08-v1",
+  "scenario_coverage": {
+    "boundary_semantics": {
+      "binary_float_roundoff_guard": 1e-15,
+      "policy": "STRICT_BEYOND_EPSILON_AND_ROUNDOFF_ONLY",
+      "semantic_epsilon": 1e-09
+    },
+    "explicit_case_count": 44,
+    "groups": [
+      {
+        "case_count": 9,
+        "examples": [
+          "duplicate source reference",
+          "duplicate derivation node",
+          "four invalid numeric ranges",
+          "nonfinite value",
+          "scalarized priority",
+          "missing quantity evidence"
+        ],
+        "group": "PROGRAM_AND_SCHEMA_NEGATIVE_INPUTS",
+        "targets": [
+          "JSON_SCHEMA",
+          "PROGRAM_PARSER"
+        ]
+      },
+      {
+        "case_count": 9,
+        "examples": [
+          "release disabled",
+          "reactivation disabled",
+          "UNKNOWN as FALSE",
+          "UNKNOWN as TRUE",
+          "always active",
+          "explicit expiry",
+          "invariant disabled",
+          "forced false deadlock",
+          "one-frame release"
+        ],
+        "group": "LIFECYCLE_AND_POLICY_VARIANTS",
+        "targets": [
+          "CANONICAL",
+          "RUNTIME",
+          "Z3_BOUNDED",
+          "CORE_SMT",
+          "ENUMERATOR"
+        ]
+      },
+      {
+        "case_count": 23,
+        "examples": [
+          "stop position before/equal/after tolerance",
+          "freshness before/equal/after tolerance",
+          "future timestamp boundary",
+          "dynamic speed bounds at three distances"
+        ],
+        "group": "NUMERIC_AND_FRESHNESS_BOUNDARIES",
+        "targets": [
+          "CANONICAL",
+          "RUNTIME",
+          "Z3_BOUNDED",
+          "CORE_SMT",
+          "ENUMERATOR"
+        ]
+      },
+      {
+        "case_count": 3,
+        "examples": [
+          "scope plus unit failure",
+          "disallowed predicted evidence",
+          "one-frame bounded horizon"
+        ],
+        "group": "FAILURE_PRECEDENCE_EPISTEMIC_AND_HORIZON",
+        "targets": [
+          "CANONICAL",
+          "RUNTIME",
+          "Z3_BOUNDED",
+          "CORE_SMT",
+          "ENUMERATOR"
+        ]
+      }
+    ]
+  },
+  "status": "EXECUTED",
+  "tests": {
+    "all_p0b": {
+      "command": "python3 -m unittest discover -s experiments/eblc_p0b -p test_*.py",
+      "exit_code": 0,
+      "output_sha256": "06beecabcc28f2b8cea83322b9044028dad1f87f6669a0427d7358c34046abd3",
+      "passed": true,
+      "passed_count": 77,
+      "test_count": 77
+    },
+    "core_smt_compiler": {
+      "command": "python3 -m unittest experiments.eblc_p0b.test_core_smt_compiler -v",
+      "exit_code": 0,
+      "output_sha256": "2c77aa9316546d0b6a40b2498e709dffb93cb9a57f30adee07a5170e5765e9b1",
+      "passed": true,
+      "passed_count": 12,
+      "test_count": 12
+    },
+    "elaboration_conformance": {
+      "command": "python3 -m unittest experiments.eblc_p0b.test_elaboration_conformance -v",
+      "exit_code": 0,
+      "output_sha256": "c61fc2cb94a4531d539458b650a34ec0d0c05ce42ccb436f2da5813aa4473871",
+      "passed": true,
+      "passed_count": 11,
+      "test_count": 11
+    },
+    "p0a_regression": {
+      "command": "python3 -m unittest experiments.eblc_pilot.test_pilot -v",
+      "exit_code": 0,
+      "output_sha256": "5482b49d85c6de51d558ceab2cdec67e1cabe345a42ff47270d1fdc883a56767",
+      "passed": true,
+      "passed_count": 7,
+      "test_count": 7
+    },
+    "robustness": {
+      "command": "python3 -m unittest experiments.eblc_p0b.test_robustness -v",
+      "exit_code": 0,
+      "output_sha256": "629aa52fd51b86ab76d01d773639250af1f5d0ad8e27140bf71a95e2e10cc815",
+      "passed": true,
+      "passed_count": 10,
+      "test_count": 10
+    },
+    "scenario_matrix": {
+      "command": "python3 -m unittest experiments.eblc_p0b.test_scenario_matrix -v",
+      "exit_code": 0,
+      "output_sha256": "059aa8daf8a88848daa6cbd8a1d0b78b773bbbd9269ca1de7182068b0e987025",
+      "passed": true,
+      "passed_count": 11,
+      "test_count": 11
+    }
+  },
+  "z3_runtime": {
+    "module_path": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages/z3/__init__.py",
+    "prefix": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36",
+    "python_site_packages": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages",
+    "source": "PROJECT_LOCAL_ISOLATED_BUILD",
+    "version": "5.0.0"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "claim_scope": "P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY",
+  "context_graph": {
+    "coc_claims": [],
+    "graph_id": "label_light_two_scene_request__context_graph",
+    "instances": [
+      {
+        "association": {
+          "candidate_target_entity_ids": [
+            "pedestrian:P17"
+          ],
+          "candidate_zone_ids": [
+            "zone:Z4"
+          ],
+          "coordinate_transform_ref": "TRANSFORM-001",
+          "evidence_refs": [
+            "ASSOC-001",
+            "CALIBRATION-001",
+            "TRACK-001",
+            "GEOMETRY-001",
+            "TRANSFORM-001"
+          ],
+          "selected_target_entity_id": "pedestrian:P17",
+          "selected_zone_id": "zone:Z4",
+          "zone_geometry_ref": "GEOMETRY-001"
+        },
+        "contract_id": "label_light_scene_001_contract",
+        "hazard_fact": {
+          "epistemic_kind": "OBSERVED",
+          "maximum_age_s": 0.2,
+          "source_ref": "OBS-001",
+          "timestamp_s": 0.0,
+          "truth": "TRUE"
+        },
+        "instance_id": "label_light_scene_001_instance",
+        "overrides_contracts": [],
+        "zone_entry": {
+          "evidence_refs": [
+            "GEOMETRY-001"
+          ],
+          "frame": "ego_path_s",
+          "unit": "m",
+          "value": 0.0
+        }
+      },
+      {
+        "association": {
+          "candidate_target_entity_ids": [
+            "pedestrian:P18"
+          ],
+          "candidate_zone_ids": [
+            "zone:Z5"
+          ],
+          "coordinate_transform_ref": "TRANSFORM-002",
+          "evidence_refs": [
+            "ASSOC-002",
+            "CALIBRATION-001",
+            "TRACK-002",
+            "GEOMETRY-002",
+            "TRANSFORM-002"
+          ],
+          "selected_target_entity_id": "pedestrian:P18",
+          "selected_zone_id": "zone:Z5",
+          "zone_geometry_ref": "GEOMETRY-002"
+        },
+        "contract_id": "label_light_scene_002_contract",
+        "hazard_fact": {
+          "epistemic_kind": "OBSERVED",
+          "maximum_age_s": 0.2,
+          "source_ref": "OBS-002",
+          "timestamp_s": 0.0,
+          "truth": "TRUE"
+        },
+        "instance_id": "label_light_scene_002_instance",
+        "overrides_contracts": [],
+        "zone_entry": {
+          "evidence_refs": [
+            "GEOMETRY-002"
+          ],
+          "frame": "ego_path_s",
+          "unit": "m",
+          "value": 12.0
+        }
+      }
+    ],
+    "source_refs": [
+      "ASSOC-001",
+      "ASSOC-002",
+      "CALIBRATION-001",
+      "GEOMETRY-001",
+      "GEOMETRY-002",
+      "OBS-001",
+      "OBS-002",
+      "TRACK-001",
+      "TRACK-002",
+      "TRANSFORM-001",
+      "TRANSFORM-002"
+    ],
+    "timestamp_s": 0.0
+  },
+  "frames": 8,
+  "generator_version": "guard-synth-source-aware-generator-v0.1",
+  "policy": {
+    "action_domain": [
+      "STOP",
+      "CREEP",
+      "PROCEED"
+    ],
+    "allowed_actions": [
+      "STOP"
+    ],
+    "always_active": false,
+    "compiler_policy_evidence_ref": "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+    "composition_evidence_refs": [
+      "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+    ],
+    "enforce_invariant": true,
+    "expiry_timestamp_s": null,
+    "force_deadlock": false,
+    "position_epsilon_m": 1e-09,
+    "predicate_evidence_ref": "P0B-SYNTHETIC-PREDICATE-SPEC-v0",
+    "reactivation_enabled": true,
+    "release_enabled": true,
+    "speed_epsilon_mps": 1e-09,
+    "subject_id": "ego",
+    "time_epsilon_s": 1e-09,
+    "unknown_policy": "APPROVED_HOLD"
+  },
+  "predicate_spec_ref": "pedestrian_conflict",
+  "request_id": "label_light_two_scene_request",
+  "rule_template_ref": "P0B-SYS-PED-CZ-001",
+  "source_refs": [
+    "ASSOC-001",
+    "ASSOC-002",
+    "CALIBRATION-001",
+    "GEOMETRY-001",
+    "GEOMETRY-002",
+    "OBS-001",
+    "OBS-002",
+    "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+    "P0B-SYNTHETIC-COMPOSITION-POLICY-v0",
+    "P0B-SYNTHETIC-PREDICATE-SPEC-v0",
+    "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+    "TEST-VEHICLE-ASSURANCE-v1",
+    "TRACK-001",
+    "TRACK-002",
+    "TRANSFORM-001",
+    "TRANSFORM-002"
+  ],
+  "template_program_ref": "p0b_pedestrian_conflict_zone_program_v02",
+  "vehicle_profile": {
+    "evidence_ref": "TEST-VEHICLE-ASSURANCE-v1",
+    "maximum_service_deceleration_mps2": 3.0,
+    "position_uncertainty_m": 0.5,
+    "profile_id": "synthetic_test_profile",
+    "response_time_s": 0.5
+  }
+}

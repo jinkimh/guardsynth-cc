@@ -1,0 +1,138 @@
+{
+  "bundle_probe": {
+    "canonical": [
+      {
+        "admissible_actions": [
+          "STOP"
+        ],
+        "false_deadlock": false,
+        "selected_contracts": [
+          "C0"
+        ],
+        "verdict": "VALIDATED"
+      }
+    ],
+    "core_smt": [
+      {
+        "admissible_actions": [
+          "STOP"
+        ],
+        "false_deadlock": false,
+        "selected_contracts": [
+          "C0"
+        ],
+        "verdict": "VALIDATED"
+      }
+    ],
+    "matches": true,
+    "mismatches": []
+  },
+  "claim_scope": "EBLC_V02_LANGUAGE_AND_TOOLING_RELEASE_CANDIDATE_NOT_VEHICLE_SAFETY",
+  "cnl": {
+    "authority_boundary": "STRUCTURED_EBLC_REMAINS_EXECUTION_AUTHORITY",
+    "bundle_input_sha256": "90bfd261ce0bcd515731e2487edd9c41dfa7f18a14e00780dee4b704ea8fe896",
+    "bundle_output_sha256": "bad3e430dc83e4bb8d971bf863fcb0ceacd1ab6325da661b423d870b18bde5a1",
+    "program_input_sha256": "b83ac6e8ce7afb679fcad69aeed9da2ce61ced7196ca5461b4b9c9ed76a5de59",
+    "program_output_sha256": "09a0a1f96ebff554c49dd7e1c5917f91895a3a43a664db5ac03ea993a57289db"
+  },
+  "conformance": {
+    "frame_agreement": 1.0,
+    "frame_count": 266,
+    "limitations": [
+      "GENERATED_FINITE_TRACE_CONFORMANCE",
+      "ELABORATOR_DERIVED_FROM_CANONICAL_SPECIFICATION",
+      "NOT_AN_INDEPENDENT_SAFETY_ORACLE"
+    ],
+    "matching_frames": 266,
+    "matching_traces": 129,
+    "trace_agreement": 1.0,
+    "trace_count": 129
+  },
+  "documentation_link_gaps": [],
+  "experiment_id": "EBLC-RELEASE-CANDIDATE-001",
+  "gates": {
+    "bundle_translation_agreement": true,
+    "cnl_bundle_full_top_level_coverage": true,
+    "cnl_program_full_top_level_coverage": true,
+    "cnl_renderer_10_of_10": true,
+    "documentation_links": true,
+    "full_eblc_138_of_138": true,
+    "p0a_7_of_7": true,
+    "program_translation_agreement": true,
+    "project_local_z3_5": true,
+    "stable_baseline_128_of_128": true,
+    "structure_8_of_8": true
+  },
+  "input_class": "SYNTHETIC",
+  "limitations": [
+    "BOUNDED_DISCRETE_SEMANTICS",
+    "SYNTHETIC_PUBLIC_FIXTURES",
+    "CNL_IS_ONE_WAY_NON_AUTHORITATIVE_PROJECTION",
+    "NOT_AN_INDEPENDENT_SAFETY_ORACLE",
+    "NOT_A_VEHICLE_SAFETY_PROOF"
+  ],
+  "release_decision": "EBLC_V02_FEATURE_COMPLETE_SCOPED_RC1",
+  "run_date": "2026-08-09",
+  "run_id": "eblc-v0.2-rc1-2026-08-09",
+  "status": "EXECUTED",
+  "tests": {
+    "cnl_renderer": {
+      "command": "python3 -m unittest tests.guard_synth_eblc.test_cnl_renderer -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 10,
+      "test_count": 10
+    },
+    "full_eblc": {
+      "command": "python3 -m unittest discover -s tests/guard_synth_eblc -p test_*.py -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 138,
+      "test_count": 138
+    },
+    "p0a": {
+      "command": "python3 -m unittest experiments.eblc_pilot.test_pilot -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 7,
+      "test_count": 7
+    },
+    "stable_baseline": {
+      "command": "python3 -m unittest tests.guard_synth_eblc.test_composition_compilation tests.guard_synth_eblc.test_composition_v02_derivation tests.guard_synth_eblc.test_core_smt_compiler tests.guard_synth_eblc.test_derivation_compiler tests.guard_synth_eblc.test_elaboration_conformance tests.guard_synth_eblc.test_indexed_collection tests.guard_synth_eblc.test_program_v02_typed_derivation tests.guard_synth_eblc.test_public_layout tests.guard_synth_eblc.test_real_scene_adapter tests.guard_synth_eblc.test_robustness tests.guard_synth_eblc.test_scenario_matrix tests.guard_synth_eblc.test_schema_binding tests.guard_synth_eblc.test_semantics tests.guard_synth_eblc.test_translation_mutations -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 128,
+      "test_count": 128
+    },
+    "structure": {
+      "command": "python3 -m unittest tests.structure.test_project_layout -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 8,
+      "test_count": 8
+    }
+  },
+  "traceability_counts": {
+    "DATA_ADAPTER_GAP": 1,
+    "DEFERRED_V0_3": 1,
+    "NEXT_LAYER_GUARDSYNTH": 1,
+    "NOT_CLAIMED": 1,
+    "OUT_OF_SCOPE_V0_2": 2,
+    "SUPPORTED": 15
+  },
+  "versions": {
+    "bundle": "eblc-bundle-v0.1",
+    "cnl_language": "EBLC-CNL-EN-v0.1",
+    "cnl_renderer": "eblc-cnl-renderer-v0.1",
+    "core": "eblc-core-v0.1",
+    "core_smt_compiler": "eblc-core-smt-compiler-v0.1",
+    "program": "eblc-program-v0.2"
+  },
+  "z3_runtime": {
+    "module_path": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages/z3/__init__.py",
+    "prefix": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36",
+    "python_site_packages": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages",
+    "source": "PROJECT_LOCAL_ISOLATED_BUILD",
+    "version": "5.0.0"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "core_horizon": 9,
+  "core_model_id": "p0b_pedestrian_conflict_zone_program_v02_core_typed_derivation",
+  "elaborator_version": "eblc-program-elaborator-v0.2",
+  "frames": 8,
+  "generated_from": {
+    "binding": [
+      "unit_ok",
+      "coordinate_ok",
+      "target_ok"
+    ],
+    "constraints": [
+      "generated_entry_violation",
+      "generated_speed_violation",
+      "generated_deadlock_violation",
+      "generated_progress_permission"
+    ],
+    "derivation_nodes": [
+      "stop_position",
+      "adjusted_speed",
+      "effective_speed",
+      "response_distance",
+      "speed_squared",
+      "twice_deceleration",
+      "braking_distance",
+      "stopping_distance"
+    ],
+    "lifecycle": [
+      "generated_lifecycle_transition",
+      "generated_clear_counter_transition"
+    ],
+    "predicate": [
+      "effective_truth_from_freshness_and_epistemic"
+    ],
+    "priority": {
+      "class": "MANDATORY_SYSTEM",
+      "compiled_as_scalar_weight": false,
+      "overrides": [
+        "ROUTE_PROGRESS",
+        "COMFORT_SERVICE",
+        "STATISTICAL_HEURISTIC"
+      ]
+    },
+    "verdict": [
+      "generated_verdict"
+    ]
+  },
+  "limitations": [
+    "SINGLE_BOUND_CONTRACT",
+    "BOUNDED_DISCRETE_TIME",
+    "PRIORITY_PRESERVED_NOT_COMPOSED"
+  ],
+  "program_id": "p0b_pedestrian_conflict_zone_program_v02",
+  "program_version": "eblc-program-v0.2",
+  "typed_derivation": {
+    "compiler_version": "eblc-derivation-core-compiler-v0.1",
+    "core_model_id": "p0b_pedestrian_conflict_zone_program_v02_core_typed_derivation",
+    "derivation_id": "p0b_full_stopping_derivation",
+    "derivation_version": "eblc-derivation-v0.1",
+    "limitations": [
+      "FINITE_TYPED_ARITHMETIC_DAG",
+      "NO_AUTOMATIC_PARSING_OF_FREE_FORM_OPERATION_STRINGS",
+      "BOUNDED_CORE_EXECUTION",
+      "NOT_A_VEHICLE_SAFETY_PROOF"
+    ],
+    "node_operations": {
+      "adjusted_speed": "SUB",
+      "braking_distance": "DIV",
+      "effective_speed": "MAX",
+      "response_distance": "MUL",
+      "speed_squared": "MUL",
+      "stop_position": "SUB",
+      "stopping_distance": "ADD",
+      "twice_deceleration": "MUL"
+    },
+    "outputs": {
+      "stop_position": {
+        "replaced_clauses": [],
+        "target_declaration": "stop_position"
+      },
+      "stopping_distance": {
+        "replaced_clauses": [],
+        "target_declaration": "stopping_distance"
+      }
+    },
+    "symbol_bindings": {
+      "deceleration": "deceleration",
+      "ego_speed": "ego_speed",
+      "factor_two": "derive__symbol__factor_two",
+      "response_time": "response_time",
+      "speed_epsilon": "speed_epsilon",
+      "stop_margin": "derive__symbol__stop_margin",
+      "zero_speed": "derive__symbol__zero_speed",
+      "zone_entry_x": "derive__symbol__zone_entry_x"
+    }
+  }
+}

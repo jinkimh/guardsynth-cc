@@ -1,0 +1,13 @@
+{
+  "audit_script_sha256": "b125efd32dc406cbcd2ca705ae59442378c447d94767efcf25586f75cf68c641",
+  "claim_scope": "ADVERSARIAL_SOFTWARE_ROBUSTNESS_AUDIT_NOT_VEHICLE_SAFETY_VALIDATION",
+  "deterministic_enumeration": true,
+  "engine": "Z3_BOUNDED_SMT",
+  "experiment_id": "EBLC-ROBUSTNESS-AUDIT-001",
+  "input_class": "SYNTHETIC_ADVERSARIAL",
+  "python_version": "3.12.13",
+  "run_date": "2026-08-08",
+  "run_id": "robustness-multienv-2026-08-08-v3",
+  "schema_version": "eblc-schema-v0.1",
+  "semantics_version": "eblc-operational-semantics-v0.1"
+}

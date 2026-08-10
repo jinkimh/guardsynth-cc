@@ -1,0 +1,14 @@
+{
+  "claimed_evidence_refs": [
+    "P0B-SYNTHETIC-COC-CLAIM-v0"
+  ],
+  "coc_used_as_activation_evidence": false,
+  "generated_collection_id": "p0b_source_aware_two_actor_request__indexed_collection",
+  "generated_program_id": "p0b_source_aware_two_actor_request__program_template",
+  "generator_version": "guard-synth-source-aware-generator-v0.1",
+  "instance_count": 2,
+  "predicate_spec_ref": "pedestrian_conflict",
+  "rule_template_ref": "P0B-SYS-PED-CZ-001",
+  "template_zone_entry_policy": "TEMPLATE_PLACEHOLDER_NEVER_EXECUTED_OVERWRITTEN_BY_GROUNDED_INSTANCE",
+  "vehicle_profile_ref": "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+}

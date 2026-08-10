@@ -1,0 +1,89 @@
+{
+  "claim_scope": "SYNTHETIC_EBLC_SOFTWARE_UNIT_INTEGRATION_VALIDATION_NOT_VEHICLE_SAFETY",
+  "code_revision": "WORKSPACE_WITHOUT_GIT_METADATA",
+  "enumeration": "DETERMINISTIC_SCENARIO_AND_BOUNDARY_MATRICES",
+  "experiment_id": "EBLC-SCENARIO-TEST-001",
+  "file_hashes": {
+    "cli/pipelines/eblc_scenario_validation/run.py": "d4b61ec45663e5ee19235fe9222251433b541f05e634e112927fba5249c7e84c",
+    "cli/solver_runtime.py": "80e18d693a2916053651222778cffddc9b36b474ce9bf5220275f6a745858fcb",
+    "experiments/eblc_p0b/test_scenario_matrix.py": "d79a187258bb62658d4664d275dd2d50ae8c82d0415e6d92f3f61e098c6d0854",
+    "src/guard_synth_eblc/__init__.py": "6cdc7476f9651d1434bc85d624ae79f60619b0248bb2a6e9ee25e8e5dd4aa1f6",
+    "src/guard_synth_eblc/finite_state_enumerator.py": "3253cdbc98375178e900525eecdbae6a4cccf7957fd765298e1cb39e7a3e760a",
+    "src/guard_synth_eblc/runtime_monitor.py": "50ef613f3f8ba857e273f9a9102c93eeb4ba9f7dabd72348ed506a485802fab9",
+    "src/guard_synth_eblc/semantics.py": "ec56622e0310b8b2d5288cc60a0489b7c9002f7ab6aab535675d132bca9167d3",
+    "src/guard_synth_eblc/smt_compiler.py": "a85b3d0a501fff26dbfaba320042a8eb5711067f8a20b480a8f133c6f4e98bb0",
+    "src/guard_synth_eblc/z3_bounded_checker.py": "6489d6afc685ded2099fd5f089d305e1927ac0875dd5af1a90b7c2214202c3a2"
+  },
+  "input_class": "SYNTHETIC",
+  "python_version": "3.11.2",
+  "random_seed": null,
+  "run_date": "2026-08-08",
+  "run_id": "scenario-matrix-2026-08-08-v3",
+  "test_commands": {
+    "all_p0b": {
+      "command": "python3 -m unittest discover -s experiments/eblc_p0b -p test_*.py",
+      "exit_code": 0,
+      "output_sha256": "55c017450a4e10d63bc9b54fd5e2785d8451c95927e549aede6b40196f34ec15",
+      "passed": true,
+      "passed_count": 77,
+      "test_count": 77
+    },
+    "core_smt_compiler": {
+      "command": "python3 -m unittest experiments.eblc_p0b.test_core_smt_compiler -v",
+      "exit_code": 0,
+      "output_sha256": "094577f498b78960166d49c8835f582bc949b5eba3cf8646569495907d0a4388",
+      "passed": true,
+      "passed_count": 12,
+      "test_count": 12
+    },
+    "elaboration_conformance": {
+      "command": "python3 -m unittest experiments.eblc_p0b.test_elaboration_conformance -v",
+      "exit_code": 0,
+      "output_sha256": "cf7916699c1927e1a5fbfc72d86e847223e6a814c099a746184633b3ac969e38",
+      "passed": true,
+      "passed_count": 11,
+      "test_count": 11
+    },
+    "p0a_regression": {
+      "command": "python3 -m unittest experiments.eblc_pilot.test_pilot -v",
+      "exit_code": 0,
+      "output_sha256": "5482b49d85c6de51d558ceab2cdec67e1cabe345a42ff47270d1fdc883a56767",
+      "passed": true,
+      "passed_count": 7,
+      "test_count": 7
+    },
+    "robustness": {
+      "command": "python3 -m unittest experiments.eblc_p0b.test_robustness -v",
+      "exit_code": 0,
+      "output_sha256": "b4b039e0e84ceb7304360878cfed122a8ac79f242b0ed9ca8792b12210c6b724",
+      "passed": true,
+      "passed_count": 10,
+      "test_count": 10
+    },
+    "scenario_matrix": {
+      "command": "python3 -m unittest experiments.eblc_p0b.test_scenario_matrix -v",
+      "exit_code": 0,
+      "output_sha256": "8540fd1b0da8b71c5bff55bc59a6c4fc219638ce38affc4f8cbd86880981d473",
+      "passed": true,
+      "passed_count": 11,
+      "test_count": 11
+    }
+  },
+  "versions": {
+    "canonical_semantics": "eblc-operational-semantics-v0.2.1-float-boundary",
+    "compiler_targets": "eblc-targets-v0.3.1-float-boundary",
+    "conformance": "eblc-generated-conformance-v0.1",
+    "core_grammar": "eblc-core-v0.1",
+    "core_smt_compiler": "eblc-core-smt-compiler-v0.1",
+    "elaborator": "eblc-program-elaborator-v0.1",
+    "program": "eblc-program-v0.1",
+    "schema": "eblc-schema-v0.2-fail-closed"
+  },
+  "z3_runtime": {
+    "module_path": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages/z3/__init__.py",
+    "prefix": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36",
+    "python_site_packages": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages",
+    "source": "PROJECT_LOCAL_ISOLATED_BUILD",
+    "version": "5.0.0"
+  }
+}

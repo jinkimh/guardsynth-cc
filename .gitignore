@@ -1,0 +1,54 @@
+# Local agent and tool state
+/.superpowers/
+/.agents/
+/.codex/
+/.ruff_cache/
+
+# Manuscripts and submission materials
+/papers/
+
+# Restricted data and local/external runtime trees
+/data/restricted/
+/runtime/
+/third_party/
+
+# Model-specific experiments
+/experiments/alpamayo/
+/experiments/vlm_guard_learning/
+
+# Model weights and checkpoints created under experiments
+/experiments/**/checkpoints/
+/experiments/**/model_weights/
+/experiments/**/pretrained_models/
+/experiments/**/*.safetensors
+/experiments/**/*.ckpt
+/experiments/**/*.pt
+/experiments/**/*.pth
+/experiments/**/*.onnx
+/experiments/**/*.gguf
+/experiments/**/pytorch_model*.bin
+/experiments/**/adapter_model*.bin
+
+# Model artifacts stored with public result metadata
+/artifacts/results/public/small-vlm-guard-v0/**/adapter/
+/artifacts/results/public/small-vlm-guard-v0/**/processor/
+**/*.safetensors
+**/*.ckpt
+**/*.pt
+**/*.pth
+**/*.onnx
+**/*.gguf
+**/pytorch_model*.bin
+**/adapter_model*.bin
+
+# Downloaded installers and packaged handoffs
+/archive/handoff/packages/
+/archive/installers/
+
+.venv*/
+artifacts/results/restricted/*
+!artifacts/results/restricted/.gitkeep
+runtime/alpamayo/ar1_venv/
+*.token
+__pycache__/
+.pytest_cache/

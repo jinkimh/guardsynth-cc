@@ -1,0 +1,9 @@
+{
+  "claim_scope": "SOURCE_READINESS_AND_ABSTENTION_NOT_REAL_SCENE_CONTRACT_OR_VEHICLE_SAFETY",
+  "experiment_id": "GUARDSYNTH-REAL-SCENE-READINESS-001",
+  "input_class": "LICENSE_RESTRICTED_AGGREGATES_ONLY",
+  "raw_identifiers_included": false,
+  "restricted_result_path": "artifacts/results/restricted/guardsynth-real-scene-readiness-001/terminal-readiness-2026-08-09-v2",
+  "run_date": "2026-08-09",
+  "run_id": "terminal-readiness-2026-08-09-v2"
+}

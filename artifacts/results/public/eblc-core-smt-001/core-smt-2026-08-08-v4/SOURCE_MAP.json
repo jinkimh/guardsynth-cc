@@ -1,0 +1,835 @@
+{
+  "assertions": [
+    {
+      "assertion_id": "domain__state__0",
+      "base_time": 0,
+      "clause_id": "state",
+      "index": 0,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__state__1",
+      "base_time": 1,
+      "clause_id": "state",
+      "index": 1,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__state__2",
+      "base_time": 2,
+      "clause_id": "state",
+      "index": 2,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__state__3",
+      "base_time": 3,
+      "clause_id": "state",
+      "index": 3,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__state__4",
+      "base_time": 4,
+      "clause_id": "state",
+      "index": 4,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__truth__0",
+      "base_time": 0,
+      "clause_id": "truth",
+      "index": 5,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__truth__1",
+      "base_time": 1,
+      "clause_id": "truth",
+      "index": 6,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__truth__2",
+      "base_time": 2,
+      "clause_id": "truth",
+      "index": 7,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__truth__3",
+      "base_time": 3,
+      "clause_id": "truth",
+      "index": 8,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__truth__4",
+      "base_time": 4,
+      "clause_id": "truth",
+      "index": 9,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__initial_state__t0",
+      "base_time": 0,
+      "clause_id": "initial_state",
+      "index": 10,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__initial_clear_count__t0",
+      "base_time": 0,
+      "clause_id": "initial_clear_count",
+      "index": 11,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__bind_stop_position__t0",
+      "base_time": 0,
+      "clause_id": "bind_stop_position",
+      "index": 12,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__bind_position_uncertainty__t0",
+      "base_time": 0,
+      "clause_id": "bind_position_uncertainty",
+      "index": 13,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__bind_response_time__t0",
+      "base_time": 0,
+      "clause_id": "bind_response_time",
+      "index": 14,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__bind_deceleration__t0",
+      "base_time": 0,
+      "clause_id": "bind_deceleration",
+      "index": 15,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__bind_release_threshold__t0",
+      "base_time": 0,
+      "clause_id": "bind_release_threshold",
+      "index": 16,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__exclude_conflicting_fixture__t0",
+      "base_time": 0,
+      "clause_id": "exclude_conflicting_fixture",
+      "index": 17,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__exclude_conflicting_fixture__t1",
+      "base_time": 1,
+      "clause_id": "exclude_conflicting_fixture",
+      "index": 18,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__exclude_conflicting_fixture__t2",
+      "base_time": 2,
+      "clause_id": "exclude_conflicting_fixture",
+      "index": 19,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__exclude_conflicting_fixture__t3",
+      "base_time": 3,
+      "clause_id": "exclude_conflicting_fixture",
+      "index": 20,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__exclude_conflicting_fixture__t4",
+      "base_time": 4,
+      "clause_id": "exclude_conflicting_fixture",
+      "index": 21,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__clear_count_nonnegative__t0",
+      "base_time": 0,
+      "clause_id": "clear_count_nonnegative",
+      "index": 22,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__clear_count_nonnegative__t1",
+      "base_time": 1,
+      "clause_id": "clear_count_nonnegative",
+      "index": 23,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__clear_count_nonnegative__t2",
+      "base_time": 2,
+      "clause_id": "clear_count_nonnegative",
+      "index": 24,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__clear_count_nonnegative__t3",
+      "base_time": 3,
+      "clause_id": "clear_count_nonnegative",
+      "index": 25,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__clear_count_nonnegative__t4",
+      "base_time": 4,
+      "clause_id": "clear_count_nonnegative",
+      "index": 26,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__lifecycle_transition__t0",
+      "base_time": 0,
+      "clause_id": "lifecycle_transition",
+      "index": 27,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__lifecycle_transition__t1",
+      "base_time": 1,
+      "clause_id": "lifecycle_transition",
+      "index": 28,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__lifecycle_transition__t2",
+      "base_time": 2,
+      "clause_id": "lifecycle_transition",
+      "index": 29,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__lifecycle_transition__t3",
+      "base_time": 3,
+      "clause_id": "lifecycle_transition",
+      "index": 30,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__clear_count_transition__t0",
+      "base_time": 0,
+      "clause_id": "clear_count_transition",
+      "index": 31,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__clear_count_transition__t1",
+      "base_time": 1,
+      "clause_id": "clear_count_transition",
+      "index": 32,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__clear_count_transition__t2",
+      "base_time": 2,
+      "clause_id": "clear_count_transition",
+      "index": 33,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__clear_count_transition__t3",
+      "base_time": 3,
+      "clause_id": "clear_count_transition",
+      "index": 34,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__transition_allowed_definition__t0",
+      "base_time": 0,
+      "clause_id": "transition_allowed_definition",
+      "index": 35,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__transition_allowed_definition__t1",
+      "base_time": 1,
+      "clause_id": "transition_allowed_definition",
+      "index": 36,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__transition_allowed_definition__t2",
+      "base_time": 2,
+      "clause_id": "transition_allowed_definition",
+      "index": 37,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__transition_allowed_definition__t3",
+      "base_time": 3,
+      "clause_id": "transition_allowed_definition",
+      "index": 38,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__enforce_allowed_transition__t0",
+      "base_time": 0,
+      "clause_id": "enforce_allowed_transition",
+      "index": 39,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__enforce_allowed_transition__t1",
+      "base_time": 1,
+      "clause_id": "enforce_allowed_transition",
+      "index": 40,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__enforce_allowed_transition__t2",
+      "base_time": 2,
+      "clause_id": "enforce_allowed_transition",
+      "index": 41,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__enforce_allowed_transition__t3",
+      "base_time": 3,
+      "clause_id": "enforce_allowed_transition",
+      "index": 42,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__admissible_action_partition__t0",
+      "base_time": 0,
+      "clause_id": "admissible_action_partition",
+      "index": 43,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__admissible_action_partition__t1",
+      "base_time": 1,
+      "clause_id": "admissible_action_partition",
+      "index": 44,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__admissible_action_partition__t2",
+      "base_time": 2,
+      "clause_id": "admissible_action_partition",
+      "index": 45,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__admissible_action_partition__t3",
+      "base_time": 3,
+      "clause_id": "admissible_action_partition",
+      "index": 46,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__admissible_action_partition__t4",
+      "base_time": 4,
+      "clause_id": "admissible_action_partition",
+      "index": 47,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    }
+  ],
+  "clauses": {
+    "admissible_action_partition": {
+      "assertion_ids": [
+        "clause__admissible_action_partition__t0",
+        "clause__admissible_action_partition__t1",
+        "clause__admissible_action_partition__t2",
+        "clause__admissible_action_partition__t3",
+        "clause__admissible_action_partition__t4"
+      ],
+      "assertion_indices": [
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "compiled": true,
+      "description": "At least one stop/progress action class remains admissible.",
+      "enforcement": "EACH_FRAME",
+      "kind": "PROGRESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "bind_deceleration": {
+      "assertion_ids": [
+        "clause__bind_deceleration__t0"
+      ],
+      "assertion_indices": [
+        15
+      ],
+      "compiled": true,
+      "description": "Synthetic service deceleration, not a vehicle assurance claim.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    "bind_position_uncertainty": {
+      "assertion_ids": [
+        "clause__bind_position_uncertainty__t0"
+      ],
+      "assertion_indices": [
+        13
+      ],
+      "compiled": true,
+      "description": "Synthetic position uncertainty, not a vehicle assurance claim.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    "bind_release_threshold": {
+      "assertion_ids": [
+        "clause__bind_release_threshold__t0"
+      ],
+      "assertion_indices": [
+        16
+      ],
+      "compiled": true,
+      "description": "Two consecutive clear frames release the obligation.",
+      "enforcement": "INITIAL",
+      "kind": "RELEASE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "bind_response_time": {
+      "assertion_ids": [
+        "clause__bind_response_time__t0"
+      ],
+      "assertion_indices": [
+        14
+      ],
+      "compiled": true,
+      "description": "Synthetic response time, not a vehicle assurance claim.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    "bind_stop_position": {
+      "assertion_ids": [
+        "clause__bind_stop_position__t0"
+      ],
+      "assertion_indices": [
+        12
+      ],
+      "compiled": true,
+      "description": "Synthetic stop position for mechanism testing.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "clear_count_nonnegative": {
+      "assertion_ids": [
+        "clause__clear_count_nonnegative__t0",
+        "clause__clear_count_nonnegative__t1",
+        "clause__clear_count_nonnegative__t2",
+        "clause__clear_count_nonnegative__t3",
+        "clause__clear_count_nonnegative__t4"
+      ],
+      "assertion_indices": [
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "compiled": true,
+      "description": "Clear-evidence counter is nonnegative.",
+      "enforcement": "EACH_FRAME",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "clear_count_transition": {
+      "assertion_ids": [
+        "clause__clear_count_transition__t0",
+        "clause__clear_count_transition__t1",
+        "clause__clear_count_transition__t2",
+        "clause__clear_count_transition__t3"
+      ],
+      "assertion_indices": [
+        31,
+        32,
+        33,
+        34
+      ],
+      "compiled": true,
+      "description": "Count consecutive false hazard frames only while the obligation is live.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "RELEASE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "dynamic_stopping_bound": {
+      "assertion_ids": [],
+      "assertion_indices": [],
+      "compiled": false,
+      "description": "Property under test: reaction plus braking distance fits available distance.",
+      "enforcement": "DECLARATIVE",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    "enforce_allowed_transition": {
+      "assertion_ids": [
+        "clause__enforce_allowed_transition__t0",
+        "clause__enforce_allowed_transition__t1",
+        "clause__enforce_allowed_transition__t2",
+        "clause__enforce_allowed_transition__t3"
+      ],
+      "assertion_indices": [
+        39,
+        40,
+        41,
+        42
+      ],
+      "compiled": true,
+      "description": "All generated lifecycle transitions must use an allowed edge.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    "exclude_conflicting_fixture": {
+      "assertion_ids": [
+        "clause__exclude_conflicting_fixture__t0",
+        "clause__exclude_conflicting_fixture__t1",
+        "clause__exclude_conflicting_fixture__t2",
+        "clause__exclude_conflicting_fixture__t3",
+        "clause__exclude_conflicting_fixture__t4"
+      ],
+      "assertion_indices": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "compiled": true,
+      "description": "The bounded lifecycle queries exclude conflict verdict handling.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ASSUMPTION",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    "initial_clear_count": {
+      "assertion_ids": [
+        "clause__initial_clear_count__t0"
+      ],
+      "assertion_indices": [
+        11
+      ],
+      "compiled": true,
+      "description": "Clear-evidence counter starts at zero.",
+      "enforcement": "INITIAL",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "initial_state": {
+      "assertion_ids": [
+        "clause__initial_state__t0"
+      ],
+      "assertion_indices": [
+        10
+      ],
+      "compiled": true,
+      "description": "Lifecycle starts inactive.",
+      "enforcement": "INITIAL",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "lifecycle_transition": {
+      "assertion_ids": [
+        "clause__lifecycle_transition__t0",
+        "clause__lifecycle_transition__t1",
+        "clause__lifecycle_transition__t2",
+        "clause__lifecycle_transition__t3"
+      ],
+      "assertion_indices": [
+        27,
+        28,
+        29,
+        30
+      ],
+      "compiled": true,
+      "description": "Activation, maintenance, release, reactivation and approved UNKNOWN fallback.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "stop_position_invariant": {
+      "assertion_ids": [],
+      "assertion_indices": [],
+      "compiled": false,
+      "description": "Property under test: a live obligation must not pass the stop position.",
+      "enforcement": "DECLARATIVE",
+      "kind": "INVARIANT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "transition_allowed_definition": {
+      "assertion_ids": [
+        "clause__transition_allowed_definition__t0",
+        "clause__transition_allowed_definition__t1",
+        "clause__transition_allowed_definition__t2",
+        "clause__transition_allowed_definition__t3"
+      ],
+      "assertion_indices": [
+        35,
+        36,
+        37,
+        38
+      ],
+      "compiled": true,
+      "description": "Independent allowed-edge relation used by the consistency query.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    }
+  },
+  "compiler_version": "eblc-core-smt-compiler-v0.1",
+  "grammar_version": "eblc-core-v0.1",
+  "model_id": "p0b_pedestrian_conflict_zone_core",
+  "queries": {
+    "active_stop_position_violation": {
+      "base_assertion_count": 48,
+      "classification": "UNDERCONSTRAINT",
+      "description": "Find a trace that violates the declarative stop-position invariant while active.",
+      "smt_file": "QUERY_active_stop_position_violation.smt2",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    "clear_counter_always_nonnegative": {
+      "base_assertion_count": 48,
+      "classification": "BOUNDARY",
+      "description": "Exercise bounded always over the nonnegative counter invariant.",
+      "smt_file": "QUERY_clear_counter_always_nonnegative.smt2",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    "dynamic_stopping_bound_violation": {
+      "base_assertion_count": 48,
+      "classification": "UNDERCONSTRAINT",
+      "description": "Find a live trace whose stopping demand exceeds available distance.",
+      "smt_file": "QUERY_dynamic_stopping_bound_violation.smt2",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    "inactive_until_activation": {
+      "base_assertion_count": 48,
+      "classification": "EXAMPLE",
+      "description": "Exercise bounded until with a delayed activation witness.",
+      "smt_file": "QUERY_inactive_until_activation.smt2",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    "lifecycle_transition_inconsistency": {
+      "base_assertion_count": 48,
+      "classification": "CONSISTENCY",
+      "description": "Search for a lifecycle edge outside the allowed relation.",
+      "smt_file": "QUERY_lifecycle_transition_inconsistency.smt2",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    "missing_reactivation": {
+      "base_assertion_count": 48,
+      "classification": "UNDERCONSTRAINT",
+      "description": "Search for released hazard reappearance without reactivation.",
+      "smt_file": "QUERY_missing_reactivation.smt2",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    },
+    "safe_progress_false_deadlock": {
+      "base_assertion_count": 48,
+      "classification": "OVERCONSTRAINT",
+      "description": "Search for an empty admissible set despite an available safe-progress action.",
+      "smt_file": "QUERY_safe_progress_false_deadlock.smt2",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ]
+    }
+  }
+}

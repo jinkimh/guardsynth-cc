@@ -1,0 +1,154 @@
+{
+  "claim_scope": "P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY",
+  "context_graph": {
+    "coc_claims": [
+      {
+        "claim_id": "synthetic-coc-claim:pedestrian-risk",
+        "epistemic_kind": "CLAIMED",
+        "evidence_ref": "P0B-SYNTHETIC-COC-CLAIM-v0"
+      }
+    ],
+    "graph_id": "p0b_source_aware_context_graph",
+    "instances": [
+      {
+        "association": {
+          "candidate_target_entity_ids": [
+            "synthetic-pedestrian:P17"
+          ],
+          "candidate_zone_ids": [
+            "synthetic-zone:CZ4"
+          ],
+          "coordinate_transform_ref": "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0",
+          "evidence_refs": [
+            "P0B-SYNTHETIC-ASSOCIATION-A-v0",
+            "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+            "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0"
+          ],
+          "selected_target_entity_id": "synthetic-pedestrian:P17",
+          "selected_zone_id": "synthetic-zone:CZ4",
+          "zone_geometry_ref": "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+        },
+        "contract_id": "C0",
+        "hazard_fact": {
+          "epistemic_kind": "OBSERVED",
+          "maximum_age_s": 0.2,
+          "source_ref": "P0B-SYNTHETIC-OBSERVATION-A-v0",
+          "timestamp_s": 0.0,
+          "truth": "TRUE"
+        },
+        "instance_id": "ped17_zone4",
+        "overrides_contracts": [],
+        "zone_entry": {
+          "evidence_refs": [
+            "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+          ],
+          "frame": "ego_path_s",
+          "unit": "m",
+          "value": 0.0
+        }
+      },
+      {
+        "association": {
+          "candidate_target_entity_ids": [
+            "synthetic-pedestrian:P18"
+          ],
+          "candidate_zone_ids": [
+            "synthetic-zone:CZ5"
+          ],
+          "coordinate_transform_ref": "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0",
+          "evidence_refs": [
+            "P0B-SYNTHETIC-ASSOCIATION-B-v0",
+            "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+            "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0"
+          ],
+          "selected_target_entity_id": "synthetic-pedestrian:P18",
+          "selected_zone_id": "synthetic-zone:CZ5",
+          "zone_geometry_ref": "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+        },
+        "contract_id": "C1",
+        "hazard_fact": {
+          "epistemic_kind": "PREDICTED",
+          "maximum_age_s": 0.2,
+          "source_ref": "P0B-SYNTHETIC-OBSERVATION-B-v0",
+          "timestamp_s": 0.0,
+          "truth": "TRUE"
+        },
+        "instance_id": "ped18_zone5",
+        "overrides_contracts": [],
+        "zone_entry": {
+          "evidence_refs": [
+            "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+          ],
+          "frame": "ego_path_s",
+          "unit": "m",
+          "value": 12.0
+        }
+      }
+    ],
+    "source_refs": [
+      "P0B-SYNTHETIC-OBSERVATION-A-v0",
+      "P0B-SYNTHETIC-OBSERVATION-B-v0",
+      "P0B-SYNTHETIC-ASSOCIATION-A-v0",
+      "P0B-SYNTHETIC-ASSOCIATION-B-v0",
+      "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+      "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+      "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0",
+      "P0B-SYNTHETIC-COC-CLAIM-v0"
+    ],
+    "timestamp_s": 0.0
+  },
+  "frames": 8,
+  "generator_version": "guard-synth-source-aware-generator-v0.1",
+  "policy": {
+    "action_domain": [
+      "STOP",
+      "CREEP",
+      "PROCEED"
+    ],
+    "allowed_actions": [
+      "STOP"
+    ],
+    "always_active": false,
+    "compiler_policy_evidence_ref": "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+    "composition_evidence_refs": [
+      "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+    ],
+    "enforce_invariant": true,
+    "expiry_timestamp_s": null,
+    "force_deadlock": false,
+    "position_epsilon_m": 1e-09,
+    "predicate_evidence_ref": "P0B-SYNTHETIC-PREDICATE-SPEC-v0",
+    "reactivation_enabled": true,
+    "release_enabled": true,
+    "speed_epsilon_mps": 1e-09,
+    "subject_id": "ego",
+    "time_epsilon_s": 1e-09,
+    "unknown_policy": "APPROVED_HOLD"
+  },
+  "predicate_spec_ref": "pedestrian_conflict",
+  "request_id": "p0b_source_aware_two_actor_request",
+  "rule_template_ref": "P0B-SYS-PED-CZ-001",
+  "source_refs": [
+    "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+    "P0B-SYNTHETIC-PREDICATE-SPEC-v0",
+    "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+    "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+    "P0B-SYNTHETIC-COMPOSITION-POLICY-v0",
+    "P0B-SYNTHETIC-OBSERVATION-A-v0",
+    "P0B-SYNTHETIC-OBSERVATION-B-v0",
+    "P0B-SYNTHETIC-ASSOCIATION-A-v0",
+    "P0B-SYNTHETIC-ASSOCIATION-B-v0",
+    "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+    "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+    "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0",
+    "P0B-SYNTHETIC-COC-CLAIM-v0"
+  ],
+  "template_program_ref": "p0b_pedestrian_conflict_zone_program_v02",
+  "vehicle_profile": {
+    "evidence_ref": "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+    "maximum_service_deceleration_mps2": 3.0,
+    "position_uncertainty_m": 0.5,
+    "profile_id": "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+    "response_time_s": 0.5
+  }
+}

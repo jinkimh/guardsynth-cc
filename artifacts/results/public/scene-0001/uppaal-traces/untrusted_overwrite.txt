@@ -1,0 +1,145 @@
+
+Verifying formula 1 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/scene-0001.q:1
+ -- Formula is satisfied.
+ -- Showing witness trace:
+
+State:
+( CoC.BeforeFirst Ego.Waiting Obligation.Idle Reaction.Idle Decision.Clean )
+obligation_active=0 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=0 Reaction.reaction=0
+
+Transition:
+  CoC.BeforeFirst->CoC.BeforeRepeat1 { episode == 0, first_trigger!, 1 }
+  Obligation.Idle->Obligation.Active { 1, first_trigger?, obligation_active := true }
+  Reaction.Idle->Reaction.Armed { 1, first_trigger?, reaction := 0 }
+
+State:
+( CoC.BeforeRepeat1 Ego.Waiting Obligation.Active Reaction.Armed Decision.Clean )
+obligation_active=1 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=0 Reaction.reaction=0
+
+Verifying formula 2 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/scene-0001.q:2
+ -- Formula is satisfied.
+ -- Showing witness trace:
+
+State:
+( CoC.BeforeFirst Ego.Waiting Obligation.Idle Reaction.Idle Decision.Clean )
+obligation_active=0 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=0 Reaction.reaction=0
+
+Transition:
+  CoC.BeforeFirst->CoC.BeforeRepeat1 { episode == 0, first_trigger!, 1 }
+  Obligation.Idle->Obligation.Active { 1, first_trigger?, obligation_active := true }
+  Reaction.Idle->Reaction.Armed { 1, first_trigger?, reaction := 0 }
+
+State:
+( CoC.BeforeRepeat1 Ego.Waiting Obligation.Active Reaction.Armed Decision.Clean )
+obligation_active=1 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=0 Reaction.reaction=0
+
+Delay: 1000
+
+State:
+( CoC.BeforeRepeat1 Ego.Waiting Obligation.Active Reaction.Armed Decision.Clean )
+obligation_active=1 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=1000 Reaction.reaction=1000
+
+Transition:
+  CoC.BeforeRepeat1->CoC.BeforeRepeat2 { episode == REPEAT_1_AT, repeat_trigger!, 1 }
+  Reaction.Armed->Reaction.Armed { 1, repeat_trigger?, 1 }
+
+State:
+( CoC.BeforeRepeat2 Ego.Waiting Obligation.Active Reaction.Armed Decision.Clean )
+obligation_active=1 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=1000 Reaction.reaction=1000
+
+Delay: 1160
+
+State:
+( CoC.BeforeRepeat2 Ego.Waiting Obligation.Active Reaction.Armed Decision.Clean )
+obligation_active=1 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=2160 Reaction.reaction=2160
+
+Transition:
+  Ego.Waiting->Ego.ResponseObserved { episode == RESPONSE_AT, response!, 1 }
+  Obligation.Active->Obligation.Responded { 1, response?, obligation_active := false, obligation_responded := true }
+  Reaction.Armed->Reaction.Done { 1, response?, 1 }
+
+State:
+( CoC.BeforeRepeat2 Ego.ResponseObserved Obligation.Responded Reaction.Done Decision.Clean )
+obligation_active=0 obligation_responded=1 clock_reset_violation=0 untrusted_overwrite=0 episode=2160 Reaction.reaction=2160
+
+Verifying formula 3 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/scene-0001.q:3
+ -- Formula is satisfied.
+
+Verifying formula 4 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/scene-0001.q:4
+ -- Formula is satisfied.
+
+Verifying formula 5 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/scene-0001.q:5
+ -- Formula is NOT satisfied.
+ -- Showing witness trace:
+
+State:
+( CoC.BeforeFirst Ego.Waiting Obligation.Idle Reaction.Idle Decision.Clean )
+obligation_active=0 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=0 Reaction.reaction=0
+
+Transition:
+  CoC.BeforeFirst->CoC.BeforeRepeat1 { episode == 0, first_trigger!, 1 }
+  Obligation.Idle->Obligation.Active { 1, first_trigger?, obligation_active := true }
+  Reaction.Idle->Reaction.Armed { 1, first_trigger?, reaction := 0 }
+
+State:
+( CoC.BeforeRepeat1 Ego.Waiting Obligation.Active Reaction.Armed Decision.Clean )
+obligation_active=1 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=0 Reaction.reaction=0
+
+Delay: 1000
+
+State:
+( CoC.BeforeRepeat1 Ego.Waiting Obligation.Active Reaction.Armed Decision.Clean )
+obligation_active=1 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=1000 Reaction.reaction=1000
+
+Transition:
+  CoC.BeforeRepeat1->CoC.BeforeRepeat2 { episode == REPEAT_1_AT, repeat_trigger!, 1 }
+  Reaction.Armed->Reaction.Armed { 1, repeat_trigger?, 1 }
+
+State:
+( CoC.BeforeRepeat2 Ego.Waiting Obligation.Active Reaction.Armed Decision.Clean )
+obligation_active=1 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=1000 Reaction.reaction=1000
+
+Delay: 1160
+
+State:
+( CoC.BeforeRepeat2 Ego.Waiting Obligation.Active Reaction.Armed Decision.Clean )
+obligation_active=1 obligation_responded=0 clock_reset_violation=0 untrusted_overwrite=0 episode=2160 Reaction.reaction=2160
+
+Transition:
+  Ego.Waiting->Ego.ResponseObserved { episode == RESPONSE_AT, response!, 1 }
+  Obligation.Active->Obligation.Responded { 1, response?, obligation_active := false, obligation_responded := true }
+  Reaction.Armed->Reaction.Done { 1, response?, 1 }
+
+State:
+( CoC.BeforeRepeat2 Ego.ResponseObserved Obligation.Responded Reaction.Done Decision.Clean )
+obligation_active=0 obligation_responded=1 clock_reset_violation=0 untrusted_overwrite=0 episode=2160 Reaction.reaction=2160
+
+Delay: 140
+
+State:
+( CoC.BeforeRepeat2 Ego.ResponseObserved Obligation.Responded Reaction.Done Decision.Clean )
+obligation_active=0 obligation_responded=1 clock_reset_violation=0 untrusted_overwrite=0 episode=2300 Reaction.reaction=2300
+
+Transition:
+  CoC.BeforeRepeat2->CoC.BeforeUntrusted { episode == REPEAT_2_AT, repeat_trigger!, 1 }
+
+State:
+( CoC.BeforeUntrusted Ego.ResponseObserved Obligation.Responded Reaction.Done Decision.Clean )
+obligation_active=0 obligation_responded=1 clock_reset_violation=0 untrusted_overwrite=0 episode=2300 Reaction.reaction=2300
+
+Delay: 4500
+
+State:
+( CoC.BeforeUntrusted Ego.ResponseObserved Obligation.Responded Reaction.Done Decision.Clean )
+obligation_active=0 obligation_responded=1 clock_reset_violation=0 untrusted_overwrite=0 episode=6800 Reaction.reaction=6800
+
+Transition:
+  CoC.BeforeUntrusted->CoC.Done { episode == UNTRUSTED_AT, untrusted_event!, 1 }
+  Decision.Clean->Decision.Clean { 1, untrusted_event?, untrusted_overwrite := OVERWRITE_ON_UNTRUSTED }
+
+State:
+( CoC.Done Ego.ResponseObserved Obligation.Responded Reaction.Done Decision.Clean )
+obligation_active=0 obligation_responded=1 clock_reset_violation=0 untrusted_overwrite=1 episode=6800 Reaction.reaction=6800
+
+Verifying formula 6 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/scene-0001.q:6
+ -- Formula is satisfied.

@@ -1,0 +1,152 @@
+{
+  "checker_type": "PARAMETER_GRID_FALSIFICATION",
+  "certificate_kind": "DETERMINISTIC_SCENARIO_SWEEP",
+  "soundness_scope": "NOT_A_CONTINUOUS_OR_REAL_VEHICLE_SAFETY_PROOF",
+  "source_class": "SCENE_EGO_SPEED_WITH_SYNTHETIC_UNCALIBRATED_PHYSICS_GRID",
+  "clip_id": "scene-0001",
+  "seed": {
+    "trigger_us": 2500000,
+    "ego_speed_mps": 4.814302397104371,
+    "heuristic_response_delay_s": 2.159711,
+    "response_measurement_quality": "SPEED_TRACE_HEURISTIC_NOT_ACTIVE_BRAKE_DETECTION"
+  },
+  "model": {
+    "horizon_s": 5.0,
+    "dt_s": 0.1,
+    "minimum_clearance_m": 0.0,
+    "gap_semantics": "SYNTHETIC_BUMPER_TO_BUMPER_CLEARANCE",
+    "initial_gaps_m": [
+      5.0,
+      10.0,
+      15.0,
+      20.0,
+      25.0,
+      30.0
+    ],
+    "lead_speeds_mps": [
+      0.0
+    ],
+    "ego_max_decels_mps2": [
+      3.0,
+      5.0,
+      7.0
+    ],
+    "lead_decels_mps2": [
+      0.0
+    ],
+    "brake_build_ups_s": [
+      0.2,
+      0.5
+    ],
+    "response_delays_s": [
+      0.5,
+      1.0,
+      2.0,
+      2.159711
+    ],
+    "time_discretization": "Controls change only on dt boundaries; a non-aligned response delay is activated at the first boundary at or after that delay."
+  },
+  "results_by_response_delay": {
+    "0.5s": {
+      "scenarios_explored": 36,
+      "collision_witness_found": true,
+      "collision_scenarios": 3,
+      "minimum_tested_gap_without_witness_m": 10.0,
+      "counterexample": {
+        "scenario": {
+          "initial_gap_m": 5.0,
+          "ego_speed_mps": 4.814302397104371,
+          "lead_speed_mps": 0.0,
+          "ego_max_decel_mps2": 3.0,
+          "lead_decel_mps2": 0.0,
+          "response_delay_s": 0.5,
+          "brake_build_up_s": 0.5
+        },
+        "result": {
+          "collision": true,
+          "collision_time_s": 1.1,
+          "minimum_gap_m": -0.025732636814808918,
+          "final_gap_m": -0.025732636814808918,
+          "final_ego_speed_mps": 3.614302397104372,
+          "final_lead_speed_mps": 0.0
+        }
+      }
+    },
+    "1s": {
+      "scenarios_explored": 36,
+      "collision_witness_found": true,
+      "collision_scenarios": 6,
+      "minimum_tested_gap_without_witness_m": 10.0,
+      "counterexample": {
+        "scenario": {
+          "initial_gap_m": 5.0,
+          "ego_speed_mps": 4.814302397104371,
+          "lead_speed_mps": 0.0,
+          "ego_max_decel_mps2": 3.0,
+          "lead_decel_mps2": 0.0,
+          "response_delay_s": 1.0,
+          "brake_build_up_s": 0.2
+        },
+        "result": {
+          "collision": true,
+          "collision_time_s": 1.1,
+          "minimum_gap_m": -0.28823263681480843,
+          "final_gap_m": -0.28823263681480843,
+          "final_ego_speed_mps": 4.664302397104371,
+          "final_lead_speed_mps": 0.0
+        }
+      }
+    },
+    "2s": {
+      "scenarios_explored": 36,
+      "collision_witness_found": true,
+      "collision_scenarios": 12,
+      "minimum_tested_gap_without_witness_m": 15.0,
+      "counterexample": {
+        "scenario": {
+          "initial_gap_m": 5.0,
+          "ego_speed_mps": 4.814302397104371,
+          "lead_speed_mps": 0.0,
+          "ego_max_decel_mps2": 3.0,
+          "lead_decel_mps2": 0.0,
+          "response_delay_s": 2.0,
+          "brake_build_up_s": 0.2
+        },
+        "result": {
+          "collision": true,
+          "collision_time_s": 1.1,
+          "minimum_gap_m": -0.29573263681480844,
+          "final_gap_m": -0.29573263681480844,
+          "final_ego_speed_mps": 4.814302397104371,
+          "final_lead_speed_mps": 0.0
+        }
+      }
+    },
+    "2.15971s": {
+      "scenarios_explored": 36,
+      "collision_witness_found": true,
+      "collision_scenarios": 13,
+      "minimum_tested_gap_without_witness_m": 20.0,
+      "counterexample": {
+        "scenario": {
+          "initial_gap_m": 5.0,
+          "ego_speed_mps": 4.814302397104371,
+          "lead_speed_mps": 0.0,
+          "ego_max_decel_mps2": 3.0,
+          "lead_decel_mps2": 0.0,
+          "response_delay_s": 2.159711,
+          "brake_build_up_s": 0.2
+        },
+        "result": {
+          "collision": true,
+          "collision_time_s": 1.1,
+          "minimum_gap_m": -0.29573263681480844,
+          "final_gap_m": -0.29573263681480844,
+          "final_ego_speed_mps": 4.814302397104371,
+          "final_lead_speed_mps": 0.0
+        }
+      }
+    }
+  },
+  "interpretation": "Collision witnesses are valid only for an enumerated deterministic synthetic scenario. Absence of a witness covers only this finite grid and bounded horizon. Actual scene safety remains UNKNOWN until obstacle state and vehicle envelopes are calibrated."
+}

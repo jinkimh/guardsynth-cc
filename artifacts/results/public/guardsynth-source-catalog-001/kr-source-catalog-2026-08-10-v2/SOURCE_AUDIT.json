@@ -1,0 +1,37 @@
+{
+  "binder_count": 7,
+  "catalog_id": "guardsynth-kr-structured-road-v0.1",
+  "catalog_version": "guardsynth-source-catalog-v0.1",
+  "claim_scope": "P0_SOURCE_CATALOG_TRACEABILITY_NOT_LEGAL_ADVICE_SENSOR_ACCURACY_VEHICLE_ASSURANCE_OR_SAFETY",
+  "failure_to_unknown_coverage": {
+    "denominator": 11,
+    "numerator": 11
+  },
+  "family_coverage": [
+    "CUT_IN_LANE_CHANGE",
+    "CYCLIST_YIELD",
+    "LONGITUDINAL_FOLLOWING",
+    "PEDESTRIAN_YIELD",
+    "SIGNAL_CAUTION_PROCEED",
+    "SIGNAL_STOP"
+  ],
+  "family_coverage_count": 6,
+  "jurisdiction": {
+    "as_of_date": "2026-08-10",
+    "country_code": "KR",
+    "name": "Republic of Korea"
+  },
+  "lifecycle_profile_count": 5,
+  "predicate_count": 11,
+  "reference_closure": true,
+  "rule_template_count": 15,
+  "slice_counts": {
+    "FOLLOWING_CUT_IN": 4,
+    "PEDESTRIAN_CYCLIST_YIELD": 5,
+    "STOP_SIGNALS": 6
+  },
+  "source_claim_count": 16,
+  "source_record_count": 6,
+  "unsourced_normative_or_numeric_value_count": 0,
+  "unsupported_numeric_output_count": 1
+}

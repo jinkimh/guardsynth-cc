@@ -1,0 +1,7 @@
+{
+  "experiment_id": "EBLC-ELABORATION-CONFORMANCE-001",
+  "run_id": "elaboration-conformance-2026-08-08-v1",
+  "status": "INCOMPLETE_RUN_NO_RESULT_CLAIM",
+  "reason": "Runner ended before tests and final RESULT/RUN_MANIFEST were persisted.",
+  "superseded_by": "elaboration-conformance-2026-08-08-v2"
+}

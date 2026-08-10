@@ -1,0 +1,200 @@
+
+Verifying formula 1 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/multiscene-chain/multiscene-loop.q:1
+ -- Formula is satisfied.
+ -- Showing witness trace:
+
+State:
+( Source.Replay MonitorProc.Idle )
+idx=0 deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=0 t=0 obligation_clock=0
+
+Delay: 3200
+
+State:
+( Source.Replay MonitorProc.Idle )
+idx=0 deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=0 t=3200 obligation_clock=3200
+
+Transition:
+  Source.Replay->Source.Replay { idx < EVENT_COUNT && t == event_time[idx] && event_kind[idx] == 1, slow_req!, idx++ }
+  MonitorProc.Idle->MonitorProc.ActiveSlow { 1, slow_req?, active_intent := 1, obligation_clock := 0 }
+
+State:
+( Source.Replay MonitorProc.ActiveSlow )
+idx=1 deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=1 t=3200 obligation_clock=0
+
+Delay: 3000
+
+State:
+( Source.Replay MonitorProc.ActiveSlow )
+idx=1 deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=1 t=6200 obligation_clock=3000
+
+Transition:
+  MonitorProc.ActiveSlow->MonitorProc.Miss { obligation_clock >= DEADLINE, tau, deadline_miss := true }
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=1 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=6200 obligation_clock=3000
+
+Delay: 12900
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=1 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=19100 obligation_clock=15900
+
+Transition:
+  Source.Replay->Source.Replay { idx < EVENT_COUNT && t == event_time[idx] && event_kind[idx] == 5, scene_boundary!, boundary_violation := boundary_violation || event_gap[idx] > MAX_BOUNDARY_GAP, idx++ }
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=2 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=19100 obligation_clock=15900
+
+Delay: 8950
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=2 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=28050 obligation_clock=24850
+
+Transition:
+  Source.Replay->Source.Replay { idx < EVENT_COUNT && t == event_time[idx] && event_kind[idx] == 2, accel_req!, idx++ }
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=3 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=28050 obligation_clock=24850
+
+Delay: 780
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=3 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=28830 obligation_clock=25630
+
+Transition:
+  Source.Replay->Source.Replay { idx < EVENT_COUNT && t == event_time[idx] && event_kind[idx] == 4, accel_resp!, idx++ }
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=4 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=28830 obligation_clock=25630
+
+Delay: 520
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=4 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=29350 obligation_clock=26150
+
+Transition:
+  Source.Replay->Source.Replay { idx < EVENT_COUNT && t == event_time[idx] && event_kind[idx] == 2, accel_req!, idx++ }
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=5 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=29350 obligation_clock=26150
+
+Delay: 20
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=5 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=29370 obligation_clock=26170
+
+Transition:
+  Source.Replay->Source.Replay { idx < EVENT_COUNT && t == event_time[idx] && event_kind[idx] == 4, accel_resp!, idx++ }
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=6 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=29370 obligation_clock=26170
+
+Delay: 1580
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=6 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=30950 obligation_clock=27750
+
+Transition:
+  Source.Replay->Source.Replay { idx < EVENT_COUNT && t == event_time[idx] && event_kind[idx] == 2, accel_req!, idx++ }
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=7 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=30950 obligation_clock=27750
+
+Transition:
+  Source.Replay->Source.Replay { idx < EVENT_COUNT && t == event_time[idx] && event_kind[idx] == 4, accel_resp!, idx++ }
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=8 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=30950 obligation_clock=27750
+
+Delay: 1600
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=8 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=32550 obligation_clock=29350
+
+Transition:
+  Source.Replay->Source.Replay { idx < EVENT_COUNT && t == event_time[idx] && event_kind[idx] == 2, accel_req!, idx++ }
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=9 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=32550 obligation_clock=29350
+
+Delay: 19
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=9 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=32569 obligation_clock=29369
+
+Transition:
+  Source.Replay->Source.Replay { idx < EVENT_COUNT && t == event_time[idx] && event_kind[idx] == 4, accel_resp!, idx++ }
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=10 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=32569 obligation_clock=29369
+
+Transition:
+  Source.Replay->Source.Done { idx == EVENT_COUNT, tau, 1 }
+
+State:
+( Source.Done MonitorProc.Miss )
+idx=10 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=32569 obligation_clock=29369
+
+Verifying formula 2 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/multiscene-chain/multiscene-loop.q:2
+ -- Formula is NOT satisfied.
+
+Verifying formula 3 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/multiscene-chain/multiscene-loop.q:3
+ -- Formula is NOT satisfied.
+ -- Showing witness trace:
+
+State:
+( Source.Replay MonitorProc.Idle )
+idx=0 deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=0 t=0 obligation_clock=0
+
+Delay: 3200
+
+State:
+( Source.Replay MonitorProc.Idle )
+idx=0 deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=0 t=3200 obligation_clock=3200
+
+Transition:
+  Source.Replay->Source.Replay { idx < EVENT_COUNT && t == event_time[idx] && event_kind[idx] == 1, slow_req!, idx++ }
+  MonitorProc.Idle->MonitorProc.ActiveSlow { 1, slow_req?, active_intent := 1, obligation_clock := 0 }
+
+State:
+( Source.Replay MonitorProc.ActiveSlow )
+idx=1 deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=1 t=3200 obligation_clock=0
+
+Delay: 3000
+
+State:
+( Source.Replay MonitorProc.ActiveSlow )
+idx=1 deadline_miss=0 contradiction=0 boundary_violation=0 active_intent=1 t=6200 obligation_clock=3000
+
+Transition:
+  MonitorProc.ActiveSlow->MonitorProc.Miss { obligation_clock >= DEADLINE, tau, deadline_miss := true }
+
+State:
+( Source.Replay MonitorProc.Miss )
+idx=1 deadline_miss=1 contradiction=0 boundary_violation=0 active_intent=1 t=6200 obligation_clock=3000
+
+Verifying formula 4 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/multiscene-chain/multiscene-loop.q:4
+ -- Formula is satisfied.
+
+Verifying formula 5 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/multiscene-chain/multiscene-loop.q:5
+ -- Formula is satisfied.
+
+Verifying formula 6 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/multiscene-chain/multiscene-loop.q:6
+ -- Formula is satisfied.

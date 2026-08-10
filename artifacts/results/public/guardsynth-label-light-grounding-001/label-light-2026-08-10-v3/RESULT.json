@@ -1,0 +1,85 @@
+{
+  "claim_scope": "LABEL_LIGHT_SYNTHETIC_GROUNDING_AND_BOUNDED_HANDOFF_NOT_ASSOCIATION_ACCURACY_OR_VEHICLE_SAFETY",
+  "decision": "LABEL_LIGHT_SOFTWARE_GO_DATA_GAP_PIVOT_REMAINS",
+  "end_to_end": {
+    "collection_expansion_verdict": "VALIDATED",
+    "contract_instance_count": 2,
+    "core_query_agreement": 1.0,
+    "core_query_count": 1,
+    "generator_verdict": "VALIDATED",
+    "grounded_scene_count": 2,
+    "z3_version": "5.0.0"
+  },
+  "experiment_id": "GUARDSYNTH-LABEL-LIGHT-GROUNDING-001",
+  "gates": {
+    "core_z3_agreement": true,
+    "restricted_aggregate_redacted": true,
+    "scenario_directions": true,
+    "tests": true,
+    "two_scene_generation": true
+  },
+  "legacy_restricted_aggregate": {
+    "adapted_candidate_count": 4,
+    "association_review_required_count": 4,
+    "auto_confirmed_count": 0,
+    "candidate_event_count": 5,
+    "claim_scope": "AGGREGATE_LABEL_LIGHT_READINESS_NOT_ASSOCIATION_ACCURACY_OR_SAFETY",
+    "contract_blocked_count": 4,
+    "decision": "LABEL_LIGHT_REVIEW_INPUT_REQUIRED",
+    "derivation_gap_count": 1,
+    "missing_scene_input_count": 19,
+    "raw_identifiers_included": false,
+    "slot_count": 24,
+    "status": "LABEL_LIGHT_LEGACY_INPUT_AUDIT"
+  },
+  "metrics": {
+    "auto_confirmed": 1,
+    "automatic_confirmation_rate": 0.125,
+    "claim_scope": "LABEL_LIGHT_WORKFLOW_METRICS_NOT_ASSOCIATION_ACCURACY_OR_VEHICLE_SAFETY",
+    "conflict": 1,
+    "human_confirmed": 1,
+    "human_corrections": 0,
+    "review_request_rate": 0.5,
+    "review_required": 4,
+    "total": 8,
+    "unsupported": 1,
+    "unsupported_rate": 0.125
+  },
+  "run_date": "2026-08-10",
+  "run_id": "label-light-2026-08-10-v3",
+  "scenario_gate": {
+    "matched": 8,
+    "total": 8
+  },
+  "status": "EXECUTED",
+  "tests": {
+    "full": {
+      "command": "/usr/bin/python3 -m unittest discover -s tests/guard_synth_eblc -p test_*.py -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 187,
+      "test_count": 187
+    },
+    "label_light": {
+      "command": "/usr/bin/python3 -m unittest tests.guard_synth_eblc.test_label_light_grounding -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 15,
+      "test_count": 15
+    },
+    "p0a": {
+      "command": "/usr/bin/python3 -m unittest experiments.eblc_pilot.test_pilot -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 7,
+      "test_count": 7
+    },
+    "structure": {
+      "command": "/usr/bin/python3 -m unittest tests.structure.test_project_layout -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 9,
+      "test_count": 9
+    }
+  }
+}

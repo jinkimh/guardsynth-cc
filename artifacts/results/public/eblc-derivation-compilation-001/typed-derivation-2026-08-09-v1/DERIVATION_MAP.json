@@ -1,0 +1,27 @@
+{
+  "compiler_version": "eblc-derivation-core-compiler-v0.1",
+  "core_model_id": "p0b_pedestrian_conflict_zone_program_core_typed_derivation",
+  "derivation_id": "p0b_stop_position_derivation",
+  "derivation_version": "eblc-derivation-v0.1",
+  "limitations": [
+    "FINITE_TYPED_ARITHMETIC_DAG",
+    "NO_AUTOMATIC_PARSING_OF_FREE_FORM_OPERATION_STRINGS",
+    "BOUNDED_CORE_EXECUTION",
+    "NOT_A_VEHICLE_SAFETY_PROOF"
+  ],
+  "node_operations": {
+    "stop_position": "SUB"
+  },
+  "outputs": {
+    "stop_position": {
+      "replaced_clauses": [
+        "bind_stop_position"
+      ],
+      "target_declaration": "stop_position"
+    }
+  },
+  "symbol_bindings": {
+    "stop_margin": "derive__symbol__stop_margin",
+    "zone_entry_x": "derive__symbol__zone_entry_x"
+  }
+}

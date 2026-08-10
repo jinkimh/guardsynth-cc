@@ -1,0 +1,90 @@
+{
+  "checker": "UPPAAL_SCENE_0074_REPEATED_OBLIGATION_SEMANTICS",
+  "status": "EXECUTED",
+  "deadline_ms": 3000,
+  "trace_origin_scene_time_s": 3.4,
+  "trace_events_relative_ms": [
+    {
+      "at_ms": 0,
+      "type": "accelerate"
+    },
+    {
+      "at_ms": 2500,
+      "type": "accelerate"
+    },
+    {
+      "at_ms": 3360,
+      "type": "speed_response"
+    },
+    {
+      "at_ms": 3800,
+      "type": "accelerate"
+    },
+    {
+      "at_ms": 3820,
+      "type": "speed_response"
+    },
+    {
+      "at_ms": 8200,
+      "type": "accelerate"
+    },
+    {
+      "at_ms": 8201,
+      "type": "speed_response"
+    }
+  ],
+  "response_profile": {
+    "window_s": 0.5,
+    "minimum_delta_mps": 0.1,
+    "minimum_direction_fraction": 0.7
+  },
+  "queries": [
+    {
+      "query": "E<> strict_deadline_miss",
+      "satisfied": true,
+      "expected": true
+    },
+    {
+      "query": "A[] not strict_deadline_miss",
+      "satisfied": false,
+      "expected": false
+    },
+    {
+      "query": "A[] not reset_deadline_miss",
+      "satisfied": true,
+      "expected": true
+    },
+    {
+      "query": "E<> strict_response_count == 3",
+      "satisfied": true,
+      "expected": true
+    },
+    {
+      "query": "E<> reset_response_count == 3",
+      "satisfied": true,
+      "expected": true
+    },
+    {
+      "query": "A[] provenance_valid",
+      "satisfied": true,
+      "expected": true
+    },
+    {
+      "query": "A[] not deadlock",
+      "satisfied": true,
+      "expected": true
+    }
+  ],
+  "oracle_match": true,
+  "interpretation": {
+    "preserve_first_deadline": "FAIL: first response occurs after 3 s",
+    "reset_on_repeat": "PASS: repeat at 2.5 s refreshes the pending obligation",
+    "protocol_ambiguity": "The same observed trace changes verdict when repeat semantics change."
+  },
+  "claim_limit": "This is a protocol-level timed-trace counterexample. It does not prove collision risk or physical vehicle unsafety.",
+  "source_evidence": {
+    "cohort_result": "experiments/results/baseline/chunk-0000-94/weak-kinematic-cohort-result.json",
+    "event": "scene-0074@3400000",
+    "camera_review": "experiments/results/baseline/chunk-0000-94/video-review/scene-0074-t3_4-contact-sheet.jpg"
+  }
+}

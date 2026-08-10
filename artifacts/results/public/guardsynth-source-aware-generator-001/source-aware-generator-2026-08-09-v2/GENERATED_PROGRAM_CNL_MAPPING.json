@@ -1,0 +1,442 @@
+{
+  "authority_boundary": "ONE_WAY_PROJECTION_STRUCTURED_EBLC_REMAINS_EXECUTION_AUTHORITY",
+  "clauses": [
+    {
+      "clause_id": "program.identity",
+      "field_paths": [
+        "$.program_version",
+        "$.program_id",
+        "$.frames",
+        "$.claim_scope"
+      ],
+      "source_refs": [],
+      "text": "Program p0b_source_aware_two_actor_request__program_template uses eblc-program-v0.2 over 8 bounded frames and has claim scope P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY."
+    },
+    {
+      "clause_id": "program.sources",
+      "field_paths": [
+        "$.source_refs"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0",
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "Declared evidence references: P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0, P0B-SYNTHETIC-PREDICATE-SPEC-v0, P0B-SYNTHETIC-VEHICLE-PROFILE-v0, P0B-CONTROLLED-CONFORMANCE-ORACLE-v0."
+    },
+    {
+      "clause_id": "binding.identity",
+      "field_paths": [
+        "$.binding",
+        "$.binding.contract_id",
+        "$.binding.rule_id",
+        "$.binding.subject_id",
+        "$.binding.target_entity_id",
+        "$.binding.zone_id"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "text": "Contract TEMPLATE_CONTRACT applies rule P0B-SYS-PED-CZ-001 to subject ego, target UNBOUND_TARGET, and conflict zone UNBOUND_ZONE."
+    },
+    {
+      "clause_id": "binding.coordinates",
+      "field_paths": [
+        "$.binding.distance_unit",
+        "$.binding.coordinate_frame"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "text": "Distances use unit m in coordinate frame ego_path_s."
+    },
+    {
+      "clause_id": "predicate.observability",
+      "field_paths": [
+        "$.predicate"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "text": "Evaluate activation predicate pedestrian_conflict only from OBSERVED, PREDICTED, DERIVED evidence with maximum age 0.2 s; failed or stale observation becomes UNKNOWN."
+    },
+    {
+      "clause_id": "lifecycle.release",
+      "field_paths": [
+        "$.lifecycle",
+        "$.lifecycle.initial_state",
+        "$.lifecycle.release_enabled",
+        "$.lifecycle.release_clear_frames"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "text": "Initial lifecycle state is INACTIVE; release is enabled after 2 consecutive clear frames."
+    },
+    {
+      "clause_id": "lifecycle.reactivation",
+      "field_paths": [
+        "$.lifecycle.reactivation_enabled"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "text": "After release, reactivation is enabled when the hazard returns."
+    },
+    {
+      "clause_id": "lifecycle.fallback",
+      "field_paths": [
+        "$.lifecycle.unknown_policy",
+        "$.lifecycle.fallback_action",
+        "$.lifecycle.fallback_approved"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "text": "UNKNOWN policy is APPROVED_HOLD; fallback action is HOLD_PRIOR_LIVE_OBLIGATION_ON_FRESH_UNKNOWN and approval is present."
+    },
+    {
+      "clause_id": "lifecycle.activation_expiry",
+      "field_paths": [
+        "$.lifecycle.always_active",
+        "$.lifecycle.expiry_timestamp_s"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "text": "Always-active mode is false; expiry timestamp is not set."
+    },
+    {
+      "clause_id": "constraints.position_uncertainty",
+      "field_paths": [
+        "$.constraints",
+        "$.constraints.position_uncertainty"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ],
+      "text": "Supplied constraint input: position_uncertainty = 0.5 m in frame ego_path_s; these are supplied evidence-bound inputs, not inferred guarantees."
+    },
+    {
+      "clause_id": "constraints.response_time",
+      "field_paths": [
+        "$.constraints",
+        "$.constraints.response_time"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ],
+      "text": "Supplied constraint input: response_time = 0.5 s; these are supplied evidence-bound inputs, not inferred guarantees."
+    },
+    {
+      "clause_id": "constraints.deceleration",
+      "field_paths": [
+        "$.constraints",
+        "$.constraints.deceleration"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ],
+      "text": "Supplied constraint input: deceleration = 3 m/s^2 in frame ego_path_s; these are supplied evidence-bound inputs, not inferred guarantees."
+    },
+    {
+      "clause_id": "constraints.position_epsilon",
+      "field_paths": [
+        "$.constraints",
+        "$.constraints.position_epsilon"
+      ],
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "Supplied constraint input: position_epsilon = 1e-09 m in frame ego_path_s; these are supplied evidence-bound inputs, not inferred guarantees."
+    },
+    {
+      "clause_id": "constraints.speed_epsilon",
+      "field_paths": [
+        "$.constraints",
+        "$.constraints.speed_epsilon"
+      ],
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "Supplied constraint input: speed_epsilon = 1e-09 m/s in frame ego_path_s; these are supplied evidence-bound inputs, not inferred guarantees."
+    },
+    {
+      "clause_id": "constraints.time_epsilon",
+      "field_paths": [
+        "$.constraints",
+        "$.constraints.time_epsilon"
+      ],
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "Supplied constraint input: time_epsilon = 1e-09 s; these are supplied evidence-bound inputs, not inferred guarantees."
+    },
+    {
+      "clause_id": "constraints.flags",
+      "field_paths": [
+        "$.constraints.enforce_invariant",
+        "$.constraints.force_deadlock"
+      ],
+      "source_refs": [],
+      "text": "Invariant enforcement is true; forced deadlock mode is false."
+    },
+    {
+      "clause_id": "derivation.interface",
+      "field_paths": [
+        "$.typed_derivation"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "Typed derivation p0b_source_aware_two_actor_request_stopping_derivation uses eblc-derivation-v0.1 with horizon 9 and claim scope P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY."
+    },
+    {
+      "clause_id": "derivation.symbol.zone_entry_x",
+      "field_paths": [
+        "$.typed_derivation.symbols"
+      ],
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "Derivation symbol zone_entry_x is SOURCED_VALUE with value 0 m."
+    },
+    {
+      "clause_id": "derivation.symbol.stop_margin",
+      "field_paths": [
+        "$.typed_derivation.symbols"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "text": "Derivation symbol stop_margin is SOURCED_VALUE with value 1.5 m."
+    },
+    {
+      "clause_id": "derivation.symbol.factor_two",
+      "field_paths": [
+        "$.typed_derivation.symbols"
+      ],
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "Derivation symbol factor_two is SOURCED_VALUE with value 2 1."
+    },
+    {
+      "clause_id": "derivation.symbol.zero_speed",
+      "field_paths": [
+        "$.typed_derivation.symbols"
+      ],
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "Derivation symbol zero_speed is SOURCED_VALUE with value 0 m/s."
+    },
+    {
+      "clause_id": "derivation.symbol.ego_speed",
+      "field_paths": [
+        "$.typed_derivation.symbols"
+      ],
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "Derivation symbol ego_speed is CORE_VARIABLE with value runtime-bound m/s."
+    },
+    {
+      "clause_id": "derivation.symbol.speed_epsilon",
+      "field_paths": [
+        "$.typed_derivation.symbols"
+      ],
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "Derivation symbol speed_epsilon is CORE_VARIABLE with value runtime-bound m/s."
+    },
+    {
+      "clause_id": "derivation.symbol.response_time",
+      "field_paths": [
+        "$.typed_derivation.symbols"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ],
+      "text": "Derivation symbol response_time is CORE_VARIABLE with value runtime-bound s."
+    },
+    {
+      "clause_id": "derivation.symbol.deceleration",
+      "field_paths": [
+        "$.typed_derivation.symbols"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ],
+      "text": "Derivation symbol deceleration is CORE_VARIABLE with value runtime-bound m/s^2."
+    },
+    {
+      "clause_id": "derivation.node.stop_position",
+      "field_paths": [
+        "$.typed_derivation.nodes"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "stop_position := zone_entry_x - stop_margin."
+    },
+    {
+      "clause_id": "derivation.node.adjusted_speed",
+      "field_paths": [
+        "$.typed_derivation.nodes"
+      ],
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "adjusted_speed := ego_speed - speed_epsilon."
+    },
+    {
+      "clause_id": "derivation.node.effective_speed",
+      "field_paths": [
+        "$.typed_derivation.nodes"
+      ],
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "effective_speed := max(adjusted_speed, zero_speed)."
+    },
+    {
+      "clause_id": "derivation.node.response_distance",
+      "field_paths": [
+        "$.typed_derivation.nodes"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "response_distance := effective_speed * response_time."
+    },
+    {
+      "clause_id": "derivation.node.speed_squared",
+      "field_paths": [
+        "$.typed_derivation.nodes"
+      ],
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "speed_squared := effective_speed * effective_speed."
+    },
+    {
+      "clause_id": "derivation.node.twice_deceleration",
+      "field_paths": [
+        "$.typed_derivation.nodes"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "twice_deceleration := factor_two * deceleration."
+    },
+    {
+      "clause_id": "derivation.node.braking_distance",
+      "field_paths": [
+        "$.typed_derivation.nodes"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "braking_distance := speed_squared / twice_deceleration."
+    },
+    {
+      "clause_id": "derivation.node.stopping_distance",
+      "field_paths": [
+        "$.typed_derivation.nodes"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "stopping_distance := response_distance + braking_distance."
+    },
+    {
+      "clause_id": "derivation.output.stop_position",
+      "field_paths": [
+        "$.typed_derivation.outputs"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "Output stop_position maps node:stop_position to declaration stop_position with unit m."
+    },
+    {
+      "clause_id": "derivation.output.stopping_distance",
+      "field_paths": [
+        "$.typed_derivation.outputs"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "text": "Output stopping_distance maps node:stopping_distance to declaration stopping_distance with unit m."
+    },
+    {
+      "clause_id": "priority.policy",
+      "field_paths": [
+        "$.priority"
+      ],
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "text": "Priority class is MANDATORY_SYSTEM and it overrides ROUTE_PROGRESS, COMFORT_SERVICE, STATISTICAL_HEURISTIC."
+    }
+  ],
+  "covered_paths": [
+    "$.program_version",
+    "$.program_id",
+    "$.frames",
+    "$.claim_scope",
+    "$.source_refs",
+    "$.binding",
+    "$.predicate",
+    "$.lifecycle",
+    "$.constraints",
+    "$.typed_derivation",
+    "$.priority",
+    "$.binding.contract_id",
+    "$.binding.rule_id",
+    "$.binding.subject_id",
+    "$.binding.target_entity_id",
+    "$.binding.zone_id",
+    "$.binding.distance_unit",
+    "$.binding.coordinate_frame",
+    "$.lifecycle.initial_state",
+    "$.lifecycle.release_enabled",
+    "$.lifecycle.release_clear_frames",
+    "$.lifecycle.reactivation_enabled",
+    "$.lifecycle.unknown_policy",
+    "$.lifecycle.fallback_action",
+    "$.lifecycle.fallback_approved",
+    "$.lifecycle.always_active",
+    "$.lifecycle.expiry_timestamp_s",
+    "$.constraints.position_uncertainty",
+    "$.constraints.response_time",
+    "$.constraints.deceleration",
+    "$.constraints.position_epsilon",
+    "$.constraints.speed_epsilon",
+    "$.constraints.time_epsilon",
+    "$.constraints.enforce_invariant",
+    "$.constraints.force_deadlock",
+    "$.typed_derivation.symbols",
+    "$.typed_derivation.nodes",
+    "$.typed_derivation.outputs"
+  ],
+  "input_sha256": "0ed406d4b7a7a20f7964b0fca196c5f0e82f6369f3deaa5d881674f575862777",
+  "language_version": "EBLC-CNL-EN-v0.1",
+  "omitted_paths": [],
+  "output_sha256": "61de5fc12f197769e0c747e4d0057232c869f189ad341dbb73c06b1cb86f7044",
+  "renderer_version": "eblc-cnl-renderer-v0.1",
+  "source_id": "p0b_source_aware_two_actor_request__program_template",
+  "source_kind": "EBLC_PROGRAM"
+}

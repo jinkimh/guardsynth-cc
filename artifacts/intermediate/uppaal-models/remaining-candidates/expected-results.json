@@ -1,0 +1,587 @@
+{
+  "query_order": [
+    "E<> Trace.Done",
+    "A[] not deadline_miss",
+    "E<> target_response_observed",
+    "A[] not orphan_response",
+    "A[] provenance_valid",
+    "A[] response_count <= accepted_command_count",
+    "A[] not deadlock"
+  ],
+  "expected_satisfaction": {
+    "scene-0019": {
+      "preserve": {
+        "1000": [
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "2000": [
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "3000": [
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "4000": [
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "5000": [
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "reset": {
+        "1000": [
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "2000": [
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "3000": [
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "4000": [
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "5000": [
+          true,
+          false,
+          false,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "deduplicate_1s": {
+        "1000": [
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "2000": [
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "3000": [
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "4000": [
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        "5000": [
+          true,
+          true,
+          false,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    "scene-0028": {
+      "preserve": {
+        "1000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "2000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "3000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "4000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "5000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "reset": {
+        "1000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "2000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "3000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "4000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "5000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "deduplicate_1s": {
+        "1000": [
+          true,
+          false,
+          true,
+          false,
+          true,
+          true,
+          true
+        ],
+        "2000": [
+          true,
+          false,
+          true,
+          false,
+          true,
+          true,
+          true
+        ],
+        "3000": [
+          true,
+          false,
+          true,
+          false,
+          true,
+          true,
+          true
+        ],
+        "4000": [
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true
+        ],
+        "5000": [
+          true,
+          true,
+          true,
+          false,
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    "scene-0042": {
+      "preserve": {
+        "1000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "2000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "3000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "4000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "5000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "reset": {
+        "1000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "2000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "3000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "4000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "5000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "deduplicate_1s": {
+        "1000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "2000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "3000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "4000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "5000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    },
+    "scene-0065": {
+      "preserve": {
+        "1000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "2000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "3000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "4000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "5000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "reset": {
+        "1000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "2000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "3000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "4000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "5000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "deduplicate_1s": {
+        "1000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "2000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "3000": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "4000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "5000": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      }
+    }
+  },
+  "model_count": 60,
+  "source": "artifacts/results/public/chunk-0000-94/weak-kinematic-cohort-result.json"
+}

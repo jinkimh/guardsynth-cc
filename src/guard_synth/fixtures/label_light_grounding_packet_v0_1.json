@@ -1,0 +1,59 @@
+{
+  "packet_version": "guardsynth-label-light-grounding-v0.1",
+  "packet_id": "label_light_scene_001",
+  "scene_ref": "synthetic-scene:001",
+  "timestamp_s": 0.0,
+  "source_refs": [
+    "LABEL-LIGHT-POLICY-v1",
+    "OBS-001",
+    "TRACK-001",
+    "GEOMETRY-001",
+    "TRANSFORM-001",
+    "ASSOC-001",
+    "CALIBRATION-001"
+  ],
+  "policy": {
+    "auto_confirm_enabled": true,
+    "minimum_confidence_lower_bound": 0.9,
+    "require_unique_candidate_pair": true,
+    "approved_calibration_evidence_refs": ["CALIBRATION-001"],
+    "policy_evidence_ref": "LABEL-LIGHT-POLICY-v1"
+  },
+  "hazard": {
+    "truth": "TRUE",
+    "epistemic_kind": "OBSERVED",
+    "evidence_ref": "OBS-001",
+    "timestamp_s": 0.0,
+    "maximum_age_s": 0.2
+  },
+  "targets": [
+    {
+      "target_entity_id": "pedestrian:P17",
+      "classification": "PEDESTRIAN",
+      "track_evidence_ref": "TRACK-001"
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": "zone:Z4",
+      "entry_x_m": 0.0,
+      "frame": "ego_path_s",
+      "geometry_evidence_ref": "GEOMETRY-001",
+      "transform_verified": true,
+      "transform_evidence_ref": "TRANSFORM-001"
+    }
+  ],
+  "pair_candidates": [
+    {
+      "target_entity_id": "pedestrian:P17",
+      "zone_id": "zone:Z4",
+      "path_intersection": "TRUE",
+      "association_evidence_ref": "ASSOC-001",
+      "confidence_lower_bound": 0.95,
+      "confidence_upper_bound": 0.99,
+      "calibration_evidence_ref": "CALIBRATION-001"
+    }
+  ],
+  "vehicle_binding_key": "vehicle:test-platform",
+  "assurance_scope": "SYNTHETIC_TEST_ONLY_NOT_REAL_VEHICLE_ASSURANCE"
+}

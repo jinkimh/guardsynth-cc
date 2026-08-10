@@ -1,0 +1,43 @@
+{
+  "catalog_sha256": "a5c0116394be11e0a22230652822bdf0cb221267c34e730d3b96c987140dfbb2",
+  "catalog_version": "guardsynth-source-catalog-v0.1",
+  "claim_scope": "P0_SOURCE_CATALOG_TRACEABILITY_NOT_LEGAL_ADVICE_SENSOR_ACCURACY_VEHICLE_ASSURANCE_OR_SAFETY",
+  "determinism": "DETERMINISTIC_VALIDATION",
+  "experiment_id": "GUARDSYNTH-SOURCE-CATALOG-001",
+  "input_class": "PUBLIC_OFFICIAL_SOURCE_RECORDS",
+  "jurisdiction": "KR",
+  "run_date": "2026-08-10",
+  "run_id": "kr-source-catalog-2026-08-10-v2",
+  "schema_sha256": "31ae4374937b9295b6302414c963d4dd3a7ec151aa182870e3b15b9cb30585eb",
+  "source_record_hash_basis": "CANONICAL_SOURCE_RECORD_NOT_DOCUMENT_BYTES",
+  "tests": {
+    "focused": {
+      "command": "/usr/bin/python3 -m unittest tests.guard_synth_eblc.test_source_catalog -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 10,
+      "test_count": 10
+    },
+    "full": {
+      "command": "/usr/bin/python3 -m unittest discover -s tests/guard_synth_eblc -p test_*.py -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 202,
+      "test_count": 202
+    },
+    "p0a": {
+      "command": "/usr/bin/python3 -m unittest experiments.eblc_pilot.test_pilot -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 7,
+      "test_count": 7
+    },
+    "structure": {
+      "command": "/usr/bin/python3 -m unittest tests.structure.test_project_layout -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 10,
+      "test_count": 10
+    }
+  }
+}

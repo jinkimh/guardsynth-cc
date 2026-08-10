@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:eblc:p0b:contract:v0.2",
+  "title": "Public EBLC v0 bound contract fixture",
+  "type": "object",
+  "required": ["contract_id", "rule_id", "subject_id", "target_entity_id", "zone_id", "zone_entry_x_m", "stop_position_x_m", "stop_margin_m", "release_clear_frames", "fallback", "fallback_approved", "evidence_refs", "derivation_dag", "coordinate_frame", "distance_unit", "predicate_maximum_age_s", "maximum_service_deceleration_mps2", "response_time_s", "position_uncertainty_m", "priority"],
+  "additionalProperties": false,
+  "properties": {
+    "contract_id": {"type": "string", "minLength": 1},
+    "rule_id": {"type": "string", "minLength": 1},
+    "subject_id": {"type": "string", "minLength": 1},
+    "target_entity_id": {"type": "string", "minLength": 1},
+    "zone_id": {"type": "string", "minLength": 1},
+    "zone_entry_x_m": {"type": "number"},
+    "stop_position_x_m": {"type": "number"},
+    "stop_margin_m": {"type": "number", "minimum": 0},
+    "release_clear_frames": {"type": "integer", "minimum": 1},
+    "fallback": {"type": "string", "minLength": 1},
+    "fallback_approved": {"type": "boolean"},
+    "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "derivation_dag": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["node_id", "operation", "inputs", "output"],
+        "additionalProperties": false,
+        "properties": {
+          "node_id": {"type": "string", "minLength": 1},
+          "operation": {"type": "string", "minLength": 1},
+          "inputs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "output": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "coordinate_frame": {"type": "string", "minLength": 1},
+    "distance_unit": {"type": "string", "minLength": 1},
+    "predicate_maximum_age_s": {"type": "number", "minimum": 0},
+    "maximum_service_deceleration_mps2": {"type": "number", "minimum": 0.000000001},
+    "response_time_s": {"type": "number", "minimum": 0},
+    "position_uncertainty_m": {"type": "number", "minimum": 0},
+    "priority": {
+      "type": "object",
+      "required": ["class", "overrides"],
+      "additionalProperties": false,
+      "properties": {"class": {"type": "string", "minLength": 1}, "overrides": {"type": "array", "items": {"type": "string", "minLength": 1}}}
+    }
+  }
+}

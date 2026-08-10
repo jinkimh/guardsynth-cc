@@ -1,0 +1,65 @@
+{
+  "review_type": "AI_VISUAL_TRIAGE_NOT_INDEPENDENT_GOLD",
+  "source_revision": "YSHRobotics/CoC-Nusc@994bdd94fcf696b6289e2b2bac7fcbded47eed0a",
+  "frame_offsets_s": [-2, 0, 2, 4],
+  "reviewed_fail_event_count": 8,
+  "contract_revision": {
+    "issue": "STOP/YIELD events already at near-zero speed were falsely required to decelerate again",
+    "change": "speed <= 0.5 m/s is PASS_ALREADY_SATISFIED for STOP/YIELD",
+    "resolved_false_positive_events": [
+      "scene-0046@10000000",
+      "scene-0159@4500000",
+      "scene-0159@4900000"
+    ],
+    "fail_count_before": 8,
+    "fail_count_after": 5
+  },
+  "remaining_candidates": [
+    {
+      "event_id": "scene-0019@10600000",
+      "visual_grounding": "SUPPORTED_PEDESTRIAN_AND_SPEED_BUMP_VISIBLE",
+      "triage": "LIKELY_REPEATED_OR_STALE_COC_AFTER_PRIOR_YIELD",
+      "reason": "A similar trusted YIELD CoC occurs at 9.9 s; speed is already increasing at the 10.6 s repeat.",
+      "contact_sheet": "experiments/results/baseline/chunk-0000-94/video-review/scene-0019-t10_6-contact-sheet.jpg",
+      "safety_status": "UNKNOWN"
+    },
+    {
+      "event_id": "scene-0028@6500000",
+      "visual_grounding": "PARTIAL_INTERSECTION_AND_SIGNAL_VISIBLE_LATER",
+      "triage": "ANTICIPATORY_OR_DELAYED_RESPONSE_CANDIDATE",
+      "reason": "The vehicle continues accelerating for roughly 3 s and the red-light context becomes clearer later in the window.",
+      "contact_sheet": "experiments/results/baseline/chunk-0000-94/video-review/scene-0028-t6_5-contact-sheet.jpg",
+      "safety_status": "UNKNOWN"
+    },
+    {
+      "event_id": "scene-0042@6500000",
+      "visual_grounding": "SUPPORTED_LEAD_VEHICLE_VISIBLE",
+      "triage": "DELAYED_RESPONSE_OR_ANTICIPATORY_LABEL_CANDIDATE",
+      "reason": "Speed rises for about 3 s after the deceleration CoC before decreasing.",
+      "contact_sheet": "experiments/results/baseline/chunk-0000-94/video-review/scene-0042-t6_5-contact-sheet.jpg",
+      "safety_status": "UNKNOWN"
+    },
+    {
+      "event_id": "scene-0065@13200000",
+      "visual_grounding": "BUS_VISIBLE_BUT_CAUSAL_DIRECTION_INCONCLUSIVE",
+      "triage": "SEMANTIC_GROUNDING_AND_RESPONSE_REVIEW",
+      "reason": "A bus is visible, but the CoC description of oncoming/left-adjacent traffic is not established by the sampled frames.",
+      "contact_sheet": "experiments/results/baseline/chunk-0000-94/video-review/scene-0065-t13_2-contact-sheet.jpg",
+      "safety_status": "UNKNOWN"
+    },
+    {
+      "event_id": "scene-0074@3400000",
+      "visual_grounding": "GENERIC_ROUTE_CONTEXT_ONLY",
+      "triage": "ACTION_TRAJECTORY_MISMATCH_CANDIDATE",
+      "reason": "The acceleration CoC is followed by lower speed until a later repeated acceleration event.",
+      "contact_sheet": "experiments/results/baseline/chunk-0000-94/video-review/scene-0074-t3_4-contact-sheet.jpg",
+      "safety_status": "UNKNOWN"
+    }
+  ],
+  "downloaded_border_scene_videos": [
+    "scene-0010",
+    "scene-0021",
+    "scene-0152"
+  ],
+  "claim_limit": "Visual triage is based on four sampled front-camera frames and ego speed. Raw actuator, obstacle distance, and independent human annotation remain unavailable."
+}

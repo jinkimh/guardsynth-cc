@@ -1,0 +1,1755 @@
+{
+  "checker": "UPPAAL_MULTISCENE_LOOP_BATCH_ALL_STRICT_1S",
+  "selection": "local CoC reasoning and egomotion available; adjacent nuScenes metadata gap <= 1s",
+  "result_count": 13,
+  "all_pass_count": 4,
+  "deadline_fail_count": 8,
+  "responded_fail_count": 7,
+  "boundary_fail_count": 0,
+  "items": [
+    {
+      "scenes": [
+        "scene-0130",
+        "scene-0131",
+        "scene-0132",
+        "scene-0133"
+      ],
+      "scene_count": 4,
+      "duration_ms": 72301,
+      "event_count": 16,
+      "channel_counts": {
+        "accel_req": 1,
+        "scene_boundary": 3,
+        "slow_req": 9,
+        "slow_resp": 3
+      },
+      "all_queries_satisfied": false,
+      "responded": false,
+      "no_deadline_miss": false,
+      "no_contradiction": true,
+      "no_boundary_violation": true,
+      "no_deadlock": true,
+      "source_done": true,
+      "scene_summary": [
+        {
+          "scene": "scene-0130",
+          "global_start_ms": 0,
+          "global_end_ms": 19350,
+          "trusted_obligation_events": 2,
+          "derived_response_witnesses": 0
+        },
+        {
+          "scene": "scene-0131",
+          "global_start_ms": 20001,
+          "global_end_ms": 39401,
+          "trusted_obligation_events": 4,
+          "derived_response_witnesses": 3
+        },
+        {
+          "scene": "scene-0132",
+          "global_start_ms": 40001,
+          "global_end_ms": 59351,
+          "trusted_obligation_events": 0,
+          "derived_response_witnesses": 0
+        },
+        {
+          "scene": "scene-0133",
+          "global_start_ms": 60001,
+          "global_end_ms": 79350,
+          "trusted_obligation_events": 4,
+          "derived_response_witnesses": 0
+        }
+      ],
+      "events": [
+        {
+          "time_ms": 4500,
+          "channel": "slow_req",
+          "label": "scene-0130:0:slow",
+          "scene": "scene-0130",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Yield to pedestrians crossing the street at the crosswalk and then accelerate to proceed.",
+            "local_timestamp_us": 4500000
+          }
+        },
+        {
+          "time_ms": 4600,
+          "channel": "slow_req",
+          "label": "scene-0130:1:slow",
+          "scene": "scene-0130",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Yield to pedestrians crossing the street and then accelerate to proceed.",
+            "local_timestamp_us": 4600000
+          }
+        },
+        {
+          "time_ms": 19350,
+          "channel": "scene_boundary",
+          "label": "scene-0130->scene-0131",
+          "scene": "scene-0131",
+          "provenance": "DERIVED_NUSCENES_METADATA",
+          "detail": {
+            "gap_ms": 650,
+            "from": "scene-0130",
+            "to": "scene-0131"
+          }
+        },
+        {
+          "time_ms": 28501,
+          "channel": "slow_req",
+          "label": "scene-0131:0:slow",
+          "scene": "scene-0131",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Maintain lane and adapt speed for the upcoming speed bump while approaching the intersection.",
+            "local_timestamp_us": 8500000
+          }
+        },
+        {
+          "time_ms": 30001,
+          "channel": "slow_req",
+          "label": "scene-0131:1:slow",
+          "scene": "scene-0131",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Maintain lane and adapt speed for the speed bump while approaching the intersection.",
+            "local_timestamp_us": 10000000
+          }
+        },
+        {
+          "time_ms": 31001,
+          "channel": "slow_req",
+          "label": "scene-0131:2:slow",
+          "scene": "scene-0131",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Adapt speed for the upcoming speed bump while keeping lane to proceed along the route.",
+            "local_timestamp_us": 11000000
+          }
+        },
+        {
+          "time_ms": 32401,
+          "channel": "slow_req",
+          "label": "scene-0131:3:slow",
+          "scene": "scene-0131",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Decelerate to pass over the speed bump and then accelerate to resume speed.",
+            "local_timestamp_us": 12400000
+          }
+        },
+        {
+          "time_ms": 32903,
+          "channel": "slow_resp",
+          "label": "scene-0131:1:slow:response",
+          "scene": "scene-0131",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 10000000,
+            "response_local_ms": 12902,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 32903,
+          "channel": "slow_resp",
+          "label": "scene-0131:2:slow:response",
+          "scene": "scene-0131",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 11000000,
+            "response_local_ms": 12902,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 32903,
+          "channel": "slow_resp",
+          "label": "scene-0131:3:slow:response",
+          "scene": "scene-0131",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 12400000,
+            "response_local_ms": 12902,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 39401,
+          "channel": "scene_boundary",
+          "label": "scene-0131->scene-0132",
+          "scene": "scene-0132",
+          "provenance": "DERIVED_NUSCENES_METADATA",
+          "detail": {
+            "gap_ms": 600,
+            "from": "scene-0131",
+            "to": "scene-0132"
+          }
+        },
+        {
+          "time_ms": 59351,
+          "channel": "scene_boundary",
+          "label": "scene-0132->scene-0133",
+          "scene": "scene-0133",
+          "provenance": "DERIVED_NUSCENES_METADATA",
+          "detail": {
+            "gap_ms": 650,
+            "from": "scene-0132",
+            "to": "scene-0133"
+          }
+        },
+        {
+          "time_ms": 62601,
+          "channel": "slow_req",
+          "label": "scene-0133:0:slow",
+          "scene": "scene-0133",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Maintain lane and accelerate to pass the stopped bus on the left while keeping a safe distance from parked vehicles on the right.",
+            "local_timestamp_us": 2600000
+          }
+        },
+        {
+          "time_ms": 66201,
+          "channel": "accel_req",
+          "label": "scene-0133:2:accel",
+          "scene": "scene-0133",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Keep lane and accelerate gently while navigating through the area with parked vehicles on the left and right.",
+            "local_timestamp_us": 6200000
+          }
+        },
+        {
+          "time_ms": 72001,
+          "channel": "slow_req",
+          "label": "scene-0133:3:slow",
+          "scene": "scene-0133",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Adapt speed for the upcoming speed bump while maintaining lane position and navigating through the construction zone.",
+            "local_timestamp_us": 12000000
+          }
+        },
+        {
+          "time_ms": 72301,
+          "channel": "slow_req",
+          "label": "scene-0133:4:slow",
+          "scene": "scene-0133",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Decelerate to pass over the speed bump while maintaining lane position.",
+            "local_timestamp_us": 12300000
+          }
+        }
+      ],
+      "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0130-to-scene-0133-loop.xml",
+      "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0130-to-scene-0133-loop.txt",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0130-to-scene-0133-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0007",
+        "scene-0008",
+        "scene-0009"
+      ],
+      "scene_count": 3,
+      "duration_ms": 39002,
+      "event_count": 14,
+      "channel_counts": {
+        "accel_req": 2,
+        "accel_resp": 2,
+        "scene_boundary": 2,
+        "slow_req": 4,
+        "slow_resp": 4
+      },
+      "all_queries_satisfied": true,
+      "responded": true,
+      "no_deadline_miss": true,
+      "no_contradiction": true,
+      "no_boundary_violation": true,
+      "no_deadlock": true,
+      "source_done": true,
+      "scene_summary": [
+        {
+          "scene": "scene-0007",
+          "global_start_ms": 0,
+          "global_end_ms": 19100,
+          "trusted_obligation_events": 3,
+          "derived_response_witnesses": 3
+        },
+        {
+          "scene": "scene-0008",
+          "global_start_ms": 19900,
+          "global_end_ms": 39002,
+          "trusted_obligation_events": 3,
+          "derived_response_witnesses": 3
+        },
+        {
+          "scene": "scene-0009",
+          "global_start_ms": 39902,
+          "global_end_ms": 59102,
+          "trusted_obligation_events": 0,
+          "derived_response_witnesses": 0
+        }
+      ],
+      "events": [
+        {
+          "time_ms": 7200,
+          "channel": "slow_req",
+          "label": "scene-0007:0:slow",
+          "scene": "scene-0007",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Decelerate to maintain a safe distance from the lead vehicle ahead and adapt speed for the upcoming intersection.",
+            "local_timestamp_us": 7200000
+          }
+        },
+        {
+          "time_ms": 7220,
+          "channel": "slow_resp",
+          "label": "scene-0007:0:slow:response",
+          "scene": "scene-0007",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 7200000,
+            "response_local_ms": 7220,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 9500,
+          "channel": "accel_req",
+          "label": "scene-0007:1:accel",
+          "scene": "scene-0007",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Keep lane and accelerate after decelerating for the intersection ahead.",
+            "local_timestamp_us": 9500000
+          }
+        },
+        {
+          "time_ms": 10800,
+          "channel": "accel_req",
+          "label": "scene-0007:2:accel",
+          "scene": "scene-0007",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Keep lane and accelerate through the intersection as the road ahead is clear.",
+            "local_timestamp_us": 10800000
+          }
+        },
+        {
+          "time_ms": 11700,
+          "channel": "accel_resp",
+          "label": "scene-0007:1:accel:response",
+          "scene": "scene-0007",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 9500000,
+            "response_local_ms": 11700,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 11700,
+          "channel": "accel_resp",
+          "label": "scene-0007:2:accel:response",
+          "scene": "scene-0007",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 10800000,
+            "response_local_ms": 11700,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 19100,
+          "channel": "scene_boundary",
+          "label": "scene-0007->scene-0008",
+          "scene": "scene-0008",
+          "provenance": "DERIVED_NUSCENES_METADATA",
+          "detail": {
+            "gap_ms": 801,
+            "from": "scene-0007",
+            "to": "scene-0008"
+          }
+        },
+        {
+          "time_ms": 26300,
+          "channel": "slow_req",
+          "label": "scene-0008:0:slow",
+          "scene": "scene-0008",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Decelerate to maintain a safe distance from the white van ahead while navigating the curvy road and approaching the intersection.",
+            "local_timestamp_us": 6400000
+          }
+        },
+        {
+          "time_ms": 27800,
+          "channel": "slow_req",
+          "label": "scene-0008:1:slow",
+          "scene": "scene-0008",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Adapt speed for the upcoming left curve and intersection while maintaining a safe distance from the lead vehicle.",
+            "local_timestamp_us": 7900000
+          }
+        },
+        {
+          "time_ms": 27961,
+          "channel": "slow_resp",
+          "label": "scene-0008:0:slow:response",
+          "scene": "scene-0008",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 6400000,
+            "response_local_ms": 8061,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 27961,
+          "channel": "slow_resp",
+          "label": "scene-0008:1:slow:response",
+          "scene": "scene-0008",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 7900000,
+            "response_local_ms": 8061,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 30900,
+          "channel": "slow_req",
+          "label": "scene-0008:2:slow",
+          "scene": "scene-0008",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Decelerate to navigate the intersection and then accelerate while following the curvy road path.",
+            "local_timestamp_us": 11000000
+          }
+        },
+        {
+          "time_ms": 30920,
+          "channel": "slow_resp",
+          "label": "scene-0008:2:slow:response",
+          "scene": "scene-0008",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 11000000,
+            "response_local_ms": 11020,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 39002,
+          "channel": "scene_boundary",
+          "label": "scene-0008->scene-0009",
+          "scene": "scene-0009",
+          "provenance": "DERIVED_NUSCENES_METADATA",
+          "detail": {
+            "gap_ms": 900,
+            "from": "scene-0008",
+            "to": "scene-0009"
+          }
+        }
+      ],
+      "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0007-to-scene-0009-loop.xml",
+      "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0007-to-scene-0009-loop.txt",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0007-to-scene-0009-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0031",
+        "scene-0032"
+      ],
+      "scene_count": 2,
+      "duration_ms": 22100,
+      "event_count": 3,
+      "channel_counts": {
+        "scene_boundary": 1,
+        "slow_req": 1,
+        "slow_resp": 1
+      },
+      "all_queries_satisfied": true,
+      "responded": true,
+      "no_deadline_miss": true,
+      "no_contradiction": true,
+      "no_boundary_violation": true,
+      "no_deadlock": true,
+      "source_done": true,
+      "scene_summary": [
+        {
+          "scene": "scene-0031",
+          "global_start_ms": 0,
+          "global_end_ms": 19399,
+          "trusted_obligation_events": 0,
+          "derived_response_witnesses": 0
+        },
+        {
+          "scene": "scene-0032",
+          "global_start_ms": 20000,
+          "global_end_ms": 39500,
+          "trusted_obligation_events": 1,
+          "derived_response_witnesses": 1
+        }
+      ],
+      "events": [
+        {
+          "time_ms": 19399,
+          "channel": "scene_boundary",
+          "label": "scene-0031->scene-0032",
+          "scene": "scene-0032",
+          "provenance": "DERIVED_NUSCENES_METADATA",
+          "detail": {
+            "gap_ms": 601,
+            "from": "scene-0031",
+            "to": "scene-0032"
+          }
+        },
+        {
+          "time_ms": 22100,
+          "channel": "slow_req",
+          "label": "scene-0032:0:slow",
+          "scene": "scene-0032",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Decelerate to yield at the intersection with a yield sign and a red traffic light, then accelerate to proceed along the curvy road.",
+            "local_timestamp_us": 2100000
+          }
+        },
+        {
+          "time_ms": 22100,
+          "channel": "slow_resp",
+          "label": "scene-0032:0:slow:response",
+          "scene": "scene-0032",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 2100000,
+            "response_local_ms": 2100,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        }
+      ],
+      "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0031-to-scene-0032-loop.xml",
+      "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0031-to-scene-0032-loop.txt",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0031-to-scene-0032-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0027",
+        "scene-0028"
+      ],
+      "scene_count": 2,
+      "duration_ms": 31420,
+      "event_count": 16,
+      "channel_counts": {
+        "accel_req": 5,
+        "accel_resp": 2,
+        "scene_boundary": 1,
+        "slow_req": 5,
+        "slow_resp": 3
+      },
+      "all_queries_satisfied": false,
+      "responded": false,
+      "no_deadline_miss": false,
+      "no_contradiction": true,
+      "no_boundary_violation": true,
+      "no_deadlock": true,
+      "source_done": true,
+      "scene_summary": [
+        {
+          "scene": "scene-0027",
+          "global_start_ms": 0,
+          "global_end_ms": 19500,
+          "trusted_obligation_events": 5,
+          "derived_response_witnesses": 2
+        },
+        {
+          "scene": "scene-0028",
+          "global_start_ms": 20100,
+          "global_end_ms": 39499,
+          "trusted_obligation_events": 5,
+          "derived_response_witnesses": 3
+        }
+      ],
+      "events": [
+        {
+          "time_ms": 3900,
+          "channel": "accel_req",
+          "label": "scene-0027:0:accel",
+          "scene": "scene-0027",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Maintain lane and accelerate through the intersection as the traffic light is green and the path is clear.",
+            "local_timestamp_us": 3900000
+          }
+        },
+        {
+          "time_ms": 4900,
+          "channel": "accel_req",
+          "label": "scene-0027:1:accel",
+          "scene": "scene-0027",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Maintain lane and accelerate through the intersection as the traffic light is green and the path is clear.",
+            "local_timestamp_us": 4900000
+          }
+        },
+        {
+          "time_ms": 6100,
+          "channel": "accel_req",
+          "label": "scene-0027:2:accel",
+          "scene": "scene-0027",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Maintain lane and accelerate through the intersection as the traffic light is green and the path is clear.",
+            "local_timestamp_us": 6100000
+          }
+        },
+        {
+          "time_ms": 7900,
+          "channel": "accel_req",
+          "label": "scene-0027:3:accel",
+          "scene": "scene-0027",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Maintain lane and accelerate through the intersection as the traffic light is green and the road ahead is clear.",
+            "local_timestamp_us": 7900000
+          }
+        },
+        {
+          "time_ms": 8600,
+          "channel": "accel_req",
+          "label": "scene-0027:4:accel",
+          "scene": "scene-0027",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Maintain lane and accelerate through the intersection as the traffic light is green and the road ahead is clear.",
+            "local_timestamp_us": 8600000
+          }
+        },
+        {
+          "time_ms": 9540,
+          "channel": "accel_resp",
+          "label": "scene-0027:3:accel:response",
+          "scene": "scene-0027",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 7900000,
+            "response_local_ms": 9540,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 9540,
+          "channel": "accel_resp",
+          "label": "scene-0027:4:accel:response",
+          "scene": "scene-0027",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 8600000,
+            "response_local_ms": 9540,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 19500,
+          "channel": "scene_boundary",
+          "label": "scene-0027->scene-0028",
+          "scene": "scene-0028",
+          "provenance": "DERIVED_NUSCENES_METADATA",
+          "detail": {
+            "gap_ms": 600,
+            "from": "scene-0027",
+            "to": "scene-0028"
+          }
+        },
+        {
+          "time_ms": 24700,
+          "channel": "slow_req",
+          "label": "scene-0028:0:slow",
+          "scene": "scene-0028",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Maintain lane and accelerate to pass the stopped vehicle on the left while approaching the intersection.",
+            "local_timestamp_us": 4600000
+          }
+        },
+        {
+          "time_ms": 26600,
+          "channel": "slow_req",
+          "label": "scene-0028:1:slow",
+          "scene": "scene-0028",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Maintain lane and decelerate to stop for the red traffic light at the intersection.",
+            "local_timestamp_us": 6500000
+          }
+        },
+        {
+          "time_ms": 28600,
+          "channel": "slow_req",
+          "label": "scene-0028:2:slow",
+          "scene": "scene-0028",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Decelerate to stop for the red traffic light at the intersection.",
+            "local_timestamp_us": 8500000
+          }
+        },
+        {
+          "time_ms": 30700,
+          "channel": "slow_req",
+          "label": "scene-0028:3:slow",
+          "scene": "scene-0028",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Stop for the red traffic light at the intersection.",
+            "local_timestamp_us": 10600000
+          }
+        },
+        {
+          "time_ms": 31120,
+          "channel": "slow_resp",
+          "label": "scene-0028:2:slow:response",
+          "scene": "scene-0028",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 8500000,
+            "response_local_ms": 11020,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 31120,
+          "channel": "slow_resp",
+          "label": "scene-0028:3:slow:response",
+          "scene": "scene-0028",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 10600000,
+            "response_local_ms": 11020,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 31400,
+          "channel": "slow_req",
+          "label": "scene-0028:4:slow",
+          "scene": "scene-0028",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Stop for the red traffic light at the intersection.",
+            "local_timestamp_us": 11300000
+          }
+        },
+        {
+          "time_ms": 31420,
+          "channel": "slow_resp",
+          "label": "scene-0028:4:slow:response",
+          "scene": "scene-0028",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 11300000,
+            "response_local_ms": 11320,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        }
+      ],
+      "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0027-to-scene-0028-loop.xml",
+      "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0027-to-scene-0028-loop.txt",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0027-to-scene-0028-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0063",
+        "scene-0064"
+      ],
+      "scene_count": 2,
+      "duration_ms": 27800,
+      "event_count": 2,
+      "channel_counts": {
+        "scene_boundary": 1,
+        "slow_req": 1
+      },
+      "all_queries_satisfied": false,
+      "responded": false,
+      "no_deadline_miss": false,
+      "no_contradiction": true,
+      "no_boundary_violation": true,
+      "no_deadlock": true,
+      "source_done": true,
+      "scene_summary": [
+        {
+          "scene": "scene-0063",
+          "global_start_ms": 0,
+          "global_end_ms": 19250,
+          "trusted_obligation_events": 0,
+          "derived_response_witnesses": 0
+        },
+        {
+          "scene": "scene-0064",
+          "global_start_ms": 20000,
+          "global_end_ms": 39401,
+          "trusted_obligation_events": 1,
+          "derived_response_witnesses": 0
+        }
+      ],
+      "events": [
+        {
+          "time_ms": 19250,
+          "channel": "scene_boundary",
+          "label": "scene-0063->scene-0064",
+          "scene": "scene-0064",
+          "provenance": "DERIVED_NUSCENES_METADATA",
+          "detail": {
+            "gap_ms": 750,
+            "from": "scene-0063",
+            "to": "scene-0064"
+          }
+        },
+        {
+          "time_ms": 27800,
+          "channel": "slow_req",
+          "label": "scene-0064:1:slow",
+          "scene": "scene-0064",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Maintain lane and decelerate to maintain a safe distance from the lead vehicle ahead.",
+            "local_timestamp_us": 7800000
+          }
+        }
+      ],
+      "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0063-to-scene-0064-loop.xml",
+      "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0063-to-scene-0064-loop.txt",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0063-to-scene-0064-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0056",
+        "scene-0057"
+      ],
+      "scene_count": 2,
+      "duration_ms": 19501,
+      "event_count": 5,
+      "channel_counts": {
+        "scene_boundary": 1,
+        "slow_req": 2,
+        "slow_resp": 2
+      },
+      "all_queries_satisfied": true,
+      "responded": true,
+      "no_deadline_miss": true,
+      "no_contradiction": true,
+      "no_boundary_violation": true,
+      "no_deadlock": true,
+      "source_done": true,
+      "scene_summary": [
+        {
+          "scene": "scene-0056",
+          "global_start_ms": 0,
+          "global_end_ms": 19501,
+          "trusted_obligation_events": 2,
+          "derived_response_witnesses": 2
+        },
+        {
+          "scene": "scene-0057",
+          "global_start_ms": 20002,
+          "global_end_ms": 39400,
+          "trusted_obligation_events": 0,
+          "derived_response_witnesses": 0
+        }
+      ],
+      "events": [
+        {
+          "time_ms": 2800,
+          "channel": "slow_req",
+          "label": "scene-0056:0:slow",
+          "scene": "scene-0056",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Decelerate to maintain a safe distance from the lead vehicle while navigating the curvy road and approaching the intersection.",
+            "local_timestamp_us": 2800000
+          }
+        },
+        {
+          "time_ms": 3400,
+          "channel": "slow_resp",
+          "label": "scene-0056:0:slow:response",
+          "scene": "scene-0056",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 2800000,
+            "response_local_ms": 3400,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 3700,
+          "channel": "slow_req",
+          "label": "scene-0056:1:slow",
+          "scene": "scene-0056",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Decelerate to maintain a safe distance from the lead vehicle while navigating the curvy road and approaching the intersection.",
+            "local_timestamp_us": 3700000
+          }
+        },
+        {
+          "time_ms": 3700,
+          "channel": "slow_resp",
+          "label": "scene-0056:1:slow:response",
+          "scene": "scene-0056",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 3700000,
+            "response_local_ms": 3700,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 19501,
+          "channel": "scene_boundary",
+          "label": "scene-0056->scene-0057",
+          "scene": "scene-0057",
+          "provenance": "DERIVED_NUSCENES_METADATA",
+          "detail": {
+            "gap_ms": 500,
+            "from": "scene-0056",
+            "to": "scene-0057"
+          }
+        }
+      ],
+      "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0056-to-scene-0057-loop.xml",
+      "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0056-to-scene-0057-loop.txt",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0056-to-scene-0057-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0048",
+        "scene-0049"
+      ],
+      "scene_count": 2,
+      "duration_ms": 19400,
+      "event_count": 1,
+      "channel_counts": {
+        "scene_boundary": 1
+      },
+      "all_queries_satisfied": false,
+      "responded": false,
+      "no_deadline_miss": true,
+      "no_contradiction": true,
+      "no_boundary_violation": true,
+      "no_deadlock": true,
+      "source_done": true,
+      "scene_summary": [
+        {
+          "scene": "scene-0048",
+          "global_start_ms": 0,
+          "global_end_ms": 19400,
+          "trusted_obligation_events": 0,
+          "derived_response_witnesses": 0
+        },
+        {
+          "scene": "scene-0049",
+          "global_start_ms": 20101,
+          "global_end_ms": 39398,
+          "trusted_obligation_events": 0,
+          "derived_response_witnesses": 0
+        }
+      ],
+      "events": [
+        {
+          "time_ms": 19400,
+          "channel": "scene_boundary",
+          "label": "scene-0048->scene-0049",
+          "scene": "scene-0049",
+          "provenance": "DERIVED_NUSCENES_METADATA",
+          "detail": {
+            "gap_ms": 701,
+            "from": "scene-0048",
+            "to": "scene-0049"
+          }
+        }
+      ],
+      "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0048-to-scene-0049-loop.xml",
+      "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0048-to-scene-0049-loop.txt",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0048-to-scene-0049-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0051",
+        "scene-0052"
+      ],
+      "scene_count": 2,
+      "duration_ms": 29998,
+      "event_count": 8,
+      "channel_counts": {
+        "accel_req": 1,
+        "accel_resp": 1,
+        "scene_boundary": 1,
+        "slow_req": 3,
+        "slow_resp": 2
+      },
+      "all_queries_satisfied": false,
+      "responded": true,
+      "no_deadline_miss": false,
+      "no_contradiction": true,
+      "no_boundary_violation": true,
+      "no_deadlock": true,
+      "source_done": true,
+      "scene_summary": [
+        {
+          "scene": "scene-0051",
+          "global_start_ms": 0,
+          "global_end_ms": 19300,
+          "trusted_obligation_events": 1,
+          "derived_response_witnesses": 1
+        },
+        {
+          "scene": "scene-0052",
+          "global_start_ms": 19999,
+          "global_end_ms": 39299,
+          "trusted_obligation_events": 3,
+          "derived_response_witnesses": 2
+        }
+      ],
+      "events": [
+        {
+          "time_ms": 6400,
+          "channel": "slow_req",
+          "label": "scene-0051:0:slow",
+          "scene": "scene-0051",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Decelerate to maintain a safe distance from the red vehicle ahead while approaching the intersection.",
+            "local_timestamp_us": 6400000
+          }
+        },
+        {
+          "time_ms": 6720,
+          "channel": "slow_resp",
+          "label": "scene-0051:0:slow:response",
+          "scene": "scene-0051",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 6400000,
+            "response_local_ms": 6720,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 19300,
+          "channel": "scene_boundary",
+          "label": "scene-0051->scene-0052",
+          "scene": "scene-0052",
+          "provenance": "DERIVED_NUSCENES_METADATA",
+          "detail": {
+            "gap_ms": 699,
+            "from": "scene-0051",
+            "to": "scene-0052"
+          }
+        },
+        {
+          "time_ms": 22499,
+          "channel": "accel_req",
+          "label": "scene-0052:0:accel",
+          "scene": "scene-0052",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Keep lane and accelerate on the curvy road while following the lead vehicle.",
+            "local_timestamp_us": 2500000
+          }
+        },
+        {
+          "time_ms": 22518,
+          "channel": "accel_resp",
+          "label": "scene-0052:0:accel:response",
+          "scene": "scene-0052",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 2500000,
+            "response_local_ms": 2519,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 25199,
+          "channel": "slow_req",
+          "label": "scene-0052:1:slow",
+          "scene": "scene-0052",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Keep lane and maintain a safe speed on the curvy road while following the lead vehicle and navigating around the stopped black van on the left.",
+            "local_timestamp_us": 5200000
+          }
+        },
+        {
+          "time_ms": 27699,
+          "channel": "slow_req",
+          "label": "scene-0052:2:slow",
+          "scene": "scene-0052",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Decelerate to maintain a safe distance from the black van ahead while navigating the curvy road and approaching the intersection with a stop sign.",
+            "local_timestamp_us": 7700000
+          }
+        },
+        {
+          "time_ms": 29998,
+          "channel": "slow_resp",
+          "label": "scene-0052:2:slow:response",
+          "scene": "scene-0052",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 7700000,
+            "response_local_ms": 9999,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        }
+      ],
+      "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0051-to-scene-0052-loop.xml",
+      "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0051-to-scene-0052-loop.txt",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0051-to-scene-0052-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0124",
+        "scene-0125"
+      ],
+      "scene_count": 2,
+      "duration_ms": 19200,
+      "event_count": 3,
+      "channel_counts": {
+        "accel_req": 1,
+        "scene_boundary": 1,
+        "slow_req": 1
+      },
+      "all_queries_satisfied": false,
+      "responded": false,
+      "no_deadline_miss": false,
+      "no_contradiction": true,
+      "no_boundary_violation": true,
+      "no_deadlock": true,
+      "source_done": true,
+      "scene_summary": [
+        {
+          "scene": "scene-0124",
+          "global_start_ms": 0,
+          "global_end_ms": 19200,
+          "trusted_obligation_events": 2,
+          "derived_response_witnesses": 0
+        },
+        {
+          "scene": "scene-0125",
+          "global_start_ms": 20001,
+          "global_end_ms": 39251,
+          "trusted_obligation_events": 0,
+          "derived_response_witnesses": 0
+        }
+      ],
+      "events": [
+        {
+          "time_ms": 3900,
+          "channel": "slow_req",
+          "label": "scene-0124:0:slow",
+          "scene": "scene-0124",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Decelerate to maintain a safe distance from the stopped blue bus ahead and the black car in the left lane, while keeping lane position.",
+            "local_timestamp_us": 3900000
+          }
+        },
+        {
+          "time_ms": 12900,
+          "channel": "accel_req",
+          "label": "scene-0124:1:accel",
+          "scene": "scene-0124",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Maintain lane and accelerate while navigating past construction cones on the left and parked buses on the right.",
+            "local_timestamp_us": 12900000
+          }
+        },
+        {
+          "time_ms": 19200,
+          "channel": "scene_boundary",
+          "label": "scene-0124->scene-0125",
+          "scene": "scene-0125",
+          "provenance": "DERIVED_NUSCENES_METADATA",
+          "detail": {
+            "gap_ms": 801,
+            "from": "scene-0124",
+            "to": "scene-0125"
+          }
+        }
+      ],
+      "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0124-to-scene-0125-loop.xml",
+      "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0124-to-scene-0125-loop.txt",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0124-to-scene-0125-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0134",
+        "scene-0135"
+      ],
+      "scene_count": 2,
+      "duration_ms": 34038,
+      "event_count": 7,
+      "channel_counts": {
+        "accel_req": 2,
+        "accel_resp": 2,
+        "scene_boundary": 1,
+        "slow_req": 1,
+        "slow_resp": 1
+      },
+      "all_queries_satisfied": true,
+      "responded": true,
+      "no_deadline_miss": true,
+      "no_contradiction": true,
+      "no_boundary_violation": true,
+      "no_deadlock": true,
+      "source_done": true,
+      "scene_summary": [
+        {
+          "scene": "scene-0134",
+          "global_start_ms": 0,
+          "global_end_ms": 19350,
+          "trusted_obligation_events": 2,
+          "derived_response_witnesses": 2
+        },
+        {
+          "scene": "scene-0135",
+          "global_start_ms": 19999,
+          "global_end_ms": 39150,
+          "trusted_obligation_events": 1,
+          "derived_response_witnesses": 1
+        }
+      ],
+      "events": [
+        {
+          "time_ms": 9000,
+          "channel": "accel_req",
+          "label": "scene-0134:0:accel",
+          "scene": "scene-0134",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Keep lane and accelerate through the intersection as the road ahead is clear.",
+            "local_timestamp_us": 9000000
+          }
+        },
+        {
+          "time_ms": 9020,
+          "channel": "accel_resp",
+          "label": "scene-0134:0:accel:response",
+          "scene": "scene-0134",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 9000000,
+            "response_local_ms": 9020,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 12100,
+          "channel": "accel_req",
+          "label": "scene-0134:1:accel",
+          "scene": "scene-0134",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Keep lane and accelerate while navigating the road with visible construction cones on the left side.",
+            "local_timestamp_us": 12100000
+          }
+        },
+        {
+          "time_ms": 12119,
+          "channel": "accel_resp",
+          "label": "scene-0134:1:accel:response",
+          "scene": "scene-0134",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 12100000,
+            "response_local_ms": 12119,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 19350,
+          "channel": "scene_boundary",
+          "label": "scene-0134->scene-0135",
+          "scene": "scene-0135",
+          "provenance": "DERIVED_NUSCENES_METADATA",
+          "detail": {
+            "gap_ms": 650,
+            "from": "scene-0134",
+            "to": "scene-0135"
+          }
+        },
+        {
+          "time_ms": 32699,
+          "channel": "slow_req",
+          "label": "scene-0135:1:slow",
+          "scene": "scene-0135",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Decelerate to maintain a safe distance from the lead vehicle ahead while navigating through the construction zone with traffic cones and barriers.",
+            "local_timestamp_us": 12700000
+          }
+        },
+        {
+          "time_ms": 34038,
+          "channel": "slow_resp",
+          "label": "scene-0135:1:slow:response",
+          "scene": "scene-0135",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 12700000,
+            "response_local_ms": 14039,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        }
+      ],
+      "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0134-to-scene-0135-loop.xml",
+      "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0134-to-scene-0135-loop.txt",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0134-to-scene-0135-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0025",
+        "scene-0026"
+      ],
+      "scene_count": 2,
+      "duration_ms": 30099,
+      "event_count": 2,
+      "channel_counts": {
+        "scene_boundary": 1,
+        "slow_req": 1
+      },
+      "all_queries_satisfied": false,
+      "responded": false,
+      "no_deadline_miss": false,
+      "no_contradiction": true,
+      "no_boundary_violation": true,
+      "no_deadlock": true,
+      "source_done": true,
+      "scene_summary": [
+        {
+          "scene": "scene-0025",
+          "global_start_ms": 0,
+          "global_end_ms": 19349,
+          "trusted_obligation_events": 0,
+          "derived_response_witnesses": 0
+        },
+        {
+          "scene": "scene-0026",
+          "global_start_ms": 20099,
+          "global_end_ms": 39148,
+          "trusted_obligation_events": 1,
+          "derived_response_witnesses": 0
+        }
+      ],
+      "events": [
+        {
+          "time_ms": 19349,
+          "channel": "scene_boundary",
+          "label": "scene-0025->scene-0026",
+          "scene": "scene-0026",
+          "provenance": "DERIVED_NUSCENES_METADATA",
+          "detail": {
+            "gap_ms": 750,
+            "from": "scene-0025",
+            "to": "scene-0026"
+          }
+        },
+        {
+          "time_ms": 30099,
+          "channel": "slow_req",
+          "label": "scene-0026:1:slow",
+          "scene": "scene-0026",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Decelerate to maintain a safe distance from the cyclist ahead while navigating the curvy road.",
+            "local_timestamp_us": 10000000
+          }
+        }
+      ],
+      "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0025-to-scene-0026-loop.xml",
+      "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0025-to-scene-0026-loop.txt",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0025-to-scene-0026-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0179",
+        "scene-0180"
+      ],
+      "scene_count": 2,
+      "duration_ms": 34881,
+      "event_count": 7,
+      "channel_counts": {
+        "accel_req": 1,
+        "accel_resp": 1,
+        "scene_boundary": 1,
+        "slow_req": 3,
+        "slow_resp": 1
+      },
+      "all_queries_satisfied": false,
+      "responded": true,
+      "no_deadline_miss": false,
+      "no_contradiction": true,
+      "no_boundary_violation": true,
+      "no_deadlock": true,
+      "source_done": true,
+      "scene_summary": [
+        {
+          "scene": "scene-0179",
+          "global_start_ms": 0,
+          "global_end_ms": 19452,
+          "trusted_obligation_events": 1,
+          "derived_response_witnesses": 1
+        },
+        {
+          "scene": "scene-0180",
+          "global_start_ms": 20002,
+          "global_end_ms": 39100,
+          "trusted_obligation_events": 3,
+          "derived_response_witnesses": 1
+        }
+      ],
+      "events": [
+        {
+          "time_ms": 8900,
+          "channel": "accel_req",
+          "label": "scene-0179:0:accel",
+          "scene": "scene-0179",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Keep lane and accelerate through the intersection as the path ahead is clear.",
+            "local_timestamp_us": 8900000
+          }
+        },
+        {
+          "time_ms": 9120,
+          "channel": "accel_resp",
+          "label": "scene-0179:0:accel:response",
+          "scene": "scene-0179",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 8900000,
+            "response_local_ms": 9120,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 19452,
+          "channel": "scene_boundary",
+          "label": "scene-0179->scene-0180",
+          "scene": "scene-0180",
+          "provenance": "DERIVED_NUSCENES_METADATA",
+          "detail": {
+            "gap_ms": 550,
+            "from": "scene-0179",
+            "to": "scene-0180"
+          }
+        },
+        {
+          "time_ms": 23402,
+          "channel": "slow_req",
+          "label": "scene-0180:0:slow",
+          "scene": "scene-0180",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Decelerate to maintain a safe distance from the parked vehicles ahead and then accelerate to proceed along the route.",
+            "local_timestamp_us": 3400000
+          }
+        },
+        {
+          "time_ms": 23602,
+          "channel": "slow_req",
+          "label": "scene-0180:1:slow",
+          "scene": "scene-0180",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Decelerate to maintain a safe distance from the parked vehicles ahead and then accelerate to proceed along the route.",
+            "local_timestamp_us": 3600000
+          }
+        },
+        {
+          "time_ms": 32002,
+          "channel": "slow_req",
+          "label": "scene-0180:7:slow",
+          "scene": "scene-0180",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Adapt speed for the curvy road while keeping lane.",
+            "local_timestamp_us": 12000000
+          }
+        },
+        {
+          "time_ms": 34881,
+          "channel": "slow_resp",
+          "label": "scene-0180:7:slow:response",
+          "scene": "scene-0180",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 12000000,
+            "response_local_ms": 14879,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        }
+      ],
+      "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0179-to-scene-0180-loop.xml",
+      "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0179-to-scene-0180-loop.txt",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0179-to-scene-0180-loop-result.json"
+    },
+    {
+      "scenes": [
+        "scene-0150",
+        "scene-0151"
+      ],
+      "scene_count": 2,
+      "duration_ms": 32569,
+      "event_count": 10,
+      "channel_counts": {
+        "accel_req": 4,
+        "accel_resp": 4,
+        "scene_boundary": 1,
+        "slow_req": 1
+      },
+      "all_queries_satisfied": false,
+      "responded": false,
+      "no_deadline_miss": false,
+      "no_contradiction": true,
+      "no_boundary_violation": true,
+      "no_deadlock": true,
+      "source_done": true,
+      "scene_summary": [
+        {
+          "scene": "scene-0150",
+          "global_start_ms": 0,
+          "global_end_ms": 19100,
+          "trusted_obligation_events": 1,
+          "derived_response_witnesses": 0
+        },
+        {
+          "scene": "scene-0151",
+          "global_start_ms": 19950,
+          "global_end_ms": 39000,
+          "trusted_obligation_events": 4,
+          "derived_response_witnesses": 4
+        }
+      ],
+      "events": [
+        {
+          "time_ms": 3200,
+          "channel": "slow_req",
+          "label": "scene-0150:0:slow",
+          "scene": "scene-0150",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Adapt speed for the upcoming speed bump while keeping lane and maintaining a safe distance from the lead vehicle.",
+            "local_timestamp_us": 3200000
+          }
+        },
+        {
+          "time_ms": 19100,
+          "channel": "scene_boundary",
+          "label": "scene-0150->scene-0151",
+          "scene": "scene-0151",
+          "provenance": "DERIVED_NUSCENES_METADATA",
+          "detail": {
+            "gap_ms": 850,
+            "from": "scene-0150",
+            "to": "scene-0151"
+          }
+        },
+        {
+          "time_ms": 28050,
+          "channel": "accel_req",
+          "label": "scene-0151:1:accel",
+          "scene": "scene-0151",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Keep lane and accelerate through the intersection while navigating around construction cones and barriers.",
+            "local_timestamp_us": 8100000
+          }
+        },
+        {
+          "time_ms": 28830,
+          "channel": "accel_resp",
+          "label": "scene-0151:1:accel:response",
+          "scene": "scene-0151",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 8100000,
+            "response_local_ms": 8880,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 29350,
+          "channel": "accel_req",
+          "label": "scene-0151:2:accel",
+          "scene": "scene-0151",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Keep lane and accelerate through the construction zone while navigating around the traffic cones.",
+            "local_timestamp_us": 9400000
+          }
+        },
+        {
+          "time_ms": 29370,
+          "channel": "accel_resp",
+          "label": "scene-0151:2:accel:response",
+          "scene": "scene-0151",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 9400000,
+            "response_local_ms": 9420,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 30950,
+          "channel": "accel_req",
+          "label": "scene-0151:3:accel",
+          "scene": "scene-0151",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Keep lane and accelerate while navigating through the construction zone with workers and cones on the right.",
+            "local_timestamp_us": 11000000
+          }
+        },
+        {
+          "time_ms": 30950,
+          "channel": "accel_resp",
+          "label": "scene-0151:3:accel:response",
+          "scene": "scene-0151",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 11000000,
+            "response_local_ms": 11000,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        },
+        {
+          "time_ms": 32550,
+          "channel": "accel_req",
+          "label": "scene-0151:4:accel",
+          "scene": "scene-0151",
+          "provenance": "OBSERVED_COC_REASONING",
+          "detail": {
+            "cot": "Maintain lane and accelerate while navigating through the construction zone with workers and cones on the right.",
+            "local_timestamp_us": 12600000
+          }
+        },
+        {
+          "time_ms": 32569,
+          "channel": "accel_resp",
+          "label": "scene-0151:4:accel:response",
+          "scene": "scene-0151",
+          "provenance": "DERIVED_EGO_SPEED_WITNESS",
+          "detail": {
+            "request_local_timestamp_us": 12600000,
+            "response_local_ms": 12619,
+            "detector": {
+              "window_us": 1000000,
+              "min_delta_mps": 0.7
+            }
+          }
+        }
+      ],
+      "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0150-to-scene-0151-loop.xml",
+      "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0150-to-scene-0151-loop.txt",
+      "report": "experiments/results/baseline/multiscene-chain/scene-0150-to-scene-0151-loop-result.json"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "claim_scope": "REPOSITORY_LAYOUT_AND_SOFTWARE_REGRESSION_NOT_RESEARCH_OR_VEHICLE_SAFETY",
+  "code_hashes": {
+    "layout_spec": "0da6b22d01d002bc403bfe792bf233988ad099142e66fea52e21c40fbedf16df",
+    "runner": "031ef53b54c0296dd457420d2fd3b550218b1b5ad4fdc51961494e60ab91fdba",
+    "structure_test": "0f5b8e932a6f903701e1f374c333dcaf3f013dfec1782c230930b5d1a3b33889"
+  },
+  "deterministic": true,
+  "experiment_id": "PROJECT-LAYOUT-REFACTOR-001",
+  "input_class": "PUBLIC_REPOSITORY_METADATA",
+  "layout_spec": "docs/architecture/PROJECT_LAYOUT_V2.md",
+  "migration_map": "docs/architecture/MIGRATION_MAP.json",
+  "network_access_performed": false,
+  "python_version": "3.11.2",
+  "run_date": "2026-08-09",
+  "run_id": "layout-v2-2026-08-09-v3",
+  "test_commands": [
+    {
+      "command": "/usr/bin/python3 -m unittest tests.structure.test_project_layout -v",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": 8
+    },
+    {
+      "command": "/usr/bin/python3 -m unittest discover -s tests/guard_synth_eblc -p test_*.py",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": 77
+    },
+    {
+      "command": "/usr/bin/python3 -m unittest discover -s experiments/eblc_pilot -p test_*.py",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": 7
+    },
+    {
+      "command": "/usr/bin/python3 -m cli.pipelines.eblc.core_smt_compile.run --help",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": null
+    },
+    {
+      "command": "/usr/bin/python3 -m cli.pipelines.eblc.p0b_schema_bcv.run --help",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": null
+    },
+    {
+      "command": "/usr/bin/python3 -m cli.pipelines.eblc.program_conformance.run --help",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": null
+    },
+    {
+      "command": "/usr/bin/python3 -m cli.pipelines.eblc.restricted_scene_grounding.run --help",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": null
+    },
+    {
+      "command": "/usr/bin/python3 -m cli.pipelines.eblc.robustness_audit.run --help",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": null
+    },
+    {
+      "command": "/usr/bin/python3 -m cli.pipelines.eblc.scenario_validation.run --help",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": null
+    }
+  ]
+}

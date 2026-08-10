@@ -1,0 +1,260 @@
+{
+  "scenes": [
+    "scene-0130",
+    "scene-0131",
+    "scene-0132",
+    "scene-0133"
+  ],
+  "origin_scene": "scene-0130",
+  "origin_timestamp_us": 1533112927546769,
+  "duration_ms": 72301,
+  "deadline_ms": 3000,
+  "max_boundary_gap_ms": 1000,
+  "scene_summary": [
+    {
+      "scene": "scene-0130",
+      "global_start_ms": 0,
+      "global_end_ms": 19350,
+      "trusted_obligation_events": 2,
+      "derived_response_witnesses": 0
+    },
+    {
+      "scene": "scene-0131",
+      "global_start_ms": 20001,
+      "global_end_ms": 39401,
+      "trusted_obligation_events": 4,
+      "derived_response_witnesses": 3
+    },
+    {
+      "scene": "scene-0132",
+      "global_start_ms": 40001,
+      "global_end_ms": 59351,
+      "trusted_obligation_events": 0,
+      "derived_response_witnesses": 0
+    },
+    {
+      "scene": "scene-0133",
+      "global_start_ms": 60001,
+      "global_end_ms": 79350,
+      "trusted_obligation_events": 4,
+      "derived_response_witnesses": 0
+    }
+  ],
+  "event_count": 16,
+  "channel_counts": {
+    "accel_req": 1,
+    "scene_boundary": 3,
+    "slow_req": 9,
+    "slow_resp": 3
+  },
+  "events": [
+    {
+      "time_ms": 4500,
+      "channel": "slow_req",
+      "label": "scene-0130:0:slow",
+      "scene": "scene-0130",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Yield to pedestrians crossing the street at the crosswalk and then accelerate to proceed.",
+        "local_timestamp_us": 4500000
+      }
+    },
+    {
+      "time_ms": 4600,
+      "channel": "slow_req",
+      "label": "scene-0130:1:slow",
+      "scene": "scene-0130",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Yield to pedestrians crossing the street and then accelerate to proceed.",
+        "local_timestamp_us": 4600000
+      }
+    },
+    {
+      "time_ms": 19350,
+      "channel": "scene_boundary",
+      "label": "scene-0130->scene-0131",
+      "scene": "scene-0131",
+      "provenance": "DERIVED_NUSCENES_METADATA",
+      "detail": {
+        "gap_ms": 650,
+        "from": "scene-0130",
+        "to": "scene-0131"
+      }
+    },
+    {
+      "time_ms": 28501,
+      "channel": "slow_req",
+      "label": "scene-0131:0:slow",
+      "scene": "scene-0131",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Maintain lane and adapt speed for the upcoming speed bump while approaching the intersection.",
+        "local_timestamp_us": 8500000
+      }
+    },
+    {
+      "time_ms": 30001,
+      "channel": "slow_req",
+      "label": "scene-0131:1:slow",
+      "scene": "scene-0131",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Maintain lane and adapt speed for the speed bump while approaching the intersection.",
+        "local_timestamp_us": 10000000
+      }
+    },
+    {
+      "time_ms": 31001,
+      "channel": "slow_req",
+      "label": "scene-0131:2:slow",
+      "scene": "scene-0131",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Adapt speed for the upcoming speed bump while keeping lane to proceed along the route.",
+        "local_timestamp_us": 11000000
+      }
+    },
+    {
+      "time_ms": 32401,
+      "channel": "slow_req",
+      "label": "scene-0131:3:slow",
+      "scene": "scene-0131",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Decelerate to pass over the speed bump and then accelerate to resume speed.",
+        "local_timestamp_us": 12400000
+      }
+    },
+    {
+      "time_ms": 32903,
+      "channel": "slow_resp",
+      "label": "scene-0131:1:slow:response",
+      "scene": "scene-0131",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 10000000,
+        "response_local_ms": 12902,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 32903,
+      "channel": "slow_resp",
+      "label": "scene-0131:2:slow:response",
+      "scene": "scene-0131",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 11000000,
+        "response_local_ms": 12902,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 32903,
+      "channel": "slow_resp",
+      "label": "scene-0131:3:slow:response",
+      "scene": "scene-0131",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 12400000,
+        "response_local_ms": 12902,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 39401,
+      "channel": "scene_boundary",
+      "label": "scene-0131->scene-0132",
+      "scene": "scene-0132",
+      "provenance": "DERIVED_NUSCENES_METADATA",
+      "detail": {
+        "gap_ms": 600,
+        "from": "scene-0131",
+        "to": "scene-0132"
+      }
+    },
+    {
+      "time_ms": 59351,
+      "channel": "scene_boundary",
+      "label": "scene-0132->scene-0133",
+      "scene": "scene-0133",
+      "provenance": "DERIVED_NUSCENES_METADATA",
+      "detail": {
+        "gap_ms": 650,
+        "from": "scene-0132",
+        "to": "scene-0133"
+      }
+    },
+    {
+      "time_ms": 62601,
+      "channel": "slow_req",
+      "label": "scene-0133:0:slow",
+      "scene": "scene-0133",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Maintain lane and accelerate to pass the stopped bus on the left while keeping a safe distance from parked vehicles on the right.",
+        "local_timestamp_us": 2600000
+      }
+    },
+    {
+      "time_ms": 66201,
+      "channel": "accel_req",
+      "label": "scene-0133:2:accel",
+      "scene": "scene-0133",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Keep lane and accelerate gently while navigating through the area with parked vehicles on the left and right.",
+        "local_timestamp_us": 6200000
+      }
+    },
+    {
+      "time_ms": 72001,
+      "channel": "slow_req",
+      "label": "scene-0133:3:slow",
+      "scene": "scene-0133",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Adapt speed for the upcoming speed bump while maintaining lane position and navigating through the construction zone.",
+        "local_timestamp_us": 12000000
+      }
+    },
+    {
+      "time_ms": 72301,
+      "channel": "slow_req",
+      "label": "scene-0133:4:slow",
+      "scene": "scene-0133",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Decelerate to pass over the speed bump while maintaining lane position.",
+        "local_timestamp_us": 12300000
+      }
+    }
+  ],
+  "model": "scene-0130-to-scene-0133-loop.xml",
+  "model_style": "LOOP_INDEXED_EVENT_REPLAY",
+  "kind_encoding": {
+    "slow_req": 1,
+    "accel_req": 2,
+    "slow_resp": 3,
+    "accel_resp": 4,
+    "scene_boundary": 5
+  },
+  "queries": [
+    "E<> Source.Done",
+    "E<> MonitorProc.Responded",
+    "A[] not deadline_miss",
+    "A[] not contradiction",
+    "A[] not boundary_violation",
+    "A[] not deadlock"
+  ]
+}

@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+  <declaration>clock t;
+clock obligation_clock;
+broadcast chan slow_req, accel_req, slow_resp, accel_resp, scene_boundary;
+const int DEADLINE = 3000;
+const int MAX_BOUNDARY_GAP = 1000;
+const int EVENT_COUNT = 1;
+const int SLOW_REQ = 1;
+const int ACCEL_REQ = 2;
+const int SLOW_RESP = 3;
+const int ACCEL_RESP = 4;
+const int SCENE_BOUNDARY = 5;
+const int event_time[2] = {19400, 19400};
+const int event_kind[2] = {5, 0};
+const int event_gap[2] = {701, 0};
+int[0,1] idx = 0;
+bool deadline_miss = false;
+bool contradiction = false;
+bool boundary_violation = false;
+int active_intent = 0; // 0 none, 1 slow, 2 accel</declaration>
+  <template>
+    <name>LoopSource</name>
+    <declaration />
+    <location id="s0" x="0" y="0">
+      <name x="-20" y="-30">Replay</name>
+      <label kind="invariant" x="-20" y="20">t &lt;= event_time[idx]</label>
+    </location>
+    <location id="s1" x="260" y="0">
+      <name x="240" y="-30">Done</name>
+    </location>
+    <init ref="s0" />
+    <transition>
+      <source ref="s0" />
+      <target ref="s0" />
+      <label kind="guard" x="0" y="0">idx &lt; EVENT_COUNT &amp;&amp; t == event_time[idx] &amp;&amp; event_kind[idx] == 1</label>
+      <label kind="synchronisation" x="0" y="20">slow_req!</label>
+      <label kind="assignment" x="0" y="40">idx++</label>
+    </transition>
+    <transition>
+      <source ref="s0" />
+      <target ref="s0" />
+      <label kind="guard" x="0" y="0">idx &lt; EVENT_COUNT &amp;&amp; t == event_time[idx] &amp;&amp; event_kind[idx] == 2</label>
+      <label kind="synchronisation" x="0" y="20">accel_req!</label>
+      <label kind="assignment" x="0" y="40">idx++</label>
+    </transition>
+    <transition>
+      <source ref="s0" />
+      <target ref="s0" />
+      <label kind="guard" x="0" y="0">idx &lt; EVENT_COUNT &amp;&amp; t == event_time[idx] &amp;&amp; event_kind[idx] == 3</label>
+      <label kind="synchronisation" x="0" y="20">slow_resp!</label>
+      <label kind="assignment" x="0" y="40">idx++</label>
+    </transition>
+    <transition>
+      <source ref="s0" />
+      <target ref="s0" />
+      <label kind="guard" x="0" y="0">idx &lt; EVENT_COUNT &amp;&amp; t == event_time[idx] &amp;&amp; event_kind[idx] == 4</label>
+      <label kind="synchronisation" x="0" y="20">accel_resp!</label>
+      <label kind="assignment" x="0" y="40">idx++</label>
+    </transition>
+    <transition>
+      <source ref="s0" />
+      <target ref="s0" />
+      <label kind="guard" x="0" y="0">idx &lt; EVENT_COUNT &amp;&amp; t == event_time[idx] &amp;&amp; event_kind[idx] == 5</label>
+      <label kind="synchronisation" x="0" y="20">scene_boundary!</label>
+      <label kind="assignment" x="0" y="40">boundary_violation = boundary_violation || event_gap[idx] &gt; MAX_BOUNDARY_GAP, idx++</label>
+    </transition>
+    <transition>
+      <source ref="s0" />
+      <target ref="s1" />
+      <label kind="guard" x="0" y="0">idx == EVENT_COUNT</label>
+    </transition>
+    <transition>
+      <source ref="s1" />
+      <target ref="s1" />
+    </transition>
+  </template>
+  <template>
+    <name>Monitor</name>
+    <declaration />
+    <location id="m0" x="0" y="260">
+      <name x="-20" y="230">Idle</name>
+    </location>
+    <location id="m1" x="220" y="200">
+      <name x="200" y="170">ActiveSlow</name>
+      <label kind="invariant" x="200" y="220">obligation_clock &lt;= DEADLINE</label>
+    </location>
+    <location id="m2" x="220" y="320">
+      <name x="200" y="290">ActiveAccel</name>
+      <label kind="invariant" x="200" y="340">obligation_clock &lt;= DEADLINE</label>
+    </location>
+    <location id="m3" x="460" y="260">
+      <name x="440" y="230">Responded</name>
+    </location>
+    <location id="m4" x="460" y="420">
+      <name x="440" y="390">Miss</name>
+    </location>
+    <init ref="m0" />
+    <transition>
+      <source ref="m0" />
+      <target ref="m1" />
+      <label kind="synchronisation" x="0" y="0">slow_req?</label>
+      <label kind="assignment" x="0" y="20">active_intent = 1, obligation_clock = 0</label>
+    </transition>
+    <transition>
+      <source ref="m0" />
+      <target ref="m2" />
+      <label kind="synchronisation" x="0" y="0">accel_req?</label>
+      <label kind="assignment" x="0" y="20">active_intent = 2, obligation_clock = 0</label>
+    </transition>
+    <transition>
+      <source ref="m1" />
+      <target ref="m1" />
+      <label kind="synchronisation" x="0" y="0">slow_req?</label>
+    </transition>
+    <transition>
+      <source ref="m2" />
+      <target ref="m2" />
+      <label kind="synchronisation" x="0" y="0">accel_req?</label>
+    </transition>
+    <transition>
+      <source ref="m1" />
+      <target ref="m2" />
+      <label kind="synchronisation" x="0" y="0">accel_req?</label>
+      <label kind="assignment" x="0" y="20">contradiction = true, active_intent = 2, obligation_clock = 0</label>
+    </transition>
+    <transition>
+      <source ref="m2" />
+      <target ref="m1" />
+      <label kind="synchronisation" x="0" y="0">slow_req?</label>
+      <label kind="assignment" x="0" y="20">contradiction = true, active_intent = 1, obligation_clock = 0</label>
+    </transition>
+    <transition>
+      <source ref="m1" />
+      <target ref="m3" />
+      <label kind="synchronisation" x="0" y="0">slow_resp?</label>
+      <label kind="assignment" x="0" y="20">active_intent = 0</label>
+    </transition>
+    <transition>
+      <source ref="m2" />
+      <target ref="m3" />
+      <label kind="synchronisation" x="0" y="0">accel_resp?</label>
+      <label kind="assignment" x="0" y="20">active_intent = 0</label>
+    </transition>
+    <transition>
+      <source ref="m3" />
+      <target ref="m1" />
+      <label kind="synchronisation" x="0" y="0">slow_req?</label>
+      <label kind="assignment" x="0" y="20">active_intent = 1, obligation_clock = 0</label>
+    </transition>
+    <transition>
+      <source ref="m3" />
+      <target ref="m2" />
+      <label kind="synchronisation" x="0" y="0">accel_req?</label>
+      <label kind="assignment" x="0" y="20">active_intent = 2, obligation_clock = 0</label>
+    </transition>
+    <transition>
+      <source ref="m1" />
+      <target ref="m4" />
+      <label kind="guard" x="0" y="0">obligation_clock &gt;= DEADLINE</label>
+      <label kind="assignment" x="0" y="20">deadline_miss = true</label>
+    </transition>
+    <transition>
+      <source ref="m2" />
+      <target ref="m4" />
+      <label kind="guard" x="0" y="0">obligation_clock &gt;= DEADLINE</label>
+      <label kind="assignment" x="0" y="20">deadline_miss = true</label>
+    </transition>
+    <transition>
+      <source ref="m4" />
+      <target ref="m4" />
+    </transition>
+  </template>
+  <system>Source = LoopSource();
+MonitorProc = Monitor();
+system Source, MonitorProc;</system>
+</nta>

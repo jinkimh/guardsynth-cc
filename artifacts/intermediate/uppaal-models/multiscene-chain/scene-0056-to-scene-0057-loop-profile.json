@@ -1,0 +1,116 @@
+{
+  "scenes": [
+    "scene-0056",
+    "scene-0057"
+  ],
+  "origin_scene": "scene-0056",
+  "origin_timestamp_us": 1532402721546946,
+  "duration_ms": 19501,
+  "deadline_ms": 3000,
+  "max_boundary_gap_ms": 1000,
+  "scene_summary": [
+    {
+      "scene": "scene-0056",
+      "global_start_ms": 0,
+      "global_end_ms": 19501,
+      "trusted_obligation_events": 2,
+      "derived_response_witnesses": 2
+    },
+    {
+      "scene": "scene-0057",
+      "global_start_ms": 20002,
+      "global_end_ms": 39400,
+      "trusted_obligation_events": 0,
+      "derived_response_witnesses": 0
+    }
+  ],
+  "event_count": 5,
+  "channel_counts": {
+    "scene_boundary": 1,
+    "slow_req": 2,
+    "slow_resp": 2
+  },
+  "events": [
+    {
+      "time_ms": 2800,
+      "channel": "slow_req",
+      "label": "scene-0056:0:slow",
+      "scene": "scene-0056",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Decelerate to maintain a safe distance from the lead vehicle while navigating the curvy road and approaching the intersection.",
+        "local_timestamp_us": 2800000
+      }
+    },
+    {
+      "time_ms": 3400,
+      "channel": "slow_resp",
+      "label": "scene-0056:0:slow:response",
+      "scene": "scene-0056",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 2800000,
+        "response_local_ms": 3400,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 3700,
+      "channel": "slow_req",
+      "label": "scene-0056:1:slow",
+      "scene": "scene-0056",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Decelerate to maintain a safe distance from the lead vehicle while navigating the curvy road and approaching the intersection.",
+        "local_timestamp_us": 3700000
+      }
+    },
+    {
+      "time_ms": 3700,
+      "channel": "slow_resp",
+      "label": "scene-0056:1:slow:response",
+      "scene": "scene-0056",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 3700000,
+        "response_local_ms": 3700,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 19501,
+      "channel": "scene_boundary",
+      "label": "scene-0056->scene-0057",
+      "scene": "scene-0057",
+      "provenance": "DERIVED_NUSCENES_METADATA",
+      "detail": {
+        "gap_ms": 500,
+        "from": "scene-0056",
+        "to": "scene-0057"
+      }
+    }
+  ],
+  "model": "scene-0056-to-scene-0057-loop.xml",
+  "model_style": "LOOP_INDEXED_EVENT_REPLAY",
+  "kind_encoding": {
+    "slow_req": 1,
+    "accel_req": 2,
+    "slow_resp": 3,
+    "accel_resp": 4,
+    "scene_boundary": 5
+  },
+  "queries": [
+    "E<> Source.Done",
+    "E<> MonitorProc.Responded",
+    "A[] not deadline_miss",
+    "A[] not contradiction",
+    "A[] not boundary_violation",
+    "A[] not deadlock"
+  ]
+}

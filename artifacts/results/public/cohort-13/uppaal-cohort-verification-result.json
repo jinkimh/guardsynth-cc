@@ -1,0 +1,809 @@
+{
+  "checker": "UPPAAL_MULTI_SCENE_TRACE_REPLAY_MUTATION",
+  "scene_count": 13,
+  "model_count": 39,
+  "query_evaluation_count": 156,
+  "baseline_weak_response_violations": [
+    "scene-0028"
+  ],
+  "all_mutation_oracles_match": true,
+  "overall": "PASS",
+  "results": [
+    {
+      "clip_id": "scene-0001",
+      "variant": "baseline",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": []
+    },
+    {
+      "clip_id": "scene-0001",
+      "variant": "provenance_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not provenance_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0001",
+      "variant": "response_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not weak_response_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0011",
+      "variant": "baseline",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": []
+    },
+    {
+      "clip_id": "scene-0011",
+      "variant": "provenance_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not provenance_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0011",
+      "variant": "response_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not weak_response_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0027",
+      "variant": "baseline",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": []
+    },
+    {
+      "clip_id": "scene-0027",
+      "variant": "provenance_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not provenance_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0027",
+      "variant": "response_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not weak_response_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0028",
+      "variant": "baseline",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not weak_response_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0028",
+      "variant": "provenance_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        false,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not provenance_violation",
+        "A[] not weak_response_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0028",
+      "variant": "response_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not weak_response_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0055",
+      "variant": "baseline",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": []
+    },
+    {
+      "clip_id": "scene-0055",
+      "variant": "provenance_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not provenance_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0055",
+      "variant": "response_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not weak_response_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0129",
+      "variant": "baseline",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": []
+    },
+    {
+      "clip_id": "scene-0129",
+      "variant": "provenance_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not provenance_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0129",
+      "variant": "response_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not weak_response_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0133",
+      "variant": "baseline",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": []
+    },
+    {
+      "clip_id": "scene-0133",
+      "variant": "provenance_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not provenance_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0133",
+      "variant": "response_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not weak_response_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0138",
+      "variant": "baseline",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": []
+    },
+    {
+      "clip_id": "scene-0138",
+      "variant": "provenance_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not provenance_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0138",
+      "variant": "response_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not weak_response_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0151",
+      "variant": "baseline",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": []
+    },
+    {
+      "clip_id": "scene-0151",
+      "variant": "provenance_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not provenance_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0151",
+      "variant": "response_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not weak_response_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0178",
+      "variant": "baseline",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": []
+    },
+    {
+      "clip_id": "scene-0178",
+      "variant": "provenance_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not provenance_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0178",
+      "variant": "response_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not weak_response_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0180",
+      "variant": "baseline",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": []
+    },
+    {
+      "clip_id": "scene-0180",
+      "variant": "provenance_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not provenance_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0180",
+      "variant": "response_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not weak_response_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0181",
+      "variant": "baseline",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": []
+    },
+    {
+      "clip_id": "scene-0181",
+      "variant": "provenance_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not provenance_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0181",
+      "variant": "response_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not weak_response_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0183",
+      "variant": "baseline",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": []
+    },
+    {
+      "clip_id": "scene-0183",
+      "variant": "provenance_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not provenance_violation"
+      ]
+    },
+    {
+      "clip_id": "scene-0183",
+      "variant": "response_mutation",
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "A[] not weak_response_violation"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "adjusted_speed_mps": "6",
+  "assigned_ego_speed_mps": 6.000000001,
+  "expected_stop_position": "-3/2",
+  "expected_stopping_distance": "9",
+  "solver_status": "SAT",
+  "stop_position": "-3/2",
+  "stopping_distance": "9"
+}

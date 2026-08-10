@@ -1,0 +1,1797 @@
+{
+  "checker": "UPPAAL_REMAINING_CANDIDATES_MULTI_PROPERTY_TRACE_REPLAY",
+  "scene_count": 4,
+  "model_count": 60,
+  "query_evaluation_count": 420,
+  "semantics": {
+    "preserve": "A repeat does not reset a pending deadline.",
+    "reset": "A repeat resets a pending deadline.",
+    "deduplicate_1s": "Equivalent commands within 1 s are suppressed; this is a sensitivity assumption, not a source contract."
+  },
+  "all_oracles_match": true,
+  "summary": {
+    "scene-0019": {
+      "target_event_id": "scene-0019@10600000",
+      "visual_grounding": "SUPPORTED_PEDESTRIAN_AND_SPEED_BUMP_VISIBLE",
+      "deadline_pass_by_semantics": {
+        "preserve": [],
+        "reset": [],
+        "deduplicate_1s": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "target_response_observed": false,
+      "orphan_response_free_by_semantics": {
+        "preserve": true,
+        "reset": true,
+        "deduplicate_1s": true
+      },
+      "safety_status": "UNKNOWN",
+      "classification": "DUPLICATE_COC_POLICY_SENSITIVE",
+      "training_use": "REVIEW_ONLY_UNTIL_DUPLICATE_POLICY_IS_FIXED"
+    },
+    "scene-0028": {
+      "target_event_id": "scene-0028@6500000",
+      "visual_grounding": "PARTIAL_INTERSECTION_AND_SIGNAL_VISIBLE_LATER",
+      "deadline_pass_by_semantics": {
+        "preserve": [
+          4,
+          5
+        ],
+        "reset": [
+          3,
+          4,
+          5
+        ],
+        "deduplicate_1s": [
+          4,
+          5
+        ]
+      },
+      "target_response_observed": true,
+      "orphan_response_free_by_semantics": {
+        "preserve": true,
+        "reset": true,
+        "deduplicate_1s": false
+      },
+      "safety_status": "UNKNOWN",
+      "classification": "RESET_POLICY_FLIPS_D3_AND_DEDUP_BREAKS_PAIRING",
+      "training_use": "CONDITIONAL_HARD_NEGATIVE_UNDER_PRESERVE_D3"
+    },
+    "scene-0042": {
+      "target_event_id": "scene-0042@6500000",
+      "visual_grounding": "SUPPORTED_LEAD_VEHICLE_VISIBLE",
+      "deadline_pass_by_semantics": {
+        "preserve": [
+          4,
+          5
+        ],
+        "reset": [
+          4,
+          5
+        ],
+        "deduplicate_1s": [
+          4,
+          5
+        ]
+      },
+      "target_response_observed": true,
+      "orphan_response_free_by_semantics": {
+        "preserve": true,
+        "reset": true,
+        "deduplicate_1s": true
+      },
+      "safety_status": "UNKNOWN",
+      "classification": "D3_BOUNDARY_NOT_REPEAT_SEMANTICS_SENSITIVE",
+      "training_use": "LOW_CONFIDENCE_D3_HARD_NEGATIVE"
+    },
+    "scene-0065": {
+      "target_event_id": "scene-0065@13200000",
+      "visual_grounding": "BUS_VISIBLE_BUT_CAUSAL_DIRECTION_INCONCLUSIVE",
+      "deadline_pass_by_semantics": {
+        "preserve": [
+          4,
+          5
+        ],
+        "reset": [
+          4,
+          5
+        ],
+        "deduplicate_1s": [
+          4,
+          5
+        ]
+      },
+      "target_response_observed": true,
+      "orphan_response_free_by_semantics": {
+        "preserve": true,
+        "reset": true,
+        "deduplicate_1s": true
+      },
+      "safety_status": "UNKNOWN",
+      "classification": "D3_BOUNDARY_WITH_INCONCLUSIVE_CAUSAL_GROUNDING",
+      "training_use": "REVIEW_ONLY_UNTIL_SEMANTIC_GROUNDING_IS_CONFIRMED"
+    }
+  },
+  "source_robustness": {
+    "scene-0019": {
+      "target_event_id": "scene-0019@10600000",
+      "coc": "Adapt speed for the speed bump while keeping lane and yielding to the pedestrian crossing the road.",
+      "three_second_robustness": {
+        "profile_count": 27,
+        "detected_profile_count": 4,
+        "detection_fraction": 0.1481,
+        "minimum_latency_s": 2.6599,
+        "maximum_latency_s": 2.7198
+      },
+      "deadline_sensitivity": {
+        "1s": {
+          "profile_count": 27,
+          "detected_profile_count": 0,
+          "minimum_latency_s": null,
+          "maximum_latency_s": null
+        },
+        "2s": {
+          "profile_count": 27,
+          "detected_profile_count": 0,
+          "minimum_latency_s": null,
+          "maximum_latency_s": null
+        },
+        "3s": {
+          "profile_count": 27,
+          "detected_profile_count": 4,
+          "minimum_latency_s": 2.6599,
+          "maximum_latency_s": 2.7198
+        },
+        "4s": {
+          "profile_count": 27,
+          "detected_profile_count": 4,
+          "minimum_latency_s": 2.6599,
+          "maximum_latency_s": 2.7198
+        },
+        "5s": {
+          "profile_count": 27,
+          "detected_profile_count": 4,
+          "minimum_latency_s": 2.6599,
+          "maximum_latency_s": 2.7198
+        }
+      }
+    },
+    "scene-0028": {
+      "target_event_id": "scene-0028@6500000",
+      "coc": "Maintain lane and decelerate to stop for the red traffic light at the intersection.",
+      "three_second_robustness": {
+        "profile_count": 27,
+        "detected_profile_count": 5,
+        "detection_fraction": 0.1852,
+        "minimum_latency_s": 2.8396,
+        "maximum_latency_s": 2.9589
+      },
+      "deadline_sensitivity": {
+        "1s": {
+          "profile_count": 27,
+          "detected_profile_count": 0,
+          "minimum_latency_s": null,
+          "maximum_latency_s": null
+        },
+        "2s": {
+          "profile_count": 27,
+          "detected_profile_count": 0,
+          "minimum_latency_s": null,
+          "maximum_latency_s": null
+        },
+        "3s": {
+          "profile_count": 27,
+          "detected_profile_count": 5,
+          "minimum_latency_s": 2.8396,
+          "maximum_latency_s": 2.9589
+        },
+        "4s": {
+          "profile_count": 27,
+          "detected_profile_count": 16,
+          "minimum_latency_s": 2.8396,
+          "maximum_latency_s": 3.6195
+        },
+        "5s": {
+          "profile_count": 27,
+          "detected_profile_count": 24,
+          "minimum_latency_s": 2.8396,
+          "maximum_latency_s": 4.2795
+        }
+      }
+    },
+    "scene-0042": {
+      "target_event_id": "scene-0042@6500000",
+      "coc": "Maintain lane and decelerate to maintain a safe distance from the lead vehicle ahead.",
+      "three_second_robustness": {
+        "profile_count": 27,
+        "detected_profile_count": 4,
+        "detection_fraction": 0.1481,
+        "minimum_latency_s": 2.6998,
+        "maximum_latency_s": 2.7794
+      },
+      "deadline_sensitivity": {
+        "1s": {
+          "profile_count": 27,
+          "detected_profile_count": 0,
+          "minimum_latency_s": null,
+          "maximum_latency_s": null
+        },
+        "2s": {
+          "profile_count": 27,
+          "detected_profile_count": 0,
+          "minimum_latency_s": null,
+          "maximum_latency_s": null
+        },
+        "3s": {
+          "profile_count": 27,
+          "detected_profile_count": 4,
+          "minimum_latency_s": 2.6998,
+          "maximum_latency_s": 2.7794
+        },
+        "4s": {
+          "profile_count": 27,
+          "detected_profile_count": 18,
+          "minimum_latency_s": 2.6998,
+          "maximum_latency_s": 3.3597
+        },
+        "5s": {
+          "profile_count": 27,
+          "detected_profile_count": 24,
+          "minimum_latency_s": 2.6998,
+          "maximum_latency_s": 4.2592
+        }
+      }
+    },
+    "scene-0065": {
+      "target_event_id": "scene-0065@13200000",
+      "coc": "Maintain lane and decelerate to maintain a safe distance from the oncoming bus and vehicles in the left adjacent lane.",
+      "three_second_robustness": {
+        "profile_count": 27,
+        "detected_profile_count": 5,
+        "detection_fraction": 0.1852,
+        "minimum_latency_s": 0.0188,
+        "maximum_latency_s": 2.9195
+      },
+      "deadline_sensitivity": {
+        "1s": {
+          "profile_count": 27,
+          "detected_profile_count": 3,
+          "minimum_latency_s": 0.0188,
+          "maximum_latency_s": 0.0188
+        },
+        "2s": {
+          "profile_count": 27,
+          "detected_profile_count": 3,
+          "minimum_latency_s": 0.0188,
+          "maximum_latency_s": 0.0188
+        },
+        "3s": {
+          "profile_count": 27,
+          "detected_profile_count": 5,
+          "minimum_latency_s": 0.0188,
+          "maximum_latency_s": 2.9195
+        },
+        "4s": {
+          "profile_count": 27,
+          "detected_profile_count": 18,
+          "minimum_latency_s": 0.0188,
+          "maximum_latency_s": 3.6391
+        },
+        "5s": {
+          "profile_count": 27,
+          "detected_profile_count": 24,
+          "minimum_latency_s": 0.0188,
+          "maximum_latency_s": 4.119
+        }
+      }
+    }
+  },
+  "claim_limit": "The models check timed protocol properties over derived speed responses. They do not establish actuator behavior, collision risk, or physical safety.",
+  "results": [
+    {
+      "scene": "scene-0019",
+      "semantics": "preserve",
+      "deadline_s": 1,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0019",
+      "semantics": "preserve",
+      "deadline_s": 2,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0019",
+      "semantics": "preserve",
+      "deadline_s": 3,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0019",
+      "semantics": "preserve",
+      "deadline_s": 4,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0019",
+      "semantics": "preserve",
+      "deadline_s": 5,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0019",
+      "semantics": "reset",
+      "deadline_s": 1,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0019",
+      "semantics": "reset",
+      "deadline_s": 2,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0019",
+      "semantics": "reset",
+      "deadline_s": 3,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0019",
+      "semantics": "reset",
+      "deadline_s": 4,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0019",
+      "semantics": "reset",
+      "deadline_s": 5,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0019",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 1,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0019",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 2,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0019",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 3,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0019",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 4,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0019",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 5,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0028",
+      "semantics": "preserve",
+      "deadline_s": 1,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0028",
+      "semantics": "preserve",
+      "deadline_s": 2,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0028",
+      "semantics": "preserve",
+      "deadline_s": 3,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0028",
+      "semantics": "preserve",
+      "deadline_s": 4,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0028",
+      "semantics": "preserve",
+      "deadline_s": 5,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0028",
+      "semantics": "reset",
+      "deadline_s": 1,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0028",
+      "semantics": "reset",
+      "deadline_s": 2,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0028",
+      "semantics": "reset",
+      "deadline_s": 3,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0028",
+      "semantics": "reset",
+      "deadline_s": 4,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0028",
+      "semantics": "reset",
+      "deadline_s": 5,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0028",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 1,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0028",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 2,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0028",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 3,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0028",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 4,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0028",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 5,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0042",
+      "semantics": "preserve",
+      "deadline_s": 1,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0042",
+      "semantics": "preserve",
+      "deadline_s": 2,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0042",
+      "semantics": "preserve",
+      "deadline_s": 3,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0042",
+      "semantics": "preserve",
+      "deadline_s": 4,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0042",
+      "semantics": "preserve",
+      "deadline_s": 5,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0042",
+      "semantics": "reset",
+      "deadline_s": 1,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0042",
+      "semantics": "reset",
+      "deadline_s": 2,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0042",
+      "semantics": "reset",
+      "deadline_s": 3,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0042",
+      "semantics": "reset",
+      "deadline_s": 4,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0042",
+      "semantics": "reset",
+      "deadline_s": 5,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0042",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 1,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0042",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 2,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0042",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 3,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0042",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 4,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0042",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 5,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0065",
+      "semantics": "preserve",
+      "deadline_s": 1,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0065",
+      "semantics": "preserve",
+      "deadline_s": 2,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0065",
+      "semantics": "preserve",
+      "deadline_s": 3,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0065",
+      "semantics": "preserve",
+      "deadline_s": 4,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0065",
+      "semantics": "preserve",
+      "deadline_s": 5,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0065",
+      "semantics": "reset",
+      "deadline_s": 1,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0065",
+      "semantics": "reset",
+      "deadline_s": 2,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0065",
+      "semantics": "reset",
+      "deadline_s": 3,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0065",
+      "semantics": "reset",
+      "deadline_s": 4,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0065",
+      "semantics": "reset",
+      "deadline_s": 5,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0065",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 1,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0065",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 2,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0065",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 3,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0065",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 4,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    },
+    {
+      "scene": "scene-0065",
+      "semantics": "deduplicate_1s",
+      "deadline_s": 5,
+      "status": "EXECUTED",
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "scenes": [
+    "scene-0150",
+    "scene-0151"
+  ],
+  "scene_count": 2,
+  "duration_ms": 32569,
+  "event_count": 10,
+  "channel_counts": {
+    "accel_req": 4,
+    "accel_resp": 4,
+    "scene_boundary": 1,
+    "slow_req": 1
+  },
+  "all_queries_satisfied": false,
+  "responded": false,
+  "no_deadline_miss": false,
+  "no_contradiction": true,
+  "no_boundary_violation": true,
+  "no_deadlock": true,
+  "source_done": true,
+  "scene_summary": [
+    {
+      "scene": "scene-0150",
+      "global_start_ms": 0,
+      "global_end_ms": 19100,
+      "trusted_obligation_events": 1,
+      "derived_response_witnesses": 0
+    },
+    {
+      "scene": "scene-0151",
+      "global_start_ms": 19950,
+      "global_end_ms": 39000,
+      "trusted_obligation_events": 4,
+      "derived_response_witnesses": 4
+    }
+  ],
+  "events": [
+    {
+      "time_ms": 3200,
+      "channel": "slow_req",
+      "label": "scene-0150:0:slow",
+      "scene": "scene-0150",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Adapt speed for the upcoming speed bump while keeping lane and maintaining a safe distance from the lead vehicle.",
+        "local_timestamp_us": 3200000
+      }
+    },
+    {
+      "time_ms": 19100,
+      "channel": "scene_boundary",
+      "label": "scene-0150->scene-0151",
+      "scene": "scene-0151",
+      "provenance": "DERIVED_NUSCENES_METADATA",
+      "detail": {
+        "gap_ms": 850,
+        "from": "scene-0150",
+        "to": "scene-0151"
+      }
+    },
+    {
+      "time_ms": 28050,
+      "channel": "accel_req",
+      "label": "scene-0151:1:accel",
+      "scene": "scene-0151",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Keep lane and accelerate through the intersection while navigating around construction cones and barriers.",
+        "local_timestamp_us": 8100000
+      }
+    },
+    {
+      "time_ms": 28830,
+      "channel": "accel_resp",
+      "label": "scene-0151:1:accel:response",
+      "scene": "scene-0151",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 8100000,
+        "response_local_ms": 8880,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 29350,
+      "channel": "accel_req",
+      "label": "scene-0151:2:accel",
+      "scene": "scene-0151",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Keep lane and accelerate through the construction zone while navigating around the traffic cones.",
+        "local_timestamp_us": 9400000
+      }
+    },
+    {
+      "time_ms": 29370,
+      "channel": "accel_resp",
+      "label": "scene-0151:2:accel:response",
+      "scene": "scene-0151",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 9400000,
+        "response_local_ms": 9420,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 30950,
+      "channel": "accel_req",
+      "label": "scene-0151:3:accel",
+      "scene": "scene-0151",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Keep lane and accelerate while navigating through the construction zone with workers and cones on the right.",
+        "local_timestamp_us": 11000000
+      }
+    },
+    {
+      "time_ms": 30950,
+      "channel": "accel_resp",
+      "label": "scene-0151:3:accel:response",
+      "scene": "scene-0151",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 11000000,
+        "response_local_ms": 11000,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 32550,
+      "channel": "accel_req",
+      "label": "scene-0151:4:accel",
+      "scene": "scene-0151",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Maintain lane and accelerate while navigating through the construction zone with workers and cones on the right.",
+        "local_timestamp_us": 12600000
+      }
+    },
+    {
+      "time_ms": 32569,
+      "channel": "accel_resp",
+      "label": "scene-0151:4:accel:response",
+      "scene": "scene-0151",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 12600000,
+        "response_local_ms": 12619,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    }
+  ],
+  "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0150-to-scene-0151-loop.xml",
+  "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0150-to-scene-0151-loop.txt",
+  "queries": [
+    {
+      "query": "E<> Source.Done",
+      "satisfied": true
+    },
+    {
+      "query": "E<> MonitorProc.Responded",
+      "satisfied": false
+    },
+    {
+      "query": "A[] not deadline_miss",
+      "satisfied": false
+    },
+    {
+      "query": "A[] not contradiction",
+      "satisfied": true
+    },
+    {
+      "query": "A[] not boundary_violation",
+      "satisfied": true
+    },
+    {
+      "query": "A[] not deadlock",
+      "satisfied": true
+    }
+  ]
+}

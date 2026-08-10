@@ -1,0 +1,95 @@
+{
+  "broken_markdown_link_count": 0,
+  "broken_markdown_links": [],
+  "canonical_owners": {
+    "documents": "docs",
+    "experiment_protocols": "experiments",
+    "generated_artifacts": "artifacts",
+    "pipelines": "cli/pipelines/<domain>/<purpose>",
+    "public_code": "src",
+    "tests": "tests"
+  },
+  "claim_scope": "REPOSITORY_LAYOUT_AND_SOFTWARE_REGRESSION_NOT_RESEARCH_OR_VEHICLE_SAFETY",
+  "experiment_id": "PROJECT-LAYOUT-REFACTOR-001",
+  "file_counts": {
+    "maintained_eblc_tests": 9,
+    "public_results": 978,
+    "restricted_results": 849
+  },
+  "known_preexisting_dependency_gaps": [
+    "base Python lacks numpy for experiments/contract_micro_world",
+    "base Python lacks pandas for experiments/sequential_coc"
+  ],
+  "layout_version": "2.0",
+  "run_date": "2026-08-09",
+  "run_id": "layout-v2-2026-08-09-v4",
+  "status": "EXECUTED",
+  "tests": {
+    "cli_help": {
+      "commands": [
+        {
+          "command": "/usr/bin/python3 -m cli.pipelines.eblc.core_smt_compile.run --help",
+          "exit_code": 0,
+          "passed": true,
+          "test_count": null
+        },
+        {
+          "command": "/usr/bin/python3 -m cli.pipelines.eblc.p0b_schema_bcv.run --help",
+          "exit_code": 0,
+          "passed": true,
+          "test_count": null
+        },
+        {
+          "command": "/usr/bin/python3 -m cli.pipelines.eblc.program_conformance.run --help",
+          "exit_code": 0,
+          "passed": true,
+          "test_count": null
+        },
+        {
+          "command": "/usr/bin/python3 -m cli.pipelines.eblc.restricted_scene_grounding.run --help",
+          "exit_code": 0,
+          "passed": true,
+          "test_count": null
+        },
+        {
+          "command": "/usr/bin/python3 -m cli.pipelines.eblc.robustness_audit.run --help",
+          "exit_code": 0,
+          "passed": true,
+          "test_count": null
+        },
+        {
+          "command": "/usr/bin/python3 -m cli.pipelines.eblc.scenario_validation.run --help",
+          "exit_code": 0,
+          "passed": true,
+          "test_count": null
+        }
+      ],
+      "passed_count": 6,
+      "total_count": 6
+    },
+    "eblc": {
+      "command": "/usr/bin/python3 -m unittest discover -s tests/guard_synth_eblc -p test_*.py",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": 77
+    },
+    "p0a": {
+      "command": "/usr/bin/python3 -m unittest discover -s experiments/eblc_pilot -p test_*.py",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": 7
+    },
+    "structure": {
+      "command": "/usr/bin/python3 -m unittest tests.structure.test_project_layout -v",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": 8
+    },
+    "uppaal_models": {
+      "command": "/usr/bin/python3 -m unittest discover -s experiments/uppaal -p test_*.py",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": 14
+    }
+  }
+}

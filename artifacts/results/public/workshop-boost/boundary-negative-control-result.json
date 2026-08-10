@@ -1,0 +1,69 @@
+{
+  "checker": "UPPAAL_BOUNDARY_NEGATIVE_CONTROL",
+  "purpose": "Verify that an obligation opened in an unverified scene is discarded at the scene boundary and cannot be completed by a response witness from the next scene.",
+  "timeline_ms": {
+    "request": 0,
+    "unverified_boundary": 1000,
+    "response": 1500
+  },
+  "queries": [
+    "E<> Source.Done",
+    "E<> Monitor.Discarded",
+    "A[] not cross_boundary_completion",
+    "A[] not boundary_carryover",
+    "A[] not deadlock"
+  ],
+  "results": [
+    {
+      "variant": "correct_discard",
+      "status": "EXECUTED",
+      "exit_code": 0,
+      "verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [],
+      "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/boundary-negative-control/correct_discard.xml",
+      "trace_path": "experiments/results/baseline/workshop-boost/uppaal-traces/boundary-correct_discard.txt"
+    },
+    {
+      "variant": "buggy_carryover",
+      "status": "EXECUTED",
+      "exit_code": 0,
+      "verdicts": [
+        true,
+        false,
+        false,
+        false,
+        true
+      ],
+      "expected_verdicts": [
+        true,
+        false,
+        false,
+        false,
+        true
+      ],
+      "oracle_match": true,
+      "violated_queries": [
+        "E<> Monitor.Discarded",
+        "A[] not cross_boundary_completion",
+        "A[] not boundary_carryover"
+      ],
+      "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/boundary-negative-control/buggy_carryover.xml",
+      "trace_path": "experiments/results/baseline/workshop-boost/uppaal-traces/boundary-buggy_carryover.txt"
+    }
+  ],
+  "overall": "PASS"
+}

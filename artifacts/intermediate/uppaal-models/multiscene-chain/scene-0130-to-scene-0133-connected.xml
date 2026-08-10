@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+  <declaration>clock t;
+clock obligation_clock;
+broadcast chan slow_req, accel_req, slow_resp, accel_resp, scene_boundary;
+const int DEADLINE = 3000;
+const int MAX_BOUNDARY_GAP = 1000;
+bool deadline_miss = false;
+bool contradiction = false;
+bool boundary_violation = false;
+int active_intent = 0; // 0 none, 1 slow, 2 accel</declaration>
+  <template>
+    <name>ChainSource</name>
+    <declaration />
+    <location id="s0" x="0" y="0">
+      <name x="-20" y="-30">Before0</name>
+      <label kind="invariant" x="-20" y="20">t &lt;= 4500</label>
+    </location>
+    <location id="s1" x="90" y="0">
+      <name x="70" y="-30">Before1</name>
+      <label kind="invariant" x="70" y="20">t &lt;= 4600</label>
+    </location>
+    <location id="s2" x="180" y="0">
+      <name x="160" y="-30">Before2</name>
+      <label kind="invariant" x="160" y="20">t &lt;= 19350</label>
+    </location>
+    <location id="s3" x="270" y="0">
+      <name x="250" y="-30">Before3</name>
+      <label kind="invariant" x="250" y="20">t &lt;= 28501</label>
+    </location>
+    <location id="s4" x="360" y="0">
+      <name x="340" y="-30">Before4</name>
+      <label kind="invariant" x="340" y="20">t &lt;= 30001</label>
+    </location>
+    <location id="s5" x="450" y="0">
+      <name x="430" y="-30">Before5</name>
+      <label kind="invariant" x="430" y="20">t &lt;= 31001</label>
+    </location>
+    <location id="s6" x="540" y="0">
+      <name x="520" y="-30">Before6</name>
+      <label kind="invariant" x="520" y="20">t &lt;= 32401</label>
+    </location>
+    <location id="s7" x="630" y="0">
+      <name x="610" y="-30">Before7</name>
+      <label kind="invariant" x="610" y="20">t &lt;= 32903</label>
+    </location>
+    <location id="s8" x="720" y="0">
+      <name x="700" y="-30">Before8</name>
+      <label kind="invariant" x="700" y="20">t &lt;= 32903</label>
+    </location>
+    <location id="s9" x="810" y="0">
+      <name x="790" y="-30">Before9</name>
+      <label kind="invariant" x="790" y="20">t &lt;= 32903</label>
+    </location>
+    <location id="s10" x="900" y="0">
+      <name x="880" y="-30">Before10</name>
+      <label kind="invariant" x="880" y="20">t &lt;= 39401</label>
+    </location>
+    <location id="s11" x="990" y="0">
+      <name x="970" y="-30">Before11</name>
+      <label kind="invariant" x="970" y="20">t &lt;= 59351</label>
+    </location>
+    <location id="s12" x="1080" y="0">
+      <name x="1060" y="-30">Before12</name>
+      <label kind="invariant" x="1060" y="20">t &lt;= 62601</label>
+    </location>
+    <location id="s13" x="1170" y="0">
+      <name x="1150" y="-30">Before13</name>
+      <label kind="invariant" x="1150" y="20">t &lt;= 66201</label>
+    </location>
+    <location id="s14" x="1260" y="0">
+      <name x="1240" y="-30">Before14</name>
+      <label kind="invariant" x="1240" y="20">t &lt;= 72001</label>
+    </location>
+    <location id="s15" x="1350" y="0">
+      <name x="1330" y="-30">Before15</name>
+      <label kind="invariant" x="1330" y="20">t &lt;= 72301</label>
+    </location>
+    <location id="s16" x="1440" y="0">
+      <name x="1420" y="-30">Done</name>
+    </location>
+    <init ref="s0" />
+    <transition>
+      <source ref="s0" />
+      <target ref="s1" />
+      <label kind="guard" x="0" y="0">t == 4500</label>
+      <label kind="synchronisation" x="0" y="20">slow_req!</label>
+    </transition>
+    <transition>
+      <source ref="s1" />
+      <target ref="s2" />
+      <label kind="guard" x="0" y="0">t == 4600</label>
+      <label kind="synchronisation" x="0" y="20">slow_req!</label>
+    </transition>
+    <transition>
+      <source ref="s2" />
+      <target ref="s3" />
+      <label kind="guard" x="0" y="0">t == 19350</label>
+      <label kind="synchronisation" x="0" y="20">scene_boundary!</label>
+      <label kind="assignment" x="0" y="40">boundary_violation = boundary_violation || (650 &gt; MAX_BOUNDARY_GAP)</label>
+    </transition>
+    <transition>
+      <source ref="s3" />
+      <target ref="s4" />
+      <label kind="guard" x="0" y="0">t == 28501</label>
+      <label kind="synchronisation" x="0" y="20">slow_req!</label>
+    </transition>
+    <transition>
+      <source ref="s4" />
+      <target ref="s5" />
+      <label kind="guard" x="0" y="0">t == 30001</label>
+      <label kind="synchronisation" x="0" y="20">slow_req!</label>
+    </transition>
+    <transition>
+      <source ref="s5" />
+      <target ref="s6" />
+      <label kind="guard" x="0" y="0">t == 31001</label>
+      <label kind="synchronisation" x="0" y="20">slow_req!</label>
+    </transition>
+    <transition>
+      <source ref="s6" />
+      <target ref="s7" />
+      <label kind="guard" x="0" y="0">t == 32401</label>
+      <label kind="synchronisation" x="0" y="20">slow_req!</label>
+    </transition>
+    <transition>
+      <source ref="s7" />
+      <target ref="s8" />
+      <label kind="guard" x="0" y="0">t == 32903</label>
+      <label kind="synchronisation" x="0" y="20">slow_resp!</label>
+    </transition>
+    <transition>
+      <source ref="s8" />
+      <target ref="s9" />
+      <label kind="guard" x="0" y="0">t == 32903</label>
+      <label kind="synchronisation" x="0" y="20">slow_resp!</label>
+    </transition>
+    <transition>
+      <source ref="s9" />
+      <target ref="s10" />
+      <label kind="guard" x="0" y="0">t == 32903</label>
+      <label kind="synchronisation" x="0" y="20">slow_resp!</label>
+    </transition>
+    <transition>
+      <source ref="s10" />
+      <target ref="s11" />
+      <label kind="guard" x="0" y="0">t == 39401</label>
+      <label kind="synchronisation" x="0" y="20">scene_boundary!</label>
+      <label kind="assignment" x="0" y="40">boundary_violation = boundary_violation || (600 &gt; MAX_BOUNDARY_GAP)</label>
+    </transition>
+    <transition>
+      <source ref="s11" />
+      <target ref="s12" />
+      <label kind="guard" x="0" y="0">t == 59351</label>
+      <label kind="synchronisation" x="0" y="20">scene_boundary!</label>
+      <label kind="assignment" x="0" y="40">boundary_violation = boundary_violation || (650 &gt; MAX_BOUNDARY_GAP)</label>
+    </transition>
+    <transition>
+      <source ref="s12" />
+      <target ref="s13" />
+      <label kind="guard" x="0" y="0">t == 62601</label>
+      <label kind="synchronisation" x="0" y="20">slow_req!</label>
+    </transition>
+    <transition>
+      <source ref="s13" />
+      <target ref="s14" />
+      <label kind="guard" x="0" y="0">t == 66201</label>
+      <label kind="synchronisation" x="0" y="20">accel_req!</label>
+    </transition>
+    <transition>
+      <source ref="s14" />
+      <target ref="s15" />
+      <label kind="guard" x="0" y="0">t == 72001</label>
+      <label kind="synchronisation" x="0" y="20">slow_req!</label>
+    </transition>
+    <transition>
+      <source ref="s15" />
+      <target ref="s16" />
+      <label kind="guard" x="0" y="0">t == 72301</label>
+      <label kind="synchronisation" x="0" y="20">slow_req!</label>
+    </transition>
+    <transition>
+      <source ref="s16" />
+      <target ref="s16" />
+    </transition>
+  </template>
+  <template>
+    <name>Monitor</name>
+    <declaration />
+    <location id="m0" x="0" y="260">
+      <name x="-20" y="230">Idle</name>
+    </location>
+    <location id="m1" x="220" y="200">
+      <name x="200" y="170">ActiveSlow</name>
+      <label kind="invariant" x="200" y="220">obligation_clock &lt;= DEADLINE</label>
+    </location>
+    <location id="m2" x="220" y="320">
+      <name x="200" y="290">ActiveAccel</name>
+      <label kind="invariant" x="200" y="340">obligation_clock &lt;= DEADLINE</label>
+    </location>
+    <location id="m3" x="460" y="260">
+      <name x="440" y="230">Responded</name>
+    </location>
+    <location id="m4" x="460" y="420">
+      <name x="440" y="390">Miss</name>
+    </location>
+    <init ref="m0" />
+    <transition>
+      <source ref="m0" />
+      <target ref="m1" />
+      <label kind="synchronisation" x="0" y="0">slow_req?</label>
+      <label kind="assignment" x="0" y="20">active_intent = 1, obligation_clock = 0</label>
+    </transition>
+    <transition>
+      <source ref="m0" />
+      <target ref="m2" />
+      <label kind="synchronisation" x="0" y="0">accel_req?</label>
+      <label kind="assignment" x="0" y="20">active_intent = 2, obligation_clock = 0</label>
+    </transition>
+    <transition>
+      <source ref="m1" />
+      <target ref="m1" />
+      <label kind="synchronisation" x="0" y="0">slow_req?</label>
+    </transition>
+    <transition>
+      <source ref="m2" />
+      <target ref="m2" />
+      <label kind="synchronisation" x="0" y="0">accel_req?</label>
+    </transition>
+    <transition>
+      <source ref="m1" />
+      <target ref="m2" />
+      <label kind="synchronisation" x="0" y="0">accel_req?</label>
+      <label kind="assignment" x="0" y="20">contradiction = true, active_intent = 2, obligation_clock = 0</label>
+    </transition>
+    <transition>
+      <source ref="m2" />
+      <target ref="m1" />
+      <label kind="synchronisation" x="0" y="0">slow_req?</label>
+      <label kind="assignment" x="0" y="20">contradiction = true, active_intent = 1, obligation_clock = 0</label>
+    </transition>
+    <transition>
+      <source ref="m1" />
+      <target ref="m3" />
+      <label kind="synchronisation" x="0" y="0">slow_resp?</label>
+      <label kind="assignment" x="0" y="20">active_intent = 0</label>
+    </transition>
+    <transition>
+      <source ref="m2" />
+      <target ref="m3" />
+      <label kind="synchronisation" x="0" y="0">accel_resp?</label>
+      <label kind="assignment" x="0" y="20">active_intent = 0</label>
+    </transition>
+    <transition>
+      <source ref="m3" />
+      <target ref="m1" />
+      <label kind="synchronisation" x="0" y="0">slow_req?</label>
+      <label kind="assignment" x="0" y="20">active_intent = 1, obligation_clock = 0</label>
+    </transition>
+    <transition>
+      <source ref="m3" />
+      <target ref="m2" />
+      <label kind="synchronisation" x="0" y="0">accel_req?</label>
+      <label kind="assignment" x="0" y="20">active_intent = 2, obligation_clock = 0</label>
+    </transition>
+    <transition>
+      <source ref="m1" />
+      <target ref="m4" />
+      <label kind="guard" x="0" y="0">obligation_clock &gt;= DEADLINE</label>
+      <label kind="assignment" x="0" y="20">deadline_miss = true</label>
+    </transition>
+    <transition>
+      <source ref="m2" />
+      <target ref="m4" />
+      <label kind="guard" x="0" y="0">obligation_clock &gt;= DEADLINE</label>
+      <label kind="assignment" x="0" y="20">deadline_miss = true</label>
+    </transition>
+    <transition>
+      <source ref="m4" />
+      <target ref="m4" />
+    </transition>
+  </template>
+  <system>Source = ChainSource();
+MonitorProc = Monitor();
+system Source, MonitorProc;</system>
+</nta>

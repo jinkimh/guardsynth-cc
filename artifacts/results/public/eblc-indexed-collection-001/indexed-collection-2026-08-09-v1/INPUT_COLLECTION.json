@@ -1,0 +1,101 @@
+{
+  "action_domain": [
+    "STOP",
+    "CREEP",
+    "PROCEED"
+  ],
+  "claim_scope": "P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY",
+  "collection_id": "p0b_two_actor_two_zone_collection",
+  "collection_version": "eblc-indexed-collection-v0.1",
+  "composition_evidence_refs": [
+    "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+  ],
+  "frames": 8,
+  "instances": [
+    {
+      "allowed_actions": [
+        "STOP"
+      ],
+      "association": {
+        "candidate_target_entity_ids": [
+          "synthetic-pedestrian:P17"
+        ],
+        "candidate_zone_ids": [
+          "synthetic-zone:CZ4"
+        ],
+        "coordinate_transform_ref": "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0",
+        "evidence_refs": [
+          "P0B-SYNTHETIC-ASSOCIATION-A-v0",
+          "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+          "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0"
+        ],
+        "reason_codes": [],
+        "status": "BOUND",
+        "target_entity_id": "synthetic-pedestrian:P17",
+        "zone_geometry_ref": "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+        "zone_id": "synthetic-zone:CZ4"
+      },
+      "contract_id": "C0",
+      "instance_id": "ped17_zone4",
+      "overrides_contracts": [],
+      "priority_tier": "HARD",
+      "zone_entry": {
+        "evidence_refs": [
+          "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+        ],
+        "frame": "ego_path_s",
+        "unit": "m",
+        "value": 0.0
+      }
+    },
+    {
+      "allowed_actions": [
+        "STOP"
+      ],
+      "association": {
+        "candidate_target_entity_ids": [
+          "synthetic-pedestrian:P18"
+        ],
+        "candidate_zone_ids": [
+          "synthetic-zone:CZ5"
+        ],
+        "coordinate_transform_ref": "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0",
+        "evidence_refs": [
+          "P0B-SYNTHETIC-ASSOCIATION-B-v0",
+          "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+          "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0"
+        ],
+        "reason_codes": [],
+        "status": "BOUND",
+        "target_entity_id": "synthetic-pedestrian:P18",
+        "zone_geometry_ref": "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+        "zone_id": "synthetic-zone:CZ5"
+      },
+      "contract_id": "C1",
+      "instance_id": "ped18_zone5",
+      "overrides_contracts": [],
+      "priority_tier": "HARD",
+      "zone_entry": {
+        "evidence_refs": [
+          "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+        ],
+        "frame": "ego_path_s",
+        "unit": "m",
+        "value": 12.0
+      }
+    }
+  ],
+  "source_refs": [
+    "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+    "P0B-SYNTHETIC-PREDICATE-SPEC-v0",
+    "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+    "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+    "P0B-SYNTHETIC-COMPOSITION-POLICY-v0",
+    "P0B-SYNTHETIC-ASSOCIATION-A-v0",
+    "P0B-SYNTHETIC-ASSOCIATION-B-v0",
+    "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+    "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+    "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0"
+  ],
+  "template_program_ref": "p0b_pedestrian_conflict_zone_program_v02"
+}

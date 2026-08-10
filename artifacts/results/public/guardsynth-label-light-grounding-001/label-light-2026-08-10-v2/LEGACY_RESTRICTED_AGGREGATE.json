@@ -1,0 +1,14 @@
+{
+  "adapted_candidate_count": 4,
+  "association_review_required_count": 4,
+  "auto_confirmed_count": 0,
+  "candidate_event_count": 5,
+  "claim_scope": "AGGREGATE_LABEL_LIGHT_READINESS_NOT_ASSOCIATION_ACCURACY_OR_SAFETY",
+  "contract_blocked_count": 4,
+  "decision": "LABEL_LIGHT_REVIEW_INPUT_REQUIRED",
+  "derivation_gap_count": 1,
+  "missing_scene_input_count": 19,
+  "raw_identifiers_included": false,
+  "slot_count": 24,
+  "status": "LABEL_LIGHT_LEGACY_INPUT_AUDIT"
+}

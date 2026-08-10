@@ -1,0 +1,194 @@
+{
+  "agreement": 1.0,
+  "matching_scenarios": 5,
+  "program_version": "eblc-program-v0.2",
+  "records": [
+    {
+      "bundle_id": "p0b_synthetic_composition_bundle_v02",
+      "canonical": [
+        {
+          "admissible_actions": [
+            "STOP"
+          ],
+          "false_deadlock": false,
+          "selected_contracts": [
+            "C0"
+          ],
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "admissible_actions": [
+            "STOP"
+          ],
+          "false_deadlock": false,
+          "selected_contracts": [
+            "C0"
+          ],
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "limitations": [
+        "GENERATED_FINITE_TRACE_CONFORMANCE",
+        "NOT_AN_INDEPENDENT_SAFETY_ORACLE",
+        "NOT_A_VEHICLE_SAFETY_PROOF"
+      ],
+      "matches": true,
+      "mismatches": [],
+      "scenario_id": "hard_suppresses_service",
+      "solver_status": "SAT",
+      "version": "eblc-bundle-conformance-v0.2"
+    },
+    {
+      "bundle_id": "hard_conflict_bundle",
+      "canonical": [
+        {
+          "admissible_actions": [],
+          "false_deadlock": true,
+          "selected_contracts": [
+            "C0",
+            "C1"
+          ],
+          "verdict": "CONFLICT"
+        }
+      ],
+      "core_smt": [
+        {
+          "admissible_actions": [],
+          "false_deadlock": true,
+          "selected_contracts": [
+            "C0",
+            "C1"
+          ],
+          "verdict": "CONFLICT"
+        }
+      ],
+      "frame_count": 1,
+      "limitations": [
+        "GENERATED_FINITE_TRACE_CONFORMANCE",
+        "NOT_AN_INDEPENDENT_SAFETY_ORACLE",
+        "NOT_A_VEHICLE_SAFETY_PROOF"
+      ],
+      "matches": true,
+      "mismatches": [],
+      "scenario_id": "incomparable_hard_conflict",
+      "solver_status": "SAT",
+      "version": "eblc-bundle-conformance-v0.2"
+    },
+    {
+      "bundle_id": "service_review_bundle",
+      "canonical": [
+        {
+          "admissible_actions": [],
+          "false_deadlock": false,
+          "selected_contracts": [
+            "C0",
+            "C1"
+          ],
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "core_smt": [
+        {
+          "admissible_actions": [],
+          "false_deadlock": false,
+          "selected_contracts": [
+            "C0",
+            "C1"
+          ],
+          "verdict": "REVIEW_REQUIRED"
+        }
+      ],
+      "frame_count": 1,
+      "limitations": [
+        "GENERATED_FINITE_TRACE_CONFORMANCE",
+        "NOT_AN_INDEPENDENT_SAFETY_ORACLE",
+        "NOT_A_VEHICLE_SAFETY_PROOF"
+      ],
+      "matches": true,
+      "mismatches": [],
+      "scenario_id": "incomparable_service_review",
+      "solver_status": "SAT",
+      "version": "eblc-bundle-conformance-v0.2"
+    },
+    {
+      "bundle_id": "explicit_override_bundle",
+      "canonical": [
+        {
+          "admissible_actions": [
+            "STOP"
+          ],
+          "false_deadlock": false,
+          "selected_contracts": [
+            "C0"
+          ],
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "admissible_actions": [
+            "STOP"
+          ],
+          "false_deadlock": false,
+          "selected_contracts": [
+            "C0"
+          ],
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "limitations": [
+        "GENERATED_FINITE_TRACE_CONFORMANCE",
+        "NOT_AN_INDEPENDENT_SAFETY_ORACLE",
+        "NOT_A_VEHICLE_SAFETY_PROOF"
+      ],
+      "matches": true,
+      "mismatches": [],
+      "scenario_id": "explicit_same_tier_override",
+      "solver_status": "SAT",
+      "version": "eblc-bundle-conformance-v0.2"
+    },
+    {
+      "bundle_id": "no_live_bundle",
+      "canonical": [
+        {
+          "admissible_actions": [
+            "STOP",
+            "CREEP",
+            "PROCEED"
+          ],
+          "false_deadlock": false,
+          "selected_contracts": [],
+          "verdict": "VALIDATED"
+        }
+      ],
+      "core_smt": [
+        {
+          "admissible_actions": [
+            "STOP",
+            "CREEP",
+            "PROCEED"
+          ],
+          "false_deadlock": false,
+          "selected_contracts": [],
+          "verdict": "VALIDATED"
+        }
+      ],
+      "frame_count": 1,
+      "limitations": [
+        "GENERATED_FINITE_TRACE_CONFORMANCE",
+        "NOT_AN_INDEPENDENT_SAFETY_ORACLE",
+        "NOT_A_VEHICLE_SAFETY_PROOF"
+      ],
+      "matches": true,
+      "mismatches": [],
+      "scenario_id": "no_live_full_action_domain",
+      "solver_status": "SAT",
+      "version": "eblc-bundle-conformance-v0.2"
+    }
+  ],
+  "scenario_count": 5
+}

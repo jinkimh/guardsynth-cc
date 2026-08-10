@@ -1,0 +1,89 @@
+{
+  "scenes": [
+    "scene-0063",
+    "scene-0064"
+  ],
+  "scene_count": 2,
+  "duration_ms": 27800,
+  "event_count": 2,
+  "channel_counts": {
+    "scene_boundary": 1,
+    "slow_req": 1
+  },
+  "all_queries_satisfied": false,
+  "responded": false,
+  "no_deadline_miss": false,
+  "no_contradiction": true,
+  "no_boundary_violation": true,
+  "no_deadlock": true,
+  "source_done": true,
+  "scene_summary": [
+    {
+      "scene": "scene-0063",
+      "global_start_ms": 0,
+      "global_end_ms": 19250,
+      "trusted_obligation_events": 0,
+      "derived_response_witnesses": 0
+    },
+    {
+      "scene": "scene-0064",
+      "global_start_ms": 20000,
+      "global_end_ms": 39401,
+      "trusted_obligation_events": 1,
+      "derived_response_witnesses": 0
+    }
+  ],
+  "events": [
+    {
+      "time_ms": 19250,
+      "channel": "scene_boundary",
+      "label": "scene-0063->scene-0064",
+      "scene": "scene-0064",
+      "provenance": "DERIVED_NUSCENES_METADATA",
+      "detail": {
+        "gap_ms": 750,
+        "from": "scene-0063",
+        "to": "scene-0064"
+      }
+    },
+    {
+      "time_ms": 27800,
+      "channel": "slow_req",
+      "label": "scene-0064:1:slow",
+      "scene": "scene-0064",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Maintain lane and decelerate to maintain a safe distance from the lead vehicle ahead.",
+        "local_timestamp_us": 7800000
+      }
+    }
+  ],
+  "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0063-to-scene-0064-loop.xml",
+  "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0063-to-scene-0064-loop.txt",
+  "queries": [
+    {
+      "query": "E<> Source.Done",
+      "satisfied": true
+    },
+    {
+      "query": "E<> MonitorProc.Responded",
+      "satisfied": false
+    },
+    {
+      "query": "A[] not deadline_miss",
+      "satisfied": false
+    },
+    {
+      "query": "A[] not contradiction",
+      "satisfied": true
+    },
+    {
+      "query": "A[] not boundary_violation",
+      "satisfied": true
+    },
+    {
+      "query": "A[] not deadlock",
+      "satisfied": true
+    }
+  ]
+}

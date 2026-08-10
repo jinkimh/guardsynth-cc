@@ -1,0 +1,20 @@
+{
+  "audit_script_sha256": "151d6f68d5f2e9fccbb66101145aa36f04c750bbec50c38d6302c9704297fd98",
+  "claim_scope": "ADVERSARIAL_SOFTWARE_ROBUSTNESS_AUDIT_NOT_VEHICLE_SAFETY_VALIDATION",
+  "deterministic_enumeration": true,
+  "engine": "Z3_BOUNDED_SMT",
+  "experiment_id": "EBLC-ROBUSTNESS-AUDIT-001",
+  "input_class": "SYNTHETIC_ADVERSARIAL",
+  "python_version": "3.11.2",
+  "run_date": "2026-08-08",
+  "run_id": "robustness-fail-closed-2026-08-08-v6",
+  "schema_version": "eblc-schema-v0.2-fail-closed",
+  "semantics_version": "eblc-operational-semantics-v0.2-fail-closed",
+  "z3_runtime": {
+    "module_path": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages/z3/__init__.py",
+    "prefix": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36",
+    "python_site_packages": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages",
+    "source": "PROJECT_LOCAL_ISOLATED_BUILD",
+    "version": "5.0.0"
+  }
+}

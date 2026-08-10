@@ -1,0 +1,49 @@
+{
+  "claim_scope": "BOUNDED_CORE_GRAMMAR_AND_COMPILER_NOT_VEHICLE_SAFETY",
+  "code_revision": "WORKSPACE_WITHOUT_GIT_METADATA",
+  "enumeration": "DETERMINISTIC_BOUNDED_QUERY_COMPILATION",
+  "experiment_id": "EBLC-CORE-SMT-001",
+  "file_hashes": {
+    "cli/pipelines/eblc_core_smt_compile/run.py": "4137af12bb0df3300f8be1d981b1b81e7c25e961fa9b4ea1a78ee84346a399f2",
+    "cli/solver_runtime.py": "80e18d693a2916053651222778cffddc9b36b474ce9bf5220275f6a745858fcb",
+    "experiments/eblc_p0b/test_core_smt_compiler.py": "117432a1f317e6cc68689e94f54234da2d24c7aefe3a0f2322585f3d126bf0e4",
+    "src/guard_synth_eblc/core_ir.py": "27ae690b450a6462b561d5592121e536da8a943eb54280d783961fc69e95228e",
+    "src/guard_synth_eblc/fixtures/eblc_core_p0b.json": "9ad20f34de15fb4e6f01a15c60631b6a400ed90ced58d31adcb1b311c7c0bd31",
+    "src/guard_synth_eblc/schema_validation.py": "53949116079f81689324e4c5e2f4661011327f7c56957175c2e115f67f560250",
+    "src/guard_synth_eblc/schemas/eblc_core_ir.schema.json": "1c02ffd1c78127ab9c06d695516da54925b6f2692a01f3bb66243d47b72debb7",
+    "src/guard_synth_eblc/smt_compiler.py": "7bea65a3e43137bcac4d503c0557603867be1c5929a80097cc6ed958ef8c90c9"
+  },
+  "input_class": "SYNTHETIC",
+  "python_version": "3.11.2",
+  "random_seed": null,
+  "run_date": "2026-08-08",
+  "run_id": "core-smt-2026-08-08-v4",
+  "test_commands": {
+    "core": {
+      "command": "python3 -m unittest experiments.eblc_p0b.test_core_smt_compiler -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 12,
+      "test_count": 12
+    },
+    "p0b": {
+      "command": "python3 -m unittest discover -s experiments/eblc_p0b -p test_*.py -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 55,
+      "test_count": 55
+    }
+  },
+  "versions": {
+    "compiler": "eblc-core-smt-compiler-v0.1",
+    "grammar": "eblc-core-v0.1",
+    "schema": "eblc_core_ir.schema.json"
+  },
+  "z3_runtime": {
+    "module_path": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages/z3/__init__.py",
+    "prefix": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36",
+    "python_site_packages": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages",
+    "source": "PROJECT_LOCAL_ISOLATED_BUILD",
+    "version": "5.0.0"
+  }
+}

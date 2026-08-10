@@ -1,0 +1,11 @@
+{
+  "bundle_generated": false,
+  "reason_codes": [
+    "MULTIPLE_TARGET_CANDIDATES",
+    "INDEXED_COLLECTION_NOT_PARTIALLY_EXPANDED"
+  ],
+  "unresolved_instance_ids": [
+    "ped18_zone5"
+  ],
+  "verdict": "REVIEW_REQUIRED"
+}

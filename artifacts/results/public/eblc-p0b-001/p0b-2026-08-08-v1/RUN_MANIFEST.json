@@ -1,0 +1,68 @@
+{
+  "claim_scope": "P0B_SCHEMA_AND_BOUNDED_EXECUTION_NOT_VEHICLE_SAFETY",
+  "code_revision": "WORKSPACE_WITHOUT_GIT_METADATA",
+  "enumeration": "DETERMINISTIC_EXHAUSTIVE_ENUMERATION",
+  "experiment_id": "EBLC-P0B-001",
+  "file_hashes": {
+    "experiments/eblc_p0b/README.md": "c40bdd13407f5d422e257df583c349d419eac81d78fa7262c0d58dde6e890c75",
+    "experiments/eblc_p0b/__init__.py": "b8500c8a96fe00657f5cd8d5fceb07f3bd00b44638df9c9207ded08ff5234b67",
+    "experiments/eblc_p0b/adapters/__init__.py": "09533c5278564de0e2136baaef91ca737b8daa013f9cf04a426f23e851d2405c",
+    "experiments/eblc_p0b/adapters/pilot_adapter.py": "cad5ddaea8ec58a4a660b5394136c22a0c1b6120b6a312be461c5c5c26e649e8",
+    "experiments/eblc_p0b/adapters/real_scene_adapter.py": "d3e69071e0e142565edae3666c1f5441a7d307e5b7e5457b87b18b7204949fff",
+    "experiments/eblc_p0b/binders.py": "0744b7f04a13b288d466194ba21f0ccbf65d3d0c49c4c9ea749ca2faf16e4b63",
+    "experiments/eblc_p0b/catalog.py": "39f011f4cfb90bb620db4bd29e670a05cd5c41361009e4ed3561c44e94c92fbc",
+    "experiments/eblc_p0b/fixtures/context_frame.json": "19b9efd64d44c50c64836d00e767816754bc3150a206dc410af67f1b79aae8ca",
+    "experiments/eblc_p0b/fixtures/eblc_contract.json": "dfb4146cf0427543ec4e2938c73d463d3f1bff92900c0a42d267f6537d695dc9",
+    "experiments/eblc_p0b/fixtures/predicate_spec.json": "f9a1d9cb1492efa716b0b425f3f8fe5042f9af85105308fd0ea4e5d40646df60",
+    "experiments/eblc_p0b/fixtures/rule_template.json": "653442795000a0fbeb29a505dc671fa4d81ba24a3c0b42e1b651569187ea3c73",
+    "experiments/eblc_p0b/mutations.py": "7656b056011b85e9fbfe72c70dec25ac905de8cf7b0c9a9820adf314a84fd13e",
+    "experiments/eblc_p0b/run_p0b.py": "29a05ada0d3210cda0b1ff328fcbaa1c64b9499fd4b7bf2ca9cb124132a1985f",
+    "experiments/eblc_p0b/runtime_monitor.py": "5259fb70c7c2adeae1fc15b1bfaf60e26d963641b7f528bd722d48232b8ac4b5",
+    "experiments/eblc_p0b/schema_validation.py": "f633d06b54045d857382f7401fc171d321a442976a1043eaff9c834d14305a4e",
+    "experiments/eblc_p0b/schemas/context_graph.schema.json": "2b11817ea70ccce8e671e907fee8c3fa14371f0529eb2c37be046b306e1666fa",
+    "experiments/eblc_p0b/schemas/eblc_contract.schema.json": "a102a0e4ea106fd5d7aae8b6bcaff36d627ac2eb53a285750cfe4d95748efe7d",
+    "experiments/eblc_p0b/schemas/predicate_spec.schema.json": "077ff57d3987db7f9051f9a461ba65970362d3db75ef6e073bc9a4c9bb947398",
+    "experiments/eblc_p0b/schemas/rule_template.schema.json": "3ba69e20bb488a4753f80af33f73a152e91be10edbccdad947fea2f04200d735",
+    "experiments/eblc_p0b/semantics.py": "c517f9f1885ad689fc0bb2967d1454c486a14afdad81fdebe8afb1c9e499eb1f",
+    "experiments/eblc_p0b/test_schema_binding.py": "97b416745373bfde7c8adf8d14e1922394b8ffa79e16908cc08278fd46490532",
+    "experiments/eblc_p0b/test_semantics.py": "31131cbb1cf611787827f55d01d52fd3f0d8d6739fe0aa8a7586f2d77eca3172",
+    "experiments/eblc_p0b/test_translation_mutations.py": "fe3ae7c948c730f75499443c5846144c61c7fb6194c5a7e64577c1f33637f368",
+    "experiments/eblc_p0b/translation_validator.py": "6d6b84fd75888115fb54f4aa4bf1c1677d21f0451055aa4a5e87721b93234de9",
+    "experiments/eblc_p0b/types.py": "ccb234d6530921e9e4eb8cb85aaca99c8c91f18d83d1bde2a6fea4d69806b9d7",
+    "experiments/eblc_p0b/z3_bounded_checker.py": "800ef9dd0192304e029c3f73cc8e2c2f4c08bd7ed2b54bcaa582b1e2ece83fae"
+  },
+  "input_class": "SYNTHETIC",
+  "python_version": "3.11.2",
+  "random_seed": null,
+  "run_date": "2026-08-08",
+  "run_id": "p0b-2026-08-08-v1",
+  "solver_or_fallback": {
+    "engine": "EXHAUSTIVE_FINITE_STATE_ENUMERATOR",
+    "version": "deterministic-v0.1",
+    "z3_importable": false
+  },
+  "test_commands": {
+    "p0a": {
+      "command": "python3 -m unittest experiments.eblc_pilot.test_pilot -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 7,
+      "test_count": 7,
+      "total_count": 7
+    },
+    "p0b": {
+      "command": "python3 -m unittest discover -s experiments/eblc_p0b -p test_*.py -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 21,
+      "test_count": 21,
+      "total_count": 21
+    }
+  },
+  "versions": {
+    "canonical_semantics": "eblc-operational-semantics-v0.1",
+    "compiler_targets": "eblc-targets-v0.1",
+    "rule_catalog": "p0b-synthetic-catalog-v0.1",
+    "schema": "eblc-schema-v0.1"
+  }
+}

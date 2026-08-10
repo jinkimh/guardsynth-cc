@@ -1,0 +1,21 @@
+{
+  "registry_version": "guardsynth-vehicle-assurance-registry-v0.1",
+  "registry_id": "synthetic_test_registry_not_real_vehicle_assurance",
+  "profiles": [
+    {
+      "profile_id": "synthetic_test_profile",
+      "vehicle_binding_key": "vehicle:test-platform",
+      "maximum_service_deceleration_mps2": 3.0,
+      "response_time_s": 0.5,
+      "position_uncertainty_m": 0.5,
+      "evidence": {
+        "evidence_ref": "TEST-VEHICLE-ASSURANCE-v1",
+        "source_class": "CONTROLLED_TEST_REPORT",
+        "uri": "urn:guardsynth:test:vehicle-assurance:v1",
+        "version": "1",
+        "sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "scope": "SYNTHETIC_TEST_ONLY_NOT_REAL_VEHICLE_ASSURANCE"
+      }
+    }
+  ]
+}

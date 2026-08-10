@@ -1,0 +1,60 @@
+{
+  "claim_scope": "P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY",
+  "code_revision": "WORKSPACE_WITHOUT_GIT_METADATA",
+  "enumeration": "DETERMINISTIC_TRUTH_PRODUCT_AND_EPISTEMIC_FRESHNESS_MATRIX",
+  "experiment_id": "EBLC-ELABORATION-CONFORMANCE-001",
+  "file_hashes": {
+    "cli/pipelines/eblc_program_conformance/run.py": "6b9e3c2c0dfeff7f7a24056b1640830f6a158eed10926354ebe03ebfdc568650",
+    "cli/solver_runtime.py": "80e18d693a2916053651222778cffddc9b36b474ce9bf5220275f6a745858fcb",
+    "experiments/eblc_p0b/test_elaboration_conformance.py": "f18402c50f833ef74dd9c6bd16f3a8162c6ff09fb3212227f6f016ee5fe6b080",
+    "src/guard_synth_eblc/conformance.py": "6952fcb40f6f7b3e7e24acb4d172e43eb7d406a8dafa2a4ce4dbc26af4f1ddf6",
+    "src/guard_synth_eblc/core_ir.py": "27ae690b450a6462b561d5592121e536da8a943eb54280d783961fc69e95228e",
+    "src/guard_synth_eblc/elaborator.py": "e2f10622601efd55a9aa631d4ee41f1795d4862d022c14072c965914f86a6409",
+    "src/guard_synth_eblc/fixtures/eblc_program_p0b.json": "332cc36f18d18649ef446b9f1bd67c81df7d24d1cd0bf56059c280687926ac0d",
+    "src/guard_synth_eblc/program.py": "c5e2a47e45a97b1e2fbb5e2f85a14c699352a4006aef073393e45d08b2b37811",
+    "src/guard_synth_eblc/schemas/eblc_program.schema.json": "edee286c0b1fa90867ca14c41b58c11ab6f36b173e1eeb769240db3dc2354040",
+    "src/guard_synth_eblc/smt_compiler.py": "a85b3d0a501fff26dbfaba320042a8eb5711067f8a20b480a8f133c6f4e98bb0"
+  },
+  "input_class": "SYNTHETIC",
+  "python_version": "3.11.2",
+  "random_seed": null,
+  "run_date": "2026-08-08",
+  "run_id": "elaboration-conformance-2026-08-08-v3",
+  "test_commands": {
+    "elaborator": {
+      "command": "python3 -m unittest experiments.eblc_p0b.test_elaboration_conformance -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 11,
+      "test_count": 11
+    },
+    "p0a": {
+      "command": "python3 -m unittest experiments.eblc_pilot.test_pilot -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 7,
+      "test_count": 7
+    },
+    "p0b": {
+      "command": "python3 -m unittest discover -s experiments/eblc_p0b -p test_*.py -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 66,
+      "test_count": 66
+    }
+  },
+  "versions": {
+    "conformance": "eblc-generated-conformance-v0.1",
+    "core_grammar": "eblc-core-v0.1",
+    "elaborator": "eblc-program-elaborator-v0.1",
+    "program": "eblc-program-v0.1",
+    "smt_compiler": "eblc-core-smt-compiler-v0.1"
+  },
+  "z3_runtime": {
+    "module_path": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages/z3/__init__.py",
+    "prefix": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36",
+    "python_site_packages": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages",
+    "source": "PROJECT_LOCAL_ISOLATED_BUILD",
+    "version": "5.0.0"
+  }
+}

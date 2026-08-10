@@ -1,0 +1,623 @@
+{
+  "enum_codes": {
+    "Lifecycle": {
+      "ACTIVE": 2,
+      "CANDIDATE": 1,
+      "EXPIRED": 6,
+      "INACTIVE": 0,
+      "MAINTAINED": 3,
+      "REACTIVATED": 5,
+      "RELEASED": 4
+    },
+    "Truth": {
+      "CONFLICT": 3,
+      "FALSE": 1,
+      "TRUE": 0,
+      "UNKNOWN": 2
+    }
+  },
+  "horizon": 5,
+  "model_id": "p0b_pedestrian_conflict_zone_core",
+  "symbols": [
+    {
+      "declaration": "state",
+      "enum_name": "Lifecycle",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__state__t0",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "state",
+      "enum_name": "Lifecycle",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__state__t1",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "state",
+      "enum_name": "Lifecycle",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__state__t2",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "state",
+      "enum_name": "Lifecycle",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__state__t3",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "state",
+      "enum_name": "Lifecycle",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__state__t4",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__truth__t0",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__truth__t1",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__truth__t2",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__truth__t3",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__truth__t4",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "clear_count",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__clear_count__t0",
+      "sort": "INT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 0,
+      "unit": "1"
+    },
+    {
+      "declaration": "clear_count",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__clear_count__t1",
+      "sort": "INT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 1,
+      "unit": "1"
+    },
+    {
+      "declaration": "clear_count",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__clear_count__t2",
+      "sort": "INT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 2,
+      "unit": "1"
+    },
+    {
+      "declaration": "clear_count",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__clear_count__t3",
+      "sort": "INT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 3,
+      "unit": "1"
+    },
+    {
+      "declaration": "clear_count",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__clear_count__t4",
+      "sort": "INT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 4,
+      "unit": "1"
+    },
+    {
+      "declaration": "transition_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__transition_allowed__t0",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "transition_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__transition_allowed__t1",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "transition_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__transition_allowed__t2",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "transition_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__transition_allowed__t3",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "transition_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__transition_allowed__t4",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "ego_front_x",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__ego_front_x__t0",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 0,
+      "unit": "m"
+    },
+    {
+      "declaration": "ego_front_x",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__ego_front_x__t1",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 1,
+      "unit": "m"
+    },
+    {
+      "declaration": "ego_front_x",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__ego_front_x__t2",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 2,
+      "unit": "m"
+    },
+    {
+      "declaration": "ego_front_x",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__ego_front_x__t3",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 3,
+      "unit": "m"
+    },
+    {
+      "declaration": "ego_front_x",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__ego_front_x__t4",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 4,
+      "unit": "m"
+    },
+    {
+      "declaration": "ego_speed",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__ego_speed__t0",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 0,
+      "unit": "m/s"
+    },
+    {
+      "declaration": "ego_speed",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__ego_speed__t1",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 1,
+      "unit": "m/s"
+    },
+    {
+      "declaration": "ego_speed",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__ego_speed__t2",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 2,
+      "unit": "m/s"
+    },
+    {
+      "declaration": "ego_speed",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__ego_speed__t3",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 3,
+      "unit": "m/s"
+    },
+    {
+      "declaration": "ego_speed",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__ego_speed__t4",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 4,
+      "unit": "m/s"
+    },
+    {
+      "declaration": "safe_progress",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__safe_progress__t0",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "safe_progress",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__safe_progress__t1",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "safe_progress",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__safe_progress__t2",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "safe_progress",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__safe_progress__t3",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "safe_progress",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__safe_progress__t4",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-QUERY-ORACLE-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "stop_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__stop_allowed__t0",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "stop_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__stop_allowed__t1",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "stop_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__stop_allowed__t2",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "stop_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__stop_allowed__t3",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "stop_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__stop_allowed__t4",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "progress_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__progress_allowed__t0",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "progress_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__progress_allowed__t1",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "progress_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__progress_allowed__t2",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "progress_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__progress_allowed__t3",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "progress_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__progress_allowed__t4",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "stop_position",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__stop_position__const",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": null,
+      "unit": "m"
+    },
+    {
+      "declaration": "position_uncertainty",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__position_uncertainty__const",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ],
+      "time": null,
+      "unit": "m"
+    },
+    {
+      "declaration": "response_time",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__response_time__const",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ],
+      "time": null,
+      "unit": "s"
+    },
+    {
+      "declaration": "deceleration",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__deceleration__const",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ],
+      "time": null,
+      "unit": "m/s^2"
+    },
+    {
+      "declaration": "release_threshold",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_core__release_threshold__const",
+      "sort": "INT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": null,
+      "unit": "1"
+    }
+  ]
+}

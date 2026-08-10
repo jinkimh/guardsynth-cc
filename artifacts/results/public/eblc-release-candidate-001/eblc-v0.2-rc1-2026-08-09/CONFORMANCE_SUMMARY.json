@@ -1,0 +1,13 @@
+{
+  "frame_agreement": 1.0,
+  "frame_count": 266,
+  "limitations": [
+    "GENERATED_FINITE_TRACE_CONFORMANCE",
+    "ELABORATOR_DERIVED_FROM_CANONICAL_SPECIFICATION",
+    "NOT_AN_INDEPENDENT_SAFETY_ORACLE"
+  ],
+  "matching_frames": 266,
+  "matching_traces": 129,
+  "trace_agreement": 1.0,
+  "trace_count": 129
+}

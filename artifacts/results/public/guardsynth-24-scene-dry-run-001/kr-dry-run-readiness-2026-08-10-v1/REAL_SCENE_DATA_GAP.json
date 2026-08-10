@@ -1,0 +1,17 @@
+{
+  "blockers": {
+    "MISSING_OR_AMBIGUOUS_TARGET_ZONE_ASSOCIATION": 4,
+    "MISSING_SCENE_INPUT": 19,
+    "MISSING_SOURCE_COMPLETE_SCENE_SLOTS": 24,
+    "MISSING_VEHICLE_ASSURANCE_PROFILE": 4,
+    "UNVERIFIED_COORDINATE_TRANSFORM": 4
+  },
+  "decision": "M13_BLOCKED_SOURCE_COMPLETE_SCENES",
+  "input_readiness": {
+    "actual_candidate_event_count": 5,
+    "adapted_candidate_count": 4,
+    "source_complete_required": 24,
+    "source_complete_scene_count": 0,
+    "synthetic_scene_fill_performed": false
+  }
+}

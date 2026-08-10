@@ -1,0 +1,70 @@
+{
+  "experiment_id": "EBLC-PILOT-v0",
+  "run_id": "pilot-2026-08-08",
+  "run_date": "2026-08-08",
+  "python": "3.11.2",
+  "seed": null,
+  "deterministic": true,
+  "code_revision": "WORKSPACE_WITHOUT_GIT_METADATA",
+  "scope": "SYNTHETIC_MECHANISM_PILOT_NOT_REAL_VEHICLE_SAFETY",
+  "tests": {
+    "passed": 7,
+    "failed": 0
+  },
+  "synthesis": {
+    "verdict": "VALIDATED",
+    "reason": "BOUND_AND_MONITORABLE",
+    "candidates": [
+      "PILOT-SYS-PED-CZ-001"
+    ],
+    "contract_id": "EBLC-PILOT-PED-CZ-0001",
+    "rule_id": "PILOT-SYS-PED-CZ-001",
+    "target": "pedestrian-track:P17/conflict-zone:CZ4",
+    "stop_position_x_m": -1.5,
+    "evidence_refs": [
+      "PILOT-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+      "PILOT-VEHICLE-PROFILE-v0"
+    ]
+  },
+  "execution": {
+    "safe_release_reactivation": {
+      "accepted": true,
+      "lifecycle": [
+        "ACTIVE",
+        "MAINTAINED",
+        "MAINTAINED",
+        "MAINTAINED",
+        "RELEASED",
+        "REACTIVATED",
+        "MAINTAINED",
+        "RELEASED",
+        "RELEASED"
+      ],
+      "violations": []
+    },
+    "unsafe_entry": {
+      "accepted": false,
+      "violations": [
+        "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE",
+        "ROBUST_STOPPING_SPEED_BOUND_EXCEEDED"
+      ]
+    },
+    "unknown_fallback": {
+      "accepted": true,
+      "diagnostics": [
+        "UNKNOWN_HOLD_FALLBACK"
+      ]
+    }
+  },
+  "selective_status": {
+    "missing_vehicle_profile": "UNSUPPORTED",
+    "coc_claim_without_observation": "REVIEW_REQUIRED"
+  },
+  "bcv_mutation": {
+    "correct_accepts_safe_trace": true,
+    "correct_rejects_unsafe_trace": true,
+    "underconstraint_witness_found": true,
+    "overconstraint_witness_found": true,
+    "passed": true
+  }
+}

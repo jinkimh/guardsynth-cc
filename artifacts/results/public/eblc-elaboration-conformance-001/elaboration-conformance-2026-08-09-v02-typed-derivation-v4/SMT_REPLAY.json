@@ -1,0 +1,21 @@
+{
+  "agreement": 1.0,
+  "file_count": 2,
+  "matches": 2,
+  "records": [
+    {
+      "actual": "SAT",
+      "exit_code": 0,
+      "expected": "SAT",
+      "file": "MODEL.smt2",
+      "matches": true
+    },
+    {
+      "actual": "SAT",
+      "exit_code": 0,
+      "expected": "SAT",
+      "file": "QUERY_generated_model_satisfiable.smt2",
+      "matches": true
+    }
+  ]
+}

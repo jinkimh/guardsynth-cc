@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://guardsynth.example/schemas/source_catalog.schema.json",
+  "title": "GuardSynth source-bearing rule catalog v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "catalog_version", "catalog_id", "jurisdiction", "odd_scope",
+    "source_records", "predicate_specs", "binder_specs",
+    "lifecycle_profiles", "rule_templates", "family_coverage",
+    "claim_scope"
+  ],
+  "properties": {
+    "catalog_version": {"const": "guardsynth-source-catalog-v0.1"},
+    "catalog_id": {"type": "string", "minLength": 1},
+    "jurisdiction": {
+      "type": "object", "additionalProperties": false,
+      "required": ["country_code", "name", "as_of_date"],
+      "properties": {
+        "country_code": {"const": "KR"},
+        "name": {"type": "string", "minLength": 1},
+        "as_of_date": {"type": "string", "minLength": 10}
+      }
+    },
+    "odd_scope": {"$ref": "#/$defs/odd"},
+    "source_records": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}},
+    "predicate_specs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/predicate"}},
+    "binder_specs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/binder"}},
+    "lifecycle_profiles": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/lifecycle"}},
+    "rule_templates": {"type": "array", "minItems": 12, "maxItems": 20, "items": {"$ref": "#/$defs/rule"}},
+    "family_coverage": {"type": "array", "minItems": 6, "items": {"$ref": "#/$defs/family"}},
+    "claim_scope": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "stringArray": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "odd": {
+      "type": "object", "additionalProperties": false,
+      "required": ["included", "excluded", "outside_odd_reason"],
+      "properties": {
+        "included": {"$ref": "#/$defs/stringArray"},
+        "excluded": {"$ref": "#/$defs/stringArray"},
+        "outside_odd_reason": {"const": "UNSUPPORTED_OUTSIDE_ODD"}
+      }
+    },
+    "claim": {
+      "type": "object", "additionalProperties": false,
+      "required": ["claim_id", "summary", "normative"],
+      "properties": {
+        "claim_id": {"type": "string", "minLength": 1},
+        "summary": {"type": "string", "minLength": 1},
+        "normative": {"type": "boolean"}
+      }
+    },
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "evidence_id", "source_class", "authority", "title", "uri",
+        "version", "effective_date", "section", "verified_date",
+        "record_hash", "hash_basis", "claims"
+      ],
+      "properties": {
+        "evidence_id": {"type": "string", "minLength": 1},
+        "source_class": {"enum": ["LEGAL", "OFFICIAL_INTERPRETATION"]},
+        "authority": {"type": "string", "minLength": 1},
+        "title": {"type": "string", "minLength": 1},
+        "uri": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "effective_date": {"type": "string", "minLength": 10},
+        "section": {"type": "string", "minLength": 1},
+        "verified_date": {"type": "string", "minLength": 10},
+        "record_hash": {"type": "string", "minLength": 64},
+        "hash_basis": {"const": "CANONICAL_SOURCE_RECORD_NOT_DOCUMENT_BYTES"},
+        "claims": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/claim"}}
+      }
+    },
+    "freshness": {
+      "type": "object", "additionalProperties": false,
+      "required": ["maximum_age_s", "policy", "failure_value", "reason_code"],
+      "properties": {
+        "maximum_age_s": {"type": ["number", "null"], "minimum": 0},
+        "policy": {"enum": ["SOURCE_REQUIRED", "REVIEW_REQUIRED"]},
+        "failure_value": {"const": "UNKNOWN"},
+        "reason_code": {"type": "string", "minLength": 1}
+      }
+    },
+    "predicate": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "predicate_id", "argument_types", "allowed_epistemic", "coordinate_frame",
+        "observability", "freshness", "failure_value"
+      ],
+      "properties": {
+        "predicate_id": {"type": "string", "minLength": 1},
+        "argument_types": {"$ref": "#/$defs/stringArray"},
+        "allowed_epistemic": {"type": "array", "minItems": 1, "items": {"enum": ["OBSERVED", "PREDICTED", "DERIVED"]}},
+        "coordinate_frame": {"type": "string", "minLength": 1},
+        "observability": {"type": "string", "minLength": 1},
+        "freshness": {"$ref": "#/$defs/freshness"},
+        "failure_value": {"const": "UNKNOWN"}
+      }
+    },
+    "output": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "kind", "unit", "coordinate_frame", "source_claim_refs", "reason_code"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["VALUE", "INTERVAL", "SET", "DERIVED", "SYMBOLIC", "UNSUPPORTED"]},
+        "unit": {"type": ["string", "null"]},
+        "coordinate_frame": {"type": ["string", "null"]},
+        "source_claim_refs": {"$ref": "#/$defs/stringArray"},
+        "reason_code": {"type": ["string", "null"]}
+      }
+    },
+    "binder": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "binder_id", "required_inputs", "target_binding", "zone_binding",
+        "ambiguity_reason", "outputs", "derivation_dag"
+      ],
+      "properties": {
+        "binder_id": {"type": "string", "minLength": 1},
+        "required_inputs": {"$ref": "#/$defs/stringArray"},
+        "target_binding": {"type": "string", "minLength": 1},
+        "zone_binding": {"type": "string", "minLength": 1},
+        "ambiguity_reason": {"const": "AMBIGUOUS_BINDING"},
+        "outputs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/output"}},
+        "derivation_dag": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "edge": {
+      "type": "object", "additionalProperties": false,
+      "required": ["condition", "authority_kind", "unsupported_reason"],
+      "properties": {
+        "condition": {"type": "string", "minLength": 1},
+        "authority_kind": {"enum": ["LEGAL_SOURCE", "SYSTEM_OPERATIONALIZATION", "VEHICLE_ASSURANCE", "UNSUPPORTED"]},
+        "unsupported_reason": {"type": ["string", "null"]}
+      }
+    },
+    "lifecycle": {
+      "type": "object", "additionalProperties": false,
+      "required": ["lifecycle_profile_id", "activation", "invariant", "bound", "release", "reactivation", "expiry", "fallback"],
+      "properties": {
+        "lifecycle_profile_id": {"type": "string", "minLength": 1},
+        "activation": {"$ref": "#/$defs/edge"},
+        "invariant": {"$ref": "#/$defs/edge"},
+        "bound": {"$ref": "#/$defs/edge"},
+        "release": {"$ref": "#/$defs/edge"},
+        "reactivation": {"$ref": "#/$defs/edge"},
+        "expiry": {"$ref": "#/$defs/edge"},
+        "fallback": {"$ref": "#/$defs/edge"}
+      }
+    },
+    "rule": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "rule_id", "slice", "family", "source_claim_refs", "scope",
+        "preconditions", "exceptions", "roles", "required_predicate_refs",
+        "binder_ref", "lifecycle_profile_ref", "priority_tier", "claim_boundary"
+      ],
+      "properties": {
+        "rule_id": {"type": "string", "minLength": 1},
+        "slice": {"enum": ["PEDESTRIAN_CYCLIST_YIELD", "STOP_SIGNALS", "FOLLOWING_CUT_IN"]},
+        "family": {"type": "string", "minLength": 1},
+        "source_claim_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "scope": {"type": "string", "minLength": 1},
+        "preconditions": {"$ref": "#/$defs/stringArray"},
+        "exceptions": {"$ref": "#/$defs/stringArray"},
+        "roles": {"$ref": "#/$defs/stringArray"},
+        "required_predicate_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "binder_ref": {"type": "string", "minLength": 1},
+        "lifecycle_profile_ref": {"type": "string", "minLength": 1},
+        "priority_tier": {"enum": ["HARD_LEGAL", "HARD_SYSTEM", "SERVICE", "PREFERENCE"]},
+        "claim_boundary": {"type": "string", "minLength": 1}
+      }
+    },
+    "family": {
+      "type": "object", "additionalProperties": false,
+      "required": ["family_id", "rule_refs"],
+      "properties": {
+        "family_id": {"type": "string", "minLength": 1},
+        "rule_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    }
+  }
+}

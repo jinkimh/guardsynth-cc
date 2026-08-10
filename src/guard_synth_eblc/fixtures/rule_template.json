@@ -1,0 +1,29 @@
+{ "rule_id": "P0B-SYS-PED-CZ-001",
+  "source": {
+    "evidence_id": "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+    "source_class": "SYSTEM_REQUIREMENT",
+    "uri": "urn:guardsynth:p0b:synthetic-system-requirement:ped-yield:v0",
+    "version": "v0-synthetic-p0b",
+    "scope": "synthetic pedestrian conflict-zone vertical slice only",
+    "section": "P0B-PED-CZ",
+    "content_hash": "synthetic-fixture-not-normative-source"
+  },
+  "scope": "SYNTHETIC_1D_CROSSWALK",
+  "precondition": "pedestrian_conflict == TRUE",
+  "exception": "scope_exception == TRUE",
+  "roles": {"subject": "Vehicle", "target": "VulnerableRoadUser", "zone": "ConflictZone"},
+  "binder_id": "bind_pedestrian_contract:v0.1",
+  "lifecycle": {
+    "activation": "hazard TRUE activates in the same observation step after binding",
+    "invariant": "ego front does not pass sourced stop position while obligation is live",
+    "bound": "ego speed does not exceed the dynamic stopping bound while obligation is live",
+    "release": "two consecutive fresh FALSE observations",
+    "reactivation": "fresh TRUE after RELEASED",
+    "expiry": "scope invalid or explicit expiry time reached"
+  },
+  "fallback": {"action": "HOLD_PRIOR_LIVE_OBLIGATION_ON_FRESH_UNKNOWN", "approved": true},
+  "observability": ["pedestrian_conflict"],
+  "priority": {"class": "MANDATORY_SYSTEM", "overrides": ["ROUTE_PROGRESS", "COMFORT_SERVICE", "STATISTICAL_HEURISTIC"]},
+  "stop_margin_m": 1.5,
+  "release_clear_frames": 2
+}

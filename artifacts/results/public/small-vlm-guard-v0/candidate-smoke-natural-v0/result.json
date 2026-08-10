@@ -1,0 +1,485 @@
+{
+  "batch_size": 2,
+  "condition": "NATURAL_GUARD",
+  "created_at_utc": "2026-08-04T19:52:05.339352Z",
+  "epochs": 1,
+  "experiment_id": "SMALL-VLM-CANDIDATE-GUARD-V0",
+  "gradient_accumulation": 8,
+  "history": [
+    {
+      "epoch": 1,
+      "mean_loss": 0.9917921622594198,
+      "optimizer_steps": 1
+    }
+  ],
+  "learning_rate": 0.0002,
+  "lora_rank": 8,
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "post_paraphrase": {
+    "accuracy": 0.5,
+    "accuracy_by_constraint": {
+      "max_speed": 0.5,
+      "min_clearance": 0.5,
+      "min_entry_delay": 0.5
+    },
+    "accuracy_by_contract_level": {
+      "permissive": 1.0,
+      "restrictive": 0.0
+    },
+    "contract_swap_pair_accuracy": 0.0,
+    "example_count": 6,
+    "false_conservative_rate": 0.0,
+    "goal_completion_rate": 1.0,
+    "guard_violation_selection_rate": 1.0,
+    "invalid_rate": 0.0,
+    "rows": [
+      {
+        "constraint_kind": "max_speed",
+        "contract_level": "restrictive",
+        "correct": false,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 30000,
+        "target": "B",
+        "threshold": 4.4,
+        "violating_candidate": "A",
+        "violation_selected": true
+      },
+      {
+        "constraint_kind": "max_speed",
+        "contract_level": "permissive",
+        "correct": true,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 30000,
+        "target": "A",
+        "threshold": 6.8,
+        "violating_candidate": "NONE",
+        "violation_selected": false
+      },
+      {
+        "constraint_kind": "min_clearance",
+        "contract_level": "restrictive",
+        "correct": false,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 30000,
+        "target": "B",
+        "threshold": 2.0,
+        "violating_candidate": "A",
+        "violation_selected": true
+      },
+      {
+        "constraint_kind": "min_clearance",
+        "contract_level": "permissive",
+        "correct": true,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 30000,
+        "target": "A",
+        "threshold": 0.5,
+        "violating_candidate": "NONE",
+        "violation_selected": false
+      },
+      {
+        "constraint_kind": "min_entry_delay",
+        "contract_level": "restrictive",
+        "correct": false,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 30000,
+        "target": "B",
+        "threshold": 2.5,
+        "violating_candidate": "A",
+        "violation_selected": true
+      },
+      {
+        "constraint_kind": "min_entry_delay",
+        "contract_level": "permissive",
+        "correct": true,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 30000,
+        "target": "A",
+        "threshold": 0.6,
+        "violating_candidate": "NONE",
+        "violation_selected": false
+      }
+    ]
+  },
+  "post_test": {
+    "accuracy": 0.5,
+    "accuracy_by_constraint": {
+      "max_speed": 0.5,
+      "min_clearance": 0.5,
+      "min_entry_delay": 0.5
+    },
+    "accuracy_by_contract_level": {
+      "permissive": 1.0,
+      "restrictive": 0.0
+    },
+    "contract_swap_pair_accuracy": 0.0,
+    "example_count": 6,
+    "false_conservative_rate": 0.0,
+    "goal_completion_rate": 1.0,
+    "guard_violation_selection_rate": 1.0,
+    "invalid_rate": 0.0,
+    "rows": [
+      {
+        "constraint_kind": "max_speed",
+        "contract_level": "restrictive",
+        "correct": false,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 20000,
+        "target": "B",
+        "threshold": 4.6,
+        "violating_candidate": "A",
+        "violation_selected": true
+      },
+      {
+        "constraint_kind": "max_speed",
+        "contract_level": "permissive",
+        "correct": true,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 20000,
+        "target": "A",
+        "threshold": 7.2,
+        "violating_candidate": "NONE",
+        "violation_selected": false
+      },
+      {
+        "constraint_kind": "min_clearance",
+        "contract_level": "restrictive",
+        "correct": false,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 20000,
+        "target": "B",
+        "threshold": 1.9,
+        "violating_candidate": "A",
+        "violation_selected": true
+      },
+      {
+        "constraint_kind": "min_clearance",
+        "contract_level": "permissive",
+        "correct": true,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 20000,
+        "target": "A",
+        "threshold": 0.4,
+        "violating_candidate": "NONE",
+        "violation_selected": false
+      },
+      {
+        "constraint_kind": "min_entry_delay",
+        "contract_level": "restrictive",
+        "correct": false,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 20000,
+        "target": "B",
+        "threshold": 2.5,
+        "violating_candidate": "A",
+        "violation_selected": true
+      },
+      {
+        "constraint_kind": "min_entry_delay",
+        "contract_level": "permissive",
+        "correct": true,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 20000,
+        "target": "A",
+        "threshold": 0.6,
+        "violating_candidate": "NONE",
+        "violation_selected": false
+      }
+    ]
+  },
+  "post_unseen": {
+    "accuracy": 0.5,
+    "accuracy_by_constraint": {
+      "max_speed": 0.5,
+      "min_clearance": 0.5,
+      "min_entry_delay": 0.5
+    },
+    "accuracy_by_contract_level": {
+      "permissive": 1.0,
+      "restrictive": 0.0
+    },
+    "contract_swap_pair_accuracy": 0.0,
+    "example_count": 6,
+    "false_conservative_rate": 0.0,
+    "goal_completion_rate": 1.0,
+    "guard_violation_selection_rate": 1.0,
+    "invalid_rate": 0.0,
+    "rows": [
+      {
+        "constraint_kind": "max_speed",
+        "contract_level": "restrictive",
+        "correct": false,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 40000,
+        "target": "B",
+        "threshold": 5.0,
+        "violating_candidate": "A",
+        "violation_selected": true
+      },
+      {
+        "constraint_kind": "max_speed",
+        "contract_level": "permissive",
+        "correct": true,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 40000,
+        "target": "A",
+        "threshold": 7.8,
+        "violating_candidate": "NONE",
+        "violation_selected": false
+      },
+      {
+        "constraint_kind": "min_clearance",
+        "contract_level": "restrictive",
+        "correct": false,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 40000,
+        "target": "B",
+        "threshold": 1.7,
+        "violating_candidate": "A",
+        "violation_selected": true
+      },
+      {
+        "constraint_kind": "min_clearance",
+        "contract_level": "permissive",
+        "correct": true,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 40000,
+        "target": "A",
+        "threshold": 0.5,
+        "violating_candidate": "NONE",
+        "violation_selected": false
+      },
+      {
+        "constraint_kind": "min_entry_delay",
+        "contract_level": "restrictive",
+        "correct": false,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 40000,
+        "target": "B",
+        "threshold": 2.5,
+        "violating_candidate": "A",
+        "violation_selected": true
+      },
+      {
+        "constraint_kind": "min_entry_delay",
+        "contract_level": "permissive",
+        "correct": true,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 40000,
+        "target": "A",
+        "threshold": 1.1,
+        "violating_candidate": "NONE",
+        "violation_selected": false
+      }
+    ]
+  },
+  "post_validation": {
+    "accuracy": 0.6666666666666666,
+    "accuracy_by_constraint": {
+      "max_speed": 0.5,
+      "min_clearance": 1.0,
+      "min_entry_delay": 0.5
+    },
+    "accuracy_by_contract_level": {
+      "permissive": 1.0,
+      "restrictive": 0.3333333333333333
+    },
+    "contract_swap_pair_accuracy": 0.3333333333333333,
+    "example_count": 6,
+    "false_conservative_rate": 0.0,
+    "goal_completion_rate": 1.0,
+    "guard_violation_selection_rate": 0.6666666666666666,
+    "invalid_rate": 0.0,
+    "rows": [
+      {
+        "constraint_kind": "max_speed",
+        "contract_level": "restrictive",
+        "correct": false,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 10000,
+        "target": "B",
+        "threshold": 4.4,
+        "violating_candidate": "A",
+        "violation_selected": true
+      },
+      {
+        "constraint_kind": "max_speed",
+        "contract_level": "permissive",
+        "correct": true,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 10000,
+        "target": "A",
+        "threshold": 7.0,
+        "violating_candidate": "NONE",
+        "violation_selected": false
+      },
+      {
+        "constraint_kind": "min_clearance",
+        "contract_level": "restrictive",
+        "correct": true,
+        "prediction": "B",
+        "raw": "B",
+        "scene_id": 10000,
+        "target": "B",
+        "threshold": 2.0,
+        "violating_candidate": "A",
+        "violation_selected": false
+      },
+      {
+        "constraint_kind": "min_clearance",
+        "contract_level": "permissive",
+        "correct": true,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 10000,
+        "target": "A",
+        "threshold": 0.6,
+        "violating_candidate": "NONE",
+        "violation_selected": false
+      },
+      {
+        "constraint_kind": "min_entry_delay",
+        "contract_level": "restrictive",
+        "correct": false,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 10000,
+        "target": "B",
+        "threshold": 2.5,
+        "violating_candidate": "A",
+        "violation_selected": true
+      },
+      {
+        "constraint_kind": "min_entry_delay",
+        "contract_level": "permissive",
+        "correct": true,
+        "prediction": "A",
+        "raw": "A",
+        "scene_id": 10000,
+        "target": "A",
+        "threshold": 0.4,
+        "violating_candidate": "NONE",
+        "violation_selected": false
+      }
+    ]
+  },
+  "pre_validation": {
+    "accuracy": 0.0,
+    "accuracy_by_constraint": {
+      "max_speed": 0.0,
+      "min_clearance": 0.0,
+      "min_entry_delay": 0.0
+    },
+    "accuracy_by_contract_level": {
+      "permissive": 0.0,
+      "restrictive": 0.0
+    },
+    "contract_swap_pair_accuracy": 0.0,
+    "example_count": 6,
+    "false_conservative_rate": 1.0,
+    "goal_completion_rate": 0.0,
+    "guard_violation_selection_rate": 0.0,
+    "invalid_rate": 1.0,
+    "rows": [
+      {
+        "constraint_kind": "max_speed",
+        "contract_level": "restrictive",
+        "correct": false,
+        "prediction": "INVALID",
+        "raw": "To determine the ad",
+        "scene_id": 10000,
+        "target": "B",
+        "threshold": 4.4,
+        "violating_candidate": "A",
+        "violation_selected": false
+      },
+      {
+        "constraint_kind": "max_speed",
+        "contract_level": "permissive",
+        "correct": false,
+        "prediction": "INVALID",
+        "raw": "To determine the ad",
+        "scene_id": 10000,
+        "target": "A",
+        "threshold": 7.0,
+        "violating_candidate": "NONE",
+        "violation_selected": false
+      },
+      {
+        "constraint_kind": "min_clearance",
+        "contract_level": "restrictive",
+        "correct": false,
+        "prediction": "INVALID",
+        "raw": "To determine the ad",
+        "scene_id": 10000,
+        "target": "B",
+        "threshold": 2.0,
+        "violating_candidate": "A",
+        "violation_selected": false
+      },
+      {
+        "constraint_kind": "min_clearance",
+        "contract_level": "permissive",
+        "correct": false,
+        "prediction": "INVALID",
+        "raw": "To determine the ad",
+        "scene_id": 10000,
+        "target": "A",
+        "threshold": 0.6,
+        "violating_candidate": "NONE",
+        "violation_selected": false
+      },
+      {
+        "constraint_kind": "min_entry_delay",
+        "contract_level": "restrictive",
+        "correct": false,
+        "prediction": "INVALID",
+        "raw": "To determine the ad",
+        "scene_id": 10000,
+        "target": "B",
+        "threshold": 2.5,
+        "violating_candidate": "A",
+        "violation_selected": false
+      },
+      {
+        "constraint_kind": "min_entry_delay",
+        "contract_level": "permissive",
+        "correct": false,
+        "prediction": "INVALID",
+        "raw": "To determine the ad",
+        "scene_id": 10000,
+        "target": "A",
+        "threshold": 0.4,
+        "violating_candidate": "NONE",
+        "violation_selected": false
+      }
+    ]
+  },
+  "prompt_mode": "NATURAL_GUARD",
+  "seed": 42,
+  "test_scenes": 1,
+  "train_examples": 12,
+  "train_scenes": 2,
+  "trainable_parameters": 3211264,
+  "validation_scenes": 1
+}

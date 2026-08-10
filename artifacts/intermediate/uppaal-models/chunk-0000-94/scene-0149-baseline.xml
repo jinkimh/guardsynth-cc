@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+  <declaration>// scene-0149; milliseconds relative to the first source CoC event.
+clock episode;
+broadcast chan coc_event;
+bool provenance_violation = false;
+bool weak_response_violation = false;</declaration>
+  <template>
+    <name>EpisodeSource</name>
+    <declaration />
+    <location id="s0" x="0" y="0">
+      <name x="-20" y="-30">Before1</name>
+      <label kind="invariant" x="-20" y="20">episode &lt;= 0</label>
+    </location>
+    <location id="s1" x="140" y="0">
+      <name x="120" y="-30">Before2</name>
+      <label kind="invariant" x="120" y="20">episode &lt;= 2200</label>
+    </location>
+    <location id="s2" x="280" y="0">
+      <name x="260" y="-30">Done</name>
+    </location>
+    <init ref="s0" />
+    <transition>
+      <source ref="s0" />
+      <target ref="s1" />
+      <label kind="guard" x="0" y="0">episode == 0</label>
+      <label kind="synchronisation" x="0" y="20">coc_event!</label>
+    </transition>
+    <transition>
+      <source ref="s1" />
+      <target ref="s2" />
+      <label kind="guard" x="0" y="0">episode == 2200</label>
+      <label kind="synchronisation" x="0" y="20">coc_event!</label>
+    </transition>
+    <transition>
+      <source ref="s2" />
+      <target ref="s2" />
+    </transition>
+  </template>
+  <template>
+    <name>LineageMonitor</name>
+    <declaration>int[0, 100] seen = 0;</declaration>
+    <location id="m0" x="0" y="220">
+      <name x="-20" y="190">Tracking</name>
+    </location>
+    <init ref="m0" />
+    <transition>
+      <source ref="m0" />
+      <target ref="m0" />
+      <label kind="synchronisation" x="0" y="0">coc_event?</label>
+      <label kind="assignment" x="0" y="20">seen++</label>
+    </transition>
+  </template>
+  <system>Source = EpisodeSource();
+Lineage = LineageMonitor();
+system Source, Lineage;</system>
+</nta>

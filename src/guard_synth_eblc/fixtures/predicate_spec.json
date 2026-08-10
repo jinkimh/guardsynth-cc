@@ -1,0 +1,14 @@
+{
+  "predicate_id": "pedestrian_conflict",
+  "argument_types": ["VulnerableRoadUser", "ConflictZone"],
+  "measurement_or_derivation_fn": "observed_or_predicted_occupancy_intersects_conflict_zone",
+  "allowed_sources": ["OBSERVED", "PREDICTED", "DERIVED"],
+  "coordinate_frame": "ego_path_s",
+  "update_rate_hz": 10.00,
+  "maximum_latency_s": 0.1,
+  "maximum_age_s": 0.2,
+  "uncertainty_model": "four_valued_with_explicit_conflict",
+  "monitorability": "NOW",
+  "calibration_id": "SYNTHETIC-P0B-CALIBRATION-NOT-REAL-SENSOR",
+  "failure_value": "UNKNOWN"
+}

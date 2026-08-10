@@ -1,0 +1,40 @@
+EBLC CONTROLLED NATURAL LANGUAGE [EBLC-CNL-EN-v0.1]
+SOURCE PROGRAM: p0b_source_aware_two_actor_request__program_template
+AUTHORITY: This rendering is not the execution authority; use the structured EBLC program p0b_source_aware_two_actor_request__program_template.
+
+[program.identity] Program p0b_source_aware_two_actor_request__program_template uses eblc-program-v0.2 over 8 bounded frames and has claim scope P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY.
+[program.sources] Declared evidence references: P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0, P0B-SYNTHETIC-PREDICATE-SPEC-v0, P0B-SYNTHETIC-VEHICLE-PROFILE-v0, P0B-CONTROLLED-CONFORMANCE-ORACLE-v0.
+[binding.identity] Contract TEMPLATE_CONTRACT applies rule P0B-SYS-PED-CZ-001 to subject ego, target UNBOUND_TARGET, and conflict zone UNBOUND_ZONE.
+[binding.coordinates] Distances use unit m in coordinate frame ego_path_s.
+[predicate.observability] Evaluate activation predicate pedestrian_conflict only from OBSERVED, PREDICTED, DERIVED evidence with maximum age 0.2 s; failed or stale observation becomes UNKNOWN.
+[lifecycle.release] Initial lifecycle state is INACTIVE; release is enabled after 2 consecutive clear frames.
+[lifecycle.reactivation] After release, reactivation is enabled when the hazard returns.
+[lifecycle.fallback] UNKNOWN policy is APPROVED_HOLD; fallback action is HOLD_PRIOR_LIVE_OBLIGATION_ON_FRESH_UNKNOWN and approval is present.
+[lifecycle.activation_expiry] Always-active mode is false; expiry timestamp is not set.
+[constraints.position_uncertainty] Supplied constraint input: position_uncertainty = 0.5 m in frame ego_path_s; these are supplied evidence-bound inputs, not inferred guarantees.
+[constraints.response_time] Supplied constraint input: response_time = 0.5 s; these are supplied evidence-bound inputs, not inferred guarantees.
+[constraints.deceleration] Supplied constraint input: deceleration = 3 m/s^2 in frame ego_path_s; these are supplied evidence-bound inputs, not inferred guarantees.
+[constraints.position_epsilon] Supplied constraint input: position_epsilon = 1e-09 m in frame ego_path_s; these are supplied evidence-bound inputs, not inferred guarantees.
+[constraints.speed_epsilon] Supplied constraint input: speed_epsilon = 1e-09 m/s in frame ego_path_s; these are supplied evidence-bound inputs, not inferred guarantees.
+[constraints.time_epsilon] Supplied constraint input: time_epsilon = 1e-09 s; these are supplied evidence-bound inputs, not inferred guarantees.
+[constraints.flags] Invariant enforcement is true; forced deadlock mode is false.
+[derivation.interface] Typed derivation p0b_source_aware_two_actor_request_stopping_derivation uses eblc-derivation-v0.1 with horizon 9 and claim scope P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY.
+[derivation.symbol.zone_entry_x] Derivation symbol zone_entry_x is SOURCED_VALUE with value 0 m.
+[derivation.symbol.stop_margin] Derivation symbol stop_margin is SOURCED_VALUE with value 1.5 m.
+[derivation.symbol.factor_two] Derivation symbol factor_two is SOURCED_VALUE with value 2 1.
+[derivation.symbol.zero_speed] Derivation symbol zero_speed is SOURCED_VALUE with value 0 m/s.
+[derivation.symbol.ego_speed] Derivation symbol ego_speed is CORE_VARIABLE with value runtime-bound m/s.
+[derivation.symbol.speed_epsilon] Derivation symbol speed_epsilon is CORE_VARIABLE with value runtime-bound m/s.
+[derivation.symbol.response_time] Derivation symbol response_time is CORE_VARIABLE with value runtime-bound s.
+[derivation.symbol.deceleration] Derivation symbol deceleration is CORE_VARIABLE with value runtime-bound m/s^2.
+[derivation.node.stop_position] stop_position := zone_entry_x - stop_margin.
+[derivation.node.adjusted_speed] adjusted_speed := ego_speed - speed_epsilon.
+[derivation.node.effective_speed] effective_speed := max(adjusted_speed, zero_speed).
+[derivation.node.response_distance] response_distance := effective_speed * response_time.
+[derivation.node.speed_squared] speed_squared := effective_speed * effective_speed.
+[derivation.node.twice_deceleration] twice_deceleration := factor_two * deceleration.
+[derivation.node.braking_distance] braking_distance := speed_squared / twice_deceleration.
+[derivation.node.stopping_distance] stopping_distance := response_distance + braking_distance.
+[derivation.output.stop_position] Output stop_position maps node:stop_position to declaration stop_position with unit m.
+[derivation.output.stopping_distance] Output stopping_distance maps node:stopping_distance to declaration stopping_distance with unit m.
+[priority.policy] Priority class is MANDATORY_SYSTEM and it overrides ROUTE_PROGRESS, COMFORT_SERVICE, STATISTICAL_HEURISTIC.

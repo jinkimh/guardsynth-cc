@@ -1,0 +1,274 @@
+
+Verifying formula 1 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/scene-0001-chained.q:1
+ -- Formula is satisfied.
+ -- Showing witness trace:
+
+State:
+( Source.Before1 Protocol.Follow Deadline.Idle Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=0 Deadline.phase=0
+
+Transition:
+  Source.Before1->Source.Before2 { episode == 0, decel_req!, 1 }
+  Protocol.Follow->Protocol.DecelPending { 1, decel_req?, 1 }
+  Deadline.Idle->Deadline.WaitDecel { 1, decel_req?, phase := 0 }
+
+State:
+( Source.Before2 Protocol.DecelPending Deadline.WaitDecel Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=0 Deadline.phase=0
+
+Delay: 2160
+
+State:
+( Source.Before2 Protocol.DecelPending Deadline.WaitDecel Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=2160 Deadline.phase=2160
+
+Transition:
+  Source.Before2->Source.Before3 { episode == 2160, decel_ack!, 1 }
+  Protocol.DecelPending->Protocol.Decelerating { 1, decel_ack?, 1 }
+  Deadline.WaitDecel->Deadline.DecelDone { 1, decel_ack?, 1 }
+
+State:
+( Source.Before3 Protocol.Decelerating Deadline.DecelDone Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=2160 Deadline.phase=2160
+
+Verifying formula 2 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/scene-0001-chained.q:2
+ -- Formula is satisfied.
+ -- Showing witness trace:
+
+State:
+( Source.Before1 Protocol.Follow Deadline.Idle Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=0 Deadline.phase=0
+
+Transition:
+  Source.Before1->Source.Before2 { episode == 0, decel_req!, 1 }
+  Protocol.Follow->Protocol.DecelPending { 1, decel_req?, 1 }
+  Deadline.Idle->Deadline.WaitDecel { 1, decel_req?, phase := 0 }
+
+State:
+( Source.Before2 Protocol.DecelPending Deadline.WaitDecel Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=0 Deadline.phase=0
+
+Delay: 2160
+
+State:
+( Source.Before2 Protocol.DecelPending Deadline.WaitDecel Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=2160 Deadline.phase=2160
+
+Transition:
+  Source.Before2->Source.Before3 { episode == 2160, decel_ack!, 1 }
+  Protocol.DecelPending->Protocol.Decelerating { 1, decel_ack?, 1 }
+  Deadline.WaitDecel->Deadline.DecelDone { 1, decel_ack?, 1 }
+
+State:
+( Source.Before3 Protocol.Decelerating Deadline.DecelDone Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=2160 Deadline.phase=2160
+
+Delay: 2840
+
+State:
+( Source.Before3 Protocol.Decelerating Deadline.DecelDone Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=5000 Deadline.phase=5000
+
+Transition:
+  Source.Before3->Source.Before4 { episode == 5000, stop_req!, 1 }
+  Protocol.Decelerating->Protocol.StopPending { 1, stop_req?, 1 }
+  Deadline.DecelDone->Deadline.WaitStop { 1, stop_req?, phase := 0 }
+
+State:
+( Source.Before4 Protocol.StopPending Deadline.WaitStop Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=5000 Deadline.phase=0
+
+Delay: 1400
+
+State:
+( Source.Before4 Protocol.StopPending Deadline.WaitStop Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=6400 Deadline.phase=1400
+
+Transition:
+  Source.Before4->Source.Before5 { episode == 6400, stop_ack!, 1 }
+  Protocol.StopPending->Protocol.Hold { 1, stop_ack?, 1 }
+  Deadline.WaitStop->Deadline.Hold { 1, stop_ack?, 1 }
+
+State:
+( Source.Before5 Protocol.Hold Deadline.Hold Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=6400 Deadline.phase=1400
+
+Verifying formula 3 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/scene-0001-chained.q:3
+ -- Formula is satisfied.
+ -- Showing witness trace:
+
+State:
+( Source.Before1 Protocol.Follow Deadline.Idle Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=0 Deadline.phase=0
+
+Transition:
+  Source.Before1->Source.Before2 { episode == 0, decel_req!, 1 }
+  Protocol.Follow->Protocol.DecelPending { 1, decel_req?, 1 }
+  Deadline.Idle->Deadline.WaitDecel { 1, decel_req?, phase := 0 }
+
+State:
+( Source.Before2 Protocol.DecelPending Deadline.WaitDecel Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=0 Deadline.phase=0
+
+Delay: 2160
+
+State:
+( Source.Before2 Protocol.DecelPending Deadline.WaitDecel Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=2160 Deadline.phase=2160
+
+Transition:
+  Source.Before2->Source.Before3 { episode == 2160, decel_ack!, 1 }
+  Protocol.DecelPending->Protocol.Decelerating { 1, decel_ack?, 1 }
+  Deadline.WaitDecel->Deadline.DecelDone { 1, decel_ack?, 1 }
+
+State:
+( Source.Before3 Protocol.Decelerating Deadline.DecelDone Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=2160 Deadline.phase=2160
+
+Delay: 2840
+
+State:
+( Source.Before3 Protocol.Decelerating Deadline.DecelDone Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=5000 Deadline.phase=5000
+
+Transition:
+  Source.Before3->Source.Before4 { episode == 5000, stop_req!, 1 }
+  Protocol.Decelerating->Protocol.StopPending { 1, stop_req?, 1 }
+  Deadline.DecelDone->Deadline.WaitStop { 1, stop_req?, phase := 0 }
+
+State:
+( Source.Before4 Protocol.StopPending Deadline.WaitStop Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=5000 Deadline.phase=0
+
+Delay: 1400
+
+State:
+( Source.Before4 Protocol.StopPending Deadline.WaitStop Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=6400 Deadline.phase=1400
+
+Transition:
+  Source.Before4->Source.Before5 { episode == 6400, stop_ack!, 1 }
+  Protocol.StopPending->Protocol.Hold { 1, stop_ack?, 1 }
+  Deadline.WaitStop->Deadline.Hold { 1, stop_ack?, 1 }
+
+State:
+( Source.Before5 Protocol.Hold Deadline.Hold Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=6400 Deadline.phase=1400
+
+Delay: 600
+
+State:
+( Source.Before5 Protocol.Hold Deadline.Hold Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=7000 Deadline.phase=2000
+
+Transition:
+  Source.Before5->Source.Before6 { episode == 7000, recover_req!, 1 }
+  Protocol.Hold->Protocol.RecoverPending { 1, recover_req?, 1 }
+  Deadline.Hold->Deadline.WaitRecover { 1, recover_req?, phase := 0 }
+  Gate.Blocked->Gate.Blocked { 1, recover_req?, premature_recovery := true }
+
+State:
+( Source.Before6 Protocol.RecoverPending Deadline.WaitRecover Gate.Blocked )
+clearance_granted=0 premature_recovery=1 episode=7000 Deadline.phase=0
+
+Delay: 900
+
+State:
+( Source.Before6 Protocol.RecoverPending Deadline.WaitRecover Gate.Blocked )
+clearance_granted=0 premature_recovery=1 episode=7900 Deadline.phase=900
+
+Transition:
+  Source.Before6->Source.Before7 { episode == 7900, recover_ack!, 1 }
+  Protocol.RecoverPending->Protocol.Recovered { 1, recover_ack?, 1 }
+  Deadline.WaitRecover->Deadline.Done { 1, recover_ack?, 1 }
+
+State:
+( Source.Before7 Protocol.Recovered Deadline.Done Gate.Blocked )
+clearance_granted=0 premature_recovery=1 episode=7900 Deadline.phase=900
+
+Verifying formula 4 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/scene-0001-chained.q:4
+ -- Formula is satisfied.
+
+Verifying formula 5 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/scene-0001-chained.q:5
+ -- Formula is satisfied.
+
+Verifying formula 6 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/scene-0001-chained.q:6
+ -- Formula is NOT satisfied.
+ -- Showing witness trace:
+
+State:
+( Source.Before1 Protocol.Follow Deadline.Idle Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=0 Deadline.phase=0
+
+Transition:
+  Source.Before1->Source.Before2 { episode == 0, decel_req!, 1 }
+  Protocol.Follow->Protocol.DecelPending { 1, decel_req?, 1 }
+  Deadline.Idle->Deadline.WaitDecel { 1, decel_req?, phase := 0 }
+
+State:
+( Source.Before2 Protocol.DecelPending Deadline.WaitDecel Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=0 Deadline.phase=0
+
+Delay: 2160
+
+State:
+( Source.Before2 Protocol.DecelPending Deadline.WaitDecel Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=2160 Deadline.phase=2160
+
+Transition:
+  Source.Before2->Source.Before3 { episode == 2160, decel_ack!, 1 }
+  Protocol.DecelPending->Protocol.Decelerating { 1, decel_ack?, 1 }
+  Deadline.WaitDecel->Deadline.DecelDone { 1, decel_ack?, 1 }
+
+State:
+( Source.Before3 Protocol.Decelerating Deadline.DecelDone Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=2160 Deadline.phase=2160
+
+Delay: 2840
+
+State:
+( Source.Before3 Protocol.Decelerating Deadline.DecelDone Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=5000 Deadline.phase=5000
+
+Transition:
+  Source.Before3->Source.Before4 { episode == 5000, stop_req!, 1 }
+  Protocol.Decelerating->Protocol.StopPending { 1, stop_req?, 1 }
+  Deadline.DecelDone->Deadline.WaitStop { 1, stop_req?, phase := 0 }
+
+State:
+( Source.Before4 Protocol.StopPending Deadline.WaitStop Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=5000 Deadline.phase=0
+
+Delay: 1400
+
+State:
+( Source.Before4 Protocol.StopPending Deadline.WaitStop Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=6400 Deadline.phase=1400
+
+Transition:
+  Source.Before4->Source.Before5 { episode == 6400, stop_ack!, 1 }
+  Protocol.StopPending->Protocol.Hold { 1, stop_ack?, 1 }
+  Deadline.WaitStop->Deadline.Hold { 1, stop_ack?, 1 }
+
+State:
+( Source.Before5 Protocol.Hold Deadline.Hold Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=6400 Deadline.phase=1400
+
+Delay: 600
+
+State:
+( Source.Before5 Protocol.Hold Deadline.Hold Gate.Blocked )
+clearance_granted=0 premature_recovery=0 episode=7000 Deadline.phase=2000
+
+Transition:
+  Source.Before5->Source.Before6 { episode == 7000, recover_req!, 1 }
+  Protocol.Hold->Protocol.RecoverPending { 1, recover_req?, 1 }
+  Deadline.Hold->Deadline.WaitRecover { 1, recover_req?, phase := 0 }
+  Gate.Blocked->Gate.Blocked { 1, recover_req?, premature_recovery := true }
+
+State:
+( Source.Before6 Protocol.RecoverPending Deadline.WaitRecover Gate.Blocked )
+clearance_granted=0 premature_recovery=1 episode=7000 Deadline.phase=0
+
+Verifying formula 7 at /home/jin/prj_ws/coc-modelchcking/uppaal/models/scene-0001-chained.q:7
+ -- Formula is satisfied.

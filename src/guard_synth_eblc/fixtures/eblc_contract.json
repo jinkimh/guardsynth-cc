@@ -1,0 +1,35 @@
+{
+  "contract_id": "EBLC-P0B-PED-CZ-0001",
+  "rule_id": "P0B-SYS-PED-CZ-001",
+  "subject_id": "ego",
+  "target_entity_id": "synthetic-pedestrian:P17",
+  "zone_id": "synthetic-zone:CZ4",
+  "zone_entry_x_m": 0.0,
+  "stop_position_x_m": -1.50,
+  "stop_margin_m": 1.5,
+  "release_clear_frames": 2,
+  "fallback": "HOLD_PRIOR_LIVE_OBLIGATION_ON_FRESH_UNKNOWN",
+  "fallback_approved": true,
+  "evidence_refs": ["P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0", "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"],
+  "derivation_dag": [
+    {
+      "node_id": "derive-stop-position",
+      "operation": "zone_entry_x_m - sourced_stop_margin_m",
+      "inputs": ["frame.zone_entry_x_m", "rule.stop_margin_m"],
+      "output": "contract.stop_position_x_m"
+    },
+    {
+      "node_id": "derive-dynamic-speed-bound",
+      "operation": "solve d >= v*rho + v^2/(2*b)",
+      "inputs": ["contract.stop_position_x_m", "frame.ego_front_x_m", "profile.response_time_s", "profile.maximum_service_deceleration_mps2", "profile.position_uncertainty_m"],
+      "output": "step.maximum_safe_speed_mps"
+    }
+  ],
+  "coordinate_frame": "ego_path_s",
+  "distance_unit": "m",
+  "predicate_maximum_age_s": 0.2,
+  "maximum_service_deceleration_mps2": 3.0,
+  "response_time_s": 0.5,
+  "position_uncertainty_m": 0.5,
+  "priority": {"class": "MANDATORY_SYSTEM", "overrides": ["ROUTE_PROGRESS", "COMFORT_SERVICE", "STATISTICAL_HEURISTIC"]}
+}

@@ -1,0 +1,101 @@
+{
+  "scenes": [
+    "scene-0124",
+    "scene-0125"
+  ],
+  "scene_count": 2,
+  "duration_ms": 19200,
+  "event_count": 3,
+  "channel_counts": {
+    "accel_req": 1,
+    "scene_boundary": 1,
+    "slow_req": 1
+  },
+  "all_queries_satisfied": false,
+  "responded": false,
+  "no_deadline_miss": false,
+  "no_contradiction": true,
+  "no_boundary_violation": true,
+  "no_deadlock": true,
+  "source_done": true,
+  "scene_summary": [
+    {
+      "scene": "scene-0124",
+      "global_start_ms": 0,
+      "global_end_ms": 19200,
+      "trusted_obligation_events": 2,
+      "derived_response_witnesses": 0
+    },
+    {
+      "scene": "scene-0125",
+      "global_start_ms": 20001,
+      "global_end_ms": 39251,
+      "trusted_obligation_events": 0,
+      "derived_response_witnesses": 0
+    }
+  ],
+  "events": [
+    {
+      "time_ms": 3900,
+      "channel": "slow_req",
+      "label": "scene-0124:0:slow",
+      "scene": "scene-0124",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Decelerate to maintain a safe distance from the stopped blue bus ahead and the black car in the left lane, while keeping lane position.",
+        "local_timestamp_us": 3900000
+      }
+    },
+    {
+      "time_ms": 12900,
+      "channel": "accel_req",
+      "label": "scene-0124:1:accel",
+      "scene": "scene-0124",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Maintain lane and accelerate while navigating past construction cones on the left and parked buses on the right.",
+        "local_timestamp_us": 12900000
+      }
+    },
+    {
+      "time_ms": 19200,
+      "channel": "scene_boundary",
+      "label": "scene-0124->scene-0125",
+      "scene": "scene-0125",
+      "provenance": "DERIVED_NUSCENES_METADATA",
+      "detail": {
+        "gap_ms": 801,
+        "from": "scene-0124",
+        "to": "scene-0125"
+      }
+    }
+  ],
+  "model": "/home/jin/prj_ws/coc-modelchcking/experiments/uppaal/models/multiscene-chain/scene-0124-to-scene-0125-loop.xml",
+  "trace_path": "experiments/results/baseline/multiscene-chain/uppaal-traces/scene-0124-to-scene-0125-loop.txt",
+  "queries": [
+    {
+      "query": "E<> Source.Done",
+      "satisfied": true
+    },
+    {
+      "query": "E<> MonitorProc.Responded",
+      "satisfied": false
+    },
+    {
+      "query": "A[] not deadline_miss",
+      "satisfied": false
+    },
+    {
+      "query": "A[] not contradiction",
+      "satisfied": true
+    },
+    {
+      "query": "A[] not boundary_violation",
+      "satisfied": true
+    },
+    {
+      "query": "A[] not deadlock",
+      "satisfied": true
+    }
+  ]
+}

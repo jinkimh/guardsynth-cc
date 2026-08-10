@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:eblc:core-ir:v0.1",
+  "title": "EBLC bounded discrete-time Core IR v0.1",
+  "type": "object",
+  "required": ["grammar_version", "model_id", "horizon", "declarations", "clauses", "queries", "source_refs", "claim_scope"],
+  "additionalProperties": false,
+  "properties": {
+    "grammar_version": {"const": "eblc-core-v0.1"},
+    "model_id": {"type": "string", "minLength": 1},
+    "horizon": {"type": "integer", "minimum": 2},
+    "declarations": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/declaration"}},
+    "clauses": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/clause"}},
+    "queries": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/query"}},
+    "source_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "claim_scope": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "declaration": {
+      "type": "object",
+      "required": ["name", "sort", "time_varying", "enum_name", "enum_values", "unit", "frame", "source_refs"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "sort": {"type": "string", "enum": ["BOOL", "INT", "REAL", "ENUM"]},
+        "time_varying": {"type": "boolean"},
+        "enum_name": {"type": ["string", "null"]},
+        "enum_values": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "unit": {"type": ["string", "null"]},
+        "frame": {"type": ["string", "null"]},
+        "source_refs": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "clause": {
+      "type": "object",
+      "required": ["id", "kind", "enforcement", "formula", "source_refs", "description"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "kind": {"type": "string", "enum": ["ASSUMPTION", "ACTIVATION", "MAINTENANCE", "INVARIANT", "BOUND", "RELEASE", "REACTIVATION", "EXPIRY", "FALLBACK", "PROGRESS", "LIFECYCLE"]},
+        "enforcement": {"type": "string", "enum": ["INITIAL", "EACH_FRAME", "EACH_TRANSITION", "TRACE", "DECLARATIVE"]},
+        "formula": {"$ref": "#/$defs/expression"},
+        "source_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "description": {"type": "string", "minLength": 1}
+      }
+    },
+    "query": {
+      "type": "object",
+      "required": ["id", "formula", "expected", "classification", "source_refs", "description"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "formula": {"$ref": "#/$defs/expression"},
+        "expected": {"type": "string", "enum": ["SAT", "UNSAT"]},
+        "classification": {"type": "string", "enum": ["CONSISTENCY", "UNDERCONSTRAINT", "OVERCONSTRAINT", "TRANSLATION", "BOUNDARY", "EXAMPLE"]},
+        "source_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "description": {"type": "string", "minLength": 1}
+      }
+    },
+    "expression": {
+      "oneOf": [
+        {"$ref": "#/$defs/literal"},
+        {"$ref": "#/$defs/variable_ref"},
+        {"$ref": "#/$defs/unary"},
+        {"$ref": "#/$defs/nary"},
+        {"$ref": "#/$defs/binary"},
+        {"$ref": "#/$defs/ite"},
+        {"$ref": "#/$defs/window"},
+        {"$ref": "#/$defs/until"}
+      ]
+    },
+    "literal": {
+      "type": "object",
+      "required": ["op", "sort", "value", "enum_name", "unit", "frame"],
+      "additionalProperties": false,
+      "properties": {
+        "op": {"const": "literal"},
+        "sort": {"type": "string", "enum": ["BOOL", "INT", "REAL", "ENUM"]},
+        "value": {"type": ["boolean", "number", "string"]},
+        "enum_name": {"type": ["string", "null"]},
+        "unit": {"type": ["string", "null"]},
+        "frame": {"type": ["string", "null"]}
+      }
+    },
+    "variable_ref": {
+      "type": "object",
+      "required": ["op", "name", "offset"],
+      "additionalProperties": false,
+      "properties": {
+        "op": {"const": "var"},
+        "name": {"type": "string", "minLength": 1},
+        "offset": {"type": "integer", "minimum": 0}
+      }
+    },
+    "unary": {
+      "type": "object",
+      "required": ["op", "arg"],
+      "additionalProperties": false,
+      "properties": {
+        "op": {"type": "string", "enum": ["not", "neg"]},
+        "arg": {"$ref": "#/$defs/expression"}
+      }
+    },
+    "nary": {
+      "type": "object",
+      "required": ["op", "args"],
+      "additionalProperties": false,
+      "properties": {
+        "op": {"type": "string", "enum": ["and", "or"]},
+        "args": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/expression"}}
+      }
+    },
+    "binary": {
+      "type": "object",
+      "required": ["op", "left", "right"],
+      "additionalProperties": false,
+      "properties": {
+        "op": {"type": "string", "enum": ["implies", "eq", "ne", "lt", "le", "gt", "ge", "add", "sub", "mul", "div"]},
+        "left": {"$ref": "#/$defs/expression"},
+        "right": {"$ref": "#/$defs/expression"}
+      }
+    },
+    "ite": {
+      "type": "object",
+      "required": ["op", "condition", "then", "else"],
+      "additionalProperties": false,
+      "properties": {
+        "op": {"const": "ite"},
+        "condition": {"$ref": "#/$defs/expression"},
+        "then": {"$ref": "#/$defs/expression"},
+        "else": {"$ref": "#/$defs/expression"}
+      }
+    },
+    "window": {
+      "type": "object",
+      "required": ["op", "start", "end", "arg"],
+      "additionalProperties": false,
+      "properties": {
+        "op": {"type": "string", "enum": ["always", "eventually"]},
+        "start": {"type": "integer", "minimum": 0},
+        "end": {"type": "integer", "minimum": 0},
+        "arg": {"$ref": "#/$defs/expression"}
+      }
+    },
+    "until": {
+      "type": "object",
+      "required": ["op", "start", "end", "left", "right"],
+      "additionalProperties": false,
+      "properties": {
+        "op": {"const": "until"},
+        "start": {"type": "integer", "minimum": 0},
+        "end": {"type": "integer", "minimum": 0},
+        "left": {"$ref": "#/$defs/expression"},
+        "right": {"$ref": "#/$defs/expression"}
+      }
+    }
+  }
+}

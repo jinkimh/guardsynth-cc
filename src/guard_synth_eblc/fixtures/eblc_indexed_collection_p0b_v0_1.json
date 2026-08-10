@@ -1,0 +1,79 @@
+{
+  "collection_version": "eblc-indexed-collection-v0.1",
+  "collection_id": "p0b_two_actor_two_zone_collection",
+  "template_program_ref": "p0b_pedestrian_conflict_zone_program_v02",
+  "frames": 8,
+  "claim_scope": "P0B_HIGH_LEVEL_ELABORATION_AND_BOUNDED_CONFORMANCE_NOT_VEHICLE_SAFETY",
+  "source_refs": [
+    "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+    "P0B-SYNTHETIC-PREDICATE-SPEC-v0",
+    "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+    "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+    "P0B-SYNTHETIC-COMPOSITION-POLICY-v0",
+    "P0B-SYNTHETIC-ASSOCIATION-A-v0",
+    "P0B-SYNTHETIC-ASSOCIATION-B-v0",
+    "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+    "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+    "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0"
+  ],
+  "action_domain": ["STOP", "CREEP", "PROCEED"],
+  "instances": [
+    {
+      "instance_id": "ped17_zone4",
+      "contract_id": "C0",
+      "association": {
+        "status": "BOUND",
+        "target_entity_id": "synthetic-pedestrian:P17",
+        "zone_id": "synthetic-zone:CZ4",
+        "zone_geometry_ref": "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+        "coordinate_transform_ref": "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0",
+        "candidate_target_entity_ids": ["synthetic-pedestrian:P17"],
+        "candidate_zone_ids": ["synthetic-zone:CZ4"],
+        "evidence_refs": [
+          "P0B-SYNTHETIC-ASSOCIATION-A-v0",
+          "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+          "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0"
+        ],
+        "reason_codes": []
+      },
+      "zone_entry": {
+        "value": 0.0,
+        "unit": "m",
+        "frame": "ego_path_s",
+        "evidence_refs": ["P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"]
+      },
+      "priority_tier": "HARD",
+      "allowed_actions": ["STOP"],
+      "overrides_contracts": []
+    },
+    {
+      "instance_id": "ped18_zone5",
+      "contract_id": "C1",
+      "association": {
+        "status": "BOUND",
+        "target_entity_id": "synthetic-pedestrian:P18",
+        "zone_id": "synthetic-zone:CZ5",
+        "zone_geometry_ref": "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+        "coordinate_transform_ref": "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0",
+        "candidate_target_entity_ids": ["synthetic-pedestrian:P18"],
+        "candidate_zone_ids": ["synthetic-zone:CZ5"],
+        "evidence_refs": [
+          "P0B-SYNTHETIC-ASSOCIATION-B-v0",
+          "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+          "P0B-SYNTHETIC-RIG-TO-EGO-PATH-TRANSFORM-v0"
+        ],
+        "reason_codes": []
+      },
+      "zone_entry": {
+        "value": 12.0,
+        "unit": "m",
+        "frame": "ego_path_s",
+        "evidence_refs": ["P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"]
+      },
+      "priority_tier": "HARD",
+      "allowed_actions": ["STOP"],
+      "overrides_contracts": []
+    }
+  ],
+  "composition_evidence_refs": ["P0B-SYNTHETIC-COMPOSITION-POLICY-v0"]
+}

@@ -1,0 +1,119 @@
+{
+  "criteria_passed": 3,
+  "criteria_total": 4,
+  "experiment_id": "SMALL-VLM-TRADITIONAL-COC-VS-GUARD-V0",
+  "guard_minus_coc": {
+    "full": {
+      "counterfactual_scene_rate": 0.10416666666666663,
+      "paraphrase_accuracy": 0.078125,
+      "paraphrase_counterfactual_scene_rate": 0.3125,
+      "proceed_recall": 0.0,
+      "stop_prediction_rate": 0.026041666666666685,
+      "stop_recall": 0.05208333333333337,
+      "test_accuracy": 0.02604166666666663
+    },
+    "low": {
+      "counterfactual_scene_rate": -0.20833333333333334,
+      "paraphrase_accuracy": -0.265625,
+      "paraphrase_counterfactual_scene_rate": -0.3958333333333333,
+      "proceed_recall": -0.84375,
+      "stop_prediction_rate": 0.5625,
+      "stop_recall": 0.28125,
+      "test_accuracy": -0.28125
+    }
+  },
+  "interpretation": {
+    "direct_guard_advantage_established": false,
+    "reason": "Both inputs reach perfect held-out and counterfactual accuracy when the low-data runs receive comparable optimizer updates; schedule-dependent differences do not establish an intrinsic guard advantage on this simple task."
+  },
+  "metrics": {
+    "full": {
+      "coc": {
+        "counterfactual_scene_rate": 0.8958333333333334,
+        "paraphrase_accuracy": 0.90625,
+        "paraphrase_counterfactual_scene_rate": 0.625,
+        "proceed_recall": 1.0,
+        "stop_prediction_rate": 0.4739583333333333,
+        "stop_recall": 0.9479166666666666,
+        "test_accuracy": 0.9739583333333334
+      },
+      "guard": {
+        "counterfactual_scene_rate": 1.0,
+        "paraphrase_accuracy": 0.984375,
+        "paraphrase_counterfactual_scene_rate": 0.9375,
+        "proceed_recall": 1.0,
+        "stop_prediction_rate": 0.5,
+        "stop_recall": 1.0,
+        "test_accuracy": 1.0
+      }
+    },
+    "low": {
+      "coc": {
+        "counterfactual_scene_rate": 0.20833333333333334,
+        "paraphrase_accuracy": 0.765625,
+        "paraphrase_counterfactual_scene_rate": 0.3958333333333333,
+        "proceed_recall": 0.84375,
+        "stop_prediction_rate": 0.4375,
+        "stop_recall": 0.71875,
+        "test_accuracy": 0.78125
+      },
+      "guard": {
+        "counterfactual_scene_rate": 0.0,
+        "paraphrase_accuracy": 0.5,
+        "paraphrase_counterfactual_scene_rate": 0.0,
+        "proceed_recall": 0.0,
+        "stop_prediction_rate": 1.0,
+        "stop_recall": 1.0,
+        "test_accuracy": 0.5
+      }
+    }
+  },
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "posthoc_equal_step_diagnostic": {
+    "coc_guard": {
+      "counterfactual_scene_rate": 1.0,
+      "paraphrase_accuracy": 0.9375,
+      "paraphrase_counterfactual_scene_rate": 0.75,
+      "proceed_recall": 1.0,
+      "stop_prediction_rate": 0.5,
+      "stop_recall": 1.0,
+      "test_accuracy": 1.0
+    },
+    "epochs": {
+      "coc_guard": 16,
+      "traditional_coc": 16
+    },
+    "guard_minus_coc": {
+      "counterfactual_scene_rate": 0.0,
+      "paraphrase_accuracy": -0.046875,
+      "paraphrase_counterfactual_scene_rate": -0.1875,
+      "proceed_recall": 0.0,
+      "stop_prediction_rate": 0.0,
+      "stop_recall": 0.0,
+      "test_accuracy": 0.0
+    },
+    "optimizer_steps": {
+      "coc_guard": 80,
+      "traditional_coc": 80
+    },
+    "traditional_coc": {
+      "counterfactual_scene_rate": 1.0,
+      "paraphrase_accuracy": 0.984375,
+      "paraphrase_counterfactual_scene_rate": 0.9375,
+      "proceed_recall": 1.0,
+      "stop_prediction_rate": 0.5,
+      "stop_recall": 1.0,
+      "test_accuracy": 1.0
+    }
+  },
+  "predeclared_criteria": {
+    "full_data_guard_not_worse_by_more_than_0p02": true,
+    "full_guard_proceed_recall_at_least_0p80": true,
+    "full_guard_stop_recall_at_least_0p80": true,
+    "low_data_sample_efficiency_signal": false
+  },
+  "train_scenes": {
+    "full": 192,
+    "low": 24
+  }
+}

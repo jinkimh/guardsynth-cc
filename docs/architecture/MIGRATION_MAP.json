@@ -1,0 +1,33 @@
+{
+  "migration_id": "PROJECT-LAYOUT-V2-2026-08-09",
+  "policy": "OLD_PATH_TO_CANONICAL_PATH_NO_RESULT_CONTENT_REWRITE",
+  "mappings": {
+    "research/plans/alpamayo-coc-formal-verification/RESEARCH_PLAN_V1.md": "docs/plans/alpamayo-coc-formal-verification/RESEARCH_PLAN_V1.md",
+    "research/plans/alpamayo-coc-formal-verification/NATURAL_LANGUAGE_PROHIBITION_STUDY_V1.md": "docs/designs/alpamayo-coc-formal-verification/NATURAL_LANGUAGE_PROHIBITION_STUDY_V1.md",
+    "research/plans/alpamayo-coc-formal-verification/METHOD_SELECTION_SURVEY.md": "docs/decisions/alpamayo-coc-formal-verification/METHOD_SELECTION_SURVEY.md",
+    "research/plans/alpamayo-coc-formal-verification/MULTI_BACKEND_OPTIONS.md": "docs/decisions/alpamayo-coc-formal-verification/MULTI_BACKEND_OPTIONS.md",
+    "research/plans/alpamayo-coc-formal-verification/UPPAAL_FIRST_OPTION.md": "docs/decisions/alpamayo-coc-formal-verification/UPPAAL_FIRST_OPTION.md",
+    "research/plans/coc-guard-synthesis/RESEARCH_PLAN_V1.md": "docs/plans/guard-synth-coc/RESEARCH_PLAN_V1.md",
+    "research/plans/coc-guard-synthesis/NEXT_SESSION_P0B_IMPLEMENTATION_PROMPT.md": "docs/requirements/guard-synth-coc/P0B_IMPLEMENTATION_REQUIREMENTS.md",
+    "research/plans/coc-guard-synthesis/CONTEXT_AWARE_GUARD_SYNTHESIS_SURVEY_AND_STRATEGY_V1.md": "docs/surveys/guard-synth-coc/CONTEXT_AWARE_GUARD_SYNTHESIS_SURVEY_AND_STRATEGY_V1.md",
+    "research/background/2026-07-31-coc-kg-model-checking-design.md": "docs/designs/system/2026-07-31-coc-kg-model-checking-design.md",
+    "research/background/2026-08-01-e2e-finetuning-model-checking-survey.md": "docs/surveys/system/2026-08-01-e2e-finetuning-model-checking-survey.md",
+    "research/EBLC_P0B_COC_CONSTRAINT_SMT_VERIFICATION_REPORT_V1.md": "docs/reports/EBLC_P0B_COC_CONSTRAINT_SMT_VERIFICATION_REPORT_V1.md",
+    "research/SAFETY_CONSTRAINED_COC_PROGRESS_REPORT_V1.md": "docs/reports/SAFETY_CONSTRAINED_COC_PROGRESS_REPORT_V1.md",
+    "research/TEMPORAL_GUARD_MULTISEED_EXPERIMENT_REPORT_V1.md": "docs/reports/TEMPORAL_GUARD_MULTISEED_EXPERIMENT_REPORT_V1.md",
+    "experiments/results/baseline": "artifacts/results/public",
+    "experiments/results/restricted": "artifacts/results/restricted",
+    "experiments/eblc_p0b/test_*.py": "tests/guard_synth_eblc/test_*.py",
+    "cli/pipelines/eblc_core_smt_compile": "cli/pipelines/eblc/core_smt_compile",
+    "cli/pipelines/eblc_p0b_schema_bcv": "cli/pipelines/eblc/p0b_schema_bcv",
+    "cli/pipelines/eblc_program_conformance": "cli/pipelines/eblc/program_conformance",
+    "cli/pipelines/eblc_restricted_scene_grounding": "cli/pipelines/eblc/restricted_scene_grounding",
+    "cli/pipelines/eblc_robustness_audit": "cli/pipelines/eblc/robustness_audit",
+    "cli/pipelines/eblc_scenario_validation": "cli/pipelines/eblc/scenario_validation",
+    "uppaal-5.0.0-linux64": "runtime/solvers/uppaal-5.0.0-linux64",
+    "uppaal-5.0.0-linux64.zip": "archive/installers/uppaal-5.0.0-linux64.zip",
+    "z3-5.0.0-x64-glibc-2.39.zip": "archive/installers/z3-5.0.0-x64-glibc-2.39.zip",
+    "z3-z3-5.0.0.tar.gz": "archive/installers/z3-z3-5.0.0.tar.gz",
+    "experiments/uppaal/models": "artifacts/intermediate/uppaal-models"
+  }
+}

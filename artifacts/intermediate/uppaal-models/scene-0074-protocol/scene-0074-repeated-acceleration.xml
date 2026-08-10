@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+  <declaration>// scene-0074; milliseconds relative to the first observed CoC at 3.4 s.
+const int RESPONSE_DEADLINE = 3000;
+clock episode;
+broadcast chan accelerate, speed_response;
+bool strict_deadline_miss = false;
+bool reset_deadline_miss = false;
+bool provenance_valid = true;
+int[0, 3] strict_response_count = 0;
+int[0, 3] reset_response_count = 0;</declaration>
+  <template>
+    <name>ObservedTrace</name>
+    <declaration />
+    <location id="s0" x="0" y="0">
+      <name x="-20" y="-30">Before1</name>
+      <label kind="invariant" x="-20" y="20">episode &lt;= 0</label>
+    </location>
+    <location id="s1" x="130" y="0">
+      <name x="110" y="-30">Before2</name>
+      <label kind="invariant" x="110" y="20">episode &lt;= 2500</label>
+    </location>
+    <location id="s2" x="260" y="0">
+      <name x="240" y="-30">Before3</name>
+      <label kind="invariant" x="240" y="20">episode &lt;= 3360</label>
+    </location>
+    <location id="s3" x="390" y="0">
+      <name x="370" y="-30">Before4</name>
+      <label kind="invariant" x="370" y="20">episode &lt;= 3800</label>
+    </location>
+    <location id="s4" x="520" y="0">
+      <name x="500" y="-30">Before5</name>
+      <label kind="invariant" x="500" y="20">episode &lt;= 3820</label>
+    </location>
+    <location id="s5" x="650" y="0">
+      <name x="630" y="-30">Before6</name>
+      <label kind="invariant" x="630" y="20">episode &lt;= 8200</label>
+    </location>
+    <location id="s6" x="780" y="0">
+      <name x="760" y="-30">Before7</name>
+      <label kind="invariant" x="760" y="20">episode &lt;= 8201</label>
+    </location>
+    <location id="s7" x="910" y="0">
+      <name x="890" y="-30">Done</name>
+    </location>
+    <init ref="s0" />
+    <transition>
+      <source ref="s0" />
+      <target ref="s1" />
+      <label kind="guard" x="0" y="0">episode == 0</label>
+      <label kind="synchronisation" x="0" y="20">accelerate!</label>
+    </transition>
+    <transition>
+      <source ref="s1" />
+      <target ref="s2" />
+      <label kind="guard" x="0" y="0">episode == 2500</label>
+      <label kind="synchronisation" x="0" y="20">accelerate!</label>
+    </transition>
+    <transition>
+      <source ref="s2" />
+      <target ref="s3" />
+      <label kind="guard" x="0" y="0">episode == 3360</label>
+      <label kind="synchronisation" x="0" y="20">speed_response!</label>
+    </transition>
+    <transition>
+      <source ref="s3" />
+      <target ref="s4" />
+      <label kind="guard" x="0" y="0">episode == 3800</label>
+      <label kind="synchronisation" x="0" y="20">accelerate!</label>
+    </transition>
+    <transition>
+      <source ref="s4" />
+      <target ref="s5" />
+      <label kind="guard" x="0" y="0">episode == 3820</label>
+      <label kind="synchronisation" x="0" y="20">speed_response!</label>
+    </transition>
+    <transition>
+      <source ref="s5" />
+      <target ref="s6" />
+      <label kind="guard" x="0" y="0">episode == 8200</label>
+      <label kind="synchronisation" x="0" y="20">accelerate!</label>
+    </transition>
+    <transition>
+      <source ref="s6" />
+      <target ref="s7" />
+      <label kind="guard" x="0" y="0">episode == 8201</label>
+      <label kind="synchronisation" x="0" y="20">speed_response!</label>
+    </transition>
+    <transition>
+      <source ref="s7" />
+      <target ref="s7" />
+    </transition>
+  </template>
+  <template>
+    <name>PreserveFirstDeadline</name>
+    <declaration>clock obligation;</declaration>
+    <location id="idle" x="0" y="220">
+      <name x="-20" y="190">Idle</name>
+    </location>
+    <location id="pending" x="220" y="220">
+      <name x="200" y="190">Pending</name>
+      <label kind="invariant" x="200" y="240">obligation &lt;= RESPONSE_DEADLINE</label>
+    </location>
+    <location id="late" x="440" y="220">
+      <name x="420" y="190">Late</name>
+    </location>
+    <init ref="idle" />
+    <transition>
+      <source ref="idle" />
+      <target ref="pending" />
+      <label kind="synchronisation" x="0" y="0">accelerate?</label>
+      <label kind="assignment" x="0" y="20">obligation = 0</label>
+    </transition>
+    <transition>
+      <source ref="pending" />
+      <target ref="pending" />
+      <label kind="synchronisation" x="0" y="0">accelerate?</label>
+    </transition>
+    <transition>
+      <source ref="pending" />
+      <target ref="idle" />
+      <label kind="synchronisation" x="0" y="0">speed_response?</label>
+      <label kind="assignment" x="0" y="20">strict_response_count++</label>
+    </transition>
+    <transition>
+      <source ref="pending" />
+      <target ref="late" />
+      <label kind="guard" x="0" y="0">obligation == RESPONSE_DEADLINE</label>
+      <label kind="assignment" x="0" y="20">strict_deadline_miss = true</label>
+    </transition>
+    <transition>
+      <source ref="late" />
+      <target ref="late" />
+      <label kind="synchronisation" x="0" y="0">accelerate?</label>
+    </transition>
+    <transition>
+      <source ref="late" />
+      <target ref="idle" />
+      <label kind="synchronisation" x="0" y="0">speed_response?</label>
+      <label kind="assignment" x="0" y="20">strict_response_count++</label>
+    </transition>
+  </template>
+  <template>
+    <name>ResetOnRepeat</name>
+    <declaration>clock obligation;</declaration>
+    <location id="idle" x="0" y="220">
+      <name x="-20" y="190">Idle</name>
+    </location>
+    <location id="pending" x="220" y="220">
+      <name x="200" y="190">Pending</name>
+      <label kind="invariant" x="200" y="240">obligation &lt;= RESPONSE_DEADLINE</label>
+    </location>
+    <location id="late" x="440" y="220">
+      <name x="420" y="190">Late</name>
+    </location>
+    <init ref="idle" />
+    <transition>
+      <source ref="idle" />
+      <target ref="pending" />
+      <label kind="synchronisation" x="0" y="0">accelerate?</label>
+      <label kind="assignment" x="0" y="20">obligation = 0</label>
+    </transition>
+    <transition>
+      <source ref="pending" />
+      <target ref="pending" />
+      <label kind="synchronisation" x="0" y="0">accelerate?</label>
+      <label kind="assignment" x="0" y="20">obligation = 0</label>
+    </transition>
+    <transition>
+      <source ref="pending" />
+      <target ref="idle" />
+      <label kind="synchronisation" x="0" y="0">speed_response?</label>
+      <label kind="assignment" x="0" y="20">reset_response_count++</label>
+    </transition>
+    <transition>
+      <source ref="pending" />
+      <target ref="late" />
+      <label kind="guard" x="0" y="0">obligation == RESPONSE_DEADLINE</label>
+      <label kind="assignment" x="0" y="20">reset_deadline_miss = true</label>
+    </transition>
+    <transition>
+      <source ref="late" />
+      <target ref="late" />
+      <label kind="synchronisation" x="0" y="0">accelerate?</label>
+      <label kind="assignment" x="0" y="20">obligation = 0</label>
+    </transition>
+    <transition>
+      <source ref="late" />
+      <target ref="idle" />
+      <label kind="synchronisation" x="0" y="0">speed_response?</label>
+      <label kind="assignment" x="0" y="20">reset_response_count++</label>
+    </transition>
+  </template>
+  <system>Trace = ObservedTrace();
+Strict = PreserveFirstDeadline();
+Reset = ResetOnRepeat();
+system Trace, Strict, Reset;</system>
+</nta>

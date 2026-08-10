@@ -1,0 +1,4787 @@
+{
+  "batch_size": 4,
+  "condition": "TRADITIONAL_COC",
+  "created_at_utc": "2026-08-04T19:31:25.896556Z",
+  "epochs": 16,
+  "experiment_id": "SMALL-VLM-GUARD-LEARNING-V0",
+  "gradient_accumulation": 4,
+  "history": [
+    {
+      "epoch": 1.0,
+      "mean_loss": 0.2531735909481843,
+      "optimizer_steps": 5.0
+    },
+    {
+      "epoch": 2.0,
+      "mean_loss": 0.1791094508435991,
+      "optimizer_steps": 5.0
+    },
+    {
+      "epoch": 3.0,
+      "mean_loss": 0.1566309312151538,
+      "optimizer_steps": 5.0
+    },
+    {
+      "epoch": 4.0,
+      "mean_loss": 0.1277918072624339,
+      "optimizer_steps": 5.0
+    },
+    {
+      "epoch": 5.0,
+      "mean_loss": 0.10488205102996694,
+      "optimizer_steps": 5.0
+    },
+    {
+      "epoch": 6.0,
+      "mean_loss": 0.08289692351051296,
+      "optimizer_steps": 5.0
+    },
+    {
+      "epoch": 7.0,
+      "mean_loss": 0.05270844814367592,
+      "optimizer_steps": 5.0
+    },
+    {
+      "epoch": 8.0,
+      "mean_loss": 0.02883624451564199,
+      "optimizer_steps": 5.0
+    },
+    {
+      "epoch": 9.0,
+      "mean_loss": 0.05886350640559752,
+      "optimizer_steps": 5.0
+    },
+    {
+      "epoch": 10.0,
+      "mean_loss": 0.6165741776753748,
+      "optimizer_steps": 5.0
+    },
+    {
+      "epoch": 11.0,
+      "mean_loss": 0.21137949294648528,
+      "optimizer_steps": 5.0
+    },
+    {
+      "epoch": 12.0,
+      "mean_loss": 0.02386993231848717,
+      "optimizer_steps": 5.0
+    },
+    {
+      "epoch": 13.0,
+      "mean_loss": 0.013718447655264754,
+      "optimizer_steps": 5.0
+    },
+    {
+      "epoch": 14.0,
+      "mean_loss": 0.0037932200124891503,
+      "optimizer_steps": 5.0
+    },
+    {
+      "epoch": 15.0,
+      "mean_loss": 0.009813080579887255,
+      "optimizer_steps": 5.0
+    },
+    {
+      "epoch": 16.0,
+      "mean_loss": 0.00014298007728383609,
+      "optimizer_steps": 5.0
+    }
+  ],
+  "learning_rate": 0.0002,
+  "lora_rank": 8,
+  "lora_target_module_count": 112,
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "post_paraphrase": {
+    "accuracy": 0.984375,
+    "accuracy_by_guard": {
+      "cross_traffic": 0.953125,
+      "pedestrian": 1.0,
+      "traffic_signal": 1.0
+    },
+    "accuracy_by_target": {
+      "PROCEED": 1.0,
+      "STOP": 0.96875
+    },
+    "example_count": 192,
+    "fully_correct_counterfactual_scene_rate": 0.9375,
+    "informative_scene_count": 48,
+    "invalid_rate": 0.0,
+    "rows": [
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30000,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30000,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30000,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30001,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30001,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30001,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30002,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30002,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30002,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30003,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30003,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30003,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30004,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30004,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30004,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30005,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30005,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30005,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30006,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30006,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30006,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30007,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30007,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30007,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30008,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30008,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30008,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30009,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30009,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30009,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30010,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30010,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30010,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30011,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30011,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30011,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30012,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30012,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30012,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30013,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30013,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30013,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30014,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30014,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30014,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30015,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30015,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30015,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30016,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30016,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30016,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30017,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30017,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30017,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30018,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30018,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30018,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30019,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30019,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30019,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30020,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30020,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30020,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30021,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30021,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30021,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30022,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30022,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30022,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30023,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30023,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30023,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30024,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30024,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30024,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30025,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30025,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30025,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30026,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30026,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30026,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30027,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30027,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30027,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30028,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30028,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30028,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30029,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30029,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30029,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30030,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30030,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30030,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30031,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30031,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30031,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30032,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30032,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30032,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30033,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30033,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30033,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30034,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30034,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30034,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30035,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30035,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30035,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30036,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30036,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30036,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30037,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30037,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30037,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30038,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30038,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30038,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30039,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30039,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30039,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30040,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30040,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30040,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30041,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30041,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30041,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30042,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30042,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30042,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30043,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30043,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30043,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30044,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30044,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30044,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30045,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30045,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30045,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30046,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30046,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30046,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30047,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30047,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30047,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30048,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30048,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30048,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30049,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30049,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30049,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30050,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30050,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30050,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30051,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30051,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30051,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30052,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30052,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30052,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30053,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30053,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30053,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30054,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30054,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30054,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30055,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30055,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30055,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30056,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30056,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30056,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30057,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30057,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30057,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30058,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30058,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30058,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30059,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30059,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30059,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30060,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30060,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30060,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30061,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30061,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30061,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30062,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30062,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30062,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30063,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30063,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 30063,
+        "target": "PROCEED"
+      }
+    ],
+    "stop_prediction_rate": 0.484375
+  },
+  "post_test": {
+    "accuracy": 1.0,
+    "accuracy_by_guard": {
+      "cross_traffic": 1.0,
+      "pedestrian": 1.0,
+      "traffic_signal": 1.0
+    },
+    "accuracy_by_target": {
+      "PROCEED": 1.0,
+      "STOP": 1.0
+    },
+    "example_count": 192,
+    "fully_correct_counterfactual_scene_rate": 1.0,
+    "informative_scene_count": 48,
+    "invalid_rate": 0.0,
+    "rows": [
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20000,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20000,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20000,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20001,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20001,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20001,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20002,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20002,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20002,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20003,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20003,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20003,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20004,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20004,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20004,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20005,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20005,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20005,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20006,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20006,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20006,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20007,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20007,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20007,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20008,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20008,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20008,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20009,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20009,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20009,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20010,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20010,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20010,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20011,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20011,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20011,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20012,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20012,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20012,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20013,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20013,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20013,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20014,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20014,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20014,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20015,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20015,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20015,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20016,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20016,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20016,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20017,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20017,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20017,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20018,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20018,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20018,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20019,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20019,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20019,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20020,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20020,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20020,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20021,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20021,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20021,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20022,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20022,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20022,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20023,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20023,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20023,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20024,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20024,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20024,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20025,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20025,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20025,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20026,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20026,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20026,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20027,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20027,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20027,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20028,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20028,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20028,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20029,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20029,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20029,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20030,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20030,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20030,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20031,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20031,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20031,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20032,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20032,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20032,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20033,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20033,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20033,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20034,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20034,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20034,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20035,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20035,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20035,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20036,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20036,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20036,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20037,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20037,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20037,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20038,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20038,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20038,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20039,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20039,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20039,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20040,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20040,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20040,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20041,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20041,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20041,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20042,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20042,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20042,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20043,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20043,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20043,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20044,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20044,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20044,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20045,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20045,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20045,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20046,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20046,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20046,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20047,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20047,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20047,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20048,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20048,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20048,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20049,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20049,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20049,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20050,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20050,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20050,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20051,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20051,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20051,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20052,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20052,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20052,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20053,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20053,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20053,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20054,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20054,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20054,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20055,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20055,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20055,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20056,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20056,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20056,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20057,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20057,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20057,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20058,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20058,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20058,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20059,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20059,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20059,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20060,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20060,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20060,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20061,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20061,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20061,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20062,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20062,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20062,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20063,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20063,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20063,
+        "target": "PROCEED"
+      }
+    ],
+    "stop_prediction_rate": 0.5
+  },
+  "post_validation": {
+    "accuracy": 0.9895833333333334,
+    "accuracy_by_guard": {
+      "cross_traffic": 0.96875,
+      "pedestrian": 1.0,
+      "traffic_signal": 1.0
+    },
+    "accuracy_by_target": {
+      "PROCEED": 1.0,
+      "STOP": 0.9791666666666666
+    },
+    "example_count": 96,
+    "fully_correct_counterfactual_scene_rate": 0.9583333333333334,
+    "informative_scene_count": 24,
+    "invalid_rate": 0.0,
+    "rows": [
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10000,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10000,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10000,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10001,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10001,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10001,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10002,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10002,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10002,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10003,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10003,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10003,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10004,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10004,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10004,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10005,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10005,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10005,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10006,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10006,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10006,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10007,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10007,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10007,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10008,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10008,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10008,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10009,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10009,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10009,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10010,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10010,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10010,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10011,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10011,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10011,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10012,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10012,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10012,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10013,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10013,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10013,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10014,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10014,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10014,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10015,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10015,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10015,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10016,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10016,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10016,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10017,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10017,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10017,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10018,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10018,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10018,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10019,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10019,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10019,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10020,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10020,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10020,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10021,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10021,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10021,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10022,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10022,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10022,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10023,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10023,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10023,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10024,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10024,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10024,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10025,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10025,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10025,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10026,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10026,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10026,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10027,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10027,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10027,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10028,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10028,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10028,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10029,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10029,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10029,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10030,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10030,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10030,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10031,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10031,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10031,
+        "target": "PROCEED"
+      }
+    ],
+    "stop_prediction_rate": 0.4895833333333333
+  },
+  "pre_validation": {
+    "accuracy": 0.5833333333333334,
+    "accuracy_by_guard": {
+      "cross_traffic": 0.5,
+      "pedestrian": 0.4375,
+      "traffic_signal": 0.8125
+    },
+    "accuracy_by_target": {
+      "PROCEED": 0.7916666666666666,
+      "STOP": 0.375
+    },
+    "example_count": 96,
+    "fully_correct_counterfactual_scene_rate": 0.16666666666666666,
+    "informative_scene_count": 24,
+    "invalid_rate": 0.0,
+    "rows": [
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10000,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10000,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10000,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10001,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10001,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10001,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10002,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10002,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10002,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10003,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10003,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10003,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10004,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10004,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10004,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10005,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10005,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10005,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10006,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10006,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10006,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10007,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10007,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10007,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10008,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10008,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10008,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10009,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10009,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10009,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10010,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10010,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10010,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10011,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10011,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10011,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10012,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10012,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10012,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10013,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10013,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10013,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10014,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10014,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10014,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10015,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10015,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10015,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10016,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10016,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10016,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10017,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10017,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10017,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10018,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10018,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10018,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10019,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10019,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10019,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10020,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10020,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10020,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10021,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10021,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10021,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10022,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10022,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10022,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10023,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10023,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10023,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10024,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10024,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10024,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10025,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10025,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10025,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10026,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10026,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10026,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10027,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10027,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10027,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10028,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10028,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10028,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10029,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10029,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10029,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10030,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10030,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10030,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10031,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10031,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10031,
+        "target": "PROCEED"
+      }
+    ],
+    "stop_prediction_rate": 0.2916666666666667
+  },
+  "prompt_mode": "TRADITIONAL_COC",
+  "seed": 42,
+  "test_scenes": 64,
+  "total_parameters": 2130743296,
+  "train_examples": 72,
+  "train_scenes": 24,
+  "trainable_fraction": 0.0015071097518074743,
+  "trainable_parameters": 3211264,
+  "validation_scenes": 32
+}

@@ -1,0 +1,2357 @@
+{
+  "enum_codes": {
+    "Epistemic": {
+      "CLAIMED": 3,
+      "DERIVED": 2,
+      "OBSERVED": 0,
+      "PREDICTED": 1
+    },
+    "Lifecycle": {
+      "ACTIVE": 2,
+      "CANDIDATE": 1,
+      "EXPIRED": 6,
+      "INACTIVE": 0,
+      "MAINTAINED": 3,
+      "REACTIVATED": 5,
+      "RELEASED": 4
+    },
+    "Truth": {
+      "CONFLICT": 3,
+      "FALSE": 1,
+      "TRUE": 0,
+      "UNKNOWN": 2
+    },
+    "Verdict": {
+      "CONFLICT": 3,
+      "REVIEW_REQUIRED": 1,
+      "UNSUPPORTED": 2,
+      "VALIDATED": 0
+    }
+  },
+  "horizon": 9,
+  "model_id": "p0b_pedestrian_conflict_zone_program_core",
+  "symbols": [
+    {
+      "declaration": "state",
+      "enum_name": "Lifecycle",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__state__t0",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "state",
+      "enum_name": "Lifecycle",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__state__t1",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "state",
+      "enum_name": "Lifecycle",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__state__t2",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "state",
+      "enum_name": "Lifecycle",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__state__t3",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "state",
+      "enum_name": "Lifecycle",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__state__t4",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "state",
+      "enum_name": "Lifecycle",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__state__t5",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 5,
+      "unit": null
+    },
+    {
+      "declaration": "state",
+      "enum_name": "Lifecycle",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__state__t6",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 6,
+      "unit": null
+    },
+    {
+      "declaration": "state",
+      "enum_name": "Lifecycle",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__state__t7",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 7,
+      "unit": null
+    },
+    {
+      "declaration": "state",
+      "enum_name": "Lifecycle",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__state__t8",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 8,
+      "unit": null
+    },
+    {
+      "declaration": "clear_count",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__clear_count__t0",
+      "sort": "INT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 0,
+      "unit": "1"
+    },
+    {
+      "declaration": "clear_count",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__clear_count__t1",
+      "sort": "INT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 1,
+      "unit": "1"
+    },
+    {
+      "declaration": "clear_count",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__clear_count__t2",
+      "sort": "INT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 2,
+      "unit": "1"
+    },
+    {
+      "declaration": "clear_count",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__clear_count__t3",
+      "sort": "INT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 3,
+      "unit": "1"
+    },
+    {
+      "declaration": "clear_count",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__clear_count__t4",
+      "sort": "INT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 4,
+      "unit": "1"
+    },
+    {
+      "declaration": "clear_count",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__clear_count__t5",
+      "sort": "INT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 5,
+      "unit": "1"
+    },
+    {
+      "declaration": "clear_count",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__clear_count__t6",
+      "sort": "INT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 6,
+      "unit": "1"
+    },
+    {
+      "declaration": "clear_count",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__clear_count__t7",
+      "sort": "INT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 7,
+      "unit": "1"
+    },
+    {
+      "declaration": "clear_count",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__clear_count__t8",
+      "sort": "INT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 8,
+      "unit": "1"
+    },
+    {
+      "declaration": "raw_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__raw_truth__t0",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "raw_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__raw_truth__t1",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "raw_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__raw_truth__t2",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "raw_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__raw_truth__t3",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "raw_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__raw_truth__t4",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "raw_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__raw_truth__t5",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 5,
+      "unit": null
+    },
+    {
+      "declaration": "raw_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__raw_truth__t6",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 6,
+      "unit": null
+    },
+    {
+      "declaration": "raw_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__raw_truth__t7",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 7,
+      "unit": null
+    },
+    {
+      "declaration": "raw_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__raw_truth__t8",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 8,
+      "unit": null
+    },
+    {
+      "declaration": "epistemic",
+      "enum_name": "Epistemic",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__epistemic__t0",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "epistemic",
+      "enum_name": "Epistemic",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__epistemic__t1",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "epistemic",
+      "enum_name": "Epistemic",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__epistemic__t2",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "epistemic",
+      "enum_name": "Epistemic",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__epistemic__t3",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "epistemic",
+      "enum_name": "Epistemic",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__epistemic__t4",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "epistemic",
+      "enum_name": "Epistemic",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__epistemic__t5",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 5,
+      "unit": null
+    },
+    {
+      "declaration": "epistemic",
+      "enum_name": "Epistemic",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__epistemic__t6",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 6,
+      "unit": null
+    },
+    {
+      "declaration": "epistemic",
+      "enum_name": "Epistemic",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__epistemic__t7",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 7,
+      "unit": null
+    },
+    {
+      "declaration": "epistemic",
+      "enum_name": "Epistemic",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__epistemic__t8",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 8,
+      "unit": null
+    },
+    {
+      "declaration": "timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__timestamp__t0",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 0,
+      "unit": "s"
+    },
+    {
+      "declaration": "timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__timestamp__t1",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 1,
+      "unit": "s"
+    },
+    {
+      "declaration": "timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__timestamp__t2",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 2,
+      "unit": "s"
+    },
+    {
+      "declaration": "timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__timestamp__t3",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 3,
+      "unit": "s"
+    },
+    {
+      "declaration": "timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__timestamp__t4",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 4,
+      "unit": "s"
+    },
+    {
+      "declaration": "timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__timestamp__t5",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 5,
+      "unit": "s"
+    },
+    {
+      "declaration": "timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__timestamp__t6",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 6,
+      "unit": "s"
+    },
+    {
+      "declaration": "timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__timestamp__t7",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 7,
+      "unit": "s"
+    },
+    {
+      "declaration": "timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__timestamp__t8",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 8,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_timestamp__t0",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 0,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_timestamp__t1",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 1,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_timestamp__t2",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 2,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_timestamp__t3",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 3,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_timestamp__t4",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 4,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_timestamp__t5",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 5,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_timestamp__t6",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 6,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_timestamp__t7",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 7,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_timestamp",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_timestamp__t8",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 8,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_maximum_age",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_maximum_age__t0",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 0,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_maximum_age",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_maximum_age__t1",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 1,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_maximum_age",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_maximum_age__t2",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 2,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_maximum_age",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_maximum_age__t3",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 3,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_maximum_age",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_maximum_age__t4",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 4,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_maximum_age",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_maximum_age__t5",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 5,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_maximum_age",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_maximum_age__t6",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 6,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_maximum_age",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_maximum_age__t7",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 7,
+      "unit": "s"
+    },
+    {
+      "declaration": "fact_maximum_age",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__fact_maximum_age__t8",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 8,
+      "unit": "s"
+    },
+    {
+      "declaration": "scope_valid",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__scope_valid__t0",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "scope_valid",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__scope_valid__t1",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "scope_valid",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__scope_valid__t2",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "scope_valid",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__scope_valid__t3",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "scope_valid",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__scope_valid__t4",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "scope_valid",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__scope_valid__t5",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 5,
+      "unit": null
+    },
+    {
+      "declaration": "scope_valid",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__scope_valid__t6",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 6,
+      "unit": null
+    },
+    {
+      "declaration": "scope_valid",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__scope_valid__t7",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 7,
+      "unit": null
+    },
+    {
+      "declaration": "scope_valid",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__scope_valid__t8",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 8,
+      "unit": null
+    },
+    {
+      "declaration": "unit_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__unit_ok__t0",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "unit_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__unit_ok__t1",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "unit_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__unit_ok__t2",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "unit_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__unit_ok__t3",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "unit_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__unit_ok__t4",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "unit_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__unit_ok__t5",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 5,
+      "unit": null
+    },
+    {
+      "declaration": "unit_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__unit_ok__t6",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 6,
+      "unit": null
+    },
+    {
+      "declaration": "unit_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__unit_ok__t7",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 7,
+      "unit": null
+    },
+    {
+      "declaration": "unit_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__unit_ok__t8",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 8,
+      "unit": null
+    },
+    {
+      "declaration": "coordinate_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__coordinate_ok__t0",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "coordinate_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__coordinate_ok__t1",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "coordinate_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__coordinate_ok__t2",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "coordinate_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__coordinate_ok__t3",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "coordinate_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__coordinate_ok__t4",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "coordinate_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__coordinate_ok__t5",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 5,
+      "unit": null
+    },
+    {
+      "declaration": "coordinate_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__coordinate_ok__t6",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 6,
+      "unit": null
+    },
+    {
+      "declaration": "coordinate_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__coordinate_ok__t7",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 7,
+      "unit": null
+    },
+    {
+      "declaration": "coordinate_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__coordinate_ok__t8",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 8,
+      "unit": null
+    },
+    {
+      "declaration": "target_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__target_ok__t0",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "target_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__target_ok__t1",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "target_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__target_ok__t2",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "target_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__target_ok__t3",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "target_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__target_ok__t4",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "target_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__target_ok__t5",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 5,
+      "unit": null
+    },
+    {
+      "declaration": "target_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__target_ok__t6",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 6,
+      "unit": null
+    },
+    {
+      "declaration": "target_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__target_ok__t7",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 7,
+      "unit": null
+    },
+    {
+      "declaration": "target_ok",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__target_ok__t8",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": 8,
+      "unit": null
+    },
+    {
+      "declaration": "ego_front_x",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_front_x__t0",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 0,
+      "unit": "m"
+    },
+    {
+      "declaration": "ego_front_x",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_front_x__t1",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 1,
+      "unit": "m"
+    },
+    {
+      "declaration": "ego_front_x",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_front_x__t2",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 2,
+      "unit": "m"
+    },
+    {
+      "declaration": "ego_front_x",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_front_x__t3",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 3,
+      "unit": "m"
+    },
+    {
+      "declaration": "ego_front_x",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_front_x__t4",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 4,
+      "unit": "m"
+    },
+    {
+      "declaration": "ego_front_x",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_front_x__t5",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 5,
+      "unit": "m"
+    },
+    {
+      "declaration": "ego_front_x",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_front_x__t6",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 6,
+      "unit": "m"
+    },
+    {
+      "declaration": "ego_front_x",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_front_x__t7",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 7,
+      "unit": "m"
+    },
+    {
+      "declaration": "ego_front_x",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_front_x__t8",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 8,
+      "unit": "m"
+    },
+    {
+      "declaration": "ego_speed",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_speed__t0",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 0,
+      "unit": "m/s"
+    },
+    {
+      "declaration": "ego_speed",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_speed__t1",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 1,
+      "unit": "m/s"
+    },
+    {
+      "declaration": "ego_speed",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_speed__t2",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 2,
+      "unit": "m/s"
+    },
+    {
+      "declaration": "ego_speed",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_speed__t3",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 3,
+      "unit": "m/s"
+    },
+    {
+      "declaration": "ego_speed",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_speed__t4",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 4,
+      "unit": "m/s"
+    },
+    {
+      "declaration": "ego_speed",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_speed__t5",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 5,
+      "unit": "m/s"
+    },
+    {
+      "declaration": "ego_speed",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_speed__t6",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 6,
+      "unit": "m/s"
+    },
+    {
+      "declaration": "ego_speed",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_speed__t7",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 7,
+      "unit": "m/s"
+    },
+    {
+      "declaration": "ego_speed",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__ego_speed__t8",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 8,
+      "unit": "m/s"
+    },
+    {
+      "declaration": "safe_progress",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__safe_progress__t0",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "safe_progress",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__safe_progress__t1",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "safe_progress",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__safe_progress__t2",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "safe_progress",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__safe_progress__t3",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "safe_progress",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__safe_progress__t4",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "safe_progress",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__safe_progress__t5",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 5,
+      "unit": null
+    },
+    {
+      "declaration": "safe_progress",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__safe_progress__t6",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 6,
+      "unit": null
+    },
+    {
+      "declaration": "safe_progress",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__safe_progress__t7",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 7,
+      "unit": null
+    },
+    {
+      "declaration": "safe_progress",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__safe_progress__t8",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": 8,
+      "unit": null
+    },
+    {
+      "declaration": "effective_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__effective_truth__t0",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "effective_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__effective_truth__t1",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "effective_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__effective_truth__t2",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "effective_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__effective_truth__t3",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "effective_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__effective_truth__t4",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "effective_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__effective_truth__t5",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 5,
+      "unit": null
+    },
+    {
+      "declaration": "effective_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__effective_truth__t6",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 6,
+      "unit": null
+    },
+    {
+      "declaration": "effective_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__effective_truth__t7",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 7,
+      "unit": null
+    },
+    {
+      "declaration": "effective_truth",
+      "enum_name": "Truth",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__effective_truth__t8",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 8,
+      "unit": null
+    },
+    {
+      "declaration": "verdict",
+      "enum_name": "Verdict",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__verdict__t0",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "verdict",
+      "enum_name": "Verdict",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__verdict__t1",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "verdict",
+      "enum_name": "Verdict",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__verdict__t2",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "verdict",
+      "enum_name": "Verdict",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__verdict__t3",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "verdict",
+      "enum_name": "Verdict",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__verdict__t4",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "verdict",
+      "enum_name": "Verdict",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__verdict__t5",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 5,
+      "unit": null
+    },
+    {
+      "declaration": "verdict",
+      "enum_name": "Verdict",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__verdict__t6",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 6,
+      "unit": null
+    },
+    {
+      "declaration": "verdict",
+      "enum_name": "Verdict",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__verdict__t7",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 7,
+      "unit": null
+    },
+    {
+      "declaration": "verdict",
+      "enum_name": "Verdict",
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__verdict__t8",
+      "sort": "ENUM",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 8,
+      "unit": null
+    },
+    {
+      "declaration": "entry_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__entry_violation__t0",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "entry_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__entry_violation__t1",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "entry_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__entry_violation__t2",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "entry_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__entry_violation__t3",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "entry_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__entry_violation__t4",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "entry_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__entry_violation__t5",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 5,
+      "unit": null
+    },
+    {
+      "declaration": "entry_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__entry_violation__t6",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 6,
+      "unit": null
+    },
+    {
+      "declaration": "entry_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__entry_violation__t7",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 7,
+      "unit": null
+    },
+    {
+      "declaration": "entry_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__entry_violation__t8",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 8,
+      "unit": null
+    },
+    {
+      "declaration": "speed_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__speed_violation__t0",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "speed_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__speed_violation__t1",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "speed_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__speed_violation__t2",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "speed_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__speed_violation__t3",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "speed_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__speed_violation__t4",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "speed_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__speed_violation__t5",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 5,
+      "unit": null
+    },
+    {
+      "declaration": "speed_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__speed_violation__t6",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 6,
+      "unit": null
+    },
+    {
+      "declaration": "speed_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__speed_violation__t7",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 7,
+      "unit": null
+    },
+    {
+      "declaration": "speed_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__speed_violation__t8",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 8,
+      "unit": null
+    },
+    {
+      "declaration": "deadlock_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__deadlock_violation__t0",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "deadlock_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__deadlock_violation__t1",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "deadlock_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__deadlock_violation__t2",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "deadlock_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__deadlock_violation__t3",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "deadlock_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__deadlock_violation__t4",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "deadlock_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__deadlock_violation__t5",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 5,
+      "unit": null
+    },
+    {
+      "declaration": "deadlock_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__deadlock_violation__t6",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 6,
+      "unit": null
+    },
+    {
+      "declaration": "deadlock_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__deadlock_violation__t7",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 7,
+      "unit": null
+    },
+    {
+      "declaration": "deadlock_violation",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__deadlock_violation__t8",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 8,
+      "unit": null
+    },
+    {
+      "declaration": "progress_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__progress_allowed__t0",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 0,
+      "unit": null
+    },
+    {
+      "declaration": "progress_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__progress_allowed__t1",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 1,
+      "unit": null
+    },
+    {
+      "declaration": "progress_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__progress_allowed__t2",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 2,
+      "unit": null
+    },
+    {
+      "declaration": "progress_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__progress_allowed__t3",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 3,
+      "unit": null
+    },
+    {
+      "declaration": "progress_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__progress_allowed__t4",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 4,
+      "unit": null
+    },
+    {
+      "declaration": "progress_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__progress_allowed__t5",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 5,
+      "unit": null
+    },
+    {
+      "declaration": "progress_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__progress_allowed__t6",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 6,
+      "unit": null
+    },
+    {
+      "declaration": "progress_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__progress_allowed__t7",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 7,
+      "unit": null
+    },
+    {
+      "declaration": "progress_allowed",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__progress_allowed__t8",
+      "sort": "BOOL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": 8,
+      "unit": null
+    },
+    {
+      "declaration": "stop_position",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__stop_position__const",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": null,
+      "unit": "m"
+    },
+    {
+      "declaration": "position_uncertainty",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__position_uncertainty__const",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ],
+      "time": null,
+      "unit": "m"
+    },
+    {
+      "declaration": "response_time",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__response_time__const",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ],
+      "time": null,
+      "unit": "s"
+    },
+    {
+      "declaration": "deceleration",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__deceleration__const",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ],
+      "time": null,
+      "unit": "m/s^2"
+    },
+    {
+      "declaration": "position_epsilon",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__position_epsilon__const",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": null,
+      "unit": "m"
+    },
+    {
+      "declaration": "speed_epsilon",
+      "enum_name": null,
+      "frame": "ego_path_s",
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__speed_epsilon__const",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": null,
+      "unit": "m/s"
+    },
+    {
+      "declaration": "time_epsilon",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__time_epsilon__const",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ],
+      "time": null,
+      "unit": "s"
+    },
+    {
+      "declaration": "predicate_maximum_age",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__predicate_maximum_age__const",
+      "sort": "REAL",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ],
+      "time": null,
+      "unit": "s"
+    },
+    {
+      "declaration": "release_threshold",
+      "enum_name": null,
+      "frame": null,
+      "smt_symbol": "p0b_pedestrian_conflict_zone_program_core__release_threshold__const",
+      "sort": "INT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "time": null,
+      "unit": "1"
+    }
+  ]
+}

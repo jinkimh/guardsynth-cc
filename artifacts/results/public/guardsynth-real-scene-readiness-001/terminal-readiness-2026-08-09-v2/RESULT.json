@@ -1,0 +1,60 @@
+{
+  "claim_scope": "SOURCE_READINESS_AND_ABSTENTION_NOT_REAL_SCENE_CONTRACT_OR_VEHICLE_SAFETY",
+  "current_research_stage_closed": true,
+  "decision": "DATA_GAP_PIVOT",
+  "experiment_id": "GUARDSYNTH-REAL-SCENE-READINESS-001",
+  "external_inputs_required_for_go": [
+    "24_SOURCE_COMPLETE_SCENES",
+    "UNAMBIGUOUS_TARGET_ZONE_ASSOCIATION",
+    "VERIFIED_RIG_TO_EGO_PATH_TRANSFORM",
+    "SOURCE_BEARING_VEHICLE_ASSURANCE_PROFILE"
+  ],
+  "readiness_summary": {
+    "actual_candidate_event_count": 5,
+    "adapted_candidate_count": 4,
+    "decision": "DATA_GAP_PIVOT",
+    "derivation_gap_count": 1,
+    "missing_scene_input_slot_count": 19,
+    "reason_code_counts": {
+      "AMBIGUOUS_TARGET": 4,
+      "EVENT_OUTSIDE_RECORDED_FUTURE_HORIZON": 1,
+      "MISSING_OR_AMBIGUOUS_TARGET_ZONE_ASSOCIATION": 4,
+      "MISSING_SCENE_INPUT": 19,
+      "MISSING_VEHICLE_ASSURANCE_PROFILE": 4,
+      "RIG_TO_CANONICAL_EGO_PATH_FRAME_NOT_VERIFIED": 4,
+      "UNVERIFIED_COORDINATE_TRANSFORM": 4
+    },
+    "slot_count": 24,
+    "source_complete_scene_count": 0,
+    "synthetic_scene_fill_performed": false,
+    "twenty_four_scene_execution_completed": false
+  },
+  "remaining_software_task_in_current_scope": null,
+  "run_date": "2026-08-09",
+  "run_id": "terminal-readiness-2026-08-09-v2",
+  "software_scope_complete": true,
+  "status": "EXECUTED",
+  "tests": {
+    "full": {
+      "command": "/usr/bin/python3 -m unittest discover -s tests/guard_synth_eblc -p test_*.py -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 158,
+      "test_count": 158
+    },
+    "source_authoring": {
+      "command": "/usr/bin/python3 -m unittest tests.guard_synth_eblc.test_source_authoring -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 8,
+      "test_count": 8
+    },
+    "structure": {
+      "command": "/usr/bin/python3 -m unittest tests.structure.test_project_layout -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 9,
+      "test_count": 9
+    }
+  }
+}

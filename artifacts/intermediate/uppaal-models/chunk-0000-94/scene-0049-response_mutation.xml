@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+  <declaration>// scene-0049; milliseconds relative to the first source CoC event.
+clock episode;
+broadcast chan coc_event;
+bool provenance_violation = false;
+bool weak_response_violation = false;</declaration>
+  <template>
+    <name>EpisodeSource</name>
+    <declaration />
+    <location id="s0" x="0" y="0">
+      <name x="-20" y="-30">Before1</name>
+      <label kind="invariant" x="-20" y="20">episode &lt;= 0</label>
+    </location>
+    <location id="s1" x="140" y="0">
+      <name x="120" y="-30">Before2</name>
+      <label kind="invariant" x="120" y="20">episode &lt;= 1500</label>
+    </location>
+    <location id="s2" x="280" y="0">
+      <name x="260" y="-30">Before3</name>
+      <label kind="invariant" x="260" y="20">episode &lt;= 2500</label>
+    </location>
+    <location id="s3" x="420" y="0">
+      <name x="400" y="-30">Before4</name>
+      <label kind="invariant" x="400" y="20">episode &lt;= 5700</label>
+    </location>
+    <location id="s4" x="560" y="0">
+      <name x="540" y="-30">Before5</name>
+      <label kind="invariant" x="540" y="20">episode &lt;= 7000</label>
+    </location>
+    <location id="s5" x="700" y="0">
+      <name x="680" y="-30">Before6</name>
+      <label kind="invariant" x="680" y="20">episode &lt;= 8600</label>
+    </location>
+    <location id="s6" x="840" y="0">
+      <name x="820" y="-30">Done</name>
+    </location>
+    <init ref="s0" />
+    <transition>
+      <source ref="s0" />
+      <target ref="s1" />
+      <label kind="guard" x="0" y="0">episode == 0</label>
+      <label kind="synchronisation" x="0" y="20">coc_event!</label>
+      <label kind="assignment" x="0" y="40">weak_response_violation = true</label>
+    </transition>
+    <transition>
+      <source ref="s1" />
+      <target ref="s2" />
+      <label kind="guard" x="0" y="0">episode == 1500</label>
+      <label kind="synchronisation" x="0" y="20">coc_event!</label>
+    </transition>
+    <transition>
+      <source ref="s2" />
+      <target ref="s3" />
+      <label kind="guard" x="0" y="0">episode == 2500</label>
+      <label kind="synchronisation" x="0" y="20">coc_event!</label>
+    </transition>
+    <transition>
+      <source ref="s3" />
+      <target ref="s4" />
+      <label kind="guard" x="0" y="0">episode == 5700</label>
+      <label kind="synchronisation" x="0" y="20">coc_event!</label>
+    </transition>
+    <transition>
+      <source ref="s4" />
+      <target ref="s5" />
+      <label kind="guard" x="0" y="0">episode == 7000</label>
+      <label kind="synchronisation" x="0" y="20">coc_event!</label>
+    </transition>
+    <transition>
+      <source ref="s5" />
+      <target ref="s6" />
+      <label kind="guard" x="0" y="0">episode == 8600</label>
+      <label kind="synchronisation" x="0" y="20">coc_event!</label>
+    </transition>
+    <transition>
+      <source ref="s6" />
+      <target ref="s6" />
+    </transition>
+  </template>
+  <template>
+    <name>LineageMonitor</name>
+    <declaration>int[0, 100] seen = 0;</declaration>
+    <location id="m0" x="0" y="220">
+      <name x="-20" y="190">Tracking</name>
+    </location>
+    <init ref="m0" />
+    <transition>
+      <source ref="m0" />
+      <target ref="m0" />
+      <label kind="synchronisation" x="0" y="0">coc_event?</label>
+      <label kind="assignment" x="0" y="20">seen++</label>
+    </transition>
+  </template>
+  <system>Source = EpisodeSource();
+Lineage = LineageMonitor();
+system Source, Lineage;</system>
+</nta>

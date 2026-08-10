@@ -1,0 +1,10 @@
+{
+  "definedness_assertion_count": 18,
+  "exact_outputs": {
+    "c0__stop_position": "-3/2",
+    "c0__stopping_distance@0": "9",
+    "c1__stop_position": "21/2",
+    "c1__stopping_distance@0": "3"
+  },
+  "status": "SAT"
+}

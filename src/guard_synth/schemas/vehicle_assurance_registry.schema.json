@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:guardsynth:vehicle-assurance-registry:v0.1",
+  "title": "GuardSynth vehicle assurance registry v0.1",
+  "type": "object",
+  "required": ["registry_version", "registry_id", "profiles"],
+  "additionalProperties": false,
+  "properties": {
+    "registry_version": {"const": "guardsynth-vehicle-assurance-registry-v0.1"},
+    "registry_id": {"type": "string", "minLength": 1},
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["profile_id", "vehicle_binding_key", "maximum_service_deceleration_mps2", "response_time_s", "position_uncertainty_m", "evidence"],
+        "additionalProperties": false,
+        "properties": {
+          "profile_id": {"type": "string", "minLength": 1},
+          "vehicle_binding_key": {"type": "string", "minLength": 1},
+          "maximum_service_deceleration_mps2": {"type": "number", "minimum": 0},
+          "response_time_s": {"type": "number", "minimum": 0},
+          "position_uncertainty_m": {"type": "number", "minimum": 0},
+          "evidence": {
+            "type": "object",
+            "required": ["evidence_ref", "source_class", "uri", "version", "sha256", "scope"],
+            "additionalProperties": false,
+            "properties": {
+              "evidence_ref": {"type": "string", "minLength": 1},
+              "source_class": {"type": "string", "enum": ["CONTROLLED_TEST_REPORT", "VEHICLE_VALIDATION_REPORT", "MANUFACTURER_ASSURANCE_CASE"]},
+              "uri": {"type": "string", "minLength": 1},
+              "version": {"type": "string", "minLength": 1},
+              "sha256": {"type": "string", "minLength": 64},
+              "scope": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    }
+  }
+}

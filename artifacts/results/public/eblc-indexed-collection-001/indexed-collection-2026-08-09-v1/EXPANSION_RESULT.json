@@ -1,0 +1,9 @@
+{
+  "bundle_generated": true,
+  "collection_id": "p0b_two_actor_two_zone_collection",
+  "reason_codes": [
+    "ALL_INDEXED_ASSOCIATIONS_BOUND"
+  ],
+  "unresolved_instance_ids": [],
+  "verdict": "VALIDATED"
+}

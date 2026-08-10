@@ -1,0 +1,144 @@
+{
+  "scenes": [
+    "scene-0134",
+    "scene-0135"
+  ],
+  "origin_scene": "scene-0134",
+  "origin_timestamp_us": 1533113014547907,
+  "duration_ms": 34038,
+  "deadline_ms": 3000,
+  "max_boundary_gap_ms": 1000,
+  "scene_summary": [
+    {
+      "scene": "scene-0134",
+      "global_start_ms": 0,
+      "global_end_ms": 19350,
+      "trusted_obligation_events": 2,
+      "derived_response_witnesses": 2
+    },
+    {
+      "scene": "scene-0135",
+      "global_start_ms": 19999,
+      "global_end_ms": 39150,
+      "trusted_obligation_events": 1,
+      "derived_response_witnesses": 1
+    }
+  ],
+  "event_count": 7,
+  "channel_counts": {
+    "accel_req": 2,
+    "accel_resp": 2,
+    "scene_boundary": 1,
+    "slow_req": 1,
+    "slow_resp": 1
+  },
+  "events": [
+    {
+      "time_ms": 9000,
+      "channel": "accel_req",
+      "label": "scene-0134:0:accel",
+      "scene": "scene-0134",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Keep lane and accelerate through the intersection as the road ahead is clear.",
+        "local_timestamp_us": 9000000
+      }
+    },
+    {
+      "time_ms": 9020,
+      "channel": "accel_resp",
+      "label": "scene-0134:0:accel:response",
+      "scene": "scene-0134",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 9000000,
+        "response_local_ms": 9020,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 12100,
+      "channel": "accel_req",
+      "label": "scene-0134:1:accel",
+      "scene": "scene-0134",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Keep lane and accelerate while navigating the road with visible construction cones on the left side.",
+        "local_timestamp_us": 12100000
+      }
+    },
+    {
+      "time_ms": 12119,
+      "channel": "accel_resp",
+      "label": "scene-0134:1:accel:response",
+      "scene": "scene-0134",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 12100000,
+        "response_local_ms": 12119,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 19350,
+      "channel": "scene_boundary",
+      "label": "scene-0134->scene-0135",
+      "scene": "scene-0135",
+      "provenance": "DERIVED_NUSCENES_METADATA",
+      "detail": {
+        "gap_ms": 650,
+        "from": "scene-0134",
+        "to": "scene-0135"
+      }
+    },
+    {
+      "time_ms": 32699,
+      "channel": "slow_req",
+      "label": "scene-0135:1:slow",
+      "scene": "scene-0135",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Decelerate to maintain a safe distance from the lead vehicle ahead while navigating through the construction zone with traffic cones and barriers.",
+        "local_timestamp_us": 12700000
+      }
+    },
+    {
+      "time_ms": 34038,
+      "channel": "slow_resp",
+      "label": "scene-0135:1:slow:response",
+      "scene": "scene-0135",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 12700000,
+        "response_local_ms": 14039,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    }
+  ],
+  "model": "scene-0134-to-scene-0135-loop.xml",
+  "model_style": "LOOP_INDEXED_EVENT_REPLAY",
+  "kind_encoding": {
+    "slow_req": 1,
+    "accel_req": 2,
+    "slow_resp": 3,
+    "accel_resp": 4,
+    "scene_boundary": 5
+  },
+  "queries": [
+    "E<> Source.Done",
+    "E<> MonitorProc.Responded",
+    "A[] not deadline_miss",
+    "A[] not contradiction",
+    "A[] not boundary_violation",
+    "A[] not deadlock"
+  ]
+}

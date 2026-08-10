@@ -1,0 +1,11 @@
+{
+  "trigger_us": 2500000,
+  "repeat_1_ms": 1000,
+  "repeat_2_ms": 2300,
+  "response_ms": 2160,
+  "untrusted_ms": 6800,
+  "source": "/home/jin/prj_ws/coc-modelchcking/artifacts/results/public/scene-0001/episode-check-result.json",
+  "time_unit": "milliseconds relative to trigger_us",
+  "quantization": "round((timestamp_us - trigger_us) / 1000)",
+  "response_semantics": "HEURISTIC_SPEED_TRACE_NOT_ACTIVE_BRAKE_DETECTION"
+}

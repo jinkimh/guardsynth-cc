@@ -1,0 +1,296 @@
+{
+  "batch_size": 2,
+  "condition": "TRADITIONAL_COC",
+  "created_at_utc": "2026-08-04T19:22:29.699858Z",
+  "epochs": 1,
+  "experiment_id": "SMALL-VLM-GUARD-LEARNING-V0",
+  "gradient_accumulation": 2,
+  "history": [
+    {
+      "epoch": 1.0,
+      "mean_loss": 0.38129694884022075,
+      "optimizer_steps": 3.0
+    }
+  ],
+  "learning_rate": 0.0002,
+  "lora_rank": 8,
+  "lora_target_module_count": 112,
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "post_paraphrase": {
+    "accuracy": 0.5,
+    "accuracy_by_guard": {
+      "cross_traffic": 0.5,
+      "pedestrian": 1.0,
+      "traffic_signal": 0.0
+    },
+    "accuracy_by_target": {
+      "PROCEED": 0.0,
+      "STOP": 1.0
+    },
+    "example_count": 6,
+    "fully_correct_counterfactual_scene_rate": 0.0,
+    "informative_scene_count": 2,
+    "invalid_rate": 0.0,
+    "rows": [
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30000,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30000,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30000,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30001,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30001,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 30001,
+        "target": "PROCEED"
+      }
+    ],
+    "stop_prediction_rate": 1.0
+  },
+  "post_test": {
+    "accuracy": 0.6666666666666666,
+    "accuracy_by_guard": {
+      "cross_traffic": 0.5,
+      "pedestrian": 1.0,
+      "traffic_signal": 0.5
+    },
+    "accuracy_by_target": {
+      "PROCEED": 0.3333333333333333,
+      "STOP": 1.0
+    },
+    "example_count": 6,
+    "fully_correct_counterfactual_scene_rate": 0.0,
+    "informative_scene_count": 2,
+    "invalid_rate": 0.0,
+    "rows": [
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20000,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20000,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 20000,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20001,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20001,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 20001,
+        "target": "PROCEED"
+      }
+    ],
+    "stop_prediction_rate": 0.8333333333333334
+  },
+  "post_validation": {
+    "accuracy": 0.5,
+    "accuracy_by_guard": {
+      "cross_traffic": 0.5,
+      "pedestrian": 1.0,
+      "traffic_signal": 0.0
+    },
+    "accuracy_by_target": {
+      "PROCEED": 0.0,
+      "STOP": 1.0
+    },
+    "example_count": 6,
+    "fully_correct_counterfactual_scene_rate": 0.0,
+    "informative_scene_count": 2,
+    "invalid_rate": 0.0,
+    "rows": [
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10000,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10000,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10000,
+        "target": "PROCEED"
+      },
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10001,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10001,
+        "target": "STOP"
+      },
+      {
+        "correct": false,
+        "guard_kind": "traffic_signal",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10001,
+        "target": "PROCEED"
+      }
+    ],
+    "stop_prediction_rate": 1.0
+  },
+  "pre_validation": {
+    "accuracy": 0.6666666666666666,
+    "accuracy_by_guard": {
+      "cross_traffic": 0.5,
+      "pedestrian": 0.5,
+      "traffic_signal": 1.0
+    },
+    "accuracy_by_target": {
+      "PROCEED": 1.0,
+      "STOP": 0.3333333333333333
+    },
+    "example_count": 6,
+    "fully_correct_counterfactual_scene_rate": 0.0,
+    "informative_scene_count": 2,
+    "invalid_rate": 0.0,
+    "rows": [
+      {
+        "correct": true,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10000,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "pedestrian",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10000,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10000,
+        "target": "PROCEED"
+      },
+      {
+        "correct": false,
+        "guard_kind": "cross_traffic",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10001,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "pedestrian",
+        "prediction": "STOP",
+        "raw": "STOP",
+        "scene_id": 10001,
+        "target": "STOP"
+      },
+      {
+        "correct": true,
+        "guard_kind": "traffic_signal",
+        "prediction": "PROCEED",
+        "raw": "PROCEED",
+        "scene_id": 10001,
+        "target": "PROCEED"
+      }
+    ],
+    "stop_prediction_rate": 0.16666666666666666
+  },
+  "prompt_mode": "TRADITIONAL_COC",
+  "seed": 42,
+  "test_scenes": 2,
+  "total_parameters": 2130743296,
+  "train_examples": 12,
+  "train_scenes": 4,
+  "trainable_fraction": 0.0015071097518074743,
+  "trainable_parameters": 3211264,
+  "validation_scenes": 2
+}

@@ -1,0 +1,53 @@
+{
+  "query_order": [
+    "E<> Obligation.Active",
+    "E<> Obligation.Responded",
+    "A[] not Reaction.DeadlineMiss",
+    "A[] not clock_reset_violation",
+    "A[] not untrusted_overwrite",
+    "A[] not deadlock"
+  ],
+  "expected_satisfaction": {
+    "normal": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "deadline_2s": [
+      true,
+      true,
+      false,
+      true,
+      true,
+      true
+    ],
+    "clock_reset": [
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+    ],
+    "no_response": [
+      true,
+      false,
+      false,
+      true,
+      true,
+      true
+    ],
+    "untrusted_overwrite": [
+      true,
+      true,
+      true,
+      true,
+      false,
+      true
+    ]
+  },
+  "interpretation": "Expected results are mutation-oracle targets and remain unverified until verifyta executes with a valid license."
+}

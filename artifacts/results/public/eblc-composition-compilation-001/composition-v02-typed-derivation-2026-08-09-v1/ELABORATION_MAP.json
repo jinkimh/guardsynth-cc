@@ -1,0 +1,64 @@
+{
+  "bundle_elaborator_version": "eblc-bundle-elaborator-v0.2",
+  "bundle_id": "p0b_synthetic_composition_bundle_v02",
+  "bundle_version": "eblc-bundle-v0.1",
+  "component_derived_outputs": {
+    "C0": [
+      "stop_position",
+      "stopping_distance"
+    ],
+    "C1": [
+      "stop_position",
+      "stopping_distance"
+    ]
+  },
+  "component_prefixes": {
+    "C0": "c0__",
+    "C1": "c1__"
+  },
+  "component_program_versions": {
+    "C0": "eblc-program-v0.2",
+    "C1": "eblc-program-v0.2"
+  },
+  "component_programs": {
+    "C0": "p0b_synthetic_composition_program_0",
+    "C1": "p0b_synthetic_composition_program_1"
+  },
+  "component_typed_derivations": {
+    "C0": "p0b_full_stopping_derivation",
+    "C1": "p0b_full_stopping_derivation"
+  },
+  "core_horizon": 9,
+  "core_model_id": "p0b_synthetic_composition_bundle_v02_core",
+  "frames": 8,
+  "generated_composition_clauses": [
+    "compose_select__C0",
+    "compose_select__C1",
+    "compose_action__STOP",
+    "compose_action__CREEP",
+    "compose_action__PROCEED",
+    "compose_hard_conflict",
+    "compose_review_required",
+    "compose_false_deadlock",
+    "compose_verdict"
+  ],
+  "limitations": [
+    "BOUNDED_DISCRETE_TIME",
+    "FINITE_ENUMERATED_ACTION_DOMAIN",
+    "NOT_A_VEHICLE_SAFETY_PROOF"
+  ],
+  "priority": {
+    "compiled_as_scalar_weight": false,
+    "dominance": {
+      "C0": [
+        "C1"
+      ],
+      "C1": []
+    },
+    "tiers": [
+      "HARD",
+      "SERVICE",
+      "PREFERENCE"
+    ]
+  }
+}

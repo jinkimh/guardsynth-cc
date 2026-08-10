@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+  <declaration>// Negative-control timeline in ms.
+// A trusted request appears in scene A, an unverified boundary appears before
+// the deadline, and a response witness appears only in scene B.
+const int REQ_AT = 0;
+const int BOUNDARY_AT = 1000;
+const int RESP_AT = 1500;
+const int DEADLINE = 3000;
+clock t;
+clock age;
+broadcast chan req, scene_boundary, resp;
+bool boundary_seen = false;
+bool discarded_at_boundary = false;
+bool boundary_carryover = false;
+bool cross_boundary_completion = false;</declaration>
+  <template>
+    <name>SourceProc</name>
+    <declaration />
+    <location id="s0" x="0" y="0">
+      <name x="-20" y="-30">BeforeReq</name>
+      <label kind="invariant" x="-20" y="20">t &lt;= REQ_AT</label>
+    </location>
+    <location id="s1" x="180" y="0">
+      <name x="160" y="-30">BeforeBoundary</name>
+      <label kind="invariant" x="160" y="20">t &lt;= BOUNDARY_AT</label>
+    </location>
+    <location id="s2" x="390" y="0">
+      <name x="370" y="-30">BeforeResp</name>
+      <label kind="invariant" x="370" y="20">t &lt;= RESP_AT</label>
+    </location>
+    <location id="s3" x="600" y="0">
+      <name x="580" y="-30">Done</name>
+    </location>
+    <init ref="s0" />
+    <transition>
+      <source ref="s0" />
+      <target ref="s1" />
+      <label kind="guard" x="0" y="0">t == REQ_AT</label>
+      <label kind="synchronisation" x="0" y="20">req!</label>
+    </transition>
+    <transition>
+      <source ref="s1" />
+      <target ref="s2" />
+      <label kind="guard" x="0" y="0">t == BOUNDARY_AT</label>
+      <label kind="synchronisation" x="0" y="20">scene_boundary!</label>
+    </transition>
+    <transition>
+      <source ref="s2" />
+      <target ref="s3" />
+      <label kind="guard" x="0" y="0">t == RESP_AT</label>
+      <label kind="synchronisation" x="0" y="20">resp!</label>
+    </transition>
+    <transition>
+      <source ref="s3" />
+      <target ref="s3" />
+    </transition>
+  </template>
+  <template>
+    <name>BoundaryMonitor</name>
+    <declaration />
+    <location id="m0" x="0" y="260">
+      <name x="-20" y="230">Idle</name>
+    </location>
+    <location id="m1" x="220" y="260">
+      <name x="200" y="230">Active</name>
+      <label kind="invariant" x="200" y="280">age &lt;= DEADLINE</label>
+    </location>
+    <location id="m2" x="450" y="200">
+      <name x="430" y="170">Responded</name>
+    </location>
+    <location id="m3" x="450" y="330">
+      <name x="430" y="300">Discarded</name>
+    </location>
+    <location id="m4" x="670" y="260">
+      <name x="650" y="230">Miss</name>
+    </location>
+    <init ref="m0" />
+    <transition>
+      <source ref="m0" />
+      <target ref="m1" />
+      <label kind="synchronisation" x="0" y="0">req?</label>
+      <label kind="assignment" x="0" y="20">age = 0</label>
+    </transition>
+    <transition>
+      <source ref="m1" />
+      <target ref="m1" />
+      <label kind="synchronisation" x="0" y="0">scene_boundary?</label>
+      <label kind="assignment" x="0" y="20">boundary_seen = true, boundary_carryover = true</label>
+    </transition>
+    <transition>
+      <source ref="m1" />
+      <target ref="m2" />
+      <label kind="synchronisation" x="0" y="0">resp?</label>
+      <label kind="assignment" x="0" y="20">cross_boundary_completion = boundary_seen</label>
+    </transition>
+    <transition>
+      <source ref="m1" />
+      <target ref="m4" />
+      <label kind="guard" x="0" y="0">age &gt;= DEADLINE</label>
+    </transition>
+    <transition>
+      <source ref="m2" />
+      <target ref="m2" />
+    </transition>
+    <transition>
+      <source ref="m3" />
+      <target ref="m3" />
+    </transition>
+    <transition>
+      <source ref="m4" />
+      <target ref="m4" />
+    </transition>
+  </template>
+  <system>Source = SourceProc();
+Monitor = BoundaryMonitor();
+system Source, Monitor;</system>
+</nta>

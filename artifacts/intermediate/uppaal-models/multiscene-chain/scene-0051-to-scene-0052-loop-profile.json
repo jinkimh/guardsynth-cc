@@ -1,0 +1,155 @@
+{
+  "scenes": [
+    "scene-0051",
+    "scene-0052"
+  ],
+  "origin_scene": "scene-0051",
+  "origin_timestamp_us": 1532402306148245,
+  "duration_ms": 29998,
+  "deadline_ms": 3000,
+  "max_boundary_gap_ms": 1000,
+  "scene_summary": [
+    {
+      "scene": "scene-0051",
+      "global_start_ms": 0,
+      "global_end_ms": 19300,
+      "trusted_obligation_events": 1,
+      "derived_response_witnesses": 1
+    },
+    {
+      "scene": "scene-0052",
+      "global_start_ms": 19999,
+      "global_end_ms": 39299,
+      "trusted_obligation_events": 3,
+      "derived_response_witnesses": 2
+    }
+  ],
+  "event_count": 8,
+  "channel_counts": {
+    "accel_req": 1,
+    "accel_resp": 1,
+    "scene_boundary": 1,
+    "slow_req": 3,
+    "slow_resp": 2
+  },
+  "events": [
+    {
+      "time_ms": 6400,
+      "channel": "slow_req",
+      "label": "scene-0051:0:slow",
+      "scene": "scene-0051",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Decelerate to maintain a safe distance from the red vehicle ahead while approaching the intersection.",
+        "local_timestamp_us": 6400000
+      }
+    },
+    {
+      "time_ms": 6720,
+      "channel": "slow_resp",
+      "label": "scene-0051:0:slow:response",
+      "scene": "scene-0051",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 6400000,
+        "response_local_ms": 6720,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 19300,
+      "channel": "scene_boundary",
+      "label": "scene-0051->scene-0052",
+      "scene": "scene-0052",
+      "provenance": "DERIVED_NUSCENES_METADATA",
+      "detail": {
+        "gap_ms": 699,
+        "from": "scene-0051",
+        "to": "scene-0052"
+      }
+    },
+    {
+      "time_ms": 22499,
+      "channel": "accel_req",
+      "label": "scene-0052:0:accel",
+      "scene": "scene-0052",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Keep lane and accelerate on the curvy road while following the lead vehicle.",
+        "local_timestamp_us": 2500000
+      }
+    },
+    {
+      "time_ms": 22518,
+      "channel": "accel_resp",
+      "label": "scene-0052:0:accel:response",
+      "scene": "scene-0052",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 2500000,
+        "response_local_ms": 2519,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    },
+    {
+      "time_ms": 25199,
+      "channel": "slow_req",
+      "label": "scene-0052:1:slow",
+      "scene": "scene-0052",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Keep lane and maintain a safe speed on the curvy road while following the lead vehicle and navigating around the stopped black van on the left.",
+        "local_timestamp_us": 5200000
+      }
+    },
+    {
+      "time_ms": 27699,
+      "channel": "slow_req",
+      "label": "scene-0052:2:slow",
+      "scene": "scene-0052",
+      "provenance": "OBSERVED_COC_REASONING",
+      "detail": {
+        "cot": "Decelerate to maintain a safe distance from the black van ahead while navigating the curvy road and approaching the intersection with a stop sign.",
+        "local_timestamp_us": 7700000
+      }
+    },
+    {
+      "time_ms": 29998,
+      "channel": "slow_resp",
+      "label": "scene-0052:2:slow:response",
+      "scene": "scene-0052",
+      "provenance": "DERIVED_EGO_SPEED_WITNESS",
+      "detail": {
+        "request_local_timestamp_us": 7700000,
+        "response_local_ms": 9999,
+        "detector": {
+          "window_us": 1000000,
+          "min_delta_mps": 0.7
+        }
+      }
+    }
+  ],
+  "model": "scene-0051-to-scene-0052-loop.xml",
+  "model_style": "LOOP_INDEXED_EVENT_REPLAY",
+  "kind_encoding": {
+    "slow_req": 1,
+    "accel_req": 2,
+    "slow_resp": 3,
+    "accel_resp": 4,
+    "scene_boundary": 5
+  },
+  "queries": [
+    "E<> Source.Done",
+    "E<> MonitorProc.Responded",
+    "A[] not deadline_miss",
+    "A[] not contradiction",
+    "A[] not boundary_violation",
+    "A[] not deadlock"
+  ]
+}

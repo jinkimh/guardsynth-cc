@@ -1,0 +1,6207 @@
+{
+  "assertions": [
+    {
+      "assertion_id": "domain__c0__state__0",
+      "base_time": 0,
+      "clause_id": "c0__state",
+      "index": 0,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__state__1",
+      "base_time": 1,
+      "clause_id": "c0__state",
+      "index": 1,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__state__2",
+      "base_time": 2,
+      "clause_id": "c0__state",
+      "index": 2,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__state__3",
+      "base_time": 3,
+      "clause_id": "c0__state",
+      "index": 3,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__state__4",
+      "base_time": 4,
+      "clause_id": "c0__state",
+      "index": 4,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__state__5",
+      "base_time": 5,
+      "clause_id": "c0__state",
+      "index": 5,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__state__6",
+      "base_time": 6,
+      "clause_id": "c0__state",
+      "index": 6,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__state__7",
+      "base_time": 7,
+      "clause_id": "c0__state",
+      "index": 7,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__state__8",
+      "base_time": 8,
+      "clause_id": "c0__state",
+      "index": 8,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__0",
+      "base_time": 0,
+      "clause_id": "c0__raw_truth",
+      "index": 9,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__1",
+      "base_time": 1,
+      "clause_id": "c0__raw_truth",
+      "index": 10,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__2",
+      "base_time": 2,
+      "clause_id": "c0__raw_truth",
+      "index": 11,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__3",
+      "base_time": 3,
+      "clause_id": "c0__raw_truth",
+      "index": 12,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__4",
+      "base_time": 4,
+      "clause_id": "c0__raw_truth",
+      "index": 13,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__5",
+      "base_time": 5,
+      "clause_id": "c0__raw_truth",
+      "index": 14,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__6",
+      "base_time": 6,
+      "clause_id": "c0__raw_truth",
+      "index": 15,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__7",
+      "base_time": 7,
+      "clause_id": "c0__raw_truth",
+      "index": 16,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__8",
+      "base_time": 8,
+      "clause_id": "c0__raw_truth",
+      "index": 17,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__0",
+      "base_time": 0,
+      "clause_id": "c0__epistemic",
+      "index": 18,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__1",
+      "base_time": 1,
+      "clause_id": "c0__epistemic",
+      "index": 19,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__2",
+      "base_time": 2,
+      "clause_id": "c0__epistemic",
+      "index": 20,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__3",
+      "base_time": 3,
+      "clause_id": "c0__epistemic",
+      "index": 21,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__4",
+      "base_time": 4,
+      "clause_id": "c0__epistemic",
+      "index": 22,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__5",
+      "base_time": 5,
+      "clause_id": "c0__epistemic",
+      "index": 23,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__6",
+      "base_time": 6,
+      "clause_id": "c0__epistemic",
+      "index": 24,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__7",
+      "base_time": 7,
+      "clause_id": "c0__epistemic",
+      "index": 25,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__8",
+      "base_time": 8,
+      "clause_id": "c0__epistemic",
+      "index": 26,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__0",
+      "base_time": 0,
+      "clause_id": "c0__effective_truth",
+      "index": 27,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__1",
+      "base_time": 1,
+      "clause_id": "c0__effective_truth",
+      "index": 28,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__2",
+      "base_time": 2,
+      "clause_id": "c0__effective_truth",
+      "index": 29,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__3",
+      "base_time": 3,
+      "clause_id": "c0__effective_truth",
+      "index": 30,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__4",
+      "base_time": 4,
+      "clause_id": "c0__effective_truth",
+      "index": 31,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__5",
+      "base_time": 5,
+      "clause_id": "c0__effective_truth",
+      "index": 32,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__6",
+      "base_time": 6,
+      "clause_id": "c0__effective_truth",
+      "index": 33,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__7",
+      "base_time": 7,
+      "clause_id": "c0__effective_truth",
+      "index": 34,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__8",
+      "base_time": 8,
+      "clause_id": "c0__effective_truth",
+      "index": 35,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__0",
+      "base_time": 0,
+      "clause_id": "c0__verdict",
+      "index": 36,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__1",
+      "base_time": 1,
+      "clause_id": "c0__verdict",
+      "index": 37,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__2",
+      "base_time": 2,
+      "clause_id": "c0__verdict",
+      "index": 38,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__3",
+      "base_time": 3,
+      "clause_id": "c0__verdict",
+      "index": 39,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__4",
+      "base_time": 4,
+      "clause_id": "c0__verdict",
+      "index": 40,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__5",
+      "base_time": 5,
+      "clause_id": "c0__verdict",
+      "index": 41,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__6",
+      "base_time": 6,
+      "clause_id": "c0__verdict",
+      "index": 42,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__7",
+      "base_time": 7,
+      "clause_id": "c0__verdict",
+      "index": 43,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__8",
+      "base_time": 8,
+      "clause_id": "c0__verdict",
+      "index": 44,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__state__0",
+      "base_time": 0,
+      "clause_id": "c1__state",
+      "index": 45,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__state__1",
+      "base_time": 1,
+      "clause_id": "c1__state",
+      "index": 46,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__state__2",
+      "base_time": 2,
+      "clause_id": "c1__state",
+      "index": 47,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__state__3",
+      "base_time": 3,
+      "clause_id": "c1__state",
+      "index": 48,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__state__4",
+      "base_time": 4,
+      "clause_id": "c1__state",
+      "index": 49,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__state__5",
+      "base_time": 5,
+      "clause_id": "c1__state",
+      "index": 50,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__state__6",
+      "base_time": 6,
+      "clause_id": "c1__state",
+      "index": 51,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__state__7",
+      "base_time": 7,
+      "clause_id": "c1__state",
+      "index": 52,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__state__8",
+      "base_time": 8,
+      "clause_id": "c1__state",
+      "index": 53,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__raw_truth__0",
+      "base_time": 0,
+      "clause_id": "c1__raw_truth",
+      "index": 54,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__raw_truth__1",
+      "base_time": 1,
+      "clause_id": "c1__raw_truth",
+      "index": 55,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__raw_truth__2",
+      "base_time": 2,
+      "clause_id": "c1__raw_truth",
+      "index": 56,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__raw_truth__3",
+      "base_time": 3,
+      "clause_id": "c1__raw_truth",
+      "index": 57,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__raw_truth__4",
+      "base_time": 4,
+      "clause_id": "c1__raw_truth",
+      "index": 58,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__raw_truth__5",
+      "base_time": 5,
+      "clause_id": "c1__raw_truth",
+      "index": 59,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__raw_truth__6",
+      "base_time": 6,
+      "clause_id": "c1__raw_truth",
+      "index": 60,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__raw_truth__7",
+      "base_time": 7,
+      "clause_id": "c1__raw_truth",
+      "index": 61,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__raw_truth__8",
+      "base_time": 8,
+      "clause_id": "c1__raw_truth",
+      "index": 62,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__epistemic__0",
+      "base_time": 0,
+      "clause_id": "c1__epistemic",
+      "index": 63,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__epistemic__1",
+      "base_time": 1,
+      "clause_id": "c1__epistemic",
+      "index": 64,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__epistemic__2",
+      "base_time": 2,
+      "clause_id": "c1__epistemic",
+      "index": 65,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__epistemic__3",
+      "base_time": 3,
+      "clause_id": "c1__epistemic",
+      "index": 66,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__epistemic__4",
+      "base_time": 4,
+      "clause_id": "c1__epistemic",
+      "index": 67,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__epistemic__5",
+      "base_time": 5,
+      "clause_id": "c1__epistemic",
+      "index": 68,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__epistemic__6",
+      "base_time": 6,
+      "clause_id": "c1__epistemic",
+      "index": 69,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__epistemic__7",
+      "base_time": 7,
+      "clause_id": "c1__epistemic",
+      "index": 70,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__epistemic__8",
+      "base_time": 8,
+      "clause_id": "c1__epistemic",
+      "index": 71,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__effective_truth__0",
+      "base_time": 0,
+      "clause_id": "c1__effective_truth",
+      "index": 72,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__effective_truth__1",
+      "base_time": 1,
+      "clause_id": "c1__effective_truth",
+      "index": 73,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__effective_truth__2",
+      "base_time": 2,
+      "clause_id": "c1__effective_truth",
+      "index": 74,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__effective_truth__3",
+      "base_time": 3,
+      "clause_id": "c1__effective_truth",
+      "index": 75,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__effective_truth__4",
+      "base_time": 4,
+      "clause_id": "c1__effective_truth",
+      "index": 76,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__effective_truth__5",
+      "base_time": 5,
+      "clause_id": "c1__effective_truth",
+      "index": 77,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__effective_truth__6",
+      "base_time": 6,
+      "clause_id": "c1__effective_truth",
+      "index": 78,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__effective_truth__7",
+      "base_time": 7,
+      "clause_id": "c1__effective_truth",
+      "index": 79,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__effective_truth__8",
+      "base_time": 8,
+      "clause_id": "c1__effective_truth",
+      "index": 80,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__verdict__0",
+      "base_time": 0,
+      "clause_id": "c1__verdict",
+      "index": 81,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__verdict__1",
+      "base_time": 1,
+      "clause_id": "c1__verdict",
+      "index": 82,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__verdict__2",
+      "base_time": 2,
+      "clause_id": "c1__verdict",
+      "index": 83,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__verdict__3",
+      "base_time": 3,
+      "clause_id": "c1__verdict",
+      "index": 84,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__verdict__4",
+      "base_time": 4,
+      "clause_id": "c1__verdict",
+      "index": 85,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__verdict__5",
+      "base_time": 5,
+      "clause_id": "c1__verdict",
+      "index": 86,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__verdict__6",
+      "base_time": 6,
+      "clause_id": "c1__verdict",
+      "index": 87,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__verdict__7",
+      "base_time": 7,
+      "clause_id": "c1__verdict",
+      "index": 88,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__c1__verdict__8",
+      "base_time": 8,
+      "clause_id": "c1__verdict",
+      "index": 89,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__0",
+      "base_time": 0,
+      "clause_id": "composition_verdict",
+      "index": 90,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__1",
+      "base_time": 1,
+      "clause_id": "composition_verdict",
+      "index": 91,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__2",
+      "base_time": 2,
+      "clause_id": "composition_verdict",
+      "index": 92,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__3",
+      "base_time": 3,
+      "clause_id": "composition_verdict",
+      "index": 93,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__4",
+      "base_time": 4,
+      "clause_id": "composition_verdict",
+      "index": 94,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__5",
+      "base_time": 5,
+      "clause_id": "composition_verdict",
+      "index": 95,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__6",
+      "base_time": 6,
+      "clause_id": "composition_verdict",
+      "index": 96,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__7",
+      "base_time": 7,
+      "clause_id": "composition_verdict",
+      "index": 97,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__8",
+      "base_time": 8,
+      "clause_id": "composition_verdict",
+      "index": 98,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__initial_state__t0",
+      "base_time": 0,
+      "clause_id": "c0__initial_state",
+      "index": 99,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__initial_clear_count__t0",
+      "base_time": 0,
+      "clause_id": "c0__initial_clear_count",
+      "index": 100,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__bind_position_uncertainty__t0",
+      "base_time": 0,
+      "clause_id": "c0__bind_position_uncertainty",
+      "index": 101,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__bind_response_time__t0",
+      "base_time": 0,
+      "clause_id": "c0__bind_response_time",
+      "index": 102,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__bind_deceleration__t0",
+      "base_time": 0,
+      "clause_id": "c0__bind_deceleration",
+      "index": 103,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__bind_position_epsilon__t0",
+      "base_time": 0,
+      "clause_id": "c0__bind_position_epsilon",
+      "index": 104,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__bind_speed_epsilon__t0",
+      "base_time": 0,
+      "clause_id": "c0__bind_speed_epsilon",
+      "index": 105,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__bind_time_epsilon__t0",
+      "base_time": 0,
+      "clause_id": "c0__bind_time_epsilon",
+      "index": 106,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__bind_predicate_maximum_age__t0",
+      "base_time": 0,
+      "clause_id": "c0__bind_predicate_maximum_age",
+      "index": 107,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__bind_release_threshold__t0",
+      "base_time": 0,
+      "clause_id": "c0__bind_release_threshold",
+      "index": 108,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t0",
+      "base_time": 0,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 109,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t1",
+      "base_time": 1,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 110,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t2",
+      "base_time": 2,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 111,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t3",
+      "base_time": 3,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 112,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t4",
+      "base_time": 4,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 113,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t5",
+      "base_time": 5,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 114,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t6",
+      "base_time": 6,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 115,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t7",
+      "base_time": 7,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 116,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t8",
+      "base_time": 8,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 117,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t0",
+      "base_time": 0,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 118,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t1",
+      "base_time": 1,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 119,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t2",
+      "base_time": 2,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 120,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t3",
+      "base_time": 3,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 121,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t4",
+      "base_time": 4,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 122,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t5",
+      "base_time": 5,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 123,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t6",
+      "base_time": 6,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 124,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t7",
+      "base_time": 7,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 125,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t8",
+      "base_time": 8,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 126,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t0",
+      "base_time": 0,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 127,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t1",
+      "base_time": 1,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 128,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t2",
+      "base_time": 2,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 129,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t3",
+      "base_time": 3,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 130,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t4",
+      "base_time": 4,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 131,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t5",
+      "base_time": 5,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 132,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t6",
+      "base_time": 6,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 133,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t7",
+      "base_time": 7,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 134,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t8",
+      "base_time": 8,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 135,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t0",
+      "base_time": 0,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 136,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t1",
+      "base_time": 1,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 137,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t2",
+      "base_time": 2,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 138,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t3",
+      "base_time": 3,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 139,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t4",
+      "base_time": 4,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 140,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t5",
+      "base_time": 5,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 141,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t6",
+      "base_time": 6,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 142,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t7",
+      "base_time": 7,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 143,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t8",
+      "base_time": 8,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 144,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t0",
+      "base_time": 0,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 145,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t1",
+      "base_time": 1,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 146,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t2",
+      "base_time": 2,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 147,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t3",
+      "base_time": 3,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 148,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t4",
+      "base_time": 4,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 149,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t5",
+      "base_time": 5,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 150,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t6",
+      "base_time": 6,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 151,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t7",
+      "base_time": 7,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 152,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t8",
+      "base_time": 8,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 153,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_lifecycle_transition__t0",
+      "base_time": 0,
+      "clause_id": "c0__generated_lifecycle_transition",
+      "index": 154,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_lifecycle_transition__t1",
+      "base_time": 1,
+      "clause_id": "c0__generated_lifecycle_transition",
+      "index": 155,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_lifecycle_transition__t2",
+      "base_time": 2,
+      "clause_id": "c0__generated_lifecycle_transition",
+      "index": 156,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_lifecycle_transition__t3",
+      "base_time": 3,
+      "clause_id": "c0__generated_lifecycle_transition",
+      "index": 157,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_lifecycle_transition__t4",
+      "base_time": 4,
+      "clause_id": "c0__generated_lifecycle_transition",
+      "index": 158,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_lifecycle_transition__t5",
+      "base_time": 5,
+      "clause_id": "c0__generated_lifecycle_transition",
+      "index": 159,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_lifecycle_transition__t6",
+      "base_time": 6,
+      "clause_id": "c0__generated_lifecycle_transition",
+      "index": 160,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_lifecycle_transition__t7",
+      "base_time": 7,
+      "clause_id": "c0__generated_lifecycle_transition",
+      "index": 161,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_clear_counter_transition__t0",
+      "base_time": 0,
+      "clause_id": "c0__generated_clear_counter_transition",
+      "index": 162,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_clear_counter_transition__t1",
+      "base_time": 1,
+      "clause_id": "c0__generated_clear_counter_transition",
+      "index": 163,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_clear_counter_transition__t2",
+      "base_time": 2,
+      "clause_id": "c0__generated_clear_counter_transition",
+      "index": 164,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_clear_counter_transition__t3",
+      "base_time": 3,
+      "clause_id": "c0__generated_clear_counter_transition",
+      "index": 165,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_clear_counter_transition__t4",
+      "base_time": 4,
+      "clause_id": "c0__generated_clear_counter_transition",
+      "index": 166,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_clear_counter_transition__t5",
+      "base_time": 5,
+      "clause_id": "c0__generated_clear_counter_transition",
+      "index": 167,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_clear_counter_transition__t6",
+      "base_time": 6,
+      "clause_id": "c0__generated_clear_counter_transition",
+      "index": 168,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_clear_counter_transition__t7",
+      "base_time": 7,
+      "clause_id": "c0__generated_clear_counter_transition",
+      "index": 169,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_verdict__t0",
+      "base_time": 0,
+      "clause_id": "c0__generated_verdict",
+      "index": 170,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_verdict__t1",
+      "base_time": 1,
+      "clause_id": "c0__generated_verdict",
+      "index": 171,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_verdict__t2",
+      "base_time": 2,
+      "clause_id": "c0__generated_verdict",
+      "index": 172,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_verdict__t3",
+      "base_time": 3,
+      "clause_id": "c0__generated_verdict",
+      "index": 173,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_verdict__t4",
+      "base_time": 4,
+      "clause_id": "c0__generated_verdict",
+      "index": 174,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_verdict__t5",
+      "base_time": 5,
+      "clause_id": "c0__generated_verdict",
+      "index": 175,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_verdict__t6",
+      "base_time": 6,
+      "clause_id": "c0__generated_verdict",
+      "index": 176,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_verdict__t7",
+      "base_time": 7,
+      "clause_id": "c0__generated_verdict",
+      "index": 177,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_entry_violation__t0",
+      "base_time": 0,
+      "clause_id": "c0__generated_entry_violation",
+      "index": 178,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_entry_violation__t1",
+      "base_time": 1,
+      "clause_id": "c0__generated_entry_violation",
+      "index": 179,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_entry_violation__t2",
+      "base_time": 2,
+      "clause_id": "c0__generated_entry_violation",
+      "index": 180,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_entry_violation__t3",
+      "base_time": 3,
+      "clause_id": "c0__generated_entry_violation",
+      "index": 181,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_entry_violation__t4",
+      "base_time": 4,
+      "clause_id": "c0__generated_entry_violation",
+      "index": 182,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_entry_violation__t5",
+      "base_time": 5,
+      "clause_id": "c0__generated_entry_violation",
+      "index": 183,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_entry_violation__t6",
+      "base_time": 6,
+      "clause_id": "c0__generated_entry_violation",
+      "index": 184,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_entry_violation__t7",
+      "base_time": 7,
+      "clause_id": "c0__generated_entry_violation",
+      "index": 185,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_speed_violation__t0",
+      "base_time": 0,
+      "clause_id": "c0__generated_speed_violation",
+      "index": 186,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_speed_violation__t1",
+      "base_time": 1,
+      "clause_id": "c0__generated_speed_violation",
+      "index": 187,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_speed_violation__t2",
+      "base_time": 2,
+      "clause_id": "c0__generated_speed_violation",
+      "index": 188,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_speed_violation__t3",
+      "base_time": 3,
+      "clause_id": "c0__generated_speed_violation",
+      "index": 189,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_speed_violation__t4",
+      "base_time": 4,
+      "clause_id": "c0__generated_speed_violation",
+      "index": 190,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_speed_violation__t5",
+      "base_time": 5,
+      "clause_id": "c0__generated_speed_violation",
+      "index": 191,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_speed_violation__t6",
+      "base_time": 6,
+      "clause_id": "c0__generated_speed_violation",
+      "index": 192,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_speed_violation__t7",
+      "base_time": 7,
+      "clause_id": "c0__generated_speed_violation",
+      "index": 193,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_deadlock_violation__t0",
+      "base_time": 0,
+      "clause_id": "c0__generated_deadlock_violation",
+      "index": 194,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_deadlock_violation__t1",
+      "base_time": 1,
+      "clause_id": "c0__generated_deadlock_violation",
+      "index": 195,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_deadlock_violation__t2",
+      "base_time": 2,
+      "clause_id": "c0__generated_deadlock_violation",
+      "index": 196,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_deadlock_violation__t3",
+      "base_time": 3,
+      "clause_id": "c0__generated_deadlock_violation",
+      "index": 197,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_deadlock_violation__t4",
+      "base_time": 4,
+      "clause_id": "c0__generated_deadlock_violation",
+      "index": 198,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_deadlock_violation__t5",
+      "base_time": 5,
+      "clause_id": "c0__generated_deadlock_violation",
+      "index": 199,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_deadlock_violation__t6",
+      "base_time": 6,
+      "clause_id": "c0__generated_deadlock_violation",
+      "index": 200,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_deadlock_violation__t7",
+      "base_time": 7,
+      "clause_id": "c0__generated_deadlock_violation",
+      "index": 201,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_progress_permission__t0",
+      "base_time": 0,
+      "clause_id": "c0__generated_progress_permission",
+      "index": 202,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_progress_permission__t1",
+      "base_time": 1,
+      "clause_id": "c0__generated_progress_permission",
+      "index": 203,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_progress_permission__t2",
+      "base_time": 2,
+      "clause_id": "c0__generated_progress_permission",
+      "index": 204,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_progress_permission__t3",
+      "base_time": 3,
+      "clause_id": "c0__generated_progress_permission",
+      "index": 205,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_progress_permission__t4",
+      "base_time": 4,
+      "clause_id": "c0__generated_progress_permission",
+      "index": 206,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_progress_permission__t5",
+      "base_time": 5,
+      "clause_id": "c0__generated_progress_permission",
+      "index": 207,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_progress_permission__t6",
+      "base_time": 6,
+      "clause_id": "c0__generated_progress_permission",
+      "index": 208,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_progress_permission__t7",
+      "base_time": 7,
+      "clause_id": "c0__generated_progress_permission",
+      "index": 209,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__bind__zone_entry_x__t0",
+      "base_time": 0,
+      "clause_id": "c0__derive__bind__zone_entry_x",
+      "index": 210,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__bind__stop_margin__t0",
+      "base_time": 0,
+      "clause_id": "c0__derive__bind__stop_margin",
+      "index": 211,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__bind__factor_two__t0",
+      "base_time": 0,
+      "clause_id": "c0__derive__bind__factor_two",
+      "index": 212,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__bind__zero_speed__t0",
+      "base_time": 0,
+      "clause_id": "c0__derive__bind__zero_speed",
+      "index": 213,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stop_position__t0",
+      "base_time": 0,
+      "clause_id": "c0__derive__output__stop_position",
+      "index": 214,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t0",
+      "base_time": 0,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 215,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t0__0",
+      "base_time": 0,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 216,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t1",
+      "base_time": 1,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 217,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t1__0",
+      "base_time": 1,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 218,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t2",
+      "base_time": 2,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 219,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t2__0",
+      "base_time": 2,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 220,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t3",
+      "base_time": 3,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 221,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t3__0",
+      "base_time": 3,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 222,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t4",
+      "base_time": 4,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 223,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t4__0",
+      "base_time": 4,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 224,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t5",
+      "base_time": 5,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 225,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t5__0",
+      "base_time": 5,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 226,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t6",
+      "base_time": 6,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 227,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t6__0",
+      "base_time": 6,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 228,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t7",
+      "base_time": 7,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 229,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t7__0",
+      "base_time": 7,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 230,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t8",
+      "base_time": 8,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 231,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t8__0",
+      "base_time": 8,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 232,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__initial_state__t0",
+      "base_time": 0,
+      "clause_id": "c1__initial_state",
+      "index": 233,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__initial_clear_count__t0",
+      "base_time": 0,
+      "clause_id": "c1__initial_clear_count",
+      "index": 234,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__bind_position_uncertainty__t0",
+      "base_time": 0,
+      "clause_id": "c1__bind_position_uncertainty",
+      "index": 235,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__bind_response_time__t0",
+      "base_time": 0,
+      "clause_id": "c1__bind_response_time",
+      "index": 236,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__bind_deceleration__t0",
+      "base_time": 0,
+      "clause_id": "c1__bind_deceleration",
+      "index": 237,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__bind_position_epsilon__t0",
+      "base_time": 0,
+      "clause_id": "c1__bind_position_epsilon",
+      "index": 238,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__bind_speed_epsilon__t0",
+      "base_time": 0,
+      "clause_id": "c1__bind_speed_epsilon",
+      "index": 239,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__bind_time_epsilon__t0",
+      "base_time": 0,
+      "clause_id": "c1__bind_time_epsilon",
+      "index": 240,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__bind_predicate_maximum_age__t0",
+      "base_time": 0,
+      "clause_id": "c1__bind_predicate_maximum_age",
+      "index": 241,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__bind_release_threshold__t0",
+      "base_time": 0,
+      "clause_id": "c1__bind_release_threshold",
+      "index": 242,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_timestamp_nonnegative__t0",
+      "base_time": 0,
+      "clause_id": "c1__input_timestamp_nonnegative",
+      "index": 243,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_timestamp_nonnegative__t1",
+      "base_time": 1,
+      "clause_id": "c1__input_timestamp_nonnegative",
+      "index": 244,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_timestamp_nonnegative__t2",
+      "base_time": 2,
+      "clause_id": "c1__input_timestamp_nonnegative",
+      "index": 245,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_timestamp_nonnegative__t3",
+      "base_time": 3,
+      "clause_id": "c1__input_timestamp_nonnegative",
+      "index": 246,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_timestamp_nonnegative__t4",
+      "base_time": 4,
+      "clause_id": "c1__input_timestamp_nonnegative",
+      "index": 247,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_timestamp_nonnegative__t5",
+      "base_time": 5,
+      "clause_id": "c1__input_timestamp_nonnegative",
+      "index": 248,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_timestamp_nonnegative__t6",
+      "base_time": 6,
+      "clause_id": "c1__input_timestamp_nonnegative",
+      "index": 249,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_timestamp_nonnegative__t7",
+      "base_time": 7,
+      "clause_id": "c1__input_timestamp_nonnegative",
+      "index": 250,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_timestamp_nonnegative__t8",
+      "base_time": 8,
+      "clause_id": "c1__input_timestamp_nonnegative",
+      "index": 251,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_timestamp_nonnegative__t0",
+      "base_time": 0,
+      "clause_id": "c1__input_fact_timestamp_nonnegative",
+      "index": 252,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_timestamp_nonnegative__t1",
+      "base_time": 1,
+      "clause_id": "c1__input_fact_timestamp_nonnegative",
+      "index": 253,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_timestamp_nonnegative__t2",
+      "base_time": 2,
+      "clause_id": "c1__input_fact_timestamp_nonnegative",
+      "index": 254,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_timestamp_nonnegative__t3",
+      "base_time": 3,
+      "clause_id": "c1__input_fact_timestamp_nonnegative",
+      "index": 255,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_timestamp_nonnegative__t4",
+      "base_time": 4,
+      "clause_id": "c1__input_fact_timestamp_nonnegative",
+      "index": 256,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_timestamp_nonnegative__t5",
+      "base_time": 5,
+      "clause_id": "c1__input_fact_timestamp_nonnegative",
+      "index": 257,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_timestamp_nonnegative__t6",
+      "base_time": 6,
+      "clause_id": "c1__input_fact_timestamp_nonnegative",
+      "index": 258,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_timestamp_nonnegative__t7",
+      "base_time": 7,
+      "clause_id": "c1__input_fact_timestamp_nonnegative",
+      "index": 259,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_timestamp_nonnegative__t8",
+      "base_time": 8,
+      "clause_id": "c1__input_fact_timestamp_nonnegative",
+      "index": 260,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_age_nonnegative__t0",
+      "base_time": 0,
+      "clause_id": "c1__input_fact_age_nonnegative",
+      "index": 261,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_age_nonnegative__t1",
+      "base_time": 1,
+      "clause_id": "c1__input_fact_age_nonnegative",
+      "index": 262,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_age_nonnegative__t2",
+      "base_time": 2,
+      "clause_id": "c1__input_fact_age_nonnegative",
+      "index": 263,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_age_nonnegative__t3",
+      "base_time": 3,
+      "clause_id": "c1__input_fact_age_nonnegative",
+      "index": 264,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_age_nonnegative__t4",
+      "base_time": 4,
+      "clause_id": "c1__input_fact_age_nonnegative",
+      "index": 265,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_age_nonnegative__t5",
+      "base_time": 5,
+      "clause_id": "c1__input_fact_age_nonnegative",
+      "index": 266,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_age_nonnegative__t6",
+      "base_time": 6,
+      "clause_id": "c1__input_fact_age_nonnegative",
+      "index": 267,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_age_nonnegative__t7",
+      "base_time": 7,
+      "clause_id": "c1__input_fact_age_nonnegative",
+      "index": 268,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_fact_age_nonnegative__t8",
+      "base_time": 8,
+      "clause_id": "c1__input_fact_age_nonnegative",
+      "index": 269,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_speed_nonnegative__t0",
+      "base_time": 0,
+      "clause_id": "c1__input_speed_nonnegative",
+      "index": 270,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_speed_nonnegative__t1",
+      "base_time": 1,
+      "clause_id": "c1__input_speed_nonnegative",
+      "index": 271,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_speed_nonnegative__t2",
+      "base_time": 2,
+      "clause_id": "c1__input_speed_nonnegative",
+      "index": 272,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_speed_nonnegative__t3",
+      "base_time": 3,
+      "clause_id": "c1__input_speed_nonnegative",
+      "index": 273,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_speed_nonnegative__t4",
+      "base_time": 4,
+      "clause_id": "c1__input_speed_nonnegative",
+      "index": 274,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_speed_nonnegative__t5",
+      "base_time": 5,
+      "clause_id": "c1__input_speed_nonnegative",
+      "index": 275,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_speed_nonnegative__t6",
+      "base_time": 6,
+      "clause_id": "c1__input_speed_nonnegative",
+      "index": 276,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_speed_nonnegative__t7",
+      "base_time": 7,
+      "clause_id": "c1__input_speed_nonnegative",
+      "index": 277,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__input_speed_nonnegative__t8",
+      "base_time": 8,
+      "clause_id": "c1__input_speed_nonnegative",
+      "index": 278,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__effective_truth_from_freshness_and_epistemic__t0",
+      "base_time": 0,
+      "clause_id": "c1__effective_truth_from_freshness_and_epistemic",
+      "index": 279,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__effective_truth_from_freshness_and_epistemic__t1",
+      "base_time": 1,
+      "clause_id": "c1__effective_truth_from_freshness_and_epistemic",
+      "index": 280,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__effective_truth_from_freshness_and_epistemic__t2",
+      "base_time": 2,
+      "clause_id": "c1__effective_truth_from_freshness_and_epistemic",
+      "index": 281,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__effective_truth_from_freshness_and_epistemic__t3",
+      "base_time": 3,
+      "clause_id": "c1__effective_truth_from_freshness_and_epistemic",
+      "index": 282,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__effective_truth_from_freshness_and_epistemic__t4",
+      "base_time": 4,
+      "clause_id": "c1__effective_truth_from_freshness_and_epistemic",
+      "index": 283,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__effective_truth_from_freshness_and_epistemic__t5",
+      "base_time": 5,
+      "clause_id": "c1__effective_truth_from_freshness_and_epistemic",
+      "index": 284,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__effective_truth_from_freshness_and_epistemic__t6",
+      "base_time": 6,
+      "clause_id": "c1__effective_truth_from_freshness_and_epistemic",
+      "index": 285,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__effective_truth_from_freshness_and_epistemic__t7",
+      "base_time": 7,
+      "clause_id": "c1__effective_truth_from_freshness_and_epistemic",
+      "index": 286,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__effective_truth_from_freshness_and_epistemic__t8",
+      "base_time": 8,
+      "clause_id": "c1__effective_truth_from_freshness_and_epistemic",
+      "index": 287,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_lifecycle_transition__t0",
+      "base_time": 0,
+      "clause_id": "c1__generated_lifecycle_transition",
+      "index": 288,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_lifecycle_transition__t1",
+      "base_time": 1,
+      "clause_id": "c1__generated_lifecycle_transition",
+      "index": 289,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_lifecycle_transition__t2",
+      "base_time": 2,
+      "clause_id": "c1__generated_lifecycle_transition",
+      "index": 290,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_lifecycle_transition__t3",
+      "base_time": 3,
+      "clause_id": "c1__generated_lifecycle_transition",
+      "index": 291,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_lifecycle_transition__t4",
+      "base_time": 4,
+      "clause_id": "c1__generated_lifecycle_transition",
+      "index": 292,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_lifecycle_transition__t5",
+      "base_time": 5,
+      "clause_id": "c1__generated_lifecycle_transition",
+      "index": 293,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_lifecycle_transition__t6",
+      "base_time": 6,
+      "clause_id": "c1__generated_lifecycle_transition",
+      "index": 294,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_lifecycle_transition__t7",
+      "base_time": 7,
+      "clause_id": "c1__generated_lifecycle_transition",
+      "index": 295,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_clear_counter_transition__t0",
+      "base_time": 0,
+      "clause_id": "c1__generated_clear_counter_transition",
+      "index": 296,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_clear_counter_transition__t1",
+      "base_time": 1,
+      "clause_id": "c1__generated_clear_counter_transition",
+      "index": 297,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_clear_counter_transition__t2",
+      "base_time": 2,
+      "clause_id": "c1__generated_clear_counter_transition",
+      "index": 298,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_clear_counter_transition__t3",
+      "base_time": 3,
+      "clause_id": "c1__generated_clear_counter_transition",
+      "index": 299,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_clear_counter_transition__t4",
+      "base_time": 4,
+      "clause_id": "c1__generated_clear_counter_transition",
+      "index": 300,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_clear_counter_transition__t5",
+      "base_time": 5,
+      "clause_id": "c1__generated_clear_counter_transition",
+      "index": 301,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_clear_counter_transition__t6",
+      "base_time": 6,
+      "clause_id": "c1__generated_clear_counter_transition",
+      "index": 302,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_clear_counter_transition__t7",
+      "base_time": 7,
+      "clause_id": "c1__generated_clear_counter_transition",
+      "index": 303,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_verdict__t0",
+      "base_time": 0,
+      "clause_id": "c1__generated_verdict",
+      "index": 304,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_verdict__t1",
+      "base_time": 1,
+      "clause_id": "c1__generated_verdict",
+      "index": 305,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_verdict__t2",
+      "base_time": 2,
+      "clause_id": "c1__generated_verdict",
+      "index": 306,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_verdict__t3",
+      "base_time": 3,
+      "clause_id": "c1__generated_verdict",
+      "index": 307,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_verdict__t4",
+      "base_time": 4,
+      "clause_id": "c1__generated_verdict",
+      "index": 308,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_verdict__t5",
+      "base_time": 5,
+      "clause_id": "c1__generated_verdict",
+      "index": 309,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_verdict__t6",
+      "base_time": 6,
+      "clause_id": "c1__generated_verdict",
+      "index": 310,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_verdict__t7",
+      "base_time": 7,
+      "clause_id": "c1__generated_verdict",
+      "index": 311,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_entry_violation__t0",
+      "base_time": 0,
+      "clause_id": "c1__generated_entry_violation",
+      "index": 312,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_entry_violation__t1",
+      "base_time": 1,
+      "clause_id": "c1__generated_entry_violation",
+      "index": 313,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_entry_violation__t2",
+      "base_time": 2,
+      "clause_id": "c1__generated_entry_violation",
+      "index": 314,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_entry_violation__t3",
+      "base_time": 3,
+      "clause_id": "c1__generated_entry_violation",
+      "index": 315,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_entry_violation__t4",
+      "base_time": 4,
+      "clause_id": "c1__generated_entry_violation",
+      "index": 316,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_entry_violation__t5",
+      "base_time": 5,
+      "clause_id": "c1__generated_entry_violation",
+      "index": 317,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_entry_violation__t6",
+      "base_time": 6,
+      "clause_id": "c1__generated_entry_violation",
+      "index": 318,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_entry_violation__t7",
+      "base_time": 7,
+      "clause_id": "c1__generated_entry_violation",
+      "index": 319,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_speed_violation__t0",
+      "base_time": 0,
+      "clause_id": "c1__generated_speed_violation",
+      "index": 320,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_speed_violation__t1",
+      "base_time": 1,
+      "clause_id": "c1__generated_speed_violation",
+      "index": 321,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_speed_violation__t2",
+      "base_time": 2,
+      "clause_id": "c1__generated_speed_violation",
+      "index": 322,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_speed_violation__t3",
+      "base_time": 3,
+      "clause_id": "c1__generated_speed_violation",
+      "index": 323,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_speed_violation__t4",
+      "base_time": 4,
+      "clause_id": "c1__generated_speed_violation",
+      "index": 324,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_speed_violation__t5",
+      "base_time": 5,
+      "clause_id": "c1__generated_speed_violation",
+      "index": 325,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_speed_violation__t6",
+      "base_time": 6,
+      "clause_id": "c1__generated_speed_violation",
+      "index": 326,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_speed_violation__t7",
+      "base_time": 7,
+      "clause_id": "c1__generated_speed_violation",
+      "index": 327,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_deadlock_violation__t0",
+      "base_time": 0,
+      "clause_id": "c1__generated_deadlock_violation",
+      "index": 328,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_deadlock_violation__t1",
+      "base_time": 1,
+      "clause_id": "c1__generated_deadlock_violation",
+      "index": 329,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_deadlock_violation__t2",
+      "base_time": 2,
+      "clause_id": "c1__generated_deadlock_violation",
+      "index": 330,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_deadlock_violation__t3",
+      "base_time": 3,
+      "clause_id": "c1__generated_deadlock_violation",
+      "index": 331,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_deadlock_violation__t4",
+      "base_time": 4,
+      "clause_id": "c1__generated_deadlock_violation",
+      "index": 332,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_deadlock_violation__t5",
+      "base_time": 5,
+      "clause_id": "c1__generated_deadlock_violation",
+      "index": 333,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_deadlock_violation__t6",
+      "base_time": 6,
+      "clause_id": "c1__generated_deadlock_violation",
+      "index": 334,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_deadlock_violation__t7",
+      "base_time": 7,
+      "clause_id": "c1__generated_deadlock_violation",
+      "index": 335,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_progress_permission__t0",
+      "base_time": 0,
+      "clause_id": "c1__generated_progress_permission",
+      "index": 336,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_progress_permission__t1",
+      "base_time": 1,
+      "clause_id": "c1__generated_progress_permission",
+      "index": 337,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_progress_permission__t2",
+      "base_time": 2,
+      "clause_id": "c1__generated_progress_permission",
+      "index": 338,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_progress_permission__t3",
+      "base_time": 3,
+      "clause_id": "c1__generated_progress_permission",
+      "index": 339,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_progress_permission__t4",
+      "base_time": 4,
+      "clause_id": "c1__generated_progress_permission",
+      "index": 340,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_progress_permission__t5",
+      "base_time": 5,
+      "clause_id": "c1__generated_progress_permission",
+      "index": 341,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_progress_permission__t6",
+      "base_time": 6,
+      "clause_id": "c1__generated_progress_permission",
+      "index": 342,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__generated_progress_permission__t7",
+      "base_time": 7,
+      "clause_id": "c1__generated_progress_permission",
+      "index": 343,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__derive__bind__zone_entry_x__t0",
+      "base_time": 0,
+      "clause_id": "c1__derive__bind__zone_entry_x",
+      "index": 344,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__derive__bind__stop_margin__t0",
+      "base_time": 0,
+      "clause_id": "c1__derive__bind__stop_margin",
+      "index": 345,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__derive__bind__factor_two__t0",
+      "base_time": 0,
+      "clause_id": "c1__derive__bind__factor_two",
+      "index": 346,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__derive__bind__zero_speed__t0",
+      "base_time": 0,
+      "clause_id": "c1__derive__bind__zero_speed",
+      "index": 347,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__derive__output__stop_position__t0",
+      "base_time": 0,
+      "clause_id": "c1__derive__output__stop_position",
+      "index": 348,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__derive__output__stopping_distance__t0",
+      "base_time": 0,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 349,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c1__derive__output__stopping_distance__t0__0",
+      "base_time": 0,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 350,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__derive__output__stopping_distance__t1",
+      "base_time": 1,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 351,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c1__derive__output__stopping_distance__t1__0",
+      "base_time": 1,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 352,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__derive__output__stopping_distance__t2",
+      "base_time": 2,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 353,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c1__derive__output__stopping_distance__t2__0",
+      "base_time": 2,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 354,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__derive__output__stopping_distance__t3",
+      "base_time": 3,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 355,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c1__derive__output__stopping_distance__t3__0",
+      "base_time": 3,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 356,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__derive__output__stopping_distance__t4",
+      "base_time": 4,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 357,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c1__derive__output__stopping_distance__t4__0",
+      "base_time": 4,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 358,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__derive__output__stopping_distance__t5",
+      "base_time": 5,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 359,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c1__derive__output__stopping_distance__t5__0",
+      "base_time": 5,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 360,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__derive__output__stopping_distance__t6",
+      "base_time": 6,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 361,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c1__derive__output__stopping_distance__t6__0",
+      "base_time": 6,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 362,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__derive__output__stopping_distance__t7",
+      "base_time": 7,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 363,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c1__derive__output__stopping_distance__t7__0",
+      "base_time": 7,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 364,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c1__derive__output__stopping_distance__t8",
+      "base_time": 8,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 365,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "side__c1__derive__output__stopping_distance__t8__0",
+      "base_time": 8,
+      "clause_id": "c1__derive__output__stopping_distance",
+      "index": 366,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C0__t0",
+      "base_time": 0,
+      "clause_id": "compose_select__C0",
+      "index": 367,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C0__t1",
+      "base_time": 1,
+      "clause_id": "compose_select__C0",
+      "index": 368,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C0__t2",
+      "base_time": 2,
+      "clause_id": "compose_select__C0",
+      "index": 369,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C0__t3",
+      "base_time": 3,
+      "clause_id": "compose_select__C0",
+      "index": 370,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C0__t4",
+      "base_time": 4,
+      "clause_id": "compose_select__C0",
+      "index": 371,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C0__t5",
+      "base_time": 5,
+      "clause_id": "compose_select__C0",
+      "index": 372,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C0__t6",
+      "base_time": 6,
+      "clause_id": "compose_select__C0",
+      "index": 373,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C0__t7",
+      "base_time": 7,
+      "clause_id": "compose_select__C0",
+      "index": 374,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C1__t0",
+      "base_time": 0,
+      "clause_id": "compose_select__C1",
+      "index": 375,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C1__t1",
+      "base_time": 1,
+      "clause_id": "compose_select__C1",
+      "index": 376,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C1__t2",
+      "base_time": 2,
+      "clause_id": "compose_select__C1",
+      "index": 377,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C1__t3",
+      "base_time": 3,
+      "clause_id": "compose_select__C1",
+      "index": 378,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C1__t4",
+      "base_time": 4,
+      "clause_id": "compose_select__C1",
+      "index": 379,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C1__t5",
+      "base_time": 5,
+      "clause_id": "compose_select__C1",
+      "index": 380,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C1__t6",
+      "base_time": 6,
+      "clause_id": "compose_select__C1",
+      "index": 381,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C1__t7",
+      "base_time": 7,
+      "clause_id": "compose_select__C1",
+      "index": 382,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__STOP__t0",
+      "base_time": 0,
+      "clause_id": "compose_action__STOP",
+      "index": 383,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__STOP__t1",
+      "base_time": 1,
+      "clause_id": "compose_action__STOP",
+      "index": 384,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__STOP__t2",
+      "base_time": 2,
+      "clause_id": "compose_action__STOP",
+      "index": 385,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__STOP__t3",
+      "base_time": 3,
+      "clause_id": "compose_action__STOP",
+      "index": 386,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__STOP__t4",
+      "base_time": 4,
+      "clause_id": "compose_action__STOP",
+      "index": 387,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__STOP__t5",
+      "base_time": 5,
+      "clause_id": "compose_action__STOP",
+      "index": 388,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__STOP__t6",
+      "base_time": 6,
+      "clause_id": "compose_action__STOP",
+      "index": 389,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__STOP__t7",
+      "base_time": 7,
+      "clause_id": "compose_action__STOP",
+      "index": 390,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__CREEP__t0",
+      "base_time": 0,
+      "clause_id": "compose_action__CREEP",
+      "index": 391,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__CREEP__t1",
+      "base_time": 1,
+      "clause_id": "compose_action__CREEP",
+      "index": 392,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__CREEP__t2",
+      "base_time": 2,
+      "clause_id": "compose_action__CREEP",
+      "index": 393,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__CREEP__t3",
+      "base_time": 3,
+      "clause_id": "compose_action__CREEP",
+      "index": 394,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__CREEP__t4",
+      "base_time": 4,
+      "clause_id": "compose_action__CREEP",
+      "index": 395,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__CREEP__t5",
+      "base_time": 5,
+      "clause_id": "compose_action__CREEP",
+      "index": 396,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__CREEP__t6",
+      "base_time": 6,
+      "clause_id": "compose_action__CREEP",
+      "index": 397,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__CREEP__t7",
+      "base_time": 7,
+      "clause_id": "compose_action__CREEP",
+      "index": 398,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__PROCEED__t0",
+      "base_time": 0,
+      "clause_id": "compose_action__PROCEED",
+      "index": 399,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__PROCEED__t1",
+      "base_time": 1,
+      "clause_id": "compose_action__PROCEED",
+      "index": 400,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__PROCEED__t2",
+      "base_time": 2,
+      "clause_id": "compose_action__PROCEED",
+      "index": 401,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__PROCEED__t3",
+      "base_time": 3,
+      "clause_id": "compose_action__PROCEED",
+      "index": 402,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__PROCEED__t4",
+      "base_time": 4,
+      "clause_id": "compose_action__PROCEED",
+      "index": 403,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__PROCEED__t5",
+      "base_time": 5,
+      "clause_id": "compose_action__PROCEED",
+      "index": 404,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__PROCEED__t6",
+      "base_time": 6,
+      "clause_id": "compose_action__PROCEED",
+      "index": 405,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__PROCEED__t7",
+      "base_time": 7,
+      "clause_id": "compose_action__PROCEED",
+      "index": 406,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_hard_conflict__t0",
+      "base_time": 0,
+      "clause_id": "compose_hard_conflict",
+      "index": 407,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_hard_conflict__t1",
+      "base_time": 1,
+      "clause_id": "compose_hard_conflict",
+      "index": 408,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_hard_conflict__t2",
+      "base_time": 2,
+      "clause_id": "compose_hard_conflict",
+      "index": 409,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_hard_conflict__t3",
+      "base_time": 3,
+      "clause_id": "compose_hard_conflict",
+      "index": 410,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_hard_conflict__t4",
+      "base_time": 4,
+      "clause_id": "compose_hard_conflict",
+      "index": 411,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_hard_conflict__t5",
+      "base_time": 5,
+      "clause_id": "compose_hard_conflict",
+      "index": 412,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_hard_conflict__t6",
+      "base_time": 6,
+      "clause_id": "compose_hard_conflict",
+      "index": 413,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_hard_conflict__t7",
+      "base_time": 7,
+      "clause_id": "compose_hard_conflict",
+      "index": 414,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_review_required__t0",
+      "base_time": 0,
+      "clause_id": "compose_review_required",
+      "index": 415,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_review_required__t1",
+      "base_time": 1,
+      "clause_id": "compose_review_required",
+      "index": 416,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_review_required__t2",
+      "base_time": 2,
+      "clause_id": "compose_review_required",
+      "index": 417,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_review_required__t3",
+      "base_time": 3,
+      "clause_id": "compose_review_required",
+      "index": 418,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_review_required__t4",
+      "base_time": 4,
+      "clause_id": "compose_review_required",
+      "index": 419,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_review_required__t5",
+      "base_time": 5,
+      "clause_id": "compose_review_required",
+      "index": 420,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_review_required__t6",
+      "base_time": 6,
+      "clause_id": "compose_review_required",
+      "index": 421,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_review_required__t7",
+      "base_time": 7,
+      "clause_id": "compose_review_required",
+      "index": 422,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_false_deadlock__t0",
+      "base_time": 0,
+      "clause_id": "compose_false_deadlock",
+      "index": 423,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_false_deadlock__t1",
+      "base_time": 1,
+      "clause_id": "compose_false_deadlock",
+      "index": 424,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_false_deadlock__t2",
+      "base_time": 2,
+      "clause_id": "compose_false_deadlock",
+      "index": 425,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_false_deadlock__t3",
+      "base_time": 3,
+      "clause_id": "compose_false_deadlock",
+      "index": 426,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_false_deadlock__t4",
+      "base_time": 4,
+      "clause_id": "compose_false_deadlock",
+      "index": 427,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_false_deadlock__t5",
+      "base_time": 5,
+      "clause_id": "compose_false_deadlock",
+      "index": 428,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_false_deadlock__t6",
+      "base_time": 6,
+      "clause_id": "compose_false_deadlock",
+      "index": 429,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_false_deadlock__t7",
+      "base_time": 7,
+      "clause_id": "compose_false_deadlock",
+      "index": 430,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_verdict__t0",
+      "base_time": 0,
+      "clause_id": "compose_verdict",
+      "index": 431,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_verdict__t1",
+      "base_time": 1,
+      "clause_id": "compose_verdict",
+      "index": 432,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_verdict__t2",
+      "base_time": 2,
+      "clause_id": "compose_verdict",
+      "index": 433,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_verdict__t3",
+      "base_time": 3,
+      "clause_id": "compose_verdict",
+      "index": 434,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_verdict__t4",
+      "base_time": 4,
+      "clause_id": "compose_verdict",
+      "index": 435,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_verdict__t5",
+      "base_time": 5,
+      "clause_id": "compose_verdict",
+      "index": 436,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_verdict__t6",
+      "base_time": 6,
+      "clause_id": "compose_verdict",
+      "index": 437,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_verdict__t7",
+      "base_time": 7,
+      "clause_id": "compose_verdict",
+      "index": 438,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    }
+  ],
+  "clauses": {
+    "c0__bind_deceleration": {
+      "assertion_ids": [
+        "clause__c0__bind_deceleration__t0"
+      ],
+      "assertion_indices": [
+        103
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: deceleration.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    "c0__bind_position_epsilon": {
+      "assertion_ids": [
+        "clause__c0__bind_position_epsilon__t0"
+      ],
+      "assertion_indices": [
+        104
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: position_epsilon.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c0__bind_position_uncertainty": {
+      "assertion_ids": [
+        "clause__c0__bind_position_uncertainty__t0"
+      ],
+      "assertion_indices": [
+        101
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: position_uncertainty.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    "c0__bind_predicate_maximum_age": {
+      "assertion_ids": [
+        "clause__c0__bind_predicate_maximum_age__t0"
+      ],
+      "assertion_indices": [
+        107
+      ],
+      "compiled": true,
+      "description": "Predicate freshness contract.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    "c0__bind_release_threshold": {
+      "assertion_ids": [
+        "clause__c0__bind_release_threshold__t0"
+      ],
+      "assertion_indices": [
+        108
+      ],
+      "compiled": true,
+      "description": "Consecutive clear frames required for release.",
+      "enforcement": "INITIAL",
+      "kind": "RELEASE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "c0__bind_response_time": {
+      "assertion_ids": [
+        "clause__c0__bind_response_time__t0"
+      ],
+      "assertion_indices": [
+        102
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: response_time.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    "c0__bind_speed_epsilon": {
+      "assertion_ids": [
+        "clause__c0__bind_speed_epsilon__t0"
+      ],
+      "assertion_indices": [
+        105
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: speed_epsilon.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c0__bind_time_epsilon": {
+      "assertion_ids": [
+        "clause__c0__bind_time_epsilon__t0"
+      ],
+      "assertion_indices": [
+        106
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: time_epsilon.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c0__derive__bind__factor_two": {
+      "assertion_ids": [
+        "clause__c0__derive__bind__factor_two__t0"
+      ],
+      "assertion_indices": [
+        212
+      ],
+      "compiled": true,
+      "description": "Bind sourced derivation input factor_two.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c0__derive__bind__stop_margin": {
+      "assertion_ids": [
+        "clause__c0__derive__bind__stop_margin__t0"
+      ],
+      "assertion_indices": [
+        211
+      ],
+      "compiled": true,
+      "description": "Bind sourced derivation input stop_margin.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "c0__derive__bind__zero_speed": {
+      "assertion_ids": [
+        "clause__c0__derive__bind__zero_speed__t0"
+      ],
+      "assertion_indices": [
+        213
+      ],
+      "compiled": true,
+      "description": "Bind sourced derivation input zero_speed.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c0__derive__bind__zone_entry_x": {
+      "assertion_ids": [
+        "clause__c0__derive__bind__zone_entry_x__t0"
+      ],
+      "assertion_indices": [
+        210
+      ],
+      "compiled": true,
+      "description": "Bind sourced derivation input zone_entry_x.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    "c0__derive__output__stop_position": {
+      "assertion_ids": [
+        "clause__c0__derive__output__stop_position__t0"
+      ],
+      "assertion_indices": [
+        214
+      ],
+      "compiled": true,
+      "description": "Symbolically replay typed derivation output stop_position.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0",
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    "c0__derive__output__stopping_distance": {
+      "assertion_ids": [
+        "clause__c0__derive__output__stopping_distance__t0",
+        "side__c0__derive__output__stopping_distance__t0__0",
+        "clause__c0__derive__output__stopping_distance__t1",
+        "side__c0__derive__output__stopping_distance__t1__0",
+        "clause__c0__derive__output__stopping_distance__t2",
+        "side__c0__derive__output__stopping_distance__t2__0",
+        "clause__c0__derive__output__stopping_distance__t3",
+        "side__c0__derive__output__stopping_distance__t3__0",
+        "clause__c0__derive__output__stopping_distance__t4",
+        "side__c0__derive__output__stopping_distance__t4__0",
+        "clause__c0__derive__output__stopping_distance__t5",
+        "side__c0__derive__output__stopping_distance__t5__0",
+        "clause__c0__derive__output__stopping_distance__t6",
+        "side__c0__derive__output__stopping_distance__t6__0",
+        "clause__c0__derive__output__stopping_distance__t7",
+        "side__c0__derive__output__stopping_distance__t7__0",
+        "clause__c0__derive__output__stopping_distance__t8",
+        "side__c0__derive__output__stopping_distance__t8__0"
+      ],
+      "assertion_indices": [
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232
+      ],
+      "compiled": true,
+      "description": "Symbolically replay typed derivation output stopping_distance.",
+      "enforcement": "EACH_FRAME",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-A-v0"
+      ]
+    },
+    "c0__effective_truth_from_freshness_and_epistemic": {
+      "assertion_ids": [
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t0",
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t1",
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t2",
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t3",
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t4",
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t5",
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t6",
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t7",
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t8"
+      ],
+      "assertion_indices": [
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153
+      ],
+      "compiled": true,
+      "description": "Future, stale, or policy-disallowed epistemic evidence fails to UNKNOWN; otherwise raw truth is preserved.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ACTIVATION",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    "c0__generated_clear_counter_transition": {
+      "assertion_ids": [
+        "clause__c0__generated_clear_counter_transition__t0",
+        "clause__c0__generated_clear_counter_transition__t1",
+        "clause__c0__generated_clear_counter_transition__t2",
+        "clause__c0__generated_clear_counter_transition__t3",
+        "clause__c0__generated_clear_counter_transition__t4",
+        "clause__c0__generated_clear_counter_transition__t5",
+        "clause__c0__generated_clear_counter_transition__t6",
+        "clause__c0__generated_clear_counter_transition__t7"
+      ],
+      "assertion_indices": [
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169
+      ],
+      "compiled": true,
+      "description": "Generated consecutive-clear counter transition.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "RELEASE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "c0__generated_deadlock_violation": {
+      "assertion_ids": [
+        "clause__c0__generated_deadlock_violation__t0",
+        "clause__c0__generated_deadlock_violation__t1",
+        "clause__c0__generated_deadlock_violation__t2",
+        "clause__c0__generated_deadlock_violation__t3",
+        "clause__c0__generated_deadlock_violation__t4",
+        "clause__c0__generated_deadlock_violation__t5",
+        "clause__c0__generated_deadlock_violation__t6",
+        "clause__c0__generated_deadlock_violation__t7"
+      ],
+      "assertion_indices": [
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201
+      ],
+      "compiled": true,
+      "description": "Generated false-deadlock violation predicate.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "PROGRESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    "c0__generated_entry_violation": {
+      "assertion_ids": [
+        "clause__c0__generated_entry_violation__t0",
+        "clause__c0__generated_entry_violation__t1",
+        "clause__c0__generated_entry_violation__t2",
+        "clause__c0__generated_entry_violation__t3",
+        "clause__c0__generated_entry_violation__t4",
+        "clause__c0__generated_entry_violation__t5",
+        "clause__c0__generated_entry_violation__t6",
+        "clause__c0__generated_entry_violation__t7"
+      ],
+      "assertion_indices": [
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185
+      ],
+      "compiled": true,
+      "description": "Generated stop-position violation predicate.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "INVARIANT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    "c0__generated_lifecycle_transition": {
+      "assertion_ids": [
+        "clause__c0__generated_lifecycle_transition__t0",
+        "clause__c0__generated_lifecycle_transition__t1",
+        "clause__c0__generated_lifecycle_transition__t2",
+        "clause__c0__generated_lifecycle_transition__t3",
+        "clause__c0__generated_lifecycle_transition__t4",
+        "clause__c0__generated_lifecycle_transition__t5",
+        "clause__c0__generated_lifecycle_transition__t6",
+        "clause__c0__generated_lifecycle_transition__t7"
+      ],
+      "assertion_indices": [
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161
+      ],
+      "compiled": true,
+      "description": "Generated activation, maintenance, release, reactivation, expiry, and fallback transition.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "c0__generated_progress_permission": {
+      "assertion_ids": [
+        "clause__c0__generated_progress_permission__t0",
+        "clause__c0__generated_progress_permission__t1",
+        "clause__c0__generated_progress_permission__t2",
+        "clause__c0__generated_progress_permission__t3",
+        "clause__c0__generated_progress_permission__t4",
+        "clause__c0__generated_progress_permission__t5",
+        "clause__c0__generated_progress_permission__t6",
+        "clause__c0__generated_progress_permission__t7"
+      ],
+      "assertion_indices": [
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209
+      ],
+      "compiled": true,
+      "description": "Generated progress permission from post-step lifecycle.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "PROGRESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    "c0__generated_speed_violation": {
+      "assertion_ids": [
+        "clause__c0__generated_speed_violation__t0",
+        "clause__c0__generated_speed_violation__t1",
+        "clause__c0__generated_speed_violation__t2",
+        "clause__c0__generated_speed_violation__t3",
+        "clause__c0__generated_speed_violation__t4",
+        "clause__c0__generated_speed_violation__t5",
+        "clause__c0__generated_speed_violation__t6",
+        "clause__c0__generated_speed_violation__t7"
+      ],
+      "assertion_indices": [
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193
+      ],
+      "compiled": true,
+      "description": "Generated dynamic stopping-bound violation predicate.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    "c0__generated_verdict": {
+      "assertion_ids": [
+        "clause__c0__generated_verdict__t0",
+        "clause__c0__generated_verdict__t1",
+        "clause__c0__generated_verdict__t2",
+        "clause__c0__generated_verdict__t3",
+        "clause__c0__generated_verdict__t4",
+        "clause__c0__generated_verdict__t5",
+        "clause__c0__generated_verdict__t6",
+        "clause__c0__generated_verdict__t7"
+      ],
+      "assertion_indices": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177
+      ],
+      "compiled": true,
+      "description": "Generated fail-closed per-frame verdict with conflict and review precedence.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    "c0__initial_clear_count": {
+      "assertion_ids": [
+        "clause__c0__initial_clear_count__t0"
+      ],
+      "assertion_indices": [
+        100
+      ],
+      "compiled": true,
+      "description": "Initial consecutive-clear counter.",
+      "enforcement": "INITIAL",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "c0__initial_state": {
+      "assertion_ids": [
+        "clause__c0__initial_state__t0"
+      ],
+      "assertion_indices": [
+        99
+      ],
+      "compiled": true,
+      "description": "Initial lifecycle state from the high-level policy.",
+      "enforcement": "INITIAL",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "c0__input_fact_age_nonnegative": {
+      "assertion_ids": [
+        "clause__c0__input_fact_age_nonnegative__t0",
+        "clause__c0__input_fact_age_nonnegative__t1",
+        "clause__c0__input_fact_age_nonnegative__t2",
+        "clause__c0__input_fact_age_nonnegative__t3",
+        "clause__c0__input_fact_age_nonnegative__t4",
+        "clause__c0__input_fact_age_nonnegative__t5",
+        "clause__c0__input_fact_age_nonnegative__t6",
+        "clause__c0__input_fact_age_nonnegative__t7",
+        "clause__c0__input_fact_age_nonnegative__t8"
+      ],
+      "assertion_indices": [
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135
+      ],
+      "compiled": true,
+      "description": "Finite-trace conformance input domain.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ASSUMPTION",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c0__input_fact_timestamp_nonnegative": {
+      "assertion_ids": [
+        "clause__c0__input_fact_timestamp_nonnegative__t0",
+        "clause__c0__input_fact_timestamp_nonnegative__t1",
+        "clause__c0__input_fact_timestamp_nonnegative__t2",
+        "clause__c0__input_fact_timestamp_nonnegative__t3",
+        "clause__c0__input_fact_timestamp_nonnegative__t4",
+        "clause__c0__input_fact_timestamp_nonnegative__t5",
+        "clause__c0__input_fact_timestamp_nonnegative__t6",
+        "clause__c0__input_fact_timestamp_nonnegative__t7",
+        "clause__c0__input_fact_timestamp_nonnegative__t8"
+      ],
+      "assertion_indices": [
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126
+      ],
+      "compiled": true,
+      "description": "Finite-trace conformance input domain.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ASSUMPTION",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c0__input_speed_nonnegative": {
+      "assertion_ids": [
+        "clause__c0__input_speed_nonnegative__t0",
+        "clause__c0__input_speed_nonnegative__t1",
+        "clause__c0__input_speed_nonnegative__t2",
+        "clause__c0__input_speed_nonnegative__t3",
+        "clause__c0__input_speed_nonnegative__t4",
+        "clause__c0__input_speed_nonnegative__t5",
+        "clause__c0__input_speed_nonnegative__t6",
+        "clause__c0__input_speed_nonnegative__t7",
+        "clause__c0__input_speed_nonnegative__t8"
+      ],
+      "assertion_indices": [
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144
+      ],
+      "compiled": true,
+      "description": "Finite-trace conformance input domain.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ASSUMPTION",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c0__input_timestamp_nonnegative": {
+      "assertion_ids": [
+        "clause__c0__input_timestamp_nonnegative__t0",
+        "clause__c0__input_timestamp_nonnegative__t1",
+        "clause__c0__input_timestamp_nonnegative__t2",
+        "clause__c0__input_timestamp_nonnegative__t3",
+        "clause__c0__input_timestamp_nonnegative__t4",
+        "clause__c0__input_timestamp_nonnegative__t5",
+        "clause__c0__input_timestamp_nonnegative__t6",
+        "clause__c0__input_timestamp_nonnegative__t7",
+        "clause__c0__input_timestamp_nonnegative__t8"
+      ],
+      "assertion_indices": [
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117
+      ],
+      "compiled": true,
+      "description": "Finite-trace conformance input domain.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ASSUMPTION",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c1__bind_deceleration": {
+      "assertion_ids": [
+        "clause__c1__bind_deceleration__t0"
+      ],
+      "assertion_indices": [
+        237
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: deceleration.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    "c1__bind_position_epsilon": {
+      "assertion_ids": [
+        "clause__c1__bind_position_epsilon__t0"
+      ],
+      "assertion_indices": [
+        238
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: position_epsilon.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c1__bind_position_uncertainty": {
+      "assertion_ids": [
+        "clause__c1__bind_position_uncertainty__t0"
+      ],
+      "assertion_indices": [
+        235
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: position_uncertainty.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    "c1__bind_predicate_maximum_age": {
+      "assertion_ids": [
+        "clause__c1__bind_predicate_maximum_age__t0"
+      ],
+      "assertion_indices": [
+        241
+      ],
+      "compiled": true,
+      "description": "Predicate freshness contract.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    "c1__bind_release_threshold": {
+      "assertion_ids": [
+        "clause__c1__bind_release_threshold__t0"
+      ],
+      "assertion_indices": [
+        242
+      ],
+      "compiled": true,
+      "description": "Consecutive clear frames required for release.",
+      "enforcement": "INITIAL",
+      "kind": "RELEASE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "c1__bind_response_time": {
+      "assertion_ids": [
+        "clause__c1__bind_response_time__t0"
+      ],
+      "assertion_indices": [
+        236
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: response_time.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    "c1__bind_speed_epsilon": {
+      "assertion_ids": [
+        "clause__c1__bind_speed_epsilon__t0"
+      ],
+      "assertion_indices": [
+        239
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: speed_epsilon.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c1__bind_time_epsilon": {
+      "assertion_ids": [
+        "clause__c1__bind_time_epsilon__t0"
+      ],
+      "assertion_indices": [
+        240
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: time_epsilon.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c1__derive__bind__factor_two": {
+      "assertion_ids": [
+        "clause__c1__derive__bind__factor_two__t0"
+      ],
+      "assertion_indices": [
+        346
+      ],
+      "compiled": true,
+      "description": "Bind sourced derivation input factor_two.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c1__derive__bind__stop_margin": {
+      "assertion_ids": [
+        "clause__c1__derive__bind__stop_margin__t0"
+      ],
+      "assertion_indices": [
+        345
+      ],
+      "compiled": true,
+      "description": "Bind sourced derivation input stop_margin.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "c1__derive__bind__zero_speed": {
+      "assertion_ids": [
+        "clause__c1__derive__bind__zero_speed__t0"
+      ],
+      "assertion_indices": [
+        347
+      ],
+      "compiled": true,
+      "description": "Bind sourced derivation input zero_speed.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c1__derive__bind__zone_entry_x": {
+      "assertion_ids": [
+        "clause__c1__derive__bind__zone_entry_x__t0"
+      ],
+      "assertion_indices": [
+        344
+      ],
+      "compiled": true,
+      "description": "Bind sourced derivation input zone_entry_x.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    "c1__derive__output__stop_position": {
+      "assertion_ids": [
+        "clause__c1__derive__output__stop_position__t0"
+      ],
+      "assertion_indices": [
+        348
+      ],
+      "compiled": true,
+      "description": "Symbolically replay typed derivation output stop_position.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0",
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0"
+      ]
+    },
+    "c1__derive__output__stopping_distance": {
+      "assertion_ids": [
+        "clause__c1__derive__output__stopping_distance__t0",
+        "side__c1__derive__output__stopping_distance__t0__0",
+        "clause__c1__derive__output__stopping_distance__t1",
+        "side__c1__derive__output__stopping_distance__t1__0",
+        "clause__c1__derive__output__stopping_distance__t2",
+        "side__c1__derive__output__stopping_distance__t2__0",
+        "clause__c1__derive__output__stopping_distance__t3",
+        "side__c1__derive__output__stopping_distance__t3__0",
+        "clause__c1__derive__output__stopping_distance__t4",
+        "side__c1__derive__output__stopping_distance__t4__0",
+        "clause__c1__derive__output__stopping_distance__t5",
+        "side__c1__derive__output__stopping_distance__t5__0",
+        "clause__c1__derive__output__stopping_distance__t6",
+        "side__c1__derive__output__stopping_distance__t6__0",
+        "clause__c1__derive__output__stopping_distance__t7",
+        "side__c1__derive__output__stopping_distance__t7__0",
+        "clause__c1__derive__output__stopping_distance__t8",
+        "side__c1__derive__output__stopping_distance__t8__0"
+      ],
+      "assertion_indices": [
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        356,
+        357,
+        358,
+        359,
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366
+      ],
+      "compiled": true,
+      "description": "Symbolically replay typed derivation output stopping_distance.",
+      "enforcement": "EACH_FRAME",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-VEHICLE-PROFILE-v0",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-ZONE-GEOMETRY-B-v0"
+      ]
+    },
+    "c1__effective_truth_from_freshness_and_epistemic": {
+      "assertion_ids": [
+        "clause__c1__effective_truth_from_freshness_and_epistemic__t0",
+        "clause__c1__effective_truth_from_freshness_and_epistemic__t1",
+        "clause__c1__effective_truth_from_freshness_and_epistemic__t2",
+        "clause__c1__effective_truth_from_freshness_and_epistemic__t3",
+        "clause__c1__effective_truth_from_freshness_and_epistemic__t4",
+        "clause__c1__effective_truth_from_freshness_and_epistemic__t5",
+        "clause__c1__effective_truth_from_freshness_and_epistemic__t6",
+        "clause__c1__effective_truth_from_freshness_and_epistemic__t7",
+        "clause__c1__effective_truth_from_freshness_and_epistemic__t8"
+      ],
+      "assertion_indices": [
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287
+      ],
+      "compiled": true,
+      "description": "Future, stale, or policy-disallowed epistemic evidence fails to UNKNOWN; otherwise raw truth is preserved.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ACTIVATION",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    "c1__generated_clear_counter_transition": {
+      "assertion_ids": [
+        "clause__c1__generated_clear_counter_transition__t0",
+        "clause__c1__generated_clear_counter_transition__t1",
+        "clause__c1__generated_clear_counter_transition__t2",
+        "clause__c1__generated_clear_counter_transition__t3",
+        "clause__c1__generated_clear_counter_transition__t4",
+        "clause__c1__generated_clear_counter_transition__t5",
+        "clause__c1__generated_clear_counter_transition__t6",
+        "clause__c1__generated_clear_counter_transition__t7"
+      ],
+      "assertion_indices": [
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303
+      ],
+      "compiled": true,
+      "description": "Generated consecutive-clear counter transition.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "RELEASE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "c1__generated_deadlock_violation": {
+      "assertion_ids": [
+        "clause__c1__generated_deadlock_violation__t0",
+        "clause__c1__generated_deadlock_violation__t1",
+        "clause__c1__generated_deadlock_violation__t2",
+        "clause__c1__generated_deadlock_violation__t3",
+        "clause__c1__generated_deadlock_violation__t4",
+        "clause__c1__generated_deadlock_violation__t5",
+        "clause__c1__generated_deadlock_violation__t6",
+        "clause__c1__generated_deadlock_violation__t7"
+      ],
+      "assertion_indices": [
+        328,
+        329,
+        330,
+        331,
+        332,
+        333,
+        334,
+        335
+      ],
+      "compiled": true,
+      "description": "Generated false-deadlock violation predicate.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "PROGRESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    "c1__generated_entry_violation": {
+      "assertion_ids": [
+        "clause__c1__generated_entry_violation__t0",
+        "clause__c1__generated_entry_violation__t1",
+        "clause__c1__generated_entry_violation__t2",
+        "clause__c1__generated_entry_violation__t3",
+        "clause__c1__generated_entry_violation__t4",
+        "clause__c1__generated_entry_violation__t5",
+        "clause__c1__generated_entry_violation__t6",
+        "clause__c1__generated_entry_violation__t7"
+      ],
+      "assertion_indices": [
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319
+      ],
+      "compiled": true,
+      "description": "Generated stop-position violation predicate.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "INVARIANT",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    "c1__generated_lifecycle_transition": {
+      "assertion_ids": [
+        "clause__c1__generated_lifecycle_transition__t0",
+        "clause__c1__generated_lifecycle_transition__t1",
+        "clause__c1__generated_lifecycle_transition__t2",
+        "clause__c1__generated_lifecycle_transition__t3",
+        "clause__c1__generated_lifecycle_transition__t4",
+        "clause__c1__generated_lifecycle_transition__t5",
+        "clause__c1__generated_lifecycle_transition__t6",
+        "clause__c1__generated_lifecycle_transition__t7"
+      ],
+      "assertion_indices": [
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295
+      ],
+      "compiled": true,
+      "description": "Generated activation, maintenance, release, reactivation, expiry, and fallback transition.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "c1__generated_progress_permission": {
+      "assertion_ids": [
+        "clause__c1__generated_progress_permission__t0",
+        "clause__c1__generated_progress_permission__t1",
+        "clause__c1__generated_progress_permission__t2",
+        "clause__c1__generated_progress_permission__t3",
+        "clause__c1__generated_progress_permission__t4",
+        "clause__c1__generated_progress_permission__t5",
+        "clause__c1__generated_progress_permission__t6",
+        "clause__c1__generated_progress_permission__t7"
+      ],
+      "assertion_indices": [
+        336,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343
+      ],
+      "compiled": true,
+      "description": "Generated progress permission from post-step lifecycle.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "PROGRESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    "c1__generated_speed_violation": {
+      "assertion_ids": [
+        "clause__c1__generated_speed_violation__t0",
+        "clause__c1__generated_speed_violation__t1",
+        "clause__c1__generated_speed_violation__t2",
+        "clause__c1__generated_speed_violation__t3",
+        "clause__c1__generated_speed_violation__t4",
+        "clause__c1__generated_speed_violation__t5",
+        "clause__c1__generated_speed_violation__t6",
+        "clause__c1__generated_speed_violation__t7"
+      ],
+      "assertion_indices": [
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327
+      ],
+      "compiled": true,
+      "description": "Generated dynamic stopping-bound violation predicate.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    "c1__generated_verdict": {
+      "assertion_ids": [
+        "clause__c1__generated_verdict__t0",
+        "clause__c1__generated_verdict__t1",
+        "clause__c1__generated_verdict__t2",
+        "clause__c1__generated_verdict__t3",
+        "clause__c1__generated_verdict__t4",
+        "clause__c1__generated_verdict__t5",
+        "clause__c1__generated_verdict__t6",
+        "clause__c1__generated_verdict__t7"
+      ],
+      "assertion_indices": [
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311
+      ],
+      "compiled": true,
+      "description": "Generated fail-closed per-frame verdict with conflict and review precedence.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+        "P0B-SYNTHETIC-PREDICATE-SPEC-v0"
+      ]
+    },
+    "c1__initial_clear_count": {
+      "assertion_ids": [
+        "clause__c1__initial_clear_count__t0"
+      ],
+      "assertion_indices": [
+        234
+      ],
+      "compiled": true,
+      "description": "Initial consecutive-clear counter.",
+      "enforcement": "INITIAL",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "c1__initial_state": {
+      "assertion_ids": [
+        "clause__c1__initial_state__t0"
+      ],
+      "assertion_indices": [
+        233
+      ],
+      "compiled": true,
+      "description": "Initial lifecycle state from the high-level policy.",
+      "enforcement": "INITIAL",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    },
+    "c1__input_fact_age_nonnegative": {
+      "assertion_ids": [
+        "clause__c1__input_fact_age_nonnegative__t0",
+        "clause__c1__input_fact_age_nonnegative__t1",
+        "clause__c1__input_fact_age_nonnegative__t2",
+        "clause__c1__input_fact_age_nonnegative__t3",
+        "clause__c1__input_fact_age_nonnegative__t4",
+        "clause__c1__input_fact_age_nonnegative__t5",
+        "clause__c1__input_fact_age_nonnegative__t6",
+        "clause__c1__input_fact_age_nonnegative__t7",
+        "clause__c1__input_fact_age_nonnegative__t8"
+      ],
+      "assertion_indices": [
+        261,
+        262,
+        263,
+        264,
+        265,
+        266,
+        267,
+        268,
+        269
+      ],
+      "compiled": true,
+      "description": "Finite-trace conformance input domain.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ASSUMPTION",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c1__input_fact_timestamp_nonnegative": {
+      "assertion_ids": [
+        "clause__c1__input_fact_timestamp_nonnegative__t0",
+        "clause__c1__input_fact_timestamp_nonnegative__t1",
+        "clause__c1__input_fact_timestamp_nonnegative__t2",
+        "clause__c1__input_fact_timestamp_nonnegative__t3",
+        "clause__c1__input_fact_timestamp_nonnegative__t4",
+        "clause__c1__input_fact_timestamp_nonnegative__t5",
+        "clause__c1__input_fact_timestamp_nonnegative__t6",
+        "clause__c1__input_fact_timestamp_nonnegative__t7",
+        "clause__c1__input_fact_timestamp_nonnegative__t8"
+      ],
+      "assertion_indices": [
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260
+      ],
+      "compiled": true,
+      "description": "Finite-trace conformance input domain.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ASSUMPTION",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c1__input_speed_nonnegative": {
+      "assertion_ids": [
+        "clause__c1__input_speed_nonnegative__t0",
+        "clause__c1__input_speed_nonnegative__t1",
+        "clause__c1__input_speed_nonnegative__t2",
+        "clause__c1__input_speed_nonnegative__t3",
+        "clause__c1__input_speed_nonnegative__t4",
+        "clause__c1__input_speed_nonnegative__t5",
+        "clause__c1__input_speed_nonnegative__t6",
+        "clause__c1__input_speed_nonnegative__t7",
+        "clause__c1__input_speed_nonnegative__t8"
+      ],
+      "assertion_indices": [
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278
+      ],
+      "compiled": true,
+      "description": "Finite-trace conformance input domain.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ASSUMPTION",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c1__input_timestamp_nonnegative": {
+      "assertion_ids": [
+        "clause__c1__input_timestamp_nonnegative__t0",
+        "clause__c1__input_timestamp_nonnegative__t1",
+        "clause__c1__input_timestamp_nonnegative__t2",
+        "clause__c1__input_timestamp_nonnegative__t3",
+        "clause__c1__input_timestamp_nonnegative__t4",
+        "clause__c1__input_timestamp_nonnegative__t5",
+        "clause__c1__input_timestamp_nonnegative__t6",
+        "clause__c1__input_timestamp_nonnegative__t7",
+        "clause__c1__input_timestamp_nonnegative__t8"
+      ],
+      "assertion_indices": [
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251
+      ],
+      "compiled": true,
+      "description": "Finite-trace conformance input domain.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ASSUMPTION",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "compose_action__CREEP": {
+      "assertion_ids": [
+        "clause__compose_action__CREEP__t0",
+        "clause__compose_action__CREEP__t1",
+        "clause__compose_action__CREEP__t2",
+        "clause__compose_action__CREEP__t3",
+        "clause__compose_action__CREEP__t4",
+        "clause__compose_action__CREEP__t5",
+        "clause__compose_action__CREEP__t6",
+        "clause__compose_action__CREEP__t7"
+      ],
+      "assertion_indices": [
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398
+      ],
+      "compiled": true,
+      "description": "An action is admissible exactly when every selected contract permits it.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    "compose_action__PROCEED": {
+      "assertion_ids": [
+        "clause__compose_action__PROCEED__t0",
+        "clause__compose_action__PROCEED__t1",
+        "clause__compose_action__PROCEED__t2",
+        "clause__compose_action__PROCEED__t3",
+        "clause__compose_action__PROCEED__t4",
+        "clause__compose_action__PROCEED__t5",
+        "clause__compose_action__PROCEED__t6",
+        "clause__compose_action__PROCEED__t7"
+      ],
+      "assertion_indices": [
+        399,
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406
+      ],
+      "compiled": true,
+      "description": "An action is admissible exactly when every selected contract permits it.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    "compose_action__STOP": {
+      "assertion_ids": [
+        "clause__compose_action__STOP__t0",
+        "clause__compose_action__STOP__t1",
+        "clause__compose_action__STOP__t2",
+        "clause__compose_action__STOP__t3",
+        "clause__compose_action__STOP__t4",
+        "clause__compose_action__STOP__t5",
+        "clause__compose_action__STOP__t6",
+        "clause__compose_action__STOP__t7"
+      ],
+      "assertion_indices": [
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390
+      ],
+      "compiled": true,
+      "description": "An action is admissible exactly when every selected contract permits it.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    "compose_false_deadlock": {
+      "assertion_ids": [
+        "clause__compose_false_deadlock__t0",
+        "clause__compose_false_deadlock__t1",
+        "clause__compose_false_deadlock__t2",
+        "clause__compose_false_deadlock__t3",
+        "clause__compose_false_deadlock__t4",
+        "clause__compose_false_deadlock__t5",
+        "clause__compose_false_deadlock__t6",
+        "clause__compose_false_deadlock__t7"
+      ],
+      "assertion_indices": [
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430
+      ],
+      "compiled": true,
+      "description": "Flag an empty admissible set when an independently supplied safe-progress action exists.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "PROGRESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    "compose_hard_conflict": {
+      "assertion_ids": [
+        "clause__compose_hard_conflict__t0",
+        "clause__compose_hard_conflict__t1",
+        "clause__compose_hard_conflict__t2",
+        "clause__compose_hard_conflict__t3",
+        "clause__compose_hard_conflict__t4",
+        "clause__compose_hard_conflict__t5",
+        "clause__compose_hard_conflict__t6",
+        "clause__compose_hard_conflict__t7"
+      ],
+      "assertion_indices": [
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414
+      ],
+      "compiled": true,
+      "description": "Empty action intersection from at least two selected hard contracts is a conflict.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    "compose_review_required": {
+      "assertion_ids": [
+        "clause__compose_review_required__t0",
+        "clause__compose_review_required__t1",
+        "clause__compose_review_required__t2",
+        "clause__compose_review_required__t3",
+        "clause__compose_review_required__t4",
+        "clause__compose_review_required__t5",
+        "clause__compose_review_required__t6",
+        "clause__compose_review_required__t7"
+      ],
+      "assertion_indices": [
+        415,
+        416,
+        417,
+        418,
+        419,
+        420,
+        421,
+        422
+      ],
+      "compiled": true,
+      "description": "Other empty action intersections require review and are not silently scalarized.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    "compose_select__C0": {
+      "assertion_ids": [
+        "clause__compose_select__C0__t0",
+        "clause__compose_select__C0__t1",
+        "clause__compose_select__C0__t2",
+        "clause__compose_select__C0__t3",
+        "clause__compose_select__C0__t4",
+        "clause__compose_select__C0__t5",
+        "clause__compose_select__C0__t6",
+        "clause__compose_select__C0__t7"
+      ],
+      "assertion_indices": [
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374
+      ],
+      "compiled": true,
+      "description": "Select a live contract only when no live higher/explicit dominator exists.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    "compose_select__C1": {
+      "assertion_ids": [
+        "clause__compose_select__C1__t0",
+        "clause__compose_select__C1__t1",
+        "clause__compose_select__C1__t2",
+        "clause__compose_select__C1__t3",
+        "clause__compose_select__C1__t4",
+        "clause__compose_select__C1__t5",
+        "clause__compose_select__C1__t6",
+        "clause__compose_select__C1__t7"
+      ],
+      "assertion_indices": [
+        375,
+        376,
+        377,
+        378,
+        379,
+        380,
+        381,
+        382
+      ],
+      "compiled": true,
+      "description": "Select a live contract only when no live higher/explicit dominator exists.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    "compose_verdict": {
+      "assertion_ids": [
+        "clause__compose_verdict__t0",
+        "clause__compose_verdict__t1",
+        "clause__compose_verdict__t2",
+        "clause__compose_verdict__t3",
+        "clause__compose_verdict__t4",
+        "clause__compose_verdict__t5",
+        "clause__compose_verdict__t6",
+        "clause__compose_verdict__t7"
+      ],
+      "assertion_indices": [
+        431,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        438
+      ],
+      "compiled": true,
+      "description": "Conflict, unsupported, review, then validated precedence across selected-action and child verdicts.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    }
+  },
+  "compiler_version": "eblc-core-smt-compiler-v0.1",
+  "grammar_version": "eblc-core-v0.1",
+  "model_id": "p0b_source_aware_two_actor_request__indexed_collection__bundle_core",
+  "queries": {
+    "composed_model_satisfiable": {
+      "base_assertion_count": 439,
+      "classification": "CONSISTENCY",
+      "description": "The high-level bundle, generated Core, and composition constraints admit a bounded execution.",
+      "smt_file": "QUERY_composed_model_satisfiable.smt2",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    }
+  }
+}

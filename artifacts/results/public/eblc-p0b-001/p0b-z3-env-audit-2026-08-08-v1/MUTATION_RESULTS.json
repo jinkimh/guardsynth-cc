@@ -1,0 +1,709 @@
+{
+  "engine": "Z3_BOUNDED_SMT",
+  "oracle_scope": [
+    "CONTROLLED_MUTATION_ORACLE",
+    "NOT_INDEPENDENT_SAFETY_ORACLE"
+  ],
+  "overconstraint": {
+    "detected": 5,
+    "recall": 1.0,
+    "total": 5
+  },
+  "records": [
+    {
+      "base_canonical": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      },
+      "bounded_target": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "canonical": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "classification": "underconstraint",
+      "detected": true,
+      "minimal_witness_trace": [
+        {
+          "ego_front_x_m": -1.0,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "TRUE",
+          "safe_progress_available": false,
+          "t": 0.0
+        }
+      ],
+      "mutated_field_or_edge": "enforce_invariant",
+      "mutation_id": "MISSING_INVARIANT",
+      "oracle_scope": [
+        "CONTROLLED_MUTATION_ORACLE",
+        "NOT_INDEPENDENT_SAFETY_ORACLE"
+      ],
+      "reason_code": "MISSING_CLAUSE_WITNESS",
+      "runtime_monitor": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      }
+    },
+    {
+      "base_canonical": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      },
+      "bounded_target": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "canonical": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "classification": "underconstraint",
+      "detected": true,
+      "minimal_witness_trace": [
+        {
+          "ego_front_x_m": -1.0,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "TRUE",
+          "safe_progress_available": false,
+          "t": 0.0
+        }
+      ],
+      "mutated_field_or_edge": "stop_position_x_m += 1.0",
+      "mutation_id": "WEAK_STOP_BOUND",
+      "oracle_scope": [
+        "CONTROLLED_MUTATION_ORACLE",
+        "NOT_INDEPENDENT_SAFETY_ORACLE"
+      ],
+      "reason_code": "WEAK_BOUND_WITNESS",
+      "runtime_monitor": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      }
+    },
+    {
+      "base_canonical": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      },
+      "bounded_target": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "REVIEW_REQUIRED",
+        "violations": []
+      },
+      "canonical": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "REVIEW_REQUIRED",
+        "violations": []
+      },
+      "classification": "underconstraint",
+      "detected": true,
+      "minimal_witness_trace": [
+        {
+          "ego_front_x_m": -1.0,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "TRUE",
+          "safe_progress_available": false,
+          "t": 0.0
+        }
+      ],
+      "mutated_field_or_edge": "target_entity_id",
+      "mutation_id": "WRONG_TARGET",
+      "oracle_scope": [
+        "CONTROLLED_MUTATION_ORACLE",
+        "NOT_INDEPENDENT_SAFETY_ORACLE"
+      ],
+      "reason_code": "WRONG_TARGET_WITNESS",
+      "runtime_monitor": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "REVIEW_REQUIRED",
+        "violations": []
+      }
+    },
+    {
+      "base_canonical": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED",
+          "RELEASED",
+          "REACTIVATED",
+          "MAINTAINED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      },
+      "bounded_target": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED",
+          "RELEASED",
+          "RELEASED",
+          "RELEASED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "canonical": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED",
+          "RELEASED",
+          "RELEASED",
+          "RELEASED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "classification": "underconstraint",
+      "detected": true,
+      "minimal_witness_trace": [
+        {
+          "ego_front_x_m": -2.2,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "TRUE",
+          "safe_progress_available": false,
+          "t": 0.0
+        },
+        {
+          "ego_front_x_m": -2.2,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "FALSE",
+          "safe_progress_available": false,
+          "t": 0.1
+        },
+        {
+          "ego_front_x_m": -2.2,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "FALSE",
+          "safe_progress_available": false,
+          "t": 0.2
+        },
+        {
+          "ego_front_x_m": -2.2,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "TRUE",
+          "safe_progress_available": false,
+          "t": 0.3
+        },
+        {
+          "ego_front_x_m": -1.49,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "TRUE",
+          "safe_progress_available": false,
+          "t": 0.4
+        }
+      ],
+      "mutated_field_or_edge": "reactivation_enabled",
+      "mutation_id": "MISSING_REACTIVATION",
+      "oracle_scope": [
+        "CONTROLLED_MUTATION_ORACLE",
+        "NOT_INDEPENDENT_SAFETY_ORACLE"
+      ],
+      "reason_code": "MISSED_REACTIVATION_WITNESS",
+      "runtime_monitor": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED",
+          "RELEASED",
+          "RELEASED",
+          "RELEASED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      }
+    },
+    {
+      "base_canonical": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED",
+          "MAINTAINED",
+          "MAINTAINED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      },
+      "bounded_target": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED",
+          "RELEASED",
+          "RELEASED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "canonical": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED",
+          "RELEASED",
+          "RELEASED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "classification": "underconstraint",
+      "detected": true,
+      "minimal_witness_trace": [
+        {
+          "ego_front_x_m": -2.2,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "TRUE",
+          "safe_progress_available": false,
+          "t": 0.0
+        },
+        {
+          "ego_front_x_m": -2.2,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "UNKNOWN",
+          "safe_progress_available": false,
+          "t": 0.1
+        },
+        {
+          "ego_front_x_m": -2.2,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "UNKNOWN",
+          "safe_progress_available": false,
+          "t": 0.2
+        },
+        {
+          "ego_front_x_m": -1.49,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "FALSE",
+          "safe_progress_available": false,
+          "t": 0.3
+        }
+      ],
+      "mutated_field_or_edge": "unknown_policy=AS_FALSE",
+      "mutation_id": "UNKNOWN_AS_FALSE",
+      "oracle_scope": [
+        "CONTROLLED_MUTATION_ORACLE",
+        "NOT_INDEPENDENT_SAFETY_ORACLE"
+      ],
+      "reason_code": "UNKNOWN_CLOSED_FALSE_WITNESS",
+      "runtime_monitor": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED",
+          "RELEASED",
+          "RELEASED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      }
+    },
+    {
+      "base_canonical": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED",
+          "RELEASED",
+          "RELEASED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "bounded_target": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED",
+          "MAINTAINED",
+          "MAINTAINED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      },
+      "canonical": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED",
+          "MAINTAINED",
+          "MAINTAINED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      },
+      "classification": "overconstraint",
+      "detected": true,
+      "minimal_witness_trace": [
+        {
+          "ego_front_x_m": -2.2,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "TRUE",
+          "safe_progress_available": false,
+          "t": 0.0
+        },
+        {
+          "ego_front_x_m": -2.2,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "FALSE",
+          "safe_progress_available": false,
+          "t": 0.1
+        },
+        {
+          "ego_front_x_m": -2.2,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "FALSE",
+          "safe_progress_available": false,
+          "t": 0.2
+        },
+        {
+          "ego_front_x_m": 1.0,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "FALSE",
+          "safe_progress_available": true,
+          "t": 0.3
+        }
+      ],
+      "mutated_field_or_edge": "release_enabled",
+      "mutation_id": "MISSING_RELEASE",
+      "oracle_scope": [
+        "CONTROLLED_MUTATION_ORACLE",
+        "NOT_INDEPENDENT_SAFETY_ORACLE"
+      ],
+      "reason_code": "STALE_OBLIGATION_WITNESS",
+      "runtime_monitor": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE",
+          "MAINTAINED",
+          "MAINTAINED",
+          "MAINTAINED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      }
+    },
+    {
+      "base_canonical": {
+        "accepted": true,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "bounded_target": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      },
+      "canonical": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      },
+      "classification": "overconstraint",
+      "detected": true,
+      "minimal_witness_trace": [
+        {
+          "ego_front_x_m": -1.75,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "TRUE",
+          "safe_progress_available": false,
+          "t": 0.0
+        }
+      ],
+      "mutated_field_or_edge": "stop_position_x_m -= 0.5",
+      "mutation_id": "OVER_TIGHT_BOUND",
+      "oracle_scope": [
+        "CONTROLLED_MUTATION_ORACLE",
+        "NOT_INDEPENDENT_SAFETY_ORACLE"
+      ],
+      "reason_code": "OVER_TIGHT_BOUND_WITNESS",
+      "runtime_monitor": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      }
+    },
+    {
+      "base_canonical": {
+        "accepted": true,
+        "lifecycle": [
+          "INACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "bounded_target": {
+        "accepted": false,
+        "lifecycle": [
+          "MAINTAINED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      },
+      "canonical": {
+        "accepted": false,
+        "lifecycle": [
+          "MAINTAINED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      },
+      "classification": "overconstraint",
+      "detected": true,
+      "minimal_witness_trace": [
+        {
+          "ego_front_x_m": 1.0,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "FALSE",
+          "safe_progress_available": true,
+          "t": 0.0
+        }
+      ],
+      "mutated_field_or_edge": "always_active",
+      "mutation_id": "EXTRA_ALWAYS_ACTIVE_CLAUSE",
+      "oracle_scope": [
+        "CONTROLLED_MUTATION_ORACLE",
+        "NOT_INDEPENDENT_SAFETY_ORACLE"
+      ],
+      "reason_code": "EXTRA_CLAUSE_WITNESS",
+      "runtime_monitor": {
+        "accepted": false,
+        "lifecycle": [
+          "MAINTAINED"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      }
+    },
+    {
+      "base_canonical": {
+        "accepted": true,
+        "lifecycle": [
+          "CANDIDATE"
+        ],
+        "verdict": "REVIEW_REQUIRED",
+        "violations": []
+      },
+      "bounded_target": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "REVIEW_REQUIRED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      },
+      "canonical": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "REVIEW_REQUIRED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      },
+      "classification": "overconstraint",
+      "detected": true,
+      "minimal_witness_trace": [
+        {
+          "ego_front_x_m": -1.0,
+          "ego_speed_mps": 0.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "UNKNOWN",
+          "safe_progress_available": true,
+          "t": 0.0
+        }
+      ],
+      "mutated_field_or_edge": "unknown_policy=AS_TRUE; fallback_approved=false",
+      "mutation_id": "UNKNOWN_AS_TRUE_WITHOUT_APPROVED_FALLBACK",
+      "oracle_scope": [
+        "CONTROLLED_MUTATION_ORACLE",
+        "NOT_INDEPENDENT_SAFETY_ORACLE"
+      ],
+      "reason_code": "UNAPPROVED_UNKNOWN_TRUE_WITNESS",
+      "runtime_monitor": {
+        "accepted": false,
+        "lifecycle": [
+          "ACTIVE"
+        ],
+        "verdict": "REVIEW_REQUIRED",
+        "violations": [
+          "CONFLICT_ZONE_ENTRY_WHILE_OBLIGATION_ACTIVE"
+        ]
+      }
+    },
+    {
+      "base_canonical": {
+        "accepted": true,
+        "lifecycle": [
+          "INACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": []
+      },
+      "bounded_target": {
+        "accepted": false,
+        "lifecycle": [
+          "INACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "FALSE_DEADLOCK_NO_ADMISSIBLE_ACTION"
+        ]
+      },
+      "canonical": {
+        "accepted": false,
+        "lifecycle": [
+          "INACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "FALSE_DEADLOCK_NO_ADMISSIBLE_ACTION"
+        ]
+      },
+      "classification": "overconstraint",
+      "detected": true,
+      "minimal_witness_trace": [
+        {
+          "ego_front_x_m": 1.0,
+          "ego_speed_mps": 1.0,
+          "epistemic_kind": "OBSERVED",
+          "hazard": "FALSE",
+          "safe_progress_available": true,
+          "t": 0.0
+        }
+      ],
+      "mutated_field_or_edge": "force_deadlock",
+      "mutation_id": "FALSE_DEADLOCK",
+      "oracle_scope": [
+        "CONTROLLED_MUTATION_ORACLE",
+        "NOT_INDEPENDENT_SAFETY_ORACLE"
+      ],
+      "reason_code": "FALSE_DEADLOCK_WITNESS",
+      "runtime_monitor": {
+        "accepted": false,
+        "lifecycle": [
+          "INACTIVE"
+        ],
+        "verdict": "VALIDATED",
+        "violations": [
+          "FALSE_DEADLOCK_NO_ADMISSIBLE_ACTION"
+        ]
+      }
+    }
+  ],
+  "underconstraint": {
+    "detected": 5,
+    "recall": 1.0,
+    "total": 5
+  }
+}

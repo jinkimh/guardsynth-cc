@@ -1,0 +1,29 @@
+{
+  "criteria_passed": 4,
+  "criteria_total": 5,
+  "epochs": 2,
+  "experiment_id": "SMALL-VLM-GUARD-LEARNING-V0-SUMMARY",
+  "guard": {
+    "post_paraphrase_accuracy": 0.7395833333333334,
+    "post_test_accuracy": 0.9895833333333334,
+    "post_test_counterfactual_scene_rate": 0.9583333333333334,
+    "post_test_stop_prediction_rate": 0.4895833333333333,
+    "pre_validation_accuracy": 0.4791666666666667
+  },
+  "guard_minus_shuffled_test_accuracy": -0.005208333333333259,
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "predeclared_criteria": {
+    "accuracy_gain_vs_shuffled_at_least_0p15": false,
+    "counterfactual_scene_rate_at_least_0p60": true,
+    "held_out_accuracy_at_least_0p80": true,
+    "no_always_stop_collapse": true,
+    "paraphrase_accuracy_at_least_0p70": true
+  },
+  "shuffled_guard": {
+    "post_paraphrase_accuracy": 0.890625,
+    "post_test_accuracy": 0.9947916666666666,
+    "post_test_counterfactual_scene_rate": 0.9791666666666666,
+    "pre_validation_accuracy": 0.4791666666666667
+  },
+  "train_examples_per_condition": 576
+}

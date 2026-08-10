@@ -1,0 +1,93 @@
+[
+  {
+    "association_status": "AUTO_CONFIRMED",
+    "contract_readiness": "SOURCE_AUTHORED_PENDING_ASSURANCE_LOOKUP",
+    "grounded_scene_created": true,
+    "human_correction": false,
+    "reason_codes": [
+      "UNIQUE_CALIBRATED_ASSOCIATION"
+    ],
+    "review_interactions": 0,
+    "scenario_id": "AUTO_UNIQUE_CALIBRATED"
+  },
+  {
+    "association_status": "REVIEW_REQUIRED",
+    "contract_readiness": "NOT_AUTHORED",
+    "grounded_scene_created": false,
+    "human_correction": false,
+    "reason_codes": [
+      "HUMAN_CONFIRMATION_REQUIRED"
+    ],
+    "review_interactions": 1,
+    "scenario_id": "REVIEW_POLICY_DISABLED"
+  },
+  {
+    "association_status": "REVIEW_REQUIRED",
+    "contract_readiness": "NOT_AUTHORED",
+    "grounded_scene_created": false,
+    "human_correction": false,
+    "reason_codes": [
+      "HUMAN_CONFIRMATION_REQUIRED",
+      "LOW_CONFIDENCE_ASSOCIATION"
+    ],
+    "review_interactions": 1,
+    "scenario_id": "REVIEW_LOW_CONFIDENCE"
+  },
+  {
+    "association_status": "REVIEW_REQUIRED",
+    "contract_readiness": "NOT_AUTHORED",
+    "grounded_scene_created": false,
+    "human_correction": false,
+    "reason_codes": [
+      "HUMAN_CONFIRMATION_REQUIRED",
+      "NON_UNIQUE_ASSOCIATION_CANDIDATES"
+    ],
+    "review_interactions": 1,
+    "scenario_id": "REVIEW_MULTIPLE_CANDIDATES"
+  },
+  {
+    "association_status": "UNSUPPORTED",
+    "contract_readiness": "NOT_AUTHORED",
+    "grounded_scene_created": false,
+    "human_correction": false,
+    "reason_codes": [
+      "UNVERIFIED_COORDINATE_TRANSFORM"
+    ],
+    "review_interactions": 0,
+    "scenario_id": "UNSUPPORTED_UNVERIFIED_TRANSFORM"
+  },
+  {
+    "association_status": "CONFLICT",
+    "contract_readiness": "NOT_AUTHORED",
+    "grounded_scene_created": false,
+    "human_correction": false,
+    "reason_codes": [
+      "CONFLICTING_HAZARD_EVIDENCE"
+    ],
+    "review_interactions": 0,
+    "scenario_id": "CONFLICT_HAZARD"
+  },
+  {
+    "association_status": "REVIEW_REQUIRED",
+    "contract_readiness": "NOT_AUTHORED",
+    "grounded_scene_created": false,
+    "human_correction": false,
+    "reason_codes": [
+      "HUMAN_CONFIRMATION_REQUIRED",
+      "COC_CLAIM_NOT_OBSERVED_FACT"
+    ],
+    "review_interactions": 1,
+    "scenario_id": "REVIEW_CLAIMED_HAZARD"
+  },
+  {
+    "association_status": "HUMAN_CONFIRMED",
+    "contract_readiness": "SOURCE_AUTHORED_PENDING_ASSURANCE_LOOKUP",
+    "grounded_scene_created": true,
+    "human_correction": false,
+    "reason_codes": [
+      "MINIMAL_HUMAN_CONFIRMATION"
+    ],
+    "review_interactions": 0,
+    "scenario_id": "HUMAN_ONE_CLICK_CONFIRMATION"
+  }
+]

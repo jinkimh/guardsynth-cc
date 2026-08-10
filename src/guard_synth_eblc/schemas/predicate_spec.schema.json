@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:eblc:p0b:predicate-spec:v0.1",
+  "title": "Public EBLC v0 PredicateSpec",
+  "type": "object",
+  "required": ["predicate_id", "argument_types", "measurement_or_derivation_fn", "allowed_sources", "coordinate_frame", "update_rate_hz", "maximum_latency_s", "maximum_age_s", "uncertainty_model", "monitorability", "calibration_id", "failure_value"],
+  "additionalProperties": false,
+  "properties": {
+    "predicate_id": {"type": "string", "minLength": 1},
+    "argument_types": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "measurement_or_derivation_fn": {"type": "string", "minLength": 1},
+    "allowed_sources": {"type": "array", "minItems": 1, "items": {"type": "string", "enum": ["OBSERVED", "PREDICTED", "DERIVED"]}},
+    "coordinate_frame": {"type": "string", "minLength": 1},
+    "update_rate_hz": {"type": "number", "minimum": 0},
+    "maximum_latency_s": {"type": "number", "minimum": 0},
+    "maximum_age_s": {"type": "number", "minimum": 0},
+    "uncertainty_model": {"type": "string", "minLength": 1},
+    "monitorability": {"type": "string", "enum": ["NOW", "BOUNDED_FUTURE", "UNMONITORABLE"]},
+    "calibration_id": {"type": "string", "minLength": 1},
+    "failure_value": {"type": "string", "enum": ["UNKNOWN"]}
+  }
+}

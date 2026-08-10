@@ -1,0 +1,65 @@
+{
+  "agreement": 1.0,
+  "engine": "PROJECT_LOCAL_Z3_EXECUTABLE",
+  "file_count": 8,
+  "matches": 8,
+  "records": [
+    {
+      "actual": "SAT",
+      "exit_code": 0,
+      "expected": "SAT",
+      "file": "MODEL.smt2",
+      "matches": true
+    },
+    {
+      "actual": "UNSAT",
+      "exit_code": 0,
+      "expected": "UNSAT",
+      "file": "QUERY_lifecycle_transition_inconsistency.smt2",
+      "matches": true
+    },
+    {
+      "actual": "SAT",
+      "exit_code": 0,
+      "expected": "SAT",
+      "file": "QUERY_active_stop_position_violation.smt2",
+      "matches": true
+    },
+    {
+      "actual": "UNSAT",
+      "exit_code": 0,
+      "expected": "UNSAT",
+      "file": "QUERY_missing_reactivation.smt2",
+      "matches": true
+    },
+    {
+      "actual": "UNSAT",
+      "exit_code": 0,
+      "expected": "UNSAT",
+      "file": "QUERY_safe_progress_false_deadlock.smt2",
+      "matches": true
+    },
+    {
+      "actual": "SAT",
+      "exit_code": 0,
+      "expected": "SAT",
+      "file": "QUERY_dynamic_stopping_bound_violation.smt2",
+      "matches": true
+    },
+    {
+      "actual": "SAT",
+      "exit_code": 0,
+      "expected": "SAT",
+      "file": "QUERY_clear_counter_always_nonnegative.smt2",
+      "matches": true
+    },
+    {
+      "actual": "SAT",
+      "exit_code": 0,
+      "expected": "SAT",
+      "file": "QUERY_inactive_until_activation.smt2",
+      "matches": true
+    }
+  ],
+  "version": "5.0.0"
+}

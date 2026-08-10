@@ -1,0 +1,67 @@
+{
+  "claim_scope": "SYNTHETIC_TYPED_DERIVATION_NOT_VEHICLE_SAFETY",
+  "derivation_id": "p0b_stop_position_derivation",
+  "derivation_version": "eblc-derivation-v0.1",
+  "horizon": 9,
+  "nodes": [
+    {
+      "inputs": [
+        "symbol:zone_entry_x",
+        "symbol:stop_margin"
+      ],
+      "node_id": "stop_position",
+      "operation": "SUB",
+      "source_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "evidence_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "frame": "ego_path_s",
+      "node_ref": "node:stop_position",
+      "output_id": "stop_position",
+      "replace_clause_ids": [
+        "bind_stop_position"
+      ],
+      "sort": "REAL",
+      "target_declaration": "stop_position",
+      "time_varying": false,
+      "unit": "m"
+    }
+  ],
+  "source_refs": [
+    "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+  ],
+  "symbols": [
+    {
+      "core_name": null,
+      "evidence_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "frame": "ego_path_s",
+      "kind": "SOURCED_VALUE",
+      "sort": "REAL",
+      "symbol_id": "zone_entry_x",
+      "time_varying": false,
+      "unit": "m",
+      "value": 0.0
+    },
+    {
+      "core_name": null,
+      "evidence_refs": [
+        "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0"
+      ],
+      "frame": "ego_path_s",
+      "kind": "SOURCED_VALUE",
+      "sort": "REAL",
+      "symbol_id": "stop_margin",
+      "time_varying": false,
+      "unit": "m",
+      "value": 1.5
+    }
+  ]
+}

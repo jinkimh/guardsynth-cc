@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+  <declaration>// scene-0019; relative to scene time 9.9 s.
+const int RESPONSE_DEADLINE = 3000;
+const bool RESET_ON_REPEAT = false;
+clock episode;
+broadcast chan command, suppressed_command, response;
+bool deadline_miss = false;
+bool target_response_observed = false;
+bool orphan_response = false;
+bool provenance_valid = true;
+bool suppressed_repeat_seen = false;
+int[0, 10] accepted_command_count = 0;
+int[0, 10] response_count = 0;</declaration>
+  <template>
+    <name>ObservedTrace</name>
+    <declaration />
+    <location id="s0" x="0" y="0">
+      <name x="-20" y="-30">Before1</name>
+      <label kind="invariant" x="-20" y="20">episode &lt;= 0</label>
+    </location>
+    <location id="s1" x="130" y="0">
+      <name x="110" y="-30">Before2</name>
+      <label kind="invariant" x="110" y="20">episode &lt;= 0</label>
+    </location>
+    <location id="s2" x="260" y="0">
+      <name x="240" y="-30">Before3</name>
+      <label kind="invariant" x="240" y="20">episode &lt;= 700</label>
+    </location>
+    <location id="s3" x="390" y="0">
+      <name x="370" y="-30">Done</name>
+    </location>
+    <init ref="s0" />
+    <transition>
+      <source ref="s0" />
+      <target ref="s1" />
+      <label kind="guard" x="0" y="0">episode == 0</label>
+      <label kind="synchronisation" x="0" y="20">command!</label>
+    </transition>
+    <transition>
+      <source ref="s1" />
+      <target ref="s2" />
+      <label kind="guard" x="0" y="0">episode == 0</label>
+      <label kind="synchronisation" x="0" y="20">response!</label>
+    </transition>
+    <transition>
+      <source ref="s2" />
+      <target ref="s3" />
+      <label kind="guard" x="0" y="0">episode == 700</label>
+      <label kind="synchronisation" x="0" y="20">command!</label>
+    </transition>
+    <transition>
+      <source ref="s3" />
+      <target ref="s3" />
+    </transition>
+  </template>
+  <template>
+    <name>ObligationMonitor</name>
+    <declaration>clock obligation;</declaration>
+    <location id="idle" x="0" y="220">
+      <name x="-20" y="190">Idle</name>
+    </location>
+    <location id="pending" x="220" y="220">
+      <name x="200" y="190">Pending</name>
+      <label kind="invariant" x="200" y="240">obligation &lt;= RESPONSE_DEADLINE</label>
+    </location>
+    <location id="late" x="440" y="220">
+      <name x="420" y="190">Late</name>
+    </location>
+    <init ref="idle" />
+    <transition>
+      <source ref="idle" />
+      <target ref="pending" />
+      <label kind="synchronisation" x="0" y="0">command?</label>
+      <label kind="assignment" x="0" y="20">obligation = 0, accepted_command_count++</label>
+    </transition>
+    <transition>
+      <source ref="pending" />
+      <target ref="pending" />
+      <label kind="synchronisation" x="0" y="0">command?</label>
+      <label kind="assignment" x="0" y="20">accepted_command_count++</label>
+    </transition>
+    <transition>
+      <source ref="late" />
+      <target ref="late" />
+      <label kind="synchronisation" x="0" y="0">command?</label>
+      <label kind="assignment" x="0" y="20">accepted_command_count++</label>
+    </transition>
+    <transition>
+      <source ref="idle" />
+      <target ref="idle" />
+      <label kind="synchronisation" x="0" y="0">suppressed_command?</label>
+      <label kind="assignment" x="0" y="20">suppressed_repeat_seen = true</label>
+    </transition>
+    <transition>
+      <source ref="pending" />
+      <target ref="pending" />
+      <label kind="synchronisation" x="0" y="0">suppressed_command?</label>
+      <label kind="assignment" x="0" y="20">suppressed_repeat_seen = true</label>
+    </transition>
+    <transition>
+      <source ref="late" />
+      <target ref="late" />
+      <label kind="synchronisation" x="0" y="0">suppressed_command?</label>
+      <label kind="assignment" x="0" y="20">suppressed_repeat_seen = true</label>
+    </transition>
+    <transition>
+      <source ref="pending" />
+      <target ref="late" />
+      <label kind="guard" x="0" y="0">obligation == RESPONSE_DEADLINE</label>
+      <label kind="assignment" x="0" y="20">deadline_miss = true</label>
+    </transition>
+    <transition>
+      <source ref="pending" />
+      <target ref="idle" />
+      <label kind="synchronisation" x="0" y="0">response?</label>
+      <label kind="assignment" x="0" y="20">response_count++</label>
+    </transition>
+    <transition>
+      <source ref="late" />
+      <target ref="idle" />
+      <label kind="synchronisation" x="0" y="0">response?</label>
+      <label kind="assignment" x="0" y="20">response_count++</label>
+    </transition>
+    <transition>
+      <source ref="idle" />
+      <target ref="idle" />
+      <label kind="synchronisation" x="0" y="0">response?</label>
+      <label kind="assignment" x="0" y="20">orphan_response = true</label>
+    </transition>
+  </template>
+  <system>Trace = ObservedTrace();
+Monitor = ObligationMonitor();
+system Trace, Monitor;</system>
+</nta>

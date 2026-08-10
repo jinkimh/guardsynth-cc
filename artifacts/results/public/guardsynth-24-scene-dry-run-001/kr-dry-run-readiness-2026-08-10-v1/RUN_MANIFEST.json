@@ -1,0 +1,41 @@
+{
+  "catalog_sha256": "a5c0116394be11e0a22230652822bdf0cb221267c34e730d3b96c987140dfbb2",
+  "claim_scope": "M13_SLOT_AND_INPUT_READINESS_NOT_REAL_SCENE_EXECUTION_ASSOCIATION_ACCURACY_OR_VEHICLE_SAFETY",
+  "experiment_id": "GUARDSYNTH-24-SCENE-DRY-RUN-001",
+  "input_class": "PUBLIC_AGGREGATES_OF_LICENSE_RESTRICTED_DERIVED_INPUT",
+  "legacy_public_aggregate_sha256": "aae83b10b4ba0511510ea5ed17322582f335b10935ab8dc31d20795b718c0f4f",
+  "raw_identifiers_included": false,
+  "run_date": "2026-08-10",
+  "run_id": "kr-dry-run-readiness-2026-08-10-v1",
+  "synthetic_scene_fill_performed": false,
+  "tests": {
+    "focused": {
+      "command": "/usr/bin/python3 -m unittest tests.guard_synth_eblc.test_dry_run_readiness tests.guard_synth_eblc.test_source_catalog -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 15,
+      "test_count": 15
+    },
+    "full": {
+      "command": "/usr/bin/python3 -m unittest discover -s tests/guard_synth_eblc -p test_*.py -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 202,
+      "test_count": 202
+    },
+    "p0a": {
+      "command": "/usr/bin/python3 -m unittest experiments.eblc_pilot.test_pilot -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 7,
+      "test_count": 7
+    },
+    "structure": {
+      "command": "/usr/bin/python3 -m unittest tests.structure.test_project_layout -v",
+      "exit_code": 0,
+      "passed": true,
+      "passed_count": 10,
+      "test_count": 10
+    }
+  }
+}

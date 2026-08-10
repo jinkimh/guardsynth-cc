@@ -1,0 +1,121 @@
+{
+  "scope": "paired episodes within the fixed OOD bank",
+  "comparisons": [
+    {
+      "left": "A_STATE",
+      "right": "C_CONTRACT",
+      "unsafe": {
+        "crosswalk": {
+          "same_good": 115,
+          "fixed": 185
+        },
+        "stop_intersection": {
+          "harmed": 34,
+          "same_good": 213,
+          "same_bad": 36,
+          "fixed": 17
+        },
+        "lead_brake": {
+          "same_good": 300
+        },
+        "ALL": {
+          "same_good": 628,
+          "fixed": 202,
+          "harmed": 34,
+          "same_bad": 36
+        }
+      },
+      "safe_gap_violation": {
+        "crosswalk": {
+          "same_good": 300
+        },
+        "stop_intersection": {
+          "same_good": 300
+        },
+        "lead_brake": {
+          "same_good": 245,
+          "fixed": 55
+        },
+        "ALL": {
+          "same_good": 845,
+          "fixed": 55
+        }
+      }
+    },
+    {
+      "left": "B_COC",
+      "right": "C_CONTRACT",
+      "unsafe": {
+        "crosswalk": {
+          "fixed": 279,
+          "same_good": 21
+        },
+        "stop_intersection": {
+          "same_bad": 32,
+          "same_good": 193,
+          "harmed": 38,
+          "fixed": 37
+        },
+        "lead_brake": {
+          "same_good": 300
+        },
+        "ALL": {
+          "fixed": 316,
+          "same_good": 514,
+          "same_bad": 32,
+          "harmed": 38
+        }
+      },
+      "safe_gap_violation": {
+        "crosswalk": {
+          "same_good": 300
+        },
+        "stop_intersection": {
+          "same_good": 300
+        },
+        "lead_brake": {
+          "same_good": 195,
+          "fixed": 105
+        },
+        "ALL": {
+          "same_good": 795,
+          "fixed": 105
+        }
+      }
+    },
+    {
+      "left": "C_CONTRACT",
+      "right": "D_CONTRACT_SHIELD",
+      "unsafe": {
+        "crosswalk": {
+          "same_good": 300
+        },
+        "stop_intersection": {
+          "fixed": 70,
+          "same_good": 230
+        },
+        "lead_brake": {
+          "same_good": 300
+        },
+        "ALL": {
+          "same_good": 830,
+          "fixed": 70
+        }
+      },
+      "safe_gap_violation": {
+        "crosswalk": {
+          "same_good": 300
+        },
+        "stop_intersection": {
+          "same_good": 300
+        },
+        "lead_brake": {
+          "same_good": 300
+        },
+        "ALL": {
+          "same_good": 900
+        }
+      }
+    }
+  ]
+}

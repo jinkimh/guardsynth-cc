@@ -1,0 +1,395 @@
+{
+  "checker_type": "STATEFUL_EPISODE_TRACE_CHECKER",
+  "observed_control_proxy": "EGOMOTION_SPEED_NOT_RAW_ACTUATOR_COMMAND",
+  "source_class": "PUBLIC_COMPATIBILITY_DATASET_NOT_OFFICIAL_NVIDIA_COC",
+  "clip_id": "scene-0001",
+  "episode": {
+    "event_count": 6,
+    "history_start_us": 500000,
+    "last_event_t0_us": 10400000,
+    "future_end_us": 16400000,
+    "events": [
+      {
+        "t0_us": 2500000,
+        "valid_until_us": 3500000,
+        "coc": "Decelerate to maintain a safe distance from the lead truck ahead while navigating through the construction zone.",
+        "quality_pass": true,
+        "longitudinal": "DECELERATE",
+        "lateral": null,
+        "hazards": [
+          "TRUCK",
+          "CONSTRUCTION_ZONE"
+        ],
+        "speed_at_t0_mps": 4.8143
+      },
+      {
+        "t0_us": 3500000,
+        "valid_until_us": 4800000,
+        "coc": "Decelerate to maintain a safe distance from the stopped truck ahead while navigating through the construction zone.",
+        "quality_pass": true,
+        "longitudinal": "DECELERATE",
+        "lateral": null,
+        "hazards": [
+          "TRUCK",
+          "CONSTRUCTION_ZONE"
+        ],
+        "speed_at_t0_mps": 5.4575
+      },
+      {
+        "t0_us": 4800000,
+        "valid_until_us": 6300000,
+        "coc": "Decelerate to maintain a safe distance from the stopped truck ahead while navigating through the construction zone.",
+        "quality_pass": true,
+        "longitudinal": "DECELERATE",
+        "lateral": null,
+        "hazards": [
+          "TRUCK",
+          "CONSTRUCTION_ZONE"
+        ],
+        "speed_at_t0_mps": 5.8646
+      },
+      {
+        "t0_us": 6300000,
+        "valid_until_us": 9300000,
+        "coc": "Nudge left to create clearance from the stopped truck and construction zone on the right while adapting speed to maintain a safe distance.",
+        "quality_pass": true,
+        "longitudinal": "ADAPT_SPEED",
+        "lateral": "NUDGE_LEFT",
+        "hazards": [
+          "TRUCK",
+          "CONSTRUCTION_ZONE"
+        ],
+        "speed_at_t0_mps": 5.3131
+      },
+      {
+        "t0_us": 9300000,
+        "valid_until_us": 10400000,
+        "coc": "Nudge left to create clearance from the construction zone and workers on the right while maintaining a safe distance from the lead vehicle.",
+        "quality_pass": false,
+        "longitudinal": "MAINTAIN_SAFE_DISTANCE",
+        "lateral": "NUDGE_LEFT",
+        "hazards": [
+          "LEAD_VEHICLE",
+          "CONSTRUCTION_ZONE",
+          "WORKER"
+        ],
+        "speed_at_t0_mps": 4.0102
+      },
+      {
+        "t0_us": 10400000,
+        "valid_until_us": 16400000,
+        "coc": "Nudge left to pass the stopped truck and construction equipment on the right while maintaining a safe distance from the lead vehicle ahead.",
+        "quality_pass": false,
+        "longitudinal": "MAINTAIN_SAFE_DISTANCE",
+        "lateral": "NUDGE_LEFT",
+        "hazards": [
+          "TRUCK",
+          "LEAD_VEHICLE",
+          "CONSTRUCTION_ZONE"
+        ],
+        "speed_at_t0_mps": 4.3725
+      }
+    ]
+  },
+  "obligations": {
+    "SAFE_DISTANCE_TRUCK": {
+      "triggered_at_us": 2500000,
+      "repeated_without_clock_reset_at_us": [
+        3500000,
+        4800000
+      ],
+      "response_definition": {
+        "type": "SUSTAINED_SPEED_DECREASE",
+        "window_s": 0.5,
+        "minimum_drop_mps": 0.1,
+        "minimum_negative_derivative_fraction": 0.7
+      },
+      "response_onset_us": 4659711,
+      "response_latency_s": 2.1597,
+      "response_measurement_quality": "HEURISTIC_SPEED_TRACE_NOT_ACTIVE_BRAKE_DETECTION",
+      "threshold_sensitivity": {
+        "profile_count": 36,
+        "detected_profile_count": 27,
+        "no_response_profile_count": 9,
+        "minimum_detected_latency_s": 1.779,
+        "maximum_detected_latency_s": 4.0197,
+        "profiles": [
+          {
+            "window_s": 0.25,
+            "minimum_drop_mps": 0.05,
+            "minimum_negative_fraction": 0.5,
+            "onset_us": 4779240,
+            "latency_s": 2.2792
+          },
+          {
+            "window_s": 0.25,
+            "minimum_drop_mps": 0.05,
+            "minimum_negative_fraction": 0.7,
+            "onset_us": 4779240,
+            "latency_s": 2.2792
+          },
+          {
+            "window_s": 0.25,
+            "minimum_drop_mps": 0.05,
+            "minimum_negative_fraction": 0.9,
+            "onset_us": 4779240,
+            "latency_s": 2.2792
+          },
+          {
+            "window_s": 0.25,
+            "minimum_drop_mps": 0.1,
+            "minimum_negative_fraction": 0.5,
+            "onset_us": 5659303,
+            "latency_s": 3.1593
+          },
+          {
+            "window_s": 0.25,
+            "minimum_drop_mps": 0.1,
+            "minimum_negative_fraction": 0.7,
+            "onset_us": 5659303,
+            "latency_s": 3.1593
+          },
+          {
+            "window_s": 0.25,
+            "minimum_drop_mps": 0.1,
+            "minimum_negative_fraction": 0.9,
+            "onset_us": 5659303,
+            "latency_s": 3.1593
+          },
+          {
+            "window_s": 0.25,
+            "minimum_drop_mps": 0.2,
+            "minimum_negative_fraction": 0.5,
+            "onset_us": null,
+            "latency_s": null
+          },
+          {
+            "window_s": 0.25,
+            "minimum_drop_mps": 0.2,
+            "minimum_negative_fraction": 0.7,
+            "onset_us": null,
+            "latency_s": null
+          },
+          {
+            "window_s": 0.25,
+            "minimum_drop_mps": 0.2,
+            "minimum_negative_fraction": 0.9,
+            "onset_us": null,
+            "latency_s": null
+          },
+          {
+            "window_s": 0.25,
+            "minimum_drop_mps": 0.5,
+            "minimum_negative_fraction": 0.5,
+            "onset_us": null,
+            "latency_s": null
+          },
+          {
+            "window_s": 0.25,
+            "minimum_drop_mps": 0.5,
+            "minimum_negative_fraction": 0.7,
+            "onset_us": null,
+            "latency_s": null
+          },
+          {
+            "window_s": 0.25,
+            "minimum_drop_mps": 0.5,
+            "minimum_negative_fraction": 0.9,
+            "onset_us": null,
+            "latency_s": null
+          },
+          {
+            "window_s": 0.5,
+            "minimum_drop_mps": 0.05,
+            "minimum_negative_fraction": 0.5,
+            "onset_us": 4499614,
+            "latency_s": 1.9996
+          },
+          {
+            "window_s": 0.5,
+            "minimum_drop_mps": 0.05,
+            "minimum_negative_fraction": 0.7,
+            "onset_us": 4499614,
+            "latency_s": 1.9996
+          },
+          {
+            "window_s": 0.5,
+            "minimum_drop_mps": 0.05,
+            "minimum_negative_fraction": 0.9,
+            "onset_us": 4519653,
+            "latency_s": 2.0197
+          },
+          {
+            "window_s": 0.5,
+            "minimum_drop_mps": 0.1,
+            "minimum_negative_fraction": 0.5,
+            "onset_us": 4659711,
+            "latency_s": 2.1597
+          },
+          {
+            "window_s": 0.5,
+            "minimum_drop_mps": 0.1,
+            "minimum_negative_fraction": 0.7,
+            "onset_us": 4659711,
+            "latency_s": 2.1597
+          },
+          {
+            "window_s": 0.5,
+            "minimum_drop_mps": 0.1,
+            "minimum_negative_fraction": 0.9,
+            "onset_us": 4659711,
+            "latency_s": 2.1597
+          },
+          {
+            "window_s": 0.5,
+            "minimum_drop_mps": 0.2,
+            "minimum_negative_fraction": 0.5,
+            "onset_us": 5479684,
+            "latency_s": 2.9797
+          },
+          {
+            "window_s": 0.5,
+            "minimum_drop_mps": 0.2,
+            "minimum_negative_fraction": 0.7,
+            "onset_us": 5479684,
+            "latency_s": 2.9797
+          },
+          {
+            "window_s": 0.5,
+            "minimum_drop_mps": 0.2,
+            "minimum_negative_fraction": 0.9,
+            "onset_us": 5479684,
+            "latency_s": 2.9797
+          },
+          {
+            "window_s": 0.5,
+            "minimum_drop_mps": 0.5,
+            "minimum_negative_fraction": 0.5,
+            "onset_us": null,
+            "latency_s": null
+          },
+          {
+            "window_s": 0.5,
+            "minimum_drop_mps": 0.5,
+            "minimum_negative_fraction": 0.7,
+            "onset_us": null,
+            "latency_s": null
+          },
+          {
+            "window_s": 0.5,
+            "minimum_drop_mps": 0.5,
+            "minimum_negative_fraction": 0.9,
+            "onset_us": null,
+            "latency_s": null
+          },
+          {
+            "window_s": 1.0,
+            "minimum_drop_mps": 0.05,
+            "minimum_negative_fraction": 0.5,
+            "onset_us": 4278966,
+            "latency_s": 1.779
+          },
+          {
+            "window_s": 1.0,
+            "minimum_drop_mps": 0.05,
+            "minimum_negative_fraction": 0.7,
+            "onset_us": 4278966,
+            "latency_s": 1.779
+          },
+          {
+            "window_s": 1.0,
+            "minimum_drop_mps": 0.05,
+            "minimum_negative_fraction": 0.9,
+            "onset_us": 4459771,
+            "latency_s": 1.9598
+          },
+          {
+            "window_s": 1.0,
+            "minimum_drop_mps": 0.1,
+            "minimum_negative_fraction": 0.5,
+            "onset_us": 4339428,
+            "latency_s": 1.8394
+          },
+          {
+            "window_s": 1.0,
+            "minimum_drop_mps": 0.1,
+            "minimum_negative_fraction": 0.7,
+            "onset_us": 4339428,
+            "latency_s": 1.8394
+          },
+          {
+            "window_s": 1.0,
+            "minimum_drop_mps": 0.1,
+            "minimum_negative_fraction": 0.9,
+            "onset_us": 4459771,
+            "latency_s": 1.9598
+          },
+          {
+            "window_s": 1.0,
+            "minimum_drop_mps": 0.2,
+            "minimum_negative_fraction": 0.5,
+            "onset_us": 4499614,
+            "latency_s": 1.9996
+          },
+          {
+            "window_s": 1.0,
+            "minimum_drop_mps": 0.2,
+            "minimum_negative_fraction": 0.7,
+            "onset_us": 4499614,
+            "latency_s": 1.9996
+          },
+          {
+            "window_s": 1.0,
+            "minimum_drop_mps": 0.2,
+            "minimum_negative_fraction": 0.9,
+            "onset_us": 4499614,
+            "latency_s": 1.9996
+          },
+          {
+            "window_s": 1.0,
+            "minimum_drop_mps": 0.5,
+            "minimum_negative_fraction": 0.5,
+            "onset_us": 6519718,
+            "latency_s": 4.0197
+          },
+          {
+            "window_s": 1.0,
+            "minimum_drop_mps": 0.5,
+            "minimum_negative_fraction": 0.7,
+            "onset_us": 6519718,
+            "latency_s": 4.0197
+          },
+          {
+            "window_s": 1.0,
+            "minimum_drop_mps": 0.5,
+            "minimum_negative_fraction": 0.9,
+            "onset_us": 6519718,
+            "latency_s": 4.0197
+          }
+        ]
+      },
+      "deadline_sensitivity": {
+        "1s": "FAIL",
+        "2s": "FAIL",
+        "3s": "PASS"
+      }
+    }
+  },
+  "verdicts": {
+    "event_timestamps_monotonic": "PASS",
+    "episode_trace_coverage": "PASS",
+    "obligation_clock_preservation": "PASS",
+    "trusted_control_transition_consistency": "PASS",
+    "low_quality_event_policy": "PASS_IGNORED_2_OVERWRITES",
+    "bounded_deceleration_response": {
+      "1s": "FAIL",
+      "2s": "FAIL",
+      "3s": "PASS"
+    },
+    "longitudinal_episode_conformance": "CONTRACT_DEPENDENT",
+    "lateral_episode_conformance": "UNKNOWN_MISSING_LANE_AND_OBSTACLE_REFERENCE",
+    "safe_distance_property": "UNKNOWN_MISSING_OBSTACLE_DISTANCE",
+    "symbolic_model_checking": "NOT_RUN"
+  },
+  "interpretation": "Repeated CoC updates do not restart the truck-related response clock. The observed response latency is checked against explicit candidate deadlines; a deadline must come from a safety or service contract before a final verdict."
+}
