@@ -58,18 +58,23 @@ class ProjectLayoutV2Test(unittest.TestCase):
     def test_guardsynth_generator_is_separate_from_eblc_language_pipelines(self) -> None:
         runner = ROOT / "cli/pipelines/guardsynth/source_aware_generate/run.py"
         label_light_runner = ROOT / "cli/pipelines/guardsynth/label_light_grounding/run.py"
+        review_runner = ROOT / "cli/pipelines/guardsynth/scene_evidence_review/run.py"
+        review_html = ROOT / "cli/pipelines/guardsynth/scene_evidence_review/SCENE_EVIDENCE_REVIEW.html"
         self.assertTrue((ROOT / "src/guard_synth/source_aware_generator.py").is_file())
         self.assertTrue((ROOT / "src/guard_synth/label_light_grounding.py").is_file())
         self.assertTrue(runner.is_file())
         self.assertTrue(label_light_runner.is_file())
+        self.assertTrue(review_runner.is_file())
+        self.assertTrue(review_html.is_file())
         self.assertIn("project_root(__file__)", runner.read_text(encoding="utf-8"))
         self.assertIn("project_root(__file__)", label_light_runner.read_text(encoding="utf-8"))
+        self.assertIn("project_root(__file__)", review_runner.read_text(encoding="utf-8"))
         self.assertFalse((ROOT / "src/guard_synth_eblc/source_aware_generator.py").exists())
 
     def test_maintained_eblc_tests_have_single_owner(self) -> None:
         maintained = sorted((ROOT / "tests/guard_synth_eblc").glob("test_*.py"))
         compatibility = sorted((ROOT / "experiments/eblc_p0b").glob("test_*.py"))
-        self.assertEqual(len(maintained), 21)
+        self.assertEqual(len(maintained), 22)
         self.assertEqual(compatibility, [])
 
     def test_migration_map_is_machine_readable(self) -> None:

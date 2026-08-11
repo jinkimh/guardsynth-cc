@@ -99,6 +99,10 @@ manifest는 준비됐지만 실제 source-complete 입력이 없어 계약 실�
 2. 대한민국 source-bearing catalog 15개
 3. public aggregate 기반 후보/partial/data-gap 재감사
 4. synthetic fill 금지와 실제 실행 0건 명시
+5. 이미지·검토 방법·예제·필수 항목·fail-closed 판정·JSON/CSV export를 갖춘
+   self-contained scene-evidence review kit; 기존 제한 파생 이미지 10개를 별도 단일 HTML에
+   내장하고, 이미지밖에 없는 검토자용 image-only 설문을 분리해 준비
+   (장면 source closure를 의미하지 않음)
 
 ### 재개 조건
 
@@ -119,6 +123,7 @@ manifest는 준비됐지만 실제 source-complete 입력이 없어 계약 실�
 | label-light interface | [label-light report](../../../artifacts/results/public/guardsynth-label-light-grounding-001/label-light-2026-08-10-v3/REPORT_KO.md) | synthetic workflow, not association accuracy |
 | 대한민국 scope/source catalog | [catalog report](../../../artifacts/results/public/guardsynth-source-catalog-001/kr-source-catalog-2026-08-10-v2/REPORT_KO.md) | source traceability, not legal advice/safety |
 | 24-scene readiness | [readiness directory](../../../artifacts/results/public/guardsynth-24-scene-dry-run-001/kr-dry-run-readiness-2026-08-10-v1/) | slot/data-gap audit, real execution 0/24 |
+| scene-evidence review | [review kit](../../../artifacts/results/public/guardsynth-scene-evidence-review-001/scene-evidence-review-2026-08-10-v5/SCENE_EVIDENCE_REVIEW.html) | 이미지-설문 1:1 카드, batch/folder import와 제한 내장 builder; 누락 source 대체 아님 |
 | current backend regression | 같은 label-light run의 187/187와 Z3 agreement | scoped software regression |
 
 ## 7. 매 작업 세션의 운영 규칙

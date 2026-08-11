@@ -1,0 +1,30 @@
+{
+  "auto_triage_precedence": [
+    "CONFLICT",
+    "UNSUPPORTED",
+    "REVIEW_REQUIRED",
+    "SOURCE_COMPLETE"
+  ],
+  "claim_scope": "REVIEW_WORKFLOW_AND_EVIDENCE_TRIAGE_NOT_SOURCE_CREATION_OR_VEHICLE_SAFETY",
+  "experiment_id": "GUARDSYNTH-SCENE-EVIDENCE-REVIEW-001",
+  "image_bytes_exported": false,
+  "inline_synthetic_diagram_count": 3,
+  "network_access_blocked_by_csp": true,
+  "review_example_count": 4,
+  "run_id": "scene-evidence-review-2026-08-10-v3",
+  "self_contained_html": true,
+  "source_complete_upward_override_allowed": false,
+  "status": "EXECUTED",
+  "tests": {
+    "project_layout": {
+      "command": "/usr/bin/python3 -m unittest tests.structure.test_project_layout -v",
+      "exit_code": 0,
+      "passed": true
+    },
+    "review_ui": {
+      "command": "/usr/bin/python3 -m unittest tests.guard_synth_eblc.test_scene_evidence_review_ui -v",
+      "exit_code": 0,
+      "passed": true
+    }
+  }
+}

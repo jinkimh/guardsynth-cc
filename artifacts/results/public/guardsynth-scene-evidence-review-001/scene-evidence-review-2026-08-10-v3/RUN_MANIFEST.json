@@ -1,0 +1,26 @@
+{
+  "claim_scope": "REVIEW_WORKFLOW_AND_EVIDENCE_TRIAGE_NOT_SOURCE_CREATION_OR_VEHICLE_SAFETY",
+  "deterministic": true,
+  "experiment_id": "GUARDSYNTH-SCENE-EVIDENCE-REVIEW-001",
+  "files": {
+    "RESULT.json": "e69e185181136ad374c7c0044d07c893cfca30294909798888c402e5a894cfb5",
+    "REVIEW_METHOD.md": "790e9a2e64ed8909bea90b696a05a4b5d5e3cf8dfe1cbfb6d4d55f6652f09e1d",
+    "REVIEW_OUTPUT_SCHEMA.json": "3110611e6cc44f3583565637bcc617c9b12620c5a1a41346d1610701a18ea5d4",
+    "SCENE_EVIDENCE_REVIEW.html": "866c02401378fe3933747edd67557244b176d6c8b60e6f37a2d49119f5d9dbc9"
+  },
+  "input_class": "SYNTHETIC_PUBLIC_REVIEW_ASSETS",
+  "run_date": "2026-08-10",
+  "run_id": "scene-evidence-review-2026-08-10-v3",
+  "tests": {
+    "project_layout": {
+      "command": "/usr/bin/python3 -m unittest tests.structure.test_project_layout -v",
+      "exit_code": 0,
+      "passed": true
+    },
+    "review_ui": {
+      "command": "/usr/bin/python3 -m unittest tests.guard_synth_eblc.test_scene_evidence_review_ui -v",
+      "exit_code": 0,
+      "passed": true
+    }
+  }
+}

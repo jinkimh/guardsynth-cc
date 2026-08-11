@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data: blob:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>GuardSynth 실제 장면 근거 검토</title>
+  <style>
+    :root{--navy:#102a43;--blue:#176b87;--cyan:#dff3f6;--paper:#f5f7fa;--ink:#17212b;--muted:#607080;--line:#cbd5df;--ok:#12633d;--warn:#9a5b08;--bad:#a12d2d;--violet:#5b4b9a;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;line-height:1.55}
+    header{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:14px;padding:11px 18px;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);box-shadow:0 2px 10px #102a4312}
+    header h1{font-size:18px;margin:0;color:var(--navy)}header .grow{flex:1}header small{color:var(--muted)}
+    button,.button{border:1px solid var(--blue);border-radius:8px;padding:9px 13px;background:var(--blue);color:#fff;font:inherit;font-weight:650;cursor:pointer;text-decoration:none}
+    button.secondary{background:#fff;color:var(--blue)}button.danger{border-color:var(--bad);background:#fff;color:var(--bad)}button:focus,input:focus,select:focus,textarea:focus{outline:3px solid #65c3d955;outline-offset:1px}
+    progress{width:170px;height:14px}main{max-width:1480px;margin:auto;padding:20px 20px 100px}.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:18px;align-items:stretch}
+    .panel,.review-card{background:var(--white);border:1px solid var(--line);border-radius:13px;padding:20px;box-shadow:0 3px 15px #102a430b}.panel h2,.panel h3{color:var(--navy)}
+    .hero h2{font-size:30px;line-height:1.2;margin:4px 0 12px}.eyebrow{color:var(--blue);font-weight:800;letter-spacing:.04em}.lead{font-size:17px;color:#334e68}
+    .status-board{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.metric{padding:14px;border-radius:10px;background:#edf4f7}.metric b{display:block;font-size:25px;color:var(--navy)}
+    .alert{border-left:5px solid var(--warn);background:#fff7e8;padding:12px 15px;border-radius:7px}.alert.bad{border-color:var(--bad);background:#fff0f0}.alert.ok{border-color:var(--ok);background:#eefaf3}
+    nav.toc{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}nav.toc a{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:var(--navy);text-decoration:none;font-weight:650}
+    .diagram-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.diagram{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fbfdff}.diagram h3{font-size:16px;margin:0;padding:12px 14px}.diagram p{margin:0;padding:0 14px 15px;color:var(--muted);font-size:14px}.diagram svg{display:block;width:100%;height:auto;background:#eef7f8}
+    .steps{counter-reset:step;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.step{position:relative;padding:15px 15px 15px 50px;border:1px solid var(--line);border-radius:10px;background:#fff}.step:before{counter-increment:step;content:counter(step);position:absolute;left:13px;top:13px;width:27px;height:27px;display:grid;place-items:center;border-radius:50%;background:var(--navy);color:#fff;font-weight:800}.step b{display:block;color:var(--navy)}
+    .flow{display:flex;align-items:stretch;gap:8px;overflow:auto}.flow .node{min-width:185px;padding:13px;border-radius:9px;border:1px solid var(--line);background:#fff}.flow .arrow{align-self:center;font-size:25px;color:var(--blue)}
+    .examples{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.example{border:1px solid var(--line);border-radius:11px;padding:16px;background:#fff}.badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:12px;font-weight:800}.source{color:var(--ok);background:#e8f7ee}.review{color:var(--warn);background:#fff0cf}.unsupported{color:var(--bad);background:#ffe5e5}.conflict{color:var(--violet);background:#eeeaff}
+    table{width:100%;border-collapse:collapse}th,td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}th{color:var(--navy);background:#f0f5f8}
+    .review-toolbar{display:flex;align-items:end;gap:12px;flex-wrap:wrap}.review-toolbar label{min-width:180px}.review-card{margin:17px 0}.review-card>header{position:static;margin:-20px -20px 18px;padding:13px 18px;border-radius:13px 13px 0 0;background:#edf4f7;box-shadow:none}.review-card h3{margin:0}.card-id{font-family:ui-monospace,monospace;color:var(--blue)}
+    .field-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 16px}.two{grid-template-columns:repeat(2,minmax(0,1fr))}fieldset{min-width:0;border:1px solid var(--line);border-radius:10px;padding:12px;margin:14px 0}legend{font-weight:800;color:var(--navy);padding:0 6px}
+    label.block{display:block;font-size:13px;font-weight:700;color:#334e68}input[type=text],input[type=datetime-local],select,textarea{width:100%;margin-top:4px;border:1px solid #9fb0bf;border-radius:7px;padding:9px;font:inherit;background:#fff}textarea{min-height:72px;resize:vertical}
+    .choices{display:flex;flex-wrap:wrap;gap:8px 14px}.choices label{padding:5px 8px;border-radius:7px;background:#f6f8fa}.hint{font-size:13px;color:var(--muted)}.required{color:var(--bad)}
+    .image-zone{display:grid;grid-template-columns:280px 1fr;gap:14px;align-items:start}.preview{min-height:160px;border:2px dashed #9fb0bf;border-radius:10px;background:#f6f8fa;display:grid;place-items:center;overflow:hidden;color:var(--muted);text-align:center}.preview img{display:block;max-width:100%;max-height:380px}.privacy{font-size:13px;color:var(--ok)}
+    .recommendation{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:13px;border-radius:10px;background:#edf4f7}.recommendation strong{font-size:18px}.reasons{font-family:ui-monospace,monospace;font-size:12px;white-space:pre-wrap;color:#334e68}
+    .completion{font-size:13px;font-weight:750}.footer-note{color:var(--muted);font-size:13px;margin-top:35px}.hidden{display:none!important}
+    @media(max-width:1000px){.hero,.diagram-grid,.steps,.examples{grid-template-columns:1fr}.field-grid,.two{grid-template-columns:1fr 1fr}.image-zone{grid-template-columns:1fr}header{position:static;flex-wrap:wrap}}
+    @media(max-width:650px){main{padding:12px}.field-grid,.two{grid-template-columns:1fr}.flow{flex-direction:column}.flow .arrow{transform:rotate(90deg)}header small{display:none}.hero h2{font-size:25px}}
+    @media print{header,nav.toc,.review-toolbar,.image-input,.card-actions{display:none!important}body{background:#fff}.panel,.review-card{box-shadow:none;break-inside:avoid}}
+  </style>
+</head>
+<body>
+<header>
+  <h1>GuardSynth · 실제 장면 근거 검토</h1>
+  <progress id="progress" max="1" value="0"></progress><span id="progressText">완료 0/1</span>
+  <span id="saveState"></span><span class="grow"></span>
+  <button class="secondary" id="exportJson">JSON 저장</button><button id="exportCsv">CSV 저장</button>
+</header>
+<main>
+  <section class="hero" id="overview">
+    <div class="panel">
+      <div class="eyebrow">M13 REVIEW KIT · v0.1</div>
+      <h2>이미지를 보는 것과<br>근거를 확인하는 것은 다릅니다.</h2>
+      <p class="lead">장면 속 대상, 충돌 구역, 좌표 변환, 적용 규칙과 차량 근거를 차례로 확인해
+      실제 EBLC 실행 가능 여부를 판정합니다.</p>
+      <div class="alert bad"><b>중요:</b> 검토자의 선택은 association review evidence가 될 수 있지만,
+      누락된 geometry·transform·법규 source·차량 assurance를 대신하지 않습니다.</div>
+    </div>
+    <aside class="panel">
+      <h3>현재 M13 입력 상태</h3>
+      <div class="status-board">
+        <div class="metric"><b>24</b>계획 slot</div><div class="metric"><b>5</b>실제 후보</div>
+        <div class="metric"><b>4</b>partial adapter</div><div class="metric"><b>0</b>source-complete</div>
+      </div>
+      <p class="hint">이 UI의 목적은 partial 후보가 정확히 어디에서 막히는지 기록하는 것입니다.</p>
+    </aside>
+  </section>
+
+  <nav class="toc" aria-label="페이지 목차">
+    <a href="#method">검토 방법</a><a href="#diagrams">이미지 도식</a><a href="#examples">검토 예제</a>
+    <a href="#checklist">필수 항목</a><a href="#review">실제 검토</a><a href="#decision">판정 규칙</a>
+  </nav>
+
+  <section class="panel" id="method">
+    <h2>1. 검토 방법</h2>
+    <div class="steps">
+      <div class="step"><b>장면 사실</b>hazard, 대상 track과 timestamp를 확인합니다. CoC는 `CLAIMED` 단서로만 취급합니다.</div>
+      <div class="step"><b>대상–구역 연결</b>대상과 횡단보도·차로·stop boundary가 유일하게 연결되는지 확인합니다.</div>
+      <div class="step"><b>좌표와 시간</b>geometry 단위·frame, transform calibration과 ego state 정렬을 확인합니다.</div>
+      <div class="step"><b>규칙 적용</b>관할·버전·precondition·exception을 공식 source와 대조합니다.</div>
+      <div class="step"><b>차량 근거</b>수치 bound를 실행할 때만 exact vehicle assurance가 있는지 확인합니다.</div>
+      <div class="step"><b>판정·저장</b>자동 권고와 reason code를 검토하고 JSON/CSV를 제한 결과 폴더에 저장합니다.</div>
+    </div>
+  </section>
+
+  <section class="panel" id="diagrams">
+    <h2>2. 무엇을 이미지에서 확인하는가</h2>
+    <div class="diagram-grid">
+      <article class="diagram">
+        <h3>A. target–zone association</h3>
+        <svg viewBox="0 0 420 240" role="img" aria-label="보행자, 횡단보도, ego path의 association 예시">
+          <rect width="420" height="240" fill="#dbe6ea"/><rect x="0" y="55" width="420" height="130" fill="#667784"/>
+          <path d="M20 120H400" stroke="#fff" stroke-width="4" stroke-dasharray="18 14"/><path d="M210 185V55" stroke="#ffdc73" stroke-width="46" stroke-dasharray="8 7" opacity=".9"/>
+          <path d="M58 155 C145 150 205 132 350 116" fill="none" stroke="#32c0cf" stroke-width="7"/><polygon points="350,116 330,105 333,128" fill="#32c0cf"/>
+          <rect x="55" y="130" width="48" height="30" rx="6" fill="#102a43"/><text x="60" y="151" fill="#fff" font-size="13">EGO</text>
+          <circle cx="238" cy="75" r="10" fill="#c53030"/><path d="M238 85v25m0-15l-13 13m13-13l14 12m-14 3l-12 18m12-18l13 18" stroke="#c53030" stroke-width="4"/>
+          <rect x="190" y="58" width="92" height="105" fill="none" stroke="#c53030" stroke-width="3"/><text x="286" y="74" fill="#7a1f1f" font-size="13">zone Z4</text>
+          <text x="22" y="213" fill="#102a43" font-size="14">확인: P17 ↔ Z4가 유일한가? ego path와 교차하는가?</text>
+        </svg>
+        <p>박스가 보인다는 것만으로 충분하지 않습니다. track evidence, zone geometry와 path-intersection 근거가 필요합니다.</p>
+      </article>
+      <article class="diagram">
+        <h3>B. coordinate transform</h3>
+        <svg viewBox="0 0 420 240" role="img" aria-label="sensor에서 ego path로 좌표를 변환하는 예시">
+          <rect width="420" height="240" fill="#eef7f8"/>
+          <g font-size="14" text-anchor="middle"><rect x="20" y="75" width="105" height="75" rx="10" fill="#fff" stroke="#176b87" stroke-width="2"/><text x="72" y="105">sensor/rig</text><text x="72" y="128" fill="#607080">pixels, rig XYZ</text>
+          <rect x="158" y="75" width="105" height="75" rx="10" fill="#fff" stroke="#176b87" stroke-width="2"/><text x="210" y="105">ego frame</text><text x="210" y="128" fill="#607080">vehicle XYZ</text>
+          <rect x="295" y="75" width="105" height="75" rx="10" fill="#fff" stroke="#176b87" stroke-width="2"/><text x="347" y="105">ego path</text><text x="347" y="128" fill="#607080">s coordinate</text></g>
+          <path d="M126 112h29m108 0h29" stroke="#102a43" stroke-width="3"/><polygon points="154,112 143,106 143,118" fill="#102a43"/><polygon points="292,112 281,106 281,118" fill="#102a43"/>
+          <text x="142" y="63" text-anchor="middle" fill="#a12d2d" font-size="12">calibration ref</text><text x="280" y="63" text-anchor="middle" fill="#a12d2d" font-size="12">pose/time ref</text>
+          <text x="210" y="200" text-anchor="middle" fill="#102a43" font-size="14">한 단계라도 미검증이면 stop distance는 UNSUPPORTED</text>
+        </svg>
+        <p>행렬이 존재하는지만 보지 말고 rig ID, calibration version, 단위와 timestamp가 해당 장면에 맞는지 확인합니다.</p>
+      </article>
+      <article class="diagram">
+        <h3>C. evidence-bound pipeline</h3>
+        <svg viewBox="0 0 420 240" role="img" aria-label="장면과 규칙과 차량 근거가 EBLC로 결합되는 예시">
+          <rect width="420" height="240" fill="#eef7f8"/><g font-size="13" text-anchor="middle">
+          <rect x="18" y="20" width="112" height="42" rx="8" fill="#fff" stroke="#176b87"/><text x="74" y="46">scene facts</text>
+          <rect x="154" y="20" width="112" height="42" rx="8" fill="#fff" stroke="#176b87"/><text x="210" y="46">official rule</text>
+          <rect x="290" y="20" width="112" height="42" rx="8" fill="#fff" stroke="#176b87"/><text x="346" y="46">assurance*</text>
+          <path d="M74 64v40m136-40v40m136-40v40" stroke="#176b87" stroke-width="3"/>
+          <rect x="90" y="105" width="240" height="48" rx="9" fill="#dff3f6" stroke="#176b87" stroke-width="2"/><text x="210" y="134">source closure + applicability</text>
+          <path d="M210 154v27" stroke="#176b87" stroke-width="3"/>
+          <rect x="130" y="182" width="160" height="40" rx="9" fill="#102a43"/><text x="210" y="207" fill="#fff">EBLC or abstention</text></g>
+          <text x="302" y="88" fill="#607080" font-size="11">* numeric 실행 시</text>
+        </svg>
+        <p>CoC는 후보 검색에 도움을 주지만 이 세 근거 중 어느 것도 대신하지 않습니다.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel" id="examples">
+    <h2>3. 검토 예제</h2>
+    <div class="examples">
+      <article class="example"><span class="badge source">SOURCE_COMPLETE</span><h3>적색 신호 · symbolic stop</h3><p>신호–ego lane association, fresh red state, stop line geometry, transform와 시행규칙 source가 모두 있다. 고정 margin이나 동적 정지거리 수치를 실행하지 않으므로 vehicle assurance는 `NOT_REQUIRED_SYMBOLIC_ONLY`다.</p><b>핵심:</b> assurance가 없다는 이유만으로 모든 비수치 계약을 막지 않는다.</article>
+      <article class="example"><span class="badge review">REVIEW_REQUIRED</span><h3>보행자 한 명 · zone 두 개</h3><p>track은 있지만 두 횡단보도 후보가 ego path와 교차한다. 검토자가 실제 target–zone pair를 선택하고 association review evidence를 남겨야 한다.</p><b>핵심:</b> confidence 최고값만으로 자동 선택하지 않는다.</article>
+      <article class="example"><span class="badge unsupported">UNSUPPORTED</span><h3>geometry는 있으나 transform 미검증</h3><p>camera/rig 좌표의 횡단보도 polygon은 있지만 ego-path 변환 calibration과 pose 정렬이 없다.</p><b>핵심:</b> 검토자가 화면을 보고 거리를 추정하지 않는다.</article>
+      <article class="example"><span class="badge unsupported">UNSUPPORTED</span><h3>동적 정지거리 · assurance 없음</h3><p>속도와 stop line은 있으나 exact vehicle의 감속능력·response time·위치 불확실성 source가 없다.</p><b>핵심:</b> 일반적인 차량 수치나 synthetic default를 넣지 않는다.</article>
+    </div>
+  </section>
+
+  <section class="panel" id="checklist">
+    <h2>4. 검토 항목과 증거</h2>
+    <table><thead><tr><th>항목</th><th>검토 질문</th><th>필요 근거</th><th>누락 시</th></tr></thead><tbody>
+      <tr><td>Hazard</td><td>TRUE/FALSE/UNKNOWN/CONFLICT이며 fresh한가?</td><td>observation/prediction ID, timestamp, freshness policy</td><td>REVIEW 또는 CONFLICT</td></tr>
+      <tr><td>Target</td><td>관련 actor track이 유일한가?</td><td>track ID와 tracker evidence</td><td>REVIEW/UNSUPPORTED</td></tr>
+      <tr><td>Zone/lane</td><td>대상과 ego path에 적용되는 구역인가?</td><td>geometry/map version, association evidence</td><td>REVIEW</td></tr>
+      <tr><td>Transform</td><td>geometry와 ego가 동일 frame/time인가?</td><td>calibration, pose source, unit/frame</td><td>UNSUPPORTED</td></tr>
+      <tr><td>Rule</td><td>관할·version·precondition·exception이 맞는가?</td><td>RuleTemplate ID, official source claim refs</td><td>REVIEW/UNSUPPORTED</td></tr>
+      <tr><td>Assurance</td><td>numeric bound를 실제로 실행하는가?</td><td>필요할 때 exact vehicle + assurance source</td><td>UNSUPPORTED</td></tr>
+      <tr><td>Lifecycle</td><td>활성·해제·재활성·fallback을 관측할 수 있는가?</td><td>연속 frame, freshness/release/fallback policy</td><td>REVIEW/UNSUPPORTED</td></tr>
+    </tbody></table>
+  </section>
+
+  <section class="panel" id="decision">
+    <h2>5. 판정 순서</h2>
+    <div class="flow"><div class="node"><span class="badge conflict">1</span><b> 충돌?</b><br>상충 evidence가 있으면 CONFLICT</div><div class="arrow">→</div><div class="node"><span class="badge unsupported">2</span><b> 필수 근거 누락?</b><br>geometry/transform/필요 assurance가 없으면 UNSUPPORTED</div><div class="arrow">→</div><div class="node"><span class="badge review">3</span><b> 모호·미확정?</b><br>association/rule/hazard가 미확정이면 REVIEW_REQUIRED</div><div class="arrow">→</div><div class="node"><span class="badge source">4</span><b> 모두 닫힘</b><br>SOURCE_COMPLETE 후보</div></div>
+  </section>
+
+  <section class="panel" id="review">
+    <h2>6. 실제 장면 검토</h2>
+    <div class="alert"><b>보안:</b> 아래 이미지 선택은 로컬 브라우저에서만 동작합니다. HTML은 네트워크 연결을 차단하며 이미지 bytes를 localStorage, CSV 또는 JSON에 저장하지 않습니다.</div>
+    <div class="review-toolbar">
+      <label class="block">검토자 ID<input type="text" id="reviewerId" placeholder="예: reviewer-A"></label>
+      <button id="addReview">검토 장면 추가</button><button class="secondary" id="recompute">전체 판정 갱신</button>
+      <span class="completion" id="overallSummary"></span>
+    </div>
+    <div id="reviews"></div>
+  </section>
+  <p class="footer-note">GuardSynth Scene Evidence Review UI v0.1 · 공개 합성 도식 · 실제 제한 이미지와 식별자는 export 후 restricted 결과 영역에서만 관리하십시오.</p>
+</main>
+
+<template id="reviewTemplate">
+  <article class="review-card" data-review-id="">
+    <header><h3>장면 검토 <span class="card-id"></span></h3><span class="grow"></span><span class="card-status badge review">미완료</span><button type="button" class="danger remove-card">삭제</button></header>
+    <form>
+      <fieldset><legend>0. 장면 식별과 로컬 이미지</legend>
+        <div class="image-zone"><div><label class="block image-input">이미지/contact sheet 선택<input type="file" name="local_image" accept="image/*"></label><p class="privacy">파일명만 기록하며 이미지 내용은 export하지 않습니다.</p><div class="preview">로컬 이미지를 선택하십시오.<br><small>선택하지 않아도 evidence record 검토는 가능합니다.</small></div></div>
+          <div class="field-grid two"><label class="block">내부 scene ID <span class="required">*</span><input type="text" name="scene_id" placeholder="restricted 내부 ID"></label><label class="block">24-slot ID <span class="required">*</span><input type="text" name="slot_id" placeholder="S1-01"></label>
+          <label class="block">Slice <span class="required">*</span><select name="slice"><option value="">선택</option><option>PEDESTRIAN_CYCLIST_YIELD</option><option>STOP_SIGNALS</option><option>FOLLOWING_CUT_IN</option></select></label><label class="block">Stratum <select name="stratum"><option value="">선택</option><option>HAZARD_VISIBLE</option><option>HAZARD_OCCLUDED_OR_REAPPEARING</option><option>NOMINAL_CLEAR</option><option>RELEASE_OR_REACTIVATION</option></select></label>
+          <label class="block">이미지 파일명<input type="text" name="image_filename" readonly placeholder="자동 기록"></label><label class="block">검토 시작 시각<input type="text" name="review_started_at" readonly></label></div></div>
+      </fieldset>
+
+      <fieldset><legend>A. Hazard fact</legend><div class="field-grid">
+        <label class="block">Truth <span class="required">*</span><select name="hazard_truth"><option value="">선택</option><option>TRUE</option><option>FALSE</option><option>UNKNOWN</option><option>CONFLICT</option></select></label>
+        <label class="block">Epistemic <span class="required">*</span><select name="hazard_epistemic"><option value="">선택</option><option>OBSERVED</option><option>PREDICTED</option><option>DERIVED</option><option>CLAIMED</option></select></label>
+        <label class="block">Freshness <span class="required">*</span><select name="hazard_freshness"><option value="">선택</option><option value="FRESH">fresh</option><option value="STALE">stale</option><option value="UNKNOWN">정책/시간 불명</option></select></label>
+        <label class="block">Hazard evidence ref <span class="required">*</span><input type="text" name="hazard_evidence_ref"></label><label class="block">Timestamp/ego-state ref <span class="required">*</span><input type="text" name="timestamp_evidence_ref"></label><label class="block">CoC ref (선택)<input type="text" name="coc_claim_ref" placeholder="CLAIMED 단서로만 사용"></label>
+      </div></fieldset>
+
+      <fieldset><legend>B. Target–zone/lane association</legend><div class="field-grid">
+        <label class="block">Target ID <span class="required">*</span><input type="text" name="target_id"></label><label class="block">Track evidence ref <span class="required">*</span><input type="text" name="track_evidence_ref"></label><label class="block">Zone/lane ID <span class="required">*</span><input type="text" name="zone_id"></label>
+        <label class="block">Association <span class="required">*</span><select name="association_status"><option value="">선택</option><option value="UNIQUE">유일·확인됨</option><option value="AMBIGUOUS">복수/모호</option><option value="MISSING">없음</option><option value="CONFLICT">상충</option></select></label>
+        <label class="block">Path intersection <span class="required">*</span><select name="path_intersection"><option value="">선택</option><option>TRUE</option><option>FALSE</option><option>UNKNOWN</option><option>CONFLICT</option></select></label><label class="block">Association evidence/ref <span class="required">*</span><input type="text" name="association_evidence_ref" placeholder="model 또는 human review evidence"></label>
+      </div><p class="hint">사람이 후보 pair를 확인한 경우 reviewer ID와 review artifact ID를 evidence ref로 남깁니다.</p></fieldset>
+
+      <fieldset><legend>C. Geometry·frame·transform</legend><div class="field-grid">
+        <label class="block">Geometry evidence ref <span class="required">*</span><input type="text" name="geometry_evidence_ref"></label><label class="block">Coordinate frame <span class="required">*</span><input type="text" name="coordinate_frame" placeholder="ego_path_s"></label><label class="block">Unit <span class="required">*</span><input type="text" name="unit" placeholder="m"></label>
+        <label class="block">Transform 상태 <span class="required">*</span><select name="transform_status"><option value="">선택</option><option value="VERIFIED">검증됨</option><option value="UNVERIFIED">미검증</option><option value="MISSING">없음</option><option value="CONFLICT">상충</option></select></label><label class="block">Transform/calibration ref <span class="required">*</span><input type="text" name="transform_evidence_ref"></label><label class="block">Time alignment <span class="required">*</span><select name="time_alignment"><option value="">선택</option><option value="VERIFIED">검증됨</option><option value="UNVERIFIED">미검증</option><option value="MISSING">없음</option><option value="CONFLICT">상충</option></select></label>
+      </div></fieldset>
+
+      <fieldset><legend>D. Rule applicability</legend><div class="field-grid">
+        <label class="block">RuleTemplate ID <span class="required">*</span><input type="text" name="rule_id" placeholder="예: KR-RTA-27-1-CROSSWALK-STOP"></label><label class="block">Official source claim refs <span class="required">*</span><input type="text" name="rule_source_refs" placeholder="쉼표로 구분"></label><label class="block">Jurisdiction/version <span class="required">*</span><select name="jurisdiction_status"><option value="">선택</option><option value="VERIFIED">KR/version 확인</option><option value="UNVERIFIED">미확인</option><option value="OUTSIDE_ODD">관할/ODD 밖</option><option value="CONFLICT">상충</option></select></label>
+        <label class="block">Precondition <span class="required">*</span><select name="precondition_status"><option value="">선택</option><option value="TRUE">충족</option><option value="FALSE">불충족</option><option value="UNKNOWN">판단 불가</option><option value="CONFLICT">상충</option></select></label><label class="block">Exception <span class="required">*</span><select name="exception_status"><option value="">선택</option><option value="FALSE">해당 없음</option><option value="TRUE">예외 해당</option><option value="UNKNOWN">판단 불가</option><option value="CONFLICT">상충</option></select></label><label class="block">Applicability evidence ref <span class="required">*</span><input type="text" name="applicability_evidence_ref"></label>
+      </div></fieldset>
+
+      <fieldset><legend>E. Numeric constraint와 vehicle assurance</legend><div class="field-grid two">
+        <label class="block">Assurance 요구 상태 <span class="required">*</span><select name="assurance_status"><option value="">선택</option><option value="NOT_REQUIRED_SYMBOLIC_ONLY">비수치/symbolic 계약이라 불필요</option><option value="REQUIRED_PRESENT">수치 실행, 근거 있음</option><option value="REQUIRED_MISSING">수치 실행, 근거 없음</option><option value="CONFLICT">근거 상충</option></select></label><label class="block">Exact vehicle binding key<input type="text" name="vehicle_binding_key" placeholder="수치 실행 시 필수"></label><label class="block">Assurance evidence ref<input type="text" name="assurance_evidence_ref" placeholder="수치 실행 시 필수"></label><label class="block">Numeric derivation/source refs<input type="text" name="numeric_source_refs" placeholder="수치 실행 시 필수, 쉼표 구분"></label>
+      </div><p class="hint">법률이 “필요한 거리”만 말하는 경우 숫자를 입력하지 말고 REQUIRED_MISSING/UNSUPPORTED로 남깁니다.</p></fieldset>
+
+      <fieldset><legend>F. Lifecycle 관측 가능성</legend><div class="field-grid">
+        <label class="block">Activation <span class="required">*</span><select name="activation_observable"><option value="">선택</option><option value="YES">관측 가능</option><option value="NO">불가</option><option value="UNKNOWN">불명</option></select></label><label class="block">Release evidence <span class="required">*</span><select name="release_observable"><option value="">선택</option><option value="YES">관측 가능</option><option value="NO">불가</option><option value="UNKNOWN">불명</option></select></label><label class="block">Reactivation <span class="required">*</span><select name="reactivation_observable"><option value="">선택</option><option value="YES">관측 가능</option><option value="NOT_IN_SCENE">해당 장면에 없음</option><option value="NO">필요하지만 불가</option><option value="UNKNOWN">불명</option></select></label>
+        <label class="block">Approved fallback policy <span class="required">*</span><select name="fallback_status"><option value="">선택</option><option value="PRESENT">있음</option><option value="NOT_REQUIRED">이 검토 범위에서 불필요</option><option value="MISSING">없음</option><option value="CONFLICT">상충</option></select></label><label class="block">Lifecycle policy refs <span class="required">*</span><input type="text" name="lifecycle_source_refs"></label><label class="block">연속 frame 범위<input type="text" name="frame_range" placeholder="예: t-2.0s ... t+3.0s"></label>
+      </div></fieldset>
+
+      <fieldset><legend>G. 판정</legend>
+        <div class="recommendation"><span class="badge review recommendation-badge">REVIEW_REQUIRED</span><div><strong class="recommendation-text">필드를 입력하면 자동 권고가 표시됩니다.</strong><div class="reasons"></div></div></div>
+        <div class="field-grid two" style="margin-top:12px"><label class="block">최종 판정 <span class="required">*</span><select name="final_decision"><option value="">자동 권고 확인 후 선택</option><option>SOURCE_COMPLETE</option><option>REVIEW_REQUIRED</option><option>UNSUPPORTED</option><option>CONFLICT</option><option>REJECT_SCENE</option></select></label><label class="block">최종 판정 evidence/ref <span class="required">*</span><input type="text" name="final_decision_evidence_ref" placeholder="review artifact ID"></label></div>
+        <label class="block">자동 권고와 다른 판정의 근거<input type="text" name="decision_override_reason" placeholder="권고와 다를 때 필수. SOURCE_COMPLETE로의 상향 우회는 허용하지 않음"></label>
+        <label class="block">검토 메모<textarea name="notes" maxlength="2000" placeholder="모호한 후보, 누락 source, 예외 판단과 후속 조치를 기록하십시오."></textarea></label>
+        <input type="hidden" name="recommended_decision"><input type="hidden" name="reason_codes"><input type="hidden" name="review_completed_at"><input type="hidden" name="review_id">
+      </fieldset>
+    </form>
+  </article>
+</template>
+
+<script>
+"use strict";
+const VERSION="guardsynth-scene-evidence-review-v0.1";
+const storageKey="guardsynth-scene-evidence-review-v01";
+const requiredForCompletion=["scene_id","slot_id","slice","hazard_truth","hazard_epistemic","hazard_freshness","hazard_evidence_ref","timestamp_evidence_ref","target_id","track_evidence_ref","zone_id","association_status","path_intersection","association_evidence_ref","geometry_evidence_ref","coordinate_frame","unit","transform_status","transform_evidence_ref","time_alignment","rule_id","rule_source_refs","jurisdiction_status","precondition_status","exception_status","applicability_evidence_ref","assurance_status","activation_observable","release_observable","reactivation_observable","fallback_status","lifecycle_source_refs","final_decision","final_decision_evidence_ref"];
+let nextId=1;
+
+function now(){return new Date().toISOString()}
+function value(form,name){return String(new FormData(form).get(name)||"").trim()}
+function has(form,name){return value(form,name)!==""}
+function addReason(reasons,condition,code){if(condition)reasons.push(code)}
+function recommend(form){
+  const reasons=[];
+  const truth=value(form,"hazard_truth"), epistemic=value(form,"hazard_epistemic"), freshness=value(form,"hazard_freshness");
+  const association=value(form,"association_status"), intersection=value(form,"path_intersection");
+  const transform=value(form,"transform_status"), time=value(form,"time_alignment");
+  const jurisdiction=value(form,"jurisdiction_status"), pre=value(form,"precondition_status"), exception=value(form,"exception_status");
+  const assurance=value(form,"assurance_status"), activation=value(form,"activation_observable"), release=value(form,"release_observable"), react=value(form,"reactivation_observable"), fallback=value(form,"fallback_status");
+  const conflicts=truth==="CONFLICT"||association==="CONFLICT"||intersection==="CONFLICT"||transform==="CONFLICT"||time==="CONFLICT"||jurisdiction==="CONFLICT"||pre==="CONFLICT"||exception==="CONFLICT"||assurance==="CONFLICT"||fallback==="CONFLICT";
+  addReason(reasons,truth==="CONFLICT","CONFLICTING_HAZARD_EVIDENCE");addReason(reasons,association==="CONFLICT","CONFLICTING_ASSOCIATION_EVIDENCE");addReason(reasons,transform==="CONFLICT"||time==="CONFLICT","CONFLICTING_FRAME_OR_TIME_EVIDENCE");addReason(reasons,jurisdiction==="CONFLICT"||pre==="CONFLICT"||exception==="CONFLICT","CONFLICTING_RULE_APPLICABILITY");addReason(reasons,assurance==="CONFLICT","CONFLICTING_VEHICLE_ASSURANCE");
+  if(conflicts)return {decision:"CONFLICT",reasons};
+  addReason(reasons,association==="MISSING"||!has(form,"track_evidence_ref")||!has(form,"geometry_evidence_ref"),"MISSING_TARGET_ZONE_EVIDENCE");
+  addReason(reasons,transform==="MISSING"||transform==="UNVERIFIED"||!has(form,"transform_evidence_ref"),"UNVERIFIED_COORDINATE_TRANSFORM");
+  addReason(reasons,time==="MISSING"||time==="UNVERIFIED"||!has(form,"timestamp_evidence_ref"),"UNVERIFIED_TIME_ALIGNMENT");
+  addReason(reasons,jurisdiction==="OUTSIDE_ODD","UNSUPPORTED_OUTSIDE_ODD");
+  addReason(reasons,assurance==="REQUIRED_MISSING","MISSING_VEHICLE_ASSURANCE_PROFILE");
+  addReason(reasons,assurance==="REQUIRED_PRESENT"&&(!has(form,"vehicle_binding_key")||!has(form,"assurance_evidence_ref")||!has(form,"numeric_source_refs")),"INCOMPLETE_NUMERIC_ASSURANCE_EVIDENCE");
+  addReason(reasons,activation==="NO"||release==="NO"||react==="NO","LIFECYCLE_NOT_OBSERVABLE");
+  addReason(reasons,fallback==="MISSING","MISSING_APPROVED_FALLBACK");
+  const unsupported=reasons.some(x=>["MISSING_TARGET_ZONE_EVIDENCE","UNVERIFIED_COORDINATE_TRANSFORM","UNVERIFIED_TIME_ALIGNMENT","UNSUPPORTED_OUTSIDE_ODD","MISSING_VEHICLE_ASSURANCE_PROFILE","INCOMPLETE_NUMERIC_ASSURANCE_EVIDENCE","LIFECYCLE_NOT_OBSERVABLE","MISSING_APPROVED_FALLBACK"].includes(x));
+  if(unsupported)return {decision:"UNSUPPORTED",reasons};
+  addReason(reasons,truth==="UNKNOWN"||epistemic==="CLAIMED"||freshness==="STALE"||freshness==="UNKNOWN","HAZARD_REQUIRES_REVIEW");
+  addReason(reasons,association==="AMBIGUOUS"||intersection==="UNKNOWN","AMBIGUOUS_TARGET_ZONE_ASSOCIATION");
+  addReason(reasons,jurisdiction==="UNVERIFIED"||pre==="UNKNOWN"||exception==="UNKNOWN","RULE_APPLICABILITY_REQUIRES_REVIEW");
+  addReason(reasons,activation==="UNKNOWN"||release==="UNKNOWN"||react==="UNKNOWN","LIFECYCLE_REQUIRES_REVIEW");
+  const missingBase=requiredForCompletion.filter(name=>!["final_decision","final_decision_evidence_ref"].includes(name)&&!has(form,name));
+  if(missingBase.length)reasons.push("INCOMPLETE_REVIEW_FIELDS");
+  if(reasons.length)return {decision:"REVIEW_REQUIRED",reasons};
+  return {decision:"SOURCE_COMPLETE",reasons:["SOURCE_REFERENCE_CLOSURE_CANDIDATE"]};
+}
+function badgeClass(decision){return decision==="SOURCE_COMPLETE"?"source":decision==="UNSUPPORTED"?"unsupported":decision==="CONFLICT"?"conflict":"review"}
+function completion(form){
+  const rec=recommend(form),final=value(form,"final_decision");
+  if(!requiredForCompletion.every(name=>has(form,name)))return {complete:false,reason:"INCOMPLETE_REVIEW_FIELDS"};
+  if(final!==rec.decision&&!has(form,"decision_override_reason"))return {complete:false,reason:"MISSING_DECISION_OVERRIDE_REASON"};
+  if(final==="SOURCE_COMPLETE"&&rec.decision!=="SOURCE_COMPLETE")return {complete:false,reason:"INVALID_SOURCE_COMPLETE_OVERRIDE"};
+  return {complete:true,reason:""};
+}
+function updateCard(card){
+  const form=card.querySelector("form"), rec=recommend(form);form.elements.recommended_decision.value=rec.decision;form.elements.reason_codes.value=rec.reasons.join("|");
+  const badge=card.querySelector(".recommendation-badge");badge.className=`badge recommendation-badge ${badgeClass(rec.decision)}`;badge.textContent=rec.decision;
+  card.querySelector(".recommendation-text").textContent=rec.decision==="SOURCE_COMPLETE"?"필수 근거가 닫힌 후보입니다. 최종 source audit을 수행하십시오.":rec.decision==="UNSUPPORTED"?"필수 근거가 없어 계약을 실행하면 안 됩니다.":rec.decision==="CONFLICT"?"상충 근거를 해결하기 전 계약을 생성하면 안 됩니다.":"사람 검토 또는 추가 evidence가 필요합니다.";
+  const state=completion(form),shownReasons=[...rec.reasons];if(state.reason)shownReasons.push(state.reason);card.querySelector(".reasons").textContent=shownReasons.join("\n");
+  form.elements.review_completed_at.value=state.complete?(form.elements.review_completed_at.value||now()):"";
+  const status=card.querySelector(".card-status");status.className=`card-status badge ${state.complete?badgeClass(value(form,"final_decision")):"review"}`;status.textContent=state.complete?"입력 완료":"미완료";
+}
+function makeReview(saved){
+  const fragment=document.getElementById("reviewTemplate").content.cloneNode(true),card=fragment.querySelector(".review-card");
+  const reviewId=saved?.review_id||`REV-${String(nextId++).padStart(3,"0")}`;const restoredNumber=Number((reviewId.match(/(\d+)$/)||[])[1]||0);nextId=Math.max(nextId,restoredNumber+1);card.dataset.reviewId=reviewId;card.querySelector(".card-id").textContent=reviewId;
+  const form=card.querySelector("form");form.elements.review_id.value=reviewId;form.elements.review_started_at.value=saved?.review_started_at||now();
+  if(saved)for(const [key,val] of Object.entries(saved)){if(form.elements[key]&&key!=="local_image")form.elements[key].value=val??""}
+  form.elements.local_image.addEventListener("change",event=>{const file=event.target.files[0],preview=card.querySelector(".preview");if(preview.dataset.url)URL.revokeObjectURL(preview.dataset.url);if(!file){preview.textContent="로컬 이미지를 선택하십시오.";form.elements.image_filename.value="";return}const url=URL.createObjectURL(file);preview.dataset.url=url;preview.innerHTML="";const img=document.createElement("img");img.src=url;img.alt="검토자가 로컬에서 선택한 장면 이미지";preview.appendChild(img);form.elements.image_filename.value=file.name;save();});
+  card.querySelector(".remove-card").addEventListener("click",()=>{if(document.querySelectorAll(".review-card").length===1){alert("최소 한 개의 검토 카드를 유지하십시오.");return}if(card.querySelector(".preview").dataset.url)URL.revokeObjectURL(card.querySelector(".preview").dataset.url);card.remove();save();});
+  document.getElementById("reviews").appendChild(fragment);updateCard(card);
+}
+function record(card){const form=card.querySelector("form"),fd=new FormData(form),row={};for(const [key,val] of fd.entries())if(key!=="local_image")row[key]=String(val);const state=completion(form);row.review_id=card.dataset.reviewId;row.reviewer_id=document.getElementById("reviewerId").value.trim();row.review_version=VERSION;row.recommended_decision=form.elements.recommended_decision.value;row.reason_codes=form.elements.reason_codes.value.split("|").filter(Boolean);if(state.reason)row.reason_codes.push(state.reason);row.review_complete=state.complete;row.decision_agrees_with_recommendation=row.final_decision===row.recommended_decision;row.image_bytes_included=false;return row}
+function save(){
+  for(const card of document.querySelectorAll(".review-card"))updateCard(card);
+  const rows=[...document.querySelectorAll(".review-card")].map(record),reviewer=document.getElementById("reviewerId").value.trim();
+  try{localStorage.setItem(storageKey,JSON.stringify({reviewer_id:reviewer,rows}));document.getElementById("saveState").textContent="텍스트 자동 저장됨"}catch(e){document.getElementById("saveState").textContent="자동 저장 불가"}
+  const done=rows.filter(row=>row.review_complete).length;const progress=document.getElementById("progress");progress.max=rows.length;progress.value=done;document.getElementById("progressText").textContent=`완료 ${done}/${rows.length}`;
+  const counts={};for(const row of rows){const key=row.final_decision||row.recommended_decision||"INCOMPLETE";counts[key]=(counts[key]||0)+1}document.getElementById("overallSummary").textContent=Object.entries(counts).map(([k,v])=>`${k} ${v}`).join(" · ");return rows;
+}
+function restore(){try{const saved=JSON.parse(localStorage.getItem(storageKey)||"null");if(saved){document.getElementById("reviewerId").value=saved.reviewer_id||"";for(const row of saved.rows||[])makeReview(row);return}}catch(e){}makeReview(null)}
+function download(name,type,text){const blob=new Blob([text],{type}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+function csvCell(value){const text=Array.isArray(value)?value.join("|"):String(value??"");return /[",\r\n]/.test(text)?`"${text.replace(/"/g,'""')}"`:text}
+function exportJson(){const rows=save(),payload={review_version:VERSION,exported_at:now(),image_bytes_included:false,reviewer_id:document.getElementById("reviewerId").value.trim(),records:rows};download("guardsynth_scene_evidence_review.json","application/json;charset=utf-8",JSON.stringify(payload,null,2)+"\n")}
+function exportCsv(){const rows=save();if(!rows.length)return;const columns=["review_version","reviewer_id",...Object.keys(rows[0]).filter(k=>!["review_version","reviewer_id"].includes(k))];const lines=[columns.join(","),...rows.map(row=>columns.map(k=>csvCell(row[k])).join(","))];download("guardsynth_scene_evidence_review.csv","text/csv;charset=utf-8","\ufeff"+lines.join("\r\n")+"\r\n")}
+document.getElementById("addReview").addEventListener("click",()=>{makeReview(null);save()});document.getElementById("recompute").addEventListener("click",save);document.getElementById("exportJson").addEventListener("click",exportJson);document.getElementById("exportCsv").addEventListener("click",exportCsv);document.addEventListener("change",event=>{if(event.target.name!=="local_image")save()});document.addEventListener("input",event=>{if(event.target.type!=="file")save()});restore();save();
+</script>
+</body>
+</html>

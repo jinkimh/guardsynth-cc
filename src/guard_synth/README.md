@@ -63,3 +63,15 @@ The purpose-named runner is
 `cli/pipelines/guardsynth/label_light_grounding/`. See the
 [label-light design](../../docs/designs/guard-synth-coc/GUARDSYNTH_LABEL_LIGHT_GROUNDING_V01.md)
 and [overall project stage](../../docs/reports/GUARDSYNTH_PROJECT_STAGE_STATUS_V1.md).
+
+## Scene-evidence review kit
+
+`cli/pipelines/guardsynth/scene_evidence_review/` contains a self-contained,
+network-closed HTML review tool for M13 scene candidates. It explains the
+method with three synthetic diagrams and four worked examples, records all
+scene/rule/assurance/lifecycle evidence groups, recommends a fail-closed
+decision, and exports JSON/CSV without image bytes. Human review may resolve
+an association ambiguity but cannot manufacture missing geometry, transform,
+rule, or vehicle-assurance sources.
+
+See the [review UI design](../../docs/designs/guard-synth-coc/GUARDSYNTH_SCENE_EVIDENCE_REVIEW_UI_V01.md).

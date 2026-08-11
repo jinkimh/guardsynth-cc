@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:guardsynth:scene-evidence-review:v0.1",
+  "title": "GuardSynth scene evidence review export v0.1",
+  "type": "object",
+  "required": ["review_version", "exported_at", "image_bytes_included", "reviewer_id", "records"],
+  "additionalProperties": false,
+  "properties": {
+    "review_version": {"const": "guardsynth-scene-evidence-review-v0.1"},
+    "exported_at": {"type": "string", "minLength": 1},
+    "image_bytes_included": {"const": false},
+    "reviewer_id": {"type": "string"},
+    "records": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/review_record"}
+    }
+  },
+  "$defs": {
+    "decision": {
+      "type": "string",
+      "enum": ["SOURCE_COMPLETE", "REVIEW_REQUIRED", "UNSUPPORTED", "CONFLICT", "REJECT_SCENE"]
+    },
+    "review_record": {
+      "type": "object",
+      "required": [
+        "review_version", "review_id", "reviewer_id", "scene_id", "slot_id", "slice",
+        "recommended_decision", "final_decision", "reason_codes", "review_complete",
+        "decision_agrees_with_recommendation", "image_bytes_included"
+      ],
+      "properties": {
+        "review_version": {"const": "guardsynth-scene-evidence-review-v0.1"},
+        "review_id": {"type": "string", "minLength": 1},
+        "reviewer_id": {"type": "string"},
+        "scene_id": {"type": "string"},
+        "slot_id": {"type": "string"},
+        "slice": {"type": "string"},
+        "recommended_decision": {"$ref": "#/$defs/decision"},
+        "final_decision": {"$ref": "#/$defs/decision"},
+        "reason_codes": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "review_complete": {"type": "boolean"},
+        "decision_agrees_with_recommendation": {"type": "boolean"},
+        "image_filename": {"type": "string"},
+        "image_bytes_included": {"const": false},
+        "review_started_at": {"type": "string"},
+        "review_completed_at": {"type": "string"},
+        "decision_override_reason": {"type": "string"}
+      }
+    }
+  }
+}

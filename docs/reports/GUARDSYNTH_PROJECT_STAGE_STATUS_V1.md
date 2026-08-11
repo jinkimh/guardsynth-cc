@@ -41,7 +41,8 @@ effect를 평가하는 것이다.
 4. source-aware GuardSynth structured generator
 5. exact vehicle assurance registry와 fail-closed source authoring
 6. label-light target–zone proposal triage와 최소 확인 interface
-7. 공개 synthetic result와 restricted-derived 비식별 readiness 분리
+7. 이미지·방법·예제·필수 항목과 fail-closed 판정을 가진 scene-evidence review kit
+8. 공개 synthetic result와 restricted-derived 비식별 readiness 분리
 
 이 완료는 software mechanism에 관한 것이며 RQ1–RQ7의 실증 가설을 입증한 것이 아니다.
 
@@ -76,6 +77,11 @@ label-light 계층은 완전 라벨 의존을 낮추는 software 해법이다. �
 다음 종료 가능한 단일 milestone은 “24장면 전부 수작업 라벨”이 아니라, 현재 5개 후보의
 association/transform/assurance 근거를 보강하고 확보 가능한 장면을 추가해 24-slot을
 source-complete로 채우는 것이다. slot 계획은 완료됐지만 실제 실행은 0/24다.
+
+검토 방법 자체는 [scene-evidence review kit](../../artifacts/results/public/guardsynth-scene-evidence-review-001/scene-evidence-review-2026-08-10-v5/SCENE_EVIDENCE_REVIEW.html)으로
+고정했다. 로컬 장면 이미지를 보면서 association, transform/time, rule applicability,
+필요 assurance와 lifecycle을 기록하고 자동 권고를 받을 수 있다. 이 도구의 완성은 실제
+근거의 확보와 다르므로 `DATA_GAP_PIVOT` 및 0/24 상태는 유지된다.
 
 ## 6. P0 catalog 및 24-slot 준비 근거
 

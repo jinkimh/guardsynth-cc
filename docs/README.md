@@ -32,6 +32,7 @@ Primary project documents:
 - [EBLC indexed actor-zone collection design](designs/guard-synth-coc/EBLC_INDEXED_COLLECTION_V01.md)
 - [GuardSynth source-aware generator v0.1 design](designs/guard-synth-coc/GUARDSYNTH_SOURCE_AWARE_GENERATOR_V01.md)
 - [GuardSynth label-light grounding v0.1 design](designs/guard-synth-coc/GUARDSYNTH_LABEL_LIGHT_GROUNDING_V01.md)
+- [GuardSynth scene-evidence review UI v0.1](designs/guard-synth-coc/GUARDSYNTH_SCENE_EVIDENCE_REVIEW_UI_V01.md)
 - [GuardSynth-CoC P0b terminal decision](reports/GUARDSYNTH_P0B_TERMINAL_DECISION_V1.md)
 - [GuardSynth source-boundary thorough test](reports/GUARDSYNTH_SOURCE_BOUNDARY_THOROUGH_TEST_V1.md)
 - [GuardSynth-CoC overall project stage](reports/GUARDSYNTH_PROJECT_STAGE_STATUS_V1.md)

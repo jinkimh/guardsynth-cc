@@ -390,6 +390,7 @@ Todo:
 - [x] 세 slice별 8개 장면 선정 slot과 필요한 event 입력 기준 고정
 - [x] 위험/nominal, clear/occluded, release/reactivation을 층화
 - [x] 기존 perception/tracker/map/trajectory output adapter의 현재 집계 재사용
+- [x] 이미지·방법·예제·항목·자동 권고·JSON/CSV export를 갖춘 review kit 및 제한 이미지 10개 단일 HTML 준비
 - [ ] label-light packet 변환과 작은 calibration/audit 표본 작성
 - [ ] target–zone association evidence 작성 또는 review queue 보존
 - [ ] rig/sensor→ego-path coordinate transform 검증
@@ -419,6 +420,7 @@ Todo:
 준비도 근거:
 
 - `artifacts/results/public/guardsynth-24-scene-dry-run-001/kr-dry-run-readiness-2026-08-10-v1/`
+- `artifacts/results/public/guardsynth-scene-evidence-review-001/scene-evidence-review-2026-08-10-v5/`
 
 ### M14. CoC-conditioned constraint generation front-end
 
