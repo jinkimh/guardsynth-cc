@@ -1,0 +1,104 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "title-abstract-introduction-2026-09-30-001",
+  "artifact_class": "public",
+  "purpose": "Updated bilingual title, abstract, and introduction",
+  "documents": [
+    {
+      "language": "ko",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_TITLE_ABSTRACT_V01_KO.md",
+      "source_sha256": "920e40498b2e0eea8b255545e220e7bed820e503178b0a635ef9ee7bc1e04ca2",
+      "pdf": "ieee-access-title-abstract-v01-ko.pdf",
+      "abstract_word_count_whitespace": 150
+    },
+    {
+      "language": "en",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_TITLE_ABSTRACT_V01_EN.md",
+      "source_sha256": "e660a13206a4e944526e381df40796dcf1d31fda907a354449b451d1c20175a9",
+      "pdf": "ieee-access-title-abstract-v01-en.pdf",
+      "abstract_word_count_whitespace": 192
+    },
+    {
+      "language": "ko",
+      "kind": "title_abstract_introduction",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_INTRODUCTION_V01_KO.md",
+      "abstract_source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_TITLE_ABSTRACT_V01_KO.md",
+      "source_sha256": "b91d8927594910e8ce7956152b38aa07455ab178efaef9698e9b5c1439b685a2",
+      "pdf": "ieee-access-title-abstract-introduction-v01-ko.pdf",
+      "links": [
+        {
+          "label": "1",
+          "source_target": "https://arxiv.org/abs/2511.00088",
+          "pdf_target": "https://arxiv.org/abs/2511.00088"
+        },
+        {
+          "label": "2",
+          "source_target": "https://arxiv.org/abs/2312.14150",
+          "pdf_target": "https://arxiv.org/abs/2312.14150"
+        },
+        {
+          "label": "3",
+          "source_target": "https://arxiv.org/abs/2402.12289",
+          "pdf_target": "https://arxiv.org/abs/2402.12289"
+        },
+        {
+          "label": "4",
+          "source_target": "../../01-safety-constrained-coc/docs/reports/TEMPORAL_GUARD_MULTISEED_EXPERIMENT_REPORT_V01.md",
+          "pdf_target": "../../../../../../projects/01-safety-constrained-coc/docs/reports/TEMPORAL_GUARD_MULTISEED_EXPERIMENT_REPORT_V01.md"
+        },
+        {
+          "label": "5",
+          "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv",
+          "pdf_target": "../temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv"
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "kind": "title_abstract_introduction",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_INTRODUCTION_V01_EN.md",
+      "abstract_source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_TITLE_ABSTRACT_V01_EN.md",
+      "source_sha256": "0458928815ef296835023632d481bdf769b31e20a0013bc86c2da6b46b4fa4e7",
+      "pdf": "ieee-access-title-abstract-introduction-v01-en.pdf",
+      "links": [
+        {
+          "label": "1",
+          "source_target": "https://arxiv.org/abs/2511.00088",
+          "pdf_target": "https://arxiv.org/abs/2511.00088"
+        },
+        {
+          "label": "2",
+          "source_target": "https://arxiv.org/abs/2312.14150",
+          "pdf_target": "https://arxiv.org/abs/2312.14150"
+        },
+        {
+          "label": "3",
+          "source_target": "https://arxiv.org/abs/2402.12289",
+          "pdf_target": "https://arxiv.org/abs/2402.12289"
+        },
+        {
+          "label": "4",
+          "source_target": "../../01-safety-constrained-coc/docs/reports/TEMPORAL_GUARD_MULTISEED_EXPERIMENT_REPORT_V01.md",
+          "pdf_target": "../../../../../../projects/01-safety-constrained-coc/docs/reports/TEMPORAL_GUARD_MULTISEED_EXPERIMENT_REPORT_V01.md"
+        },
+        {
+          "label": "5",
+          "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv",
+          "pdf_target": "../temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv"
+        }
+      ]
+    }
+  ],
+  "basis": "IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_KO.md and expansion test metrics",
+  "scope_excludes": [
+    "EBLC testing functionality",
+    "runtime monitoring"
+  ],
+  "status": "VERIFIED_CURRENT_AUTHORING_DRAFT",
+  "supersedes_abstract_snapshot": "title-abstract-2026-09-30-002",
+  "preserved": [
+    "main.tex",
+    "previous completed PDF snapshots",
+    "experiment results"
+  ]
+}

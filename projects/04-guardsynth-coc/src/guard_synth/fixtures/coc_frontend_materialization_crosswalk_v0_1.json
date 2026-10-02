@@ -1,0 +1,20 @@
+{
+  "proposal_rule_id": "KR-RTA-27-1-CROSSWALK-STOP",
+  "scene_context": {
+    "scene_ref": "public-synthetic-crosswalk-scene-v0.1",
+    "timestamp_s": 1.0,
+    "hazard_evidence_ref": "PUBLIC-SYNTHETIC-SCENE-PED-CROSSING-v0.1",
+    "target_entity_id": "pedestrian-1",
+    "zone_id": "crosswalk-1",
+    "zone_entry_x_m": 15.0,
+    "coordinate_frame": "dataset_rig",
+    "distance_unit": "m",
+    "geometry_evidence_ref": "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1",
+    "association_evidence_refs": [
+      "PUBLIC-SYNTHETIC-PED-CROSSWALK-ASSOCIATION-v0.1"
+    ],
+    "transform_verified": true,
+    "transform_evidence_ref": "PUBLIC-SYNTHETIC-RIG-TRANSFORM-v0.1",
+    "recorded_vehicle_binding_key": "recorded-rig:public-synthetic-crosswalk-v0.1"
+  }
+}

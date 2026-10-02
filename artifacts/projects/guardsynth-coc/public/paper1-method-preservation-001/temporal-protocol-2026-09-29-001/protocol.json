@@ -1,0 +1,70 @@
+{
+  "protocol_id": "paper1-method-preservation-v0.1",
+  "seeds": [
+    42,
+    17,
+    123
+  ],
+  "arms": [
+    "P0",
+    "P1",
+    "P2"
+  ],
+  "train_scenes": 192,
+  "test_scenes": 48,
+  "new_holdout_seed": 2026092901,
+  "unseen_holdout_seed": 2026092902,
+  "epochs": 3,
+  "batch_size": 2,
+  "gradient_accumulation": 8,
+  "learning_rate": 0.0002,
+  "lora_rank": 8,
+  "lora_dropout": 0.05,
+  "optimizer_updates_per_arm_seed": 72,
+  "historical_reference": {
+    "P0_violation": 0.319,
+    "P1_violation": 0.0,
+    "P0_safe_completion": 0.681,
+    "P1_safe_completion": 1.0,
+    "unseen_safe_completion": [
+      0.625,
+      0.649
+    ]
+  },
+  "criteria": {
+    "P1_replication_max_violation": 0.05,
+    "P1_replication_min_safe_completion": 0.95,
+    "P2_max_violation": 0.05,
+    "P2_min_safe_completion": 0.95,
+    "P2_minus_P0_max_violation_difference": -0.2,
+    "P2_minus_P0_min_safe_completion_difference": 0.2,
+    "P2_minus_P1_violation_margin": 0.05,
+    "P2_minus_P1_safe_completion_margin": -0.05,
+    "require_all_three_seeds_for_point_criteria": true,
+    "formal_noninferiority_claim": false,
+    "inference": "EXPLORATORY_TEMPLATE_REUSE_NOT_INDEPENDENT_ENVIRONMENT_CONFIRMATION"
+  },
+  "evaluation": [
+    "benchmark_regression",
+    "new_seed_confirmation",
+    "unseen_time"
+  ],
+  "metrics": [
+    "guard_violation_rate",
+    "safe_goal_completion_rate",
+    "deadlock_rate",
+    "accuracy",
+    "coverage",
+    "contract_swap_pair_accuracy"
+  ],
+  "uncertainty": {
+    "bootstrap_replicates": 2000,
+    "seed": 20260929,
+    "cluster": "clear_time_and_label_rotation_with_contract_pair",
+    "paired_arms": true
+  },
+  "source_assumptions": "SUPPLIED_SYNTHETIC_NOT_AUTOMATIC_REAL_ROAD_EXTRACTION",
+  "weak_llm_labels": false,
+  "constraint_visibility": "INLINE_WITH_COC_TRAIN_AND_INFERENCE_P1_P2",
+  "model_revision": "89644892e4d85e24eaac8bacfd4f463576704203"
+}

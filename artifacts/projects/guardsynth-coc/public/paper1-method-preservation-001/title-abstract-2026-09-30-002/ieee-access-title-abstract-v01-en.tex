@@ -1,0 +1,24 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=16pt]{geometry}
+\usepackage{fontspec,kotex,xcolor,hyperref,fancyhdr}
+\setmainfont{DejaVu Serif}
+\setmainhangulfont{Noto Sans CJK KR}
+\definecolor{navy}{HTML}{173E59}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small GuardSynth CoC}
+\fancyhead[R]{\small Title and abstract draft · English}
+\fancyfoot[L]{\small v0.1 · 2026-09-30}
+\fancyfoot[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{3em}
+\linespread{1.15}
+\hypersetup{pdftitle={GuardSynth: Formal Specification and Verification of Behavioral Constraints for CoC-Based VLM Learning},pdfsubject={Title and abstract for author review},pdfauthor={GuardSynth project}}
+\begin{document}
+\vspace*{8mm}
+{\Large\bfseries\color{navy}\raggedright GuardSynth: Formal Specification and Verification of Behavioral Constraints for CoC-Based VLM Learning\par}
+\vspace{8mm}
+{\large\bfseries Abstract\par}
+\vspace{3mm}
+Chain of Cognition (CoC) connects scene understanding with action reasoning for vision-language model (VLM) learning. However, learning from CoC explanations alone has limitations in learning correct action selection and constraint compliance. To address these limitations, we present GuardSynth, a framework that systematically specifies and verifies behavioral constraints and incorporates them into CoC training data. We define the scope, properties, and constituent elements of behavioral constraints and specify applicability, prohibited actions, persistence and release conditions, timing, and evidence using Evidence-Bound Lifecycle Contracts (EBLC). We then verify consistency and designated properties within a restricted logical model and generate corresponding Controlled Natural Language (CNL) to augment CoC. We compare Qwen3-VL-2B-Instruct under matched LoRA training budgets across three seeds on a controlled synthetic visual-temporal task, supplying constraints during both training and evaluation in the constraint-augmented conditions. Mean action-selection accuracy is 49.86\% with CoC alone, 96.81\% with our existing natural-language constraints, and 98.06\% with EBLC-derived CNL; corresponding constraint-violation rates are 19.17\%, 1.39\%, and 0.83\%. These results demonstrate a systematic framework linking formal specification and verification of behavioral constraints to CoC learning, alongside improved action selection with explicit constraints.
+\end{document}

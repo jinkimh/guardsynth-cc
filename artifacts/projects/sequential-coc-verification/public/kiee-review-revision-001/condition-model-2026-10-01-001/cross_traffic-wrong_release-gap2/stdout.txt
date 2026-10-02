@@ -1,0 +1,48 @@
+[2K
+Verifying formula 1 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/condition-model-2026-10-01-001/cross_traffic-wrong_release-gap2/queries.q:1
+[2K -- Formula is satisfied.
+[2K
+Verifying formula 2 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/condition-model-2026-10-01-001/cross_traffic-wrong_release-gap2/queries.q:2
+[2K -- Formula is NOT satisfied.
+ -- Showing witness trace:
+
+State:
+( Observer.Run )
+active[0]=0 known[0]=-1 precondition=-1 idx=0 bad=0 missing=0 bad_hold=0 bad_pre=0 first_bad_idx=-1 first_missing_idx=-1 first_bad_obligation=-1 first_missing_obligation=-1
+
+Transition:
+  Observer.Run->Observer.Run { idx < N, tau, step(), idx++ }
+
+State:
+( Observer.Run )
+active[0]=1 known[0]=-1 precondition=1 idx=1 bad=0 missing=0 bad_hold=0 bad_pre=0 first_bad_idx=-1 first_missing_idx=-1 first_bad_obligation=-1 first_missing_obligation=-1
+
+Transition:
+  Observer.Run->Observer.Run { idx < N, tau, step(), idx++ }
+
+State:
+( Observer.Run )
+active[0]=1 known[0]=-1 precondition=1 idx=2 bad=0 missing=0 bad_hold=0 bad_pre=0 first_bad_idx=-1 first_missing_idx=-1 first_bad_obligation=-1 first_missing_obligation=-1
+
+Transition:
+  Observer.Run->Observer.Run { idx < N, tau, step(), idx++ }
+
+State:
+( Observer.Run )
+active[0]=1 known[0]=-1 precondition=1 idx=3 bad=0 missing=0 bad_hold=0 bad_pre=0 first_bad_idx=-1 first_missing_idx=-1 first_bad_obligation=-1 first_missing_obligation=-1
+
+Transition:
+  Observer.Run->Observer.Run { idx < N, tau, step(), idx++ }
+
+State:
+( Observer.Run )
+active[0]=1 known[0]=-1 precondition=1 idx=4 bad=0 missing=1 bad_hold=0 bad_pre=0 first_bad_idx=-1 first_missing_idx=3 first_bad_obligation=-1 first_missing_obligation=0
+[2K
+Verifying formula 3 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/condition-model-2026-10-01-001/cross_traffic-wrong_release-gap2/queries.q:3
+[2K -- Formula is satisfied.
+[2K
+Verifying formula 4 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/condition-model-2026-10-01-001/cross_traffic-wrong_release-gap2/queries.q:4
+[2K -- Formula is NOT satisfied.
+[2K
+Verifying formula 5 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/condition-model-2026-10-01-001/cross_traffic-wrong_release-gap2/queries.q:5
+[2K -- Formula is NOT satisfied.

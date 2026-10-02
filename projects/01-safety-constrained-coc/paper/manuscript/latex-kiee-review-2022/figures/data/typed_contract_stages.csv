@@ -1,0 +1,5 @@
+stage,description
+1,Natural-language Safety-Constrained CoC
+2,"Guard parsing: condition type, comparator, value, unit, fallback"
+3,Unit normalization: 600 cm → 6.0 m
+4,"Model-external verifier or shield: check distance, speed, and time"

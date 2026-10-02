@@ -1,0 +1,24 @@
+{
+  "project_id": "guardsynth-coc",
+  "input_hashes": {
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/train_temporal_expansion.py": "5fa91a1ab48042dd9a7fbf92c7d20957672bb1bb99cc8d16b2efd1854c48ce04",
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_training_data.py": "2befe142846f90ffa3d8512942bd7bdf7b5779ba53686232aa4ec3cba03a3c37",
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py": "9882832b2a56468d5e156c1c98fac22eef0edb278347a01a0b3e2e85a621c763",
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation_config.json": "44bd1db3726357523b5af8744bf8ba1e21b8f9bd89e481d99791de648567767f",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-training-data-2026-09-29-001/RUN_MANIFEST.json": "3813e97d0dfa5312dbff03c2c4eec0e9f9715d563a80f74fcc85ff87dae88d58",
+    "projects/01-safety-constrained-coc/experiments/vlm_guard_learning/temporal_guard_world.py": "ff6aff71aeee645fd05fef6fda4972f7545288d5c264560507c79040c8efc16d",
+    "projects/01-safety-constrained-coc/experiments/vlm_guard_learning/train_qwen_temporal_guard_lora.py": "d8f30afb45c6caeb1f937a01e16ab8e32030ae72a89f97effebb2a94b400c207",
+    "projects/01-safety-constrained-coc/experiments/vlm_guard_learning/train_qwen_guard_lora.py": "be287ff6027292e0bd3a6bb6a43c50aa992d84fb1e23074184fb55bd4208d75e"
+  },
+  "output_hashes": {
+    "protocol.json": "93cc5af317febbbdcbb61c34add049568c4c817d45b755bf894d1f7d3accbd7c",
+    "evaluation_p0.jsonl": "2b45ad9d680a4db47dd399b267c9ac197a86275e6a9c2ec903c316b175fa6a94",
+    "evaluation_p1.jsonl": "e140a518adbad406bd6b01cfa352290c2c54e334764b0df32885c4b536e20ba4",
+    "evaluation_p2.jsonl": "4c566dd39c8d9a98e242f0728e3ee7ab1cfb1b035e12b7b0c0e99eee91302cbc",
+    "evaluation_natural_guard.jsonl": "d452fbfa570ca543df06a6fbc15aa93e22a81b69e509f095ce6c378591d6e907",
+    "evaluation_shuffled_guard.jsonl": "d452fbfa570ca543df06a6fbc15aa93e22a81b69e509f095ce6c378591d6e907",
+    "evaluation_logic_guard.jsonl": "aab46336b9b555dbae9457a1fb6ef2393b3b4628a41f320aaebf067604c8515e",
+    "training_signatures.json": "7fa8e557580426b5b7e7473779af85a37dc663f07d1981e7bb7b055f061b4855",
+    "RESULT.json": "187fbbf60bb2b16f6ccabf3973bb54a44a939b596d29e65af397cd7bf4c71fe8"
+  }
+}

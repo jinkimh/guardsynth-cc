@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "project_id": "safety-constrained-coc",
+  "papers": [
+    {
+      "paper_id": "paper-01-safety-constrained-coc",
+      "title": "Safety-Constrained Chain-of-Thought for Guard-Aware Driving Decisions",
+      "status": "MANUSCRIPT_READY",
+      "media_type": "application/pdf",
+      "source_path": "paper/manuscript/latex-kiee-review-2022/main.pdf"
+    }
+  ]
+}

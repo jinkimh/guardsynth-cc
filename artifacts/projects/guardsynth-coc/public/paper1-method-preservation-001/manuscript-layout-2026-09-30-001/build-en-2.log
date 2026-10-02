@@ -1,0 +1,361 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./ieee-access-manuscript-en.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-01-16> (./ieeeaccess.cls
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/paper/ie
+ee-access-template//IEEEtran.cls
+
+LaTeX Warning: You have requested document class `/home/jinhyun/prj_ws/prj_jin/
+guardsynth-cc/projects/04-guardsynth-coc/paper/ieee-access-template//IEEEtran',
+
+               but the document class provides `IEEEtran'.
+
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+-- This is a 10 point document.
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifpdf.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/keyval.tex)))){/home/jinhyun
+/.texlive2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{t1-times.map}{t1-fo
+rmata.map}{t1-giovannistd.map}
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(./spotcolor.sty (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg))))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./ieee-access-manuscript-en.aux)
+-- Lines per column: 56 (exact).
+(./t1times.fd)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./ieee-access-manuscript-en.out) (./ieee-access-manuscript-en.out)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+Overfull \hbox (9.2679pt too wide) in paragraph at lines 27--27
+[]  
+
+Overfull \hbox (9.2679pt too wide) in paragraph at lines 27--27
+[]  
+[1 <./logo.png> <./bullet.png>]
+Underfull \hbox (badness 1533) in paragraph at lines 48--49
+\T1/times/n/n/10 CNL map-pings, and de-fined in-ser-tion into model-
+
+Underfull \hbox (badness 2035) in paragraph at lines 49--50
+[]\T1/times/n/n/10 A task-to-verdict eval-u-a-tion link-ing six be-hav-ioral
+
+Package xcolor Warning: Incompatible color definition on input line 57.
+
+
+Package xcolor Warning: Incompatible color definition on input line 63.
+
+[2 <./notaglinelogo.png>]
+
+Package xcolor Warning: Incompatible color definition on input line 69.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
+\T1/times/n/n/10 Translating natural-language re-quire-ments into for-mal
+
+Underfull \hbox (badness 1436) in paragraph at lines 71--71
+\T1/times/n/n/10 spec-i-fi-ca-tions con-nects human-readable de-scrip-tions wit
+h
+
+Underfull \hbox (badness 1360) in paragraph at lines 71--71
+\T1/times/n/n/10 lan-guage into tem-po-ral logic, sep-a-rat-ing domain-specific
+
+
+Package xcolor Warning: Incompatible color definition on input line 75.
+
+
+Package xcolor Warning: Incompatible color definition on input line 103.
+
+[3]
+
+Package xcolor Warning: Incompatible color definition on input line 113.
+
+
+Package xcolor Warning: Incompatible color definition on input line 117.
+
+
+Package xcolor Warning: Incompatible color definition on input line 129.
+
+
+Package xcolor Warning: Incompatible color definition on input line 135.
+
+[4]
+
+Package xcolor Warning: Incompatible color definition on input line 145.
+
+
+Underfull \hbox (badness 1789) in paragraph at lines 149--149
+[]\T1/times/n/n/10 Low-Rank Adap-ta-tion (LoRA) fine-tunes a model by
+
+Package xcolor Warning: Incompatible color definition on input line 162.
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 166--166
+\T1/times/n/n/10 Struc-tural and se-man-tic checks pre-cede con-ver-sion to a
+[5]
+
+Package xcolor Warning: Incompatible color definition on input line 185.
+
+
+Package xcolor Warning: Incompatible color definition on input line 187.
+
+
+Package xcolor Warning: Incompatible color definition on input line 210.
+
+[6 </home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-co
+c/public/paper1-method-preservation-001/manuscript-revision-2026-09-30-001/figu
+res/method-flow-en.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 220.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
+
+LaTeX Font Warning: Font shape `T1/pcr/n/n' undefined
+(Font)              using `T1/pcr/m/n' instead on input line 243.
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 253--253
+\T1/times/n/n/10 The in-clu-sive com-par-i-son ad-mits 11500ms but ex-cludes
+
+Package xcolor Warning: Incompatible color definition on input line 259.
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+[]\T1/times/n/n/10 The pol-icy is \T1/pcr/m/n/8 entry_permitted[t] = AND_j
+
+Underfull \hbox (badness 5050) in paragraph at lines 286--286
+\T1/pcr/m/n/8 clear[j,t]\T1/times/n/n/10 ; EN-TER_ZONE re-quires this value to 
+be
+
+Underfull \hbox (badness 1968) in paragraph at lines 286--286
+\T1/pcr/m/n/8 review_required\T1/times/n/n/10 . For ex-am-ple, start-ing from i
+n-ac-tiv-ity,
+
+Underfull \hbox (badness 2564) in paragraph at lines 286--286
+\T1/times/n/n/10 yields ac-tive $\OMS/cmsy/m/n/10 !$ \T1/times/n/n/10 ac-tive $
+\OMS/cmsy/m/n/10 !$ \T1/times/n/n/10 in-ac-tive $\OMS/cmsy/m/n/10 !$ \T1/times/
+n/n/10 ac-tive. En-try is
+
+Package xcolor Warning: Incompatible color definition on input line 288.
+
+
+Underfull \hbox (badness 1715) in paragraph at lines 290--290
+\T1/times/n/n/10 con-di-tions, and hand-written rules can im-ple-ment them.
+
+Package xcolor Warning: Incompatible color definition on input line 294.
+
+
+Package xcolor Warning: Incompatible color definition on input line 296.
+
+
+Package xcolor Warning: Incompatible color definition on input line 302.
+
+
+Underfull \hbox (badness 1953) in paragraph at lines 304--304
+\T1/times/n/n/10 per-sis-tence, re-lease, tim-ing, and as-sump-tions are sub-se
+-
+
+Package xcolor Warning: Incompatible color definition on input line 315.
+
+[8]
+
+Package xcolor Warning: Incompatible color definition on input line 334.
+
+
+Underfull \hbox (badness 2828) in paragraph at lines 336--336
+\T1/times/n/n/10 Constraint ex-trac-tion here means se-lect-ing and bind-ing
+
+Package xcolor Warning: Incompatible color definition on input line 355.
+
+
+Package xcolor Warning: Incompatible color definition on input line 357.
+
+
+Underfull \hbox (badness 1867) in paragraph at lines 359--359
+\T1/times/n/n/10 Verification re-quires se-man-tic in-put bind-ing and log-i-ca
+l
+[9 </home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-co
+c/public/paper1-method-preservation-001/manuscript-revision-2026-09-30-001/figu
+res/lifecycle-en.pdf> </home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/pro
+jects/guardsynth-coc/public/paper1-method-preservation-001/manuscript-revision-
+2026-09-30-001/figures/evidence-map-en.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 363.
+
+
+Package xcolor Warning: Incompatible color definition on input line 391.
+
+[10]
+
+Package xcolor Warning: Incompatible color definition on input line 420.
+
+
+Package xcolor Warning: Incompatible color definition on input line 422.
+
+[11 </home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-c
+oc/public/paper1-method-preservation-001/manuscript-revision-2026-09-30-001/fig
+ures/temporal-boundary-en.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 451.
+
+
+Package xcolor Warning: Incompatible color definition on input line 457.
+
+
+Package xcolor Warning: Incompatible color definition on input line 481.
+
+[12]
+
+Package xcolor Warning: Incompatible color definition on input line 512.
+
+
+Underfull \hbox (badness 1577) in paragraph at lines 514--514
+\T1/times/n/n/10 We dis-tin-guish the be-hav-ioral ef-fects of adding ex-plicit
+
+
+Underfull \hbox (badness 2913) in paragraph at lines 533--533
+[]\T1/times/n/n/10 The main met-rics are \T1/times/b/n/10 ac-cu-racy \T1/times/
+n/n/10 against the highest-
+
+Package xcolor Warning: Incompatible color definition on input line 538.
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 540--540
+\T1/times/n/n/10 The six task rows cor-re-spond di-rectly to Ta-ble []7[]: each
+
+[13 </home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-c
+oc/public/paper1-method-preservation-001/manuscript-revision-2026-09-30-001/fig
+ures/cnl-map-en.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 567.
+
+
+Package xcolor Warning: Incompatible color definition on input line 580.
+
+
+Package xcolor Warning: Incompatible color definition on input line 608.
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 627--627
+[]\T1/times/n/n/10 Overall, mul-ti-ple ac-tion tasks show ben-e-fits from
+
+Underfull \hbox (badness 10000) in paragraph at lines 627--627
+\T1/times/n/n/10 constraint-enhanced CoC, while the EBLC-supported
+
+Underfull \hbox (badness 10000) in paragraph at lines 627--627
+\T1/times/n/n/10 de-vel-op-ment path com-bines high action-selection
+
+Underfull \hbox (badness 7203) in paragraph at lines 627--627
+\T1/times/n/n/10 per-for-mance with ex-plicit checks of con-straint er-rors
+
+Package xcolor Warning: Incompatible color definition on input line 632.
+
+[15 </home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-c
+oc/public/paper1-method-preservation-001/manuscript-revision-2026-09-30-001/fig
+ures/task-performance-en.pdf> </home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artif
+acts/projects/guardsynth-coc/public/paper1-method-preservation-001/manuscript-r
+evision-2026-09-30-001/figures/contract-linkage-en.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 638.
+
+
+Package xcolor Warning: Incompatible color definition on input line 646.
+
+[16 </home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-c
+oc/public/paper1-method-preservation-001/manuscript-layout-2026-09-30-001/figur
+es/smt-boundary-en.pdf>]
+
+Package xcolor Warning: Incompatible color definition on input line 652.
+
+
+Underfull \hbox (badness 1448) in paragraph at lines 656--656
+\T1/times/n/n/10 checks, and lan-guage gen-er-a-tion to ma-chine pro-cess-ing.
+
+Underfull \hbox (badness 1394) in paragraph at lines 671--672
+\T1/times/n/n/7.61 Decision-Making for Au-tonomous Driv-ing with Retrieval-Augm
+ented
+[17] (./ieee-access-manuscript-en.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information)
+pdfTeX warning (dest): name{section*.2} has been referenced but does not exist,
+ replaced by a fixed one
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><./t1
+-formata-bold.pfb><./t1-formata-condmedium.pfb><./t1-formata-medium.pfb><./t1-f
+ormata-mediumitalic.pfb><./t1-formata-regular.pfb><./t1-giovannistd-bookitalic.
+pfb><./t1-times-bold.pfb><./t1-times-italic.pfb><./t1-times.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on ieee-access-manuscript-en.pdf (17 pages, 539662 bytes).
+Transcript written on ieee-access-manuscript-en.log.

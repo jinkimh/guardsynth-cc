@@ -1,0 +1,113 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>#18 사건 시점 근거 확인</title>
+<style>
+body{font:17px system-ui;margin:22px auto;padding:0 18px;max-width:1600px;line-height:1.6;color:#152234}h1{font-size:27px}fieldset,details{border:1px solid #bac4ce;border-radius:6px;padding:14px;margin:14px 0}label{display:block;margin:12px 0}select,input,textarea,button{font:inherit;padding:9px;max-width:100%}textarea{width:95%;min-height:65px}button{cursor:pointer;margin:4px}button:focus-visible,select:focus-visible{outline:3px solid #0066b8}.note{background:#fff4d0;padding:12px}.viewer{position:relative;width:100%;line-height:0;background:#111}.viewer img{width:100%;display:block}.viewer svg{position:absolute;inset:0;width:100%;height:100%;touch-action:none}.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:7px}.toolbar label{margin:0}#position{width:330px}#status{min-height:28px;color:#175530}dialog{width:96vw;max-width:1800px;max-height:96vh;padding:10px}dialog button{position:sticky;top:0;z-index:2}dialog img{width:100%;cursor:zoom-in}dialog img.native{width:auto;max-width:none}dialog .scroll{overflow:auto;max-height:82vh}#anchor{max-width:100%;width:100%}code{overflow-wrap:anywhere}.small{font-size:14px;color:#465569}#clock{font-weight:700}
+</style>
+<h1>#18 · 판단 시점의 대상·영역 확인</h1>
+<p>기존 답변은 다시 작성하지 않습니다. 이번에는 <strong>9.788초 시점의 대상과 영역, 두 조건</strong>만 확인합니다.
+모르거나 영상에서 판단할 수 없으면 ‘판단 불가’를 선택하면 됩니다. 아래 표시는 확인 전 기계 초안입니다.</p>
+<details><summary>무엇을 확인하나요? — 예와 조작 안내</summary>
+<p>① <b>대상</b>은 원본 주석에서 Agent3으로 연결된 보행자입니다. 아래 점은 주석상 0초의 위치이며 영상 첫 프레임과 정확한 시간 대응이 확인되지 않은 참고 표시입니다.
+과거 프레임을 넘겨 같은 사람인지 확인하세요. 현재 초안 점이 다르면 ‘대상 점 수정’을 선택하고 현재 화면에서 클릭합니다.</p>
+<p>② <b>진입 영역</b>은 에고가 지금 진입하려는 공통 충돌 영역입니다. 사람의 몸 윤곽, 도로 전체나 반대 차로를 칠하는 질문이 아닙니다.
+예를 들어 출구에서 주도로로 합류하는 경로와 보행자 통과 경로가 만나는 영역을 봅니다. 특정할 수 없다면 판단 불가입니다.
+초안이 틀리면 ‘영역 다시 그리기’를 누른 뒤 꼭짓점을 3개 이상 순서대로 클릭하세요. ‘점 하나 취소’로 되돌릴 수 있습니다.</p>
+<p>③ <b>보행자 조건</b>: 그 사람이 진입 경로를 점유하거나 횡단 중인가요? TRUE는 확인됨, FALSE는 해당 관계가 해소된 것이 확인됨입니다.
+‘잘 안 보인다’는 FALSE가 아니라 UNKNOWN입니다. 미래에 어떻게 움직일지 추측하지 않습니다.</p>
+<p>④ <b>주도로 조건</b>: 합류 전에 양보가 필요한 교통 흐름이 보이나요? 보행자가 비켰더라도 다른 차량 때문에 양보가 필요할 수 있습니다.
+합류 문맥·교통 흐름이 불명확하면 UNKNOWN입니다. 국가 법규를 판단하는 질문은 아닙니다.</p>
+<p>프레임은 판단 시점까지의 과거 영상만 제공합니다. 확대 버튼 → 닫기/Esc로 답변을 유지한 채 돌아옵니다.
+기본 화면에서 좌표를 수정하고, 확대 화면에서는 원본 크기로 세부 내용을 확인합니다.</p>
+</details>
+<details><summary>기존 답변과 원본 대상 근거 보기 (수정하지 않음)</summary>
+<p id="prior"></p><p id="coc"></p><p id="anchorTime"></p><p>분홍색 참고 점: 주석상 0초의 Agent3 위치 후보입니다. 실제 영상 첫 프레임의 시각과 다르므로 정확한 위치 증거로 확정하지 않았습니다. 같은 사람인지 불명확하면 판단 불가를 선택하세요.</p>
+<div class="viewer"><img id="anchor" alt="첫 원본 프레임 · source 시점 대응 미확정"><svg id="anchorMark" viewBox="0 0 1000 562.5" aria-label="주석 위치의 context-only 참고 표시"></svg></div>
+<p class="small">이 화면은 CoC와 기존 답변을 보여주는 근거 확인 화면입니다. 독립 행동 정답 검토와는 별개입니다.</p>
+</details>
+<div class="toolbar"><button id="prev">이전 프레임</button><input id="position" type="range" min="0" step="1" aria-label="과거 프레임 선택"><button id="next">다음 프레임</button><button id="atEvent">판단 시점으로</button><span id="clock"></span></div>
+<div class="viewer"><img id="frame" alt="현재 선택한 원본 프레임"><svg id="marks" viewBox="0 0 1000 562.5" aria-label="대상과 영역 수정"></svg></div>
+<div class="toolbar"><button id="zoom">확대 · 원본 크기 확인</button><button id="targetMode">대상 점 수정</button><button id="zoneMode">영역 다시 그리기</button><button id="undo">점 하나 취소</button><button id="finish">수정 종료</button><button id="restore">기계 초안 복원</button><label><input type="checkbox" id="show" checked>표시 보기</label></div>
+<p id="modeInfo" class="small">보기 모드 · 기계 제안은 확인 전 초안입니다.</p>
+<form id="reviewForm">
+<label>검토자 이름/ID <input id="reviewer_id" autocomplete="name"></label>
+<fieldset><legend>1. 대상과 진입 영역</legend>
+<label>현재 점의 대상이 원본 Agent3 보행자와 같은 사람인가요? <select id="target_identity"><option value="">선택하세요</option><option value="CONFIRMED_AGENT3">같은 대상임을 확인</option><option value="UNCERTAIN">다르거나 판단 불가</option></select></label>
+<label>그려진 영역을 이 과제의 진입 영역으로 특정할 수 있나요? <select id="zone_status"><option value="">선택하세요</option><option value="CONFIRMED">현재 영역을 확인</option><option value="UNCERTAIN">영역을 특정할 수 없음</option></select></label>
+</fieldset>
+<fieldset><legend>2. 판단 시점의 두 조건</legend>
+<label>보행자가 그 진입 경로를 점유하거나 횡단 중인가요? <select id="ped_truth"><option value="">선택하세요</option><option value="TRUE">TRUE · 해당 관계가 확인됨</option><option value="FALSE">FALSE · 해당 관계의 해소가 확인됨</option><option value="UNKNOWN">UNKNOWN · 판단 불가</option><option value="CONFLICT">CONFLICT · 근거가 서로 충돌</option></select></label>
+<label>보행자 판단의 근거 (판단 불가이면 그 이유) <textarea id="ped_reason"></textarea></label>
+<label>주도로 합류 문맥을 영상에서 특정할 수 있나요? <select id="road_context"><option value="">선택하세요</option><option value="CONFIRMED">합류 문맥을 확인</option><option value="UNCERTAIN">판단 불가</option></select></label>
+<label>그 영역에 진입하기 전에 양보해야 할 주도로 교통 흐름이 보이나요? <select id="road_truth"><option value="">선택하세요</option><option value="TRUE">TRUE · 양보가 필요한 흐름이 확인됨</option><option value="FALSE">FALSE · 양보 조건이 해소됐음이 확인됨</option><option value="UNKNOWN">UNKNOWN · 판단 불가</option><option value="CONFLICT">CONFLICT · 근거가 서로 충돌</option></select></label>
+<label>주도로 판단의 근거 (판단 불가이면 그 이유) <textarea id="road_reason"></textarea></label>
+</fieldset>
+<button type="button" id="export">답변 JSON 저장</button><button type="button" id="exportDraft">미완성 초안 JSON 저장</button>
+<label>저장한 답변/초안 불러오기 <input id="import" type="file" accept="application/json,.json"></label>
+</form><p id="status" role="status" aria-live="polite"></p>
+<dialog id="zoomDialog"><button id="closeZoom">닫기 · 답변으로 돌아가기</button><button id="nativeZoom">원본 크기 / 화면 맞춤</button><div class="scroll"><img id="zoomImage" alt="확대 원본 프레임"></div></dialog>
+<script id="packet" type="application/json">__SOURCE_REVIEW_PACKET__</script>
+<script>
+'use strict';
+const P=JSON.parse(document.getElementById('packet').textContent),$=id=>document.getElementById(id);
+const fields=['reviewer_id','target_identity','zone_status','road_context','ped_truth','road_truth','ped_reason','road_reason'];
+const key='guardsynth-source-acceptance:'+P.packet_sha256;
+let state={...Object.fromEntries(fields.map(k=>[k,''])),target_point:structuredClone(P.machine_proposal.target_point),zone_polygon:structuredClone(P.machine_proposal.zone_polygon)},mode='view',index=P.frames.length-1;
+function status(t){$('status').textContent=t}
+function record(){return {review_version:P.review_version,packet_sha256:P.packet_sha256,candidate_digest:P.candidate_digest,event_timestamp_us:P.event_timestamp_us,reviewed_at:new Date().toISOString(),...state}}
+function applyRecord(r){
+ if(r.packet_sha256!==P.packet_sha256||r.candidate_digest!==P.candidate_digest||r.event_timestamp_us!==P.event_timestamp_us||r.review_version!==P.review_version)throw Error('다른 장면 또는 버전의 파일입니다.');
+ const pt=p=>Array.isArray(p)&&p.length===2&&p.every(v=>typeof v==='number'&&Number.isFinite(v)&&v>=0&&v<=1);
+ if(r.target_point!==null&&!pt(r.target_point))throw Error('대상 좌표가 잘못되었습니다.');
+ if(!Array.isArray(r.zone_polygon)||r.zone_polygon.length>64||!r.zone_polygon.every(pt)||!fields.every(f=>typeof r[f]==='string'))throw Error('초안 형식이 잘못되었습니다.');
+ const choices={target_identity:['','CONFIRMED_AGENT3','UNCERTAIN'],zone_status:['','CONFIRMED','UNCERTAIN'],road_context:['','CONFIRMED','UNCERTAIN'],ped_truth:['','TRUE','FALSE','UNKNOWN','CONFLICT'],road_truth:['','TRUE','FALSE','UNKNOWN','CONFLICT']};
+ if(Object.entries(choices).some(([k,v])=>!v.includes(r[k])))throw Error('답변 선택값이 잘못되었습니다.');
+ state={...Object.fromEntries(fields.map(f=>[f,r[f]])),target_point:r.target_point,zone_polygon:r.zone_polygon};fill();
+}
+function fill(){for(const f of fields)$(f).value=state[f]}
+function save(){try{localStorage.setItem(key,JSON.stringify(record()));status('초안 자동 저장됨 · 완료 후 답변 JSON을 저장해 주세요.')}catch{status('이 브라우저에 저장하지 못했습니다. 미완성 초안 JSON을 저장해 주세요.')}}
+function draw(){
+ const f=P.frames[index];$('frame').src=f.data_url;$('clock').textContent=(f.timestamp_us/1e6).toFixed(6)+'초'+(f.is_t0?' · 판단 시점':' · 과거');$('position').value=index;
+ $('prev').disabled=index===0;$('next').disabled=index===P.frames.length-1;
+ const marks=$('marks');marks.replaceChildren();if(!f.is_t0||!$('show').checked)return;
+ const svg=(tag,attrs)=>{let e=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [k,v]of Object.entries(attrs))e.setAttribute(k,v);marks.appendChild(e);return e};
+ if(state.zone_polygon.length)svg('polygon',{points:state.zone_polygon.map(p=>[p[0]*1000,p[1]*562.5].join(',')).join(' '),fill:'#ffc40033',stroke:'#ffcf00','stroke-width':2});
+ for(const p of state.zone_polygon)svg('circle',{cx:p[0]*1000,cy:p[1]*562.5,r:4,fill:'#ffc400'});
+ if(state.target_point)svg('circle',{cx:state.target_point[0]*1000,cy:state.target_point[1]*562.5,r:7,fill:'none',stroke:'#ff4b55','stroke-width':3});
+}
+function eventFrame(){index=P.frames.length-1;draw()}
+function editMode(m){mode=m;eventFrame();$('modeInfo').textContent=m==='target'?'대상 점 수정: 현재 대상의 몸 중심을 클릭하세요.':m==='zone'?'영역 수정: 꼭짓점을 순서대로 3개 이상 클릭한 뒤 수정 종료를 누르세요.':'보기 모드 · 초안 변경 후 확인 답변을 다시 선택하세요.'}
+$('marks').onclick=e=>{if(mode==='view'||!P.frames[index].is_t0)return;let r=$('marks').getBoundingClientRect(),p=[(e.clientX-r.left)/r.width,(e.clientY-r.top)/r.height].map(v=>Math.max(0,Math.min(1,v)));
+ if(mode==='target'){state.target_point=p;state.target_identity=''}else if(state.zone_polygon.length<64){state.zone_polygon.push(p);state.zone_status=''}fill();save();draw()};
+$('targetMode').onclick=()=>editMode('target');$('zoneMode').onclick=()=>{if(state.zone_polygon.length&&!confirm('현재 영역 초안을 지우고 다시 그릴까요?'))return;state.zone_polygon=[];state.zone_status='';fill();save();editMode('zone')};
+$('undo').onclick=()=>{if(mode==='zone'){state.zone_polygon.pop();state.zone_status='';fill();save();draw()}};
+$('finish').onclick=()=>editMode('view');$('restore').onclick=()=>{if(!confirm('기계 초안을 복원할까요? 대상/영역 확인 답변은 초기화됩니다.'))return;state.target_point=structuredClone(P.machine_proposal.target_point);state.zone_polygon=structuredClone(P.machine_proposal.zone_polygon);state.target_identity='';state.zone_status='';fill();save();draw()};
+$('prev').onclick=()=>{index=Math.max(0,index-1);draw()};$('next').onclick=()=>{index=Math.min(P.frames.length-1,index+1);draw()};$('position').oninput=e=>{index=Number(e.target.value);draw()};$('atEvent').onclick=eventFrame;$('show').onchange=draw;
+for(const f of fields)$(f).oninput=()=>{state[f]=$(f).value;save()};$('reviewForm').onsubmit=e=>e.preventDefault();
+$('zoom').onclick=()=>{$('zoomImage').src=P.frames[index].data_url;$('zoomDialog').showModal()};$('closeZoom').onclick=()=>$('zoomDialog').close();$('nativeZoom').onclick=()=>$('zoomImage').classList.toggle('native');
+function download(draft){
+ if(!draft&&fields.some(f=>!state[f].trim())){status('모든 질문을 선택하고 짧은 근거를 적어 주세요. 판단 불가도 선택할 수 있습니다.');return}
+ if(!draft&&state.zone_status==='CONFIRMED'&&state.zone_polygon.length<3){status('영역 확인에는 점이 3개 이상 필요합니다.');return}
+ if(!draft&&state.zone_polygon.length&&!validPolygon(state.zone_polygon)){status('영역의 점이 겹치거나 선이 교차합니다. 영역을 다시 그려 주세요.');return}
+ if(!draft&&state.target_identity==='CONFIRMED_AGENT3'&&state.target_point===null){status('현재 대상의 위치를 점으로 표시해 주세요.');return}
+ const url=URL.createObjectURL(new Blob([JSON.stringify(record(),null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=draft?'scene18_source_binding_draft.json':'scene18_source_binding_review.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);status('JSON 저장을 요청했습니다. 파일을 프로젝트 제출 폴더에 놓아 주세요.');
+}
+function validPolygon(p){
+ if(p.length<3||new Set(p.map(x=>JSON.stringify(x))).size!==p.length)return false;
+ const cross=(a,b,c)=>(b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]);
+ const on=(a,b,c)=>Math.abs(cross(a,b,c))<1e-12&&Math.min(a[0],b[0])<=c[0]&&c[0]<=Math.max(a[0],b[0])&&Math.min(a[1],b[1])<=c[1]&&c[1]<=Math.max(a[1],b[1]);
+ let area=0;for(let i=0;i<p.length;i++){let a=p[i],b=p[(i+1)%p.length];area+=a[0]*b[1]-b[0]*a[1];
+  for(let j=i+2;j<p.length;j++){if(i===0&&j===p.length-1)continue;let c=p[j],d=p[(j+1)%p.length];
+   if(cross(a,b,c)*cross(a,b,d)<0&&cross(c,d,a)*cross(c,d,b)<0||on(a,b,c)||on(a,b,d)||on(c,d,a)||on(c,d,b))return false;}}
+ return Math.abs(area)>1e-8;
+}
+$('export').onclick=()=>download(false);$('exportDraft').onclick=()=>download(true);$('import').onchange=async e=>{try{const f=e.target.files[0];if(!f)return;applyRecord(JSON.parse(await f.text()));save();draw()}catch(err){status(err.message)}};
+$('position').max=P.frames.length-1;$('anchor').src=P.frames[0].data_url;
+// Context-only projection on decoded frame zero; no exact annotation-clock match asserted.
+const a=P.source_anchor;const coords=a.point||a.position||a;const x=coords.x,y=coords.y;
+if(typeof x==='number'&&typeof y==='number'){$('anchorMark').innerHTML='<circle cx="'+(x*1000)+'" cy="'+(y*562.5)+'" r="7" fill="none" stroke="magenta" stroke-dasharray="3 3" stroke-width="3"/>'}
+$('anchorTime').textContent='표시 프레임: '+(P.source_anchor_display.display_frame_timestamp_us/1e6).toFixed(6)+'초 / 원본 점 주석: 0초 · 시간 대응 미확정';
+$('prior').textContent='기존 시간창 답변: '+P.prior_observation.visual_association_observation+' / '+P.prior_observation.visual_temporal_observation;
+$('coc').textContent='원본 CoC: '+P.coc;
+try{const saved=localStorage.getItem(key);if(saved){applyRecord(JSON.parse(saved));status('이 장면의 저장된 초안을 복원했습니다.')}}catch{status('기존 초안을 불러오지 못했습니다. JSON 파일로 복원할 수 있습니다.')}
+fill();draw();
+</script></html>

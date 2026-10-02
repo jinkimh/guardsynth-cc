@@ -1,0 +1,85 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>독립 개발 검토</title><style>
+body{font:17px system-ui;max-width:1600px;margin:24px auto;padding:0 18px;line-height:1.6;color:#16283a}h1{font-size:27px}label{display:block;margin:15px 0}input,select,textarea,button{font:inherit;padding:9px;max-width:98%}button{cursor:pointer;margin:4px}textarea{width:95%;min-height:85px}fieldset,details{border:1px solid #adb8c3;padding:14px;margin:14px 0;border-radius:7px}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}.note{background:#fff1cf;padding:12px}.viewer{position:relative;line-height:0}.viewer img{width:100%;display:block}.viewer svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px}#position{width:350px}dialog{width:96vw;max-width:1800px;max-height:96vh}.scroll{overflow:auto;max-height:82vh}dialog img{width:100%}dialog img.native{width:auto;max-width:none}#status{color:#165030;min-height:28px}[hidden]{display:none!important}
+</style>
+<style>.comparison{display:grid;grid-template-columns:1fr 1fr;gap:18px}.comparison section{padding:16px;background:#f1f5f9;border:1px solid #c8d3df;border-radius:8px}.comparison h3{margin:0 0 12px;font-size:20px}.comparison li{margin:10px 0}.decision-question{font-weight:600;margin:18px 0 8px}@media(max-width:850px){.comparison{grid-template-columns:1fr}}</style>
+<h1 id="title"></h1><p id="intro"></p><p class="note" id="boundary"></p>
+<section id="actionSection" hidden>
+<p>노란 영역은 이 과제에서 에고 차량이 진입하려는 영역입니다. 판단 시점까지의 이미지에서 <b>지금 그 영역으로 진입 가능한지</b> 판단해 주세요.
+영상 속 차량이 실제로 선택한 행동을 복사하는 질문은 아닙니다. 충분히 볼 수 없으면 판단 불가를 선택하세요.</p>
+<div class="toolbar"><button id="prev">이전</button><input id="position" type="range" min="0" step="1" aria-label="과거 프레임"><button id="next">다음</button><button id="atEvent">판단 시점</button><span id="clock"></span></div>
+<div class="viewer"><img id="frame" alt="검토 원본 프레임"><svg id="zone" viewBox="0 0 1000 562.5" aria-label="과제 진입 영역"></svg></div>
+<button id="zoom">확대 · 원본 크기 확인</button>
+</section>
+<section id="cnlSection" hidden>
+<p id="comparisonInstruction">각 카드의 <b>A: 기준 규칙</b>과 <b>B: 생성된 문장</b>을 비교합니다. B가 A의 조건을 빠뜨리거나 바꿨는지 확인해 주세요. 지금 영상에서 진입해도 되는지 다시 판단하는 질문은 아닙니다.</p>
+<div id="koreanHelp" hidden><p id="koreanNotice" class="note"></p>
+<p>각 카드 아래에서 하나를 선택하세요. 같은 조건을 전달하면 <b>의미 일치</b>, 빠지거나 달라진 조건이 있으면 <b>의미 차이 있음</b>, 비교하기 어려우면 <b>판단 불가</b>입니다. 답변 근거에는 카드 번호와 이유를 적어 주세요.</p>
+<button id="downloadOriginal" type="button">원본 명세·영문·추적 정보 다운로드</button></div>
+<details><summary>참고 정보 · 명세 소개와 출처 (답변 대상 아님)</summary><pre id="contract"></pre></details>
+<details><summary>기준 논리 규칙 보기 (관측 입력과 솔버 결과 제외)</summary><p>‘=’는 양쪽 값이 같아야 한다는 뜻이고 ‘⇒’는 왼쪽 조건이면 오른쪽을 따라야 한다는 뜻입니다. 현재/다음 시점은 추상적인 판단 순서입니다.</p><pre id="core"></pre></details>
+<div id="clauses"></div>
+</section>
+<form id="reviewForm">
+<fieldset><legend>검토자와 독립성</legend>
+<label>검토자 이름/ID <input id="reviewer_id" autocomplete="name"></label>
+<label id="independenceLabel"></label><select id="independence" aria-label="독립성 선언"><option value="">선택하세요</option><option value="INDEPENDENT">해당 노출/참여 없음</option><option value="EXPOSED_OR_INVOLVED">이미 노출됐거나 참여함</option><option value="UNCERTAIN">확실하지 않음</option></select>
+</fieldset>
+<label id="actionAnswer" hidden>판단 시점의 행동 <select id="action"><option value="">선택하세요</option><option value="ENTER_ZONE">ENTER_ZONE · 지금 진입 가능</option><option value="DEFER_ENTRY">DEFER_ENTRY · 지금 진입 보류 필요</option><option value="UNJUDGEABLE">판단 불가</option></select></label>
+<label>판단 근거 또는 발견한 차이 <textarea id="reason"></textarea></label>
+<button type="button" id="export">검토 답변 JSON 저장</button><button type="button" id="draft">미완성 초안 저장</button>
+<label>JSON 불러오기 <input id="import" type="file" accept=".json,application/json"></label>
+</form><p id="status" role="status" aria-live="polite"></p>
+<dialog id="zoomDialog"><button id="closeZoom">닫기 · 답변으로 돌아가기</button><button id="nativeZoom">원본 크기 / 화면 맞춤</button><div class="scroll"><img id="zoomImage" alt="확대 원본"></div></dialog>
+<script id="packet" type="application/json">__INDEPENDENT_REVIEW_PACKET__</script>
+<script>
+'use strict';
+const P=JSON.parse(document.getElementById('packet').textContent),$=id=>document.getElementById(id),isAction=P.kind==='ACTION',key='guardsynth-independent:'+P.packet_sha256;
+let index=isAction?P.frames.length-1:0;
+const K=P.korean_review;
+const answerIds=isAction?['action']:(K&&K.review_clause_ids?K.review_clause_ids:P.clause_ids);
+function readable(s){for(const [ref,label] of Object.entries(K?K.reference_aliases:{}))s=s.split(ref).join(label);return s}
+let state={reviewer_id:'',independence:'',reason:'',answers:Object.fromEntries(answerIds.map(id=>[id,'']))};
+function status(t){$('status').textContent=t}
+function record(){return {review_version:P.review_version,packet_sha256:P.packet_sha256,kind:P.kind,reviewed_at:new Date().toISOString(),...state}}
+function save(){try{localStorage.setItem(key,JSON.stringify(record()));status('초안 자동 저장됨 · 완료 후 답변 JSON을 저장하세요.')}catch{status('브라우저 저장 실패: 초안 JSON을 저장해 주세요.')}}
+function fill(){for(const id of ['reviewer_id','independence','reason'])$(id).value=state[id];for(const id of answerIds)$(isAction?id:'answer_'+id).value=state.answers[id]}
+function restore(r){
+ if(r.review_version!==P.review_version||r.packet_sha256!==P.packet_sha256||r.kind!==P.kind)throw Error('다른 패킷의 답변입니다.');
+ if(!['reviewer_id','independence','reason'].every(k=>typeof r[k]==='string')||!r.answers||Object.keys(r.answers).sort().join('|')!==[...answerIds].sort().join('|'))throw Error('답변 형식이 잘못되었습니다.');
+ const choices=isAction?['','ENTER_ZONE','DEFER_ENTRY','UNJUDGEABLE']:['','MATCH','MISMATCH','UNJUDGEABLE'];
+ if(Object.values(r.answers).some(v=>!choices.includes(v))||!['','INDEPENDENT','EXPOSED_OR_INVOLVED','UNCERTAIN'].includes(r.independence))throw Error('선택값이 잘못되었습니다.');
+ state={reviewer_id:r.reviewer_id,independence:r.independence,reason:r.reason,answers:{...r.answers}};fill();
+}
+function draw(){const f=P.frames[index];$('frame').src=P.images[index];$('position').value=index;$('clock').textContent=(f.timestamp_us/1e6).toFixed(6)+'초'+(f.is_t0?' · 판단 시점':' · 과거');$('zone').replaceChildren();
+ if(f.is_t0){const e=document.createElementNS('http://www.w3.org/2000/svg','polygon');e.setAttribute('points',P.zone_polygon.map(p=>[p[0]*1000,p[1]*562.5].join(',')).join(' '));e.setAttribute('fill','#ffce0022');e.setAttribute('stroke','#ffce00');e.setAttribute('stroke-width','2');$('zone').appendChild(e)}
+ $('prev').disabled=index===0;$('next').disabled=index===P.frames.length-1;
+}
+$('title').textContent=isAction?'독립 행동 검토 · 개발 예제 A001':'독립 CNL 의미 검토 · 개발 예제 A001';
+$('intro').textContent=isAction?'주어진 이미지와 진입 영역만으로 판단하는 개발 검토입니다.':'구조화 명세에서 생성된 자연어 문장의 의미를 확인하는 개발 검토입니다.';
+$('boundary').textContent=isAction?'이 장면의 원본 CoC, 이전 답변, 제약 문장 또는 모델 결과를 이미 보셨다면 독립 검토자로 집계하지 않습니다. 이 패킷은 본 실험의 held-out 평가가 아닙니다.':'명세 설계·변환기 또는 renderer 구현에 참여했다면 독립성 항목에 표시해 주세요. 이 자료를 보기 전 같은 장면의 행동 검토를 먼저 마쳐야 합니다.';
+$('independenceLabel').textContent=isAction?'이 장면의 CoC·기존 답변·제약 문장·모델 결과를 이미 보셨나요?':'이 명세의 설계·변환기·자연어 renderer 구현에 참여하셨나요?';
+if(isAction){$('actionSection').hidden=false;$('actionAnswer').hidden=false;$('position').max=P.frames.length-1;
+ $('prev').onclick=()=>{index=Math.max(0,index-1);draw()};$('next').onclick=()=>{index=Math.min(P.frames.length-1,index+1);draw()};$('atEvent').onclick=()=>{index=P.frames.length-1;draw()};$('position').oninput=e=>{index=Number(e.target.value);draw()};
+ $('zoom').onclick=()=>{$('zoomImage').src=P.images[index];$('zoomDialog').showModal()};$('closeZoom').onclick=()=>$('zoomDialog').close();$('nativeZoom').onclick=()=>$('zoomImage').classList.toggle('native');draw();
+}else{$('cnlSection').hidden=false;$('contract').textContent=readable(JSON.stringify(K?K.contract_ko:P.contract,null,2));$('core').textContent=readable(JSON.stringify(K?K.core_ko:P.core_semantics,null,2));
+ if(K){$('koreanHelp').hidden=false;$('koreanNotice').textContent=K.notice;$('title').textContent='독립 자연어 명세 검토 · 한글판';
+  $('downloadOriginal').onclick=()=>{const u=URL.createObjectURL(new Blob([JSON.stringify({contract:P.contract,core_semantics:P.core_semantics,cnl_mapping:P.cnl_mapping,cnl_text:P.cnl_text,reference_aliases:K.reference_aliases},null,2)],{type:'application/json'})),a=document.createElement('a');a.href=u;a.download='scene18_cnl_review_originals.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)};
+ }
+ for(const c of P.cnl_mapping.clauses){if(!answerIds.includes(c.clause_id))continue;
+ const box=document.createElement('fieldset'),legend=document.createElement('legend'),text=document.createElement('p'),select=document.createElement('select'),pair=K&&K.pairs?K.pairs[c.clause_id]:null;
+ legend.textContent=pair?pair.title:(K?K.clauses[c.clause_id].title:c.clause_id);text.textContent=K?'검토할 자연어 · 한글 번역: '+K.clauses[c.clause_id].translation:c.text;select.id='answer_'+c.clause_id;select.setAttribute('aria-label',legend.textContent+' 의미 대응');
+  for(const [v,t]of [['','선택하세요'],['MATCH','의미 일치'],['MISMATCH','의미 차이 있음'],['UNJUDGEABLE','판단 불가']]){const o=document.createElement('option');o.value=v;o.textContent=t;select.appendChild(o)}box.appendChild(legend);
+  if(pair){const target=document.createElement('p'),columns=document.createElement('div');target.textContent=pair.target;columns.className='comparison';box.appendChild(target);
+   for(const [heading,lines]of [['A · 실제 명세 규칙의 해설',pair.source_explanation],['B · 실제 생성 문장의 한글 번역',pair.translation_lines]]){const section=document.createElement('section'),h=document.createElement('h3'),list=document.createElement('ul');h.textContent=heading;for(const line of lines){const li=document.createElement('li');li.textContent=line;list.appendChild(li)}section.append(h,list);columns.appendChild(section)}box.appendChild(columns);
+   const details=document.createElement('details'),summary=document.createElement('summary'),trace=document.createElement('p'),core=document.createElement('pre'),english=document.createElement('p');summary.textContent='실제 원본 조항과 영문 원문 확인';trace.textContent='A 출처: '+pair.source_file+' → '+pair.core_clause_ids.join(', ')+' / B 출처: '+pair.generated_file+' → '+pair.generated_clause_id;core.textContent=readable(JSON.stringify({한글_논리식:pair.source_core_ko,원본_논리식:pair.source_core},null,2));english.textContent=readable(pair.generated_excerpt);details.append(summary,trace,core,english);box.appendChild(details);
+   const question=document.createElement('p');question.className='decision-question';question.textContent=pair.question;box.appendChild(question);
+  }else{box.appendChild(text);if(K){const details=document.createElement('details'),summary=document.createElement('summary'),original=document.createElement('p');summary.textContent='영문 원문 확인 (출처는 읽기 쉬운 이름으로 표시)';original.textContent=readable(c.text);details.append(summary,original);box.appendChild(details)}}
+  box.appendChild(select);$('clauses').appendChild(box)}
+}
+for(const id of ['reviewer_id','independence','reason'])$(id).oninput=()=>{state[id]=$(id).value;save()};for(const id of answerIds)$(isAction?id:'answer_'+id).onchange=e=>{state.answers[id]=e.target.value;save()};$('reviewForm').onsubmit=e=>e.preventDefault();
+function download(draft){if(!draft&&(!state.reviewer_id.trim()||!state.reason.trim()||!state.independence||Object.values(state.answers).some(v=>!v))){status('검토자·독립성·모든 판단·근거를 입력해 주세요. 판단 불가도 유효합니다.');return}
+ const url=URL.createObjectURL(new Blob([JSON.stringify(record(),null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='scene18_independent_'+P.kind.toLowerCase()+'_'+(draft?'draft':'review')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);status('JSON 저장을 요청했습니다. 지정된 제출 폴더에 놓아 주세요.');}
+$('export').onclick=()=>download(false);$('draft').onclick=()=>download(true);$('import').onchange=async e=>{try{if(!e.target.files[0])return;restore(JSON.parse(await e.target.files[0].text()));save()}catch(err){status(err.message)}};
+try{const r=localStorage.getItem(key);if(r){restore(JSON.parse(r));status('저장된 초안을 복원했습니다.')}}catch{status('초안 복원 실패: 저장한 JSON을 불러올 수 있습니다.')}fill();
+</script></html>

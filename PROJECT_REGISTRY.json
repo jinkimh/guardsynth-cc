@@ -1,0 +1,84 @@
+{
+  "codex_version": "3.6",
+  "repository_namespaces": [
+    {"path": "projects", "role": "research_question_owners"},
+    {"path": "platforms", "role": "shared_research_platforms"},
+    {"path": "apps", "role": "repository_applications"},
+    {"path": "shared", "role": "multi_owner_utilities"},
+    {"path": "artifacts", "role": "generated_outputs"},
+    {"path": "governance", "role": "repository_policies"},
+    {"path": "docs", "role": "repository_architecture_only"},
+    {"path": "data", "role": "license_separated_shared_inputs"},
+    {"path": "runtime", "role": "local_execution_environments"},
+    {"path": "third_party", "role": "pinned_upstream_checkouts"},
+    {"path": "archive", "role": "immutable_history"},
+    {"path": "cli", "role": "repository_tools_and_compatibility"},
+    {"path": "src", "role": "compatibility_only"},
+    {"path": "experiments", "role": "compatibility_only"},
+    {"path": "tests", "role": "repository_policy_tests"}
+  ],
+  "hidden_namespaces": [
+    {"path": ".superpowers", "role": "ignored_agent_scratch"},
+    {"path": ".worktrees", "role": "registry_only"},
+    {"path": ".agents", "role": "local_agent_state"},
+    {"path": ".codex", "role": "local_codex_state"}
+  ],
+  "projects": [
+    {
+      "id": "safety-constrained-coc",
+      "order": 1,
+      "path": "projects/01-safety-constrained-coc",
+      "paper_status": "MANUSCRIPT_READY",
+      "artifact_root": "artifacts/projects/safety-constrained-coc"
+    },
+    {
+      "id": "specification-alignment",
+      "order": 2,
+      "path": "projects/02-specification-alignment",
+      "paper_status": "WRITING_PLAN",
+      "artifact_root": "artifacts/projects/specification-alignment"
+    },
+    {
+      "id": "sequential-coc-verification",
+      "order": 3,
+      "path": "projects/03-sequential-coc-verification",
+      "paper_status": "MANUSCRIPT_READY",
+      "artifact_root": "artifacts/projects/sequential-coc-verification"
+    },
+    {
+      "id": "guardsynth-coc",
+      "order": 4,
+      "path": "projects/04-guardsynth-coc",
+      "paper_status": "RESEARCH_ACTIVE",
+      "artifact_root": "artifacts/projects/guardsynth-coc"
+    },
+    {
+      "id": "eblc-language-verification",
+      "order": 5,
+      "path": "projects/05-eblc-language-verification",
+      "paper_status": "RESEARCH_PLANNING",
+      "artifact_root": "artifacts/projects/eblc-language-verification"
+    }
+  ],
+  "platforms": [
+    {
+      "id": "eblc-bcv",
+      "path": "platforms/eblc-bcv",
+      "artifact_root": "artifacts/platforms/eblc-bcv"
+    }
+  ],
+  "applications": [
+    {
+      "id": "guardsynth-studio",
+      "path": "apps/guardsynth_studio",
+      "owner_project": "guardsynth-coc",
+      "artifact_root": "artifacts/projects/guardsynth-coc"
+    },
+    {
+      "id": "research-portal",
+      "path": "apps/research_portal",
+      "owner_project": "guardsynth-coc",
+      "artifact_root": "artifacts/projects/guardsynth-coc"
+    }
+  ]
+}

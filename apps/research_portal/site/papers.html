@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>우리의 논문 · GuardSynth-CoC</title>
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body data-page="papers">
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <header class="topbar"><nav class="nav" aria-label="주 메뉴">
+    <a class="brand" href="index.html"><span class="brand-mark">GS</span>Research Portfolio</a>
+    <span class="classification">LOCAL · RESTRICTED</span>
+    <div class="nav-links"><a href="index.html#research-projects">연구영역</a><a href="milestones.html">전체 현황</a><a aria-current="page" href="papers.html">우리의 논문</a><a href="review.html">검토 선택</a><a href="guide.html">검토 가이드</a></div>
+  </nav></header>
+  <main id="main" class="shell">
+    <section class="section section-first papers-intro">
+      <p class="eyebrow">Research publications</p>
+      <h1>우리의 논문</h1>
+      <p><code>papers/</code>에 보관된 두 완성 원고를 <strong>요약</strong>, <strong>핵심 기여</strong>, <strong>핵심 내용</strong>과 주장 경계 중심으로 소개합니다. 아래 버튼으로 해당 PDF를 직접 내려받을 수 있습니다.</p>
+    </section>
+    <section class="section">
+      <div class="notice info"><strong>읽는 방법:</strong> 각 논문의 결과는 서로 다른 질문과 실험 범위를 다룹니다. 합성 실험, bounded 모델 검사 또는 annotation 검사를 실제 차량 안전성 증명으로 해석하지 마십시오.</div>
+      <div class="paper-list">
+        <article class="paper-card">
+          <div class="paper-card-head">
+            <div class="paper-identity">
+              <p class="eyebrow">Paper 1</p>
+              <h2>비전-언어 자율주행 모델의 실행 가드 기반 궤적 후보 선택</h2>
+              <p class="paper-title-en">Guard-Aware Trajectory Candidate Selection for Vision-Language Autonomous Driving: Safety-Constrained Chain-of-Causation</p>
+            </div>
+            <span class="status ready">완성 원고 · 익명 심사본</span>
+          </div>
+          <section class="paper-summary">
+            <h3>요약</h3>
+            <p>행동 목표만 설명하는 CoC에 실행 가드를 결합하고, 동일한 장면·목표·후보에서 가드만 바꾸는 paired-contract 평가로 VLM이 제약을 실제 선택에 반영하는지 검토합니다.</p>
+          </section>
+          <div class="paper-details">
+            <section class="paper-section"><h3>핵심 기여</h3><ul class="compact-list">
+              <li>CoC를 요구사항과 실행 가드를 함께 갖는 Safety-Constrained CoC로 확장</li>
+              <li>가드 준수 여부만 달라지는 paired-contract benchmark 설계</li>
+              <li>가드 위반 감소와 안전한 목표 완료·계약 전환을 함께 평가</li>
+            </ul></section>
+            <section class="paper-section"><h3>핵심 내용</h3><ul class="compact-list">
+              <li>표준 3-seed 시간 계약 실험에서 requirement-only의 가드 위반 31.9%를 0%로 줄였습니다.</li>
+              <li>미학습 시간값에서는 성능이 크게 하락해 수치 일반화의 한계를 함께 확인했습니다.</li>
+              <li>합성 후보 선택의 학습 가능성을 보여주지만 실도로 grounding이나 차량 안전을 입증하지 않습니다.</li>
+            </ul></section>
+          </div>
+          <div class="paper-actions"><a class="button paper-download" href="downloads/paper1-safety-constrained-coc.pdf" download="paper1-safety-constrained-coc.pdf">논문 PDF 다운로드</a></div>
+        </article>
+
+        <article class="paper-card">
+          <div class="paper-card-head">
+            <div class="paper-identity">
+              <p class="eyebrow">Paper 3</p>
+              <h2>E2E 자율주행 연속 CoC 주석의 상태 일관성 검증</h2>
+              <p class="paper-title-en">Stateful Consistency Verification of Sequential CoC Annotations for E2E Autonomous Driving: A CoC-Nusc and UPPAAL Study</p>
+            </div>
+            <span class="status ready">완성 원고 · 10페이지 익명 심사본</span>
+          </div>
+          <section class="paper-summary">
+            <h3>요약</h3>
+            <p>개별 CoC만 검사하면 놓치는 지속 의무, 해제 조건과 행동 순서를 순차 계약으로 컴파일하고, 상태 기반 Python monitor와 UPPAAL 모델로 일관성을 검사합니다.</p>
+          </section>
+          <div class="paper-details">
+            <section class="paper-section"><h3>핵심 기여</h3><ul class="compact-list">
+              <li>연속 CoC를 지속 의무·해제·행동 순서를 가진 상태 계약으로 변환</li>
+              <li>UNKNOWN을 보존하는 3값 근거와 상태 기반 일관성 검사 도입</li>
+              <li>Python monitor와 UPPAAL의 제한된 변환 일치 및 witness 제시</li>
+            </ul></section>
+            <section class="paper-section"><h3>핵심 내용</h3><ul class="compact-list">
+              <li>90개 trajectory-linked multi-CoC 장면에서 309개 인접 window를 추출했습니다.</li>
+              <li>합성 40개 mutation을 모두 검출했지만 이는 자연 오류 검출률이 아닌 rule-fixture coverage입니다.</li>
+              <li>UPPAAL 7개 canonical fixture의 불일치는 0개였으나 독립적인 의미 검증이나 차량 안전 증명은 아닙니다.</li>
+            </ul></section>
+          </div>
+          <div class="paper-actions"><a class="button paper-download" href="downloads/paper3-sequential-coc-uppaal-10pages.pdf" download="paper3-sequential-coc-uppaal-10pages.pdf">10페이지 논문 PDF 다운로드</a></div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">GuardSynth-CoC · 로컬 논문 포트폴리오</footer>
+</body>
+</html>

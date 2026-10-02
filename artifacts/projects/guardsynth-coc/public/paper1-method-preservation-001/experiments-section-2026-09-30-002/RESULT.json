@@ -1,0 +1,38 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "experiments-section-2026-09-30-002",
+  "status": "bilingual_section_revision_complete",
+  "prior_snapshot": "experiments-section-2026-09-30-001",
+  "changes": [
+    "Added primary-condition definitions for P0, P1, and P2 and an explanatory input example; the frozen protocol has no P3 arm.",
+    "Added normal SAT/UNSAT counts, repeated versus distinct assignment counts, and admissible-entry checks.",
+    "Added observed UNSAT examples, injected-error query discrepancies, a representative deletion-minimal core, and interpretation-specific handling principles.",
+    "Distinguished recorded results from recommended approval/export handling and from implemented automatic repair."
+  ],
+  "pdfs": {
+    "ko": {"file": "ieee-access-experiments-v01-ko.pdf", "pages": 8},
+    "en": {"file": "ieee-access-experiments-v01-en.pdf", "pages": 11}
+  },
+  "content_per_language": {
+    "main_tables": 5,
+    "main_figures": 3,
+    "supplementary_tables": 2,
+    "supplementary_figures": 1
+  },
+  "verification": {
+    "prediction_rows_reaggregated": 23760,
+    "smt_replay": "unsat_review.json",
+    "content_checks": "content_checks.json",
+    "prediction_checks": "data_checks.json",
+    "unexpected_unmodified_smt_outcomes": 0,
+    "solver_unknown": 0,
+    "pdf_text_units_matched_per_language": 267,
+    "file_naming_preexisting_unrelated_violations": 5,
+    "file_naming_new_violations": 0
+  },
+  "new_model_calls": 0,
+  "new_training_runs": 0,
+  "original_experiment_outputs_modified": false,
+  "main_tex_modified": false,
+  "integration_status": "standalone_section_draft_not_yet_integrated_into_main_tex"
+}

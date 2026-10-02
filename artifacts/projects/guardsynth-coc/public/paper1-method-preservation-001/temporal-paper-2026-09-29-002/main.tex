@@ -1,0 +1,270 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,hyperref,graphicx}
+\title{GuardSynth: Verified Constraint Rendering for Visual Action Learning}
+\author{Author information pending}
+\date{Working manuscript, September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study whether a source-bearing executable constraint representation can preserve
+previously observed benefits of supplied natural-language constraints in visual
+language model action selection. Our pipeline separates supplied assumptions,
+typed constraint lowering, bounded solver checks, controlled-language rendering,
+and visual model learning. A controlled temporal task compares an unconstrained
+chain of cognition (P0), a supplied natural-language constraint (P1), and an
+EBLC-Core-verified rendering of the same constraint (P2). Constraints are visible
+at training and inference in both constrained conditions. Nine local LoRA fits
+completed 648 optimizer updates and 2,592 action predictions. On the standard
+benchmark, P0 violation/safe completion was 0.319/0.681; both P1 and P2 achieved
+0.000/1.000 across all three seeds. A new generator-seed sample reproduced this
+pattern. The prospectively fixed point criteria support preservation within this
+small reused template family, not formal noninferiority or road generalization.
+Follow-up clearance-time changes increase P2 violation to 0.167--0.250,
+revealing limited robustness. Separately, layered checks detect all 144 supported
+injected constraint errors but miss 24 consistently corrupted-source controls;
+verification's contribution is scoped constraint quality, not an additional
+causal performance gain.
+\end{abstract}
+\section{Question and scope}
+Verification of a formal representation does not establish the truth of its
+source assumptions or the behavior of a learned policy. We therefore distinguish
+semantic correspondence, behavioral effect preservation, and real-scene source
+applicability. The present experiment tests the first two under supplied synthetic
+assumptions. Existing reviewed road scenes provide a separate application case
+study, not an independent road-safety test.
+\section{Attributed prior evidence}
+Project01's temporal guard experiment trained Qwen3-VL-2B LoRA adapters for three
+seeds. Its reported standard-task mean violation rates were 0.319 for original
+CoC and 0.000 for inline natural-language constraints; safe goal completion was
+0.681 and 1.000. These are prior Project01 results, not current P2 measurements.
+On unseen time values, safe completion was 0.625 and 0.649, indicating limited
+numerical generalization. We reuse that project's generator, visual processor,
+and optimizer harness without modifying its source or results.
+The historical task contains deliberately supplied guards rather than automatically
+extracted road constraints. Its earlier inline-NL condition remains P1's reference;
+it is never relabeled as a previously demonstrated P2 result.
+\section{Method}
+The restricted supplied temporal profile identifies ego, a pedestrian conflict
+zone, a no-entry obligation, and a continuous-clear release duration. The world
+assumes exactly one occupied-to-clear transition without reoccupation. Lowering
+uses integer millisecond tick counts and an implication from entry to entry time
+being no earlier than clearance plus the duration. The shared EBLC Core parser
+checks typing and the SMT compiler checks feasibility and boundary cases.
+The renderer reads only validated contract fields; candidate labels and action
+answers are not inputs to constraint generation. This is a controlled profile,
+not a claim that the general EBLC lifecycle or real-road extraction is solved.
+The modeled decision is entry admissibility: candidate waiting periods are fixed
+by the controlled task. The Core does not model velocity during a wait; the CNL
+comparison does not certify kinematic equivalence outside this candidate family.
+\section{Frozen experiment}
+Protocol \texttt{paper1-method-preservation-v0.1} fixes seeds 42, 17, and 123;
+192 training scenes, two counterfactual contracts per scene; three epochs,
+batch size two, accumulation eight, and 72 optimizer updates per arm and seed.
+All arms use the same Qwen checkpoint, visual inputs, targets, and optimizer.
+P1 and P2 append their constraint to the original CoC during both learning and
+inference. Only assistant answer tokens receive loss. P0 deliberately lacks the
+contract needed to distinguish counterfactual pairs.
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-paper-2026-09-29-001/storyboards.pdf}
+\caption{All six distinct rendered storyboards in the reused Project01 task.
+Each contains four temporal panels. Repeated generator seeds change sample
+frequencies and candidate label rotations, not this visual environment family.}
+\end{figure}
+
+Each checkpoint is evaluated on the historical benchmark distribution, a new
+fixed generator-seed sample, and unseen temporal values. The independent program
+scorer uses environment times and candidate progress, not generated CNL or model
+self-assessment. We report violations, safe goal completion, deadlock as an
+unnecessary-stop proxy, accuracy, coverage, paired contract accuracy, and raw
+per-example outputs. Template-cluster paired bootstrap intervals describe
+uncertainty conditional on this small task family.
+
+Before new outcomes, we fixed per-seed level criteria: P1 and P2 violation at
+most 5\% and safe completion at least 95\%; P2 improvement over P0 at least
+20 percentage points on both violation and safe completion; and no more than
+5 percentage points degradation from P1 on either endpoint. The five-percentage-point tolerance is a prospectively chosen operational
+criterion, not a margin supplied by the historical study. These operational
+criteria do not establish formal noninferiority. Equally weak P1 and P2 fail.
+\section{Results}
+All nine fits completed 72 updates each and saved distinct adapters. Each adapter
+contains 224 tensors, including 112 nonzero LoRA B matrices. All 2,592 predictions
+were valid. Table~\ref{tab:results} reports the new Project04 measurements;
+historical values were not copied into these cells. P0/P1 deliberately reuse the
+prior generator, seeds, and task inputs as replication controls, not independent
+new training cohorts. P2 uses a different rendered constraint string.
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrr}
+\toprule
+Evaluation & Arm & Violation & Safe completion & Accuracy\\
+\midrule
+Benchmark & P0 & .3194 & .6806 & .5000\\
+          & P1 & .0000 & 1.0000 & 1.0000\\
+          & P2 & .0000 & 1.0000 & 1.0000\\
+New seed  & P0 & .3160 & .6840 & .5000\\
+          & P1 & .0000 & 1.0000 & 1.0000\\
+          & P2 & .0000 & 1.0000 & 1.0000\\
+Unseen time & P0 & .3750 & .6250 & .5000\\
+            & P1 & .3611 & .6389 & .6250\\
+            & P2 & .0000 & 1.0000 & .8993\\
+\bottomrule
+\end{tabular}
+\caption{Three-seed means from newly executed matched fits. Deadlock was zero
+and coverage was one for all arms/splits. New seeds reuse the same templates.}
+\label{tab:results}
+\end{table}
+
+Every seed met the prespecified P1 replication, P2 level, P2--P0 improvement, and
+P2--P1 preservation point criteria on both standard evaluations. The new-seed
+P2--P0 violation difference was $-0.3160$, with conditional template-cluster
+95\% bootstrap interval $[-0.4348,-0.1832]$; safe completion increased by the
+same magnitude. P2--P1 differences were zero, with degenerate empirical intervals
+$[0,0]$. These intervals describe the observed templates and do not prove a
+population noninferiority margin. In particular, the interval does not establish
+a minimum 20-percentage-point improvement over broader environments.
+
+The unseen-time results are descriptive secondary evidence: P1 safe completion
+remained limited at .6389, whereas P2 reached 1.0000 with accuracy .8993. The
+gap between completion and accuracy reflects safe but suboptimal later entries.
+Contract-pair accuracy was .0000/.2778/.7986 for P0/P1/P2 on unseen time, versus
+.0000/1.0000/1.0000 on the standard evaluations. This does not isolate a solver
+benefit or establish general numerical reasoning.
+
+The bridge passes 100 SMT queries covering
+four release durations and boundary/holding cases. The supplied contract bridge also rejects unsupported subject, unit, obligation,
+and duration changes. A deleted-entry-gate mutation is detected by the boundary
+queries. The paired data export has
+2,016 records across seed/split combinations; these are not 2,016 independent
+visual scenes.
+\section{Follow-up diversity and constraint quality}
+The D1--D4 follow-up was designed after the primary results and frozen separately
+before new predictions. It reuses all nine adapters without training on the new
+diagnostic cases. D1 separately varies clearance time, duration, their combination,
+and candidate boundaries, with 24 balanced rows per stratum. Displayed and tested
+boundaries differ by 0.1 seconds, avoiding hidden precision requirements. D2
+uses two fixed, field-checked paraphrases plus canonical wording. D3 holds text
+and candidates fixed while retaining, blanking, or swapping the storyboard.
+The swap shifts visual clearance by one second; retained-source and image-implied
+references are evaluated separately. Missing and contradictory visual inputs are
+diagnostics, not road error rates. Identical P0 inputs are cached rather than
+counted as independent observations.
+
+The completed follow-up contains 2,160 scored rows from 1,476 actual model calls.
+D1 has nine distinct images, six absent from the original six-image experiment;
+each stratum has only three clearance-time groups, with label rotations and
+contract pairs kept together in the paired seed/group bootstrap.
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+Diagnostic & P1 viol. & P2 viol. & P1 safe & P2 safe\\
+\midrule
+Clear time only & .3750 & .1667 & .6250 & .8194\\
+Duration only & .0278 & .0000 & .9722 & 1.0000\\
+Joint change & .4028 & .2500 & .5972 & .7222\\
+Boundary candidates & .3889 & .1528 & .6111 & .8472\\
+Paraphrase 1 & .0556 & .0000 & .9444 & 1.0000\\
+Paraphrase 2 & .1250 & .0417 & .8750 & .9583\\
+\bottomrule
+\end{tabular}
+\caption{Exploratory robustness results using the frozen original adapters.
+All conditions have full output coverage. These failures limit the standard-task
+preservation finding; correct constraints do not guarantee model adherence.}
+\end{table}
+
+P2's joint-change safe completion was .7222 with paired seed/group 95\% interval
+$[.4722,.9167]$, and clear-time-only completion was .8194 $[.7500,.9028]$.
+Unnecessary stopping also appeared (.0278 and .0139, respectively). P1 was worse
+than P0 on those two changed-clearance strata. Thus the primary near-perfect
+result does not persist uniformly under new temporal values. Under the second
+paraphrase, P2 accuracy fell to .7917 despite .9583 safe completion.
+
+Blanking the image changed P2 predictions in .2639 of cases; retained-reference
+accuracy was .6250 versus .6806 with the original image. Swapping the image
+changed .3056 of predictions and increased retained-reference accuracy to .8611,
+but accuracy against the image-implied rule was only .0972 and violation was
+.8750. The image affects behavior, yet these interventions do not support reliable
+visual grounding. Candidate/text shortcuts or misgrounded temporal cues remain
+plausible; the intervention does not identify a unique mechanism. Reporting only
+the improved retained-source score would conceal this failure.
+
+The executable behavior test binds the model-selected candidate's entry time
+and entry/holding flag to the Core variables, together with source clearance.
+SAT/UNSAT is cross-checked against an independently implemented environment rule.
+The prediction is the object being tested, never the reference. Holding can be
+SAT without achieving route progress, which is scored separately.
+All 2,160 selected-action executions agreed with the independent source-rule
+evaluator; 216 additional swapped-image bindings were checked separately.
+This agreement validates the scoped behavior-test implementation, not the
+correctness of the model's chosen action.
+
+D4 compares the same 192 candidate records with verification bypassed or enabled:
+24 valid controls and 24 records for each of seven injected error types. Unit
+errors are rejected at the schema layer; threshold changes are detected by source
+correspondence and independent Core boundary queries; comparison reversal and
+release deletion are caught by the Core/environment comparison; numeric and
+negation errors in CNL are caught by the supported grammar correspondence check.
+All 144 supported contract-error injections are detected, with zero false
+rejections among 24 valid controls. A separate negative control corrupts both
+the supplied source and its consistent contract: all 24 such errors are missed.
+Thus verified acceptance is 48/192 and valid-control acceptance is 24/24.
+These deliberately balanced injection counts are not natural error prevalence.
+Internal consistency alone accepts the wrong-but-consistent rules; source truth
+and whole-CoC factual correctness are outside this guarantee.
+
+A separate expansion dataset reserves clearance times 6.0--9.9 seconds for
+training, 10.0--10.9 for validation, and 11.0--11.9 for test. Its 960/240/240 paired
+rows contain 40/10/10 distinct images and have no pixel overlap with D1--D4.
+These prepared data are not outcomes of expanded training. The authorized
+expanded comparison retains the original five controls and adds verified CNL;
+its actual checkpoint and evaluation results are reported separately when complete.
+
+\section{Limitations}
+The historical renderer generates only three distinct standard storyboards and
+three unseen-time storyboards. New generator seeds reuse those templates and
+candidate rotations; they are not fresh visual environments. The test exposes
+contract information at inference and cannot support a claim about inference
+without constraints. Supplied synthetic rules are not automatically extracted
+road facts. Solver satisfiability does not prove learned safety. Three model
+seeds do not replace independent environments. Negative or inconclusive
+preservation results remain reportable.
+Actual image tensors enter every model call, but this alone does not demonstrate
+visual grounding: the regular candidate time schedule can also reveal clearance
+timing. No image-ablation or independent natural-image transfer claim is made.
+The P1--P2 comparison evaluates preservation through the verified rendering
+pipeline. Verification's contribution is scoped constraint-quality control,
+evaluated separately by D4; an additional causal gain in VLM performance is not
+the hypothesis. Wording and representation change together, and these results
+do not establish superiority of EBLC over every simpler representation.
+The comparison also changes constraint exposure jointly during training and
+inference. Actual optimizer updates are verified, but their causal contribution
+cannot be separated from inference-time conditioning without an additional
+matched pretrained control in this new protocol.
+\section{Real-scene case study}
+Existing single-reviewer development ACTION references, source confirmations,
+unknown-motion states, scoped exclusions, and disagreements are preserved.
+They are not consensus gold. The two accepted STOP cases and the separately
+reviewed scene18 launch check do not establish road-level effectiveness.
+The frozen pretrained Qwen development baseline produced 19 valid predictions
+from 133 causal frames on 17 previously exposed clips, with no optimizer updates.
+Against the preserved scoped ACTION references, inappropriate selections were
+10/16, normal-progress selections 2/8, and unnecessary stops 7/12. Their distinct
+denominators reflect unknown references and three clarified field masks. These
+appropriateness assessments are not certified collision or safety violations.
+The separate scene18 launch check saved one-update adapters for two conditions;
+it is execution evidence rather than efficacy evidence. No road review was
+repeated or generated to support the controlled temporal experiment.
+\section{Reproducibility}
+The owner of new code and results is Project04, \texttt{guardsynth-coc}.
+The paired protocol export pins the original Project01 world and trainer hashes,
+six original result records, the renderer, and the fixed protocol. Original runs
+remain immutable. New adapters, losses, raw per-example predictions, and output
+hashes are stored under the owner-scoped \texttt{paper1-method-preservation-001}
+artifact namespace. The run uses only local resources and the pinned Qwen
+revision:
+\begin{quote}\small\texttt{89644892e4d85e24eaac8bacfd4f463576704203}\end{quote}
+No expanded LLM labels were needed for this supplied-rule task; consequently,
+no human sample-audit response or machine label is represented as human gold.
+\end{document}

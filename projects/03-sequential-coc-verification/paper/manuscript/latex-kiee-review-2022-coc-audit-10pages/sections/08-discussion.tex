@@ -1,0 +1,30 @@
+\section{논의}
+\label{sec:discussion}
+
+합성 시험에서 현재 사건만 보는 검사가 놓친 두 오류는 이전 요구를 기억해야만 찾을 수 있었다. 첫 번째는 ``계속 정지하라''는 요구가 아직 끝나지 않았는데 주행을 시작한 문장 사이의 충돌이다. 두 번째는 정지 요구가 끝났는데도 이를 검사 목록에서 지우지 않아 이후의 정상적인 진행을 오류로 판단하는 검사 처리 문제이다. 반면 요구를 너무 일찍 끝낸 오류와 행동 순서를 어긴 오류는 한 사건 안에 필요한 정보가 모두 있어 두 검사 모두 찾았다. 따라서 40/40 대 20/40의 차이는 여러 사건에 걸쳐 요구가 이어지는 CoC에서는 이전 요구를 기억하는 검사가 분명한 효과가 있음을 뒷받침한다.
+
+이 효과를 실제 자료 관리에 활용하기 위해, 검사 결과에 따라 학습 자료의 검토 순서를 정하는 절차를 제안한다. ``검사 통과''는 미리 정한 일관성 오류를 찾지 못했다는 뜻이고, ``오류 발견'' 또는 ``판단할 정보가 부족함({\unknown})''은 사람이 다시 보거나 증거를 보충해야 한다는 뜻이다. 판정 이유와 결과를 바꾼 조건을 함께 남기면 자료를 자동으로 버리지 않고도 먼저 살펴볼 항목을 정할 수 있다.
+
+\begin{table}[H]
+\centering
+\bitablecaption{검사 근거에 따른 학습 전 자료 분류와 후속 조치.}{Proposed pre-training grouping and follow-up action based on checking evidence.}
+\label{tab:training-policy}
+\footnotesize
+\begin{tabularx}{\columnwidth}{L{0.43\columnwidth}Y}
+\toprule
+Evidence & Proposed action \\
+\midrule
+Source and checking evidence preserved; no consistency error found under the stated rules & Keep the item and its decision record \\
+Decision changes with a rule or response setting & Review the item and record the setting that changed it \\
+Unknown release/object evidence & Request additional annotation or sensor evidence \\
+Missing scene linkage or continuity & Do not join the scenes without source evidence \\
+Known modified synthetic case & Use only to test the checker \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+표~\ref{tab:training-policy}의 분류는 자료를 자동으로 채택하거나 삭제하기 위한 것이 아니다. 판정 근거를 보존하면서 사람이 검토할 순서를 정하기 위한 것이다. 예를 들어 반복 CoC의 시간을 첫 판단 시각부터 계속 잴 때와 반복 판단 시각부터 다시 잴 때 결과가 다르면, 사용한 시간 기준과 바뀐 결과를 함께 저장한다. 요구 종료와 관련된 객체 정보가 {\unknown}이면 임의로 정상이라고 채우지 않는다. 두 장면이 실제로 이어진다는 근거가 없으면 앞 장면의 요구를 다음 장면으로 넘기지 않는다. 의도적으로 바꾼 합성 사례는 학습 자료에 섞지 않고 검사기가 정해 둔 규칙대로 작동하는지 확인하는 데만 쓴다. 이 분류 절차가 실제 학습 성능을 높이는지는 본 논문에서 시험하지 않았으므로 향후 검증이 필요하다.
+
+보조 결과는 왜 판정 조건을 함께 기록해야 하는지도 보여 준다. 제한 시간을 $D=3$초로 두었을 때 134건은 속도 변화 확인 125건, 이미 요구를 만족한 4건, 추가 검토가 필요한 5건으로 나뉘었다. 이 가운데 두 장면은 첫 판단 시각부터 시간을 재면 실패했지만 반복 판단 시각부터 다시 재면 통과했다. 속도 변화를 찾는 27개 설정에서도 결과 차이가 나타났다. 이와 별도인 장면 경계 시험에서는 연결 근거가 없는 장면을 합칠 때 한 장면의 반응을 다른 장면의 반응으로 잘못 볼 수 있음을 확인했다. 이 보조 결과는 중심 합성 시험과 다른 질문을 다루지만, 품질 검사 결과를 곧바로 안전 여부로 해석해서는 안 되는 이유를 분명히 한다.
+
+실제 주행 자료를 이용한 검토 결과는 다음 연구 과제도 보여 준다. 검토자 사이의 텍스트 일치도 $\kappa=0.027$은 같은 지침을 사용해도 처음부터 같은 판단을 내리기 어려웠음을 뜻한다. 서로 다른 판단의 이유를 함께 검토한 뒤에는 선택한 27개 장면 모두에서 모순이 없다는 데 합의했다. 후속 연구에서는 자연스럽게 발생한 모순ㆍ비모순 자료로 시험 범위를 넓히고, 객체 상태와 이동 경로 증거 및 학습 전후 성능을 함께 측정하여 실제 오류를 얼마나 잘 찾고 학습에 얼마나 도움이 되는지 확인해야 한다.

@@ -1,0 +1,23 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "manuscript-layout-2026-09-30-001",
+  "status": "ENGLISH_LAYOUT_AND_SECTION_OVERVIEWS_VERIFIED",
+  "pdf": "ieee-access-manuscript-en.pdf",
+  "pages_before": 18,
+  "pages_after": 17,
+  "pdf_sha256": "ddc851d15892c7066057facff439583049d7ba902721c1eaf764eef6c5469b5d",
+  "captions_preserved": 19,
+  "substantive_tex_unchanged_except_six_section_overviews": true,
+  "section_overviews": ["Related Work", "Background", "Proposed Method", "Experimental Setup", "Results", "Discussion"],
+  "update_mode": "In-place update explicitly requested by the user; no new output folder",
+  "korean_files_unchanged": true,
+  "experiment_results_modified": false,
+  "visual_review_pages": [15, 16, 17],
+  "figure_6_7_width_change": "0.94 to 0.74 textwidth",
+  "figure_8": "single-column, readable relabeled vector, bottom of page 16",
+  "table_11": "single-column natural-width numeric columns, reduced row padding",
+  "new_body_overflow_or_missing_references": false,
+  "remaining_warnings": "Existing frontmatter overfull hbox warnings and template color/font warnings",
+  "file_naming": "No new findings; five unrelated pre-existing repository findings",
+  "skills_applied": ["superpowers:systematic-debugging", "superpowers:verification-before-completion"]
+}

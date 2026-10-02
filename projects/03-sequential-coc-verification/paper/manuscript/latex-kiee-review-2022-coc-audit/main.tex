@@ -1,0 +1,39 @@
+\documentclass[9pt,twocolumn]{extarticle}
+\usepackage{kiee-review}
+
+\kieeenglishtitle{Stateful Consistency Verification of Sequential CoC Annotations for E2E Autonomous Driving: A CoC-Nusc and UPPAAL Study}
+\kieekoreantitle{E2E 자율주행 연속 CoC 주석의 상태 일관성 검증: CoC-Nusc와 UPPAAL 분석}
+
+\begin{document}
+
+\makekieefrontmatter{%
+\begin{kieeabstract}
+Chain-of-Causation (CoC) annotations can make driving data more interpretable by pairing an action with its stated reason. Event-local checks, however, cannot retain an obligation introduced by an earlier annotation. We compile sequential CoCs into ordered behavior contracts with persistent obligations, release conditions, action order, and three-valued evidence, and execute the semantics with a stateful Python monitor. From 90 trajectory-linked multi-CoC scenes, we extracted 309 adjacent windows and conducted blinded review of 27 selected scene clusters. Pre-adjudication agreement on textual consistency was low (Fleiss' kappa 0.027), and consensus found no textual contradiction in this sample; natural-error effectiveness therefore remains unestablished. In a deterministic suite of 40 synthetic baseline--mutation pairs, stateful rules classified all 40 mutations as contradictions and all 40 baselines as consistent, whereas event-local rules classified 20 mutations as contradictions. Because generation enforces the stateful postcondition, these counts measure rule-fixture coverage, not out-of-sample detection accuracy. Seven canonical UPPAAL fixtures matched the Python verdicts (0/7 mismatches) and supplied a transition-level witness. The results support executable, traceable contract semantics, not a natural error rate, vehicle safety, or learning benefit.
+\end{kieeabstract}
+\kieekeywords{Autonomous driving, End-to-end learning, Chain-of-Causation, Stateful verification, Model checking, Data provenance}
+}
+
+\input{sections/01-introduction}
+\input{sections/02-related-work}
+\input{sections/03-data}
+\input{sections/04-problem}
+\input{sections/05-method}
+\input{sections/06-experiments}
+\input{sections/07-results}
+\input{sections/08-discussion}
+\input{sections/09-threats}
+\input{sections/10-conclusion}
+
+\section*{감사의 글}
+\begingroup
+\raggedright
+본 연구는 대한민국 정부(교육과학기술부)의 재원으로 한국연구재단(NRF)의 지원을 받아 수행되었으며(\nolinkurl{NRF-2023R1A2C1006639}), 대한민국 정부(과학기술정보통신부)의 재원으로 정보통신기획평가원(IITP)의 지역지능화혁신인재양성사업 지원을 받아 수행되었음(\nolinkurl{IITP-2026-RS-2024-00436773}).
+\par
+\endgroup
+
+\bibliographystyle{unsrt}
+\begingroup
+\fontsize{8pt}{12pt}\selectfont
+\bibliography{references}
+\endgroup
+\end{document}

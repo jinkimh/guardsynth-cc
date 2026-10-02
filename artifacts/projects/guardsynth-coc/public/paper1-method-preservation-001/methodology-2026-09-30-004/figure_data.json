@@ -1,0 +1,45 @@
+{
+  "project_id": "guardsynth-coc",
+  "kind": "CONSTRUCTED_SEMANTIC_ILLUSTRATIONS",
+  "clear_time_s": 11.0,
+  "duration_s": [
+    0.5,
+    1.5
+  ],
+  "release_time_s": [
+    11.5,
+    12.5
+  ],
+  "candidates": {
+    "A": 10.5,
+    "B": 11.5,
+    "C": 12.5,
+    "D": null
+  },
+  "lifecycle_truth": [
+    "TRUE",
+    "UNKNOWN",
+    "FALSE",
+    "TRUE"
+  ],
+  "lifecycle_valid": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "prior_active": false,
+  "expected_active": [
+    true,
+    true,
+    false,
+    true
+  ],
+  "expected_entry_permitted": [
+    false,
+    false,
+    true,
+    false
+  ],
+  "learning_performance_data": false
+}

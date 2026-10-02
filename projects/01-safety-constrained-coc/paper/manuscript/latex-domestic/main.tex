@@ -1,0 +1,103 @@
+\newif\ifieeeclass
+\IfFileExists{IEEEtran.cls}{%
+  \ieeeclasstrue\documentclass[10pt,journal]{IEEEtran}
+}{%
+  \ieeeclassfalse\documentclass[10pt,twocolumn]{article}
+}
+
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{float}
+\IfFileExists{placeins.sty}{\usepackage{placeins}}{}
+\IfFileExists{kotex.sty}{%
+  \usepackage{kotex}
+  \usepackage{fontspec}
+  \setmainhangulfont{Noto Sans CJK KR}
+  \setsanshangulfont{Noto Sans CJK KR}
+}{%
+  \usepackage{fontspec}
+  \setmainfont{Noto Sans CJK KR}
+  \setsansfont{Noto Sans CJK KR}
+}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{xspace}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{safe}{RGB}{40,120,90}
+\definecolor{guard}{RGB}{40,95,160}
+\definecolor{warning}{RGB}{180,120,35}
+\definecolor{unsafe}{RGB}{165,55,55}
+\definecolor{neutral}{RGB}{70,70,70}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\coc}{CoC\xspace}
+\newcommand{\sccoc}{Safety-Constrained CoC\xspace}
+\newcommand{\vlm}{VLM\xspace}
+\newcommand{\placeholder}[1]{%
+  \fbox{\parbox[c][34mm][c]{0.94\linewidth}{\centering\small #1}}}
+
+\renewcommand{\abstractname}{요약}
+\ifieeeclass
+  \renewcommand{\IEEEkeywordsname}{주요어}
+\else
+  \newenvironment{IEEEkeywords}{\par\small\noindent\textbf{주요어---}}{\par}
+\fi
+\renewcommand{\figurename}{그림}
+\renewcommand{\tablename}{표}
+\renewcommand{\refname}{참고문헌}
+
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.90}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.85}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\dblfloatpagefraction}{0.85}
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{6}
+\setcounter{dbltopnumber}{3}
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@dblfptop}{0pt}
+\makeatother
+
+\title{비전-언어 자율주행 모델의 안전성 향상을 위한 실행 가드:\\Safety-Constrained Chain-of-Causation}
+\author{익명 저자}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Alpamayo-R1과 같은 추론형 주행 VLM의 학습에서 Chain-of-Causation(CoC)은 장면 인식과 예측 궤적을 연결하는 중간 추론 신호로 활용된다. 그러나 "보행자에게 양보한다"와 같은 요구사항만으로는 정지선, 최소 간격 및 hold/release 등의 실행 한계가 정해지지 않는다. 본 논문은 CoC에 명시적 실행 가드를 결합한 Safety-Constrained CoC와, 동일 장면에서 계약만 바꾸는 paired-contract 벤치마크를 제안한다. 기존 CoC가 달성할 행동만 기술하는 데 비해, 본 방식은 그 행동이 언제 허용·금지·해제되는지까지 실행 조건으로 명시한다. 반복 실험에서 Safety-Constrained CoC는 기존 CoC 대비 가드 위반을 31.9\%에서 0\%로 줄이면서 목표 완료 성능을 유지했다. 가드 위반 감소는 정지·출발과 차선 변경 과제에서도 확인되었다. 이는 작은 VLM이 기존 CoC의 행동 목표를 유지하면서 추가된 실행 가드를 따르도록 학습될 수 있음을 보여준다. 다만 본 연구는 제한된 환경에서 궤적 후보 선택을 평가한 것으로, 실제 차량 환경에서의 효과와 안전성은 후속 검증이 필요하다.
+\end{abstract}
+
+\begin{IEEEkeywords}
+자율주행, 비전-언어 모델, Chain-of-Causation, 자연어 안전 제약, 궤적 선택, 실행 가드
+\end{IEEEkeywords}
+
+\input{sections/01-introduction}
+\input{sections/02-related-work}
+\input{sections/03-problem}
+\raggedbottom
+\input{sections/04-method}
+\input{sections/05-experiments}
+\flushbottom
+\input{sections/07-discussion}
+\input{sections/08-conclusion}
+
+\ifieeeclass
+  \bibliographystyle{IEEEtran}
+\else
+  \bibliographystyle{plain}
+\fi
+\begingroup
+\small
+\bibliography{references}
+\endgroup
+\end{document}

@@ -1,0 +1,23 @@
+{
+  "claim_scope": "COC_CONDITIONED_LEGAL_PROPOSAL_WITH_SEPARATE_SIMULATION_POLICY_NOT_LEGAL_DECISION_OR_REAL_VEHICLE_SAFETY",
+  "code_hashes": {
+    "frontend": "2eb3fa57af7b1f32249bbfae0db48fe3f2734df4b71a9453e4e6b47b4bd6ea1c",
+    "materialization": "86d4a1dbd83ec851825a7c831c9a7008c17eeaeb09d4105f2dc3e64df6bc2bf5"
+  },
+  "deterministic": true,
+  "experiment_id": "GUARDSYNTH-COC-FRONTEND-MATERIALIZATION-001",
+  "input_class": "PUBLIC_SYNTHETIC",
+  "input_hashes": {
+    "coc_frontend_materialization_crosswalk_v0_1.json": "482f3d12107d52e4d8261171d9ef13bc98c0bb0c4fe6010047e9fc262a2ce34c",
+    "coc_frontend_request_crosswalk_v0_1.json": "1c1627c3815c963412268072846d178d54f9cb90e809cf5c86d3d32315c749d1",
+    "simulated_assurance_profile_v0_1.json": "b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+    "source_aware_generation_request_p0b_v0_1.json": "199b285f551f6cb0393390f6acff57bdb1c8dc6844ba055423875145070ba3fa",
+    "source_catalog_kr_v0_1.json": "a5c0116394be11e0a22230652822bdf0cb221267c34e730d3b96c987140dfbb2"
+  },
+  "run_date": "2026-08-12",
+  "run_id": "crosswalk-synthetic-2026-08-12-v1",
+  "z3_runtime": {
+    "prefix": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36",
+    "version": "5.0.0"
+  }
+}

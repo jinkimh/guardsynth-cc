@@ -1,0 +1,44 @@
+\resizebox{0.95\textwidth}{!}{%
+\begin{tikzpicture}[
+  main/.style={draw, rounded corners=2pt, align=center, minimum height=12mm,
+    text width=3.05cm, font=\footnotesize},
+  stage/.style={draw, rounded corners=2pt, align=center, minimum height=8mm,
+    text width=3.45cm, font=\scriptsize, fill=black!3},
+  data/.style={main, fill=observed!10},
+  reason/.style={main, fill=derived!10},
+  contract/.style={main, fill=assumed!12},
+  route/.style={main, fill=neutral!8},
+  flow/.style={-{Latex[length=2mm]}, thick, draw=black!80},
+  guide/.style={-{Latex[length=1.5mm]}, thin, dashed, draw=black!45}
+]
+
+% Main narrative.
+\node[data] (log) at (0,0) {Recorded driving data\\ego trajectory};
+\node[reason] (llm) at (4.0,0) {Sequential VLM/LLM\\CoC annotations};
+\node[contract] (obl) at (8.0,0) {Persistent obligation\\release and action order};
+\node[contract] (monitor) at (12.0,0) {Stateful Python checker\\UPPAAL observer};
+\node[route] (route) at (16.0,0) {Separated reports\\natural sample\\synthetic regression\\response/provenance analyses};
+
+\draw[flow] (log) -- coordinate[midway] (m1) (llm);
+\draw[flow] (llm) -- coordinate[midway] (m2) (obl);
+\draw[flow] (obl) -- coordinate[midway] (m3) (monitor);
+\draw[flow] (monitor) -- coordinate[midway] (m4) (route);
+
+% Process interpretation row.
+\node[stage] (s1) at (2.0,-1.55) {Post-hoc labeling from\\recorded clips};
+\node[stage] (s2) at (6.0,-1.55) {Within-scene ordering\\contract compilation};
+\node[stage] (s3) at (10.0,-1.55) {Three-valued evidence\\obligation-state update};
+\node[stage] (s4) at (14.0,-1.55) {Verdict and first\\violating event};
+
+\draw[guide] (m1) -- (s1.north);
+\draw[guide] (m2) -- (s2.north);
+\draw[guide] (m3) -- (s3.north);
+\draw[guide] (m4) -- (s4.north);
+
+% Takeaway.
+\node[draw=assumed, rounded corners=2pt, align=center, font=\footnotesize,
+  fill=assumed!8, text width=14.0cm] (key) at (8.0,-3.0)
+  {Key point: stateful rules can retain obligations across events, but synthetic rule coverage is not evidence of detection accuracy on unseen natural CoCs.};
+
+\end{tikzpicture}%
+}

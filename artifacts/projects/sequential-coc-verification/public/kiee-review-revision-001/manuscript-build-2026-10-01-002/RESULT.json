@@ -1,0 +1,22 @@
+{
+  "project_id": "sequential-coc-verification",
+  "status": "PREVIEW_ONLY",
+  "note": "Initial strengthened article compile; query listing caption placement then improved.",
+  "pdfs": {
+    "main": {
+      "path": "artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-002/main/main.pdf",
+      "pages": 11,
+      "sha256": "1ac1339d229b78a062ef68b2d4a7d8878abd742cd78b97ff33b363b13007296a"
+    },
+    "main-clean": {
+      "path": "artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-002/main-clean/main-clean.pdf",
+      "pages": 11,
+      "sha256": "90e1bf79e6b4fa9e3cdaa6d8d037cec0e742ef177758c3fa6f880a9bccffa1cc"
+    }
+  },
+  "overfull_warnings": {
+    "main": [],
+    "main-clean": []
+  },
+  "accepted_final_build": false
+}

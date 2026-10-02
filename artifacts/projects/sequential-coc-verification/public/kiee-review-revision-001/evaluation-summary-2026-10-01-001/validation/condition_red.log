@@ -1,0 +1,45 @@
+FFFFF
+======================================================================
+FAIL: test_empty_or_partial_solver_output_rejected (test_condition_model.ConditionModelTests.test_empty_or_partial_solver_output_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_condition_model.py", line 8, in setUp
+    self.assertTrue(MODULE.exists(),'condition-indexed UPPAAL model absent')
+AssertionError: False is not true : condition-indexed UPPAAL model absent
+
+======================================================================
+FAIL: test_first_violation_maps_to_source_event (test_condition_model.ConditionModelTests.test_first_violation_maps_to_source_event)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_condition_model.py", line 8, in setUp
+    self.assertTrue(MODULE.exists(),'condition-indexed UPPAAL model absent')
+AssertionError: False is not true : condition-indexed UPPAAL model absent
+
+======================================================================
+FAIL: test_foreign_condition_cannot_release_original (test_condition_model.ConditionModelTests.test_foreign_condition_cannot_release_original)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_condition_model.py", line 8, in setUp
+    self.assertTrue(MODULE.exists(),'condition-indexed UPPAAL model absent')
+AssertionError: False is not true : condition-indexed UPPAAL model absent
+
+======================================================================
+FAIL: test_multiple_obligations_have_distinct_condition_channels (test_condition_model.ConditionModelTests.test_multiple_obligations_have_distinct_condition_channels)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_condition_model.py", line 8, in setUp
+    self.assertTrue(MODULE.exists(),'condition-indexed UPPAAL model absent')
+AssertionError: False is not true : condition-indexed UPPAAL model absent
+
+======================================================================
+FAIL: test_solver_parse_distinguishes_unknown_from_violation (test_condition_model.ConditionModelTests.test_solver_parse_distinguishes_unknown_from_violation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_condition_model.py", line 8, in setUp
+    self.assertTrue(MODULE.exists(),'condition-indexed UPPAAL model absent')
+AssertionError: False is not true : condition-indexed UPPAAL model absent
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=5)

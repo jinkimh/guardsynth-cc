@@ -1,0 +1,39 @@
+\documentclass[9pt,twocolumn]{extarticle}
+\usepackage{kiee-review}
+
+\kieeenglishtitle{A Framework for Temporal Consistency Checking of Sequential Chain-of-Causation Annotations}
+\kieekoreantitle{연속 인과관계(CoC) 주석의 시간적 일관성 검사를 위한 프레임워크}
+
+\begin{document}
+
+\makekieefrontmatter{%
+\begin{kieeabstract}
+Sequential Chain-of-Causation (CoC) annotations can appear consistent alone yet conflict across events when earlier requirements remain active or linger after ending. We propose a temporal consistency framework that extracts actions, continuing requirements, end conditions, action order, and true/false/unknown evidence from ordered CoCs. It tracks active requirements and records the first error and reason. Python performs the primary check; UPPAAL replays the same rules. Review of 309 adjacent pairs from 90 CoC-Nusc scenes, including 27 groups, showed ambiguity (Fleiss' kappa 0.027; 0/27 contradictions after discussion). In 40 reference--modified pairs, our checker detected all 40 modifications, versus 20 for a current-event-only checker; neither flagged a reference case. Seven UPPAAL cases matched Python decisions and records (0/7 mismatches). Under the tested rules, this supports temporal requirement tracking but not natural-error accuracy, vehicle safety, or learning gains.
+\end{kieeabstract}
+\kieekeywords{Autonomous driving, End-to-end learning, Chain-of-Causation, Temporal consistency checking, Model checking, Data-source tracking}
+}
+
+\input{sections/01-introduction}
+\input{sections/02-related-work}
+\input{sections/03-data}
+\input{sections/04-problem}
+\input{sections/05-method}
+\input{sections/06-experiments}
+\input{sections/07-results}
+\input{sections/08-discussion}
+\input{sections/09-threats}
+\input{sections/10-conclusion}
+
+\section*{감사의 글}
+\begingroup
+\raggedright
+본 연구는 대한민국 정부(교육과학기술부)의 재원으로 한국연구재단(NRF)의 지원을 받아 수행되었으며(\nolinkurl{NRF-2023R1A2C1006639}), 대한민국 정부(과학기술정보통신부)의 재원으로 정보통신기획평가원(IITP)의 지역지능화혁신인재양성사업 지원을 받아 수행되었음(\nolinkurl{IITP-2026-RS-2024-00436773}).
+\par
+\endgroup
+
+\bibliographystyle{unsrt}
+\begingroup
+\fontsize{8pt}{12pt}\selectfont
+\bibliography{references}
+\endgroup
+\end{document}

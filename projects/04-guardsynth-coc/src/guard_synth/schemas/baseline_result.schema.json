@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GuardSynth baseline result v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version", "baseline_id", "baseline_version", "adapter_class",
+    "declared_channels", "used_channels", "status", "reason_codes", "candidates",
+    "numeric_parameters", "action_set", "claim_scope", "oracle_independence"
+  ],
+  "properties": {
+    "protocol_version": {"const": "guardsynth-baseline-protocol-v0.1"},
+    "baseline_id": {"enum": ["B0", "B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B13"]},
+    "baseline_version": {"type": "string", "minLength": 1},
+    "adapter_class": {"type": "string", "minLength": 1},
+    "declared_channels": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "used_channels": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "status": {"enum": ["EXECUTED", "REVIEW_REQUIRED", "UNSUPPORTED", "CONFLICT"]},
+    "reason_codes": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["rule_id", "rank", "verdict", "source_refs", "score"],
+        "properties": {
+          "rule_id": {"type": "string", "minLength": 1},
+          "rank": {"type": "integer", "minimum": 1},
+          "verdict": {"type": ["string", "null"]},
+          "source_refs": {"type": "array", "items": {"type": "string", "minLength": 1}},
+          "score": {"type": ["number", "null"]}
+        }
+      }
+    },
+    "numeric_parameters": {"type": ["object", "null"]},
+    "action_set": {"type": ["array", "null"], "items": {"type": "string", "minLength": 1}},
+    "claim_scope": {"type": "string", "minLength": 1},
+    "oracle_independence": {"type": "string", "minLength": 1}
+  }
+}

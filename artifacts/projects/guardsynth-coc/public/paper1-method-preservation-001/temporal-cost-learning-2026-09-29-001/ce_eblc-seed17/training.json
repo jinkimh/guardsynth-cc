@@ -1,0 +1,5397 @@
+{
+  "optimizer_updates": 60,
+  "coefficient": 1,
+  "microbatches": [
+    {
+      "microbatch": 0,
+      "ce": 1.4503771126328502e-06,
+      "expected_cost": 9.821187418879163e-09,
+      "action_vocab_mass": 1.0,
+      "total": 1.4601982911699452e-06
+    },
+    {
+      "microbatch": 1,
+      "ce": 1.271563746740867e-06,
+      "expected_cost": 6.1707248200093545e-09,
+      "action_vocab_mass": 1.0,
+      "total": 1.2777344409187208e-06
+    },
+    {
+      "microbatch": 2,
+      "ce": 1.966948957488057e-06,
+      "expected_cost": 1.948731132017656e-08,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 1.986436245715595e-06
+    },
+    {
+      "microbatch": 3,
+      "ce": 2.0066843262611656e-06,
+      "expected_cost": 6.370797223098634e-08,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 2.07039238375728e-06
+    },
+    {
+      "microbatch": 4,
+      "ce": 1.2318281505940831e-06,
+      "expected_cost": 1.5299730193873984e-07,
+      "action_vocab_mass": 1.0,
+      "total": 1.3848255093762418e-06
+    },
+    {
+      "microbatch": 5,
+      "ce": 2.1457601633301238e-06,
+      "expected_cost": 1.0095152269684604e-08,
+      "action_vocab_mass": 1.0,
+      "total": 2.155855327146128e-06
+    },
+    {
+      "microbatch": 6,
+      "ce": 2.0066838715138147e-06,
+      "expected_cost": 8.644945204139276e-09,
+      "action_vocab_mass": 1.0,
+      "total": 2.015328846027842e-06
+    },
+    {
+      "microbatch": 7,
+      "ce": 2.1060275230411207e-06,
+      "expected_cost": 1.1400525181670673e-06,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 3.246080041208188e-06
+    },
+    {
+      "microbatch": 8,
+      "ce": 0.0,
+      "expected_cost": 1.8134662660429512e-09,
+      "action_vocab_mass": 1.0,
+      "total": 1.8134662660429512e-09
+    },
+    {
+      "microbatch": 9,
+      "ce": 0.0,
+      "expected_cost": 7.753107489349986e-09,
+      "action_vocab_mass": 1.0,
+      "total": 7.753107489349986e-09
+    },
+    {
+      "microbatch": 10,
+      "ce": 0.0,
+      "expected_cost": 2.6998996816018916e-08,
+      "action_vocab_mass": 1.0,
+      "total": 2.6998996816018916e-08
+    },
+    {
+      "microbatch": 11,
+      "ce": 1.9868205924922222e-07,
+      "expected_cost": 6.344473391095562e-09,
+      "action_vocab_mass": 1.0,
+      "total": 2.050265379693883e-07
+    },
+    {
+      "microbatch": 12,
+      "ce": 5.960463411724959e-08,
+      "expected_cost": 1.95646179812492e-10,
+      "action_vocab_mass": 1.0,
+      "total": 5.980027850682745e-08
+    },
+    {
+      "microbatch": 13,
+      "ce": 1.1920926823449918e-07,
+      "expected_cost": 7.610200469798656e-08,
+      "action_vocab_mass": 1.0,
+      "total": 1.9531127293248574e-07
+    },
+    {
+      "microbatch": 14,
+      "ce": 1.3907747131725046e-07,
+      "expected_cost": 4.4121346576275755e-09,
+      "action_vocab_mass": 1.0,
+      "total": 1.4348960064580751e-07
+    },
+    {
+      "microbatch": 15,
+      "ce": 1.9868213740892315e-08,
+      "expected_cost": 4.353018390190755e-09,
+      "action_vocab_mass": 1.0,
+      "total": 2.422123301926149e-08
+    },
+    {
+      "microbatch": 16,
+      "ce": 1.9868213740892315e-08,
+      "expected_cost": 6.761474713457005e-11,
+      "action_vocab_mass": 1.0,
+      "total": 1.9935828987627247e-08
+    },
+    {
+      "microbatch": 17,
+      "ce": 1.9868213740892315e-08,
+      "expected_cost": 4.248336959999932e-10,
+      "action_vocab_mass": 1.0,
+      "total": 2.029304724260328e-08
+    },
+    {
+      "microbatch": 18,
+      "ce": 7.947284075271455e-08,
+      "expected_cost": 2.941850985038741e-09,
+      "action_vocab_mass": 1.0,
+      "total": 8.241469373615473e-08
+    },
+    {
+      "microbatch": 19,
+      "ce": 1.529847395431716e-06,
+      "expected_cost": 9.78126735162732e-09,
+      "action_vocab_mass": 1.0,
+      "total": 1.5396286698887707e-06
+    },
+    {
+      "microbatch": 20,
+      "ce": 1.3907748552810517e-07,
+      "expected_cost": 5.366959854313791e-08,
+      "action_vocab_mass": 1.0,
+      "total": 1.927470805185294e-07
+    },
+    {
+      "microbatch": 21,
+      "ce": 7.94728478581419e-08,
+      "expected_cost": 1.6132718272388047e-08,
+      "action_vocab_mass": 1.0,
+      "total": 9.560556435417311e-08
+    },
+    {
+      "microbatch": 22,
+      "ce": 1.3907748552810517e-07,
+      "expected_cost": 1.9705227316535456e-07,
+      "action_vocab_mass": 1.0,
+      "total": 3.36129744482605e-07
+    },
+    {
+      "microbatch": 23,
+      "ce": 0.0,
+      "expected_cost": 6.321513534857104e-09,
+      "action_vocab_mass": 1.0,
+      "total": 6.321513534857104e-09
+    },
+    {
+      "microbatch": 24,
+      "ce": 9.934104383546583e-08,
+      "expected_cost": 1.934396393066251e-11,
+      "action_vocab_mass": 1.0,
+      "total": 9.936038480873322e-08
+    },
+    {
+      "microbatch": 25,
+      "ce": 1.1920926112907182e-07,
+      "expected_cost": 3.2414038741990225e-07,
+      "action_vocab_mass": 1.0,
+      "total": 4.4334964854897407e-07
+    },
+    {
+      "microbatch": 26,
+      "ce": 3.6755811834154883e-06,
+      "expected_cost": 2.1899992930229928e-09,
+      "action_vocab_mass": 1.0,
+      "total": 3.6777712466573576e-06
+    },
+    {
+      "microbatch": 27,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 2.2720458847658165e-09,
+      "action_vocab_mass": 1.0,
+      "total": 4.200847314450584e-08
+    },
+    {
+      "microbatch": 28,
+      "ce": 1.589456815054291e-07,
+      "expected_cost": 7.647059163673475e-08,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 2.354162802475912e-07
+    },
+    {
+      "microbatch": 29,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 7.700530879617418e-09,
+      "action_vocab_mass": 1.0,
+      "total": 4.743695924958047e-08
+    },
+    {
+      "microbatch": 30,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 3.618162713880935e-11,
+      "action_vocab_mass": 1.0,
+      "total": 3.9772608317889535e-08
+    },
+    {
+      "microbatch": 31,
+      "ce": 9.934105804632054e-08,
+      "expected_cost": 1.71956702349485e-11,
+      "action_vocab_mass": 1.0,
+      "total": 9.935825318052594e-08
+    },
+    {
+      "microbatch": 32,
+      "ce": 1.1920926112907182e-07,
+      "expected_cost": 1.1031425772856096e-10,
+      "action_vocab_mass": 1.0,
+      "total": 1.1931957999422593e-07
+    },
+    {
+      "microbatch": 33,
+      "ce": 1.7881389169360773e-07,
+      "expected_cost": 9.276990198259227e-08,
+      "action_vocab_mass": 1.0,
+      "total": 2.7158378657077265e-07
+    },
+    {
+      "microbatch": 34,
+      "ce": 1.5894566729457438e-07,
+      "expected_cost": 8.464792061735338e-11,
+      "action_vocab_mass": 1.0,
+      "total": 1.5903032135611284e-07
+    },
+    {
+      "microbatch": 35,
+      "ce": 7.94728478581419e-08,
+      "expected_cost": 4.639059136835044e-10,
+      "action_vocab_mass": 1.0,
+      "total": 7.993675410489232e-08
+    },
+    {
+      "microbatch": 36,
+      "ce": 1.7881389169360773e-07,
+      "expected_cost": 1.933099791351367e-10,
+      "action_vocab_mass": 1.0,
+      "total": 1.7900720195029862e-07
+    },
+    {
+      "microbatch": 37,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 2.9881366270245735e-09,
+      "action_vocab_mass": 1.0,
+      "total": 4.272456521903223e-08
+    },
+    {
+      "microbatch": 38,
+      "ce": 1.1920926112907182e-07,
+      "expected_cost": 7.618644382034745e-09,
+      "action_vocab_mass": 1.0,
+      "total": 1.2682789929385763e-07
+    },
+    {
+      "microbatch": 39,
+      "ce": 2.1855028364825557e-07,
+      "expected_cost": 7.63017826699297e-09,
+      "action_vocab_mass": 1.0,
+      "total": 2.2618046102707012e-07
+    },
+    {
+      "microbatch": 40,
+      "ce": 1.1920926112907182e-07,
+      "expected_cost": 2.9638544396526356e-10,
+      "action_vocab_mass": 1.0,
+      "total": 1.1950564271501207e-07
+    },
+    {
+      "microbatch": 41,
+      "ce": 1.1920926112907182e-07,
+      "expected_cost": 2.790403463848179e-10,
+      "action_vocab_mass": 1.0,
+      "total": 1.1948830547225953e-07
+    },
+    {
+      "microbatch": 42,
+      "ce": 2.245094265163061e-06,
+      "expected_cost": 5.641380695919906e-10,
+      "action_vocab_mass": 1.0,
+      "total": 2.245658379251836e-06
+    },
+    {
+      "microbatch": 43,
+      "ce": 9.934105804632054e-08,
+      "expected_cost": 7.595625517442528e-13,
+      "action_vocab_mass": 1.0,
+      "total": 9.93418183270478e-08
+    },
+    {
+      "microbatch": 44,
+      "ce": 1.1920926823449918e-07,
+      "expected_cost": 4.704634193331003e-08,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 1.6625560306238185e-07
+    },
+    {
+      "microbatch": 45,
+      "ce": 1.1920926112907182e-07,
+      "expected_cost": 3.31167320129222e-12,
+      "action_vocab_mass": 1.0,
+      "total": 1.1921257225822046e-07
+    },
+    {
+      "microbatch": 46,
+      "ce": 7.947285496356926e-08,
+      "expected_cost": 8.54345927336908e-09,
+      "action_vocab_mass": 1.0,
+      "total": 8.801631423693834e-08
+    },
+    {
+      "microbatch": 47,
+      "ce": 0.0043160696513950825,
+      "expected_cost": 0.011491387151181698,
+      "action_vocab_mass": 0.998688280582428,
+      "total": 0.015807457268238068
+    },
+    {
+      "microbatch": 48,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 8.216084063095153e-13,
+      "action_vocab_mass": 1.0,
+      "total": 3.9737248158644434e-08
+    },
+    {
+      "microbatch": 49,
+      "ce": 3.973642392907095e-08,
+      "expected_cost": 1.3601177961675148e-09,
+      "action_vocab_mass": 1.0,
+      "total": 4.109654128114926e-08
+    },
+    {
+      "microbatch": 50,
+      "ce": 7.152546004363103e-07,
+      "expected_cost": 1.8633858189787134e-06,
+      "action_vocab_mass": 1.0,
+      "total": 2.578640305728186e-06
+    },
+    {
+      "microbatch": 51,
+      "ce": 5.9604641222676946e-08,
+      "expected_cost": 6.609440078575446e-11,
+      "action_vocab_mass": 1.0,
+      "total": 5.967073235524367e-08
+    },
+    {
+      "microbatch": 52,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 8.348567948068819e-10,
+      "action_vocab_mass": 1.0,
+      "total": 4.057128322187964e-08
+    },
+    {
+      "microbatch": 53,
+      "ce": 9.934105804632054e-08,
+      "expected_cost": 2.4508503559950157e-10,
+      "action_vocab_mass": 1.0,
+      "total": 9.958614555216627e-08
+    },
+    {
+      "microbatch": 54,
+      "ce": 9.338041877526848e-07,
+      "expected_cost": 2.392548140051076e-06,
+      "action_vocab_mass": 1.0,
+      "total": 3.326352270960342e-06
+    },
+    {
+      "microbatch": 55,
+      "ce": 1.3907747131725046e-07,
+      "expected_cost": 1.6122980284194455e-08,
+      "action_vocab_mass": 1.0,
+      "total": 1.5520045337780175e-07
+    },
+    {
+      "microbatch": 56,
+      "ce": 5.9604641222676946e-08,
+      "expected_cost": 2.0760960950383378e-08,
+      "action_vocab_mass": 1.0,
+      "total": 8.036560217306032e-08
+    },
+    {
+      "microbatch": 57,
+      "ce": 1.9868208767093165e-07,
+      "expected_cost": 2.0699774339050236e-08,
+      "action_vocab_mass": 1.0,
+      "total": 2.1938186023362505e-07
+    },
+    {
+      "microbatch": 58,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 1.4716508567325093e-10,
+      "action_vocab_mass": 1.0,
+      "total": 3.9883591540501584e-08
+    },
+    {
+      "microbatch": 59,
+      "ce": 3.973642392907095e-08,
+      "expected_cost": 3.204999460271196e-11,
+      "action_vocab_mass": 1.0,
+      "total": 3.976847295916741e-08
+    },
+    {
+      "microbatch": 60,
+      "ce": 3.5762766970037774e-07,
+      "expected_cost": 6.854878620288218e-07,
+      "action_vocab_mass": 1.0,
+      "total": 1.0431155033074901e-06
+    },
+    {
+      "microbatch": 61,
+      "ce": 0.003874399932101369,
+      "expected_cost": 0.011488685384392738,
+      "action_vocab_mass": 1.0,
+      "total": 0.015363085083663464
+    },
+    {
+      "microbatch": 62,
+      "ce": 5.9604641222676946e-08,
+      "expected_cost": 4.179133710098537e-13,
+      "action_vocab_mass": 1.0,
+      "total": 5.960505689017737e-08
+    },
+    {
+      "microbatch": 63,
+      "ce": 1.9868213740892315e-08,
+      "expected_cost": 6.650863020041253e-12,
+      "action_vocab_mass": 1.0,
+      "total": 1.987486442089903e-08
+    },
+    {
+      "microbatch": 64,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 4.425972175564619e-12,
+      "action_vocab_mass": 1.0,
+      "total": 3.9740854163028416e-08
+    },
+    {
+      "microbatch": 65,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 7.014931691085025e-11,
+      "action_vocab_mass": 1.0,
+      "total": 3.9806575813372547e-08
+    },
+    {
+      "microbatch": 66,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 2.1857566867566902e-09,
+      "action_vocab_mass": 1.0,
+      "total": 4.1922184834675136e-08
+    },
+    {
+      "microbatch": 67,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 6.853598244482839e-11,
+      "action_vocab_mass": 1.0,
+      "total": 3.980496288136237e-08
+    },
+    {
+      "microbatch": 68,
+      "ce": 7.94728478581419e-08,
+      "expected_cost": 2.883688426935649e-11,
+      "action_vocab_mass": 1.0,
+      "total": 7.950168168235905e-08
+    },
+    {
+      "microbatch": 69,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 1.684046825600749e-11,
+      "action_vocab_mass": 1.0,
+      "total": 3.9753267344622145e-08
+    },
+    {
+      "microbatch": 70,
+      "ce": 7.94728478581419e-08,
+      "expected_cost": 2.866010380409012e-12,
+      "action_vocab_mass": 1.0,
+      "total": 7.947571134536702e-08
+    },
+    {
+      "microbatch": 71,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 2.682752891364215e-12,
+      "action_vocab_mass": 1.0,
+      "total": 3.9739109780612125e-08
+    },
+    {
+      "microbatch": 72,
+      "ce": 1.1920926823449918e-07,
+      "expected_cost": 9.778137410876298e-09,
+      "action_vocab_mass": 1.0,
+      "total": 1.2898740919808915e-07
+    },
+    {
+      "microbatch": 73,
+      "ce": 7.94728478581419e-08,
+      "expected_cost": 2.2371618446648256e-12,
+      "action_vocab_mass": 1.0,
+      "total": 7.947508606775955e-08
+    },
+    {
+      "microbatch": 74,
+      "ce": 1.1920926112907182e-07,
+      "expected_cost": 1.8021931169620586e-10,
+      "action_vocab_mass": 1.0,
+      "total": 1.1938948318857e-07
+    },
+    {
+      "microbatch": 75,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 4.629857608406951e-11,
+      "action_vocab_mass": 1.0,
+      "total": 3.978272644644676e-08
+    },
+    {
+      "microbatch": 76,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 8.240159665717783e-09,
+      "action_vocab_mass": 1.0,
+      "total": 4.7976588035680834e-08
+    },
+    {
+      "microbatch": 77,
+      "ce": 7.94728478581419e-08,
+      "expected_cost": 1.0346792311821673e-09,
+      "action_vocab_mass": 1.0,
+      "total": 8.050752597910105e-08
+    },
+    {
+      "microbatch": 78,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 2.9657085121037596e-10,
+      "action_vocab_mass": 1.0,
+      "total": 4.003299736154986e-08
+    },
+    {
+      "microbatch": 79,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 4.328796869568219e-12,
+      "action_vocab_mass": 1.0,
+      "total": 3.974075468704541e-08
+    },
+    {
+      "microbatch": 80,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 3.214296537268346e-11,
+      "action_vocab_mass": 1.0,
+      "total": 3.976856888243674e-08
+    },
+    {
+      "microbatch": 81,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 1.3621201389035775e-10,
+      "action_vocab_mass": 1.0,
+      "total": 3.987263852422984e-08
+    },
+    {
+      "microbatch": 82,
+      "ce": 0.0,
+      "expected_cost": 6.940662888171856e-12,
+      "action_vocab_mass": 1.0,
+      "total": 6.940662888171856e-12
+    },
+    {
+      "microbatch": 83,
+      "ce": 1.1920926112907182e-07,
+      "expected_cost": 4.9285242553764874e-11,
+      "action_vocab_mass": 1.0,
+      "total": 1.1925854437322414e-07
+    },
+    {
+      "microbatch": 84,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 2.2313290104492012e-11,
+      "action_vocab_mass": 1.0,
+      "total": 3.975874207640118e-08
+    },
+    {
+      "microbatch": 85,
+      "ce": 9.934105804632054e-08,
+      "expected_cost": 2.0339605000252448e-10,
+      "action_vocab_mass": 1.0,
+      "total": 9.954445090443187e-08
+    },
+    {
+      "microbatch": 86,
+      "ce": 1.589456815054291e-07,
+      "expected_cost": 2.5453025104260618e-11,
+      "action_vocab_mass": 1.0,
+      "total": 1.5897113314622402e-07
+    },
+    {
+      "microbatch": 87,
+      "ce": 1.7881389169360773e-07,
+      "expected_cost": 2.42338121791974e-10,
+      "action_vocab_mass": 1.0,
+      "total": 1.7905622939906607e-07
+    },
+    {
+      "microbatch": 88,
+      "ce": 4.231890216033207e-06,
+      "expected_cost": 1.0722481420089025e-05,
+      "action_vocab_mass": 1.0,
+      "total": 1.4954372090869583e-05
+    },
+    {
+      "microbatch": 89,
+      "ce": 9.934104383546583e-08,
+      "expected_cost": 6.293421339620409e-10,
+      "action_vocab_mass": 1.0,
+      "total": 9.997038574738326e-08
+    },
+    {
+      "microbatch": 90,
+      "ce": 7.947284075271455e-08,
+      "expected_cost": 4.889498805837889e-10,
+      "action_vocab_mass": 1.0,
+      "total": 7.99617936309005e-08
+    },
+    {
+      "microbatch": 91,
+      "ce": 1.4305063587016775e-06,
+      "expected_cost": 3.3475257288362315e-11,
+      "action_vocab_mass": 1.0,
+      "total": 1.4305397826319677e-06
+    },
+    {
+      "microbatch": 92,
+      "ce": 1.9868213740892315e-08,
+      "expected_cost": 3.714985957747885e-11,
+      "action_vocab_mass": 1.0,
+      "total": 1.9905364467831532e-08
+    },
+    {
+      "microbatch": 93,
+      "ce": 4.625,
+      "expected_cost": 1.4583907692600206e-10,
+      "action_vocab_mass": 1.0,
+      "total": 4.625
+    },
+    {
+      "microbatch": 94,
+      "ce": 1.788138632718983e-07,
+      "expected_cost": 7.620947428677027e-09,
+      "action_vocab_mass": 1.0,
+      "total": 1.8643481780600268e-07
+    },
+    {
+      "microbatch": 95,
+      "ce": 0.00011835268378490582,
+      "expected_cost": 3.0174515663894397e-11,
+      "action_vocab_mass": 1.0,
+      "total": 0.00011835271288873628
+    },
+    {
+      "microbatch": 96,
+      "ce": 8.344631510226463e-07,
+      "expected_cost": 1.1498407087584539e-10,
+      "action_vocab_mass": 1.0,
+      "total": 8.345781452590018e-07
+    },
+    {
+      "microbatch": 97,
+      "ce": 1.1920926112907182e-07,
+      "expected_cost": 6.476446601233476e-10,
+      "action_vocab_mass": 1.0,
+      "total": 1.1985690662186244e-07
+    },
+    {
+      "microbatch": 98,
+      "ce": 4.649098627851345e-06,
+      "expected_cost": 5.637627253918254e-08,
+      "action_vocab_mass": 1.0,
+      "total": 4.705475021182792e-06
+    },
+    {
+      "microbatch": 99,
+      "ce": 0.0024045014288276434,
+      "expected_cost": 3.988693264567189e-10,
+      "action_vocab_mass": 1.0,
+      "total": 0.0024045018944889307
+    },
+    {
+      "microbatch": 100,
+      "ce": 5.9604641222676946e-08,
+      "expected_cost": 5.673669867256592e-11,
+      "action_vocab_mass": 1.0,
+      "total": 5.966137450741371e-08
+    },
+    {
+      "microbatch": 101,
+      "ce": 9.934105804632054e-08,
+      "expected_cost": 2.51717813259944e-10,
+      "action_vocab_mass": 1.0,
+      "total": 9.959277491589091e-08
+    },
+    {
+      "microbatch": 102,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 9.643065235209747e-10,
+      "action_vocab_mass": 1.0,
+      "total": 4.070073345019409e-08
+    },
+    {
+      "microbatch": 103,
+      "ce": 0.5480070114135742,
+      "expected_cost": 6.992741941047598e-10,
+      "action_vocab_mass": 1.0,
+      "total": 0.5480070114135742
+    },
+    {
+      "microbatch": 104,
+      "ce": 1.589456957162838e-07,
+      "expected_cost": 5.761002341841959e-09,
+      "action_vocab_mass": 1.0,
+      "total": 1.6470670516355312e-07
+    },
+    {
+      "microbatch": 105,
+      "ce": 0.00985258724540472,
+      "expected_cost": 6.000084340485046e-08,
+      "action_vocab_mass": 1.0,
+      "total": 0.009852646850049496
+    },
+    {
+      "microbatch": 106,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 5.2212447698707365e-09,
+      "action_vocab_mass": 1.0,
+      "total": 4.495767313983379e-08
+    },
+    {
+      "microbatch": 107,
+      "ce": 3.7947893360978924e-06,
+      "expected_cost": 1.5932642982718903e-09,
+      "action_vocab_mass": 1.0,
+      "total": 3.796382543441723e-06
+    },
+    {
+      "microbatch": 108,
+      "ce": 1.1920926823449918e-07,
+      "expected_cost": 1.3030618806197936e-09,
+      "action_vocab_mass": 1.0,
+      "total": 1.2051232545218227e-07
+    },
+    {
+      "microbatch": 109,
+      "ce": 1.589456815054291e-07,
+      "expected_cost": 9.362653230482465e-08,
+      "action_vocab_mass": 1.0,
+      "total": 2.525722209156811e-07
+    },
+    {
+      "microbatch": 110,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 2.421537104169147e-08,
+      "action_vocab_mass": 1.0,
+      "total": 6.395180207618978e-08
+    },
+    {
+      "microbatch": 111,
+      "ce": 3.973642748178463e-08,
+      "expected_cost": 9.230586961450626e-09,
+      "action_vocab_mass": 1.0,
+      "total": 4.896701355505684e-08
+    },
+    {
+      "microbatch": 112,
+      "ce": 2.3841850804728892e-07,
+      "expected_cost": 5.308249839686141e-08,
+      "action_vocab_mass": 1.0,
+      "total": 2.91501009996864e-07
+    },
+    {
+      "microbatch": 113,
+      "ce": 1.3907748552810517e-07,
+      "expected_cost": 8.052931832480681e-08,
+      "action_vocab_mass": 1.0,
+      "total": 2.1960680385291198e-07
+    },
+    {
+      "microbatch": 114,
+      "ce": 2.0701407265732996e-05,
+      "expected_cost": 7.805778068359359e-08,
+      "action_vocab_mass": 1.0,
+      "total": 2.077946555800736e-05
+    },
+    {
+      "microbatch": 115,
+      "ce": 9.91395518212812e-06,
+      "expected_cost": 1.6319582130108756e-07,
+      "action_vocab_mass": 1.0,
+      "total": 1.0077151273435447e-05
+    },
+    {
+      "microbatch": 116,
+      "ce": 2.980231101901154e-07,
+      "expected_cost": 5.516649252967909e-07,
+      "action_vocab_mass": 1.0,
+      "total": 8.496880354869063e-07
+    },
+    {
+      "microbatch": 117,
+      "ce": 1.7881387748275301e-07,
+      "expected_cost": 5.0562352527094845e-08,
+      "action_vocab_mass": 1.0,
+      "total": 2.2937622645713418e-07
+    },
+    {
+      "microbatch": 118,
+      "ce": 3.7749586567770166e-07,
+      "expected_cost": 7.020712473604362e-07,
+      "action_vocab_mass": 1.0,
+      "total": 1.0795671414598473e-06
+    },
+    {
+      "microbatch": 119,
+      "ce": 1.7881389169360773e-07,
+      "expected_cost": 1.4233859246814973e-07,
+      "action_vocab_mass": 1.0,
+      "total": 3.2115246995090274e-07
+    },
+    {
+      "microbatch": 120,
+      "ce": 0.1376579850912094,
+      "expected_cost": 2.6153286398766795e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 0.13766060769557953
+    },
+    {
+      "microbatch": 121,
+      "ce": 0.008243300020694733,
+      "expected_cost": 0.023693010210990906,
+      "action_vocab_mass": 0.9999995231628418,
+      "total": 0.03193631023168564
+    },
+    {
+      "microbatch": 122,
+      "ce": 4.569685359001596e-07,
+      "expected_cost": 9.222394510288723e-07,
+      "action_vocab_mass": 1.0,
+      "total": 1.3792080153507413e-06
+    },
+    {
+      "microbatch": 123,
+      "ce": 4.569687064304162e-07,
+      "expected_cost": 8.369535748897761e-07,
+      "action_vocab_mass": 1.0,
+      "total": 1.2939223097419017e-06
+    },
+    {
+      "microbatch": 124,
+      "ce": 5.165730385670031e-07,
+      "expected_cost": 1.2925664805152337e-06,
+      "action_vocab_mass": 1.0,
+      "total": 1.8091395759256557e-06
+    },
+    {
+      "microbatch": 125,
+      "ce": 4.231884304317646e-06,
+      "expected_cost": 1.1631739653239492e-05,
+      "action_vocab_mass": 1.0,
+      "total": 1.586362486705184e-05
+    },
+    {
+      "microbatch": 126,
+      "ce": 0.013152365572750568,
+      "expected_cost": 1.1661375538096763e-05,
+      "action_vocab_mass": 1.0,
+      "total": 0.013164026662707329
+    },
+    {
+      "microbatch": 127,
+      "ce": 0.6696975231170654,
+      "expected_cost": 2.6236975827487186e-06,
+      "action_vocab_mass": 0.9999880790710449,
+      "total": 0.6697001457214355
+    },
+    {
+      "microbatch": 128,
+      "ce": 0.005808135494589806,
+      "expected_cost": 0.014587799087166786,
+      "action_vocab_mass": 0.9999992251396179,
+      "total": 0.020395934581756592
+    },
+    {
+      "microbatch": 129,
+      "ce": 7.66901302995393e-06,
+      "expected_cost": 2.209790181950666e-05,
+      "action_vocab_mass": 1.0,
+      "total": 2.976691393996589e-05
+    },
+    {
+      "microbatch": 130,
+      "ce": 0.0011248734081164002,
+      "expected_cost": 1.546935163787566e-05,
+      "action_vocab_mass": 0.9999998211860657,
+      "total": 0.0011403427924960852
+    },
+    {
+      "microbatch": 131,
+      "ce": 0.5081056356430054,
+      "expected_cost": 9.373524335387629e-06,
+      "action_vocab_mass": 0.9999954700469971,
+      "total": 0.5081149935722351
+    },
+    {
+      "microbatch": 132,
+      "ce": 0.00020453943579923362,
+      "expected_cost": 0.0006114534335210919,
+      "action_vocab_mass": 0.9999988079071045,
+      "total": 0.0008159928838722408
+    },
+    {
+      "microbatch": 133,
+      "ce": 0.11555212736129761,
+      "expected_cost": 7.462724624929251e-06,
+      "action_vocab_mass": 0.9999409914016724,
+      "total": 0.11555959284305573
+    },
+    {
+      "microbatch": 134,
+      "ce": 9.934091167451697e-07,
+      "expected_cost": 2.4556866264902055e-06,
+      "action_vocab_mass": 1.0,
+      "total": 3.449095856922213e-06
+    },
+    {
+      "microbatch": 135,
+      "ce": 1.8477395542504382e-06,
+      "expected_cost": 4.640520273824222e-06,
+      "action_vocab_mass": 0.9999999403953552,
+      "total": 6.488259714387823e-06
+    },
+    {
+      "microbatch": 136,
+      "ce": 0.00011171063670190051,
+      "expected_cost": 0.0002890356699936092,
+      "action_vocab_mass": 0.9999997019767761,
+      "total": 0.0004007462994195521
+    },
+    {
+      "microbatch": 137,
+      "ce": 0.010905161499977112,
+      "expected_cost": 0.031649645417928696,
+      "action_vocab_mass": 0.9999987483024597,
+      "total": 0.04255480691790581
+    },
+    {
+      "microbatch": 138,
+      "ce": 3.7948036606394453e-06,
+      "expected_cost": 2.9927739433333045e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 6.78757760397275e-06
+    },
+    {
+      "microbatch": 139,
+      "ce": 3.532331538735889e-05,
+      "expected_cost": 8.7798573076725e-05,
+      "action_vocab_mass": 0.9999982118606567,
+      "total": 0.0001231218921020627
+    },
+    {
+      "microbatch": 140,
+      "ce": 8.602791240264196e-06,
+      "expected_cost": 2.450413376209326e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 3.3106924092862755e-05
+    },
+    {
+      "microbatch": 141,
+      "ce": 3.816394382738508e-05,
+      "expected_cost": 9.563491039443761e-05,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 0.0001337988505838439
+    },
+    {
+      "microbatch": 142,
+      "ce": 5.914224675507285e-05,
+      "expected_cost": 0.00013656349619850516,
+      "action_vocab_mass": 0.9999991655349731,
+      "total": 0.0001957057393155992
+    },
+    {
+      "microbatch": 143,
+      "ce": 1.9072786017204635e-05,
+      "expected_cost": 3.294929410913028e-05,
+      "action_vocab_mass": 0.9999997019767761,
+      "total": 5.202207830734551e-05
+    },
+    {
+      "microbatch": 144,
+      "ce": 1.3490248420566786e-05,
+      "expected_cost": 2.6397137844469398e-05,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 3.988738535554148e-05
+    },
+    {
+      "microbatch": 145,
+      "ce": 0.00016265007434412837,
+      "expected_cost": 0.00046818683040328324,
+      "action_vocab_mass": 0.9999994039535522,
+      "total": 0.0006308369338512421
+    },
+    {
+      "microbatch": 146,
+      "ce": 7.92731316323625e-06,
+      "expected_cost": 1.4301929695648141e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 2.2229243768379092e-05
+    },
+    {
+      "microbatch": 147,
+      "ce": 0.00031425218912772834,
+      "expected_cost": 0.0008578195702284575,
+      "action_vocab_mass": 0.9999971985816956,
+      "total": 0.0011720717884600163
+    },
+    {
+      "microbatch": 148,
+      "ce": 0.000266023853328079,
+      "expected_cost": 0.0007944422541186213,
+      "action_vocab_mass": 0.9999984502792358,
+      "total": 0.0010604660492390394
+    },
+    {
+      "microbatch": 149,
+      "ce": 2.1158979507163167e-05,
+      "expected_cost": 6.190758722368628e-05,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 8.306656673084944e-05
+    },
+    {
+      "microbatch": 150,
+      "ce": 0.0001844237995101139,
+      "expected_cost": 0.00037041696486994624,
+      "action_vocab_mass": 0.9999964833259583,
+      "total": 0.0005548407789319754
+    },
+    {
+      "microbatch": 151,
+      "ce": 0.00025861416361294687,
+      "expected_cost": 0.000772053434047848,
+      "action_vocab_mass": 0.9999998211860657,
+      "total": 0.0010306675685569644
+    },
+    {
+      "microbatch": 152,
+      "ce": 0.00022176843776833266,
+      "expected_cost": 0.0005883125122636557,
+      "action_vocab_mass": 0.9999957084655762,
+      "total": 0.0008100809645839036
+    },
+    {
+      "microbatch": 153,
+      "ce": 6.593368743779138e-05,
+      "expected_cost": 0.00011567730689421296,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 0.00018161098705604672
+    },
+    {
+      "microbatch": 154,
+      "ce": 0.0009366328013129532,
+      "expected_cost": 0.002761564217507839,
+      "action_vocab_mass": 0.9999905824661255,
+      "total": 0.0036981969606131315
+    },
+    {
+      "microbatch": 155,
+      "ce": 0.0008940105908550322,
+      "expected_cost": 0.0005290826084092259,
+      "action_vocab_mass": 0.9999948740005493,
+      "total": 0.001423093257471919
+    },
+    {
+      "microbatch": 156,
+      "ce": 0.0018778369994834065,
+      "expected_cost": 0.005547447595745325,
+      "action_vocab_mass": 0.9999890923500061,
+      "total": 0.00742528447881341
+    },
+    {
+      "microbatch": 157,
+      "ce": 7.094160537235439e-05,
+      "expected_cost": 0.00012881014845333993,
+      "action_vocab_mass": 0.9999957084655762,
+      "total": 0.00019975175382569432
+    },
+    {
+      "microbatch": 158,
+      "ce": 2.393964859948028e-05,
+      "expected_cost": 6.973399285925552e-05,
+      "action_vocab_mass": 0.9999992847442627,
+      "total": 9.36736396397464e-05
+    },
+    {
+      "microbatch": 159,
+      "ce": 1.1165752766828518e-05,
+      "expected_cost": 3.0696864996571094e-05,
+      "action_vocab_mass": 0.9999998211860657,
+      "total": 4.1862618672894314e-05
+    },
+    {
+      "microbatch": 160,
+      "ce": 0.00043473768164403737,
+      "expected_cost": 0.0012598474277183414,
+      "action_vocab_mass": 0.9999943971633911,
+      "total": 0.0016945850802585483
+    },
+    {
+      "microbatch": 161,
+      "ce": 0.011730816215276718,
+      "expected_cost": 0.033928561955690384,
+      "action_vocab_mass": 0.9999810457229614,
+      "total": 0.0456593781709671
+    },
+    {
+      "microbatch": 162,
+      "ce": 2.5787694539758377e-05,
+      "expected_cost": 7.307074702112004e-05,
+      "action_vocab_mass": 0.9999995231628418,
+      "total": 9.885844337986782e-05
+    },
+    {
+      "microbatch": 163,
+      "ce": 2.8370588552206755e-05,
+      "expected_cost": 1.6275842426693998e-05,
+      "action_vocab_mass": 0.9999983906745911,
+      "total": 4.4646432797890157e-05
+    },
+    {
+      "microbatch": 164,
+      "ce": 0.002389618894085288,
+      "expected_cost": 0.007037736941128969,
+      "action_vocab_mass": 0.9999969005584717,
+      "total": 0.009427355602383614
+    },
+    {
+      "microbatch": 165,
+      "ce": 0.0002883422712329775,
+      "expected_cost": 0.00086041702888906,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 0.001148759271018207
+    },
+    {
+      "microbatch": 166,
+      "ce": 3.3236756280530244e-05,
+      "expected_cost": 9.818884427659214e-05,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 0.00013142559328116477
+    },
+    {
+      "microbatch": 167,
+      "ce": 0.0014684895286336541,
+      "expected_cost": 0.0042961155995726585,
+      "action_vocab_mass": 0.9999942779541016,
+      "total": 0.005764605011790991
+    },
+    {
+      "microbatch": 168,
+      "ce": 1.790065834939014e-05,
+      "expected_cost": 4.736503251479007e-05,
+      "action_vocab_mass": 0.9999991655349731,
+      "total": 6.526568904519081e-05
+    },
+    {
+      "microbatch": 169,
+      "ce": 6.358659447869286e-05,
+      "expected_cost": 7.349657244049013e-05,
+      "action_vocab_mass": 0.9999964833259583,
+      "total": 0.0001370831741951406
+    },
+    {
+      "microbatch": 170,
+      "ce": 1.7284519344684668e-05,
+      "expected_cost": 1.0022598871728405e-05,
+      "action_vocab_mass": 0.9999992251396179,
+      "total": 2.7307118216413073e-05
+    },
+    {
+      "microbatch": 171,
+      "ce": 0.0008941913838498294,
+      "expected_cost": 0.0026704086922109127,
+      "action_vocab_mass": 0.9999988079071045,
+      "total": 0.003564600134268403
+    },
+    {
+      "microbatch": 172,
+      "ce": 0.03373945131897926,
+      "expected_cost": 0.09129361808300018,
+      "action_vocab_mass": 0.9999904036521912,
+      "total": 0.12503306567668915
+    },
+    {
+      "microbatch": 173,
+      "ce": 1.3073018635623157e-05,
+      "expected_cost": 1.130769760493422e-06,
+      "action_vocab_mass": 0.9999990463256836,
+      "total": 1.4203787941369228e-05
+    },
+    {
+      "microbatch": 174,
+      "ce": 4.380603786557913e-05,
+      "expected_cost": 0.00012343232810962945,
+      "action_vocab_mass": 0.9999990463256836,
+      "total": 0.00016723836597520858
+    },
+    {
+      "microbatch": 175,
+      "ce": 9.159069122688379e-06,
+      "expected_cost": 4.335523499321425e-06,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 1.3494593076757155e-05
+    },
+    {
+      "microbatch": 176,
+      "ce": 0.00034636410418897867,
+      "expected_cost": 0.0009961059549823403,
+      "action_vocab_mass": 0.9999977350234985,
+      "total": 0.001342470059171319
+    },
+    {
+      "microbatch": 177,
+      "ce": 7.845044456189498e-05,
+      "expected_cost": 0.00015526058268733323,
+      "action_vocab_mass": 0.9999902248382568,
+      "total": 0.00023371103452518582
+    },
+    {
+      "microbatch": 178,
+      "ce": 0.008334280923008919,
+      "expected_cost": 0.023841090500354767,
+      "action_vocab_mass": 0.9999866485595703,
+      "total": 0.032175369560718536
+    },
+    {
+      "microbatch": 179,
+      "ce": 0.00010463373473612592,
+      "expected_cost": 4.8979029088513926e-05,
+      "action_vocab_mass": 0.9999984502792358,
+      "total": 0.00015361276746261865
+    },
+    {
+      "microbatch": 180,
+      "ce": 3.981325789936818e-05,
+      "expected_cost": 0.00011364676174707711,
+      "action_vocab_mass": 0.9999994039535522,
+      "total": 0.00015346001600846648
+    },
+    {
+      "microbatch": 181,
+      "ce": 8.702420018380508e-05,
+      "expected_cost": 0.0001608163001947105,
+      "action_vocab_mass": 0.9999994039535522,
+      "total": 0.0002478405076544732
+    },
+    {
+      "microbatch": 182,
+      "ce": 0.00028969402774237096,
+      "expected_cost": 0.0008631026721559465,
+      "action_vocab_mass": 0.9999990463256836,
+      "total": 0.001152796670794487
+    },
+    {
+      "microbatch": 183,
+      "ce": 0.0015613877912983298,
+      "expected_cost": 0.004656210541725159,
+      "action_vocab_mass": 0.9999978542327881,
+      "total": 0.00621759844943881
+    },
+    {
+      "microbatch": 184,
+      "ce": 3.013829882547725e-05,
+      "expected_cost": 7.125254342099652e-05,
+      "action_vocab_mass": 0.999999463558197,
+      "total": 0.00010139084042748436
+    },
+    {
+      "microbatch": 185,
+      "ce": 0.0002571200020611286,
+      "expected_cost": 0.0007641984848305583,
+      "action_vocab_mass": 0.9999970197677612,
+      "total": 0.001021318486891687
+    },
+    {
+      "microbatch": 186,
+      "ce": 8.751990390010178e-05,
+      "expected_cost": 0.00025823438772931695,
+      "action_vocab_mass": 0.9999983310699463,
+      "total": 0.00034575429162941873
+    },
+    {
+      "microbatch": 187,
+      "ce": 0.00010135878255823627,
+      "expected_cost": 0.00028823225875385106,
+      "action_vocab_mass": 0.9999984502792358,
+      "total": 0.0003895910340361297
+    },
+    {
+      "microbatch": 188,
+      "ce": 0.0005856708739884198,
+      "expected_cost": 0.0002034897479461506,
+      "action_vocab_mass": 0.9999936819076538,
+      "total": 0.0007891606073826551
+    },
+    {
+      "microbatch": 189,
+      "ce": 0.00010599198867566884,
+      "expected_cost": 8.464710117550567e-05,
+      "action_vocab_mass": 0.9999967813491821,
+      "total": 0.0001906390825752169
+    },
+    {
+      "microbatch": 190,
+      "ce": 0.000372769427485764,
+      "expected_cost": 0.0010842069750651717,
+      "action_vocab_mass": 0.9999902248382568,
+      "total": 0.0014569764025509357
+    },
+    {
+      "microbatch": 191,
+      "ce": 3.540315083228052e-05,
+      "expected_cost": 6.389922054950148e-05,
+      "action_vocab_mass": 0.9999988079071045,
+      "total": 9.9302371381782e-05
+    },
+    {
+      "microbatch": 192,
+      "ce": 0.00021461339201778173,
+      "expected_cost": 0.000630245020147413,
+      "action_vocab_mass": 0.9999959468841553,
+      "total": 0.0008448584121651947
+    },
+    {
+      "microbatch": 193,
+      "ce": 0.00047564852866344154,
+      "expected_cost": 0.0014164337189868093,
+      "action_vocab_mass": 0.9999948740005493,
+      "total": 0.0018920822767540812
+    },
+    {
+      "microbatch": 194,
+      "ce": 8.392819290747866e-05,
+      "expected_cost": 0.0002447016886435449,
+      "action_vocab_mass": 0.9999969005584717,
+      "total": 0.0003286298888269812
+    },
+    {
+      "microbatch": 195,
+      "ce": 0.0003700420493260026,
+      "expected_cost": 0.0011027249274775386,
+      "action_vocab_mass": 0.999998152256012,
+      "total": 0.0014727669768035412
+    },
+    {
+      "microbatch": 196,
+      "ce": 0.00016526214312762022,
+      "expected_cost": 0.000492727616801858,
+      "action_vocab_mass": 0.9999993443489075,
+      "total": 0.0006579897599294782
+    },
+    {
+      "microbatch": 197,
+      "ce": 0.00030603643972426653,
+      "expected_cost": 0.0009013699018396437,
+      "action_vocab_mass": 0.9999977946281433,
+      "total": 0.0012074063997715712
+    },
+    {
+      "microbatch": 198,
+      "ce": 0.00010276769899064675,
+      "expected_cost": 0.00030297436751425266,
+      "action_vocab_mass": 0.9999979734420776,
+      "total": 0.0004057420592289418
+    },
+    {
+      "microbatch": 199,
+      "ce": 3.097312219324522e-05,
+      "expected_cost": 8.791333675617352e-05,
+      "action_vocab_mass": 0.9999982118606567,
+      "total": 0.00011888645531143993
+    },
+    {
+      "microbatch": 200,
+      "ce": 7.882658974267542e-05,
+      "expected_cost": 0.0002026049478445202,
+      "action_vocab_mass": 0.9999982118606567,
+      "total": 0.00028143153758719563
+    },
+    {
+      "microbatch": 201,
+      "ce": 0.0001479253260185942,
+      "expected_cost": 0.0004178563831374049,
+      "action_vocab_mass": 0.9999973177909851,
+      "total": 0.0005657817237079144
+    },
+    {
+      "microbatch": 202,
+      "ce": 0.00012901895388495177,
+      "expected_cost": 0.0003837060648947954,
+      "action_vocab_mass": 0.9999995231628418,
+      "total": 0.0005127250333316624
+    },
+    {
+      "microbatch": 203,
+      "ce": 0.007210596930235624,
+      "expected_cost": 0.021093634888529778,
+      "action_vocab_mass": 0.9999969005584717,
+      "total": 0.02830423228442669
+    },
+    {
+      "microbatch": 204,
+      "ce": 8.438004442723468e-05,
+      "expected_cost": 0.0001734008692437783,
+      "action_vocab_mass": 0.9999983310699463,
+      "total": 0.0002577809209469706
+    },
+    {
+      "microbatch": 205,
+      "ce": 0.0008914773352444172,
+      "expected_cost": 0.002661227947100997,
+      "action_vocab_mass": 0.9999972581863403,
+      "total": 0.003552705282345414
+    },
+    {
+      "microbatch": 206,
+      "ce": 2.1854973510926357e-06,
+      "expected_cost": 5.833456270920578e-06,
+      "action_vocab_mass": 1.0,
+      "total": 8.01895384938689e-06
+    },
+    {
+      "microbatch": 207,
+      "ce": 0.00013271099305711687,
+      "expected_cost": 0.00037302655982784927,
+      "action_vocab_mass": 0.9999984502792358,
+      "total": 0.0005057375528849661
+    },
+    {
+      "microbatch": 208,
+      "ce": 1.1702129995683208e-05,
+      "expected_cost": 2.5171684683300555e-05,
+      "action_vocab_mass": 0.9999995827674866,
+      "total": 3.687381467898376e-05
+    },
+    {
+      "microbatch": 209,
+      "ce": 1.3390907952270936e-05,
+      "expected_cost": 3.864485552185215e-05,
+      "action_vocab_mass": 0.9999997019767761,
+      "total": 5.203576438361779e-05
+    },
+    {
+      "microbatch": 210,
+      "ce": 1.6291892279696185e-06,
+      "expected_cost": 2.900202616729075e-06,
+      "action_vocab_mass": 0.9999998211860657,
+      "total": 4.529391844698694e-06
+    },
+    {
+      "microbatch": 211,
+      "ce": 0.0002469894534442574,
+      "expected_cost": 0.0007201517000794411,
+      "action_vocab_mass": 0.999997615814209,
+      "total": 0.000967141124419868
+    },
+    {
+      "microbatch": 212,
+      "ce": 3.248295615776442e-05,
+      "expected_cost": 4.320812877267599e-05,
+      "action_vocab_mass": 0.9999964833259583,
+      "total": 7.569108856841922e-05
+    },
+    {
+      "microbatch": 213,
+      "ce": 0.00011831188021460548,
+      "expected_cost": 0.00026039013755507767,
+      "action_vocab_mass": 0.999993085861206,
+      "total": 0.00037870201049372554
+    },
+    {
+      "microbatch": 214,
+      "ce": 1.8576278307591565e-05,
+      "expected_cost": 2.809886063914746e-05,
+      "action_vocab_mass": 0.9999980926513672,
+      "total": 4.667513712774962e-05
+    },
+    {
+      "microbatch": 215,
+      "ce": 6.536567525472492e-06,
+      "expected_cost": 1.651540515013039e-05,
+      "action_vocab_mass": 0.9999995231628418,
+      "total": 2.3051972675602883e-05
+    },
+    {
+      "microbatch": 216,
+      "ce": 8.231677929870784e-05,
+      "expected_cost": 0.0002352239389438182,
+      "action_vocab_mass": 0.9999986290931702,
+      "total": 0.00031754071824252605
+    },
+    {
+      "microbatch": 217,
+      "ce": 3.585985177778639e-05,
+      "expected_cost": 4.25733087467961e-05,
+      "action_vocab_mass": 0.9999920129776001,
+      "total": 7.84331641625613e-05
+    },
+    {
+      "microbatch": 218,
+      "ce": 7.68332029110752e-05,
+      "expected_cost": 0.00021983466285746545,
+      "action_vocab_mass": 0.9999986886978149,
+      "total": 0.00029666785849258304
+    },
+    {
+      "microbatch": 219,
+      "ce": 0.0003103350754827261,
+      "expected_cost": 0.0008989870548248291,
+      "action_vocab_mass": 0.9999983310699463,
+      "total": 0.0012093221303075552
+    },
+    {
+      "microbatch": 220,
+      "ce": 1.9589491785154678e-05,
+      "expected_cost": 5.4570780775975436e-05,
+      "action_vocab_mass": 0.9999983310699463,
+      "total": 7.416027074214071e-05
+    },
+    {
+      "microbatch": 221,
+      "ce": 1.484121003159089e-05,
+      "expected_cost": 1.3828170267515816e-05,
+      "action_vocab_mass": 0.9999983310699463,
+      "total": 2.8669379389612004e-05
+    },
+    {
+      "microbatch": 222,
+      "ce": 2.1794554413645528e-05,
+      "expected_cost": 6.287949508987367e-05,
+      "action_vocab_mass": 0.9999990463256836,
+      "total": 8.46740513225086e-05
+    },
+    {
+      "microbatch": 223,
+      "ce": 3.0994281132734613e-06,
+      "expected_cost": 7.652633939869702e-06,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 1.0752061825769488e-05
+    },
+    {
+      "microbatch": 224,
+      "ce": 5.483557742991252e-06,
+      "expected_cost": 1.5458175766980276e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 2.0941733964718878e-05
+    },
+    {
+      "microbatch": 225,
+      "ce": 4.521707523963414e-05,
+      "expected_cost": 7.631722837686539e-05,
+      "action_vocab_mass": 0.9999872446060181,
+      "total": 0.00012153430725447834
+    },
+    {
+      "microbatch": 226,
+      "ce": 2.5688414098112844e-05,
+      "expected_cost": 7.474320591427386e-05,
+      "action_vocab_mass": 0.9999995827674866,
+      "total": 0.0001004316218313761
+    },
+    {
+      "microbatch": 227,
+      "ce": 4.351104053057497e-06,
+      "expected_cost": 9.113587111642119e-06,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 1.3464690709952265e-05
+    },
+    {
+      "microbatch": 228,
+      "ce": 2.6761399567476474e-05,
+      "expected_cost": 6.380946433637291e-05,
+      "action_vocab_mass": 0.9999994039535522,
+      "total": 9.057086572283879e-05
+    },
+    {
+      "microbatch": 229,
+      "ce": 1.3907725815442973e-06,
+      "expected_cost": 3.691116944537498e-06,
+      "action_vocab_mass": 1.0,
+      "total": 5.081889412394958e-06
+    },
+    {
+      "microbatch": 230,
+      "ce": 9.496375423623249e-05,
+      "expected_cost": 0.0002787853009067476,
+      "action_vocab_mass": 0.9999986886978149,
+      "total": 0.0003737490624189377
+    },
+    {
+      "microbatch": 231,
+      "ce": 1.0291524631611537e-05,
+      "expected_cost": 5.401900011747784e-07,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 1.0831714462256059e-05
+    },
+    {
+      "microbatch": 232,
+      "ce": 6.140603363746777e-05,
+      "expected_cost": 8.646699279779568e-05,
+      "action_vocab_mass": 0.9999959468841553,
+      "total": 0.00014787302643526345
+    },
+    {
+      "microbatch": 233,
+      "ce": 6.216191104613245e-05,
+      "expected_cost": 0.00018096622079610825,
+      "action_vocab_mass": 0.9999995827674866,
+      "total": 0.0002431281318422407
+    },
+    {
+      "microbatch": 234,
+      "ce": 2.2451031327364035e-06,
+      "expected_cost": 4.416920546645997e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 6.662023679382401e-06
+    },
+    {
+      "microbatch": 235,
+      "ce": 2.185495986850583e-06,
+      "expected_cost": 5.987422355246963e-06,
+      "action_vocab_mass": 1.0,
+      "total": 8.172918569471221e-06
+    },
+    {
+      "microbatch": 236,
+      "ce": 6.73996182740666e-05,
+      "expected_cost": 0.00019935279851779342,
+      "action_vocab_mass": 0.9999985694885254,
+      "total": 0.0002667524095159024
+    },
+    {
+      "microbatch": 237,
+      "ce": 1.5198623259493615e-05,
+      "expected_cost": 3.114323044428602e-05,
+      "action_vocab_mass": 0.9999994039535522,
+      "total": 4.6341854613274336e-05
+    },
+    {
+      "microbatch": 238,
+      "ce": 6.437199772335589e-06,
+      "expected_cost": 6.127565939095803e-06,
+      "action_vocab_mass": 0.9999994039535522,
+      "total": 1.2564765711431392e-05
+    },
+    {
+      "microbatch": 239,
+      "ce": 0.00010143770487047732,
+      "expected_cost": 0.0003016329719685018,
+      "action_vocab_mass": 0.9999988079071045,
+      "total": 0.0004030706768389791
+    },
+    {
+      "microbatch": 240,
+      "ce": 6.61605417917599e-06,
+      "expected_cost": 1.7671583918854594e-05,
+      "action_vocab_mass": 0.9999994039535522,
+      "total": 2.4287637643283233e-05
+    },
+    {
+      "microbatch": 241,
+      "ce": 1.8019760318566114e-05,
+      "expected_cost": 2.1294104953994974e-05,
+      "action_vocab_mass": 0.999993085861206,
+      "total": 3.931386527256109e-05
+    },
+    {
+      "microbatch": 242,
+      "ce": 8.364394489035476e-06,
+      "expected_cost": 1.2592026905622333e-05,
+      "action_vocab_mass": 0.9999991655349731,
+      "total": 2.0956420485163108e-05
+    },
+    {
+      "microbatch": 243,
+      "ce": 3.1391552965942537e-06,
+      "expected_cost": 6.345287147269119e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 9.484442671237048e-06
+    },
+    {
+      "microbatch": 244,
+      "ce": 1.0788280633278191e-05,
+      "expected_cost": 7.901338904048316e-06,
+      "action_vocab_mass": 0.9999992847442627,
+      "total": 1.8689619537326507e-05
+    },
+    {
+      "microbatch": 245,
+      "ce": 6.2981730479805265e-06,
+      "expected_cost": 6.769141691620462e-06,
+      "action_vocab_mass": 0.9999994039535522,
+      "total": 1.3067314284853637e-05
+    },
+    {
+      "microbatch": 246,
+      "ce": 2.246949588879943e-05,
+      "expected_cost": 3.823124643531628e-05,
+      "action_vocab_mass": 0.9999963641166687,
+      "total": 6.070074232411571e-05
+    },
+    {
+      "microbatch": 247,
+      "ce": 3.0793820769758895e-05,
+      "expected_cost": 2.8703736461466178e-05,
+      "action_vocab_mass": 0.9999993443489075,
+      "total": 5.949755723122507e-05
+    },
+    {
+      "microbatch": 248,
+      "ce": 4.4439497287385166e-05,
+      "expected_cost": 0.00013260534615255892,
+      "action_vocab_mass": 1.0,
+      "total": 0.0001770448434399441
+    },
+    {
+      "microbatch": 249,
+      "ce": 8.821381925372407e-06,
+      "expected_cost": 2.4615899747004732e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 3.343728167237714e-05
+    },
+    {
+      "microbatch": 250,
+      "ce": 0.00017744927026797086,
+      "expected_cost": 0.0005285522784106433,
+      "action_vocab_mass": 0.9999978542327881,
+      "total": 0.000706001534126699
+    },
+    {
+      "microbatch": 251,
+      "ce": 2.7418016088631703e-06,
+      "expected_cost": 6.997223408689024e-06,
+      "action_vocab_mass": 1.0,
+      "total": 9.739024790178519e-06
+    },
+    {
+      "microbatch": 252,
+      "ce": 1.490113959334849e-06,
+      "expected_cost": 1.2117753840357182e-06,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 2.701889343370567e-06
+    },
+    {
+      "microbatch": 253,
+      "ce": 2.437661350995768e-05,
+      "expected_cost": 7.112279126886278e-05,
+      "action_vocab_mass": 0.9999995231628418,
+      "total": 9.549940295983106e-05
+    },
+    {
+      "microbatch": 254,
+      "ce": 1.6529627828276716e-05,
+      "expected_cost": 1.6856602087500505e-05,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 3.338622991577722e-05
+    },
+    {
+      "microbatch": 255,
+      "ce": 9.675596629676875e-06,
+      "expected_cost": 2.7714449970517308e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 3.7390047509688884e-05
+    },
+    {
+      "microbatch": 256,
+      "ce": 1.1722219142029644e-06,
+      "expected_cost": 2.587703875178704e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 3.7599256756948307e-06
+    },
+    {
+      "microbatch": 257,
+      "ce": 2.137698174919933e-05,
+      "expected_cost": 4.846850788453594e-05,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 6.984548963373527e-05
+    },
+    {
+      "microbatch": 258,
+      "ce": 2.9802201879647328e-06,
+      "expected_cost": 7.841886144888122e-06,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 1.082210656022653e-05
+    },
+    {
+      "microbatch": 259,
+      "ce": 4.172306944383308e-06,
+      "expected_cost": 3.2422076401417144e-06,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 7.414514584525023e-06
+    },
+    {
+      "microbatch": 260,
+      "ce": 1.67083962878678e-05,
+      "expected_cost": 4.913394877803512e-05,
+      "action_vocab_mass": 0.9999999403953552,
+      "total": 6.584234506590292e-05
+    },
+    {
+      "microbatch": 261,
+      "ce": 7.748595294287952e-07,
+      "expected_cost": 1.8072875036523328e-06,
+      "action_vocab_mass": 1.0,
+      "total": 2.582147089924547e-06
+    },
+    {
+      "microbatch": 262,
+      "ce": 6.082566687837243e-05,
+      "expected_cost": 0.00017970686894841492,
+      "action_vocab_mass": 0.9999990463256836,
+      "total": 0.00024053253582678735
+    },
+    {
+      "microbatch": 263,
+      "ce": 4.370962869870709e-06,
+      "expected_cost": 1.1684276614687406e-05,
+      "action_vocab_mass": 0.9999998211860657,
+      "total": 1.6055239029810764e-05
+    },
+    {
+      "microbatch": 264,
+      "ce": 2.9007385364820948e-06,
+      "expected_cost": 7.68190966482507e-06,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 1.0582648428680841e-05
+    },
+    {
+      "microbatch": 265,
+      "ce": 0.0018573254346847534,
+      "expected_cost": 0.005528783425688744,
+      "action_vocab_mass": 0.9999969601631165,
+      "total": 0.007386108860373497
+    },
+    {
+      "microbatch": 266,
+      "ce": 1.629190251151158e-06,
+      "expected_cost": 4.073195214004954e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 5.702385351469275e-06
+    },
+    {
+      "microbatch": 267,
+      "ce": 8.165646249835845e-06,
+      "expected_cost": 8.600413821113762e-06,
+      "action_vocab_mass": 0.9999961853027344,
+      "total": 1.6766060070949607e-05
+    },
+    {
+      "microbatch": 268,
+      "ce": 4.47031425210298e-06,
+      "expected_cost": 1.1736421583918855e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 1.6206735381274484e-05
+    },
+    {
+      "microbatch": 269,
+      "ce": 3.963252675021067e-05,
+      "expected_cost": 0.00011733026622096077,
+      "action_vocab_mass": 0.9999994039535522,
+      "total": 0.00015696279297117144
+    },
+    {
+      "microbatch": 270,
+      "ce": 4.7087141865631565e-06,
+      "expected_cost": 1.35462223624927e-05,
+      "action_vocab_mass": 1.0,
+      "total": 1.8254937458550557e-05
+    },
+    {
+      "microbatch": 271,
+      "ce": 1.0410710274300072e-05,
+      "expected_cost": 2.943615982076153e-05,
+      "action_vocab_mass": 0.9999994039535522,
+      "total": 3.98468691855669e-05
+    },
+    {
+      "microbatch": 272,
+      "ce": 1.7165484678116627e-05,
+      "expected_cost": 2.4962164388853125e-05,
+      "action_vocab_mass": 0.9999963045120239,
+      "total": 4.212764906696975e-05
+    },
+    {
+      "microbatch": 273,
+      "ce": 6.624886009376496e-05,
+      "expected_cost": 0.0001895606837933883,
+      "action_vocab_mass": 0.9999966621398926,
+      "total": 0.00025580954388715327
+    },
+    {
+      "microbatch": 274,
+      "ce": 4.013349553133594e-06,
+      "expected_cost": 8.486505066684913e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 1.2499855074565858e-05
+    },
+    {
+      "microbatch": 275,
+      "ce": 9.735414323586156e-07,
+      "expected_cost": 1.4723858612342156e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 2.445927293592831e-06
+    },
+    {
+      "microbatch": 276,
+      "ce": 9.615988346922677e-06,
+      "expected_cost": 2.703592872421723e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 3.6651916161645204e-05
+    },
+    {
+      "microbatch": 277,
+      "ce": 8.0465069913771e-06,
+      "expected_cost": 2.3485512429033406e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 3.153202123939991e-05
+    },
+    {
+      "microbatch": 278,
+      "ce": 6.953871434234316e-07,
+      "expected_cost": 4.456009321529564e-07,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 1.1409880471546785e-06
+    },
+    {
+      "microbatch": 279,
+      "ce": 1.2874338608526159e-05,
+      "expected_cost": 2.0456085621844977e-05,
+      "action_vocab_mass": 0.9999971389770508,
+      "total": 3.3330423320876434e-05
+    },
+    {
+      "microbatch": 280,
+      "ce": 5.5025986512191594e-05,
+      "expected_cost": 1.2108892406104133e-05,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 6.713488255627453e-05
+    },
+    {
+      "microbatch": 281,
+      "ce": 2.411832429061178e-05,
+      "expected_cost": 8.364197583432542e-07,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 2.4954744731076062e-05
+    },
+    {
+      "microbatch": 282,
+      "ce": 1.172223278445017e-06,
+      "expected_cost": 2.587910557849682e-06,
+      "action_vocab_mass": 1.0,
+      "total": 3.7601339499815367e-06
+    },
+    {
+      "microbatch": 283,
+      "ce": 2.264966269649449e-06,
+      "expected_cost": 5.567381322180154e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 7.832347364455927e-06
+    },
+    {
+      "microbatch": 284,
+      "ce": 8.145959782268619e-07,
+      "expected_cost": 8.150545909302309e-07,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 1.6296505691570928e-06
+    },
+    {
+      "microbatch": 285,
+      "ce": 1.3788216165266931e-05,
+      "expected_cost": 1.5430297935381532e-05,
+      "action_vocab_mass": 0.9999954700469971,
+      "total": 2.9218514100648463e-05
+    },
+    {
+      "microbatch": 286,
+      "ce": 1.941018672368955e-05,
+      "expected_cost": 1.0402406587672886e-05,
+      "action_vocab_mass": 0.9999995231628418,
+      "total": 2.9812592401867732e-05
+    },
+    {
+      "microbatch": 287,
+      "ce": 0.023790160194039345,
+      "expected_cost": 1.4346660464070737e-06,
+      "action_vocab_mass": 0.9999970197677612,
+      "total": 0.023791594430804253
+    },
+    {
+      "microbatch": 288,
+      "ce": 1.4503760894513107e-06,
+      "expected_cost": 3.097296485066181e-06,
+      "action_vocab_mass": 0.9999997019767761,
+      "total": 4.5476726882043295e-06
+    },
+    {
+      "microbatch": 289,
+      "ce": 1.0470234883541707e-05,
+      "expected_cost": 9.041773409990128e-06,
+      "action_vocab_mass": 1.0,
+      "total": 1.9512008293531835e-05
+    },
+    {
+      "microbatch": 290,
+      "ce": 2.4754279365879484e-05,
+      "expected_cost": 6.846891483291984e-05,
+      "action_vocab_mass": 0.9999992847442627,
+      "total": 9.322319237980992e-05
+    },
+    {
+      "microbatch": 291,
+      "ce": 2.3780581614119e-05,
+      "expected_cost": 2.3947094973664207e-07,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 2.4020053388085216e-05
+    },
+    {
+      "microbatch": 292,
+      "ce": 1.7086618981920765e-06,
+      "expected_cost": 3.7714735299232416e-06,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 5.48013531442848e-06
+    },
+    {
+      "microbatch": 293,
+      "ce": 1.2318087101448327e-05,
+      "expected_cost": 8.437540600425564e-06,
+      "action_vocab_mass": 0.9999971985816956,
+      "total": 2.075562770187389e-05
+    },
+    {
+      "microbatch": 294,
+      "ce": 1.7483994270151015e-06,
+      "expected_cost": 3.9778001337253954e-06,
+      "action_vocab_mass": 1.0,
+      "total": 5.726199560740497e-06
+    },
+    {
+      "microbatch": 295,
+      "ce": 1.0331187695555855e-05,
+      "expected_cost": 1.3292340099724242e-06,
+      "action_vocab_mass": 0.9999988079071045,
+      "total": 1.1660421478154603e-05
+    },
+    {
+      "microbatch": 296,
+      "ce": 4.688866738433717e-06,
+      "expected_cost": 1.3258969374874141e-05,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 1.7947835658560507e-05
+    },
+    {
+      "microbatch": 297,
+      "ce": 1.4901128224664717e-06,
+      "expected_cost": 3.823521183221601e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 5.31363411937491e-06
+    },
+    {
+      "microbatch": 298,
+      "ce": 8.543324838683475e-07,
+      "expected_cost": 1.9118267573503545e-06,
+      "action_vocab_mass": 1.0,
+      "total": 2.766159241218702e-06
+    },
+    {
+      "microbatch": 299,
+      "ce": 2.483511480022571e-06,
+      "expected_cost": 2.46809304371709e-06,
+      "action_vocab_mass": 0.9999986886978149,
+      "total": 4.9516047511133365e-06
+    },
+    {
+      "microbatch": 300,
+      "ce": 1.1324863180561806e-06,
+      "expected_cost": 1.0114122233062517e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 2.14389865504927e-06
+    },
+    {
+      "microbatch": 301,
+      "ce": 2.423912746962742e-06,
+      "expected_cost": 6.613423920498462e-06,
+      "action_vocab_mass": 0.9999999403953552,
+      "total": 9.03733689483488e-06
+    },
+    {
+      "microbatch": 302,
+      "ce": 8.960335435403977e-06,
+      "expected_cost": 1.6428188246209174e-05,
+      "action_vocab_mass": 0.9999970197677612,
+      "total": 2.538852277211845e-05
+    },
+    {
+      "microbatch": 303,
+      "ce": 2.1060232029412873e-06,
+      "expected_cost": 2.065375497295463e-07,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 2.3125608095142525e-06
+    },
+    {
+      "microbatch": 304,
+      "ce": 2.5828512661973946e-06,
+      "expected_cost": 3.882414603140205e-07,
+      "action_vocab_mass": 1.0,
+      "total": 2.971092726511415e-06
+    },
+    {
+      "microbatch": 305,
+      "ce": 2.5431145331822336e-06,
+      "expected_cost": 1.0139443418211158e-07,
+      "action_vocab_mass": 0.9999998211860657,
+      "total": 2.644508867888362e-06
+    },
+    {
+      "microbatch": 306,
+      "ce": 1.333391785621643,
+      "expected_cost": 2.82450309896376e-06,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 1.3333946466445923
+    },
+    {
+      "microbatch": 307,
+      "ce": 7.351233648478228e-07,
+      "expected_cost": 3.760351603432355e-07,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 1.1111585536127677e-06
+    },
+    {
+      "microbatch": 308,
+      "ce": 5.384215910453349e-06,
+      "expected_cost": 4.152128894929774e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 9.536344805383123e-06
+    },
+    {
+      "microbatch": 309,
+      "ce": 2.9362767236307263e-05,
+      "expected_cost": 6.685534754069522e-05,
+      "action_vocab_mass": 0.9999915361404419,
+      "total": 9.621811477700248e-05
+    },
+    {
+      "microbatch": 310,
+      "ce": 3.178913630108582e-07,
+      "expected_cost": 5.954381094852579e-07,
+      "action_vocab_mass": 1.0,
+      "total": 9.133294724961161e-07
+    },
+    {
+      "microbatch": 311,
+      "ce": 1.6450196199002676e-05,
+      "expected_cost": 4.7032204747665673e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 6.348240276565775e-05
+    },
+    {
+      "microbatch": 312,
+      "ce": 5.364415187614213e-07,
+      "expected_cost": 8.379874998354353e-07,
+      "action_vocab_mass": 1.0,
+      "total": 1.3744290754402755e-06
+    },
+    {
+      "microbatch": 313,
+      "ce": 6.914031473570503e-06,
+      "expected_cost": 1.9666609659907408e-05,
+      "action_vocab_mass": 1.0,
+      "total": 2.658064113347791e-05
+    },
+    {
+      "microbatch": 314,
+      "ce": 2.9620916393469088e-05,
+      "expected_cost": 6.194831803441048e-05,
+      "action_vocab_mass": 0.9999980926513672,
+      "total": 9.156923624686897e-05
+    },
+    {
+      "microbatch": 315,
+      "ce": 9.794793186301831e-06,
+      "expected_cost": 1.9582306777010672e-05,
+      "action_vocab_mass": 0.9999973773956299,
+      "total": 2.9377100872807205e-05
+    },
+    {
+      "microbatch": 316,
+      "ce": 8.940682505453879e-07,
+      "expected_cost": 2.720856571158947e-07,
+      "action_vocab_mass": 1.0,
+      "total": 1.1661538792395731e-06
+    },
+    {
+      "microbatch": 317,
+      "ce": 1.3709037602893659e-06,
+      "expected_cost": 3.160676442348631e-06,
+      "action_vocab_mass": 0.9999999403953552,
+      "total": 4.531580088951159e-06
+    },
+    {
+      "microbatch": 318,
+      "ce": 3.33782941197569e-06,
+      "expected_cost": 9.481534107180778e-06,
+      "action_vocab_mass": 1.0,
+      "total": 1.2819363291782793e-05
+    },
+    {
+      "microbatch": 319,
+      "ce": 1.7881358189697494e-06,
+      "expected_cost": 4.4676585275738034e-06,
+      "action_vocab_mass": 1.0,
+      "total": 6.255794232856715e-06
+    },
+    {
+      "microbatch": 320,
+      "ce": 8.543323133380909e-07,
+      "expected_cost": 2.0238751403667266e-06,
+      "action_vocab_mass": 1.0,
+      "total": 2.8782073968613986e-06
+    },
+    {
+      "microbatch": 321,
+      "ce": 4.48792998213321e-05,
+      "expected_cost": 9.503446926828474e-05,
+      "action_vocab_mass": 0.9999933242797852,
+      "total": 0.00013991376908961684
+    },
+    {
+      "microbatch": 322,
+      "ce": 9.580808546161279e-05,
+      "expected_cost": 0.00021438641124404967,
+      "action_vocab_mass": 0.9999884366989136,
+      "total": 0.0003101945039816201
+    },
+    {
+      "microbatch": 323,
+      "ce": 1.6768217392382212e-05,
+      "expected_cost": 2.4189359464799054e-05,
+      "action_vocab_mass": 0.9999969005584717,
+      "total": 4.0957576857181266e-05
+    },
+    {
+      "microbatch": 324,
+      "ce": 3.3378394164174097e-06,
+      "expected_cost": 8.513549801136833e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 1.1851388990180567e-05
+    },
+    {
+      "microbatch": 325,
+      "ce": 2.157560629711952e-05,
+      "expected_cost": 6.35446558590047e-05,
+      "action_vocab_mass": 0.9999999403953552,
+      "total": 8.512026397511363e-05
+    },
+    {
+      "microbatch": 326,
+      "ce": 2.106026158799068e-06,
+      "expected_cost": 1.922511046359432e-06,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 4.0285372051585e-06
+    },
+    {
+      "microbatch": 327,
+      "ce": 2.5648616428952664e-05,
+      "expected_cost": 5.965225864201784e-05,
+      "action_vocab_mass": 0.9999992847442627,
+      "total": 8.53008750709705e-05
+    },
+    {
+      "microbatch": 328,
+      "ce": 1.2536413123598322e-05,
+      "expected_cost": 1.4923217349860352e-05,
+      "action_vocab_mass": 0.9999997019767761,
+      "total": 2.7459631382953376e-05
+    },
+    {
+      "microbatch": 329,
+      "ce": 1.043063912220532e-05,
+      "expected_cost": 1.6990954463835806e-05,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 2.7421592676546425e-05
+    },
+    {
+      "microbatch": 330,
+      "ce": 7.464838563464582e-05,
+      "expected_cost": 0.00021852855570614338,
+      "action_vocab_mass": 0.9999995231628418,
+      "total": 0.0002931769413407892
+    },
+    {
+      "microbatch": 331,
+      "ce": 1.6689260746716172e-06,
+      "expected_cost": 4.077777248312486e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 5.746703209297266e-06
+    },
+    {
+      "microbatch": 332,
+      "ce": 0.03357462212443352,
+      "expected_cost": 0.09122347831726074,
+      "action_vocab_mass": 0.9999980926513672,
+      "total": 0.12479810416698456
+    },
+    {
+      "microbatch": 333,
+      "ce": 9.735186722537037e-06,
+      "expected_cost": 5.072262865724042e-06,
+      "action_vocab_mass": 0.9999994039535522,
+      "total": 1.4807449588261079e-05
+    },
+    {
+      "microbatch": 334,
+      "ce": 1.1702039955707733e-05,
+      "expected_cost": 3.387838660273701e-05,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 4.558042564895004e-05
+    },
+    {
+      "microbatch": 335,
+      "ce": 1.0331453950129799e-06,
+      "expected_cost": 2.3914449229778256e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 3.424590431677643e-06
+    },
+    {
+      "microbatch": 336,
+      "ce": 8.37861152831465e-05,
+      "expected_cost": 9.8431934020482e-05,
+      "action_vocab_mass": 0.9999901056289673,
+      "total": 0.0001822180493036285
+    },
+    {
+      "microbatch": 337,
+      "ce": 1.1503398127388209e-05,
+      "expected_cost": 3.3162577892653644e-05,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 4.466597602004185e-05
+    },
+    {
+      "microbatch": 338,
+      "ce": 7.927242222649511e-06,
+      "expected_cost": 2.3105729269445874e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 3.103297058260068e-05
+    },
+    {
+      "microbatch": 339,
+      "ce": 4.76836959251159e-07,
+      "expected_cost": 9.392789479534258e-07,
+      "action_vocab_mass": 1.0,
+      "total": 1.4161158787828754e-06
+    },
+    {
+      "microbatch": 340,
+      "ce": 8.863044058671221e-05,
+      "expected_cost": 0.0002570746873971075,
+      "action_vocab_mass": 0.9999995231628418,
+      "total": 0.0003457051352597773
+    },
+    {
+      "microbatch": 341,
+      "ce": 2.662324504854041e-06,
+      "expected_cost": 7.190732958406443e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 9.853057235886808e-06
+    },
+    {
+      "microbatch": 342,
+      "ce": 6.317979568848386e-06,
+      "expected_cost": 1.8133019693777896e-05,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 2.4450999262626283e-05
+    },
+    {
+      "microbatch": 343,
+      "ce": 6.65310726617463e-05,
+      "expected_cost": 0.00011284771608188748,
+      "action_vocab_mass": 0.9999902248382568,
+      "total": 0.00017937878146767616
+    },
+    {
+      "microbatch": 344,
+      "ce": 3.534324423526414e-05,
+      "expected_cost": 5.067147867521271e-05,
+      "action_vocab_mass": 0.9999920129776001,
+      "total": 8.601472654845566e-05
+    },
+    {
+      "microbatch": 345,
+      "ce": 7.351230237873096e-07,
+      "expected_cost": 1.391072032674856e-06,
+      "action_vocab_mass": 1.0,
+      "total": 2.1261951133055845e-06
+    },
+    {
+      "microbatch": 346,
+      "ce": 7.152548278099857e-07,
+      "expected_cost": 1.494345610808523e-06,
+      "action_vocab_mass": 1.0,
+      "total": 2.2096005523053464e-06
+    },
+    {
+      "microbatch": 347,
+      "ce": 6.428220513043925e-05,
+      "expected_cost": 1.418762440152932e-05,
+      "action_vocab_mass": 0.9999969005584717,
+      "total": 7.846982771297917e-05
+    },
+    {
+      "microbatch": 348,
+      "ce": 7.866007945267484e-05,
+      "expected_cost": 0.00021959900914225727,
+      "action_vocab_mass": 0.9999991655349731,
+      "total": 0.0002982590813189745
+    },
+    {
+      "microbatch": 349,
+      "ce": 9.313641203334555e-05,
+      "expected_cost": 0.00027784486883319914,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 0.0003709812881425023
+    },
+    {
+      "microbatch": 350,
+      "ce": 3.72493923350703e-05,
+      "expected_cost": 0.00011006847489625216,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 0.00014731787086930126
+    },
+    {
+      "microbatch": 351,
+      "ce": 1.51588074004394e-05,
+      "expected_cost": 4.320109655964188e-05,
+      "action_vocab_mass": 0.9999995827674866,
+      "total": 5.835990305058658e-05
+    },
+    {
+      "microbatch": 352,
+      "ce": 0.00022449313837569207,
+      "expected_cost": 0.0006658767233602703,
+      "action_vocab_mass": 0.9999991655349731,
+      "total": 0.0008903698762878776
+    },
+    {
+      "microbatch": 353,
+      "ce": 1.5298488733606064e-06,
+      "expected_cost": 5.593676064563624e-07,
+      "action_vocab_mass": 1.0,
+      "total": 2.08921642297355e-06
+    },
+    {
+      "microbatch": 354,
+      "ce": 3.134939834126271e-05,
+      "expected_cost": 4.9089670937974006e-05,
+      "action_vocab_mass": 0.9999921917915344,
+      "total": 8.043907291721553e-05
+    },
+    {
+      "microbatch": 355,
+      "ce": 2.384173967584502e-06,
+      "expected_cost": 6.164273145259358e-06,
+      "action_vocab_mass": 0.9999998211860657,
+      "total": 8.54844711284386e-06
+    },
+    {
+      "microbatch": 356,
+      "ce": 0.00010900852066697553,
+      "expected_cost": 0.00020372560538817197,
+      "action_vocab_mass": 0.9999957084655762,
+      "total": 0.0003127341333311051
+    },
+    {
+      "microbatch": 357,
+      "ce": 5.364415756048402e-07,
+      "expected_cost": 9.016624744617729e-07,
+      "action_vocab_mass": 1.0,
+      "total": 1.4381040500666131e-06
+    },
+    {
+      "microbatch": 358,
+      "ce": 0.00024136865977197886,
+      "expected_cost": 0.0005110559286549687,
+      "action_vocab_mass": 0.9999907612800598,
+      "total": 0.0007524245884269476
+    },
+    {
+      "microbatch": 359,
+      "ce": 1.4781432582822163e-05,
+      "expected_cost": 2.9560865186795127e-06,
+      "action_vocab_mass": 0.9999991655349731,
+      "total": 1.7737518646754324e-05
+    },
+    {
+      "microbatch": 360,
+      "ce": 3.899682269548066e-05,
+      "expected_cost": 0.0001157913138740696,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 0.00015478814020752907
+    },
+    {
+      "microbatch": 361,
+      "ce": 5.6359946029260755e-05,
+      "expected_cost": 0.00014879595255479217,
+      "action_vocab_mass": 0.9999936819076538,
+      "total": 0.00020515589858405292
+    },
+    {
+      "microbatch": 362,
+      "ce": 2.107887848978862e-05,
+      "expected_cost": 5.1587685447884724e-05,
+      "action_vocab_mass": 0.9999994039535522,
+      "total": 7.266656029969454e-05
+    },
+    {
+      "microbatch": 363,
+      "ce": 1.3728681551583577e-05,
+      "expected_cost": 2.3893815523479134e-05,
+      "action_vocab_mass": 0.9999993443489075,
+      "total": 3.762249616556801e-05
+    },
+    {
+      "microbatch": 364,
+      "ce": 0.0009915580740198493,
+      "expected_cost": 0.0029591151978820562,
+      "action_vocab_mass": 0.9999980926513672,
+      "total": 0.003950673155486584
+    },
+    {
+      "microbatch": 365,
+      "ce": 0.00871139857918024,
+      "expected_cost": 0.001804414321668446,
+      "action_vocab_mass": 0.9999951124191284,
+      "total": 0.010515812784433365
+    },
+    {
+      "microbatch": 366,
+      "ce": 3.854414444504073e-06,
+      "expected_cost": 9.314666385762393e-06,
+      "action_vocab_mass": 0.9999999403953552,
+      "total": 1.3169081285013817e-05
+    },
+    {
+      "microbatch": 367,
+      "ce": 5.980249625281431e-06,
+      "expected_cost": 2.576245151431067e-06,
+      "action_vocab_mass": 0.9999994039535522,
+      "total": 8.556495231459849e-06
+    },
+    {
+      "microbatch": 368,
+      "ce": 0.00041568148299120367,
+      "expected_cost": 0.0012384235160425305,
+      "action_vocab_mass": 0.9999992251396179,
+      "total": 0.0016541050281375647
+    },
+    {
+      "microbatch": 369,
+      "ce": 3.905665289494209e-05,
+      "expected_cost": 2.2714224542141892e-05,
+      "action_vocab_mass": 0.9999989867210388,
+      "total": 6.177087925607339e-05
+    },
+    {
+      "microbatch": 370,
+      "ce": 3.941419709008187e-05,
+      "expected_cost": 5.198714279686101e-05,
+      "action_vocab_mass": 0.9999944567680359,
+      "total": 9.140133624896407e-05
+    },
+    {
+      "microbatch": 371,
+      "ce": 3.3535794500494376e-05,
+      "expected_cost": 8.267175144283101e-05,
+      "action_vocab_mass": 0.9999992847442627,
+      "total": 0.00011620754958130419
+    },
+    {
+      "microbatch": 372,
+      "ce": 5.165733227840974e-07,
+      "expected_cost": 1.0544375754761859e-06,
+      "action_vocab_mass": 1.0,
+      "total": 1.5710108982602833e-06
+    },
+    {
+      "microbatch": 373,
+      "ce": 4.609403276845114e-06,
+      "expected_cost": 1.120552042266354e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 1.5814923244761303e-05
+    },
+    {
+      "microbatch": 374,
+      "ce": 7.470307991752634e-06,
+      "expected_cost": 2.099290577461943e-05,
+      "action_vocab_mass": 1.0,
+      "total": 2.8463213311624713e-05
+    },
+    {
+      "microbatch": 375,
+      "ce": 0.00011601147707551718,
+      "expected_cost": 0.0002961091813631356,
+      "action_vocab_mass": 0.9999983310699463,
+      "total": 0.00041212065843865275
+    },
+    {
+      "microbatch": 376,
+      "ce": 4.9944512284127995e-05,
+      "expected_cost": 5.145071554579772e-05,
+      "action_vocab_mass": 0.9999918937683105,
+      "total": 0.00010139522782992572
+    },
+    {
+      "microbatch": 377,
+      "ce": 1.833751412050333e-05,
+      "expected_cost": 1.0103969543706626e-05,
+      "action_vocab_mass": 0.9999991059303284,
+      "total": 2.8441483664209954e-05
+    },
+    {
+      "microbatch": 378,
+      "ce": 2.0265499642846407e-06,
+      "expected_cost": 5.183847861189861e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 7.210397598100826e-06
+    },
+    {
+      "microbatch": 379,
+      "ce": 3.496794306556694e-06,
+      "expected_cost": 1.1962708867940819e-06,
+      "action_vocab_mass": 0.9999990463256836,
+      "total": 4.6930654207244515e-06
+    },
+    {
+      "microbatch": 380,
+      "ce": 6.695467163808644e-06,
+      "expected_cost": 1.909197999339085e-05,
+      "action_vocab_mass": 0.9999998211860657,
+      "total": 2.5787447157199495e-05
+    },
+    {
+      "microbatch": 381,
+      "ce": 0.0002951144415419549,
+      "expected_cost": 0.0008588212076574564,
+      "action_vocab_mass": 0.9999979734420776,
+      "total": 0.0011539356783032417
+    },
+    {
+      "microbatch": 382,
+      "ce": 3.452873352216557e-05,
+      "expected_cost": 0.00010172104521188885,
+      "action_vocab_mass": 0.9999995827674866,
+      "total": 0.00013624978601001203
+    },
+    {
+      "microbatch": 383,
+      "ce": 5.245155989541672e-06,
+      "expected_cost": 3.3115752557932865e-06,
+      "action_vocab_mass": 0.9999992847442627,
+      "total": 8.55673170008231e-06
+    },
+    {
+      "microbatch": 384,
+      "ce": 5.880932349100476e-06,
+      "expected_cost": 1.6471889466629364e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 2.235282227047719e-05
+    },
+    {
+      "microbatch": 385,
+      "ce": 3.6755873225047253e-06,
+      "expected_cost": 1.458027782064164e-06,
+      "action_vocab_mass": 0.9999995827674866,
+      "total": 5.133615104568889e-06
+    },
+    {
+      "microbatch": 386,
+      "ce": 3.101185939158313e-05,
+      "expected_cost": 5.632025931845419e-05,
+      "action_vocab_mass": 0.999991774559021,
+      "total": 8.733211871003732e-05
+    },
+    {
+      "microbatch": 387,
+      "ce": 1.7085842046071775e-05,
+      "expected_cost": 4.142035322729498e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 5.850619345437735e-05
+    },
+    {
+      "microbatch": 388,
+      "ce": 4.78987094538752e-05,
+      "expected_cost": 5.821861850563437e-05,
+      "action_vocab_mass": 0.9999992251396179,
+      "total": 0.00010611732432153076
+    },
+    {
+      "microbatch": 389,
+      "ce": 9.05974957277067e-06,
+      "expected_cost": 1.2700588740699459e-05,
+      "action_vocab_mass": 0.9999964237213135,
+      "total": 2.1760337403975427e-05
+    },
+    {
+      "microbatch": 390,
+      "ce": 0.00012401478306856006,
+      "expected_cost": 0.00036946809268556535,
+      "action_vocab_mass": 0.9999995231628418,
+      "total": 0.0004934828612022102
+    },
+    {
+      "microbatch": 391,
+      "ce": 2.721935970839695e-06,
+      "expected_cost": 6.9676098064519465e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 9.689545549917966e-06
+    },
+    {
+      "microbatch": 392,
+      "ce": 1.027171947498573e-05,
+      "expected_cost": 2.7079060600954108e-05,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 3.7350779166445136e-05
+    },
+    {
+      "microbatch": 393,
+      "ce": 2.2053668544685934e-06,
+      "expected_cost": 4.659472324419767e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 6.86483917888836e-06
+    },
+    {
+      "microbatch": 394,
+      "ce": 2.497351488273125e-05,
+      "expected_cost": 4.2441908590262756e-05,
+      "action_vocab_mass": 0.9999994039535522,
+      "total": 6.74154216540046e-05
+    },
+    {
+      "microbatch": 395,
+      "ce": 3.854412625514669e-06,
+      "expected_cost": 1.0755132279882673e-05,
+      "action_vocab_mass": 1.0,
+      "total": 1.4609544450649992e-05
+    },
+    {
+      "microbatch": 396,
+      "ce": 5.761779107160692e-07,
+      "expected_cost": 1.0131773251487175e-06,
+      "action_vocab_mass": 1.0,
+      "total": 1.5893551790213678e-06
+    },
+    {
+      "microbatch": 397,
+      "ce": 2.4714405299164355e-05,
+      "expected_cost": 7.246202585520223e-05,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 9.717643115436658e-05
+    },
+    {
+      "microbatch": 398,
+      "ce": 6.715386462019524e-06,
+      "expected_cost": 1.6252295608865097e-05,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 2.296768252563197e-05
+    },
+    {
+      "microbatch": 399,
+      "ce": 2.7535907065612264e-05,
+      "expected_cost": 6.50743895675987e-05,
+      "action_vocab_mass": 0.9999991655349731,
+      "total": 9.261029481422156e-05
+    },
+    {
+      "microbatch": 400,
+      "ce": 6.144329381641e-05,
+      "expected_cost": 9.470179065829143e-05,
+      "action_vocab_mass": 0.9999960660934448,
+      "total": 0.00015614507719874382
+    },
+    {
+      "microbatch": 401,
+      "ce": 6.914005552971503e-06,
+      "expected_cost": 6.81538676872151e-06,
+      "action_vocab_mass": 0.9999968409538269,
+      "total": 1.3729391866945662e-05
+    },
+    {
+      "microbatch": 402,
+      "ce": 4.430558419699082e-06,
+      "expected_cost": 1.244077520823339e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 1.6871334082679823e-05
+    },
+    {
+      "microbatch": 403,
+      "ce": 3.061418101424351e-05,
+      "expected_cost": 9.055018017534167e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 0.00012116436118958518
+    },
+    {
+      "microbatch": 404,
+      "ce": 3.1590298021910712e-06,
+      "expected_cost": 2.692868292797357e-06,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 5.851898094988428e-06
+    },
+    {
+      "microbatch": 405,
+      "ce": 3.2385048598371213e-06,
+      "expected_cost": 8.292199709103443e-06,
+      "action_vocab_mass": 0.9999999403953552,
+      "total": 1.153070479631424e-05
+    },
+    {
+      "microbatch": 406,
+      "ce": 4.902909859083593e-05,
+      "expected_cost": 0.000134516682010144,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 0.00018354578060097992
+    },
+    {
+      "microbatch": 407,
+      "ce": 3.6358558190840995e-06,
+      "expected_cost": 8.382747182622552e-06,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 1.2018603229080327e-05
+    },
+    {
+      "microbatch": 408,
+      "ce": 0.00012425333261489868,
+      "expected_cost": 0.00036422867560759187,
+      "action_vocab_mass": 0.9999994039535522,
+      "total": 0.0004884820082224905
+    },
+    {
+      "microbatch": 409,
+      "ce": 1.5298492144211195e-06,
+      "expected_cost": 3.1627071166440146e-06,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 4.692556103691459e-06
+    },
+    {
+      "microbatch": 410,
+      "ce": 2.1357021978474222e-05,
+      "expected_cost": 6.260492955334485e-05,
+      "action_vocab_mass": 0.9999998211860657,
+      "total": 8.396195335080847e-05
+    },
+    {
+      "microbatch": 411,
+      "ce": 8.631512173451483e-05,
+      "expected_cost": 4.160712342127226e-05,
+      "action_vocab_mass": 0.9999992847442627,
+      "total": 0.0001279222487937659
+    },
+    {
+      "microbatch": 412,
+      "ce": 0.00010925266542471945,
+      "expected_cost": 2.995768045366276e-05,
+      "action_vocab_mass": 0.9999958872795105,
+      "total": 0.0001392103440593928
+    },
+    {
+      "microbatch": 413,
+      "ce": 4.501557850744575e-05,
+      "expected_cost": 0.0001324798067798838,
+      "action_vocab_mass": 0.9999995231628418,
+      "total": 0.00017749538528732955
+    },
+    {
+      "microbatch": 414,
+      "ce": 3.051486419280991e-05,
+      "expected_cost": 9.016728290589526e-05,
+      "action_vocab_mass": 0.9999998211860657,
+      "total": 0.00012068214709870517
+    },
+    {
+      "microbatch": 415,
+      "ce": 5.364355729398085e-06,
+      "expected_cost": 2.1481562271219445e-06,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 7.512511729146354e-06
+    },
+    {
+      "microbatch": 416,
+      "ce": 8.16566443972988e-06,
+      "expected_cost": 1.048774447554024e-05,
+      "action_vocab_mass": 0.9999969005584717,
+      "total": 1.865340891527012e-05
+    },
+    {
+      "microbatch": 417,
+      "ce": 0.0005341818323358893,
+      "expected_cost": 7.361748430412263e-06,
+      "action_vocab_mass": 0.9999982118606567,
+      "total": 0.0005415435880422592
+    },
+    {
+      "microbatch": 418,
+      "ce": 1.6689260746716172e-06,
+      "expected_cost": 4.395757059683092e-06,
+      "action_vocab_mass": 0.9999999403953552,
+      "total": 6.0646830206678715e-06
+    },
+    {
+      "microbatch": 419,
+      "ce": 5.026623057347024e-06,
+      "expected_cost": 1.3797523934044875e-05,
+      "action_vocab_mass": 1.0,
+      "total": 1.8824146536644548e-05
+    },
+    {
+      "microbatch": 420,
+      "ce": 4.9544250941835344e-05,
+      "expected_cost": 7.719353016000241e-05,
+      "action_vocab_mass": 0.999998927116394,
+      "total": 0.00012673778110183775
+    },
+    {
+      "microbatch": 421,
+      "ce": 0.00033307753619737923,
+      "expected_cost": 0.000996687333099544,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 0.0013297648401930928
+    },
+    {
+      "microbatch": 422,
+      "ce": 1.643039104237687e-05,
+      "expected_cost": 2.6955736757372506e-05,
+      "action_vocab_mass": 0.9999954700469971,
+      "total": 4.3386127799749374e-05
+    },
+    {
+      "microbatch": 423,
+      "ce": 4.430578883329872e-06,
+      "expected_cost": 1.2147637789894361e-05,
+      "action_vocab_mass": 1.0,
+      "total": 1.6578216673224233e-05
+    },
+    {
+      "microbatch": 424,
+      "ce": 2.870833850465715e-05,
+      "expected_cost": 3.464214023551904e-05,
+      "action_vocab_mass": 0.9999943971633911,
+      "total": 6.335048237815499e-05
+    },
+    {
+      "microbatch": 425,
+      "ce": 0.0001470600691391155,
+      "expected_cost": 0.0003743015695363283,
+      "action_vocab_mass": 0.9999926090240479,
+      "total": 0.0005213616532273591
+    },
+    {
+      "microbatch": 426,
+      "ce": 1.1344455742801074e-05,
+      "expected_cost": 3.240377191104926e-05,
+      "action_vocab_mass": 0.9999998211860657,
+      "total": 4.3748226744355634e-05
+    },
+    {
+      "microbatch": 427,
+      "ce": 2.7336805942468345e-05,
+      "expected_cost": 7.1976755862124264e-06,
+      "action_vocab_mass": 0.9999991655349731,
+      "total": 3.453448152868077e-05
+    },
+    {
+      "microbatch": 428,
+      "ce": 1.7006354028126225e-05,
+      "expected_cost": 4.427688691066578e-05,
+      "action_vocab_mass": 0.9999997019767761,
+      "total": 6.12832373008132e-05
+    },
+    {
+      "microbatch": 429,
+      "ce": 0.0005304327933117747,
+      "expected_cost": 0.0015871361829340458,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 0.0021175690926611423
+    },
+    {
+      "microbatch": 430,
+      "ce": 8.404095751757268e-06,
+      "expected_cost": 1.5157487723627128e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 2.3561584384879097e-05
+    },
+    {
+      "microbatch": 431,
+      "ce": 7.717066910117865e-05,
+      "expected_cost": 0.0002210410893894732,
+      "action_vocab_mass": 0.9999994039535522,
+      "total": 0.00029821175849065185
+    },
+    {
+      "microbatch": 432,
+      "ce": 6.755188337592699e-07,
+      "expected_cost": 5.329235364115448e-07,
+      "action_vocab_mass": 1.0,
+      "total": 1.2084424270142335e-06
+    },
+    {
+      "microbatch": 433,
+      "ce": 4.1722778405528516e-06,
+      "expected_cost": 4.939716291119112e-06,
+      "action_vocab_mass": 0.9999999403953552,
+      "total": 9.111994586419314e-06
+    },
+    {
+      "microbatch": 434,
+      "ce": 4.31135913459002e-06,
+      "expected_cost": 2.2676961179968202e-06,
+      "action_vocab_mass": 0.9999992847442627,
+      "total": 6.579055479960516e-06
+    },
+    {
+      "microbatch": 435,
+      "ce": 5.6555374612798914e-05,
+      "expected_cost": 0.0001678290864219889,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 0.00022438446467276663
+    },
+    {
+      "microbatch": 436,
+      "ce": 4.251772679708665e-06,
+      "expected_cost": 1.0744646715465933e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 1.499641984992195e-05
+    },
+    {
+      "microbatch": 437,
+      "ce": 7.947112862893846e-06,
+      "expected_cost": 2.336513534828555e-05,
+      "action_vocab_mass": 1.0,
+      "total": 3.131224730168469e-05
+    },
+    {
+      "microbatch": 438,
+      "ce": 2.622588681333582e-06,
+      "expected_cost": 6.811168987042038e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 9.433757441001944e-06
+    },
+    {
+      "microbatch": 439,
+      "ce": 2.384179197179037e-06,
+      "expected_cost": 1.7697406065053656e-06,
+      "action_vocab_mass": 0.9999997615814209,
+      "total": 4.153919689997565e-06
+    },
+    {
+      "microbatch": 440,
+      "ce": 0.00505570275709033,
+      "expected_cost": 0.014734439551830292,
+      "action_vocab_mass": 0.9999412298202515,
+      "total": 0.01979014277458191
+    },
+    {
+      "microbatch": 441,
+      "ce": 4.2018480598926544e-05,
+      "expected_cost": 0.0001187647576443851,
+      "action_vocab_mass": 0.9999997019767761,
+      "total": 0.00016078323824331164
+    },
+    {
+      "microbatch": 442,
+      "ce": 6.198778919497272e-06,
+      "expected_cost": 1.824338687583804e-05,
+      "action_vocab_mass": 1.0,
+      "total": 2.4442166250082664e-05
+    },
+    {
+      "microbatch": 443,
+      "ce": 2.7616667921392946e-06,
+      "expected_cost": 1.483079586250824e-06,
+      "action_vocab_mass": 1.0,
+      "total": 4.2447463783901185e-06
+    },
+    {
+      "microbatch": 444,
+      "ce": 8.48360559757566e-06,
+      "expected_cost": 2.3693210096098483e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 3.2176816603168845e-05
+    },
+    {
+      "microbatch": 445,
+      "ce": 5.523319487110712e-06,
+      "expected_cost": 1.2246699043316767e-05,
+      "action_vocab_mass": 0.9999998211860657,
+      "total": 1.7770018530427478e-05
+    },
+    {
+      "microbatch": 446,
+      "ce": 0.00032656113035045564,
+      "expected_cost": 0.0009641878423281014,
+      "action_vocab_mass": 0.9999995231628418,
+      "total": 0.0012907489435747266
+    },
+    {
+      "microbatch": 447,
+      "ce": 0.00013558559294324368,
+      "expected_cost": 0.00040229869773611426,
+      "action_vocab_mass": 0.9999982118606567,
+      "total": 0.0005378843052312732
+    },
+    {
+      "microbatch": 448,
+      "ce": 1.6350790247088298e-05,
+      "expected_cost": 2.256850348203443e-05,
+      "action_vocab_mass": 0.9999939203262329,
+      "total": 3.891929372912273e-05
+    },
+    {
+      "microbatch": 449,
+      "ce": 1.1980137060163543e-05,
+      "expected_cost": 1.135269712904119e-06,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 1.3115406545693986e-05
+    },
+    {
+      "microbatch": 450,
+      "ce": 2.1814237697981298e-05,
+      "expected_cost": 7.375464065262349e-06,
+      "action_vocab_mass": 0.9999997019767761,
+      "total": 2.9189701308496296e-05
+    },
+    {
+      "microbatch": 451,
+      "ce": 3.2186255793931196e-06,
+      "expected_cost": 5.964357114862651e-07,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 3.815061063505709e-06
+    },
+    {
+      "microbatch": 452,
+      "ce": 2.702058509385097e-06,
+      "expected_cost": 7.581162662972929e-06,
+      "action_vocab_mass": 1.0,
+      "total": 1.028322094498435e-05
+    },
+    {
+      "microbatch": 453,
+      "ce": 3.437177156229154e-06,
+      "expected_cost": 8.434561095782556e-06,
+      "action_vocab_mass": 1.0,
+      "total": 1.1871738024638034e-05
+    },
+    {
+      "microbatch": 454,
+      "ce": 3.3573971450095996e-05,
+      "expected_cost": 5.14483981532976e-05,
+      "action_vocab_mass": 0.9999922513961792,
+      "total": 8.50223732413724e-05
+    },
+    {
+      "microbatch": 455,
+      "ce": 6.993474471528316e-06,
+      "expected_cost": 2.028959170274902e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 2.7283065719529986e-05
+    },
+    {
+      "microbatch": 456,
+      "ce": 3.256091076764278e-05,
+      "expected_cost": 4.020646883873269e-05,
+      "action_vocab_mass": 0.9999963641166687,
+      "total": 7.276737596839666e-05
+    },
+    {
+      "microbatch": 457,
+      "ce": 4.887526301899925e-06,
+      "expected_cost": 5.0131507123296615e-06,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 9.900677468976937e-06
+    },
+    {
+      "microbatch": 458,
+      "ce": 0.0004132834728807211,
+      "expected_cost": 0.0012366552837193012,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 0.0016499387566000223
+    },
+    {
+      "microbatch": 459,
+      "ce": 2.34834060393041e-05,
+      "expected_cost": 3.630838182289153e-05,
+      "action_vocab_mass": 0.9999932050704956,
+      "total": 5.979178968118504e-05
+    },
+    {
+      "microbatch": 460,
+      "ce": 8.344640605173481e-07,
+      "expected_cost": 1.717075178930827e-06,
+      "action_vocab_mass": 0.9999999403953552,
+      "total": 2.551539182604756e-06
+    },
+    {
+      "microbatch": 461,
+      "ce": 1.8874716261052527e-06,
+      "expected_cost": 5.235438493400579e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 7.122910119505832e-06
+    },
+    {
+      "microbatch": 462,
+      "ce": 1.2715183402178809e-05,
+      "expected_cost": 3.749198003788479e-05,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 5.0207163440063596e-05
+    },
+    {
+      "microbatch": 463,
+      "ce": 3.774960077862488e-07,
+      "expected_cost": 3.978191216447158e-07,
+      "action_vocab_mass": 0.9999999403953552,
+      "total": 7.753151294309646e-07
+    },
+    {
+      "microbatch": 464,
+      "ce": 5.0663611546042375e-06,
+      "expected_cost": 7.26132930140011e-06,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 1.2327690456004348e-05
+    },
+    {
+      "microbatch": 465,
+      "ce": 5.563096578953264e-07,
+      "expected_cost": 1.0444563258715789e-06,
+      "action_vocab_mass": 1.0,
+      "total": 1.6007659269234864e-06
+    },
+    {
+      "microbatch": 466,
+      "ce": 1.0192127774644177e-05,
+      "expected_cost": 2.195949718952761e-06,
+      "action_vocab_mass": 0.9999996423721313,
+      "total": 1.2388077266223263e-05
+    },
+    {
+      "microbatch": 467,
+      "ce": 2.9206105409684824e-06,
+      "expected_cost": 2.219120460722479e-06,
+      "action_vocab_mass": 1.0,
+      "total": 5.139731001690961e-06
+    },
+    {
+      "microbatch": 468,
+      "ce": 2.801401251417701e-06,
+      "expected_cost": 6.769966489628132e-07,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 3.478397957223933e-06
+    },
+    {
+      "microbatch": 469,
+      "ce": 4.152422206971096e-06,
+      "expected_cost": 4.628580256849091e-07,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 4.615280431607971e-06
+    },
+    {
+      "microbatch": 470,
+      "ce": 3.448773713898845e-05,
+      "expected_cost": 0.00010230323096038774,
+      "action_vocab_mass": 0.9999998807907104,
+      "total": 0.000136790971737355
+    },
+    {
+      "microbatch": 471,
+      "ce": 2.3841853646899835e-07,
+      "expected_cost": 1.9655306005006423e-07,
+      "action_vocab_mass": 1.0,
+      "total": 4.3497158230820787e-07
+    },
+    {
+      "microbatch": 472,
+      "ce": 9.139361623056175e-07,
+      "expected_cost": 2.288524456162122e-06,
+      "action_vocab_mass": 1.0,
+      "total": 3.2024606753111584e-06
+    },
+    {
+      "microbatch": 473,
+      "ce": 1.6887937590581714e-06,
+      "expected_cost": 3.879239102388965e-06,
+      "action_vocab_mass": 1.0,
+      "total": 5.568032975133974e-06
+    },
+    {
+      "microbatch": 474,
+      "ce": 2.3841853646899835e-07,
+      "expected_cost": 1.4536661296915554e-07,
+      "action_vocab_mass": 1.0,
+      "total": 3.837851636490086e-07
+    },
+    {
+      "microbatch": 475,
+      "ce": 4.748440460389247e-06,
+      "expected_cost": 4.069947408424923e-06,
+      "action_vocab_mass": 0.9999973773956299,
+      "total": 8.81838786881417e-06
+    },
+    {
+      "microbatch": 476,
+      "ce": 2.8787135306629352e-05,
+      "expected_cost": 7.929045386845246e-05,
+      "action_vocab_mass": 0.9999991655349731,
+      "total": 0.00010807759099407122
+    },
+    {
+      "microbatch": 477,
+      "ce": 5.7667526561999694e-05,
+      "expected_cost": 1.0253467053189524e-06,
+      "action_vocab_mass": 0.9999995827674866,
+      "total": 5.869287269888446e-05
+    },
+    {
+      "microbatch": 478,
+      "ce": 2.8251015464775264e-05,
+      "expected_cost": 4.893570076092146e-05,
+      "action_vocab_mass": 0.9999958276748657,
+      "total": 7.718671986367553e-05
+    },
+    {
+      "microbatch": 479,
+      "ce": 1.0351061064284295e-05,
+      "expected_cost": 1.2440343198250048e-05,
+      "action_vocab_mass": 0.9999952912330627,
+      "total": 2.2791404262534343e-05
+    }
+  ],
+  "elapsed_seconds": 131.9831647556275,
+  "input_tokens": 246400,
+  "assistant_tokens": 2880,
+  "examples": 960,
+  "example_order_sha256": "5b22cb7a825cde6a4d055111730e64ddcc08e1d5427d15799a066be830d46505",
+  "trainable_parameters": {
+    "base_model.model.model.language_model.layers.0.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.0.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.0.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.0.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.0.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.0.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.0.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.0.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.1.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.1.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.1.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.1.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.1.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.1.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.1.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.1.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.2.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.2.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.2.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.2.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.2.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.2.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.2.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.2.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.3.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.3.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.3.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.3.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.3.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.3.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.3.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.3.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.4.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.4.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.4.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.4.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.4.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.4.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.4.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.4.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.5.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.5.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.5.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.5.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.5.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.5.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.5.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.5.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.6.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.6.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.6.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.6.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.6.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.6.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.6.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.6.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.7.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.7.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.7.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.7.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.7.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.7.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.7.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.7.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.8.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.8.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.8.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.8.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.8.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.8.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.8.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.8.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.9.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.9.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.9.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.9.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.9.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.9.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.9.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.9.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.10.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.10.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.10.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.10.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.10.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.10.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.10.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.10.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.11.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.11.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.11.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.11.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.11.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.11.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.11.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.11.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.12.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.12.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.12.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.12.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.12.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.12.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.12.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.12.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.13.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.13.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.13.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.13.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.13.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.13.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.13.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.13.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.14.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.14.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.14.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.14.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.14.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.14.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.14.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.14.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.15.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.15.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.15.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.15.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.15.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.15.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.15.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.15.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.16.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.16.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.16.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.16.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.16.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.16.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.16.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.16.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.17.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.17.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.17.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.17.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.17.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.17.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.17.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.17.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.18.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.18.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.18.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.18.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.18.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.18.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.18.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.18.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.19.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.19.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.19.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.19.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.19.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.19.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.19.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.19.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.20.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.20.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.20.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.20.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.20.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.20.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.20.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.20.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.21.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.21.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.21.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.21.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.21.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.21.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.21.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.21.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.22.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.22.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.22.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.22.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.22.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.22.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.22.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.22.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.23.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.23.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.23.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.23.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.23.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.23.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.23.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.23.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.24.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.24.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.24.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.24.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.24.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.24.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.24.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.24.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.25.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.25.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.25.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.25.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.25.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.25.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.25.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.25.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.26.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.26.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.26.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.26.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.26.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.26.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.26.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.26.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.27.self_attn.q_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.27.self_attn.q_proj.lora_B.default.weight": [
+      2048,
+      8
+    ],
+    "base_model.model.model.language_model.layers.27.self_attn.k_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.27.self_attn.k_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.27.self_attn.v_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.27.self_attn.v_proj.lora_B.default.weight": [
+      1024,
+      8
+    ],
+    "base_model.model.model.language_model.layers.27.self_attn.o_proj.lora_A.default.weight": [
+      8,
+      2048
+    ],
+    "base_model.model.model.language_model.layers.27.self_attn.o_proj.lora_B.default.weight": [
+      2048,
+      8
+    ]
+  },
+  "adapter_change": {
+    "source_sha256": "222f797dc52b2bfee616c487b6afa2c3021cfbf4882c19ae3a2e257b9d97826d",
+    "output_sha256": "6f779633473a8ed0a4cf1137153b81ee5269bdb46118d3c4019eb37fb31716d1",
+    "changed_tensor_count": 224,
+    "tensor_count": 224,
+    "tensors": {
+      "base_model.model.model.language_model.layers.0.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.15008075196738566,
+        "delta_max_abs": 0.0042660292237997055
+      },
+      "base_model.model.model.language_model.layers.0.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.10877370728365796,
+        "delta_max_abs": 0.00512974092271179
+      },
+      "base_model.model.model.language_model.layers.0.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.15676164026827255,
+        "delta_max_abs": 0.005108263343572617
+      },
+      "base_model.model.model.language_model.layers.0.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.16065089772191155,
+        "delta_max_abs": 0.005073805805295706
+      },
+      "base_model.model.model.language_model.layers.0.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.16872595921134304,
+        "delta_max_abs": 0.00452033756300807
+      },
+      "base_model.model.model.language_model.layers.0.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.16537542291814203,
+        "delta_max_abs": 0.0051280552506796084
+      },
+      "base_model.model.model.language_model.layers.0.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1641487086711379,
+        "delta_max_abs": 0.005025995895266533
+      },
+      "base_model.model.model.language_model.layers.0.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.12013091031424282,
+        "delta_max_abs": 0.005374851491069421
+      },
+      "base_model.model.model.language_model.layers.1.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.16658564440673612,
+        "delta_max_abs": 0.005076905712485313
+      },
+      "base_model.model.model.language_model.layers.1.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.1186476647365914,
+        "delta_max_abs": 0.005223702639341354
+      },
+      "base_model.model.model.language_model.layers.1.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.18972770526248012,
+        "delta_max_abs": 0.0053809527307748795
+      },
+      "base_model.model.model.language_model.layers.1.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.17010772840729702,
+        "delta_max_abs": 0.0049098157323896885
+      },
+      "base_model.model.model.language_model.layers.1.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14628089973650352,
+        "delta_max_abs": 0.0046504195779562
+      },
+      "base_model.model.model.language_model.layers.1.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.16366049405615177,
+        "delta_max_abs": 0.005454036290757358
+      },
+      "base_model.model.model.language_model.layers.1.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.16486779462873433,
+        "delta_max_abs": 0.005085770273581147
+      },
+      "base_model.model.model.language_model.layers.1.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.1179663805965834,
+        "delta_max_abs": 0.005807697772979736
+      },
+      "base_model.model.model.language_model.layers.10.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13334529083922333,
+        "delta_max_abs": 0.004723989230114967
+      },
+      "base_model.model.model.language_model.layers.10.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09571122843092471,
+        "delta_max_abs": 0.004375455901026726
+      },
+      "base_model.model.model.language_model.layers.10.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12135246678839812,
+        "delta_max_abs": 0.0041692653321661055
+      },
+      "base_model.model.model.language_model.layers.10.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13886524439426637,
+        "delta_max_abs": 0.004835045896470547
+      },
+      "base_model.model.model.language_model.layers.10.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14804808325638474,
+        "delta_max_abs": 0.004906630143523216
+      },
+      "base_model.model.model.language_model.layers.10.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13900617952985048,
+        "delta_max_abs": 0.004839065484702587
+      },
+      "base_model.model.model.language_model.layers.10.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12120018192570846,
+        "delta_max_abs": 0.003973005339503288
+      },
+      "base_model.model.model.language_model.layers.10.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09832459994067974,
+        "delta_max_abs": 0.004114597104489803
+      },
+      "base_model.model.model.language_model.layers.11.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14735794282586698,
+        "delta_max_abs": 0.005145723232999444
+      },
+      "base_model.model.model.language_model.layers.11.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09996129418757925,
+        "delta_max_abs": 0.004594626370817423
+      },
+      "base_model.model.model.language_model.layers.11.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1310378666226328,
+        "delta_max_abs": 0.00472341850399971
+      },
+      "base_model.model.model.language_model.layers.11.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13140092678234686,
+        "delta_max_abs": 0.004491621511988342
+      },
+      "base_model.model.model.language_model.layers.11.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13950742019904874,
+        "delta_max_abs": 0.004844961687922478
+      },
+      "base_model.model.model.language_model.layers.11.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14239600951117687,
+        "delta_max_abs": 0.004611549200490117
+      },
+      "base_model.model.model.language_model.layers.11.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12887918400026346,
+        "delta_max_abs": 0.004569984041154385
+      },
+      "base_model.model.model.language_model.layers.11.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09731194408635441,
+        "delta_max_abs": 0.00475919374730438
+      },
+      "base_model.model.model.language_model.layers.12.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13410092470090507,
+        "delta_max_abs": 0.0043054427951574326
+      },
+      "base_model.model.model.language_model.layers.12.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.0972852377640666,
+        "delta_max_abs": 0.005384535499615595
+      },
+      "base_model.model.model.language_model.layers.12.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12546861354051891,
+        "delta_max_abs": 0.004818921908736229
+      },
+      "base_model.model.model.language_model.layers.12.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13857234245701372,
+        "delta_max_abs": 0.005051811225712299
+      },
+      "base_model.model.model.language_model.layers.12.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13570841588528873,
+        "delta_max_abs": 0.004180809482932091
+      },
+      "base_model.model.model.language_model.layers.12.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14476579870733472,
+        "delta_max_abs": 0.005729535594582558
+      },
+      "base_model.model.model.language_model.layers.12.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13395392008269055,
+        "delta_max_abs": 0.003891260363161564
+      },
+      "base_model.model.model.language_model.layers.12.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.0953868261445746,
+        "delta_max_abs": 0.004684725194238126
+      },
+      "base_model.model.model.language_model.layers.13.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1447127649895441,
+        "delta_max_abs": 0.005141606554389
+      },
+      "base_model.model.model.language_model.layers.13.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09774932588406056,
+        "delta_max_abs": 0.004795479122549295
+      },
+      "base_model.model.model.language_model.layers.13.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13066975939082667,
+        "delta_max_abs": 0.004057681187987328
+      },
+      "base_model.model.model.language_model.layers.13.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12949556407529098,
+        "delta_max_abs": 0.004581378074362874
+      },
+      "base_model.model.model.language_model.layers.13.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14650467584703195,
+        "delta_max_abs": 0.0047362856566905975
+      },
+      "base_model.model.model.language_model.layers.13.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14578984983137233,
+        "delta_max_abs": 0.004540228459518403
+      },
+      "base_model.model.model.language_model.layers.13.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1255787295235089,
+        "delta_max_abs": 0.0042005302384495735
+      },
+      "base_model.model.model.language_model.layers.13.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.07907246959308309,
+        "delta_max_abs": 0.004101530561456457
+      },
+      "base_model.model.model.language_model.layers.14.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12229545265578196,
+        "delta_max_abs": 0.004285894334316254
+      },
+      "base_model.model.model.language_model.layers.14.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09110928862950833,
+        "delta_max_abs": 0.00432543782517314
+      },
+      "base_model.model.model.language_model.layers.14.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1349111050145039,
+        "delta_max_abs": 0.005077330395579338
+      },
+      "base_model.model.model.language_model.layers.14.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13349783497818504,
+        "delta_max_abs": 0.005165159120224416
+      },
+      "base_model.model.model.language_model.layers.14.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12318775258723155,
+        "delta_max_abs": 0.004109335131943226
+      },
+      "base_model.model.model.language_model.layers.14.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13217193425718027,
+        "delta_max_abs": 0.004531123588094488
+      },
+      "base_model.model.model.language_model.layers.14.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12355938235240983,
+        "delta_max_abs": 0.0044069718569517136
+      },
+      "base_model.model.model.language_model.layers.14.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.0857293946949554,
+        "delta_max_abs": 0.0038944786283536814
+      },
+      "base_model.model.model.language_model.layers.15.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13199839966060278,
+        "delta_max_abs": 0.004411428235471249
+      },
+      "base_model.model.model.language_model.layers.15.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09678685525560027,
+        "delta_max_abs": 0.004407095722854137
+      },
+      "base_model.model.model.language_model.layers.15.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13621182659656497,
+        "delta_max_abs": 0.005000966833904386
+      },
+      "base_model.model.model.language_model.layers.15.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.15605620760543415,
+        "delta_max_abs": 0.005809176305774599
+      },
+      "base_model.model.model.language_model.layers.15.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.11080487129112132,
+        "delta_max_abs": 0.004276408813893795
+      },
+      "base_model.model.model.language_model.layers.15.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1399897881362282,
+        "delta_max_abs": 0.004990720190107822
+      },
+      "base_model.model.model.language_model.layers.15.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13201715145982265,
+        "delta_max_abs": 0.004569316748529673
+      },
+      "base_model.model.model.language_model.layers.15.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09794080790726951,
+        "delta_max_abs": 0.005433869548141956
+      },
+      "base_model.model.model.language_model.layers.16.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14933134256675257,
+        "delta_max_abs": 0.004753573361085728
+      },
+      "base_model.model.model.language_model.layers.16.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09714059609542891,
+        "delta_max_abs": 0.00443663913756609
+      },
+      "base_model.model.model.language_model.layers.16.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1299261410083519,
+        "delta_max_abs": 0.005595074966549873
+      },
+      "base_model.model.model.language_model.layers.16.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14793725574798036,
+        "delta_max_abs": 0.004749537445604801
+      },
+      "base_model.model.model.language_model.layers.16.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13053825900944185,
+        "delta_max_abs": 0.00472403469029814
+      },
+      "base_model.model.model.language_model.layers.16.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1380113601774971,
+        "delta_max_abs": 0.005081440322101116
+      },
+      "base_model.model.model.language_model.layers.16.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.160750535679679,
+        "delta_max_abs": 0.005420705769211054
+      },
+      "base_model.model.model.language_model.layers.16.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09669070872025524,
+        "delta_max_abs": 0.004123955499380827
+      },
+      "base_model.model.model.language_model.layers.17.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1458196749554493,
+        "delta_max_abs": 0.004601337015628815
+      },
+      "base_model.model.model.language_model.layers.17.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09782947105332328,
+        "delta_max_abs": 0.0044589301105588675
+      },
+      "base_model.model.model.language_model.layers.17.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.15118450454765706,
+        "delta_max_abs": 0.004247510805726051
+      },
+      "base_model.model.model.language_model.layers.17.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12313243419930196,
+        "delta_max_abs": 0.004028123803436756
+      },
+      "base_model.model.model.language_model.layers.17.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14276566766241058,
+        "delta_max_abs": 0.0050786808133125305
+      },
+      "base_model.model.model.language_model.layers.17.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13577642726477598,
+        "delta_max_abs": 0.004664356354624033
+      },
+      "base_model.model.model.language_model.layers.17.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13260472336611068,
+        "delta_max_abs": 0.00442080944776535
+      },
+      "base_model.model.model.language_model.layers.17.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09796522501651511,
+        "delta_max_abs": 0.004968832407030277
+      },
+      "base_model.model.model.language_model.layers.18.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.10417888091377019,
+        "delta_max_abs": 0.004321981919929385
+      },
+      "base_model.model.model.language_model.layers.18.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.08651470005811149,
+        "delta_max_abs": 0.004196551628410816
+      },
+      "base_model.model.model.language_model.layers.18.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13546993212949504,
+        "delta_max_abs": 0.004043306456878781
+      },
+      "base_model.model.model.language_model.layers.18.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.11791957101732051,
+        "delta_max_abs": 0.003823078703135252
+      },
+      "base_model.model.model.language_model.layers.18.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13707872887317005,
+        "delta_max_abs": 0.004049015464261174
+      },
+      "base_model.model.model.language_model.layers.18.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12053505132393924,
+        "delta_max_abs": 0.00419543799944222
+      },
+      "base_model.model.model.language_model.layers.18.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14529253708703513,
+        "delta_max_abs": 0.003544660285115242
+      },
+      "base_model.model.model.language_model.layers.18.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.08702897622625215,
+        "delta_max_abs": 0.004147370578721166
+      },
+      "base_model.model.model.language_model.layers.19.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.11557794947265883,
+        "delta_max_abs": 0.003837980329990387
+      },
+      "base_model.model.model.language_model.layers.19.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.08934691896867482,
+        "delta_max_abs": 0.004341962921898812
+      },
+      "base_model.model.model.language_model.layers.19.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1347098433611933,
+        "delta_max_abs": 0.004497905727475882
+      },
+      "base_model.model.model.language_model.layers.19.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.11722599538557152,
+        "delta_max_abs": 0.004170911852270365
+      },
+      "base_model.model.model.language_model.layers.19.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1557563722805358,
+        "delta_max_abs": 0.005028079263865948
+      },
+      "base_model.model.model.language_model.layers.19.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13044678175290528,
+        "delta_max_abs": 0.004814144689589739
+      },
+      "base_model.model.model.language_model.layers.19.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14633688542810047,
+        "delta_max_abs": 0.004615753889083862
+      },
+      "base_model.model.model.language_model.layers.19.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.08488824171230641,
+        "delta_max_abs": 0.0037266479339450598
+      },
+      "base_model.model.model.language_model.layers.2.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1649860515336025,
+        "delta_max_abs": 0.005064189434051514
+      },
+      "base_model.model.model.language_model.layers.2.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.12362219786821058,
+        "delta_max_abs": 0.005707338888896629
+      },
+      "base_model.model.model.language_model.layers.2.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14350706047164796,
+        "delta_max_abs": 0.004778580740094185
+      },
+      "base_model.model.model.language_model.layers.2.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.16350000607326257,
+        "delta_max_abs": 0.005423589143902063
+      },
+      "base_model.model.model.language_model.layers.2.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.23069697814119025,
+        "delta_max_abs": 0.006070786155760288
+      },
+      "base_model.model.model.language_model.layers.2.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.16479506737773592,
+        "delta_max_abs": 0.005548969842493534
+      },
+      "base_model.model.model.language_model.layers.2.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.17578309173378315,
+        "delta_max_abs": 0.005420045927166939
+      },
+      "base_model.model.model.language_model.layers.2.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.11034497695038287,
+        "delta_max_abs": 0.005117137334309518
+      },
+      "base_model.model.model.language_model.layers.20.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1325700053991927,
+        "delta_max_abs": 0.0037812869995832443
+      },
+      "base_model.model.model.language_model.layers.20.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09085351726574414,
+        "delta_max_abs": 0.003775248769670725
+      },
+      "base_model.model.model.language_model.layers.20.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12905297443058864,
+        "delta_max_abs": 0.003968626260757446
+      },
+      "base_model.model.model.language_model.layers.20.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12117404308906737,
+        "delta_max_abs": 0.003724394366145134
+      },
+      "base_model.model.model.language_model.layers.20.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.15167336821089086,
+        "delta_max_abs": 0.005074679851531982
+      },
+      "base_model.model.model.language_model.layers.20.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12681528180550208,
+        "delta_max_abs": 0.0047835856676101685
+      },
+      "base_model.model.model.language_model.layers.20.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14185364055681685,
+        "delta_max_abs": 0.004614175297319889
+      },
+      "base_model.model.model.language_model.layers.20.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09784202112142684,
+        "delta_max_abs": 0.004963060840964317
+      },
+      "base_model.model.model.language_model.layers.21.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14788394035842237,
+        "delta_max_abs": 0.004825226031243801
+      },
+      "base_model.model.model.language_model.layers.21.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.1009160961445451,
+        "delta_max_abs": 0.0048645882634446025
+      },
+      "base_model.model.model.language_model.layers.21.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12015769051814391,
+        "delta_max_abs": 0.004617601400241256
+      },
+      "base_model.model.model.language_model.layers.21.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13345074475890492,
+        "delta_max_abs": 0.00431000639218837
+      },
+      "base_model.model.model.language_model.layers.21.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13177072895797104,
+        "delta_max_abs": 0.005410091544035822
+      },
+      "base_model.model.model.language_model.layers.21.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13927511374151424,
+        "delta_max_abs": 0.004698906384874135
+      },
+      "base_model.model.model.language_model.layers.21.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1273395613435887,
+        "delta_max_abs": 0.004678504541516304
+      },
+      "base_model.model.model.language_model.layers.21.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09760433888739131,
+        "delta_max_abs": 0.004471024498343468
+      },
+      "base_model.model.model.language_model.layers.22.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12436497154092276,
+        "delta_max_abs": 0.00436040386557579
+      },
+      "base_model.model.model.language_model.layers.22.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.08918742910809771,
+        "delta_max_abs": 0.004993105889298022
+      },
+      "base_model.model.model.language_model.layers.22.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.10767004358513908,
+        "delta_max_abs": 0.003969467245042324
+      },
+      "base_model.model.model.language_model.layers.22.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13151897546796756,
+        "delta_max_abs": 0.0048360152868554
+      },
+      "base_model.model.model.language_model.layers.22.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1209300539413624,
+        "delta_max_abs": 0.004760398529469967
+      },
+      "base_model.model.model.language_model.layers.22.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14859881681033377,
+        "delta_max_abs": 0.006116842967458069
+      },
+      "base_model.model.model.language_model.layers.22.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.10867147505562923,
+        "delta_max_abs": 0.005025146063417196
+      },
+      "base_model.model.model.language_model.layers.22.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09617220750258774,
+        "delta_max_abs": 0.004249394638463855
+      },
+      "base_model.model.model.language_model.layers.23.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14973720777767452,
+        "delta_max_abs": 0.004643449559807777
+      },
+      "base_model.model.model.language_model.layers.23.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.10798172718863805,
+        "delta_max_abs": 0.004642285493900999
+      },
+      "base_model.model.model.language_model.layers.23.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.10912501266521896,
+        "delta_max_abs": 0.004606026690453291
+      },
+      "base_model.model.model.language_model.layers.23.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14068145434433155,
+        "delta_max_abs": 0.006160792545415461
+      },
+      "base_model.model.model.language_model.layers.23.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14453579639885128,
+        "delta_max_abs": 0.005226721987128258
+      },
+      "base_model.model.model.language_model.layers.23.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.146129729395331,
+        "delta_max_abs": 0.004502098716329783
+      },
+      "base_model.model.model.language_model.layers.23.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.16151799186924695,
+        "delta_max_abs": 0.0043430691584944725
+      },
+      "base_model.model.model.language_model.layers.23.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.10905643391281879,
+        "delta_max_abs": 0.005872820038348436
+      },
+      "base_model.model.model.language_model.layers.24.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1527588888451089,
+        "delta_max_abs": 0.004778193309903145
+      },
+      "base_model.model.model.language_model.layers.24.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.1048988979085931,
+        "delta_max_abs": 0.004522680072113872
+      },
+      "base_model.model.model.language_model.layers.24.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13448422703296334,
+        "delta_max_abs": 0.004790815524756908
+      },
+      "base_model.model.model.language_model.layers.24.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.15015533413778395,
+        "delta_max_abs": 0.00391924794530496
+      },
+      "base_model.model.model.language_model.layers.24.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13721085647759426,
+        "delta_max_abs": 0.0049920454621315
+      },
+      "base_model.model.model.language_model.layers.24.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13563910617510383,
+        "delta_max_abs": 0.004412937676534057
+      },
+      "base_model.model.model.language_model.layers.24.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12678263843599846,
+        "delta_max_abs": 0.004609502851963043
+      },
+      "base_model.model.model.language_model.layers.24.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09565194206093833,
+        "delta_max_abs": 0.004551479476504028
+      },
+      "base_model.model.model.language_model.layers.25.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14398115703589562,
+        "delta_max_abs": 0.004596463404595852
+      },
+      "base_model.model.model.language_model.layers.25.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.1029636928939587,
+        "delta_max_abs": 0.004084159663761966
+      },
+      "base_model.model.model.language_model.layers.25.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13330054101794053,
+        "delta_max_abs": 0.004725599777884781
+      },
+      "base_model.model.model.language_model.layers.25.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14098489484409274,
+        "delta_max_abs": 0.003824202110990882
+      },
+      "base_model.model.model.language_model.layers.25.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.15910903744356109,
+        "delta_max_abs": 0.004723084159195423
+      },
+      "base_model.model.model.language_model.layers.25.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1472264854849175,
+        "delta_max_abs": 0.004622774198651314
+      },
+      "base_model.model.model.language_model.layers.25.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.129360529543398,
+        "delta_max_abs": 0.005019178497605026
+      },
+      "base_model.model.model.language_model.layers.25.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09691581133759243,
+        "delta_max_abs": 0.003911782521754503
+      },
+      "base_model.model.model.language_model.layers.26.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13912014100372105,
+        "delta_max_abs": 0.004751920932903886
+      },
+      "base_model.model.model.language_model.layers.26.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09756896587717888,
+        "delta_max_abs": 0.005375237902626395
+      },
+      "base_model.model.model.language_model.layers.26.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12970220705355368,
+        "delta_max_abs": 0.005121292546391487
+      },
+      "base_model.model.model.language_model.layers.26.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14806838877294576,
+        "delta_max_abs": 0.004327836446464062
+      },
+      "base_model.model.model.language_model.layers.26.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1313771466763801,
+        "delta_max_abs": 0.005193060263991356
+      },
+      "base_model.model.model.language_model.layers.26.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1276631950469843,
+        "delta_max_abs": 0.005150945857167244
+      },
+      "base_model.model.model.language_model.layers.26.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1409422246205948,
+        "delta_max_abs": 0.0050671715289354324
+      },
+      "base_model.model.model.language_model.layers.26.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09934247071550335,
+        "delta_max_abs": 0.004837361630052328
+      },
+      "base_model.model.model.language_model.layers.27.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.11647314706471561,
+        "delta_max_abs": 0.0035687563940882683
+      },
+      "base_model.model.model.language_model.layers.27.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.08846575807178761,
+        "delta_max_abs": 0.004321233136579394
+      },
+      "base_model.model.model.language_model.layers.27.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.10200958809814827,
+        "delta_max_abs": 0.00389041006565094
+      },
+      "base_model.model.model.language_model.layers.27.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.11337327957427276,
+        "delta_max_abs": 0.0043656337657012045
+      },
+      "base_model.model.model.language_model.layers.27.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.16204671003002238,
+        "delta_max_abs": 0.005201444029808044
+      },
+      "base_model.model.model.language_model.layers.27.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14904061544706781,
+        "delta_max_abs": 0.0056897528120316565
+      },
+      "base_model.model.model.language_model.layers.27.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12682821490621982,
+        "delta_max_abs": 0.0043314071372151375
+      },
+      "base_model.model.model.language_model.layers.27.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.0911399855580003,
+        "delta_max_abs": 0.0037285463185980916
+      },
+      "base_model.model.model.language_model.layers.3.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.15626657511317485,
+        "delta_max_abs": 0.004739735275506973
+      },
+      "base_model.model.model.language_model.layers.3.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.11532720153166262,
+        "delta_max_abs": 0.005004652659408748
+      },
+      "base_model.model.model.language_model.layers.3.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.16129760968674464,
+        "delta_max_abs": 0.004901574924588203
+      },
+      "base_model.model.model.language_model.layers.3.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.15925774165302106,
+        "delta_max_abs": 0.005244670668616891
+      },
+      "base_model.model.model.language_model.layers.3.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.15700283786876212,
+        "delta_max_abs": 0.005344941979274154
+      },
+      "base_model.model.model.language_model.layers.3.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1600767931644964,
+        "delta_max_abs": 0.005390579448430799
+      },
+      "base_model.model.model.language_model.layers.3.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.17409784118036573,
+        "delta_max_abs": 0.004863359034061432
+      },
+      "base_model.model.model.language_model.layers.3.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.1058838274194558,
+        "delta_max_abs": 0.005145230097696185
+      },
+      "base_model.model.model.language_model.layers.4.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.16115077459665375,
+        "delta_max_abs": 0.005534744122996926
+      },
+      "base_model.model.model.language_model.layers.4.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.11298889489732736,
+        "delta_max_abs": 0.00539226655382663
+      },
+      "base_model.model.model.language_model.layers.4.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1614501393329058,
+        "delta_max_abs": 0.004911950556561351
+      },
+      "base_model.model.model.language_model.layers.4.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14734501422911345,
+        "delta_max_abs": 0.005164103116840124
+      },
+      "base_model.model.model.language_model.layers.4.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.16365056898395383,
+        "delta_max_abs": 0.004937244579195976
+      },
+      "base_model.model.model.language_model.layers.4.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.15416480648520173,
+        "delta_max_abs": 0.004856510320678353
+      },
+      "base_model.model.model.language_model.layers.4.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.16058744238851097,
+        "delta_max_abs": 0.004477729555219412
+      },
+      "base_model.model.model.language_model.layers.4.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.1035343329271387,
+        "delta_max_abs": 0.00448721693828702
+      },
+      "base_model.model.model.language_model.layers.5.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13637723784737327,
+        "delta_max_abs": 0.004600790329277515
+      },
+      "base_model.model.model.language_model.layers.5.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09845540006190512,
+        "delta_max_abs": 0.004774207132868469
+      },
+      "base_model.model.model.language_model.layers.5.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12657731618296258,
+        "delta_max_abs": 0.004253487102687359
+      },
+      "base_model.model.model.language_model.layers.5.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14739406166391886,
+        "delta_max_abs": 0.005362939089536667
+      },
+      "base_model.model.model.language_model.layers.5.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14636858047115356,
+        "delta_max_abs": 0.004726901650428772
+      },
+      "base_model.model.model.language_model.layers.5.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1415102156482612,
+        "delta_max_abs": 0.004506726982071996
+      },
+      "base_model.model.model.language_model.layers.5.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14674472328703764,
+        "delta_max_abs": 0.004812679253518581
+      },
+      "base_model.model.model.language_model.layers.5.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.10546728388924784,
+        "delta_max_abs": 0.005100527661852539
+      },
+      "base_model.model.model.language_model.layers.6.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1432999705458532,
+        "delta_max_abs": 0.005257127806544304
+      },
+      "base_model.model.model.language_model.layers.6.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.1047001250000508,
+        "delta_max_abs": 0.005157790670637041
+      },
+      "base_model.model.model.language_model.layers.6.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12567162072694985,
+        "delta_max_abs": 0.004228041972965002
+      },
+      "base_model.model.model.language_model.layers.6.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14240213691057146,
+        "delta_max_abs": 0.004893796518445015
+      },
+      "base_model.model.model.language_model.layers.6.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.16090685391244158,
+        "delta_max_abs": 0.004917308688163757
+      },
+      "base_model.model.model.language_model.layers.6.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1369818558124295,
+        "delta_max_abs": 0.004383250838145614
+      },
+      "base_model.model.model.language_model.layers.6.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.138590092378137,
+        "delta_max_abs": 0.004148928157519549
+      },
+      "base_model.model.model.language_model.layers.6.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.0984005083389064,
+        "delta_max_abs": 0.004318740218877792
+      },
+      "base_model.model.model.language_model.layers.7.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12309478888820123,
+        "delta_max_abs": 0.004306702874600887
+      },
+      "base_model.model.model.language_model.layers.7.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09684569365952894,
+        "delta_max_abs": 0.0043592804577201605
+      },
+      "base_model.model.model.language_model.layers.7.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.12412671290556343,
+        "delta_max_abs": 0.004692593356594443
+      },
+      "base_model.model.model.language_model.layers.7.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14353250835988254,
+        "delta_max_abs": 0.004990005283616483
+      },
+      "base_model.model.model.language_model.layers.7.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.15220391126010485,
+        "delta_max_abs": 0.005382373463362455
+      },
+      "base_model.model.model.language_model.layers.7.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1315539983603566,
+        "delta_max_abs": 0.004749630868900567
+      },
+      "base_model.model.model.language_model.layers.7.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13292863703235244,
+        "delta_max_abs": 0.004224090836942196
+      },
+      "base_model.model.model.language_model.layers.7.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09661025227916695,
+        "delta_max_abs": 0.0042704446241259575
+      },
+      "base_model.model.model.language_model.layers.8.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13776576310423966,
+        "delta_max_abs": 0.00452402513474226
+      },
+      "base_model.model.model.language_model.layers.8.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09928110779965811,
+        "delta_max_abs": 0.004317469953093678
+      },
+      "base_model.model.model.language_model.layers.8.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1138379907678772,
+        "delta_max_abs": 0.004256634274497628
+      },
+      "base_model.model.model.language_model.layers.8.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14165487095098972,
+        "delta_max_abs": 0.004796787863597274
+      },
+      "base_model.model.model.language_model.layers.8.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.14270907923317463,
+        "delta_max_abs": 0.004710918292403221
+      },
+      "base_model.model.model.language_model.layers.8.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13706203965303393,
+        "delta_max_abs": 0.00454260827973485
+      },
+      "base_model.model.model.language_model.layers.8.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1149289354385837,
+        "delta_max_abs": 0.004953242838382721
+      },
+      "base_model.model.model.language_model.layers.8.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09916214710360412,
+        "delta_max_abs": 0.004820802481845021
+      },
+      "base_model.model.model.language_model.layers.9.self_attn.k_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1391211695876134,
+        "delta_max_abs": 0.004147790372371674
+      },
+      "base_model.model.model.language_model.layers.9.self_attn.k_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09554177730784949,
+        "delta_max_abs": 0.004190548323094845
+      },
+      "base_model.model.model.language_model.layers.9.self_attn.o_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.1290812982645016,
+        "delta_max_abs": 0.004000500775873661
+      },
+      "base_model.model.model.language_model.layers.9.self_attn.o_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13730626853187836,
+        "delta_max_abs": 0.004724057449493557
+      },
+      "base_model.model.model.language_model.layers.9.self_attn.q_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.17895756684612354,
+        "delta_max_abs": 0.004731332883238792
+      },
+      "base_model.model.model.language_model.layers.9.self_attn.q_proj.lora_B.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13834991272245836,
+        "delta_max_abs": 0.0048853379776119255
+      },
+      "base_model.model.model.language_model.layers.9.self_attn.v_proj.lora_A.weight": {
+        "changed_elements": 16384,
+        "delta_l2": 0.13495047888899867,
+        "delta_max_abs": 0.004156354581937194
+      },
+      "base_model.model.model.language_model.layers.9.self_attn.v_proj.lora_B.weight": {
+        "changed_elements": 8192,
+        "delta_l2": 0.09506897805365278,
+        "delta_max_abs": 0.0038871460128575563
+      }
+    }
+  }
+}

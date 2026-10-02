@@ -1,0 +1,16 @@
+{
+  "claim_scope": "COC_CONDITIONED_LEGAL_PROPOSAL_WITH_SEPARATE_SIMULATION_POLICY_NOT_LEGAL_DECISION_OR_REAL_VEHICLE_SAFETY",
+  "executable_system_requirement_rule_id": "GS-SIM-PED-CORRIDOR-001",
+  "legal_numeric_source_overlap": [],
+  "legal_proposal_refs": [
+    "KR-RTA-2026-ART27",
+    "KR-RTA-27-1"
+  ],
+  "numeric_evidence_refs": [
+    "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+    "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d"
+  ],
+  "proposal_rule_id": "KR-RTA-27-1-CROSSWALK-STOP",
+  "recorded_vehicle_binding_key": "recorded-rig:public-synthetic-crosswalk-v0.1",
+  "simulation_vehicle_binding_key": "simulator:guardsynth-delay-constant-deceleration:v0.1"
+}

@@ -1,0 +1,87 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=20mm,headheight=16pt]{geometry}
+\usepackage{fontspec,kotex,booktabs,longtable,array,xcolor,hyperref,fancyhdr}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\setmainhangulfont{Noto Sans CJK KR}
+\setmonohangulfont{Noto Sans CJK KR}
+\definecolor{navy}{HTML}{173E59}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,
+pdftitle={GuardSynth: Related Work},pdfauthor={GuardSynth project}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\emergencystretch}{4em}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small GuardSynth}
+\fancyhead[R]{\small Related Work · v0.1 · 2026-09-30}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\clubpenalty=10000\widowpenalty=10000
+\raggedbottom
+\begin{document}
+\section*{II. Related Work}
+
+
+\phantomsection\section*{A. Reasoning-Based Autonomous Driving and CoC}\addcontentsline{toc}{section}{A. Reasoning-Based Autonomous Driving and CoC}
+
+Connecting visual observations to language-based reasoning and actions is an important direction in autonomous driving. Alpamayo-R1 combines Chain of Causation (CoC) reasoning with trajectory prediction and uses supervised fine-tuning and reinforcement learning to improve reasoning–action alignment. DriveLM represents relationships among perception, prediction, and planning questions and answers as a graph, while DriveVLM connects scene description, scene analysis, and hierarchical planning. These studies provide learnable representations of the process from observation to decision. \href{\detokenize{https://arxiv.org/abs/2511.00088}}{1}, \href{\detokenize{https://arxiv.org/abs/2312.14150}}{2}, \href{\detokenize{https://arxiv.org/abs/2402.12289}}{3}\par
+
+Alignment between explanations and actions is also important for useful reasoning. Drive-R1 addresses reasoning–planning misalignment and history-based shortcut learning, using trajectory and meta-action rewards after supervised fine-tuning. Complementing this direction, we focus on how behavioral constraints are represented in learning data. We distinguish CoC explanations of why an action is taken from constraints restricting which actions are admissible in the situation, and combine the two. This distinction defines explicit normative information to accompany explanations, rather than presuming a general performance deficiency of existing reasoning models. \href{\detokenize{https://ojs.aaai.org/index.php/AAAI/article/view/37602}}{4}\par
+
+\phantomsection\section*{B. Traffic-Rule Specification and Regulation-Aware Decisions}\addcontentsline{toc}{section}{B. Traffic-Rule Specification and Regulation-Aware Decisions}
+
+Machine-interpretable traffic rules provide a direct foundation for formalizing behavioral constraints. Esterle et al. express traffic rules in linear temporal logic (LTL) and apply them to compliance assessment on driving data. This approach gives applicability conditions and temporal relationships explicit semantics. Following this principle, we structure the subject and target, activation, persistence, release, and evidence links of CoC-augmenting constraints as EBLC elements. \href{\detokenize{https://arxiv.org/abs/2007.00330}}{5}\par
+
+Retrieval-augmented reasoning offers another way to connect regulations with scenes. DriveReg retrieves situation-relevant traffic regulations and connects them to language-model reasoning to support compliance and interpretable decisions. Its central focus is retrieving and using applicable regulations. GuardSynth instead focuses on expressing selected behavioral constraints in an explicit intermediate representation, checking them within a restricted logical model, and conveying them as natural-language learning inputs. Regulation retrieval and constraint specification have complementary roles in obtaining supporting evidence and representing constraints. \href{\detokenize{https://ojs.aaai.org/index.php/AAAI/article/view/41168}}{6}\par
+
+\phantomsection\section*{C. Natural Language, Formal Specifications, and CNL}\addcontentsline{toc}{section}{C. Natural Language, Formal Specifications, and CNL}
+
+Translating natural-language requirements into formal specifications connects human-readable descriptions with machine-verifiable representations. NL2TL uses abstracted atomic propositions and language models to translate natural language into temporal logic, separating domain-specific proposition recognition from translation structure. nl2spec associates language fragments with subformulas and lets users revise these associations to resolve ambiguity. The former emphasizes learning and adapting a translation model, while the latter emphasizes interactive specification and user correction. \href{\detokenize{https://aclanthology.org/2023.emnlp-main.985/}}{7}, \href{\detokenize{https://arxiv.org/abs/2303.04864}}{8}\par
+
+Controlled Natural Language (CNL) is also relevant when specifications are presented in readable language. Attempto Controlled English (ACE) restricts grammar and interpretation rules to connect natural-language sentences with formal representations. GuardSynth's CNL is not an implementation of ACE; it maps fields and clauses of a selected EBLC profile to restricted sentence patterns. Our focus is traceable correspondence between defined constraint elements and generated sentences, rather than semantic equivalence across unrestricted natural language. Logical verification, sentence correspondence, and the validity of scene evidence are consequently distinct review targets. \href{\detokenize{https://attempto.ifi.uzh.ch/site/pubs/papers/FLAIRS0601FuchsN.pdf}}{9}\par
+
+\phantomsection\section*{D. Positioning of This Work}\addcontentsline{toc}{section}{D. Positioning of This Work}
+
+These research directions establish foundations for learning driving reasoning, formalizing traffic rules, and connecting language with logic. Building on them, GuardSynth defines the scope, properties, and elements of CoC behavioral constraints and connects EBLC specification, restricted logical verification, CNL generation, and CoC augmentation. The focus is on organizing learning constraints through a consistent representation and verification procedure, rather than developing a new driving model or a general-purpose translator. Table 1 compares the central objectives of the selected studies; it is neither an exhaustive feature audit nor a performance ranking.\par
+
+Table 1. Central objectives of related work and their relationship to GuardSynth.\par
+
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2200\linewidth-5.280pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2000\linewidth-4.800pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3000\linewidth-7.200pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2800\linewidth-6.720pt\relax}@{}}
+\toprule
+\textbf{Study} & \textbf{Central objective} & \textbf{Representation or approach} & \textbf{Connection to this work} \\
+\midrule\endfirsthead
+\toprule
+\textbf{Study} & \textbf{Central objective} & \textbf{Representation or approach} & \textbf{Connection to this work} \\
+\midrule\endhead
+\bottomrule\endfoot
+Alpamayo-R1; Drive-R1 [1, 4] & Reasoning–action alignment & CoC/CoT, supervised learning and RL & Useful supervision for action selection \\
+DriveLM; DriveVLM [2, 3] & Reasoning from scenes to plans & Graph question answering; hierarchical planning & Structuring scene and action explanations \\
+Esterle et al. [5] & Machine-interpretable traffic rules & LTL specifications & Explicit conditional and temporal semantics \\
+DriveReg [6] & Regulation-aware decisions & Regulation retrieval and LLM reasoning & Connecting applicable rules and evidence \\
+NL2TL; nl2spec [7, 8] & Formalizing language requirements & Temporal-logic translation; interactive revision & Language–specification correspondence \\
+ACE [9] & Unambiguously interpreted language & Restricted grammar and formal interpretation & Principles of controlled expression \\
+GuardSynth & Structuring constraints for CoC learning & EBLC → logical checks → CNL → CoC augmentation & Linking constraint model, verification, and learning inputs \\
+\end{longtable}
+\endgroup
+
+We assess learning utility by comparing CoC alone (P0) with constraint-augmented CoC (P1 and P2), using the same model and matched training budgets. P1 is our existing natural-language constraint approach, and P2 uses CNL generated from EBLC. Thus, P1/P2 versus P0 is the primary comparison, while P1 versus P2 compares representations within our proposed family. This experiment evaluates the effect of supplying constraints; it does not isolate a causal effect of logical verification. The paper covers constraint specification, verification, CNL generation, and learning use. EBLC-based test generation and runtime monitoring are subsequent applications.\par
+
+\phantomsection\section*{References}\addcontentsline{toc}{section}{References}
+
+\begin{itemize}
+\item [1] NVIDIA, “Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail,” arXiv:2511.00088, 2025, revised 2026. \href{\detokenize{https://arxiv.org/abs/2511.00088}}{Paper}.
+\item [2] C. Sima et al., “DriveLM: Driving with Graph Visual Question Answering,” ECCV, 2024. \href{\detokenize{https://arxiv.org/abs/2312.14150}}{Paper}.
+\item [3] X. Tian et al., “DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models,” 2024. \href{\detokenize{https://arxiv.org/abs/2402.12289}}{Paper}.
+\item [4] Y. Li et al., “Drive-R1: Bridging Reasoning and Planning in VLMs for Autonomous Driving with Reinforcement Learning,” AAAI, vol. 40, no. 8, pp. 6708–6716, 2026. \href{\detokenize{https://ojs.aaai.org/index.php/AAAI/article/view/37602}}{Paper}.
+\item [5] K. Esterle, L. Gressenbuch, and A. Knoll, “Formalizing Traffic Rules for Machine Interpretability,” IEEE CAVS, 2020. \href{\detokenize{https://arxiv.org/abs/2007.00330}}{Paper}.
+\item [6] T. Cai et al., “Driving with Regulation: Trustworthy and Interpretable Decision-Making for Autonomous Driving with Retrieval-Augmented Reasoning,” AAAI, vol. 40, no. 45, pp. 38287–38295, 2026. \href{\detokenize{https://ojs.aaai.org/index.php/AAAI/article/view/41168}}{Paper}.
+\item [7] Y. Chen, R. Gandhi, Y. Zhang, and C. Fan, “NL2TL: Transforming Natural Languages to Temporal Logics using Large Language Models,” EMNLP, pp. 15880–15903, 2023. \href{\detokenize{https://aclanthology.org/2023.emnlp-main.985/}}{Paper}.
+\item [8] M. Cosler, C. Hahn, D. Mendoza, F. Schmitt, and C. Trippel, “nl2spec: Interactively Translating Unstructured Natural Language to Temporal Logics with Large Language Models,” CAV, 2023. \href{\detokenize{https://arxiv.org/abs/2303.04864}}{Paper}.
+\item [9] N. E. Fuchs, K. Kaljurand, and G. Schneider, “Attempto Controlled English Meets the Challenges of Knowledge Representation, Reasoning, Interoperability and User Interfaces,” 2006. \href{\detokenize{https://attempto.ifi.uzh.ch/site/pubs/papers/FLAIRS0601FuchsN.pdf}}{Paper}.
+\end{itemize}
+\end{document}

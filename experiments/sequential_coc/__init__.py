@@ -1,21 +1,6 @@
-"""Shared contracts for the sequential CoC consistency experiments."""
+"""Compatibility namespace for the Sequential CoC project experiments."""
 
-from .contract_ir import (
-    Action,
-    CheckResult,
-    ContractEvent,
-    ContradictionType,
-    EvidenceValue,
-    EventWindow,
-    ObligationState,
-)
+from pathlib import Path
 
-__all__ = [
-    "Action",
-    "CheckResult",
-    "ContractEvent",
-    "ContradictionType",
-    "EvidenceValue",
-    "EventWindow",
-    "ObligationState",
-]
+
+__path__ = [str(Path(__file__).resolve().parents[2] / "projects/03-sequential-coc-verification/experiments/sequential_coc")]

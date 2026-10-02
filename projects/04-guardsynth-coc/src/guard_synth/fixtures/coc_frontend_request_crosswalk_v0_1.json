@@ -1,0 +1,47 @@
+{
+  "frontend_version": "guardsynth-coc-conditioned-frontend-v0.1",
+  "request_id": "synthetic_crosswalk_frontend_v0_1",
+  "jurisdiction": "KR",
+  "catalog_id": "guardsynth-kr-structured-road-v0.1",
+  "catalog_version": "guardsynth-source-catalog-v0.1",
+  "catalog_as_of_date": "2026-08-10",
+  "odd_tags": ["urban_or_suburban_structured_public_road"],
+  "slice_hint": "PEDESTRIAN_CYCLIST_YIELD",
+  "scene_tags": ["MARKED_CROSSWALK", "PEDESTRIAN_ACTOR", "PEDESTRIAN_CROSSING"],
+  "coc": {
+    "text": "횡단보도의 보행자 때문에 정지하려고 한다.",
+    "language": "ko",
+    "epistemic_kind": "CLAIMED",
+    "evidence_ref": "coc-sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "scene_facts": [
+    {
+      "predicate_id": "pedestrian_crossing_state",
+      "truth": "TRUE",
+      "epistemic_kind": "OBSERVED",
+      "source_ref": "synthetic-scene:pedestrian-crossing-state",
+      "freshness_status": "FRESH",
+      "target_ids": ["pedestrian-1"],
+      "zone_ids": ["crosswalk-1"]
+    },
+    {
+      "predicate_id": "stop_boundary_geometry",
+      "truth": "TRUE",
+      "epistemic_kind": "DERIVED",
+      "source_ref": "synthetic-scene:stop-boundary-geometry",
+      "freshness_status": "FRESH",
+      "target_ids": ["pedestrian-1"],
+      "zone_ids": ["crosswalk-1"]
+    },
+    {
+      "predicate_id": "ego_boundary_relation",
+      "truth": "TRUE",
+      "epistemic_kind": "DERIVED",
+      "source_ref": "synthetic-scene:ego-boundary-relation",
+      "freshness_status": "FRESH",
+      "target_ids": ["pedestrian-1"],
+      "zone_ids": ["crosswalk-1"]
+    }
+  ],
+  "policy_evidence_ref": "GS-COC-FRONTEND-POLICY-v0.1"
+}

@@ -1,0 +1,50 @@
+{
+  "ambiguous_multi_slice_event_count": 29,
+  "claim_scope": "ANNOTATION_FIRST_SCREEN_NOT_SCENE_ELIGIBILITY_OR_VEHICLE_SAFETY",
+  "classified_event_count": 95,
+  "country_event_counts": {
+    "Austria": 1,
+    "Belgium": 3,
+    "Czechia": 1,
+    "Estonia": 4,
+    "Finland": 1,
+    "France": 5,
+    "Germany": 12,
+    "Hungary": 1,
+    "Italy": 8,
+    "Latvia": 3,
+    "Lithuania": 1,
+    "Poland": 1,
+    "Slovenia": 7,
+    "Sweden": 6,
+    "United States": 81
+  },
+  "estimated_sensor_package_count": 228,
+  "final_outcome_assigned_count": 0,
+  "locally_materialized_annotation_count": 2066,
+  "outcome_status": "REVIEW_REQUIRED_SENSOR_VALIDATION",
+  "required_sensor_feature_count": 4,
+  "screen_version": "guardsynth-m16-annotation-candidate-screen-v0.1",
+  "screened_event_count": 135,
+  "screened_unique_candidate_count": 135,
+  "sensor_download_status": "AWAITING_EXPLICIT_SENSOR_DOWNLOAD_AUTHORIZATION",
+  "sensor_feature_eligible_event_count": 133,
+  "shortlist_slice_coverage": {
+    "FOLLOWING_CUT_IN": 20,
+    "PEDESTRIAN_CYCLIST_YIELD": 19,
+    "STOP_SIGNALS": 20
+  },
+  "shortlist_slice_shortfall": {
+    "FOLLOWING_CUT_IN": 0,
+    "PEDESTRIAN_CYCLIST_YIELD": 0,
+    "STOP_SIGNALS": 0
+  },
+  "shortlist_unique_chunk_count": 57,
+  "shortlist_unique_clip_count": 59,
+  "slice_candidate_counts": {
+    "FOLLOWING_CUT_IN": 47,
+    "PEDESTRIAN_CYCLIST_YIELD": 47,
+    "STOP_SIGNALS": 31
+  },
+  "unsupported_event_count": 40
+}

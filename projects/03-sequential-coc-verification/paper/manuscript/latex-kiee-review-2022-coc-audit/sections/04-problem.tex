@@ -1,0 +1,73 @@
+\section{문제 정의}
+\label{sec:problem}
+
+\subsection{두 계약 층과 중심 검증 대상}
+본 논문은 서로 다른 질문에 답하는 두 계약 층을 구분한다. 중심인 \emph{연속 텍스트 계약}은 이전 CoC가 만든 지속 의무와 해제 조건을 다음 사건까지 유지하여 문장열의 양립 가능성을 검사한다. 보조 \emph{반응 시간 계약}은 개별 CoC 의도와 기록된 자차 속도 반응의 제한 시간 내 정렬 및 출처를 검사한다. 전자는 텍스트 의미 상태, 후자는 도출한 종방향 움직임 대리변수를 다루므로 서로의 통과를 보증하지 않는다. 예를 들어 텍스트가 일관적이어도 기록 궤적이 선택한 반응 임계값과 맞지 않을 수 있고, 반응이 제때 나타나도 CoC 문장열에 미해소 의무가 남을 수 있다.
+
+\subsection{보조 반응 시간 계약의 의미}
+반응 시간 검증 조건(response-time contract)은 CoC 주석 사건으로부터 구성하는 추상적인 판단--반응 시간 검사 단위이다. 이 계약은 법적 의무나 물리 안전 의무가 아니라, 자연어 주석의 의미를 검증 가능한 시간 검사로 변환하기 위해 연구자가 선택한 의미론이다. 각 계약은 다음의 세 증거 층을 명시적으로 연결한다: (1) 주석에서 파싱한 행동 의도, (2) 연구자가 선택한 시간 검증 조건, (3) 자차 움직임에서 도출한 차량 반응. 다음 튜플은 이 선택을 표현한다.
+
+\begin{equation}
+O_i = \langle \tau_i, a_i, h_i, D_i, R_{a_i}, q_i, s_i \rangle .
+\end{equation}
+
+여기서 $\tau_i$는 시작 시각, $a_i$는 \textsc{Decelerate}, \textsc{Stop}, \textsc{Yield}, \textsc{Accelerate} 같은 주석에서 파싱한 추상 행동 의도, $h_i$는 원인 표현, $D_i$는 \emph{잠정 제한 시간(candidate deadline)}, $R_{a_i}$는 차량 움직임에서 확인한 반응에 적용할 연구자 선택 응답 술어, $q_i$는 검증 입력 수락 조건, $s_i$는 \textsc{Pending}, \textsc{Responded}, \textsc{Failed}와 같은 계약 상태이다. \texttt{quality\_pass}에 따른 검증 입력 수락 조건을 만족한 CoC 주석 사건은 \textsc{Pending} 상태의 후보 검증 조건을 열며, 다음 제한 시간 응답 제약으로 검사한다.
+
+\begin{equation}
+q_i=\mathrm{trusted}
+\Rightarrow
+\exists t_r \in [\tau_i,\tau_i + D_i) :
+R_{a_i}(t_r).
+\label{eq:obligation-contract}
+\end{equation}
+
+식~\eqref{eq:obligation-contract}에서 \(\mathrm{trusted}\)는 구현에 남겨 둔 코드 식별자로서, 인간 정답이나 참인 판단이 아니라 \texttt{quality\_pass}에 의한 검증 입력 수락을 뜻한다. 이 식은 수락된 CoC 주석 사건 이후 잠정 제한 시간 안에 파싱된 의도와 일치하는 차량 움직임에서 확인한 반응이 관측되어야 함을 뜻한다. 예를 들어 수락된 CoC가 ``전방 트럭/공사 구간 때문에 감속한다''라고 기술하면 검사기는 이를 다음 후보 검증 조건으로 변환한다.
+
+\begin{quote}
+\small
+\textsc{Decelerate} 의도가 파싱되었으므로, 기준 시점 이후 잠정 제한 시간 안에 자차 속도/궤적에서 감속 방향의 차량 움직임에서 확인한 반응이 관측되어야 한다.
+\end{quote}
+
+이때 검증 조건은 자연어 CoC 문장이 곧바로 차량 제어 명령이라는 뜻이 아니다. 기대 응답은 액추에이터 명령이 아니라 자차 움직임에서 도출한 차량 반응이며, $R_{a_i}$의 구체적 계산은 다음 절의 응답 탐지기가 담당한다. 따라서 \texttt{E<> Obligation.Active} 질의는 수락된 CoC 주석 사건이 모델 안에서 무시되지 않고 검사 대상 시간 검증 조건으로 생성되었는지를 확인하는 도달 가능성 검사이다.
+
+식~\eqref{eq:obligation-contract}의 계약 통과는 ``기록된 CoC 주석 사건과 자차 움직임 궤적이 선택된 검증 의미론 아래에서 일관적이다''는 뜻이다. 검토 후보는 이 선택된 의미론 아래 추가 확인이 필요하다는 뜻이다. 어느 쪽도 법적 의무 준수, 충돌 회피, 안전거리 만족, 액추에이터 수준 제어 가능성, 폐루프 정책 안전성을 의미하지 않는다. 이러한 물리 안전성 판단에는 상대 객체 거리, 상대 속도, 차량 동역학, 액추에이터 지연, 마찰 조건이 추가로 필요하다.
+
+\subsection{단일 이벤트와 연속 에피소드}
+단일 이벤트 검사는 각 CoC 주석 사건을 독립 샘플로 보고 사건마다 새 시계를 시작한다. 이 방식은 국소적인 행동--응답 매칭에는 유용하지만, 이전 사건에서 열린 대기 계약을 유지하지 못한다. 에피소드 수준 검사는 같은 물리 클립 안의 CoC 주석 사건들을 시간순으로 연결하고 대기 계약, 최초 시작 시각, 반복 사건 이력, 응답 매칭 상태를 유지한다.
+
+두 방식의 차이는 반복 CoC 주석 사건에서 명확해진다. 첫 감속 CoC 주석 사건 후 같은 감속 주석이 반복되고 실제 응답이 한 번만 나타났을 때, 단일 이벤트 검사는 반복 사건 기준 빠른 응답으로 판정할 수 있다. 반면 에피소드 검사는 최초 계약 기준 지연 응답으로 판정할 수 있다. 반복의 의미론을 정의하지 않으면 어느 판정을 적용해야 하는지 결정할 수 없다.
+
+\begin{table}[t]
+\centering
+\bitablecaption{단일 이벤트 검사와 에피소드 수준 검사 비교.}{Comparison of event-local checking and episode-level checking.}
+\label{tab:event-vs-episode}
+\footnotesize
+\begin{tabularx}{\columnwidth}{L{0.27\columnwidth}YY}
+\toprule
+Item & Single-event check & Episode-level check \\
+\midrule
+Input & One label and a local future window & Ordered events/responses in the same clip \\
+Clock & New clock per label & Preserve pending clock or explicitly reset \\
+Repeated label & Independent sample & Repeat/replace/conflict/deduplicate \\
+Response binding & Nearest local motion & Matched to accepted response-time contract \\
+Detectable faults & Delay/no response & Overwrite, orphan response, ordering, boundary \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+표~\ref{tab:event-vs-episode}는 본 논문이 단일 레이블 분류 문제가 아니라 에피소드 상태 관리 문제를 다룬다는 점을 요약한다. 단일 이벤트 검사는 구현이 간단하지만 반복 레이블이 기존 계약을 연장하는지, 교체하는지, 중복으로 병합하는지 알 수 없다. 에피소드 수준 검사는 이 상태를 명시적으로 보존하므로, 늦은 응답을 반복 사건 기준의 빠른 응답으로 잘못 학습하는 오류를 드러낼 수 있다.
+
+\subsection{시간 계약과 응답 탐지기}
+수락된 CoC 주석 사건이 발생하면 후보 검증 조건의 응답 검사가 시작된다. 방향성 응답은 반개구 후보 구간 $r_i-\tau_i<D_i$에서 시작되어야 한다. 현재 모델의 기한 실패 전환이 $r_i-\tau_i=D_i$에서 활성화되므로 등호 시점은 통과에 포함하지 않는다. 응답 시작 시각 $r_i$는 자차 속도 $v(t)$에서 구간 길이 $W$, 최소 속도 변화 $\delta$, 방향 일치 비율 $\rho$를 사용해 탐지한다. 방향 부호를 $\sigma_i\in\{-1,+1\}$라 하면 다음 조건을 만족하는 최초 시각을 차량 움직임에서 확인한 반응의 시작 시각으로 둔다.
+
+\begin{align}
+\sigma_i[v(r_i+W)-v(r_i)] &\ge \delta,\\
+\frac{1}{m}\sum_{k=1}^{m}\mathbf{1}\{\sigma_i\Delta v_k>0\} &\ge \rho.
+\end{align}
+
+기본 설정은 $W=0.5$초, $\delta=0.1$m/s, $\rho=0.7$이다. 민감도 분석에서는 $W\in\{0.25,0.5,1.0\}$초, $\delta\in\{0.05,0.1,0.2\}$m/s, $\rho\in\{0.5,0.7,0.9\}$의 27개 설정을 사용한다. \textsc{Stop} 또는 \textsc{Yield} 사건 시점의 속도가 $0.5$~m/s 이하이면 새 감속 없이 이미 충족된 것으로 처리한다. 이는 초기 후보 8건을 검토한 뒤 세 사건을 재분류하기 위해 도입한 분석 대상 집합 보정 탐색 규칙이며 규범 임계값이 아니다.
+
+\subsection{반복 사건의 의미론}
+반복 CoC 주석 사건은 세 가지 대안 주석 정책으로 비교한다. \preserve는 최초 대기 계약의 기한을 유지하여 지연을 최초 사건 기준으로 해석한다. \reset은 반복 사건이 잠정 제한 시간 시계를 다시 시작한다고 본다. \dedup은 짧은 시간 안의 동등한 CoC 주석 사건을 하나로 병합한다. \preserve는 지연 해석을 바꾸는 한 정책이지 유일하게 올바른 정책이 아니다. \preserve/\reset/\dedup 중 무엇을 적용할지는 데이터가 자동으로 결정하지 않으며, 검증 전에 명시적으로 선택해야 하는 시스템 요구사항 또는 주석 정책이다.
+
+에피소드 수준 계약은 기한 외에도 형식 정합성 속성을 가져야 한다. 응답 수는 수락된 계약 수를 초과할 수 없고, 활성 계약이 없을 때 발생한 응답은 고아 응답이다. 낮은 품질의 추론은 기존 수락 계약을 덮어쓸 수 없고, 연속성 증거가 없는 장면 경계에서는 대기 계약을 다음 장면으로 이월하지 않는다. 이 속성들은 차량 동역학 속성이 아니라 CoC 주석--차량 움직임에서 확인한 반응 변환 절차가 지켜야 할 프로토콜 속성이다.

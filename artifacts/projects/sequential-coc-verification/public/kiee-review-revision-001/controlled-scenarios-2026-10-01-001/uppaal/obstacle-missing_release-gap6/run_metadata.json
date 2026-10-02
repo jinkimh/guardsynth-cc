@@ -1,0 +1,15 @@
+{
+  "parsed_run": {
+    "executable": "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+    "version": "UPPAAL 5.0.0 (rev. 714BA9DB36F49691), June 2023",
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "-t1",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-missing_release-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-missing_release-gap6/queries.q"
+    ],
+    "returncode": 0
+  },
+  "raw_evidence_rerun_returncode": 0
+}

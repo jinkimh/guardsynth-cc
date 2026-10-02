@@ -1,0 +1,41 @@
+{
+  "claim_scope": "M16_CASCADE_STRUCTURED_LINK_SOURCE_AUDIT_NOT_UNANNOTATED_GEOMETRY_EXPERT_EFFECT_OR_VEHICLE_SAFETY",
+  "classified_event_count": 98,
+  "curator_review_screen_generation_allowed": false,
+  "empty_or_unsourced_review_prohibited": true,
+  "human_video_observation_is_source_geometry": false,
+  "manifest_version": "guardsynth-m16-source-geometry-acquisition-v0.1",
+  "minimum_source_contract": [
+    "content hash and version",
+    "coordinate frame and unit",
+    "event timestamp coverage",
+    "entity/control identifier binding",
+    "lane/zone geometry or explicit containment relation"
+  ],
+  "remaining_event_counts": {
+    "applicable_rule_scope": 98,
+    "conflict_stop_or_following_geometry": 98,
+    "outcome_lifecycle_witness": 98,
+    "relevant_actor_or_control_state": 28,
+    "target_zone_or_lane_association": 97
+  },
+  "required_source_by_slice": {
+    "FOLLOWING_CUT_IN": [
+      "timestamped target-track-to-lane assignment",
+      "lane boundaries or centerline and longitudinal conflict geometry"
+    ],
+    "PEDESTRIAN_CYCLIST_YIELD": [
+      "timestamped_actor_track_to_crossing_or_ego-lane_geometry",
+      "crosswalk_or_conflict-zone_polygon_when_applicable"
+    ],
+    "STOP_SIGNALS": [
+      "control-state-to-applicable-lane association",
+      "stop-line or stopping-zone geometry"
+    ]
+  },
+  "screen_generation_gate": "NEW_SOURCE_GEOMETRY_MUST_BE_BOUND_BEFORE_PRESENTING_A_CURATOR_DECISION",
+  "source_link_automatic_closure": {
+    "relevant_actor_or_control_state": 70,
+    "target_zone_or_lane_association": 1
+  }
+}

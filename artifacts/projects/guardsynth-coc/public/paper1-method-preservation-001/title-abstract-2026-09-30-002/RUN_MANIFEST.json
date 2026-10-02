@@ -1,0 +1,34 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "title-abstract-2026-09-30-002",
+  "artifact_class": "public",
+  "purpose": "Bilingual title and abstract drafts",
+  "documents": [
+    {
+      "language": "ko",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_TITLE_ABSTRACT_V01_KO.md",
+      "source_sha256": "a490b50dde97587b29022f1e3df84af98aa84dfeb4417e9aacd89e5a9f028e2a",
+      "pdf": "ieee-access-title-abstract-v01-ko.pdf",
+      "abstract_word_count_whitespace": 143
+    },
+    {
+      "language": "en",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_TITLE_ABSTRACT_V01_EN.md",
+      "source_sha256": "921a9bdb568aec6ea4540b97ed72b390bd42b66ebbc6cb1576428ab81a93fd60",
+      "pdf": "ieee-access-title-abstract-v01-en.pdf",
+      "abstract_word_count_whitespace": 183
+    }
+  ],
+  "basis": "IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_KO.md and expansion test metrics",
+  "scope_excludes": [
+    "EBLC testing functionality",
+    "runtime monitoring"
+  ],
+  "status": "VERIFIED_APPROVED_TEXT_SNAPSHOT",
+  "supersedes": "title-abstract-2026-09-30-001",
+  "editorial_changes": [
+    "Approved problem framing focused on action selection learning",
+    "Closing negative limitation sentence removed from abstract",
+    "Constraints supplied to augmented arms during training and evaluation remains explicit"
+  ]
+}

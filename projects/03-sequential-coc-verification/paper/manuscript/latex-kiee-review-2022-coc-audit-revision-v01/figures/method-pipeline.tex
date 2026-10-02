@@ -1,0 +1,13 @@
+\begin{tikzpicture}[
+ box/.style={draw=revisionblue,rounded corners,align=center,text width=3.35cm,minimum height=12mm,font=\footnotesize,text=revisionblue},
+ note/.style={box,text width=3.65cm,font=\scriptsize},
+ flow/.style={-{Latex[length=2mm]},draw=revisionblue,thick}]
+\node[box] (input) at (0,0) {1. 입력 정리\\장면ㆍ사건ㆍ단계 순서\\원문 / 출처 보존};
+\node[box] (frame) at (4.25,0) {2. 프레임 구성\\행동 / 의무 / 조건 ID\\증거 / 원문 구절};
+\node[box] (model) at (8.5,0) {3. 모델 실행\\의무별 배열과 갱신\\상태 속성 / 최초 기록};
+\node[box] (trace) at (12.75,0) {4. 근거 회수\\사건ㆍ의무 ID 복원\\관련 원문 / 사유};
+\node[note] (paths) at (4.25,-1.85) {자동 텍스트: 관측 근거 미확정\\작성 프레임: 명시된 조건 상태};
+\node[note] (reports) at (10.65,-1.85) {최초 통제 결과 / 동일 사례 재시험\\자연 검토 / 보조 반응은 별도 보고};
+\draw[flow] (input)--(frame);\draw[flow] (frame)--(model);\draw[flow] (model)--(trace);
+\draw[flow] (paths.north)--(frame.south);\draw[flow] (trace.south)|-(reports.east);
+\end{tikzpicture}

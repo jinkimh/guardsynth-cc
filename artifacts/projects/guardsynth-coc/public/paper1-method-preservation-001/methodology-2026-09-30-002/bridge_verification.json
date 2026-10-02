@@ -1,0 +1,1954 @@
+[
+  {
+    "model_id": "supplied_temporal_release",
+    "engine": "Z3_BOUNDED_SMT",
+    "z3_version": "5.0.0",
+    "grammar_version": "eblc-core-v0.1",
+    "compiler_version": "eblc-core-smt-compiler-v0.1",
+    "query_count": 25,
+    "matches_expected": 25,
+    "agreement": 1.0,
+    "results": [
+      {
+        "query_id": "nonvacuous",
+        "classification": "CONSISTENCY",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Holding is feasible.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": -1,
+          "supplied_temporal_release__clear_ms__const": -500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_0",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 1500,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 1500 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_1",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 1500 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_2",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 2499,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 2499 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_3",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 2499 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_4",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 2500,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 2500 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_5",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 2500,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 2500 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_6",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 2501,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 2501 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_7",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 2501,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 2501 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_8",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 3000,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 3000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_9",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 3000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_10",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 3999,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 3999 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_11",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 3999 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_12",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 4000,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 4000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_13",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 4000,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 4000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_14",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 4001,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 4001 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_15",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 4001,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 4001 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_16",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 4000,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 4000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_17",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 4000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_18",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 4999,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 4999 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_19",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 4999 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_20",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5000,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 5000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_21",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5000,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 5000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_22",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5001,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 5001 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_23",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5001,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x10 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x10)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 5001 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      }
+    ]
+  },
+  {
+    "model_id": "supplied_temporal_release",
+    "engine": "Z3_BOUNDED_SMT",
+    "z3_version": "5.0.0",
+    "grammar_version": "eblc-core-v0.1",
+    "compiler_version": "eblc-core-smt-compiler-v0.1",
+    "query_count": 25,
+    "matches_expected": 25,
+    "agreement": 1.0,
+    "results": [
+      {
+        "query_id": "nonvacuous",
+        "classification": "CONSISTENCY",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Holding is feasible.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": -1,
+          "supplied_temporal_release__clear_ms__const": -1500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_0",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 1500,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 1500 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_1",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 1500 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_2",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 3499,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 3499 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_3",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 3499 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_4",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 3500,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 3500 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_5",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 3500,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 3500 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_6",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 3501,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 3501 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_7",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 3501,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 3501 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_8",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 3000,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 3000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_9",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 3000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_10",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 4999,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 4999 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_11",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 4999 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_12",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5000,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 5000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_13",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5000,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 5000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_14",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5001,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 5001 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_15",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5001,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 5001 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_16",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 4000,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 4000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_17",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 4000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_18",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5999,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 5999 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_19",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 5999 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_20",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 6000,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 6000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_21",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 6000,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 6000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_22",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 6001,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 6001 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_23",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 6001,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x38 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x38)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 6001 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      }
+    ]
+  },
+  {
+    "model_id": "supplied_temporal_release",
+    "engine": "Z3_BOUNDED_SMT",
+    "z3_version": "5.0.0",
+    "grammar_version": "eblc-core-v0.1",
+    "compiler_version": "eblc-core-smt-compiler-v0.1",
+    "query_count": 25,
+    "matches_expected": 25,
+    "agreement": 1.0,
+    "results": [
+      {
+        "query_id": "nonvacuous",
+        "classification": "CONSISTENCY",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Holding is feasible.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": -1,
+          "supplied_temporal_release__clear_ms__const": -800,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_0",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 1500,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 1500 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_1",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 1500 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_2",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 2799,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 2799 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_3",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 2799 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_4",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 2800,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 2800 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_5",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 2800,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 2800 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_6",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 2801,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 2801 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_7",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 2801,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 2801 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_8",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 3000,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 3000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_9",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 3000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_10",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 4299,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 4299 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_11",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 4299 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_12",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 4300,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 4300 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_13",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 4300,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 4300 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_14",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 4301,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 4301 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_15",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 4301,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 4301 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_16",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 4000,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 4000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_17",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 4000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_18",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5299,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 5299 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_19",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 5299 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_20",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5300,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 5300 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_21",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5300,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 5300 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_22",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5301,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 5301 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_23",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5301,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x18 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 800))))\n (=> supplied_temporal_release__enters__const $x18)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 5301 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      }
+    ]
+  },
+  {
+    "model_id": "supplied_temporal_release",
+    "engine": "Z3_BOUNDED_SMT",
+    "z3_version": "5.0.0",
+    "grammar_version": "eblc-core-v0.1",
+    "compiler_version": "eblc-core-smt-compiler-v0.1",
+    "query_count": 25,
+    "matches_expected": 25,
+    "agreement": 1.0,
+    "results": [
+      {
+        "query_id": "nonvacuous",
+        "classification": "CONSISTENCY",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Holding is feasible.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": -1,
+          "supplied_temporal_release__clear_ms__const": -1800,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_0",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 1500,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 1500 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_1",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 1500 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_2",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 3799,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 3799 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_3",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 3799 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_4",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 3800,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 3800 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_5",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 3800,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 3800 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_6",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 3801,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 3801 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_7",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 3801,
+          "supplied_temporal_release__clear_ms__const": 2000,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 2000 supplied_temporal_release__clear_ms__const) (= 3801 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_8",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 3000,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 3000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_9",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 3000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_10",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5299,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 5299 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_11",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 5299 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_12",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5300,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 5300 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_13",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5300,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 5300 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_14",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5301,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 5301 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_15",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 5301,
+          "supplied_temporal_release__clear_ms__const": 3500,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 3500 supplied_temporal_release__clear_ms__const) (= 5301 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_16",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 4000,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 4000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_17",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 4000 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_18",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 6299,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 6299 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_19",
+        "classification": "EXAMPLE",
+        "expected": "UNSAT",
+        "status": "UNSAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": null,
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 6299 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_20",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 6300,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 6300 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_21",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 6300,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 6300 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_22",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 6301,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": false
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 6301 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+      },
+      {
+        "query_id": "boundary_23",
+        "classification": "EXAMPLE",
+        "expected": "SAT",
+        "status": "SAT",
+        "matches_expected": true,
+        "description": "Independent temporal boundary.",
+        "source_refs": [
+          "Project01/temporal_guard_world.py::_guard",
+          "paper1-method-preservation-v0.1"
+        ],
+        "definedness_constraint_count": 0,
+        "witness": {
+          "supplied_temporal_release__entry_ms__const": 6301,
+          "supplied_temporal_release__clear_ms__const": 4500,
+          "supplied_temporal_release__enters__const": true
+        },
+        "reason_unknown": null,
+        "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x48 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1800))))\n (=> supplied_temporal_release__enters__const $x48)))\n(assert\n (and (= 4500 supplied_temporal_release__clear_ms__const) (= 6301 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+      }
+    ]
+  }
+]

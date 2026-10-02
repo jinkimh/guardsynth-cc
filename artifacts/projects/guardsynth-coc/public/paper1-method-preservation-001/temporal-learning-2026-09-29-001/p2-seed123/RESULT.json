@@ -1,0 +1,41 @@
+{
+  "arm": "P2",
+  "seed": 123,
+  "updates": 72,
+  "evaluation": {
+    "benchmark_regression": {
+      "metrics": {
+        "guard_violation_rate": 0.0,
+        "safe_goal_completion_rate": 1.0,
+        "deadlock_rate": 0.0,
+        "accuracy": 1.0,
+        "coverage": 1.0,
+        "contract_swap_pair_accuracy": 1.0
+      },
+      "rows": 96
+    },
+    "new_seed_confirmation": {
+      "metrics": {
+        "guard_violation_rate": 0.0,
+        "safe_goal_completion_rate": 1.0,
+        "deadlock_rate": 0.0,
+        "accuracy": 1.0,
+        "coverage": 1.0,
+        "contract_swap_pair_accuracy": 1.0
+      },
+      "rows": 96
+    },
+    "unseen_time": {
+      "metrics": {
+        "guard_violation_rate": 0.0,
+        "safe_goal_completion_rate": 1.0,
+        "deadlock_rate": 0.0,
+        "accuracy": 0.875,
+        "coverage": 1.0,
+        "contract_swap_pair_accuracy": 0.75
+      },
+      "rows": 96
+    }
+  },
+  "elapsed_seconds": 180.35695376619697
+}

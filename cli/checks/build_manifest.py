@@ -1,10 +1,15 @@
-"""Build the public workspace SHA-256 manifest under project-layout v2."""
+"""Build the public workspace SHA-256 manifest under Structure Codex v3."""
 
 from __future__ import annotations
 
 import argparse
+from fnmatch import fnmatch
 import hashlib
 from pathlib import Path
+import sys
+
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 from cli.project_paths import project_root
 
@@ -17,15 +22,21 @@ EXCLUDED_PREFIXES = (
     ".codex/",
     ".ruff_cache/",
     ".superpowers/",
+    ".worktrees/",
     "archive/handoff/packages/",
     "archive/installers/",
     "artifacts/results/restricted/",
     "data/restricted/",
-    "experiments/alpamayo/",
-    "experiments/vlm_guard_learning/",
+    "projects/01-safety-constrained-coc/experiments/alpamayo/",
+    "projects/01-safety-constrained-coc/experiments/vlm_guard_learning/",
     "papers/",
     "runtime/",
     "third_party/",
+    "portal_exec.md",
+)
+EXCLUDED_PATTERNS = (
+    "artifacts/projects/*/restricted/*",
+    "artifacts/platforms/*/restricted/*",
 )
 MODEL_ARTIFACT_SUFFIXES = (
     ".safetensors",
@@ -39,7 +50,7 @@ SMALL_VLM_ROOT = "artifacts/results/public/small-vlm-guard-v0/"
 SMALL_VLM_EXCLUDED_PARTS = {"adapter", "processor"}
 EXCLUDED_PARTS = {
     ".git", ".cache", "__pycache__", ".pytest_cache", ".matplotlib-cache",
-    ".texlive-cache", ".texlive-local",
+    ".texlive-cache", ".texlive-local", "texlive-cache",
 }
 
 
@@ -47,6 +58,8 @@ def included(path: Path) -> bool:
     relative_path = path.relative_to(ROOT)
     relative = relative_path.as_posix()
     if relative == OUTPUT.name or any(relative.startswith(prefix) for prefix in EXCLUDED_PREFIXES):
+        return False
+    if any(fnmatch(relative, pattern) for pattern in EXCLUDED_PATTERNS):
         return False
     if relative.endswith(MODEL_ARTIFACT_SUFFIXES) or (
         path.suffix == ".bin"

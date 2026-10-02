@@ -1,0 +1,10 @@
+{
+  "status": "PROTOCOL_AND_DATA_FROZEN_BEFORE_NEW_MODEL_OUTCOMES",
+  "paired_rows": 2016,
+  "unique_storyboards": 6,
+  "unique_P0_visual_candidate_inputs": 24,
+  "P1_P2_identical_prompts": 0,
+  "SMT_queries": 100,
+  "limitation": "New generator seeds reuse visual/semantic templates; not independent new environments.",
+  "optimizer_updates": 0
+}

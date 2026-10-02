@@ -1,0 +1,17 @@
+project_id: eblc-language-verification
+project_order: 5
+title: EBLC Language Verification
+research_question: Does EBLC provide traceable lifecycle semantics and verifiable multi-target lowering beyond simpler contract representations?
+status: research_planning
+dependencies:
+  - eblc-bcv
+related_projects:
+  - guardsynth-coc
+  - specification-alignment
+artifact_root: artifacts/projects/eblc-language-verification
+canonical_status: STATUS.md
+canonical_research_plan: docs/plans/01_RESEARCH_PLAN_V01.md
+canonical_milestones: docs/plans/02_PROJECT_MILESTONES.md
+canonical_execution_tracker: docs/plans/03_PROJECT_EXECUTION_TRACKER.md
+survey_index: docs/surveys/README.md
+paper_root: paper

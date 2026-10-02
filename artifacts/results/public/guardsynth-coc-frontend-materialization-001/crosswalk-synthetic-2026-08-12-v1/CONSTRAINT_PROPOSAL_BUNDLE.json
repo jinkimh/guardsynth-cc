@@ -1,0 +1,212 @@
+{
+  "claim_promoted_to_scene_or_legal_authority": false,
+  "claim_scope": "REVIEWABLE_CONSTRAINT_PROPOSAL_NOT_LEGAL_DECISION_OR_VEHICLE_SAFETY_VALIDATION",
+  "coc_parse": {
+    "concepts": {
+      "action": [
+        "STOP"
+      ],
+      "cause": [
+        "CROSSING",
+        "PEDESTRIAN"
+      ],
+      "intent": [
+        "PLANNED"
+      ],
+      "uncertainty": []
+    },
+    "epistemic_kind": "CLAIMED",
+    "evidence_ref": "coc-sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "language": "ko",
+    "parser_version": "guardsynth-coc-conditioned-frontend-v0.1",
+    "text_included": false,
+    "unknown_groups": [
+      "uncertainty"
+    ]
+  },
+  "frontend_version": "guardsynth-coc-conditioned-frontend-v0.1",
+  "proposals": [
+    {
+      "applicability": "TRUE",
+      "binder_ref": "crossing_stop_target",
+      "binding_status": "BOUND",
+      "claim_boundary": "No fixed margin or release duration is claimed as law.",
+      "executable_parameters": null,
+      "reason_codes": [],
+      "required_predicate_refs": [
+        "pedestrian_crossing_state",
+        "stop_boundary_geometry",
+        "ego_boundary_relation"
+      ],
+      "retrieval_backend": "GRAPH_PREDICATE_V0.1",
+      "retrieval_predicate_overlap": 3,
+      "retrieval_score": 3.0,
+      "rule_id": "KR-RTA-27-1-CROSSWALK-STOP",
+      "slice": "PEDESTRIAN_CYCLIST_YIELD",
+      "source_claim_refs": [
+        "KR-RTA-27-1"
+      ],
+      "source_record_refs": [
+        "KR-RTA-2026-ART27"
+      ],
+      "target_id": "pedestrian-1",
+      "verdict": "PROPOSED",
+      "zone_id": "crosswalk-1"
+    },
+    {
+      "applicability": "FALSE",
+      "binder_ref": "crossing_stop_target",
+      "binding_status": "BOUND",
+      "claim_boundary": "Activation requires crossing use; marking alone is insufficient.",
+      "executable_parameters": null,
+      "reason_codes": [
+        "MISSING_REQUIRED_PREDICATE",
+        "RULE_PRECONDITION_TAG_FALSE"
+      ],
+      "required_predicate_refs": [
+        "bicycle_crossing_state",
+        "stop_boundary_geometry",
+        "ego_boundary_relation"
+      ],
+      "retrieval_backend": "GRAPH_PREDICATE_V0.1",
+      "retrieval_predicate_overlap": 2,
+      "retrieval_score": 2.0,
+      "rule_id": "KR-RTA-15-2-3-BICYCLE-CROSSING",
+      "slice": "PEDESTRIAN_CYCLIST_YIELD",
+      "source_claim_refs": [
+        "KR-RTA-15-2-3"
+      ],
+      "source_record_refs": [
+        "KR-RTA-2026-ART15-2"
+      ],
+      "target_id": "pedestrian-1",
+      "verdict": "NOT_APPLICABLE",
+      "zone_id": "crosswalk-1"
+    },
+    {
+      "applicability": "FALSE",
+      "binder_ref": "safe_distance_unsupported",
+      "binding_status": "BOUND",
+      "claim_boundary": "Safe-distance number is unsupported until separately sourced.",
+      "executable_parameters": null,
+      "reason_codes": [
+        "RULE_PRECONDITION_TAG_FALSE"
+      ],
+      "required_predicate_refs": [
+        "pedestrian_crossing_state",
+        "ego_boundary_relation"
+      ],
+      "retrieval_backend": "GRAPH_PREDICATE_V0.1",
+      "retrieval_predicate_overlap": 2,
+      "retrieval_score": 2.0,
+      "rule_id": "KR-RTA-27-5-NONCROSSWALK-STOP",
+      "slice": "PEDESTRIAN_CYCLIST_YIELD",
+      "source_claim_refs": [
+        "KR-RTA-27-5"
+      ],
+      "source_record_refs": [
+        "KR-RTA-2026-ART27"
+      ],
+      "target_id": "pedestrian-1",
+      "verdict": "NOT_APPLICABLE",
+      "zone_id": "crosswalk-1"
+    },
+    {
+      "applicability": "UNKNOWN",
+      "binder_ref": "nonobstruction_target",
+      "binding_status": "BOUND",
+      "claim_boundary": "Conflict-zone geometry is an operational derivation, not statutory text.",
+      "executable_parameters": null,
+      "reason_codes": [
+        "MISSING_REQUIRED_PREDICATE",
+        "RULE_PRECONDITION_TAG_MISSING"
+      ],
+      "required_predicate_refs": [
+        "pedestrian_crossing_state",
+        "ego_turning_state",
+        "traffic_control_state"
+      ],
+      "retrieval_backend": "GRAPH_PREDICATE_V0.1",
+      "retrieval_predicate_overlap": 1,
+      "retrieval_score": 1.0,
+      "rule_id": "KR-RTA-27-2-TURN-PEDESTRIAN",
+      "slice": "PEDESTRIAN_CYCLIST_YIELD",
+      "source_claim_refs": [
+        "KR-RTA-27-2"
+      ],
+      "source_record_refs": [
+        "KR-RTA-2026-ART27"
+      ],
+      "target_id": "pedestrian-1",
+      "verdict": "REVIEW_REQUIRED",
+      "zone_id": "crosswalk-1"
+    },
+    {
+      "applicability": "UNKNOWN",
+      "binder_ref": "nonobstruction_target",
+      "binding_status": "BOUND",
+      "claim_boundary": "No unobserved crossing intent is asserted from CoC.",
+      "executable_parameters": null,
+      "reason_codes": [
+        "MISSING_REQUIRED_PREDICATE",
+        "RULE_PRECONDITION_TAG_MISSING"
+      ],
+      "required_predicate_refs": [
+        "pedestrian_crossing_state",
+        "traffic_control_state"
+      ],
+      "retrieval_backend": "GRAPH_PREDICATE_V0.1",
+      "retrieval_predicate_overlap": 1,
+      "retrieval_score": 1.0,
+      "rule_id": "KR-RTA-27-3-UNCONTROLLED-PEDESTRIAN",
+      "slice": "PEDESTRIAN_CYCLIST_YIELD",
+      "source_claim_refs": [
+        "KR-RTA-27-3"
+      ],
+      "source_record_refs": [
+        "KR-RTA-2026-ART27"
+      ],
+      "target_id": "pedestrian-1",
+      "verdict": "REVIEW_REQUIRED",
+      "zone_id": "crosswalk-1"
+    }
+  ],
+  "reason_codes": [],
+  "request_id": "synthetic_crosswalk_frontend_v0_1",
+  "retrieval_query": {
+    "catalog_as_of_date": "2026-08-10",
+    "catalog_id": "guardsynth-kr-structured-road-v0.1",
+    "catalog_version": "guardsynth-source-catalog-v0.1",
+    "coc_concepts": {
+      "action": [
+        "STOP"
+      ],
+      "cause": [
+        "CROSSING",
+        "PEDESTRIAN"
+      ],
+      "intent": [
+        "PLANNED"
+      ],
+      "uncertainty": []
+    },
+    "jurisdiction": "KR",
+    "odd_tags": [
+      "urban_or_suburban_structured_public_road"
+    ],
+    "policy_evidence_ref": "GS-COC-FRONTEND-POLICY-v0.1",
+    "retrieval_backend": "GRAPH_PREDICATE_V0.1",
+    "scene_predicates": [
+      "ego_boundary_relation",
+      "pedestrian_crossing_state",
+      "stop_boundary_geometry"
+    ],
+    "scene_tags": [
+      "MARKED_CROSSWALK",
+      "PEDESTRIAN_ACTOR",
+      "PEDESTRIAN_CROSSING"
+    ],
+    "slice": "PEDESTRIAN_CYCLIST_YIELD"
+  },
+  "status": "PROPOSED"
+}

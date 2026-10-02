@@ -1,0 +1,69 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=20mm,headheight=16pt]{geometry}
+\usepackage{fontspec,kotex,amsmath,booktabs,longtable,array,xcolor,hyperref,fancyhdr}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\setmainhangulfont{Noto Sans CJK KR}
+\setmonohangulfont{Noto Sans CJK KR}
+\definecolor{navy}{HTML}{173E59}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,pdftitle={GuardSynth: Background}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\emergencystretch}{4em}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small GuardSynth}
+\fancyhead[R]{\small Background · v0.1 · 2026-09-30}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\clubpenalty=10000\widowpenalty=10000
+\raggedbottom
+\begin{document}
+\section*{III. Background}
+
+
+This section introduces established concepts needed to understand visual action reasoning and logical specifications: vision–language models and Chain of Causation, satisfiability-based verification, controlled natural language, and low-rank adaptation.\par
+
+\phantomsection\section*{A. Vision–Language Models and Chain of Causation}\addcontentsline{toc}{section}{A. Vision–Language Models and Chain of Causation}
+
+Vision–language models (VLMs) process visual and textual information to generate descriptions or responses about a scene. Vision–language–action models (VLAs) connect such processing to action prediction. Alpamayo-R1 combines vision–language reasoning with trajectory generation for driving. \href{\detokenize{https://arxiv.org/abs/2511.00088}}{[1]}\par
+
+Chain of Causation (CoC) expresses causally connected observations, rationales, and actions relevant to a decision. Alpamayo-R1 aligns these explanations with driving behavior. \href{\detokenize{https://arxiv.org/abs/2511.00088}}{[1]} An illustrative explanation is “the leading vehicle decelerates \ensuremath{\rightarrow} the gap may shrink \ensuremath{\rightarrow} decelerate to maintain separation.” This example describes an action rationale; it is distinct from statistically identifying causal relationships from observational data.\par
+
+\phantomsection\section*{B. Logical Specifications and Satisfiability-Based Verification}\addcontentsline{toc}{section}{B. Logical Specifications and Satisfiability-Based Verification}
+
+Logical specifications express states and requirements through variables, predicates, and formulas. Propositional satisfiability (SAT) asks whether a truth assignment satisfies a formula. Satisfiability modulo theories (SMT) considers background theories such as arithmetic. \href{\detokenize{https://theory.stanford.edu/~barrett/pubs/BT18.pdf}}{[2]} Z3 is an SMT solver supporting theories including arithmetic, bit-vectors, arrays, and uninterpreted functions. \href{\detokenize{https://doi.org/10.1007/978-3-540-78800-3_24}}{[3]}\par
+
+Let \ensuremath{\Phi} combine a specification and its assumptions, and let P denote a property. Satisfiability of \ensuremath{\Phi} establishes the existence of a model satisfying the combined conditions. Property verification can be expressed by checking the counterexample formula:\par
+
+\[\Phi \land \neg P\]
+
+A satisfying model violates the property; unsatisfiability establishes that \ensuremath{\Phi} entails P. Because inconsistent assumptions entail any property vacuously, satisfiability of \ensuremath{\Phi} must also be checked. When temporal states are encoded over finitely many indexed steps, the conclusion applies to that bound and those assumptions. Its scope is determined by the facts and relationships represented in the specification. \href{\detokenize{https://theory.stanford.edu/~barrett/pubs/BT18.pdf}}{[2]}\par
+
+\phantomsection\section*{C. Controlled Natural Language}\addcontentsline{toc}{section}{C. Controlled Natural Language}
+
+Controlled natural language (CNL) deliberately restricts the vocabulary, grammar, or interpretation of a natural language. It supports precision and consistency while retaining natural-language readability. CNLs intended to improve document comprehension differ in purpose and rigor from those designed to correspond to formal representations. \href{\detokenize{https://aclanthology.org/J14-1005/}}{[4]}\par
+
+For formally oriented CNL, interpretation rules for conditions, negation scope, and logical relationships are important. Precision depends on explicit definitions of permitted expressions and their interpretation, rather than fluency alone. Describing a CNL therefore requires attention to its particular grammatical and semantic rules. \href{\detokenize{https://aclanthology.org/J14-1005/}}{[4]}\par
+
+\phantomsection\section*{D. Low-Rank Adaptation}\addcontentsline{toc}{section}{D. Low-Rank Adaptation}
+
+Low-Rank Adaptation (LoRA) fine-tunes a model by freezing pretrained weights and learning an update represented by low-rank matrices. For a pretrained weight matrix W\ensuremath{{}_0}, the adapted weight is expressed as follows. \href{\detokenize{https://arxiv.org/abs/2106.09685}}{[5]}\par
+
+\[W = W_0 + \frac{\alpha}{r}BA\]
+
+For W\ensuremath{{}_0} of size d × k, the trainable matrices A and B have sizes r × k and d × r, respectively. Here, r is the rank and \ensuremath{\alpha} controls scaling. A sufficiently small r reduces the trainable parameter count for each adapted matrix from dk to r(d + k). This decomposition adapts a pretrained model to a task without updating the full weight matrix. \href{\detokenize{https://arxiv.org/abs/2106.09685}}{[5]}\par
+
+\phantomsection\section*{References}\addcontentsline{toc}{section}{References}
+
+[1] NVIDIA et al., “Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail,” arXiv:2511.00088, 2025, revised 2026. \href{\detokenize{https://arxiv.org/abs/2511.00088}}{Source}\par
+
+[2] C. Barrett and C. Tinelli, “Satisfiability Modulo Theories,” Handbook of Model Checking, pp. 305–343, 2018. \href{\detokenize{https://theory.stanford.edu/~barrett/pubs/BT18.pdf}}{Source}\par
+
+[3] L. de Moura and N. Bjørner, “Z3: An Efficient SMT Solver,” TACAS, pp. 337–340, 2008. \href{\detokenize{https://doi.org/10.1007/978-3-540-78800-3_24}}{Source}\par
+
+[4] T. Kuhn, “A Survey and Classification of Controlled Natural Languages,” Computational Linguistics, vol. 40, no. 1, pp. 121–170, 2014. \href{\detokenize{https://aclanthology.org/J14-1005/}}{Source}\par
+
+[5] E. J. Hu et al., “LoRA: Low-Rank Adaptation of Large Language Models,” arXiv:2106.09685, 2021. \href{\detokenize{https://arxiv.org/abs/2106.09685}}{Source}\par
+\end{document}

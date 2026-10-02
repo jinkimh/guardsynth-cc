@@ -1,0 +1,30 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>담당자 확인 · 16장면 행동 검토 준비</title>
+<style>
+body{font:18px system-ui;line-height:1.6;margin:20px auto;padding:0 16px;max-width:1800px;color:#16283a}button,select,input{font:inherit;padding:8px;margin:4px}.note{background:#fff1cf;padding:14px}.viewer{position:relative;line-height:0}.viewer img{width:100%;display:block}.viewer svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}#position{width:280px}dialog{width:96vw;max-width:1900px;height:92vh}dialog div{overflow:auto;height:84vh}dialog img{max-width:none}.toolbar{display:flex;flex-wrap:wrap;align-items:center}
+</style>
+<h1>담당자 확인 · 행동 검토 16장면</h1>
+<p class="note">검토자에게 전달하기 전의 준비 화면입니다. 여기서는 행동 정답을 작성하지 않습니다.
+각 장면의 질문과 노란 영역이 적절한지 확인한 뒤, 담당자가 대화창에 승인 또는 문제가 있는 장면 ID를 알려주세요.
+이 화면을 열었다는 것만으로 승인되거나 검토가 완료되지는 않습니다.</p>
+<p><b>검토자에게 할 질문:</b> “판단 시점까지 보이는 장면을 근거로, 에고 차량이 지금 노란 영역에 진입해도 되는가?”<br>
+선택지는 <b>진입 가능 / 진입 보류 필요 / 판단 불가</b>와 그 이유입니다. 영상 속 차량의 행동을 따라 쓰는 질문이 아닙니다.</p>
+<p><b>담당자가 확인할 내용:</b> 노란 영역이 의도한 진입 영역인지, 진행 방향과 입력 영상으로 질문을 이해할 수 있는지 확인해 주세요.
+직진·회전 방향이나 영역이 잘못 지정됐으면 해당 ID를 알려주세요. 영상만으로 행동을 결정하기 어려운 장면은 추측하지 않고 ‘판단 불가’로 남길 수 있어야 합니다.</p>
+<div class="toolbar"><button id="previousScene">이전 장면</button><select id="scene" aria-label="장면 선택"></select><button id="nextScene">다음 장면</button><span id="sceneCount"></span></div>
+<div class="toolbar"><button id="previousFrame">이전 프레임</button><input id="position" type="range" min="0" step="1" aria-label="과거 프레임"><button id="nextFrame">다음 프레임</button><button id="atEvent">판단 시점</button><span id="clock"></span></div>
+<p>노란 영역은 판단 시점에 가장 가까운 마지막 과거 프레임에만 표시합니다. 다른 프레임에 추적·보간하지 않습니다.</p>
+<div class="viewer"><img id="frame" alt="원본 과거 프레임"><svg id="zone" aria-label="판단 시점의 지정 진입 영역" viewBox="0 0 1000 562.5" preserveAspectRatio="none"></svg></div>
+<button id="zoom">원본 크기 확대</button>
+<dialog id="zoomDialog"><button id="closeZoom">닫기 · 이전 화면으로</button><div><img id="zoomImage" alt="확대 원본 프레임"></div></dialog>
+<script id="packets" type="application/json">__ACTION_PACKETS__</script>
+<script>
+'use strict';
+const P=JSON.parse(document.getElementById('packets').textContent),$=id=>document.getElementById(id);
+let sceneIndex=0,frameIndex=P[0].frames.length-1;
+P.forEach((p,i)=>{const option=document.createElement('option');option.value=i;option.textContent=`${i+1} · ${p.sample_id}`;$('scene').appendChild(option)});
+function render(){const p=P[sceneIndex],f=p.frames[frameIndex];$('scene').value=sceneIndex;$('sceneCount').textContent=`${sceneIndex+1} / ${P.length} 장면 (완료 수 아님)`;$('position').max=p.frames.length-1;$('position').value=frameIndex;$('frame').src=p.images[frameIndex];$('clock').textContent=`판단 기준 ${(f.timestamp_us-p.event_timestamp_us)/1000000}초`;$('zone').replaceChildren();if(f.is_t0){const polygon=document.createElementNS('http://www.w3.org/2000/svg','polygon');polygon.setAttribute('points',p.zone_polygon.map(([x,y])=>`${x*1000},${y*562.5}`).join(' '));polygon.setAttribute('fill','rgba(255,210,0,0.15)');polygon.setAttribute('stroke','#ffd000');polygon.setAttribute('stroke-width','3');$('zone').appendChild(polygon)}}
+function scene(i){sceneIndex=Math.max(0,Math.min(P.length-1,i));frameIndex=P[sceneIndex].frames.length-1;render()}
+function frame(i){frameIndex=Math.max(0,Math.min(P[sceneIndex].frames.length-1,i));render()}
+$('scene').onchange=e=>scene(Number(e.target.value));$('previousScene').onclick=()=>scene(sceneIndex-1);$('nextScene').onclick=()=>scene(sceneIndex+1);$('previousFrame').onclick=()=>frame(frameIndex-1);$('nextFrame').onclick=()=>frame(frameIndex+1);$('position').oninput=e=>frame(Number(e.target.value));$('atEvent').onclick=()=>frame(P[sceneIndex].frames.length-1);$('zoom').onclick=()=>{$('zoomImage').src=$('frame').src;$('zoomDialog').showModal()};$('closeZoom').onclick=()=>$('zoomDialog').close();render();
+</script></html>

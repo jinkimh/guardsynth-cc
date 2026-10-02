@@ -1,0 +1,15 @@
+{
+  "audit_version": "guardsynth-m16-materialized-sensor-evidence-audit-v0.1",
+  "audited_candidate_count": 59,
+  "available_field_candidate_counts": {
+    "ego_pose_and_speed": 59,
+    "timestamps": 59
+  },
+  "claim_scope": "SENSOR_EVIDENCE_COVERAGE_NOT_SCENE_ELIGIBILITY_OR_VEHICLE_SAFETY",
+  "final_outcome_assigned_count": 0,
+  "member_complete_candidate_count": 59,
+  "newly_eligible_candidate_count": 0,
+  "outcome_status": "REVIEW_REQUIRED_SENSOR_AND_NORMATIVE_CLOSURE",
+  "source_complete_8_of_8_candidate_count": 0,
+  "temporal_closure_candidate_count": 59
+}

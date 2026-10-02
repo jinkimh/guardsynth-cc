@@ -1,0 +1,88 @@
+\documentclass[10pt,journal]{IEEEtran}
+
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{kotex}
+\usepackage{fontspec}
+\setmainhangulfont{Noto Serif CJK KR}
+\setsanshangulfont{Noto Sans CJK KR}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{xspace}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,shapes.geometric,calc}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{observed}{RGB}{40,120,90}
+\definecolor{derived}{RGB}{40,95,160}
+\definecolor{assumed}{RGB}{180,120,35}
+\definecolor{blocked}{RGB}{165,55,55}
+\definecolor{neutral}{RGB}{70,70,70}
+
+\lstset{basicstyle=\ttfamily\scriptsize,breaklines=true,frame=single,
+  columns=fullflexible,showstringspaces=false,captionpos=b,
+  abovecaptionskip=5pt,belowcaptionskip=5pt}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\newcommand{\coc}{\textsc{CoC}\xspace}
+\newcommand{\uppaal}{\textsc{UPPAAL}\xspace}
+\newcommand{\unknown}{미상\xspace}
+\newcommand{\preserve}{보존\xspace}
+\newcommand{\reset}{재시작\xspace}
+\newcommand{\dedup}{중복 제거\xspace}
+
+\renewcommand{\abstractname}{요약}
+\renewcommand{\IEEEkeywordsname}{주요어}
+\renewcommand{\figurename}{그림}
+\renewcommand{\tablename}{표}
+\renewcommand{\lstlistingname}{리스팅}
+\renewcommand{\refname}{참고문헌}
+
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.90}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.85}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\dblfloatpagefraction}{0.85}
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{6}
+\setcounter{dbltopnumber}{3}
+
+\title{추론 보강형 E2E 자율주행 데이터의 시간·출처 계약 감사: CoC-Nusc와 UPPAAL 기반 분석}
+
+\author{익명 저자}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+사후 생성된 CoC 주석은 추론 보강형 종단간(E2E) 자율주행에 행동 이유를 제공하지만, 반복 주석의 처리, 후보 기한, 응답 연결 및 장면 출처 정책이 없으면 이를 일관된 학습 시퀀스로 해석할 수 없다. 본 논문은 시점이 있는 CoC 주석과 자차 움직임 응답 증거를 출처·계보가 명시된 후보 시간 계약으로 컴파일하고, 기록된 사건열을 재생하는 \uppaal 시간 관찰자로 그 계약을 감사한다. 94개 장면의 단일 이벤트 선별에서 얻은 134개 주석 사건별 후보 계약은 $D=3$~s 분석 설정에서 125+4+5(속도 변화 기준 계약 통과 125개, 이미 만족된 계약 통과 4개, 검토 후보 5개)로 분기되었다. 282개 모델과 1,128개 질의 결과는 레이블에서 직접 설정한 위반 플래그와 기대 판정의 직렬화 회귀 시험으로 한정한다. 반복 정책과 응답 탐지기 설정의 민감도를 함께 검토하고 장면 경계 정책을 오류 차단 시험으로 검사했다. 별도 파서·탐지기를 사용한 비공식 메타데이터 미러 기반 13개 체인 산출물은 구현별 파이프라인 기본 동작 시험일 뿐 공유 계약의 정량 근거로 사용하지 않는다. 이 결과는 새로운 제어의 합성이나 물리적 안전성, CoC 충실도의 독립 증거가 아니라, 학습 전에 저장된 주석의 시간·출처 계약을 점검하는 프로토콜 감사 결과로 해석한다.
+\end{abstract}
+
+\begin{IEEEkeywords}
+자율주행, E2E 학습, 추론 보강, 모델 체킹, 시간 오토마타, UPPAAL, 데이터 출처, 시간 계약
+\end{IEEEkeywords}
+
+\input{sections/01-introduction}
+\input{sections/02-related-work}
+\input{sections/03-data}
+\input{sections/04-problem}
+\input{sections/05-method}
+\input{sections/06-experiments}
+\input{sections/07-results}
+\input{sections/08-discussion}
+\input{sections/09-threats}
+\input{sections/10-conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

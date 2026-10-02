@@ -1,0 +1,23 @@
+{
+  "arm": "SHUFFLED_GUARD",
+  "seed": 42,
+  "history": [
+    {
+      "epoch": 1,
+      "mean_loss": 0.5538370810914784,
+      "optimizer_steps": 60
+    },
+    {
+      "epoch": 2,
+      "mean_loss": 0.3240894012308369,
+      "optimizer_steps": 60
+    },
+    {
+      "epoch": 3,
+      "mean_loss": 0.24685632692029078,
+      "optimizer_steps": 60
+    }
+  ],
+  "optimizer_updates": 180,
+  "nonzero_lora_B_tensors": 112
+}

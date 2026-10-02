@@ -1,0 +1,32 @@
+{
+  "ko": {
+    "pages": 10,
+    "text_units_checked": 203,
+    "figures": 5,
+    "code_boxes": 4,
+    "source_sha256": "2d5b185dc8998dadf0508fe28b6f35bc17d7a9be9590d3d41f17577e02ca30f1",
+    "pdf_sha256": "528e7c4c7892ee7ad6f5b215b967c911242c86dd7e67e4038cf5be68e4c58e14",
+    "verbatim_renderer_matches_source": true,
+    "executed_smt_verdicts": [
+      "UNSAT",
+      "SAT"
+    ]
+  },
+  "en": {
+    "pages": 11,
+    "text_units_checked": 203,
+    "figures": 5,
+    "code_boxes": 4,
+    "source_sha256": "f3b5d5371b8ceb868fd87b6d24105baa7e1989155da7abbe3be6df9e1e402b4f",
+    "pdf_sha256": "ab2ab988f83a00258054f7f553a1a2a62b23851c5466c4cfcc849c53b44153bd",
+    "verbatim_renderer_matches_source": true,
+    "executed_smt_verdicts": [
+      "UNSAT",
+      "SAT"
+    ]
+  },
+  "lifecycle_queries_matching_expected": 15,
+  "bridge_queries_matching_expected": 100,
+  "temporal_manuscript_queries_matching_expected": 12,
+  "new_model_training_updates": 0
+}

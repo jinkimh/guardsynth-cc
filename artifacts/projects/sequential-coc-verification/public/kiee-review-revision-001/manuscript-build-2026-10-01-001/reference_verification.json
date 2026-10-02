@@ -1,0 +1,53 @@
+{
+  "checked_in": "E6 source-production turn, 2026-10-01",
+  "sources": [
+    {
+      "topic": "UPPAAL tool and joint development",
+      "url": "https://uppaal.org/",
+      "kind": "official"
+    },
+    {
+      "topic": "UPPAAL name from Uppsala/Aalborg",
+      "url": "https://www.ciss.dk/industrial-and-scientific-evergreen-from-danish-computer-scientist/",
+      "kind": "official university research centre"
+    },
+    {
+      "topic": "UPPAAL symbolic query semantics",
+      "url": "https://docs.uppaal.org/language-reference/query-semantics/symb_queries/",
+      "kind": "official documentation"
+    },
+    {
+      "topic": "Leucker and Schallhart, runtime verification, 2009",
+      "url": "https://christian.schallhart.net/publications/2009--jlap--a-brief-account-of-runtime-verification.pdf",
+      "kind": "author-hosted primary paper"
+    },
+    {
+      "topic": "Bauer et al., runtime verification for LTL/TLTL, 2011",
+      "url": "https://christian.schallhart.net/publications/2011--tosem--runtime-verification-for-ltl-and-tltl.pdf",
+      "kind": "author-hosted primary paper"
+    },
+    {
+      "topic": "DriveLM",
+      "url": "https://arxiv.org/abs/2312.14150",
+      "kind": "primary paper"
+    },
+    {
+      "topic": "DriveVLM",
+      "url": "https://arxiv.org/abs/2402.12289",
+      "kind": "primary paper"
+    },
+    {
+      "topic": "Is VLA Reasoning Faithful?",
+      "url": "https://arxiv.org/abs/2605.17268",
+      "kind": "primary paper"
+    },
+    {
+      "topic": "VLA-DriveBench",
+      "url": "https://arxiv.org/abs/2606.12706",
+      "kind": "primary paper"
+    }
+  ],
+  "journal_page_limit_confirmed": false,
+  "journal_guidance": "https://www.kiee.or.kr/board/?_0000_method=view&ncode=a008&num=355&page=1",
+  "journal_guidance_note": "Official submission-guidance PDF attachment was not retrieved; no mandatory ten-page requirement asserted."
+}

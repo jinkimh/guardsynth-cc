@@ -1,0 +1,94 @@
+\resizebox{0.78\textwidth}{!}{%
+\begin{tikzpicture}[
+  node distance=13mm and 15mm,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=13mm,
+    text width=3.25cm, font=\footnotesize},
+  source/.style={box, fill=observed!12},
+  monitor/.style={box, fill=derived!11},
+  compiler/.style={box, fill=assumed!13},
+  bus/.style={draw, rounded corners=2pt, fill=black!4, align=center,
+    minimum width=11.7cm, minimum height=11mm, font=\footnotesize},
+  flow/.style={-{Latex[length=2.3mm]}, line width=0.7pt, draw=black!75},
+  event/.style={-{Latex[length=2.3mm]}, line width=0.85pt, draw=derived!80},
+  audit/.style={-{Latex[length=2.3mm]}, line width=0.85pt, draw=assumed!85},
+  label/.style={font=\scriptsize, align=center, fill=white, inner sep=1.5pt}
+]
+
+% Sources.
+\node[source] (coc) at (0,3.4) {
+  \textbf{CoC event replay}\\
+  replay: CoC from stored data\\
+  action-tagged decision events\\
+  accepted / repeated / rejected
+};
+
+\node[source] (ego) at (7.7,3.4) {
+  \textbf{Ego-motion replay}\\
+  replay: ego motion from stored data\\
+  selected speed-change condition\\
+  calculated response evidence
+};
+
+% Researcher-selected contract semantics, kept distinct from recorded evidence.
+\node[compiler] (compiler) at (3.85,5.45) {
+  \textbf{Checking-rule builder}\\
+  selected intent, $D$, repeat, $R_a$\\
+  researcher-set checking rules
+};
+
+% Broadcast bus.
+\node[bus] (bus) at (3.85,1.45) {
+  \textbf{Fixed-order event replay}\\
+  ordered decision events + calculated ego-response evidence\\
+  requirement start, repeat, response, rejected input
+};
+
+% Monitors.
+\node[monitor] (obl) at (-1.6,-0.95) {
+  \textbf{Requirements across events}\\
+  start / retain / end\\
+  Idle $\rightarrow$ Active\\
+  Active $\rightarrow$ Responded
+};
+
+\node[monitor] (react) at (3.85,-0.95) {
+  \textbf{Response timing}\\
+  clock $reaction$\\
+  deadline $D$\\
+  repeated-event rule
+};
+
+\node[monitor] (valid) at (9.3,-0.95) {
+  \textbf{Input quality}\\
+  quality check\\
+  overwrite check
+};
+
+% Compiler selects contract semantics; sources replay the resulting evidence.
+\draw[audit] (compiler.south west) -- node[label, left] {selected\\rule} (coc.north);
+\draw[audit] (compiler.south east) -- node[label, right] {response\\condition} (ego.north);
+
+% Source to bus.
+\draw[event] (coc.south) -- node[label, left] {ordered decision\\events} (bus.north west);
+\draw[event] (ego.south) -- node[label, right] {calculated ego\\response evidence} (bus.north east);
+
+% Bus to monitors. Route from distinct bottom anchors to avoid visual crossing.
+\draw[event] ([xshift=-4.2cm]bus.south) -- node[label, left] {start\\response} (obl.north);
+\draw[event] (bus.south) -- node[label, right] {start\\repeat\\response} (react.north);
+\draw[event] ([xshift=4.2cm]bus.south) -- node[label, right] {rejected input} (valid.north);
+
+% Result box.
+\node[draw, rounded corners=2pt, fill=neutral!8, align=center,
+  minimum width=11.7cm, minimum height=10mm, font=\footnotesize] (queries)
+  at (3.85,-3.05) {
+  \textbf{Results}: rule pass / review / data source / modified case\\
+  states checked: requirement active, response seen, deadline missed,
+  repeat-clock reset, rejected-data overwrite, stopped execution
+};
+
+\draw[flow] (obl.south) -- (queries.north west);
+\draw[flow] (react.south) -- (queries.north);
+\draw[flow] (valid.south) -- (queries.north east);
+
+\end{tikzpicture}%
+}

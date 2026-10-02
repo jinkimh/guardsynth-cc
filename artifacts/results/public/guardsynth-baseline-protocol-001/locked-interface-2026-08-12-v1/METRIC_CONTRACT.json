@@ -1,0 +1,15 @@
+{
+  "abstentions_count_as_outputs": true,
+  "future_gold_source": "INDEPENDENT_EXPERT_ADJUDICATION_M16",
+  "metrics": [
+    "applicability_macro_f1",
+    "source_precision",
+    "unsupported_rate",
+    "false_deadlock_rate",
+    "expert_correction_time_s"
+  ],
+  "missing_provider_is_not_success": true,
+  "protocol_version": "guardsynth-baseline-metric-contract-v0.1",
+  "quality_scoring_enabled": false,
+  "split_or_expected_labels_read_by_adapter": false
+}

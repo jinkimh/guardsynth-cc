@@ -1,0 +1,117 @@
+\section{제안 방법}
+\label{sec:method}
+
+제안 절차는 네 단계로 구성된다. 첫째, 자료 정리 단계에서 같은 장면 식별 번호(자료 파일의 \texttt{clip\_id})를 가진 CoC를 시간순으로 놓고 각 값의 출처를 보존한다. 둘째, 규칙 변환 단계에서 문장 속 행동, 계속 지켜야 할 요구, 그 요구가 끝나는 조건과 행동 순서를 공통 형식으로 만든다. 셋째, 이전 요구를 기억하는 검사기가 사건마다 남은 요구를 갱신하고 오류 종류와 첫 위반 사건 번호를 기록한다. 넷째, 자연 자료, 합성 규칙 시험과 Python--UPPAAL 일치 결과를 서로 나누어 보고한다.
+
+자료 정리 단계에서는 문장이 맞는지 또는 차량이 위험했는지를 판단하지 않는다. 센서에서 직접 얻은 입력, 기계가 매긴 품질 점수와 자차 속도에서 계산한 반응을 구분해 저장하고, 장면과 사건 순서를 고정한다. 규칙 변환 단계에서는 ``정지한다'', ``통과할 때까지'', ``그 뒤 진행한다''처럼 여러 단계가 있는 문장을 마지막 행동 하나로 줄이지 않는다. 대신 요구 행동, 계속되는 요구, 종료 조건과 선행 행동으로 나누고, 각 항목이 원문의 어디에서 왔는지와 문장을 해석하지 못한 이유를 남긴다.
+
+검사기는 새 요구가 나오면 아직 지켜야 할 목록에 넣고, 요구가 끝났다는 명시적 증거가 참이면 목록에서 지운다. 종료 조건이 거짓이면 요구를 유지하고, 판단할 증거가 없으면 {\unknown}과 그 이유를 함께 남긴다. 마지막 단계에서는 자연 자료 판정, 합성 시험 사례 판정, Python--UPPAAL 일치, 보조 반응과 자료 출처 결과를 별도로 보고한다. 이렇게 하면 대상 수와 질문이 다른 결과가 하나의 성능 수치로 잘못 합쳐지는 것을 막을 수 있다.
+
+\begin{figure*}[t]
+\centering
+\input{figures/method-pipeline}
+\bifigcaption{자료 정리, 검사 규칙 변환, 이전 요구를 기억하는 판정과 결과 분리 절차. 자연 자료 검토와 기대 판정을 미리 확인한 합성 규칙 시험은 별도 경로로 유지한다.}{Data organization, rule construction, history-aware checking, and separate paths for natural review and controlled synthetic tests.}
+\label{fig:method-pipeline}
+\end{figure*}
+
+그림~\ref{fig:method-pipeline}의 위쪽은 공통 입력을 검사 규칙과 판정 기록으로 바꾸는 과정이고, 아래쪽은 서로 다른 평가 자료를 뜻한다. 자연 자료에 대한 사람 판정은 합성 변형을 만들거나 검사 기준을 조정하는 데 사용하지 않는다. 반대로 합성 사례의 기대 판정도 자연 자료의 정답으로 사용하지 않는다. 따라서 40쌍이 정해 둔 규칙을 모두 실행했다는 결과와 자연 오류를 얼마나 잘 찾는지는 구분된다.
+
+사건 $e_i$를 읽기 전에 아직 지켜야 하는 요구의 집합을 $A_{i-1}$이라 하면, 상태를 갱신하는 함수 $T$는 다음 요구 집합과 판정을 계산한다.
+\begin{equation}
+(A_i,V_i)=T(A_{i-1},e_i,q_i),
+\label{eq:state-transition}
+\end{equation}
+여기서 $q_i\in\{\textsc{True},\textsc{False},\textsc{Unknown}\}$는 요구 종료나 외부 객체 상태에 대한 참ㆍ거짓ㆍ미상 증거이고, $V_i$는 정상 판정 또는 일관성 오류의 종류이다. 현재 사건만 보는 검사는 매번 이전 요구를 비우지만($A_{i-1}=\emptyset$), 이전 요구를 기억하는 검사는 이를 다음 사건으로 넘긴다. 이 차이 때문에 후자는 정지 요구가 끝나기 전에 진행하는 경우와, 끝난 정지 요구를 검사 목록에서 지우지 않은 경우를 판정할 수 있다.
+
+\begin{table}[t]
+\centering
+\bitablecaption{이전 요구를 기억하는 검사가 확인하는 네 일관성 오류.}{Four consistency-error types checked while retaining prior requirements.}
+\label{tab:contradiction-semantics}
+\footnotesize
+\begin{tabularx}{\columnwidth}{L{0.44\columnwidth}Y}
+\toprule
+Consistency error & Condition that causes it \\
+\midrule
+Hold--go conflict & Proceed while a stop or yield requirement remains \\
+Requirement ended too early & End a requirement before its end condition is met \\
+Action order violation & Start the next action before the required earlier action \\
+Requirement left after its end & Keep a requirement after its end condition is met \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+같은 사건 목록은 \uppaal 검사 모델로도 변환된다. 이 모델은 사건을 하나씩 읽으면서 요구가 시작되고, 이어지고, 끝나는 과정과 위반 여부를 갱신한다. 한 사건의 상태 갱신이 끝날 때까지 다음 사건을 처리하지 않는 \uppaal{} 기능을 사용하여 사건 순서를 고정한다. 각 단계가 오류 없이 이어지는지와 오류 상태에 도달하는지를 확인하고, 처음 위반한 사건 번호를 실행 기록에 남긴다. 이 모델은 기록된 문장 순서만 검사하며 실제 차량 움직임이나 환경을 새로 만들어 시험하지 않는다.
+
+Python 검사기와 \uppaal 검사 모델은 같은 사건과 증거를 입력받는다. Python은 장면별 판정과 남아 있는 요구의 변화를 기록하고, 변환 프로그램은 같은 내용을 UPPAAL 모델 파일에 넣는다. 두 결과를 비교할 때는 최종 정상/오류 판정, 오류 종류, 첫 위반 사건과 {\unknown} 사유를 확인한다. 예를 들어 정지 요구가 끝나기 전에 진행한 사례에서는 정지 요구가 시작되어 목록에 남고, 이후 진행 사건을 읽을 때 오류로 바뀌는 순서를 확인할 수 있다. 따라서 정상/오류만 표시할 때보다 어떤 사건에서 왜 오류가 났는지 추적하기 쉽다.
+
+두 \uppaal 모델의 역할은 다르다. 중심 검사 모델은 연속 CoC의 순서와 남아 있는 요구를 확인하고, 그림~\ref{fig:uppaal-network}의 보조 모델은 \texttt{scene-0001}에서 반응 시간, 반복 사건과 자료 출처 처리를 확인한다. 표~\ref{tab:model-families}처럼 두 모델을 나누어 보고하여, 반응 시간 시험이 중심 문장 검사를 다시 검증한 결과로 오해되지 않게 한다.
+
+\begin{table}[t]
+\centering
+\bitablecaption{평가에 사용한 두 UPPAAL 검사 모델과 각 모델의 확인 대상.}{Two UPPAAL checking models and what each checks.}
+\label{tab:model-families}
+\footnotesize
+\begin{tabularx}{\columnwidth}{L{0.32\columnwidth}L{0.30\columnwidth}Y}
+\toprule
+Model & Checking components & What is checked \\
+\midrule
+Sequential CoC test cases & Requirement-memory checker & Order, error type/location, missing information \\
+\texttt{scene-0001} response model & Event replay and three checks & Start/end, deadline, repeat clock, overwrite \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+이제 보조 반응 검사를 여러 역할로 나눈 \uppaal 모델을 설명한다.
+
+\begin{figure*}[t]
+\centering
+\input{figures/uppaal-network}
+\bifigcaption{\texttt{scene-0001}의 기록 사건 재생과 요구ㆍ반응ㆍ자료 출처 검사를 역할별로 나눈 UPPAAL 모델.}{UPPAAL model separating fixed event replay from requirement, response, and data-source checks for scene-0001.}
+\label{fig:uppaal-network}
+\end{figure*}
+
+그림~\ref{fig:uppaal-network}에서 CoC 사건 재생 부분은 최초 판단, 반복 판단과 품질 기준을 통과하지 못한 사건을 시간순으로 읽고, 자차 움직임 재생 부분은 속도에서 찾은 반응을 읽는다. 세 검사 부분은 각각 요구의 시작ㆍ유지ㆍ종료, 반응 제한 시간과 반복 시계, 낮은 품질 사건이 기존 정보를 덮어쓰는지를 확인한다. 이 모델은 새 행동이나 환경을 만들지 않고, 기록된 사건을 읽었을 때 검사 상태가 의도한 순서로 바뀌는지만 확인한다.
+
+표~\ref{tab:scene1-map}은 원래 기록된 시각과 검사 모델이 읽는 사건의 관계를 보여 준다. 첫 감속 CoC에서 지켜야 할 요구가 시작되고, 두 번의 반복 CoC는 같은 요구에 연결된다. 자차 속도에서 계산한 반응이 확인되면 그 요구를 끝낸다. 마지막의 낮은 품질 사건은 앞서 받아들인 정보를 덮어쓰지 않아야 한다. 센서가 기록한 값, 기록에서 계산한 값, 연구자가 정한 값을 표에서 구분하여 각 값의 출처를 확인할 수 있게 했다.
+
+\begin{table}[t]
+\centering
+\bitablecaption{\texttt{scene-0001}의 기록값ㆍ계산값과 UPPAAL 사건의 대응 관계.}{Mapping recorded and calculated scene-0001 evidence to UPPAAL events.}
+\label{tab:scene1-map}
+\scriptsize
+\begin{tabularx}{\columnwidth}{L{0.34\columnwidth}L{0.25\columnwidth}Y}
+\toprule
+Recorded or calculated evidence & Event given to the model & Meaning \\
+\midrule
+Accepted deceleration at 2.500 s & First requirement at 0.000 s & Start the requirement \\
+Repeated deceleration at 3.500 s & Repeated requirement at 1.000 s & Record a repeated event \\
+Speed-decrease onset at 4.660 s & Response at 2.160 s & End with the calculated response \\
+Repeated deceleration at 4.800 s & Repeated requirement at 2.300 s & Record a repeat after response \\
+Low-quality CoC at 9.300 s & Rejected input at 6.800 s & Do not overwrite accepted data \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+자연 자료와 별도로 네 일관성 오류마다 정상 기준 사례 10개를 만들고, 각 기준 사례에서 한 항목만 바꾼 사례를 짝지었다. 생성 프로그램은 기준 사례에는 오류가 없고 바꾼 사례에는 미리 지정한 오류 하나만 나타나는지 확인한 뒤에만 그 쌍을 사용했다. 따라서 합성 40쌍은 정해 둔 네 규칙이 의도대로 작동하는지 확인하는 시험 사례이다. 기대 판정이 나오도록 생성 단계에서 미리 걸렀으므로, 처음 보는 자연 오류를 얼마나 잘 찾는지 평가하는 자료는 아니다.
+
+한 항목만 바꾸면 어떤 변화가 어떤 오류를 만들었는지 분명해진다. 첫째, 정지ㆍ양보 요구가 끝났다는 증거 없이 진행을 시작한다. 둘째, 종료 조건이 아직 거짓인데 요구를 끝낸다. 셋째, 꼭 먼저 해야 하는 행동보다 다음 행동을 앞세운다. 넷째, 종료 조건이 참인데도 끝난 요구를 목록에서 지우지 않는다. 두 검사에는 같은 현재 사건 정보를 주고, 현재 사건만 보는 검사에만 이전 요구를 전달하지 않았다. 따라서 판정 차이는 문장 해석이나 입력 차이가 아니라 이전 요구를 기억하는지에서 생긴다.
+
+Python과 UPPAAL 비교에는 정상 사례 하나, 네 오류 사례, 증거 부족 사례와 문장 해석 실패 사례 등 일곱 표준 시험 사례를 사용한다. 최종 판정, 오류 종류, 첫 위반 사건과 {\unknown} 사유를 비교한다. 두 구현이 같은 판정 규칙을 사용하므로, 이 비교는 규칙 자체가 옳다는 독립 증명보다 두 구현이 같은 결과와 기록을 내는지 확인하는 시험이다.
+
+\begin{table}[t]
+\centering
+\bitablecaption{Python--UPPAAL 구현 일치 확인에 사용한 표준 시험 사례.}{Standard test cases for Python--UPPAAL implementation agreement.}
+\label{tab:uppaal-fixtures}
+\footnotesize
+\begin{tabularx}{\columnwidth}{L{0.28\columnwidth}cY}
+\toprule
+Test-case group & Count & Compared output \\
+\midrule
+Consistent sequence & 1 & Consistent decision \\
+Four consistency errors & 4 & Error type and first violating event \\
+Missing evidence/text interpretation & 2 & Insufficient-information decision and reason \\
+\midrule
+Total & 7 & Final decision and decision-record items \\
+\bottomrule
+\end{tabularx}
+\end{table}

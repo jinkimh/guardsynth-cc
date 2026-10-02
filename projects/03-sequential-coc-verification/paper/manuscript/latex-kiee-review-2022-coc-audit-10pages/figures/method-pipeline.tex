@@ -1,0 +1,50 @@
+\resizebox{0.84\textwidth}{!}{%
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=11mm,
+    text width=2.55cm, font=\footnotesize},
+  small/.style={draw, rounded corners=2pt, align=center, minimum height=8mm,
+    text width=3.15cm, font=\scriptsize},
+  obs/.style={box, fill=observed!10},
+  der/.style={box, fill=derived!10},
+  ass/.style={box, fill=assumed!10},
+  regression/.style={box, fill=neutral!8},
+  route/.style={box, fill=neutral!8},
+  note/.style={small, fill=black!3},
+  flow/.style={-{Latex[length=2mm]}, thick, draw=black!80},
+  feedback/.style={-{Latex[length=1.8mm]}, dashed, thick, draw=black!55}
+]
+
+% Four-component evidence architecture.
+\node[obs] (collector) at (0,0) {Input organizer\\ordered CoC text\\times and data sources};
+\node[ass] (compiler) at (4.0,0) {Checking-rule builder\\requirement, end condition\\action order, missing data};
+\node[der] (events) at (7.4,0) {Fixed checking inputs\\shared format, XML\\checks};
+\node[der] (observer) at (11.1,0) {Checker retaining\\prior requirements\\end condition, violation};
+\node[route] (router) at (14.8,0) {Separated reports\\natural review\\auxiliary analyses};
+
+\node[ass] (mut) at (7.4,-2.0) {Synthetic test pairs\\one changed item\\expected result required};
+\node[der] (mutobserver) at (11.1,-2.0) {Current-event/prior-requirement\\checks on the same input};
+\node[regression] (regression) at (14.8,-2.0) {Predefined rules exercised\\not detection accuracy};
+\node[note] (boundary) at (0,-2.0) {No new driving scenes\\or control actions};
+
+\node[route] (select) at (11.1,-4.0) {Selected natural sample\\independent review\\discussion afterward};
+\node[note] (scope) at (7.4,-4.0)
+  {Separate recorded, calculated, researcher-set, and modified evidence.};
+
+\draw[flow] (collector) -- (compiler);
+\draw[flow] (compiler) -- (events);
+\draw[flow] (events) -- (observer);
+\draw[flow] (observer) -- (router);
+\draw[feedback] (events) -- (mut);
+\draw[flow] (mut) -- (mutobserver);
+\draw[flow] (mutobserver) -- (regression);
+\draw[flow] (router.east) -- ++(1.8,0) |- (select.east);
+\draw[flow] (select) -- (scope);
+
+% Feedback is routed outside the node area to avoid crossing boxes.
+\coordinate (feedbackleft) at ([xshift=-6mm]boundary.west);
+\draw[feedback] (select.south) -- ++(0,-0.6) coordinate (feedbackbottom)
+  -- node[midway,below=1mm,font=\scriptsize,align=center]{Reviewer feedback}
+  (feedbackbottom -| feedbackleft) -- (feedbackleft) |- (collector.west);
+
+\end{tikzpicture}%
+}

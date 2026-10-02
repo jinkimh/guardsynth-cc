@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "project_id": "guardsynth-coc",
+  "papers": [
+    {
+      "paper_id": "method-preservation",
+      "source": "main.tex",
+      "status": "INTEGRATED_AUTHOR_REVIEW_DRAFT",
+      "snapshot": "manuscript-revision-2026-09-30-001",
+      "english_layout_snapshot": "manuscript-layout-2026-09-30-001",
+      "languages": [
+        "en",
+        "ko"
+      ],
+      "evidence_runs": [
+        "temporal-experiment-closure-2026-09-29-001",
+        "multitask-contract-analysis-2026-09-30-001",
+        "expanded-diagnostics-analysis-2026-09-30-001"
+      ],
+      "prior_manuscript": "projects/01-safety-constrained-coc/paper/manuscript/latex-kiee-review-2022-revision-v01",
+      "prior_publication_metadata": "pending author confirmation",
+      "primary_comparison": "P1 and P2 versus P0; P1/P2 are our two development paths",
+      "source_sections": "IEEE_ACCESS_*_V01_EN.md and KO.md",
+      "experiments_modified": false
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GuardSynth blinded expert annotation v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "annotation_version", "assignment_id", "reviewer_pseudonym", "scene_ref_hash", "interface_mode",
+    "applicability", "guard_fields", "source_sufficiency", "lifecycle",
+    "confidence", "corrections", "started_at", "completed_at"
+  ],
+  "properties": {
+    "annotation_version": {"const": "guardsynth-expert-annotation-v0.1"},
+    "assignment_id": {"type": "string", "minLength": 1},
+    "reviewer_pseudonym": {"type": "string", "minLength": 1},
+    "scene_ref_hash": {"type": "string", "minLength": 1},
+    "interface_mode": {"enum": ["MINIMAL_CONFIRMATION", "COMPLETE_AUTHORING"]},
+    "applicability": {"enum": ["APPLICABLE", "NOT_APPLICABLE", "REVIEW_REQUIRED", "UNSUPPORTED", "CONFLICT"]},
+    "guard_fields": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["guard_type", "target_id", "zone_id", "operator", "range", "unit", "coordinate_frame"],
+      "properties": {
+        "guard_type": {"type": ["string", "null"]},
+        "target_id": {"type": ["string", "null"]},
+        "zone_id": {"type": ["string", "null"]},
+        "operator": {"type": ["string", "null"]},
+        "range": {"type": ["object", "null"]},
+        "unit": {"type": ["string", "null"]},
+        "coordinate_frame": {"type": ["string", "null"]}
+      }
+    },
+    "source_sufficiency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["verdict", "source_refs", "reason_codes"],
+      "properties": {
+        "verdict": {"enum": ["SUFFICIENT", "INSUFFICIENT", "CONFLICT"]},
+        "source_refs": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "reason_codes": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "lifecycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["activation", "maintain", "release", "reactivation", "expiry", "fallback"],
+      "properties": {
+        "activation": {"type": ["string", "null"]},
+        "maintain": {"type": ["string", "null"]},
+        "release": {"type": ["string", "null"]},
+        "reactivation": {"type": ["string", "null"]},
+        "expiry": {"type": ["string", "null"]},
+        "fallback": {"type": ["string", "null"]}
+      }
+    },
+    "confidence": {"type": "number", "minimum": 0},
+    "corrections": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "started_at": {"type": "string", "minLength": 1},
+    "completed_at": {"type": "string", "minLength": 1}
+  }
+}

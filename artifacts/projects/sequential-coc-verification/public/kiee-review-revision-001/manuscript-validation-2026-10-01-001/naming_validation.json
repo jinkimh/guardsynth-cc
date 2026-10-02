@@ -1,0 +1,21 @@
+{
+  "new_scope_status": "PASS",
+  "new_scope_violations": [],
+  "pre_existing_sparse_warning_count": 12,
+  "violations": [
+    "UNREGISTERED_ROOT_FILE:.git",
+    "GENERIC_FILE_NOT_CANONICAL:projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-10pages/Reviewer-1.pdf",
+    "DOCUMENT_NOT_CANONICAL:projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-10pages/Reviewer-2.md",
+    "DOCUMENT_NOT_CANONICAL:projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-10pages/Reviewer-3.md",
+    "CONTROLLED_DOCUMENT_ORDER_MISMATCH:projects/01-safety-constrained-coc/docs/plans:expected=01_RESEARCH_PLAN_VNN.md,02_PROJECT_MILESTONES.md,03_PROJECT_EXECUTION_TRACKER.md:actual=",
+    "CONTROLLED_DOCUMENT_ORDER_MISMATCH:projects/02-specification-alignment/docs/plans:expected=01_RESEARCH_PLAN_VNN.md,02_PROJECT_MILESTONES.md,03_PROJECT_EXECUTION_TRACKER.md:actual=",
+    "CONTROLLED_DOCUMENT_ORDER_MISMATCH:projects/04-guardsynth-coc/docs/plans:expected=01_RESEARCH_PLAN_VNN.md,02_PROJECT_MILESTONES.md,03_PROJECT_EXECUTION_TRACKER.md:actual=",
+    "CONTROLLED_DOCUMENT_ORDER_MISMATCH:projects/05-eblc-language-verification/docs/plans:expected=01_RESEARCH_PLAN_VNN.md,02_PROJECT_MILESTONES.md,03_PROJECT_EXECUTION_TRACKER.md:actual=",
+    "SURVEY_INDEX_MISSING:projects/01-safety-constrained-coc/docs/surveys/README.md",
+    "SURVEY_INDEX_MISSING:projects/02-specification-alignment/docs/surveys/README.md",
+    "SURVEY_INDEX_MISSING:projects/04-guardsynth-coc/docs/surveys/README.md",
+    "SURVEY_INDEX_MISSING:projects/05-eblc-language-verification/docs/surveys/README.md"
+  ],
+  "direct_command_result": "ModuleNotFoundError cli.project_paths; authorized original checker import with ROOT=worktree",
+  "full_repository_pass_claimed": false
+}

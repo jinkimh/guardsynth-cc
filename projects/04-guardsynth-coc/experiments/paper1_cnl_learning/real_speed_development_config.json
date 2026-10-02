@@ -1,0 +1,52 @@
+{
+  "project_id": "guardsynth-coc",
+  "status": "SCOPED_DEVELOPMENT_DATA_ADMITTED_MAIN_GATES_REMAIN",
+  "scope": "EXPOSED_CLIP_DEVELOPMENT_EXPLORATORY_NOT_MAIN",
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "model_revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "split_lock": "artifacts/projects/guardsynth-coc/restricted/guardsynth-eblc-learning-001/m18-cohort-feasibility-2026-09-29-001/exploratory_split_lock.json",
+  "admission_evidence": {
+    "immutable_run": "artifacts/projects/guardsynth-coc/restricted/guardsynth-paper1-training-readiness-001/stop-common-consequence-acceptance-2026-09-29-001"
+  },
+  "main_four_arm_gate_unchanged": true,
+  "first_pair": ["L0", "L3"],
+  "attribution_arms": ["L1", "L2"],
+  "paired_seeds": [42, 17, 123],
+  "same_base_inputs_and_action_references": true,
+  "same_approved_frame_sampling_required": true,
+  "same_initial_weights_and_optimizer_budget": true,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0002,
+  "weight_decay": 0.01,
+  "batch_size": 1,
+  "gradient_accumulation": 1,
+  "proposed_optimizer_steps_per_arm_seed": 72,
+  "lora_rank": 8,
+  "lora_alpha": 16,
+  "lora_dropout": 0.0,
+  "target_modules": "language_model attention q_proj/k_proj/v_proj/o_proj",
+  "vision_encoder_frozen": true,
+  "precision": "bfloat16",
+  "attention_implementation": "sdpa",
+  "loss_mask": "ASSISTANT_ONLY_EXCLUDE_SCOPE_LIMITED_ACTION_FIELDS",
+  "no_silent_truncation": true,
+  "test_tuning": false,
+  "inference_gold_CNL": false,
+  "inference_verifier_or_shield": false,
+  "matched_compute_claim": false,
+  "report_actual_tokens_gpu_time_and_coverage": true,
+  "arms": {
+    "L0": {"constraint_supervision": "NONE", "dataset": "artifacts/projects/guardsynth-coc/restricted/guardsynth-eblc-learning-001/speed-development-packaging-2026-09-29-003/l0_admitted_train.jsonl"},
+    "L1": {"constraint_supervision": "DIRECT_NL", "dataset": null, "provider": "run_matched_speed_providers.py", "provider_qualified_for_main": false},
+    "L2": {"constraint_supervision": "UNVERIFIED_CANDIDATE_COMMON_RENDERER", "dataset": null, "provider": "run_matched_speed_providers.py", "provider_qualified_for_main": false},
+    "L3": {"constraint_supervision": "SOURCE_BOUND_VERIFIED_CNL", "dataset": "artifacts/projects/guardsynth-coc/restricted/guardsynth-eblc-learning-001/speed-development-packaging-2026-09-29-003/l3_admitted_train.jsonl"}
+  },
+  "required_before_execution": [
+    "exact scoped speed admission receipt and source/CNL hash verification",
+    "source/CNL accepted matched training cohort",
+    "normal-progress and unnecessary-stop evaluation coverage",
+    "fixed common visual input and output protocol",
+    "independent reference metric scope accepted",
+    "idle GPU recheck"
+  ]
+}

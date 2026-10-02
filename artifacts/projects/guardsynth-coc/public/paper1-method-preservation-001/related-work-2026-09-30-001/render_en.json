@@ -1,0 +1,107 @@
+{
+  "project_id": "guardsynth-coc",
+  "status": "COMPILED_PENDING_LAYOUT_CHECK",
+  "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_RELATED_WORK_V01_EN.md",
+  "source_sha256": "a20d5554667c99362c32daa069830938f2f7e760c75b4d830faaf0848b0d7ef2",
+  "pdf": "ieee-access-related-work-v01-en.pdf",
+  "sections": [
+    "A. Reasoning-Based Autonomous Driving and CoC",
+    "B. Traffic-Rule Specification and Regulation-Aware Decisions",
+    "C. Natural Language, Formal Specifications, and CNL",
+    "D. Positioning of This Work",
+    "References"
+  ],
+  "table_count": 1,
+  "links": [
+    {
+      "label": "1",
+      "source_target": "https://arxiv.org/abs/2511.00088",
+      "pdf_target": "https://arxiv.org/abs/2511.00088"
+    },
+    {
+      "label": "2",
+      "source_target": "https://arxiv.org/abs/2312.14150",
+      "pdf_target": "https://arxiv.org/abs/2312.14150"
+    },
+    {
+      "label": "3",
+      "source_target": "https://arxiv.org/abs/2402.12289",
+      "pdf_target": "https://arxiv.org/abs/2402.12289"
+    },
+    {
+      "label": "4",
+      "source_target": "https://ojs.aaai.org/index.php/AAAI/article/view/37602",
+      "pdf_target": "https://ojs.aaai.org/index.php/AAAI/article/view/37602"
+    },
+    {
+      "label": "5",
+      "source_target": "https://arxiv.org/abs/2007.00330",
+      "pdf_target": "https://arxiv.org/abs/2007.00330"
+    },
+    {
+      "label": "6",
+      "source_target": "https://ojs.aaai.org/index.php/AAAI/article/view/41168",
+      "pdf_target": "https://ojs.aaai.org/index.php/AAAI/article/view/41168"
+    },
+    {
+      "label": "7",
+      "source_target": "https://aclanthology.org/2023.emnlp-main.985/",
+      "pdf_target": "https://aclanthology.org/2023.emnlp-main.985/"
+    },
+    {
+      "label": "8",
+      "source_target": "https://arxiv.org/abs/2303.04864",
+      "pdf_target": "https://arxiv.org/abs/2303.04864"
+    },
+    {
+      "label": "9",
+      "source_target": "https://attempto.ifi.uzh.ch/site/pubs/papers/FLAIRS0601FuchsN.pdf",
+      "pdf_target": "https://attempto.ifi.uzh.ch/site/pubs/papers/FLAIRS0601FuchsN.pdf"
+    },
+    {
+      "label": "Paper",
+      "source_target": "https://arxiv.org/abs/2511.00088",
+      "pdf_target": "https://arxiv.org/abs/2511.00088"
+    },
+    {
+      "label": "Paper",
+      "source_target": "https://arxiv.org/abs/2312.14150",
+      "pdf_target": "https://arxiv.org/abs/2312.14150"
+    },
+    {
+      "label": "Paper",
+      "source_target": "https://arxiv.org/abs/2402.12289",
+      "pdf_target": "https://arxiv.org/abs/2402.12289"
+    },
+    {
+      "label": "Paper",
+      "source_target": "https://ojs.aaai.org/index.php/AAAI/article/view/37602",
+      "pdf_target": "https://ojs.aaai.org/index.php/AAAI/article/view/37602"
+    },
+    {
+      "label": "Paper",
+      "source_target": "https://arxiv.org/abs/2007.00330",
+      "pdf_target": "https://arxiv.org/abs/2007.00330"
+    },
+    {
+      "label": "Paper",
+      "source_target": "https://ojs.aaai.org/index.php/AAAI/article/view/41168",
+      "pdf_target": "https://ojs.aaai.org/index.php/AAAI/article/view/41168"
+    },
+    {
+      "label": "Paper",
+      "source_target": "https://aclanthology.org/2023.emnlp-main.985/",
+      "pdf_target": "https://aclanthology.org/2023.emnlp-main.985/"
+    },
+    {
+      "label": "Paper",
+      "source_target": "https://arxiv.org/abs/2303.04864",
+      "pdf_target": "https://arxiv.org/abs/2303.04864"
+    },
+    {
+      "label": "Paper",
+      "source_target": "https://attempto.ifi.uzh.ch/site/pubs/papers/FLAIRS0601FuchsN.pdf",
+      "pdf_target": "https://attempto.ifi.uzh.ch/site/pubs/papers/FLAIRS0601FuchsN.pdf"
+    }
+  ]
+}

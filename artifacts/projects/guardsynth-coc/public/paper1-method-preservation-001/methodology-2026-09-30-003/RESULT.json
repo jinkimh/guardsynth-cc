@@ -1,0 +1,36 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "methodology-2026-09-30-003",
+  "status": "LAYOUT_AND_DEFINITIONS_REVISED_AND_VERIFIED",
+  "changes": [
+    "Figure 1 uses aligned input and processing rows with orthogonal edge-to-edge connectors",
+    "Figures 2, 3, and 5 use compact boxes and reduced vertical spacing",
+    "Observation, rule, and assumption definitions include examples and explicit links to Figure 1 stages",
+    "Contract and history notation uses actual mathematical typesetting, including h_t and A_C(h_t)"
+  ],
+  "pdfs": [
+    {"file": "ieee-access-methodology-v01-ko.pdf", "pages": 9},
+    {"file": "ieee-access-methodology-v01-en.pdf", "pages": 11}
+  ],
+  "checks": {
+    "body_units_compared_per_language": 207,
+    "math_subscripts_in_both_tex_outputs": true,
+    "figure_semantic_data_unchanged": true,
+    "verbatim_cnl_excerpt_matches_source": true,
+    "bridge_queries_matching_expected": 100,
+    "temporal_example_queries_matching_expected": 12,
+    "lifecycle_example_queries_matching_expected": 15,
+    "missing_character_or_overfull_warnings": 0,
+    "glyph_rendering_errors": 0,
+    "visual_review": "All pages inspected; revised figures checked at full image size and math subscripts inspected in the Korean PDF.",
+    "details": "content_checks.json"
+  },
+  "file_naming_check": {
+    "existing_violations": 5,
+    "new_task_violations": 0,
+    "note": "Unrelated legacy P003 directory, three (1) submission filenames and portal_exec.md remain unchanged."
+  },
+  "new_training_updates": 0,
+  "previous_snapshots_preserved": ["methodology-2026-09-30-001", "methodology-2026-09-30-002"],
+  "main_tex_modified": false
+}

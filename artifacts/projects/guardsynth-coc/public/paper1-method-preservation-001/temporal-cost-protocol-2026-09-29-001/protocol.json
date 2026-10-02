@@ -1,0 +1,93 @@
+{
+  "protocol_id": "temporal-expected-cost-v0.1",
+  "arms": [
+    "PRE_ADAPTER",
+    "CE_ONLY",
+    "CE_EBLC"
+  ],
+  "seeds": [
+    42,
+    17,
+    123
+  ],
+  "train_rows": 960,
+  "epochs": 1,
+  "batch_size": 2,
+  "gradient_accumulation": 8,
+  "learning_rate": 0.0002,
+  "weight_decay": 0.01,
+  "updates_per_fit": 60,
+  "coefficients": {
+    "CE_ONLY": 0,
+    "CE_EBLC": 1
+  },
+  "stop_cost": 0.25,
+  "initialization": "SAME_FINAL_EXPANSION_P2_PER_SEED_RESET_ADAMW",
+  "evaluation_splits": [
+    "canonical",
+    "paraphrase",
+    "unseen_duration"
+  ],
+  "rows_per_split": 240,
+  "clear_tenths": [
+    120,
+    130
+  ],
+  "candidate_count": 4,
+  "patterns_ms": [
+    [
+      -500,
+      500,
+      1500
+    ],
+    [
+      400,
+      600,
+      1600
+    ],
+    [
+      500,
+      1400,
+      1500
+    ]
+  ],
+  "label_rotations": 4,
+  "action_token_ids": [
+    32,
+    33,
+    34,
+    35
+  ],
+  "actual_template_causal_positions": {
+    "A": 252,
+    "B": 252,
+    "C": 252,
+    "D": 252
+  },
+  "metrics": {
+    "accuracy": "correct",
+    "guard_violation_rate": "guard_violation",
+    "hold_violation_rate": "hold_violation",
+    "deadlock_rate": "deadlock",
+    "goal_completion_rate": "goal_complete",
+    "safe_goal_completion_rate": "safe_goal_complete",
+    "coverage": "valid",
+    "contract_swap_pair_accuracy": "pair_correct",
+    "invalid_rate": "invalid"
+  },
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20260929,
+  "primary_split": "canonical",
+  "comparison": "CE_EBLC_MINUS_CE_ONLY",
+  "upper_bounds": {
+    "guard_violation_rate": -0.02,
+    "safe_goal_decline": 0.02,
+    "pair_accuracy_decline": 0.02,
+    "deadlock_rate": 0.01,
+    "invalid_rate": 0.01
+  },
+  "verdict_rule": "NOT_SUPPORTED for violation increase or preservation-limit breach first; otherwise INCONCLUSIVE_NO_HEADROOM if CE-only violation<0.02; else NOT_SUPPORTED if any mean fails; INCONCLUSIVE if any 95CI fails; otherwise SUPPORTED",
+  "checkpoint_selection": "FINAL_60_UPDATES_NO_TUNING",
+  "claim": "EXPECTED_COST_AUXILIARY_SUPERVISION_NOT_RL_OR_EXTERNAL_SHIELD",
+  "adapter_hashes": "DEFERRED_UNTIL_ALL_18_UPSTREAM_FITS_COMPLETE"
+}

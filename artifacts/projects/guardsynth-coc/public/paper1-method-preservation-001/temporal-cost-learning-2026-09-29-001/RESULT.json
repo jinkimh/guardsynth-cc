@@ -1,0 +1,1959 @@
+{
+  "status": "COMPLETE",
+  "fits": 6,
+  "optimizer_updates": 360,
+  "predictions": 6480,
+  "verdict": "INCONCLUSIVE",
+  "results": {
+    "canonical": {
+      "arms": {
+        "PRE_ADAPTER": {
+          "accuracy": {
+            "mean": 0.9902777777777777,
+            "per_seed": [
+              0.9833333333333333,
+              1.0,
+              0.9875
+            ],
+            "std_population": 0.007081971546656657,
+            "paired_cluster_95ci": [
+              0.9833333333333332,
+              0.9972222222222221
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": 0.004166666666666667,
+            "per_seed": [
+              0.004166666666666667,
+              0.0,
+              0.008333333333333333
+            ],
+            "std_population": 0.0034020690871988586,
+            "paired_cluster_95ci": [
+              0.0013888888888888887,
+              0.008333333333333335
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": 0.001388888888888889,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.004166666666666667
+            ],
+            "std_population": 0.001964185503295965,
+            "paired_cluster_95ci": [
+              0.0,
+              0.004166666666666667
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 0.9958333333333332,
+            "per_seed": [
+              0.9958333333333333,
+              1.0,
+              0.9916666666666667
+            ],
+            "std_population": 0.0034020690871988464,
+            "paired_cluster_95ci": [
+              0.9916666666666666,
+              0.9986111111111111
+            ]
+          },
+          "coverage": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": 0.9805555555555556,
+            "per_seed": [
+              0.9666666666666667,
+              1.0,
+              0.975
+            ],
+            "std_population": 0.014163943093313291,
+            "paired_cluster_95ci": [
+              0.9666666666666666,
+              0.9944444444444442
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "CE_ONLY": {
+          "accuracy": {
+            "mean": 0.9916666666666667,
+            "per_seed": [
+              1.0,
+              0.9958333333333333,
+              0.9791666666666666
+            ],
+            "std_population": 0.009001028747788714,
+            "paired_cluster_95ci": [
+              0.986111111111111,
+              0.9972222222222221
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": 0.005555555555555556,
+            "per_seed": [
+              0.0,
+              0.004166666666666667,
+              0.0125
+            ],
+            "std_population": 0.005196746370519363,
+            "paired_cluster_95ci": [
+              0.0,
+              0.012499999999999999
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": 0.004166666666666667,
+            "per_seed": [
+              0.0,
+              0.004166666666666667,
+              0.008333333333333333
+            ],
+            "std_population": 0.0034020690871988586,
+            "paired_cluster_95ci": [
+              0.0,
+              0.01111111111111111
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 0.9944444444444445,
+            "per_seed": [
+              1.0,
+              0.9958333333333333,
+              0.9875
+            ],
+            "std_population": 0.005196746370519345,
+            "paired_cluster_95ci": [
+              0.9875,
+              1.0
+            ]
+          },
+          "coverage": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": 0.9833333333333334,
+            "per_seed": [
+              1.0,
+              0.9916666666666667,
+              0.9583333333333334
+            ],
+            "std_population": 0.018002057495577376,
+            "paired_cluster_95ci": [
+              0.972222222222222,
+              0.9944444444444445
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "CE_EBLC": {
+          "accuracy": {
+            "mean": 0.9833333333333334,
+            "per_seed": [
+              0.9583333333333334,
+              1.0,
+              0.9916666666666667
+            ],
+            "std_population": 0.018002057495577376,
+            "paired_cluster_95ci": [
+              0.9694444444444444,
+              0.9944444444444445
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "coverage": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": 0.9666666666666667,
+            "per_seed": [
+              0.9166666666666666,
+              1.0,
+              0.9833333333333333
+            ],
+            "std_population": 0.03600411499115479,
+            "paired_cluster_95ci": [
+              0.9388888888888888,
+              0.9888888888888889
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "differences": {
+        "CE_EBLC-CE_ONLY": {
+          "accuracy": {
+            "mean": -0.008333333333333304,
+            "per_seed": [
+              -0.041666666666666664,
+              0.004166666666666663,
+              0.012499999999999989
+            ],
+            "paired_cluster_95ci": [
+              -0.022222222222222365,
+              0.005555555555555538
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": -0.005555555555555556,
+            "per_seed": [
+              0.0,
+              -0.004166666666666667,
+              -0.0125
+            ],
+            "paired_cluster_95ci": [
+              -0.012499999999999999,
+              0.0
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": -0.004166666666666667,
+            "per_seed": [
+              0.0,
+              -0.004166666666666667,
+              -0.008333333333333333
+            ],
+            "paired_cluster_95ci": [
+              -0.01111111111111111,
+              0.0
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 0.005555555555555536,
+            "per_seed": [
+              0.0,
+              0.004166666666666663,
+              0.012499999999999989
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.012499999999999956
+            ]
+          },
+          "coverage": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": -0.01666666666666672,
+            "per_seed": [
+              -0.08333333333333334,
+              0.008333333333333337,
+              0.025000000000000012
+            ],
+            "paired_cluster_95ci": [
+              -0.04444444444444451,
+              0.011111111111111294
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "CE_EBLC-PRE_ADAPTER": {
+          "accuracy": {
+            "mean": -0.006944444444444309,
+            "per_seed": [
+              -0.025,
+              0.0,
+              0.004166666666666663
+            ],
+            "paired_cluster_95ci": [
+              -0.02361111111111125,
+              0.005555555555555647
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": -0.004166666666666667,
+            "per_seed": [
+              -0.004166666666666667,
+              0.0,
+              -0.008333333333333333
+            ],
+            "paired_cluster_95ci": [
+              -0.008333333333333335,
+              -0.0013888888888888887
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": -0.001388888888888889,
+            "per_seed": [
+              0.0,
+              0.0,
+              -0.004166666666666667
+            ],
+            "paired_cluster_95ci": [
+              -0.004166666666666667,
+              0.0
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 0.004166666666666763,
+            "per_seed": [
+              0.004166666666666663,
+              0.0,
+              0.008333333333333326
+            ],
+            "paired_cluster_95ci": [
+              0.001388888888888884,
+              0.008333333333333415
+            ]
+          },
+          "coverage": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": -0.01388888888888895,
+            "per_seed": [
+              -0.05,
+              0.0,
+              0.008333333333333337
+            ],
+            "paired_cluster_95ci": [
+              -0.047222222222222276,
+              0.011111111111111075
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "CE_ONLY-PRE_ADAPTER": {
+          "accuracy": {
+            "mean": 0.001388888888888995,
+            "paired_cluster_95ci": [
+              -0.00694444444444442,
+              0.011111111111111072
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": 0.0013888888888888892,
+            "paired_cluster_95ci": [
+              -0.002777777777777778,
+              0.005555555555555557
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": 0.0027777777777777775,
+            "paired_cluster_95ci": [
+              0.0,
+              0.006944444444444443
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": -0.001388888888888773,
+            "paired_cluster_95ci": [
+              -0.005555555555555536,
+              0.002777777777777879
+            ]
+          },
+          "coverage": {
+            "mean": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": 0.002777777777777768,
+            "paired_cluster_95ci": [
+              -0.01388888888888895,
+              0.022222222222222365
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    "paraphrase": {
+      "arms": {
+        "PRE_ADAPTER": {
+          "accuracy": {
+            "mean": 0.9597222222222221,
+            "per_seed": [
+              0.9375,
+              0.9541666666666667,
+              0.9875
+            ],
+            "std_population": 0.02078698548207747,
+            "paired_cluster_95ci": [
+              0.9430555555555555,
+              0.976388888888889
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": 0.01944444444444444,
+            "per_seed": [
+              0.004166666666666667,
+              0.04583333333333333,
+              0.008333333333333333
+            ],
+            "std_population": 0.018737135504488946,
+            "paired_cluster_95ci": [
+              0.00972222222222222,
+              0.030555555555555558
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": 0.011111111111111112,
+            "per_seed": [
+              0.0,
+              0.025,
+              0.008333333333333333
+            ],
+            "std_population": 0.010393492741038728,
+            "paired_cluster_95ci": [
+              0.004166666666666667,
+              0.019444444444444445
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 0.9805555555555556,
+            "per_seed": [
+              0.9958333333333333,
+              0.9541666666666667,
+              0.9916666666666667
+            ],
+            "std_population": 0.018737135504488932,
+            "paired_cluster_95ci": [
+              0.9694444444444443,
+              0.9902777777777778
+            ]
+          },
+          "coverage": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": 0.9194444444444444,
+            "per_seed": [
+              0.875,
+              0.9083333333333333,
+              0.975
+            ],
+            "std_population": 0.0415739709641549,
+            "paired_cluster_95ci": [
+              0.8861111111111111,
+              0.9527777777777777
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "CE_ONLY": {
+          "accuracy": {
+            "mean": 0.9763888888888889,
+            "per_seed": [
+              0.9916666666666667,
+              0.9791666666666666,
+              0.9583333333333334
+            ],
+            "std_population": 0.01374929852307175,
+            "paired_cluster_95ci": [
+              0.9666666666666666,
+              0.986111111111111
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": 0.018055555555555557,
+            "per_seed": [
+              0.008333333333333333,
+              0.016666666666666666,
+              0.029166666666666667
+            ],
+            "std_population": 0.00856168611523469,
+            "paired_cluster_95ci": [
+              0.012499999999999999,
+              0.025
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": 0.016666666666666666,
+            "per_seed": [
+              0.008333333333333333,
+              0.016666666666666666,
+              0.025
+            ],
+            "std_population": 0.006804138174397718,
+            "paired_cluster_95ci": [
+              0.01111111111111111,
+              0.02361111111111111
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 0.9819444444444444,
+            "per_seed": [
+              0.9916666666666667,
+              0.9833333333333333,
+              0.9708333333333333
+            ],
+            "std_population": 0.008561686115234701,
+            "paired_cluster_95ci": [
+              0.975,
+              0.9875
+            ]
+          },
+          "coverage": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": 0.9527777777777778,
+            "per_seed": [
+              0.9833333333333333,
+              0.9583333333333334,
+              0.9166666666666666
+            ],
+            "std_population": 0.027498597046143512,
+            "paired_cluster_95ci": [
+              0.9333333333333332,
+              0.9722222222222221
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "CE_EBLC": {
+          "accuracy": {
+            "mean": 0.9625,
+            "per_seed": [
+              0.9583333333333334,
+              0.9958333333333333,
+              0.9333333333333333
+            ],
+            "std_population": 0.025685058345704066,
+            "paired_cluster_95ci": [
+              0.9361111111111112,
+              0.9819444444444445
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": 0.001388888888888889,
+            "per_seed": [
+              0.0,
+              0.004166666666666667,
+              0.0
+            ],
+            "std_population": 0.001964185503295965,
+            "paired_cluster_95ci": [
+              0.0,
+              0.004166666666666667
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 0.9986111111111112,
+            "per_seed": [
+              1.0,
+              0.9958333333333333,
+              1.0
+            ],
+            "std_population": 0.0019641855032959585,
+            "paired_cluster_95ci": [
+              0.9958333333333332,
+              1.0
+            ]
+          },
+          "coverage": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": 0.9249999999999999,
+            "per_seed": [
+              0.9166666666666666,
+              0.9916666666666667,
+              0.8666666666666667
+            ],
+            "std_population": 0.051370116691408146,
+            "paired_cluster_95ci": [
+              0.8722222222222223,
+              0.9638888888888889
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "differences": {
+        "CE_EBLC-CE_ONLY": {
+          "accuracy": {
+            "mean": -0.01388888888888884,
+            "per_seed": [
+              -0.03333333333333334,
+              0.016666666666666663,
+              -0.024999999999999988
+            ],
+            "paired_cluster_95ci": [
+              -0.03888888888888886,
+              0.008333333333333193
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": -0.01666666666666667,
+            "per_seed": [
+              -0.008333333333333333,
+              -0.0125,
+              -0.029166666666666664
+            ],
+            "paired_cluster_95ci": [
+              -0.023611111111111114,
+              -0.00972222222222222
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": -0.016666666666666666,
+            "per_seed": [
+              -0.008333333333333333,
+              -0.016666666666666666,
+              -0.024999999999999998
+            ],
+            "paired_cluster_95ci": [
+              -0.02361111111111111,
+              -0.01111111111111111
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 0.01666666666666683,
+            "per_seed": [
+              0.008333333333333326,
+              0.012499999999999989,
+              0.029166666666666653
+            ],
+            "paired_cluster_95ci": [
+              0.009722222222222077,
+              0.023611111111111138
+            ]
+          },
+          "coverage": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": -0.0277777777777779,
+            "per_seed": [
+              -0.06666666666666667,
+              0.03333333333333334,
+              -0.05000000000000001
+            ],
+            "paired_cluster_95ci": [
+              -0.07777777777777783,
+              0.016666666666666607
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "CE_EBLC-PRE_ADAPTER": {
+          "accuracy": {
+            "mean": 0.002777777777777879,
+            "per_seed": [
+              0.020833333333333325,
+              0.041666666666666685,
+              -0.054166666666666655
+            ],
+            "paired_cluster_95ci": [
+              -0.01805555555555538,
+              0.022222222222222365
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": -0.018055555555555554,
+            "per_seed": [
+              -0.004166666666666667,
+              -0.041666666666666664,
+              -0.008333333333333333
+            ],
+            "paired_cluster_95ci": [
+              -0.02916666666666667,
+              -0.008333333333333335
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": -0.011111111111111112,
+            "per_seed": [
+              0.0,
+              -0.024999999999999998,
+              -0.008333333333333333
+            ],
+            "paired_cluster_95ci": [
+              -0.019444444444444445,
+              -0.004166666666666667
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 0.018055555555555602,
+            "per_seed": [
+              0.004166666666666663,
+              0.041666666666666685,
+              0.008333333333333337
+            ],
+            "paired_cluster_95ci": [
+              0.008333333333333415,
+              0.029166666666666785
+            ]
+          },
+          "coverage": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": 0.005555555555555536,
+            "per_seed": [
+              0.04166666666666667,
+              0.08333333333333331,
+              -0.10833333333333335
+            ],
+            "paired_cluster_95ci": [
+              -0.03611111111111087,
+              0.0444444444444444
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "CE_ONLY-PRE_ADAPTER": {
+          "accuracy": {
+            "mean": 0.01666666666666672,
+            "paired_cluster_95ci": [
+              -1.1379786002407839e-16,
+              0.03472222222222232
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": -0.001388888888888884,
+            "paired_cluster_95ci": [
+              -0.01111111111111111,
+              0.008333333333333335
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": 0.005555555555555555,
+            "paired_cluster_95ci": [
+              0.0013888888888888892,
+              0.009722222222222224
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 0.001388888888888773,
+            "paired_cluster_95ci": [
+              -0.008333333333333196,
+              0.011111111111111294
+            ]
+          },
+          "coverage": {
+            "mean": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": 0.03333333333333344,
+            "paired_cluster_95ci": [
+              -2.7755575615627336e-18,
+              0.06944444444444431
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    "unseen_duration": {
+      "arms": {
+        "PRE_ADAPTER": {
+          "accuracy": {
+            "mean": 0.9694444444444446,
+            "per_seed": [
+              0.9541666666666667,
+              0.9958333333333333,
+              0.9583333333333334
+            ],
+            "std_population": 0.018737135504488932,
+            "paired_cluster_95ci": [
+              0.9597222222222224,
+              0.9791666666666667
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": 0.015277777777777779,
+            "per_seed": [
+              0.008333333333333333,
+              0.004166666666666667,
+              0.03333333333333333
+            ],
+            "std_population": 0.012880025688188478,
+            "paired_cluster_95ci": [
+              0.00972222222222222,
+              0.020833333333333336
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": 0.009722222222222222,
+            "per_seed": [
+              0.0,
+              0.004166666666666667,
+              0.025
+            ],
+            "std_population": 0.010936122047238627,
+            "paired_cluster_95ci": [
+              0.004166666666666667,
+              0.015277777777777779
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 0.9847222222222222,
+            "per_seed": [
+              0.9916666666666667,
+              0.9958333333333333,
+              0.9666666666666667
+            ],
+            "std_population": 0.012880025688188483,
+            "paired_cluster_95ci": [
+              0.9791666666666667,
+              0.9902777777777778
+            ]
+          },
+          "coverage": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": 0.9388888888888888,
+            "per_seed": [
+              0.9083333333333333,
+              0.9916666666666667,
+              0.9166666666666666
+            ],
+            "std_population": 0.03747427100897792,
+            "paired_cluster_95ci": [
+              0.9194444444444443,
+              0.9583333333333334
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "CE_ONLY": {
+          "accuracy": {
+            "mean": 0.9861111111111112,
+            "per_seed": [
+              0.9958333333333333,
+              0.9875,
+              0.975
+            ],
+            "std_population": 0.008561686115234708,
+            "paired_cluster_95ci": [
+              0.9791666666666666,
+              0.9944444444444442
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": 0.012500000000000002,
+            "per_seed": [
+              0.0,
+              0.0125,
+              0.025
+            ],
+            "std_population": 0.010206207261596576,
+            "paired_cluster_95ci": [
+              0.005555555555555555,
+              0.019444444444444448
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": 0.009722222222222222,
+            "per_seed": [
+              0.0,
+              0.0125,
+              0.016666666666666666
+            ],
+            "std_population": 0.007081971546656646,
+            "paired_cluster_95ci": [
+              0.0027777777777777775,
+              0.01666666666666667
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 0.9874999999999999,
+            "per_seed": [
+              1.0,
+              0.9875,
+              0.975
+            ],
+            "std_population": 0.010206207261596585,
+            "paired_cluster_95ci": [
+              0.9805555555555555,
+              0.9944444444444445
+            ]
+          },
+          "coverage": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": 0.9722222222222223,
+            "per_seed": [
+              0.9916666666666667,
+              0.975,
+              0.95
+            ],
+            "std_population": 0.01712337223046941,
+            "paired_cluster_95ci": [
+              0.9583333333333333,
+              0.9888888888888887
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "CE_EBLC": {
+          "accuracy": {
+            "mean": 0.9888888888888889,
+            "per_seed": [
+              0.9833333333333333,
+              1.0,
+              0.9833333333333333
+            ],
+            "std_population": 0.007856742013183886,
+            "paired_cluster_95ci": [
+              0.9777777777777779,
+              0.9972916666666662
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": 0.001388888888888889,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.004166666666666667
+            ],
+            "std_population": 0.001964185503295965,
+            "paired_cluster_95ci": [
+              0.0,
+              0.004166666666666667
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 0.9986111111111112,
+            "per_seed": [
+              1.0,
+              1.0,
+              0.9958333333333333
+            ],
+            "std_population": 0.0019641855032959585,
+            "paired_cluster_95ci": [
+              0.9958333333333332,
+              1.0
+            ]
+          },
+          "coverage": {
+            "mean": 1.0,
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": 0.9777777777777779,
+            "per_seed": [
+              0.9666666666666667,
+              1.0,
+              0.9666666666666667
+            ],
+            "std_population": 0.01571348402636772,
+            "paired_cluster_95ci": [
+              0.9555555555555554,
+              0.9945833333333326
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "std_population": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "differences": {
+        "CE_EBLC-CE_ONLY": {
+          "accuracy": {
+            "mean": 0.002777777777777768,
+            "per_seed": [
+              -0.0125,
+              0.012499999999999989,
+              0.008333333333333326
+            ],
+            "paired_cluster_95ci": [
+              -0.009722222222222188,
+              0.01388888888888895
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": -0.011111111111111113,
+            "per_seed": [
+              0.0,
+              -0.0125,
+              -0.020833333333333332
+            ],
+            "paired_cluster_95ci": [
+              -0.018055555555555554,
+              -0.005555555555555555
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": -0.009722222222222222,
+            "per_seed": [
+              0.0,
+              -0.0125,
+              -0.016666666666666666
+            ],
+            "paired_cluster_95ci": [
+              -0.01666666666666667,
+              -0.0027777777777777775
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 0.011111111111111294,
+            "per_seed": [
+              0.0,
+              0.012499999999999989,
+              0.020833333333333325
+            ],
+            "paired_cluster_95ci": [
+              0.005555555555555422,
+              0.01805555555555538
+            ]
+          },
+          "coverage": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": 0.005555555555555536,
+            "per_seed": [
+              -0.025,
+              0.025000000000000012,
+              0.016666666666666673
+            ],
+            "paired_cluster_95ci": [
+              -0.019444444444444597,
+              0.0277777777777779
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "CE_EBLC-PRE_ADAPTER": {
+          "accuracy": {
+            "mean": 0.019444444444444375,
+            "per_seed": [
+              0.029166666666666653,
+              0.004166666666666663,
+              0.024999999999999977
+            ],
+            "paired_cluster_95ci": [
+              0.012499999999999956,
+              0.026388888888888573
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": -0.01388888888888889,
+            "per_seed": [
+              -0.008333333333333333,
+              -0.004166666666666667,
+              -0.029166666666666664
+            ],
+            "paired_cluster_95ci": [
+              -0.020833333333333332,
+              -0.006944444444444446
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": -0.009722222222222222,
+            "per_seed": [
+              0.0,
+              -0.004166666666666667,
+              -0.024999999999999998
+            ],
+            "paired_cluster_95ci": [
+              -0.015277777777777779,
+              -0.004166666666666667
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 0.013888888888889062,
+            "per_seed": [
+              0.008333333333333326,
+              0.004166666666666663,
+              0.02916666666666664
+            ],
+            "paired_cluster_95ci": [
+              0.00694444444444442,
+              0.02083333333333326
+            ]
+          },
+          "coverage": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": 0.038888888888889084,
+            "per_seed": [
+              0.05833333333333335,
+              0.008333333333333337,
+              0.050000000000000024
+            ],
+            "paired_cluster_95ci": [
+              0.02499999999999991,
+              0.05277777777777759
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "CE_ONLY-PRE_ADAPTER": {
+          "accuracy": {
+            "mean": 0.016666666666666607,
+            "paired_cluster_95ci": [
+              0.006944444444444639,
+              0.02777777777777768
+            ]
+          },
+          "guard_violation_rate": {
+            "mean": -0.0027777777777777766,
+            "paired_cluster_95ci": [
+              -0.011111111111111108,
+              0.004166666666666669
+            ]
+          },
+          "hold_violation_rate": {
+            "mean": 0.0,
+            "paired_cluster_95ci": [
+              -0.004166666666666666,
+              0.004166666666666666
+            ]
+          },
+          "deadlock_rate": {
+            "mean": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "goal_completion_rate": {
+            "mean": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "mean": 0.002777777777777768,
+            "paired_cluster_95ci": [
+              -0.004166666666666763,
+              0.01111111111111096
+            ]
+          },
+          "coverage": {
+            "mean": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "mean": 0.03333333333333355,
+            "paired_cluster_95ci": [
+              0.01388888888888895,
+              0.05555555555555547
+            ]
+          },
+          "invalid_rate": {
+            "mean": 0.0,
+            "paired_cluster_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    }
+  },
+  "uncertainty": "Paired clear-time clusters; three fixed paired seeds, not independent clips.",
+  "point_criteria_pass": false,
+  "all_interval_bounds_pass": false,
+  "regression_metrics": [],
+  "reason": "NO_HEADROOM_FOR_REQUIRED_0.02_DECREASE",
+  "claim": "AUXILIARY_EXPECTED_COST_NOT_RL; synthetic supplied world only"
+}

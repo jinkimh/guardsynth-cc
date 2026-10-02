@@ -1,0 +1,54 @@
+{
+  "project_id": "sequential-coc-verification",
+  "status": "FOLLOW_UP_DOCUMENTS_COMPLETE",
+  "previous_e6_complete_retained": true,
+  "document_validation": "PASS",
+  "outputs": {
+    "main": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/main.pdf",
+      "pages": 11,
+      "sha256": "dec6622b4718c9f96dc1b9eceb437856a7e7f8919c59e664915611b8ef7d74ae"
+    },
+    "main-clean": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/main-clean.pdf",
+      "pages": 11,
+      "sha256": "3fef0f47767af1e3b9f12bc2d7860f7db4c2699e59bf57b1237e4915f5562c7d"
+    },
+    "response-to-reviewer-1": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/response-to-reviewer-1.pdf",
+      "pages": 10,
+      "sha256": "75a26d25e06a97a7cae8ba640306fea6587f431ac2888df215dfab92ef059269"
+    },
+    "response-to-reviewer-2": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/response-to-reviewer-2.pdf",
+      "pages": 9,
+      "sha256": "5badaf87842849e4d6170caea7bbfb0289f286e6e5d2d9d40dff935392f27e03"
+    },
+    "response-to-reviewer-3": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/response-to-reviewer-3.pdf",
+      "pages": 13,
+      "sha256": "450e21f4e074b5ce5dd475fe81cb3c34945ec485ce38ea3adc6f6a2a0ab96972"
+    }
+  },
+  "reviewer_items": {
+    "r1": 9,
+    "r2": 8,
+    "r3": 11
+  },
+  "main_table_14_page": 10,
+  "main_table_14_summary": {
+    "ALIGNED": 2,
+    "NOT_ALIGNED": 7,
+    "UNKNOWN": 18
+  },
+  "r3_11_detail_page": 13,
+  "detail_rows_unchanged": 27,
+  "marked_clean_identical_text": true,
+  "new_scope_naming_violations": 0,
+  "pre_existing_sparse_naming_warnings": 12,
+  "preserved_artifact_files": 1834,
+  "experiments_rerun": false,
+  "independent_evaluation_claimed": false,
+  "human_re_evaluation_claimed": false,
+  "external_actions": []
+}

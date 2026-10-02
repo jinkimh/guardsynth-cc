@@ -1,0 +1,660 @@
+\documentclass[10pt,a4paper,twocolumn]{article}\usepackage[margin=18mm]{geometry}\usepackage{fontspec,kotex}
+\usepackage{amsmath,amssymb,booktabs,array,xcolor,graphicx,hyperref}
+\setlength{\emergencystretch}{3em}\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}\hypersetup{hidelinks}\raggedbottom
+\setcounter{dbltopnumber}{2}
+
+\setmainfont{DejaVu Serif}\setmonofont{DejaVu Sans Mono}
+\setmainhangulfont{Noto Sans CJK KR}\setmonohangulfont{Noto Sans CJK KR}
+\renewcommand{\figurename}{그림}\renewcommand{\tablename}{표}
+\renewcommand{\thesection}{\Roman{section}}\renewcommand{\thesubsection}{\Alph{subsection}}
+\title{GuardSynth: CoC 기반 VLM 학습 보강을 위한 행동 제약의 정형 명세와 검증}\author{저자 검토용 원고}\date{}
+\begin{document}\twocolumn[\maketitle\begin{minipage}{\textwidth}\small\textbf{초록}\quad Alpamayo와 같은 추론 기반 자율주행 모델은 Chain of Causation(CoC)을 통해 장면 이해와 행동 예측을 연결한다. 그러나 상황과 행동의 이유를 설명하는 CoC 기반 학습만으로는 올바른 행동 선택과 제약 준수를 충분히 학습하는 데 한계가 있다. 본 논문은 CoC를 보강할 행동 제약을 체계적으로 개발하는 GuardSynth를 제안한다. CoC 문맥에서 제약 후보를 식별하고 관측·공급 규칙·가정을 명세 필드에 연결하며, 적용 조건, 금지 행동, 유지·해제, 시간 및 근거를 Evidence-Bound Lifecycle Contracts(EBLC)로 표현한다. 제한된 논리 검증 후 통제 자연어(Controlled Natural Language, CNL)를 생성하여 원래 CoC에 삽입한다. 여섯 합성 행동 선택 과제에서 Qwen3-VL-2B-Instruct를 과제군 내 동일한 LoRA 예산과 세 시드로 평가하였다. 우리의 기존 자연어 제약 경로와 EBLC 기반 CNL 경로 모두 CoC 단독보다 높은 기본 정확도와 낮은 위반율을 보였다. 시간 과제의 평균 정확도는 각각 49.86\%, 96.81\%, 98.06\%, 위반율은 19.17\%, 1.39\%, 0.83\%였다. 제약은 학습과 평가 모두에 제공하였다. 별도의 명세 품질 검사에서는 주입 오류 168건 중 144건을 탐지하였으며 근거와 명세의 공유 오류는 남았다. 결과는 명시적 제약의 행동 효과와 추적 가능한 명세·검증·언어 생성 과정을 연결한다.\par\medskip\textbf{주요어}\quad 행동 제약, CoC, EBLC, CNL, 정형 검증, VLM.\end{minipage}\vspace{1em}]
+
+\section{서론}
+
+자율주행의 행동 판단에는 장면에 존재하는 객체를 인식하는 것과 함께, 객체의 관계와 상황의 변화를 고려하여 적절한 행동을 선택하는 과정이 필요하다. NVIDIA의 Alpamayo-R1은 이러한 판단을 위해 Chain of Causation(CoC) 추론과 주행 궤적 예측을 결합하는 시각·언어·행동 모델(VLA)을 제시하였다. 인과적으로 연결된 설명을 운전 행동에 대응시키고, 지도 미세조정과 강화학습을 통해 추론 품질과 추론--행동 간 일관성을 높이는 접근이다. 이는 운전 행동뿐 아니라 그 행동에 이르는 판단 과정도 학습에 활용하는 방향을 보여준다. \cite{r1}\par
+
+관련 연구에서도 시각 정보와 언어적 추론을 연결하는 다양한 방법이 제안되었다. DriveLM은 지각·예측·계획에 관한 질문과 답변을 그래프로 연결하여 운전 상황의 다단계 추론을 구성하였다. DriveVLM은 장면 설명, 장면 분석, 계층적 계획을 결합하여 복잡한 운전 상황을 처리하였다. 이들 연구는 장면 해석을 행동 판단과 계획에 활용하는 기반을 제공한다. 본 연구는 이 흐름에서 학습 데이터에 제공하는 행동 제약의 표현과 검증에 초점을 둔다. \cite{r2}, \cite{r3}\par
+
+그러나 상황과 행동의 이유를 설명하는 CoC 기반 학습만으로는 올바른 행동 선택과 제약 준수를 충분히 학습하는 데 한계가 있다. 행동의 이유를 설명하는 정보와 행동의 허용 범위를 규정하는 정보는 역할이 다르기 때문이다. 예를 들어 “보행자에게 양보하기 위해 감속한다”는 설명은 행동의 이유를 전달하지만, “횡단 영역이 점유된 동안에는 진입하지 않는다”는 제약은 선택 가능한 행동을 제한한다. 영역이 비워진 뒤 요구되는 대기 시간이 달라지면, 같은 장면에서도 허용되는 진입 시점이 달라질 수 있다. 본 연구에서 다루는 문제는 이러한 상황 의존적 제약을 설명 중심의 학습 데이터에 명시적으로 결합하여 행동 선택을 보강하는 것이다.\par
+
+선행 원고 「Guard-Aware Trajectory Candidate Selection for Vision-Language Autonomous Driving: Safety-Constrained Chain-of-Causation」은 자연어 실행 가드, 활성화·해제 등의 구성 요소, 정적·시간·기동 과제의 계약쌍 평가를 제안하였다. 본 논문은 제약 강화라는 아이디어를 다시 제안하는 대신, 그 제약을 개발하는 방법을 확장한다. 즉 제약의 출처를 식별하고, 타입과 의미가 정해진 필드에 연결하며, 제한된 논리 표현을 검사하고, CNL을 생성하여 CoC에 삽입하는 과정을 다룬다. 기존 과제군과 모델 외부 후보 판정 원리는 재사용하되 P0/P1/P2를 새로 학습·평가한 결과를 보고하며, 이전 성능 수치를 이번 실험 결과로 대체하지 않는다. \cite{r4}\par
+
+이를 위해 세 가지 질문에 답해야 한다. 첫째, CoC를 보강하는 행동 제약의 범위와 구성 요소는 무엇인가? 둘째, 제약이 표현하는 조건과 행동 제한의 일관성을 어떤 논리 모델에서 확인할 것인가? 셋째, 확인한 명세를 학습에 사용할 자연어로 어떻게 전달할 것인가? 자유로운 자연어 표현은 사람이 이해하기에 유용하지만, 자동 검증에 필요한 의미와 가정을 명시하려면 별도의 구조가 필요하다. 따라서 본 연구는 행동 제약의 명시성·추적성·논리적 일관성과 자연어 학습 입력의 연결을 함께 다루는 체계를 제안한다.\par
+
+제안하는 GuardSynth는 행동 제약의 범위·특성·구성 요소를 정의하고, 주체와 대상, 적용 조건, 금지 행동, 유지·해제 조건, 시간 및 근거를 Evidence-Bound Lifecycle Contracts(EBLC)로 명세한다. 선택한 프로파일을 Core/SMT 표현으로 변환하여 제한된 모델에서 일관성과 지정 속성을 검증하고, 명세 필드에 대응하는 통제 자연어(Controlled Natural Language, CNL)를 생성하여 CoC에 결합한다. 정형 명세는 자연어를 대체하는 최종 학습 입력이 아니라, 학습에 제공할 제약을 구조화하고 그 의미를 확인하기 위한 중간 표현으로 사용한다. 명세 검증과 제약 보강의 행동 효과는 각각 논리적 근거와 경험적 근거로 구분하여 평가한다.\par
+
+Qwen3-VL-2B-Instruct를 각 과제군 내 동일한 LoRA 예산과 세 최적화 시드로 학습하여 최고속도, 최소거리, 최소 진입시간, 해소 후 시간 대기, 정지, 차선 변경의 여섯 과제를 평가한다. P0는 CoC 단독, P1은 우리의 기존 자연어 제약 추가, P2는 EBLC 기반 CNL 추가이며, P1·P2에는 학습과 평가 모두 제약을 제공한다. 두 제약 강화 경로 모두 기본 정확도·위반율에서 P0보다 나은 결과를 보였다. 시간 과제의 평균 정확도는 각각 49.86\%, 96.81\%, 98.06\%, 위반율은 19.17\%, 1.39\%, 0.83\%였다. 별도의 명세 품질 검사에서는 지원 오류와 경계 판정을 확인하여, 제약 제공의 행동 효과와 정형 개발 경로의 검사 가능성을 구분한다.\par
+
+본 논문의 기여는 다음 세 가지이다.\par
+
+\begin{enumerate}
+\item CoC 문맥·장면 근거·공급 규칙에서 어떤 행동 제약을 선택할지 정하고, 관측·규칙·가정을 구분하여 명세 필드에 연결하는 절차.
+\item 프로파일 의미론, 제한된 논리 검증, 필드별 CNL 생성 및 모델 입력의 삽입 위치를 명시한 EBLC 기반 제약 개발 경로.
+\item 여섯 행동 과제를 실제 필드·논리식·생성 문장·독립 후보 판정으로 연결한 비교 실험과 명세 품질 검사.
+\end{enumerate}
+
+이후 II장에서는 관련 연구를, III장에서는 CoC·VLM, 논리 검증, CNL 및 LoRA의 배경 개념을 설명한다. IV장에서는 제안하는 행동 제약 모델과 GuardSynth의 명세·검증·CNL 생성 방법을 제시한다. V장과 VI장에서는 실험 설정과 결과를 제시하고, VII장과 VIII장에서는 결과의 의미와 적용 범위를 논의한 뒤 결론을 정리한다.\par
+\section{관련 연구}
+
+\subsection{추론 기반 자율주행과 CoC}
+
+시각 정보를 언어적 추론 및 행동으로 연결하는 연구는 자율주행 학습의 중요한 방향이다. Alpamayo-R1은 Chain of Causation(CoC) 추론과 궤적 예측을 결합하고, 지도 미세조정과 강화학습을 통해 추론과 행동의 정합성을 높인다. DriveLM은 인지·예측·계획에 관한 질의응답의 관계를 그래프로 구성하며, DriveVLM은 장면 기술, 장면 분석, 계층적 계획을 연결한다. 이들 연구는 관찰에서 판단에 이르는 과정을 학습 가능한 표현으로 제공한다. \cite{r1}, \cite{r2}, \cite{r3}\par
+
+설명이 행동 선택에 유용하려면 두 결과의 정합성도 중요하다. Drive-R1은 추론과 계획의 불일치 및 과거 정보에 의존하는 지름길 학습을 다루며, 지도 미세조정 이후 궤적과 메타 행동에 관한 보상을 사용한다. 이러한 접근과 상보적으로, 본 연구는 학습 데이터에 제공되는 행동 제약의 표현에 주목한다. 행동의 이유를 설명하는 CoC와, 해당 상황에서 허용되는 행동을 제한하는 제약을 구분하고 두 정보를 결합한다. 이 구분은 기존 추론 모델의 전반적인 성능 부족을 전제하기보다, 설명과 함께 명시적으로 제공할 규범적 정보를 정의하기 위한 것이다. \cite{r5}\par
+
+\subsection{교통 규칙의 명세와 규정 기반 판단}
+
+교통 규칙을 기계가 처리할 수 있는 표현으로 만드는 연구는 행동 제약의 정형화에 직접적인 기반을 제공한다. Esterle 등은 교통 규칙을 선형 시간 논리(LTL)로 표현하고, 주행 데이터에 대한 규칙 준수 평가에 활용하였다. 이는 규칙의 적용 조건과 시간적 관계를 명시적인 의미론으로 다루는 접근이다. 본 연구도 이러한 원리를 따르되, CoC를 보강하는 제약의 대상·적용·유지·해제 및 근거 연결을 EBLC의 요소로 구조화한다. \cite{r6}\par
+
+규정과 장면을 연결하는 또 다른 방향은 검색 증강 추론이다. DriveReg은 상황에 관련된 교통 규정을 검색하고, 이를 언어 모델의 판단에 연결하여 규정 준수와 해석 가능한 의사결정을 지원한다. 이 연구는 장면에 적합한 규정을 찾아 활용하는 과정을 중심에 둔다. 이에 비해 GuardSynth는 선정된 행동 제약을 명시적인 중간 표현으로 작성하고, 제한된 논리 검증을 거쳐 학습용 자연어로 전달하는 과정에 초점을 둔다. 규정 검색과 제약 명세는 서로 대체하는 기능이 아니라, 근거 확보와 제약 표현이라는 상보적인 역할을 갖는다. \cite{r7}\par
+
+\subsection{자연어--정형 명세 변환과 제어 자연어}
+
+자연어 요구사항을 정형 명세로 변환하는 연구는 사람이 이해하는 표현과 기계가 검증하는 표현을 연결한다. NL2TL은 원자 명제를 추상화한 표현과 언어 모델을 이용하여 자연어를 시간 논리로 변환하고, 영역별 명제 인식과 변환 구조를 분리한다. nl2spec은 자연어 구절과 논리식의 부분 구조를 대응시키고, 사용자가 그 대응을 수정하여 모호성을 해소하도록 지원한다. 전자는 변환 모델의 학습과 영역 적응을, 후자는 대화형 명세 작성과 사용자 수정을 강조한다. \cite{r8}, \cite{r9}\par
+
+명세를 사람이 읽을 수 있는 언어로 제공하는 방향에서는 제어 자연어(Controlled Natural Language, CNL)가 중요하다. Attempto Controlled English(ACE)는 문법과 해석 규칙을 제한하여 자연어 형태의 문장과 정형 표현을 연결한다. GuardSynth의 CNL은 ACE를 구현한 언어가 아니라, 선택한 EBLC 프로파일의 필드와 조항을 제한된 문장 패턴에 대응시키는 표현이다. 본 연구는 자유로운 자연어 전체의 의미 동등성보다, 정의된 제약 요소와 생성 문장 사이의 추적 가능한 대응을 다룬다. 따라서 논리 검증, 문장 대응 확인, 장면 근거의 타당성 판단은 구별되는 검토 대상이다. \cite{r10}\par
+
+\subsection{본 연구의 위치}
+
+선행 Safety-Constrained CoC 원고는 자연어 실행 가드와 정적·시간·기동 과제의 계약쌍 평가를 이미 제안하였다. GuardSynth는 그 학습 인터페이스를 유지하면서 제약을 만드는 출처--명세--CNL 경로를 체계화한다. 이번 P1은 기존 접근의 구현이고 P2는 그 개발을 정형적으로 지원하는 경로이다. 재사용한 과제 생성기·판정 원리와 새로 수행한 실험은 구분한다. \cite{r4}\par
+
+위 연구들은 주행 추론의 학습, 교통 규칙의 정형화, 언어와 논리의 연결이라는 기반을 제공한다. GuardSynth는 이들을 바탕으로 CoC 행동 제약의 범위·특성·구성 요소를 정의하고, EBLC 명세와 제한된 논리 검증, CNL 생성, CoC 학습 데이터 보강을 연결한다. 핵심은 새로운 주행 모델이나 범용 번역기를 제안하는 것보다, 학습에 제공할 제약을 일관된 표현과 검증 절차로 구성하는 데 있다. 표 1은 각 연구의 중심 목적을 비교한 것으로, 구현 기능의 전수 조사나 성능 순위표가 아니다.\par
+
+
+\begin{table*}[tp]\caption{관련연구의 중심 목적 및 GuardSynth와의 관계.}
+\centering\fontsize{8}{10}\selectfont\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.24\textwidth-4.32pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.25\textwidth-4.5pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.25\textwidth-4.5pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.26\textwidth-4.68pt\relax}@{}}
+\toprule
+\textbf{연구} & \textbf{중심 목적} & \textbf{주요 표현·접근} & \textbf{본 연구와의 연결점}\\
+\midrule
+Alpamayo-R1; Drive-R1 \cite{r1,r5} & 추론과 주행 행동의 정합성 & CoC/CoT, 지도 학습 및 강화학습 & 행동 선택에 유용한 학습 정보\\[3pt]
+DriveLM; DriveVLM \cite{r2,r3} & 장면에서 계획으로 이어지는 추론 & 그래프 질의응답, 계층적 계획 & 상황·행동 설명의 구성\\[3pt]
+Esterle 등 \cite{r6} & 기계 해석 가능한 교통 규칙 & LTL 규칙 명세 & 조건과 시간 관계의 명시적 의미론\\[3pt]
+DriveReg \cite{r7} & 규정에 근거한 주행 판단 & 규정 검색과 언어 모델 추론 & 적용할 규정·근거의 연결\\[3pt]
+NL2TL; nl2spec \cite{r8,r9} & 자연어 요구사항의 정형화 & 시간 논리 변환, 대화형 수정 & 자연어와 명세 요소의 대응\\[3pt]
+ACE \cite{r10} & 명확하게 해석 가능한 언어 & 제한된 문법과 정형 해석 & 제어된 자연어 표현의 원리\\[3pt]
+GuardSynth & CoC 행동 제약의 구조화와 학습 활용 & EBLC \ensuremath{\rightarrow} 논리 검증 \ensuremath{\rightarrow} CNL \ensuremath{\rightarrow} CoC 보강 & 제약 모델·검증·학습 입력의 연결\\[3pt]
+\bottomrule\end{tabular}
+\end{table*}
+
+이 방법의 학습 활용은 동일한 모델과 학습 예산에서 CoC만 제공하는 P0와 제약을 함께 제공하는 P1·P2를 비교하여 평가한다. P1은 우리의 기존 자연어 제약 방식이며, P2는 EBLC에서 생성한 CNL 방식이다. 따라서 P0 대비 P1·P2가 주 비교이고, P1--P2는 제안 계열 내 표현 방식의 비교이다. 이 실험은 제약을 제공하는 효과를 평가하며, 그 차이를 논리 검증만의 인과적 효과로 해석하지 않는다. 본 논문의 범위는 제약의 명세·검증·CNL 생성과 학습 활용이며, EBLC 기반 테스트 생성이나 런타임 감시는 후속 활용에 해당한다.\par
+\section{배경}
+
+본 절에서는 시각적 행동 추론과 논리 명세를 이해하는 데 필요한 기존 개념을 정리한다. 시각언어모델과 Chain of Causation, 만족 가능성 기반 검증, 통제 자연어, 저랭크 적응 학습을 차례로 설명한다.\par
+
+\subsection{시각언어모델과 Chain of Causation}
+
+시각언어모델(Vision--Language Model, VLM)은 시각 정보와 텍스트를 함께 처리하여 장면에 관한 설명이나 응답을 생성한다. 시각·언어·행동 모델(Vision--Language--Action Model, VLA)은 이러한 처리를 행동 예측과 연결한다. Alpamayo-R1은 시각언어 기반 추론과 궤적 생성을 결합한 주행 모델이다. \cite{r1}\par
+
+이때 시각 입력, 언어적 설명, 행동 출력은 구분할 필요가 있다. 시각 입력은 판단에 사용할 관측을 제공하고, 설명은 관측과 판단의 관계를 표현하며, 행동 출력은 선택한 행동을 나타낸다. 예를 들어 도로 영상에 대한 “무엇이 보이는가?”라는 응답과 “다음에 어떤 행동을 선택할 것인가?”라는 응답은 서로 다른 학습 대상이다. 후자의 출력도 ‘감속’과 같은 언어적 행동 범주일 수 있으며, 실제 궤적이나 조향·가속 명령과 동일한 표현은 아니다. 따라서 행동 예측을 설명할 때는 어떤 입력이 주어지고 어떤 형태의 출력을 학습하는지 명시해야 한다.\par
+
+Chain of Causation(CoC)은 행동 결정과 관련된 관찰, 판단 근거 및 행동을 인과적으로 연결하여 표현한다. Alpamayo-R1에서는 이러한 설명을 주행 행동에 대응시킨다. \cite{r1} 설명 구조를 예시하면 “전방 차량이 감속한다 \ensuremath{\rightarrow} 차량 간 간격이 줄어들 수 있다 \ensuremath{\rightarrow} 간격 확보를 위해 감속한다”와 같다. 이 예시는 행동의 이유를 서술하는 방식이며, 관찰 자료로부터 인과관계를 통계적으로 식별했다는 의미와는 구분된다.\par
+
+이 예시의 첫 부분은 관찰, 두 번째는 예상되는 영향, 마지막은 행동의 이유에 해당한다. 여기서 화살표는 설명의 흐름을 나타내며, 논리적 함의와 동일한 엄밀성을 부여한 기호가 아니다. 자연어 설명의 학습은 이러한 관계를 표현하도록 모델을 조정하는 과정이다. 설명에 등장한 모든 사실이 관측으로 확인되었는지와 설명을 사용한 모델이 적절한 행동을 선택하는지는 별도로 구분할 문제이다.\par
+
+\subsection{논리 명세와 만족 가능성 기반 검증}
+
+SAT는 명제 논리식의 만족 가능성을 판단하며, SMT는 산술 등의 배경 이론을 함께 고려한다. \cite{r11} Z3는 이러한 SMT 질의를 처리하는 솔버이다. \cite{r12}\par
+
+\subsubsection{만족 가능성과 반례}
+
+명세와 가정을 결합한 식을 \ensuremath{\Phi}, 확인하려는 속성을 P라고 하자. \ensuremath{\Phi}의 만족 가능성은 조건을 동시에 만족하는 모델의 존재를 뜻한다. 속성 검증은 반례를 나타내는 다음 식의 만족 가능성을 확인하는 방식으로 표현할 수 있다.\par
+
+\[\Phi\land\neg P\]
+
+이 식이 만족 가능하면 속성을 위반하는 모델이 존재한다. 만족 불가능하면 \ensuremath{\Phi}가 P를 함의한다. 다만 \ensuremath{\Phi} 자체가 모순이면 이러한 함의가 공허하게 성립하므로, 명세의 만족 가능성을 별도로 확인해야 한다. 시간에 따른 상태를 유한한 시점별 변수로 표현했다면 검증 결과도 해당 범위와 가정에 적용된다. 논리적 결론의 범위는 명세에 포함된 사실과 관계에 의해 정해진다. \cite{r11}\par
+
+간단한 산술 예를 생각하자. x가 정수이고 \ensuremath{\Phi}가 ‘0 \ensuremath{\leq} x \ensuremath{\leq} 5’라면 x = 3은 이를 만족하는 값 할당이다. 여기서 모델은 학습된 신경망을 뜻하지 않고 논리식의 변수와 기호를 조건에 맞게 해석한 것을 뜻한다. 확인할 속성 P를 ‘x \ensuremath{\leq} 10’으로 정하면 반례 질의는 ‘0 \ensuremath{\leq} x \ensuremath{\leq} 5이면서 x > 10인가?’가 된다. 그러한 정수는 없으므로 UNSAT이며 \ensuremath{\Phi} \ensuremath{\models} P가 성립한다.\par
+
+반대로 P를 ‘x \ensuremath{\leq} 2’로 정하면 x = 3은 \ensuremath{\Phi}를 만족하면서 P를 위반한다. 이 경우 반례 질의는 SAT이고, x = 3은 속성이 항상 성립하지 않음을 보여 주는 반례이다. 반례 질의의 SAT는 원래 명세가 모순이라는 뜻이 아니다. 명세에 허용된 경우 중 속성을 위반하는 경우가 존재한다는 뜻이다. 이처럼 SAT와 UNSAT의 의미는 무엇을 질의했는지에 따라 해석해야 한다.\par
+
+\subsubsection{유한 시간 범위와 가정}
+
+시간에 따른 변화를 표현할 때는 상태에 시점 인덱스를 붙이고 인접 상태 사이의 전이 관계를 명시할 수 있다. 예를 들어 s\ensuremath{_0}, s\ensuremath{_1}, s\ensuremath{_2}는 세 판단 시점의 상태이고, 이들 사이에는 두 번의 전이가 있다. 이러한 인덱스는 별도의 시간 간격을 정의하지 않는 한 초 단위의 물리적 시간을 뜻하지 않는다. 유한 범위의 검증에서는 초기 조건, 전이 관계 및 확인할 속성을 그 범위 안에서 함께 다룬다.\par
+
+이 구분은 결과의 해석에 중요하다. 세 상태를 대상으로 반례를 찾지 못했다는 결과를 모든 미래 시점의 성립으로 확대할 수는 없다. 또한 관찰된 사실을 가정으로 입력한 경우, 논리 검증은 그 가정에서 결론이 따르는지 다루며 관찰 자체의 정확성을 판정하는 절차와는 구별된다. 명세의 일관성, 속성의 성립, 입력 사실의 정확성은 서로 다른 확인 대상이다.\par
+
+\subsection{통제 자연어}
+
+통제 자연어(Controlled Natural Language, CNL)는 자연어를 기반으로 어휘, 문법 또는 의미 해석을 의도적으로 제한한 언어이다. 자연어의 가독성을 유지하면서 표현의 정밀성과 일관성을 높이는 데 사용된다. 문서 이해를 돕는 CNL과 형식적 표현에 대응하도록 설계된 CNL은 목적과 엄밀성 수준이 다르다. \cite{r13}\par
+
+형식적 표현과 연결되는 CNL에서는 조건, 부정의 범위 및 논리적 관계에 대한 해석 규칙이 중요하다. 의미의 정밀성은 문장의 자연스러움만으로 결정되지 않으며, 허용된 표현과 그 해석을 얼마나 명확히 정의했는지에 달려 있다. 따라서 CNL의 성질을 설명할 때는 그 언어가 사용하는 문법과 의미 규칙을 함께 고려해야 한다. \cite{r13}\par
+
+이를 설명하기 위한 단순한 예로, p를 ‘장치가 잠겨 있다’, q를 ‘장치가 작동한다’라고 정의하자. “장치가 잠겨 있으면 작동하지 않는다”는 문장의 논리적 해석을 p \ensuremath{\rightarrow} \ensuremath{\neg}q로 정할 수 있다. 이 문장은 잠겨 있을 때의 작동을 제한하지만, 잠금이 해제되었다고 해서 반드시 작동한다고 말하지는 않는다. 이를 “잠금이 해제되면 작동한다”로 바꾸면 \ensuremath{\neg}p \ensuremath{\rightarrow} q라는 다른 조건이 된다. 두 문장의 자연스러운 표현 여부와 논리적 의미의 동일성은 별개의 문제다.\par
+
+이 예시에서 p와 q는 미리 정한 용어의 뜻을, ‘이면’은 조건 관계를, ‘않는다’는 부정의 적용 범위를 결정한다. 대응 규칙을 명시하면 문장에서 어떤 조건과 결론을 읽어야 하는지 분명해진다. 자연어와 정형식 사이의 의미 대응을 설명할 때에는 이러한 어휘·구문·논리적 범위를 유지하는지가 핵심이며, 단순히 비슷한 단어나 문장 길이를 사용하는지만으로 판단할 수 없다. 이 예시는 CNL의 기본 원리를 설명하기 위한 것으로 특정 도메인의 제약 언어를 정의한 것은 아니다.\par
+
+\subsection{저랭크 적응 학습}
+
+지도 미세조정은 입력과 목표 출력의 예를 사용하여 사전학습 모델을 특정 과제에 적응시키는 과정이다. 언어 출력을 학습하는 경우에는 입력에 대해 목표 문장의 토큰을 생성하도록 조정할 수 있다. 전체 미세조정은 대상 모델의 모든 가중치를 갱신하는 반면, 파라미터 효율적 미세조정은 그 일부 또는 추가한 작은 파라미터 집합을 학습한다.\par
+
+LoRA(Low-Rank Adaptation)는 사전학습 가중치를 고정하고 저랭크 행렬로 표현한 변화량을 학습하는 미세조정 방법이다. 원래 가중치를 W\ensuremath{_0}라고 하면 다음과 같이 표현할 수 있다. \cite{r14}\par
+
+\[W=W_0+\frac{\alpha}{r}BA\]
+
+여기서 W\ensuremath{_0}는 고정한 사전학습 가중치이고 W는 적응 후의 유효 가중치이다. 해당 선형 변환의 입력 차원을 k, 출력 차원을 d라고 하면 두 행렬의 크기는 d \ensuremath{\times} k이다. 학습하는 행렬 A와 B는 각각 r \ensuremath{\times} k와 d \ensuremath{\times} r 크기를 가지며, r은 보통 d와 k보다 작은 양의 정수로 설정하는 저랭크 분해의 내부 차원이다. 따라서 BA는 W\ensuremath{_0}와 크기가 같아 더할 수 있고, 그 랭크는 r 이하이다. 스칼라 설정값 \ensuremath{\alpha}는 \ensuremath{\alpha}/r을 통해 변화량의 크기를 조절한다. \cite{r14}\par
+
+이 방식은 W\ensuremath{_0} 전체를 갱신하는 대신 A와 B만 학습한다. r이 충분히 작으면 해당 행렬의 학습 파라미터 수는 dk에서 r(d + k)로 줄어든다. r은 변화량을 표현할 수 있는 공간의 크기와 학습 파라미터 수를 함께 결정하므로, 단순한 크기 조절 계수와는 역할이 다르다.\par
+
+파라미터 수를 예시하면 d = k = 512, r = 8일 때 전체 행렬에는 262,144개의 값이 있고 A와 B에는 합계 8,192개의 학습 가능한 값이 있다. 이 예의 비율은 3.125\%이다. 이는 하나의 가중치 행렬에 대한 설명용 계산이며 전체 모델의 메모리 절감률이나 특정 실험의 설정을 뜻하지 않는다. LoRA의 역할은 모델의 적응 방식을 정하는 것이고, 학습한 행동의 정확성이나 제약 준수 여부는 별도의 평가 대상이다.\par
+\section{제안 방법}
+
+\subsection{전체 접근과 입출력}
+
+GuardSynth는 CoC에 담긴 행동 설명을 유지하면서, 행동 선택을 제한하는 조건을 별도의 명세로 명확하게 표현하고 다시 자연어로 결합하는 방법이다. 입력은 원래의 CoC, 판단에 사용할 장면 관측, 적용할 규칙과 그 근거이다. 출력은 구조화된 행동 제약, 제한된 모델에서의 논리 검증 결과, 명세에서 생성한 통제 자연어(CNL), 그리고 이를 원래 CoC에 추가한 학습 입력이다. 정형 표현은 조건의 의미와 검증 대상을 명시하고, 자연어 표현은 그 조건을 언어 기반 학습에 전달하는 역할을 한다.\par
+
+전체 과정은 다음과 같다. 제약 후보의 선택과 근거 확인을 먼저 수행하고, 확정된 제약을 EBLC로 명세한다. 이후 구조와 의미를 검사하고 검증용 중간 표현을 거쳐 SMT 질의를 실행한다. 명세에 대응하는 CNL을 생성한 뒤, 원래 CoC와 결합하여 모델에 제공한다.\par
+
+\begin{figure*}[!t]\centering
+\includegraphics[width=.94\textwidth,height=.30\textheight,keepaspectratio]{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/manuscript-revision-2026-09-30-001/figures/method-flow-ko.pdf}
+\caption{상단은 역할이 다른 네 입력이고, 하단 01--04는 근거 연결에서 CoC 보강까지의 처리 단계이다. 실선은 전달 순서, 점선은 예상과 다른 판정이나 UNKNOWN이 발생했을 때의 재검토 경로이다. 01단계의 미확정 후보는 보류한다. 실제 장면에서는 사람이 적용 근거를 확인하고, 합성 실험에서는 공급 조건을 연결한다.}
+\end{figure*}
+
+그림 1의 입력은 서로 대체할 수 없는 정보를 제공한다. 원 CoC는 행동과 판단 이유에서 관련 제약 후보를 찾는 문맥이다. 나머지 세 입력은 다음과 같이 정의하며, 각각 관측값, 행동 규칙, 해석 범위를 담당한다.\par
+
+\textbf{관측 사실의 정의와 예제.} 관측 사실은 대상·영역·사건이 특정 시점에 어떤 상태였는지 기술하는 정보이다. 실제 장면에서는 영상 등 관측 근거와 확인 결과에 연결하고, 주 합성 실험에서는 생성 환경이 제공하는 상태를 사용한다. 예를 들어 “충돌 영역이 11.0초에 비었다”는 사건 시점 정보이다. 그림 1의 01단계에서 대상과 사건을 연결하고, 03단계에서는 그 시점을 환경 변수 clear\_ms = 11000으로 질의에 결합한다. 이 관측만으로 필요한 대기기간까지 정하지는 않는다.\par
+
+\textbf{규칙의 정의와 예제.} 규칙은 적용 조건 아래 어떤 행동을 제한하며 어떤 조건에서 그 제한을 해제하는지 정하는 정보이다. 예를 들어 “영역이 비워진 뒤 최소 0.5초 동안 진입하지 않는다”는 공급된 실험 규칙이다. 그림 1의 01단계에서 이 규칙의 적용 근거를 확인하고, 02단계에서 제한 행동과 release\_clear\_ms = 500을 명세한다. 0.5초는 관측한 속성이나 CoC에서 추측한 값이 아니다.\par
+
+\textbf{모델링 가정의 정의와 예제.} 모델링 가정은 입력을 어떤 상황 범위에서 해석하고 검증할지를 정하는 전제이다. 예를 들어 “한 번 비워진 영역은 이후 다시 점유되지 않는다”는 단일 해소 시점으로 지속적인 비점유를 표현하기 위한 가정이다. 그림 1의 02단계에서 계약의 적용 범위로 명시하고, 03단계의 논리 해석에 사용한다. 재점유가 가능한 상황에 같은 단일 시점 식을 그대로 적용하려면 이 가정부터 재검토해야 한다.\par
+
+따라서 동일한 관측 11.0초에 대해서도 공급 규칙이 0.5초 대기인지 1.5초 대기인지에 따라 허용 시작점은 각각 11.5초와 12.5초가 된다. 그림 1의 04단계는 이렇게 명세·검증한 제한을 CNL로 전달한다. 관측값을 규칙으로 바꾸거나 모델링 가정을 관측 사실로 취급하지 않는 것이 이 분리의 목적이다.\par
+
+방법은 수치·정성 실행 프로파일로 구체화한다. 학습 실험에서는 공급된 합성 규칙으로 시간 프로파일과 정적·기동 후보 요약 프로파일을 구성한다. 실제 장면을 다루는 별도의 정성적 프로파일에서는 관측과 사람 검토를 통해 대상·영역·사건을 연결한다. 두 프로파일은 명세와 근거를 연결한다는 원칙을 공유하지만, 입력과 의미론이 같지는 않다. 이하에서는 시간 계약을 일관된 주 예제로 사용하고, 정성적 프로파일은 근거 불확실성과 제약 수명주기를 설명하는 데 사용한다. 구현 근거는 \href{\detokenize{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py}}{S1}, \href{\detokenize{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py}}{S2}에 연결한다.\par
+
+\subsection{EBLC를 이용한 정형 명세}
+
+\subsubsection{명세 범위와 구성 요소}
+
+행동 제약은 특정 상황에서 선택 가능한 행동의 집합을 제한한다. 따라서 “무엇이 관찰되었는가” 또는 “왜 그 행동을 고려하는가”를 설명하는 문장과 구분된다. 또한 허용된 행동 중 무엇을 우선할지 정하는 목표와도 구별된다. 영역 진입을 허용하는 조건이 충족되었다고 해서 진입이 강제되는 것은 아니며, 허용 집합 안의 선택에는 별도의 목표가 필요하다.\par
+
+Evidence-Bound Lifecycle Contracts(EBLC)는 이러한 제약을 적용 대상, 조건, 행동 제한, 유지와 해제, 근거와 함께 표현한다. Evidence-Bound는 명세의 조건과 규칙이 어떤 입력에 의존하는지 연결한다는 뜻이고, Lifecycle은 제약의 적용·유지·해제와 필요한 경우 재적용을 명시한다는 뜻이다. 이 논문은 그 구성 원칙과 구현된 제한 프로파일을 사용하며, 모든 교통 상황을 포괄하는 언어 정의를 전제하지 않는다.\par
+
+\begin{table*}[tp]\caption{명세 구성과 예제 대응}
+\centering\fontsize{8}{10}\selectfont\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.24\textwidth-2.88pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.33\textwidth-3.96pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.43\textwidth-5.16pt\relax}@{}}
+\toprule
+\textbf{구성 요소} & \textbf{명세에서의 역할} & \textbf{시간 계약의 구체화}\\
+\midrule
+주체와 대상 & 누구의 어떤 행동을 제한하는가 & 에고와 보행자 충돌 영역\\[3pt]
+적용 범위 & 어느 상황·모델에서 해석하는가 & 단일 점유 해소, 이후 재점유 없음\\[3pt]
+행동 제한 & 무엇을 허용하지 않는가 & 해제 조건 전의 영역 진입\\[3pt]
+유지·해제 조건 & 언제 제한을 유지하거나 해제하는가 & 영역 해소 후 지정 기간 경과\\[3pt]
+시간과 단위 & 시점·기간·경계를 어떻게 표현하는가 & 정수 밀리초, 경계값 포함\\[3pt]
+근거와 버전 & 규칙의 출처와 해석 방식을 어떻게 식별하는가 & 규칙 참조와 프로파일 버전\\[3pt]
+\bottomrule\end{tabular}
+\end{table*}
+
+정성적 프로파일은 이 구성에 사건의 진릿값, 근거 유효성, 초기 적용 상태와 복수 의무의 결합 정책을 추가한다. 이들은 불확실한 장면 근거를 다루기 위한 요소이며, 주 시간 학습 실험에서 모두 평가한 요소는 아니다. 본문의 명세 범위와 실험에서 확인한 범위를 구별하여 기술한다.\par
+
+\subsubsection{계약의 정의와 해석}
+
+프로파일의 공통 구성을 설명하기 위해 계약을 $C = (s, z, \Sigma, O, E, V)$로 표기한다. $s$는 행동 주체, $z$는 대상 또는 영역, $\Sigma$는 적용 범위와 모델링 가정, $O$는 제한 의무의 집합, $E$는 관측·규칙 근거의 연결, $V$는 해석 버전이다. 이는 본문의 의미 설명을 위한 공통 표기이며, 여섯 필드를 가진 새 JSON 형식이 아니다. 실제 직렬화는 아래 코드 박스 1의 제한 프로파일을 따른다.\par
+
+의무 하나는 시작 조건, 유지·해제 규칙, 제한 행동과 필요한 초기 상태로 해석한다. 시간 프로파일에서는 단일 해소 시점과 대기기간으로 이를 압축한다. 정성적 프로파일에서는 판단 시점마다 근거와 이전 상태로 적용 상태를 갱신한다. 두 프로파일의 가정과 상태 변수를 임의로 혼합하지 않는다.\par
+
+$h_t$를 판단 시점 $t$까지 제공된 근거와 상태의 이력, $a$를 현재 행동 후보라고 하자. 계약의 의미는 그 이력에서 허용되는 후보의 집합 $A_C(h_t)$이다. 후보가 이 집합에 속하면 명시한 조건과 제한에 부합한다. 여기서 아래첨자 $t$는 판단 시점이고 $C$는 해당 계약을 가리킨다. 복수 의무는 각각의 허용 집합을 교집합으로 결합하므로 모든 적용 제한을 동시에 만족해야 한다. 정성적 프로파일은 현재 해소 근거를 요구하는 진입 정책도 추가한다. 따라서 이전 금지가 비활성이라는 사실과 현재 진입 허용은 구별된다.\par
+
+허용 집합을 정한 뒤 별도의 목표로 후보를 선택한다. 진입 보류와 충분히 기다린 뒤의 진입이 모두 허용되어도 진행 목표는 둘을 다르게 평가한다. 이 분리는 “제약을 위반하지 않음”을 “가장 좋은 행동임”으로 해석하는 오류를 방지한다.\par
+
+\subsubsection{시간 프로파일의 구문과 의미}
+
+시간 프로파일은 JSON 형태의 구조화된 계약을 입력으로 받는다. 다음은 0.5초 대기 규칙에 대해 실제 생성기가 반환하는 명세이다. 근거 참조는 추적용 메타데이터이며 모델이 선택할 정답 행동을 포함하지 않는다.\par
+
+\textbf{코드 박스 1. 실제 생성된 시간 계약 JSON}\par
+
+입력은 공급 규칙의 대기기간 0.5초이고, 출력은 대상·해제 조건·가정을 포함하는 계약이다. 줄 번호는 박스 내부의 위치를 나타낸다.\par
+
+\par\smallskip\noindent\fcolorbox{black!30}{black!3}{\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+\noindent\makebox[1.5em][r]{\scriptsize 1}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}\{\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 2}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.6em}"version": "supplied-temporal-eblc-profile-v0.1",\allowbreak \strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 3}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.6em}"subject": "ego",\allowbreak \strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 4}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.6em}"target": "pedestrian\_\allowbreak conflict\_\allowbreak zone",\allowbreak \strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 5}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.6em}"hold": "NO\_\allowbreak ENTRY\_\allowbreak WHILE\_\allowbreak OCCUPIED",\allowbreak \strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 6}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.6em}"release\_\allowbreak clear\_\allowbreak ms": 500,\allowbreak \strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 7}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.6em}"time\_\allowbreak unit": "ms",\allowbreak \strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 8}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.6em}"source\_\allowbreak kind": "SUPPLIED\_\allowbreak SYNTHETIC\_\allowbreak RULE",\allowbreak \strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 9}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.6em}"assumption": "SINGLE\_\allowbreak CLEAR\_\allowbreak TRANSITION\_\allowbreak NO\_\allowbreak REOCCUPATION",\allowbreak \strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 10}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.6em}"source\_\allowbreak refs": [\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 11}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{1.2em}"Project01/temporal\_\allowbreak guard\_\allowbreak world.py::\_\allowbreak guard",\allowbreak \strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 12}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{1.2em}"paper1-method-preservation-v0.1"\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 13}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.6em}]\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 14}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}\}\strut}\par
+\end{minipage}}\par\smallskip
+
+{\ttfamily\fontseries{m}\selectfont\footnotesize subject}와 {\ttfamily\fontseries{m}\selectfont\footnotesize target}은 주체와 제한 영역을 지정한다. {\ttfamily\fontseries{m}\selectfont\footnotesize hold}는 점유 중 진입 금지를 나타내고, {\ttfamily\fontseries{m}\selectfont\footnotesize release\_\allowbreak clear\_\allowbreak ms}는 영역이 해소된 뒤 요구하는 대기 기간이다. {\ttfamily\fontseries{m}\selectfont\footnotesize assumption}은 점유에서 비어 있는 상태로 한 번 전환한 뒤 재점유되지 않는다는 가정을 지정한다. 이 가정이 있기 때문에 지속적인 비점유 상태를 하나의 해소 시점과 경과 시간으로 표현할 수 있다.\par
+
+코드 박스 1의 2--5행은 버전과 제한 대상을, 6--7행은 대기값과 단위를 지정한다. 8--9행은 공급된 합성 규칙이라는 출처 유형과 재점유 없음 가정이며, 10--13행은 근거 참조이다. 관측의 해소 시각과 후보 진입 시각은 규칙 JSON에 섞지 않고 별도로 연결한다.\par
+
+계약을 평가할 때는 환경에서 얻은 {\ttfamily\fontseries{m}\selectfont\footnotesize clear\_\allowbreak ms}, 후보의 {\ttfamily\fontseries{m}\selectfont\footnotesize entry\_\allowbreak ms}, 진입 여부인 {\ttfamily\fontseries{m}\selectfont\footnotesize enters}를 별도로 연결한다. 두 시간 변수는 정수 밀리초이고, {\ttfamily\fontseries{m}\selectfont\footnotesize enters}는 진입하는 후보이면 참이다. 시간 계약의 행동 제한은 다음과 같다.\par
+
+\[e\Rightarrow u_{\mathrm{ms}}\geq\tau_{\mathrm{ms}}+\Delta_{\mathrm{ms}}.\]
+
+예를 들어 {\ttfamily\fontseries{m}\selectfont\footnotesize clear\_\allowbreak ms = 11000}, {\ttfamily\fontseries{m}\selectfont\footnotesize release\_\allowbreak clear\_\allowbreak ms = 500}이면 진입 후보는 11500ms 이상에서만 계약과 양립한다. 경계의 비교 연산은 ‘이상’이므로 11500ms는 허용되고 11499ms는 허용되지 않는다. 진입하지 않는 후보는 {\ttfamily\fontseries{m}\selectfont\footnotesize enters = false}로 표현하며 이 진입 제한을 위반하지 않는다. 해당 후보의 진행 성과는 별도로 평가한다.\par
+
+현재 시간 프로파일 검증기는 지원된 버전과 고정 필드 조합을 검사하며, 지원 대기값은 500, 1500, 800, 1800ms이다. 주 확장 학습 데이터는 그중 500과 1500ms를 사용한다. 임의의 필드를 가진 JSON을 범용 계약으로 받아들이는 방식이 아니라, 해석이 정해진 제한 프로파일을 사용한다. \href{\detokenize{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py}}{S1}, \href{\detokenize{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_training_data.py}}{S3}\par
+
+같은 의미를 $\tau=\mathit{clear\_ms}$, $\Delta=\mathit{release\_clear\_ms}$, $u=\mathit{entry\_ms}$, $e=\mathit{enters}$로 축약하면 $P_C(e,u,\tau)=\neg e\lor(u\geq\tau+\Delta)$이다. $P_C$가 참인 후보가 시간 계약의 허용 집합에 속한다. 진입 후보에서는 경과 시간 $u-\tau\geq\Delta$를 요구하고, 비진입 후보에서는 진입 시각에 무관하게 참이다. $\tau$와 $u$는 시점이고 $\Delta$는 기간이다. “영역이 비었다”와 “필요한 기간만큼 비어 있었다”를 구분하는 식이다.\par
+
+\subsubsection{정성적 프로파일의 수명주기 의미}
+
+실제 장면용 정성적 계약에서는 각 의무 j와 판단 시점 t에 대해 {\ttfamily\fontseries{m}\selectfont\footnotesize truth[j,t]}, {\ttfamily\fontseries{m}\selectfont\footnotesize valid[j,t]}, {\ttfamily\fontseries{m}\selectfont\footnotesize active[j,t]}를 사용한다. {\ttfamily\fontseries{m}\selectfont\footnotesize truth}는 제한 조건이 확인되었는지를 TRUE, FALSE, UNKNOWN, CONFLICT로 나타낸다. FALSE는 해당 조건의 해소가 확인되었다는 뜻이고, 관측되지 않았다는 이유만으로 부여하는 값이 아니다. {\ttfamily\fontseries{m}\selectfont\footnotesize valid}는 해당 근거를 수용할 수 있는지를 나타낸다. {\ttfamily\fontseries{m}\selectfont\footnotesize active}는 그 의무가 적용 중인지 나타내며, 첫 판단 전의 값은 별도 입력으로 받는다.\par
+
+\textbf{코드 박스 2. 근거에 따른 상태 갱신 의사코드}\par
+
+입력은 의무 j의 현재 근거 진릿값·유효성 및 이전 적용 상태이고, 출력은 현재 적용 상태이다. 실행 소스 발췌가 아니라 의미론을 요약한 의사코드이다.\par
+
+\par\smallskip\noindent\fcolorbox{black!30}{black!3}{\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+\noindent\makebox[1.5em][r]{\scriptsize 1}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}on[j,\allowbreak t] = valid[j,\allowbreak t] AND (truth[j,\allowbreak t] = TRUE)\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 2}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}clear[j,\allowbreak t] = valid[j,\allowbreak t] AND (truth[j,\allowbreak t] = FALSE)\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 3}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}active[j,\allowbreak t] = TRUE,\allowbreak              if on[j,\allowbreak t]\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 4}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{4.2em}FALSE,\allowbreak            else if clear[j,\allowbreak t]\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 5}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{4.2em}previous\_\allowbreak active,\allowbreak  otherwise\strut}\par
+\end{minipage}}\par\smallskip
+
+각 시점의 근거를 읽고 적용 상태를 갱신한 후 행동을 제한한다. 유효한 시작 근거는 의무를 적용하고, 유효한 해소 근거는 해제한다. 어느 쪽도 확인되지 않으면 이전 상태를 유지한다. 해제 이후 시작 조건이 다시 확인되면 같은 규칙으로 재적용한다. 이 순서와 초기 상태를 명시하여 판단 시점의 차이로 의미가 바뀌지 않도록 한다.\par
+
+현재 정책은 선언된 모든 의무의 해소가 확인되어야 영역 진입을 허용한다. 어떤 의무의 이전 {\ttfamily\fontseries{m}\selectfont\footnotesize active}가 거짓이더라도 현재 해소를 확인하지 못했다면, 그 사실만으로 진입을 허용하지 않는다. 반대로 모든 의무가 해소되면 진입과 진입 보류를 모두 허용한다. 이는 허용 조건이며 반드시 진행한다는 생존성 보장은 아니다. UNKNOWN·CONFLICT는 이 계약의 근거 상태이고, SMT 솔버가 결론을 내리지 못했을 때의 UNKNOWN 반환과는 구별된다. \href{\detokenize{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py}}{S2}\par
+
+코드 박스 2의 1--2행은 유효성과 진릿값을 함께 확인한다. 3--5행은 시작, 해소, 그 외의 순서로 상태를 정한다. 첫 판단의 {\ttfamily\fontseries{m}\selectfont\footnotesize previous\_\allowbreak active}는 별도 입력 {\ttfamily\fontseries{m}\selectfont\footnotesize prior\_\allowbreak active}이고, 이후에는 직전 판단의 적용 상태이다. 단일 진릿값은 TRUE와 FALSE일 수 없으므로 시작과 해소가 동시에 참인 경우는 발생하지 않는다.\par
+
+\begin{figure*}[!t]\centering
+\includegraphics[width=.94\textwidth,height=.30\textheight,keepaspectratio]{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/manuscript-revision-2026-09-30-001/figures/lifecycle-ko.pdf}
+\caption{(a)는 개별 의무 j의 상태 전이이고, (b)는 모든 의무의 해소 조건을 결합하는 진입 허용 판단이다. 실선은 활성·비활성 사이의 전이 또는 상태 유지를, 점선은 현재 clear 조건값의 전달을 나타낸다. (a)의 해제 조건과 (b)의 해당 입력은 같은 근거에서 계산한 값이며, 다른 의무의 clear와 함께 AND로 결합한다. (b)는 세 번째 상태나 (a)에 포함된 하위 상태가 아니다. 비활성에는 초기 비활성과 해제 상태가 모두 포함되므로, 비활성 자체가 아니라 현재 모든 clear의 확인 여부로 진입을 판단한다.}
+\end{figure*}
+
+현재 정책은 {\ttfamily\fontseries{m}\selectfont\footnotesize entry\_\allowbreak permitted[t] = AND\_\allowbreak j clear[j,t]}이며, ENTER\_ZONE 행동은 이 값이 참일 때만 가능하다. DEFER\_ENTRY는 이 진입 금지를 위반하지 않는다. 불확실·충돌·무효 근거는 별도로 {\ttfamily\fontseries{m}\selectfont\footnotesize review\_\allowbreak required}를 참으로 만든다. 예를 들어 초기 비활성인 의무 하나에 유효한 근거 TRUE \ensuremath{\rightarrow} UNKNOWN \ensuremath{\rightarrow} FALSE \ensuremath{\rightarrow} TRUE가 주어지면 상태는 활성 \ensuremath{\rightarrow} 활성 \ensuremath{\rightarrow} 비활성 \ensuremath{\rightarrow} 활성이다. 세 번째 판단에서만 진입이 허용되며, 그때도 보류를 선택할 수 있다. 이는 의미 설명을 위한 구성 예제이다.\par
+
+\subsubsection{EBLC 프로파일을 사용하는 이유}
+
+JSON은 직렬화 구조를 정하지만, 그 자체로 생명주기 의미론·알 수 없는 근거의 해석·생성 문장의 의미를 정하지 않는다. 일반 시제논리로도 이러한 조건을 표현할 수 있고 수작업 규칙으로도 구현할 수 있다. EBLC가 이들보다 표현력이 높다는 주장은 하지 않는다. 여기서의 역할은 근거 필드, 해석 규칙, 지원 Core 변환, 모델 입력 문장의 관계를 도메인 계약으로 고정하는 것이다. 예를 들어 {\ttfamily\fontseries{m}\selectfont\footnotesize release\_\allowbreak clear\_\allowbreak ms}는 사건 시점이 아닌 기간이고, {\ttfamily\fontseries{m}\selectfont\footnotesize ge}는 경계를 포함하며, {\ttfamily\fontseries{m}\selectfont\footnotesize source\_\allowbreak refs}는 모델 정답이 아닌 출처를 기록한다.\par
+
+따라서 기여는 함의·JSON·SMT 자체의 발명이 아니라 검사 가능한 대응 관계를 갖춘 제약 개발 인터페이스이다. 구현 프로파일마다 검증기·논리 해석·renderer가 있으며 지원하지 않는 조합은 거부한다. 실험은 이 경로의 효용과 검사를 평가하며 동일한 의미론을 갖춘 JSON-to-SMT 시스템에 대한 우월성을 검증하지 않는다. 단순 스키마도 의미론·변환·근거 정책·언어 대응을 모두 제공하면 동등한 공학적 대안이 될 수 있다.\par
+
+\subsection{행동 제약의 정의와 추출}
+
+\subsubsection{제약 후보와 근거의 분리}
+
+CoC의 모든 문장을 제약으로 바꾸지는 않는다. “보행자가 횡단하고 있다”는 관측 주장이고, “보행자를 보호하기 위해 양보한다”는 행동 이유이다. “해당 영역이 점유된 동안 진입하지 않는다”는 조건과 행동 제한을 포함하므로 제약 후보가 된다. “허용된 후보 중 진행 성과가 가장 큰 것을 선택한다”는 제한 자체가 아니라 선택 목표이다. 이 구분을 통해 이유 설명에 없는 수치 임계값이나 해제 조건을 임의로 추가하는 일을 피한다.\par
+
+입력 근거는 세 역할로 나눈다. CoC는 관련 행동과 의무의 후보를 찾는 데 사용한다. 장면 관측은 대상, 영역, 사건과 시점을 연결한다. 공급된 규칙 또는 별도로 확인한 규범 근거는 제한의 적용 조건과 내용을 정한다. 어떤 문장이 CoC에 존재한다는 사실만으로 그 문장의 현재 장면 적용까지 확인된 것으로 취급하지 않는다.\par
+
+\subsubsection{명세화 절차와 자동화 범위}
+
+먼저 CoC에서 행동과 관계된 대상·상황·판단 이유를 식별한다. 다음으로 대상과 영역을 관측에 연결하고, 어떤 시점의 사실인지 명시한다. 규칙 근거에서 제한 행동과 적용 조건을 정한 뒤, 유지·해제·시간 조건과 필요한 가정을 채운다. 확인하지 못한 정보는 추정 사실로 승격시키지 않고 미확정 상태로 남긴다. 확정한 내용은 지원 프로파일의 필드에 대응시키고, 근거 참조와 버전을 함께 기록한다.\par
+
+주 합성 실험에서는 이 과정의 입력이 생성 환경과 공급 규칙에 의해 주어진다. 환경의 해소 시점과 규칙의 대기값을 읽어 계약을 구성하고 검증용 표현으로 변환한다. 따라서 이 경로의 자동화는 이미 주어진 조건의 구조화·변환이며, 영상만으로 법규나 대기시간을 발견하는 절차가 아니다. 실제 장면 경로는 사람이 대상·영역·사건과 적용 조건을 확인하며, 구현된 장면 adapter도 특정 검토 과제에 제한된다. \href{\detokenize{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_training_data.py}}{S3}, \href{\detokenize{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/src/guard_synth/qualitative_scene_contract.py}}{S4}\par
+
+추출 결과와 학습 정답은 별도로 관리한다. 제약에서 어떤 행동이 허용되는지를 정의하더라도, 실제 장면의 정답이 자동으로 확정되는 것은 아니다. 주 합성 과제에서는 알려진 환경 상태와 규칙을 이용한 별도의 정수 연산으로 허용 후보를 구하고, 그 안에서 진행 점수가 가장 큰 후보를 참조 행동으로 선택한다. 이 참조 계산은 CNL 문장이나 SMT의 판정값을 읽어 정답을 복제하지 않지만, 같은 환경·규칙 가정을 공유한다.\par
+
+\begin{figure*}[!t]\centering
+\includegraphics[width=.94\textwidth,height=.30\textheight,keepaspectratio]{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/manuscript-revision-2026-09-30-001/figures/evidence-map-ko.pdf}
+\caption{11.0초 해소 시점은 환경 관측으로서 질의 변수에 연결하고, 0.5초 대기는 공급 규칙으로서 계약 필드에 기록한다. 재점유 없음은 이를 시간 부등식으로 연결할 때의 가정이다. 제약 추출은 이러한 역할을 구분해 근거가 있는 필드를 구성하는 절차이다.}
+\end{figure*}
+
+\subsubsection{이어지는 시간 예제}
+
+주 예제의 원래 CoC는 “Yield to the crossing pedestrian, then proceed through the intersection.”이다. 환경은 영역이 11.0초에 비워진다고 제공하고, 별도의 공급 규칙은 최소 0.5초 또는 1.5초의 대기를 요구한다. 대기값은 CoC 문장에서 추론한 값이나 보편적 교통 법규가 아니라 명시적으로 공급된 실험 조건이다.\par
+
+\begin{table*}[tp]\caption{명세 구성과 예제 대응}
+\centering\fontsize{8}{10}\selectfont\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.13\textwidth-3.12pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.19\textwidth-4.5600000000000005pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.25\textwidth-6.0pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.25\textwidth-6.0pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.18\textwidth-4.32pt\relax}@{}}
+\toprule
+\textbf{후보} & \textbf{진입 시점} & \textbf{진행 점수} & \textbf{0.5초 대기} & \textbf{1.5초 대기}\\
+\midrule
+A & 10.5초 & 110 & 위반 & 위반\\[3pt]
+B & 11.5초 & 100 & 허용·참조 선택 & 위반\\[3pt]
+C & 12.5초 & 85 & 허용 & 허용·참조 선택\\[3pt]
+D & 진입하지 않음 & 0 & 허용 & 허용\\[3pt]
+\bottomrule\end{tabular}
+\end{table*}
+
+진행 점수는 후보 선택을 위한 합성 효용이며 거리나 속도의 측정값이 아니다. 0.5초 계약에서는 B, 1.5초 계약에서는 C가 허용 후보 중 최대 점수를 갖는다. D는 두 계약을 위반하지 않지만 목표 진행을 완료하지 않는다. 이 표는 생성된 데이터의 한 구성이고, 모델이 실제로 이 답을 예측했다는 성능 사례가 아니다. 후보 라벨은 데이터 구성 과정에서 회전하여 고정된 문자만으로 답을 선택하지 않도록 한다.\par
+
+\subsubsection{어떤 제약을 어디에서 추출하고 어디에 넣는가}
+
+여기서 제약 추출은 행동에 관련된 내용을 선택하여 지원 명세에 연결하는 작업이며, 모든 문장을 규칙으로 바꾸는 작업이 아니다. 다음과 같이 출처별 역할을 나누어 이미지에서 규범적 임계값을 임의로 만들어 내지 않도록 한다.\par
+
+\begin{table*}[tp]\caption{명세 구성과 예제 대응}
+\centering\fontsize{8}{10}\selectfont\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.24\textwidth-2.88pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.33\textwidth-3.96pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.43\textwidth-5.16pt\relax}@{}}
+\toprule
+\textbf{출처} & \textbf{추출·선택하는 내용} & \textbf{연결 위치}\\
+\midrule
+원래 CoC & 의도한 행동·이유·잠재적 의무 & 제약 종류와 관련성 후보; 원래 CoC는 별도로 보존\\[3pt]
+장면 근거 또는 합성 상태 & 대상·영역·판단 시점·해소 사건·후보 측정값 & 대상 연결과 질의 변수; 규칙 임계값과 구분\\[3pt]
+공급 규칙 또는 검토한 규칙 근거 & 제한 행동·적용 조건·비교 방향·경계값·해제 요건 & EBLC 의무 또는 {\ttfamily\fontseries{m}\selectfont\footnotesize limits} 필드와 출처\\[3pt]
+명시적 모델링 결정 & 시간 범위·재점유 없음·완료 조건의 해석 & 버전별 프로파일 가정과 평가 범위\\[3pt]
+\bottomrule\end{tabular}
+\end{table*}
+
+수치 실험에서는 영상 픽셀에서 임계값을 추정하지 않고 공급 규칙의 {\ttfamily\fontseries{m}\selectfont\footnotesize threshold}, {\ttfamily\fontseries{m}\selectfont\footnotesize max\_\allowbreak decel}, {\ttfamily\fontseries{m}\selectfont\footnotesize max\_\allowbreak jerk}, {\ttfamily\fontseries{m}\selectfont\footnotesize min\_\allowbreak gap} 또는 대기 기간을 읽는다. 정적·기동 컴파일러는 각 경계를 {\ttfamily\fontseries{m}\selectfont\footnotesize limits} 아래 {\ttfamily\fontseries{m}\selectfont\footnotesize field/\allowbreak op/\allowbreak unit/\allowbreak ticks}로 저장한다. {\ttfamily\fontseries{m}\selectfont\footnotesize scale=1000}은 외부 단위를 확인한 뒤 정수 밀리단위로 표현함을 뜻한다. 후보 측정값은 해당 후보를 질의할 때 별도로 연결한다. 실제 장면 개발에서는 검토자가 관측·적용 근거를 먼저 확인하며, 합성 학습 성능을 추출 정확도로 해석하지 않는다.\par
+
+생성 문장은 모델 입력의 {\ttfamily\fontseries{m}\selectfont\footnotesize Requirement CoC}에서 기존 이유 설명 뒤, 후보 설명과 선택 지시 앞에 추가한다. 실제 정적 데이터는 {\ttfamily\fontseries{m}\selectfont\footnotesize rich\_\allowbreak coc\_\allowbreak text = COC\_\allowbreak TEXT + " " + CNL}을 구성하며, 기동 데이터는 CoC 요구 문장에 {\ttfamily\fontseries{m}\selectfont\footnotesize constraint\_\allowbreak text}를 이어 붙인다. EBLC·출처·검증 결과·참조 정답은 별도 레코드에 보존한다. 정답이나 SAT/UNSAT를 힌트로 넣지 않는다. 이로써 추출 대상뿐 아니라 학습 입력의 삽입 위치까지 명시한다.\par
+
+\subsection{CoC와 연결된 EBLC 명세의 검증}
+
+\subsubsection{연결 확인과 Core 변환}
+
+검증에는 의미를 정하는 입력 연결과 논리 질의 실행이 모두 필요하다. 주체와 대상 영역, 사건 시점, 규칙의 대기값이 같은 사례를 가리키는지 확인하고, 명세가 지원 버전·필드·단위를 만족하는지 검사한다. 근거 식별자는 입력을 추적하는 수단이며 사실의 진위를 스스로 증명하는 장치는 아니다. 실제 장면에서 연결되지 않은 필드는 조건부 명세와 구분해 관리하며, 구문 검사를 통과했다는 이유만으로 검토가 완료된 학습 자료로 취급하지 않는다.\par
+
+시간 계약은 {\ttfamily\fontseries{m}\selectfont\footnotesize enters}를 Boolean, {\ttfamily\fontseries{m}\selectfont\footnotesize clear\_\allowbreak ms}와 {\ttfamily\fontseries{m}\selectfont\footnotesize entry\_\allowbreak ms}를 정수로 선언하는 Core 표현으로 변환한다. {\ttfamily\fontseries{m}\selectfont\footnotesize release\_\allowbreak clear\_\allowbreak ms}는 비교식의 정수 상수로 들어간다. Core는 검증에 필요한 선언과 논리 조항을 담는 중간 표현이며, 그 표현을 타입 검사한 뒤 SMT로 컴파일한다. 구현에서 시간은 밀리초 tick 수로 표현되고 Core의 단위 표기 {\ttfamily\fontseries{m}\selectfont\footnotesize 1}을 사용한다. 이 표기를 초 단위 값으로 해석하지 않는다. 현재 계약의 변수는 시불변이고 조항은 초기 위치에 적용된다. Core의 {\ttfamily\fontseries{m}\selectfont\footnotesize horizon = 2}는 이 구성의 모델 범위이지 2초 주행 궤적 검증을 뜻하지 않는다. \href{\detokenize{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py}}{S1}\par
+
+\subsubsection{검증 속성과 질의}
+
+\begin{figure*}[!t]\centering
+\includegraphics[width=.94\textwidth,height=.30\textheight,keepaspectratio]{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/manuscript-revision-2026-09-30-001/figures/temporal-boundary-ko.pdf}
+\caption{수평축은 초 단위 진입 시각이다. 해소 시점은 같지만 대기에 따라 허용 시작점은 11.5초 또는 12.5초가 된다. 닫힌 경계점은 그 시각 자체가 허용됨을 뜻한다. D는 비진입 후보이므로 시간축의 점으로 표시하지 않는다. 이 그래프는 계약 의미의 계산 결과이며 모델 정확도나 실측 주행 성능이 아니다.}
+\end{figure*}
+
+검증은 일관성, 제한 조건, 해제 경계, 허용 가능성을 구분한다. 기본 명세의 SAT는 적어도 하나의 만족 모델이 있음을 확인한다. 그러나 진입하지 않는 경우만으로도 SAT일 수 있으므로, 해제 후 진입하는 만족 모델이 존재하는지도 별도로 확인한다. 허용 가능성의 확인은 모든 행동을 막는 명세를 피하기 위한 것이며, 모델의 실제 진행 성능을 대신하지 않는다.\par
+
+\begin{table*}[tp]\caption{명세 구성과 예제 대응}
+\centering\fontsize{8}{10}\selectfont\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.24\textwidth-4.32pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.25\textwidth-4.5pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.25\textwidth-4.5pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.26\textwidth-4.68pt\relax}@{}}
+\toprule
+\textbf{항목} & \textbf{질의 내용} & \textbf{기대 판정} & \textbf{해석}\\
+\midrule
+일관성 & 기본 계약 & SAT & 계약을 만족하는 경우가 존재\\[3pt]
+제한 조건 & 진입하며 해제 시점보다 이르게 진입 & UNSAT & 제한을 위반하는 진입과 계약은 양립 불가\\[3pt]
+경계 이전 & 11.499초 진입, 대기 0.5초 & UNSAT & 해제 직전 진입은 배제\\[3pt]
+경계 시점 & 11.500초 진입, 대기 0.5초 & SAT & 경계값은 허용\\[3pt]
+경계 이후 & 11.501초 진입, 대기 0.5초 & SAT & 해제 후 진입 가능한 경우 존재\\[3pt]
+진입 보류 & enters가 거짓 & SAT & 진입을 강제하지 않음\\[3pt]
+\bottomrule\end{tabular}
+\end{table*}
+
+시간값은 영역 해소 시점 11.0초를 기준으로 한다. 제한 조건 질의에서는 {\ttfamily\fontseries{m}\selectfont\footnotesize enters}가 참이면서 {\ttfamily\fontseries{m}\selectfont\footnotesize entry\_\allowbreak ms < clear\_\allowbreak ms + release\_\allowbreak clear\_\allowbreak ms}인 반례를 찾는다. 이 질의는 두 시간을 특정 값으로 고정하지 않는 상징적 질의이고, 나머지 경계 행은 구체적 값을 연결한 질의이다. 상징적 결과도 인코딩한 시간 부등식과 가정에 대한 결과이며, 영상의 해석이나 규칙 선택을 증명하지 않는다.\par
+
+원고 예제의 여섯 질의를 500ms와 1500ms 계약에 각각 실행하여 12개 판정의 일치를 확인했다. 기존 bridge 검증의 100개 질의는 별도로 재실행했으며, 두 집합을 새로운 학습 효과의 근거로 합산하지 않는다. 검증 로그에는 질의, 기대 판정, 관측 판정과 실제 SMT-LIB 표현을 남겼다. \href{\detokenize{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/methodology-2026-09-30-001/manuscript_examples.json}}{S5}\par
+
+\subsubsection{SMT 표현과 결과의 의미}
+
+아래는 0.5초 계약의 의미를 읽기 쉽게 나타낸 SMT-LIB 예시이다. 생성된 compiler 출력의 전체 복사본이 아니라 동일한 핵심 제약을 설명하기 위한 표현이며, 실제 출력은 별도 질의 파일에 보존한다.\par
+
+\textbf{코드 박스 3. 조기 진입과 경계 진입을 비교하는 실행 가능한 SMT-LIB 예제}\par
+
+입력은 계약의 대기값과 11000ms 해소 시점이다. 두 후보 시각을 각각 고정하여 계약과 양립 가능한지 질의한다.\par
+
+\par\smallskip\noindent\fcolorbox{black!30}{black!3}{\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+\noindent\makebox[1.5em][r]{\scriptsize 1}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}(declare-const enters Bool)\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 2}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}(declare-const entry\_\allowbreak ms Int)\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 3}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}(declare-const clear\_\allowbreak ms Int)\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 4}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}(assert (= clear\_\allowbreak ms 11000))\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 5}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}(assert (=> enters (>= entry\_\allowbreak ms (+ clear\_\allowbreak ms 500))))\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 6}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}(assert enters)\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 7}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}(push)\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 8}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}(assert (= entry\_\allowbreak ms 11499))\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 9}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}(check-sat) ; unsat\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 10}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}(pop)\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 11}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}(push)\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 12}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}(assert (= entry\_\allowbreak ms 11500))\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 13}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}(check-sat) ; sat\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 14}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}(pop)\strut}\par
+\end{minipage}}\par\smallskip
+
+첫 번째 UNSAT는 명세가 잘못되었다는 뜻이 아니라, 지정한 조기 진입과 명세를 동시에 만족할 수 없다는 뜻이다. 두 번째 SAT는 해당 진입이 이 계약과 양립함을 뜻한다. 실제 행동의 최적성이나 현실 안전성은 이 판정에 포함되지 않는다. 솔버가 UNKNOWN을 반환하거나 예상 판정과 다르면 통과로 처리하지 않는다. 구조 검사, 장면 연결, 논리 검증, 이후 CNL 의미 대응은 각각 다른 확인 역할을 가진다.\par
+
+코드 박스 3의 1--3행은 타입 선언, 4행은 환경 연결, 5행은 핵심 제한이다. 6행은 비진입으로 질의를 만족시키는 경우를 제외한다. 7--10행은 11499ms를 임시로 추가해 UNSAT를 확인하고 제거한다. 11--14행은 같은 기본 계약에 11500ms를 넣어 SAT를 확인한다. {\ttfamily\fontseries{m}\selectfont\footnotesize push}와 {\ttfamily\fontseries{m}\selectfont\footnotesize pop}은 두 후보 조건이 동시에 남아 인위적 모순을 만드는 것을 방지한다.\par
+
+\subsection{CNL 생성과 CoC 보강}
+
+\subsubsection{검증된 명세에서 문장 생성}
+
+CNL은 확인한 명세 필드와 고정된 문장 규칙으로 생성한다. 시간 프로파일의 renderer는 구조 검사를 통과한 계약만 받아 대상 영역과 대기기간을 문장에 대응시킨다. renderer 자체가 솔버를 호출하는 것은 아니며, 명세 검증은 앞선 단계에서 수행한다. 생성기에 후보 라벨, 참조 행동 또는 진행 점수를 전달하지 않는다. \href{\detokenize{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py}}{S1}\par
+
+\textbf{코드 박스 4. 실제 CNL 생성 함수 발췌}\par
+
+아래는 S1의 {\ttfamily\fontseries{m}\selectfont\footnotesize render} 함수 그대로이다. 입력 raw는 시간 계약이고 반환값은 두 문장이다. 박스의 줄 번호는 논리적 소스 행을 세며, 긴 행은 자동 줄바꿈한다.\par
+
+\par\smallskip\noindent\fcolorbox{black!30}{black!3}{\begin{minipage}{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}
+\noindent\makebox[1.5em][r]{\scriptsize 1}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{0.0em}def render(raw):\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 2}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{1.2em}validate(raw)\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 3}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{1.2em}\# Render only validated contract fields,\allowbreak  never scene target/candidate/answer.\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 4}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{1.2em}return ('Do not enter the pedestrian conflict zone while it is occupied. '\strut}\par
+\noindent\makebox[1.5em][r]{\scriptsize 5}\hspace{.4em}\parbox[t]{\dimexpr\linewidth-2em\relax}{\raggedright\ttfamily\fontseries{m}\fontsize{7.2}{9}\selectfont \hspace*{3.5999999999999996em}f'Enter only after the zone has remained clear for at least \{raw["release\_\allowbreak clear\_\allowbreak ms"]/1000:.1f\} s.')\strut}\par
+\end{minipage}}\par\smallskip
+
+2행은 지원된 계약과 정확히 일치하는지 검사한다. 대상과 제한 유형도 고정되므로 4행의 영역 이름은 상수 문구로 출력할 수 있다. 5행은 밀리초를 초로 바꾸고 소수점 한 자리로 표시한다. 현재 지원값은 이 정밀도로 정확히 표현된다. 함수 안에는 솔버 실행이나 정답 선택이 없으며, 다른 대상·임의 정밀도 계약으로의 확장은 별도 수정이 필요하다.\par
+
+0.5초 계약의 실제 생성 문장은 다음과 같다.\par
+
+\begin{quote}\small Do not enter the pedestrian conflict zone while it is occupied. Enter only after the zone has remained clear for at least 0.5 s.\end{quote}
+
+첫 문장은 대상 영역과 점유 중 진입 제한을 나타낸다. 두 번째 문장은 해제 조건과 대기기간을 표현한다. {\ttfamily\fontseries{m}\selectfont\footnotesize at least}는 경계값을 포함하는 비교에 대응하고, {\ttfamily\fontseries{m}\selectfont\footnotesize only after}는 진입의 필요조건이지 진입 명령이 아니다. 500ms는 0.5s로 변환되며, 1500ms 계약은 같은 규칙으로 1.5s를 출력한다. 이 대응은 현재 지원 대기값과 단일 해소·재점유 없음 가정 아래에서 해석한다.\par
+
+\begin{figure*}[!t]\centering
+\includegraphics[width=.94\textwidth,height=.30\textheight,keepaspectratio]{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/manuscript-revision-2026-09-30-001/figures/cnl-map-ko.pdf}
+\caption{대상과 제한은 첫 문장에, 해제 기간과 포함 경계는 두 번째 문장에 대응한다. 원 CoC와 CNL은 함께 모델 입력에 들어가고 출처·버전은 추적 정보로 별도 보존한다. 색은 필드 대응을 구분하기 위한 것이며 추가 검증 수준을 뜻하지 않는다.}
+\end{figure*}
+
+\subsubsection{의미 대응의 범위}
+
+생성 단계에서는 대상, 부정, 조건의 방향, 시간값과 단위의 대응을 유지한다. 예를 들어 ‘최소 0.5초’에서 ‘최소’를 생략하거나 ‘이후에만 진입’을 ‘이후 반드시 진입’으로 바꾸면 허용 행동의 의미가 달라진다. 고정된 필드 대응은 이러한 변화를 명시적으로 확인할 수 있게 한다.\par
+
+계약의 모든 메타데이터를 모델 입력 문장에 넣는 것은 아니다. 버전과 근거 참조는 데이터의 추적 정보로 유지하고, 행동 선택에 필요한 조건을 CNL에 표현한다. 모델링 가정은 실험 환경과 과제 정의에 명시한다. 따라서 이 문장과 JSON의 모든 필드가 문자 그대로 일대일 대응한다는 주장이 아니라, 지정한 맥락에서 행동 제한의 의미를 대응시킨다는 주장이다. 자유롭게 다시 작성한 문장이나 다른 프로파일로 확장할 때는 별도의 의미 검토가 필요하다.\par
+
+\subsubsection{CoC와 학습 입력의 결합}
+
+원래 CoC는 행동 이유를 제공하고, 생성된 CNL은 추가적인 행동 조건을 제공한다. 두 텍스트를 결합하되 원문 CoC를 명세로 대체하지 않는다. 아래 비교에서 최종 텍스트는 \textbf{초기 CoC + 추가 CNL}이며, 오른쪽 열은 추가되는 부분만 보여 준다. 시간 사례는 실제 합성 학습 문장의 한글 번역이고, STOP 사례는 실제 장면 개발용 출력의 핵심을 요약한 것이다.\par
+
+\begin{table*}[tp]\caption{명세 구성과 예제 대응}
+\centering\fontsize{8}{10}\selectfont\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.24\textwidth-2.88pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.33\textwidth-3.96pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.43\textwidth-5.16pt\relax}@{}}
+\toprule
+\textbf{사례} & \textbf{초기 CoC} & \textbf{추가 CNL}\\
+\midrule
+보행자 양보, 0.5초 규칙 & 횡단 중인 보행자에게 양보한 다음 교차로를 통과한다. & 보행자 충돌 영역이 점유되어 있는 동안에는 진입하지 않는다. 해당 영역이 최소 0.5초 동안 계속 비어 있었을 때만 진입한다.\\[3pt]
+보행자 양보, 1.5초 규칙 & 횡단 중인 보행자에게 양보한 다음 교차로를 통과한다. & 보행자 충돌 영역이 점유되어 있는 동안에는 진입하지 않는다. 해당 영역이 최소 1.5초 동안 계속 비어 있었을 때만 진입한다.\\[3pt]
+작업자의 STOP 표지, 개발 사례 & 전방의 교대 일방통행 구간을 통제하는 작업자가 들고 있는 STOP 표지에 따라 정지한다. & 에고에 대한 정지 지시가 적용되는 현재 판단에서는 이동·정지 상태가 미확인이어도 출발·가속을 선택하지 않는다. 정지를 위한 감속과 정지 유지를 금지하지 않으며, 지시 해제 여부는 확정하지 않는다.\\[3pt]
+\bottomrule\end{tabular}
+\end{table*}
+
+앞의 두 행은 다른 장면 유형이 아니라 같은 과제에 서로 다른 대기 규칙을 부여한 쌍이다. 영역이 6.0초에 비워졌다면 6.5초 진입은 0.5초 조건을 충족하지만 1.5초 조건은 충족하지 않는다. 즉, 같은 CoC에 더해진 CNL이 금지·해제 조건을 구별한다. 대기값은 실험에 제공한 규칙이다. STOP 행은 이동 상태가 불명확해도 두 상태에 공통인 금지를 표현하며, 주 합성 성능 실험과는 구분한다. 또한 제약 추가가 원 CoC의 사실성을 자동으로 보증하지는 않는다. 예를 들어 개발 장면 \#68에서는 원 CoC의 빨간 신호등 주장을 미확인으로 남기고, 별도로 확인된 작업자 STOP 지시에 제약을 연결했다.\par
+
+여기에 영상과 행동 후보를 함께 제시하고, 별도 참조 계산으로 정한 행동 라벨을 학습 목표로 둔다. P0에는 원 CoC, P1에는 원 CoC와 기존 자연어 제약, P2에는 원 CoC와 EBLC 기반 CNL을 제공한다. P1과 P2는 모두 제약을 추가한 접근이고, 주 비교는 CoC 단독 P0에 대한 제약 제공의 효과이다. EBLC 원문 JSON이나 솔버의 판정 결과를 정답 힌트로 입력하지 않는다.\par
+
+주 실험의 P1·P2는 학습과 평가 모두에서 제약 문장을 제공한다. 그러므로 이 입력 구성은 명시된 규칙을 이용한 행동 선택을 평가하며, 평가 때 제약이 없어도 같은 규칙을 적용하는지를 직접 보여 주는 구성은 아니다. 특히 주 예제에서 P0에는 대기기간이 없으므로 두 계약이 다른 참조 행동을 요구해도 P0의 입력은 같을 수 있다. 이 정보 차이는 비교 조건의 일부로 공개한다.\par
+
+추적 가능한 데이터 레코드에는 영상 참조, 원 CoC, 계약과 근거, CNL, 후보, 참조 행동 및 데이터 분할을 함께 기록하되, 모델에 제공할 필드와 정답·검증용 필드를 분리한다. 이에 따라 어떤 제약을 어떤 근거로 명세하고, 어떤 문장으로 전달하며, 어떤 행동을 학습 목표로 사용했는지 재구성할 수 있다. 구체적 학습 예산과 평가 지표는 다음 실험 절에서 제시한다.\par
+
+\subsection{과제에서 제약 필드·논리식·CNL·평가 판정까지}
+
+표~\ref{tab:taskmap}은 여섯 평가 과제를 실제 지원 계약 필드와 논리 조항에 연결한다. 정적 과제 20000번, 정지 20000번, 차선 변경 20001번의 고정 평가 계약을 사용하며, 시간 행은 앞의 경계 질의를 사용한다. 구현을 설명하는 예이지 독립적으로 수집한 도로 영상 여섯 건이 아니다.\par
+
+$q$는 {\ttfamily\fontseries{m}\selectfont\footnotesize completes}, $e$는 {\ttfamily\fontseries{m}\selectfont\footnotesize enters}, $\widehat{x}$는 후보 측정값을 1000배 한 정수라고 하자. 시간 과제 외 각 Core 조항은 $q\Rightarrow(\widehat{x}\ \mathrm{op}\ b)$이며 $b$는 저장한 {\ttfamily\fontseries{m}\selectfont\footnotesize ticks}이다. 정지는 세 조항의 논리곱이다. 정적 후보는 모두 목표를 완료하며 기동의 미완료 후보는 위반으로 보지 않지만 목표 완료로도 세지 않는다. 생성 CNL은 수치 경계를 전달하지만 Core의 미완료 예외를 별도 문장으로 출력하지 않는다. 따라서 목표 완료 후보의 경계 대응과 미완료 행동까지 포함한 전체 계약의 의미 등가성을 구분하며, 후자까지 입증했다고 주장하지 않는다. 프로파일은 연속 궤적 전체가 아니라 저장된 후보 요약값을 검사한다.\par
+
+
+\begin{table*}[tp]\caption{실행된 과제--판정 연결. CNL 열은 실제 생성 조항 인용}\label{tab:taskmap}
+\centering\fontsize{8}{10}\selectfont\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.13\textwidth-3.12pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.19\textwidth-4.5600000000000005pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.25\textwidth-6.0pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.25\textwidth-6.0pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.18\textwidth-4.32pt\relax}@{}}
+\toprule
+\textbf{과제} & \textbf{제약 필드} & \textbf{실제 논리 조건} & \textbf{생성 CNL} & \textbf{후보 판정}\\
+\midrule
+최고속도 & {\ttfamily\fontseries{m}\selectfont\footnotesize speed/\allowbreak le/\allowbreak m/\allowbreak s/\allowbreak 4400} & $q\Rightarrow\widehat{v}\leq4400$ & The candidate's maximum speed must be at most 4.4 m/s. & A: 6.0 m/s, UNSAT; B: 2.8 m/s, SAT\\[3pt]
+최소거리 & {\ttfamily\fontseries{m}\selectfont\footnotesize clearance/\allowbreak ge/\allowbreak m/\allowbreak 2000} & $q\Rightarrow\widehat{d}\geq2000$ & The candidate's minimum obstacle clearance must be at least 2 m. & A: 0.9 m, UNSAT; B: 3.1 m, SAT\\[3pt]
+최소 진입시간 & {\ttfamily\fontseries{m}\selectfont\footnotesize entry\_\allowbreak delay/\allowbreak ge/\allowbreak s/\allowbreak 2500} & $q\Rightarrow\widehat{u}\geq2500$ & The candidate's intersection entry time from now must be at least 2.5 s. & A: 0.9 s, UNSAT; B: 4.1 s, SAT\\[3pt]
+해소 후 시간 대기 & {\ttfamily\fontseries{m}\selectfont\footnotesize release\_\allowbreak clear\_\allowbreak ms=500}; {\ttfamily\fontseries{m}\selectfont\footnotesize clear\_\allowbreak ms=11000} & $e\Rightarrow u_{\mathrm{ms}}\geq11000+500$ & Enter only after the zone has remained clear for at least 0.5 s. & 11499 ms: UNSAT; 11500 ms: SAT\\[3pt]
+정지 & {\ttfamily\fontseries{m}\selectfont\footnotesize stop\_\allowbreak offset\_\allowbreak m}, {\ttfamily\fontseries{m}\selectfont\footnotesize peak\_\allowbreak decel}, {\ttfamily\fontseries{m}\selectfont\footnotesize peak\_\allowbreak jerk}; 경계 0, 5800, 7400 & $q\Rightarrow(\widehat{o}\leq0\land\widehat{a}\leq5800\land\widehat{j}\leq7400)$ & Stop at or before the stop line (stop offset at most 0 m). & C는 정지선 초과: UNSAT; D는 모두 충족: SAT 및 정답\\[3pt]
+차선 변경 & {\ttfamily\fontseries{m}\selectfont\footnotesize min\_\allowbreak gap\_\allowbreak m/\allowbreak ge/\allowbreak m/\allowbreak 5800} & $q\Rightarrow\widehat{g}\geq5800$ & The candidate's minimum gap during the lane change must be at least 5.8 m. & D: UNSAT; A: SAT 및 정답; C: SAT이나 미완료\\[3pt]
+\bottomrule\end{tabular}
+\end{table*}
+
+정지의 나머지 생성 조항은 “The candidate's peak deceleration must be at most 5.8 m/s\textasciicircum{}2.”와 “The candidate's peak jerk must be at most 7.4 m/s\textasciicircum{}3.”이다. 표에서는 CNL 표시만 줄였으며 검증 계약은 세 조건 모두를 포함한다. $o$는 부호 있는 정지 위치, $a$는 최대 감속도, $j$는 최대 가가속도, $g$는 차선 변경 최소 간격, $v$는 최고속도, $d$는 최소 장애물 거리, $u$는 진입 지연이다. 해소 후 대기는 지금부터 고정 시간 기다리는 것과 달리, 관측된 해소 시점에 요구 대기를 더한다.\par
+
+선택 후보 $a$에 대해 솔버는 $\Phi_C\land B(a)$를 검사한다. $\Phi_C$는 컴파일한 계약이고 $B(a)$는 후보 측정값과 완료 여부를 고정한다. SAT은 해당 계약과 양립함, UNSAT은 양립하지 않음을 뜻한다. 별도로 구현한 과제 규칙이 허용 후보를 계산하고 그중 진행도가 가장 높은 후보를 정답으로 정한다. 그 정답과 일치하면 정확도에서 정답이며, 금지 후보를 고르면 위반이다. 따라서 SAT 후보라도 진행도가 낮거나 목표를 완료하지 않으면 정확도에서는 오답일 수 있다. 두 구현은 공급한 과제 가정을 공유하므로, 일치 검사는 구현 대응의 근거이지 독립적인 도로 안전 정답은 아니다.\par
+
+실험 섹션도 같은 연결을 따라 과제별 정확도·위반율, 계약 변경에 대한 반응, 명세·CNL 품질을 보고한다. 후보별 상세 기록과 지원하지 못한 오류는 부가자료에 남긴다.\par
+\section{실험 설정}
+
+\subsection{평가 목적과 설정}
+
+본 실험은 명시적 행동 제약을 CoC에 더했을 때의 행동 선택 효과와, 그 제약을 EBLC로 명세·검증하여 CNL로 제공하는 개발 경로의 검사 가능성을 구분하여 평가한다. P1과 P2는 모두 우리의 제약 강화 접근이다. P1--P2 비교는 경쟁 기법 간 우열이 아니라 정형화된 지원 경로에서도 행동 효과가 유지되는지 살펴보는 보조 비교이다.\par
+
+
+\begin{table*}[tp]\caption{비교 조건과 역할}
+\centering\fontsize{8}{10}\selectfont\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.24\textwidth-2.88pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.33\textwidth-3.96pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.43\textwidth-5.16pt\relax}@{}}
+\toprule
+\textbf{조건} & \textbf{CoC에 추가하는 정보} & \textbf{평가 목적}\\
+\midrule
+P0 & 추가 제약 없음 & CoC 단독 기준\\[3pt]
+P1 & 기존 자연어로 작성한 행동 제약 & 기존 제약 강화 접근의 효과\\[3pt]
+P2 & 같은 규칙을 EBLC로 명세·검증한 뒤 생성한 CNL & 제약 개발을 지원하는 정형화 경로의 효과\\[3pt]
+\bottomrule\end{tabular}
+\end{table*}
+
+세 조건은 같은 이미지·행동 후보·참조 정답·분할을 사용한다. P1·P2에는 학습과 평가 모두 제약을 제공하며, P2의 모델 입력은 솔버 판정이 아닌 CNL이다. 같은 장면과 후보에 허용 범위가 다른 두 계약을 부여하므로, 계약을 받지 않는 P0에는 같은 입력에 다른 정답이 연결될 수 있다. 따라서 비교는 제약 정보 제공의 효과를 포함하며 검증만의 인과적 성능 향상을 분리하지 않는다.\par
+
+정적 제약 세 유형, 시간 대기 후 진입, 정지 및 차선 변경을 평가했다. 이는 선행 연구의 과제 유형을 P2까지 확장한 재평가이며 동일 데이터·예산의 수치 재현은 아니다. Qwen3-VL-2B-Instruct를 LoRA로 학습하고 세 시드(42·17·123)의 최종 체크포인트를 평가했다. 성능에 따른 체크포인트 선택은 하지 않았다.\par
+
+같은 과제군 내 조건별 예제·업데이트 예산을 맞췄으나 토큰 수는 다르다. 시간·정적·기동의 학습 행은 960·576·384개, 조건·시드당 업데이트는 180·108·72회이다. LoRA rank/alpha/dropout은 8/16/0.05, batch 2·누적 8, AdamW 학습률 0.0002·weight decay 0.01, 3 epochs를 사용한다. 후보 수치는 텍스트에도 제공한다. 시간 과제의 학습/검증/시험 고유 합성 이미지는 40/10/10개이다. 정적 기본 시험 그림 13개는 학습 그림과 겹치며, 기동 과제는 두 도식을 재사용한다. 레코드 수는 독립 도로 장면 수가 아니다. 상세 분할·반복 예산은 부가자료 S1·S8에 제시한다.\par
+
+중심 지표는 허용 후보 중 최대 진행 후보와의 일치인 \textbf{정확도}, 계약에 금지된 행동을 고른 \textbf{위반율}, 같은 장면의 두 계약을 모두 맞힌 \textbf{계약쌍 정확도}이다. 준수하지만 덜 진행한 선택은 정확도에서는 오답이나 위반은 아니다. 아래 표는 세 시드 평균이며 그림에는 개별 시드도 표시한다. 준수·목표 완료는 보조 지표이고, 모든 선택이 목표를 완료하는 조건에서는 위반율의 보수이므로 독립 성과로 중복 계산하지 않는다.\par
+\section{결과}
+
+\subsection{여러 행동 과제의 성능}
+
+여섯 과제 행은 표~\ref{tab:taskmap}과 직접 대응한다. 모델이 고른 후보의 저장 측정값을 해당 과제의 논리 조건에 연결하고, 별도 과제 규칙으로 허용 여부·참조 정답을 계산한 뒤 SMT 판정과 대조한다. 따라서 명세 질의 수와 모델 예측 수는 서로 다른 평가 단위이다.\par
+
+
+\begin{table*}[tp]\caption{기본 평가의 정확도 / 위반율. 단위 \%, 세 시드 평균}
+\centering\fontsize{8}{10}\selectfont\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.24\textwidth-4.32pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.25\textwidth-4.5pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.25\textwidth-4.5pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.26\textwidth-4.68pt\relax}@{}}
+\toprule
+\textbf{과제} & \textbf{P0} & \textbf{P1} & \textbf{P2}\\
+\midrule
+최고속도 제한 & 50.00 / 24.31 & 100.00 / 0.00 & 100.00 / 0.00\\[3pt]
+최소거리 확보 & 50.00 / 24.31 & 100.00 / 0.00 & 100.00 / 0.00\\[3pt]
+최소 진입시간 & 50.00 / 24.31 & 100.00 / 0.00 & 100.00 / 0.00\\[3pt]
+시간 대기 후 진입 & 49.86 / 19.17 & 96.81 / 1.39 & 98.06 / 0.83\\[3pt]
+정지 행동 & 50.00 / 23.61 & 100.00 / 0.00 & 100.00 / 0.00\\[3pt]
+차선 변경 & 50.00 / 38.19 & 100.00 / 0.00 & 97.92 / 0.00\\[3pt]
+\bottomrule\end{tabular}
+\end{table*}
+
+P1과 P2는 여섯 유형 모두에서 P0보다 높은 정확도와 낮은 위반율을 보였다. 시간 과제에서 P0 대비 정확도 차이는 P1 46.94\%p, P2 48.19\%p였고, 위반율은 각각 17.78\%p와 18.33\%p 낮았다. 정적 세 유형과 정지에서는 P1·P2의 기본 평가 성능이 같았다. 차선 변경에서 P2의 잔여 오답은 허용되지만 덜 진행한 선택이며 준수·목표 완료율은 100\%였다. 시간 과제의 P2 준수·목표 완료율은 99.17\%였다.\par
+
+\begin{figure*}[!t]\centering
+\includegraphics[width=.94\textwidth,height=.30\textheight,keepaspectratio]{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/manuscript-revision-2026-09-30-001/figures/task-performance-ko.pdf}
+\caption{정확도와 위반율의 과제별 비교. 큰 점은 평균, 작은 점은 세 시드 값이다. 선으로 과제 간 추세를 만들지 않았으며, 0\% 위반은 평가 표본에서 위반을 관측하지 않았다는 뜻이다.}
+\end{figure*}
+
+P2가 P1을 모든 시드·조건에서 능가하지는 않는다. 여기서는 P0 대비 두 경로의 관측 효과를 보고하며, P1--P2의 정형적 비열등성은 검정하지 않았다.\par
+
+\subsection{제약 변경과 연결의 영향}
+
+같은 장면의 제약만 바꾸는 계약쌍에서 P0의 정확도는 세 과제군 모두 0\%였다. 시간·정적·기동 과제군 순으로 P1은 93.61\%, 100\%, 100\%, P2는 96.11\%, 100\%, 97.92\%였다. 이는 제약을 제공받은 모델이 같은 시각 입력에서도 계약에 따라 선택을 달리할 수 있음을 보여준다. P0의 낮은 값은 계약 정보가 없는 과제 구성과 함께 해석해야 한다.\par
+
+학습 시 사례와 제약의 대응을 뒤섞고 평가에서는 정상 제약을 제공하는 대조 조건의 정확도는 시간 50.56\%, 정적 50.69\%, 기동 49.65\%였다. 시간 과제는 자연어 제약을, 새 정적·기동 과제는 같은 유형 내 P2 CNL을 교란했으므로 동일한 교란 구현의 통합 추정치로 합치지 않는다. 결과는 문장 추가 자체보다 올바른 사례--제약 연결의 중요성을 지지한다.\par
+
+\begin{figure*}[!t]\centering
+\includegraphics[width=.94\textwidth,height=.30\textheight,keepaspectratio]{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/manuscript-revision-2026-09-30-001/figures/contract-linkage-ko.pdf}
+\caption{왼쪽은 두 계약을 모두 맞힌 비율, 오른쪽은 정상 연결의 P2와 학습 연결 교란 조건의 행동 정확도이다. 점은 세 시드 평균이다. 정적·기동은 각각 하위 유형을 합친 과제군 결과이다.}
+\end{figure*}
+
+실제 예측의 한 사례에서 해소 11.0초·대기 1.5초일 때 P0는 11.5초 진입, P1·P2는 허용 경계인 12.5초 진입을 선택했다. P2가 다른 사례의 경계보다 0.1초 일찍 진입한 잔여 위반도 있었다. 사후 선택한 두 설명 사례의 상세는 부가자료 S5에 제시한다.\par
+
+\subsection{명세와 CNL의 검사 가능성}
+
+스키마·근거·Core 판정·CNL 대응의 검사 경로에 부정 의미, 임계값, 해제 조건, 비교 연산, 단위 관련 오류를 주입했다. 여섯 유형 각 24건의 상세 결과와 검사 층은 부가자료 S3에 제시한다. 이 품질 평가는 모델 정확도와 별개이다.\par
+
+
+\begin{table*}[tp]\caption{명세·CNL 검사 결과}
+\centering\fontsize{8}{10}\selectfont\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.24\textwidth-2.88pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.33\textwidth-3.96pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.43\textwidth-5.16pt\relax}@{}}
+\toprule
+\textbf{입력 유형} & \textbf{건수} & \textbf{검사 결과}\\
+\midrule
+지원 오류 6종 & 144 & 144 탐지, 미탐 0\\[3pt]
+근거와 명세의 공유 오류 & 24 & 탐지 0, 미탐 24\\[3pt]
+정상 계약 & 24 & 24 수용, 오탐 0\\[3pt]
+\bottomrule\end{tabular}
+\end{table*}
+
+전체 오류 168건의 탐지율은 85.71\%였다. 이는 SAT 풀이만의 성과가 아니라 여러 검사 층의 결과이며, 신뢰한 근거와 명세가 함께 틀리면 오류가 남을 수 있다. 따라서 만족 가능성과 근거의 사실성은 구분한다.\par
+
+시간 경계 질의 100건은 SAT 76건·UNSAT 24건으로 모두 예상과 일치했고 UNKNOWN은 없었다. 추가 과제의 후보 검사와 모델 예측 판정 대조는 부가자료 S8에 제시한다.\par
+
+\begin{figure*}[!t]\centering
+\includegraphics[width=.94\textwidth,height=.30\textheight,keepaspectratio]{/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/manuscript-revision-2026-09-30-001/figures/smt-boundary-ko.pdf}
+\caption{11.000초 해소 후 0.500초 대기하는 계약의 경계 질의. 11.499초 진입은 UNSAT, 11.500초와 11.501초는 SAT이다. 그림은 경계 주변 1ms 간격을 확대한 논리 시간축이며 실제 차량 제어 정밀도를 뜻하지 않는다.}
+\end{figure*}
+
+여기서 UNSAT는 잘못된 명세 수가 아니라 계약과 금지 행동의 양립 불가능성을 뜻한다. 반대로 오류 주입으로 대기를 100ms 늘리면 원래 허용할 질의가 UNSAT가 되고, 해제 조건을 삭제하면 금지할 질의가 SAT가 된다. 기대와 다른 판정은 원 근거·임계값·조항을 점검하고 수정 후 양쪽 경계를 재검증해야 한다. 기본 계약 자체가 UNSAT이거나 UNKNOWN이면 승인 근거로 사용하지 않는다. 대표 충돌 집합과 상세 처리 사례는 부가자료에 보존한다.\par
+
+\subsection{미학습 조건과 해석 범위}
+
+
+\begin{table*}[tp]\caption{미학습 수치·시간의 정확도 / 위반율. 단위 \%, 세 시드 평균}
+\centering\fontsize{8}{10}\selectfont\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.24\textwidth-4.32pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.25\textwidth-4.5pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.25\textwidth-4.5pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.26\textwidth-4.68pt\relax}@{}}
+\toprule
+\textbf{과제군} & \textbf{P0} & \textbf{P1} & \textbf{P2}\\
+\midrule
+시간 & 49.86 / 18.47 & 96.67 / 2.22 & 96.67 / 1.53\\[3pt]
+정적 & 50.00 / 22.92 & 99.54 / 0.00 & 97.22 / 0.23\\[3pt]
+기동 & 50.00 / 30.90 & 100.00 / 0.00 & 98.96 / 0.00\\[3pt]
+\bottomrule\end{tabular}
+\end{table*}
+
+학습하지 않은 수치·시간에서도 두 제약 강화 경로는 P0보다 높은 성능을 보였다. 다만 새로운 표현을 수용하는 정도는 과제별로 달랐다. 예를 들어 정적 표현 변경에서 P2 정확도는 80.32\%, 위반율은 7.87\%였다. 표현 변경·복합 조건·이미지 개입과 명세 기반 비용 추가 학습은 지원 경로의 보조 진단으로 분리하여, 유리한 결과와 불리한 결과 모두 부가자료에 보고한다.\par
+
+본 결과는 공급된 합성 제약과 유한 후보에서의 효과이다. 텍스트 수치·반복 그림·단일 모델·세 시드에 한정되므로 실제 도로의 시각 이해, 폐루프 안전성이나 Alpamayo 학습으로 확대하지 않는다. 제약 제공 효과와 검증 자체의 인과 효과를 구분하며, 상세 변동·조건부 구간·기존 운영 기준의 판정은 부가자료에 보존한다.\par
+
+종합하면, 여러 행동 과제에서 CoC 제약 강화의 효과가 관찰되었으며, EBLC 기반 지원 경로는 높은 행동 선택 성능과 함께 제약의 오류 및 허용·금지 경계를 검사하는 수단을 제공하였다.\par
+\clearpage
+\section{논의}
+
+\subsection{CoC에서 명시적 행동 제약의 역할}
+
+CoC가 상황과 행동의 이유를 연결한다면, 명시적 행동 제약은 그 상황에서 어떤 선택을 허용하거나 제한하는지 보완한다. 여러 정적·시간·기동 과제에서 P1과 P2가 P0보다 높은 정확도와 낮은 위반율을 보인 결과는 이러한 보완의 유용성을 뒷받침한다. 특히 같은 장면과 후보에 서로 다른 계약을 부여한 평가에서는 시각적 상황만으로 선택이 결정되지 않으며, 적용되는 규칙에 따라 행동이 달라져야 한다. 따라서 제약 강화는 CoC의 설명을 대체하기보다, 설명에 행동 선택의 명시적인 조건을 결합하는 접근으로 해석할 수 있다.\par
+
+연결 교란 조건의 낮은 성능은 제약 문장의 추가 자체보다 사례와 제약의 올바른 대응이 중요함을 보여준다. 이는 제약을 추출할 때 대상·영역·시점을 관측에 연결하고, 관측 사실과 적용 규칙을 구분해야 한다는 방법론적 동기를 지지한다. 다만 P0에는 가변 계약 정보가 제공되지 않으므로, 관측된 성능 차이는 정보 제공의 효과를 포함한다. 이를 CoC 전반의 추론 능력 부족이나 동일한 정보 조건에서의 학습 효율 차이로 확대해서는 안 된다.\par
+
+\subsection{제약 개발을 지원하는 정형 명세의 가치}
+
+이 개발 경로는 어떤 제약을 어디에서 얻고 학습 데이터의 어디에 넣는지를 명시한다. CoC에서는 관련 행동과 이유를, 관측에서는 대상·영역·사건을, 공급 규칙에서는 경계·해제 요건을 선택한다. 이들을 명세 필드와 출처에 연결하고 검사한 뒤 생성 CNL을 원 CoC 뒤에 넣는다. 표~\ref{tab:taskmap}의 과제--필드--논리식--CNL--판정 연결이 이 절차를 구체화한다. 선행 논문의 제약 강화 개념과 평가 원리를 계승하면서 제약 개발을 추적·검사 가능한 단계로 만드는 것이 이번 연구의 차별점이다.\par
+
+P1과 P2는 외부 경쟁 기법이 아니라 동일한 제약 강화 접근의 서로 다른 개발 경로이다. P1은 기존 자연어 제약을 직접 제공하고, P2는 해당 규칙을 EBLC로 명세·검증한 뒤 생성한 CNL을 제공한다. 이때 정형화의 핵심 가치는 모델 성능을 항상 더 높이는 데 있지 않다. 대상과 범위, 적용·유지·해제 조건, 제한 행동 및 가정을 구별하여 작성하고, 그 관계를 검사 가능한 표현으로 연결한다는 점에 있다. 자연어 제약도 사람이 검토할 수 있지만, EBLC 경로는 지원 범위 안에서 명세·변환·생성 문장의 대응을 명시적인 검사 대상으로 만든다.\par
+
+행동 평가와 오류 주입 결과는 이 가치를 서로 다른 측면에서 뒷받침한다. 전자는 정형화 경로를 거친 CNL도 높은 행동 선택 성능과 연결될 수 있음을 보이며, 후자는 누락·경계·의미 대응 오류를 검사할 수 있음을 보인다. 다만 P1과 P2의 차이는 과제와 표현에 따라 달랐으므로 보편적 동등성이나 비열등성을 확정하지 않는다. 이 결과가 지지하는 주장은 기존 제약 강화의 효과를 활용하면서 제약 작성과 검증의 체계성을 높일 수 있다는 것이며, 검증 단계 자체가 성능 향상의 원인이라는 주장은 아니다.\par
+
+\subsection{근거의 타당성, 명세 검증, 행동 준수의 구별}
+
+제약 강화 과정의 신뢰성은 세 층으로 나누어 해석할 필요가 있다. 첫째는 선택한 관측·규칙·가정이 장면에 적절한가라는 근거의 타당성이다. 둘째는 그 내용을 명세와 CNL이 의도대로 표현하는가라는 표현·변환의 타당성이다. 셋째는 모델이 제공된 제약에 맞는 행동을 선택하는가라는 행동 준수이다. SMT 검증은 주어진 모델과 가정 아래의 논리적 성질을 확인하며, 지원된 대응 검사는 명세와 생성 문장의 일치를 확인한다. 이 두 검사가 장면 해석이나 규칙 근거의 사실성을 대신하지는 않는다.\par
+
+근거와 명세를 함께 바꾼 공유 오류가 탐지되지 않은 결과는 첫째 층의 한계를, 올바른 명세를 제공해도 모델에 잔여 위반이 나타난 결과는 셋째 층의 한계를 드러낸다. 두 현상은 서로 다른 오류이므로 구분하여 다뤄야 한다. 금지 행동을 계약에 결합했을 때의 예상된 UNSAT는 정상적인 배제 근거인 반면, 허용해야 할 행동의 예상 밖 UNSAT는 근거·조항·변환을 재점검할 이유가 된다. 따라서 명세 검증과 행동 평가는 서로 대체되는 절차가 아니라, 다른 종류의 오류를 확인하는 보완적인 근거이다.\par
+
+\subsection{적용 범위와 후속 확장}
+
+현재 행동 성능의 근거는 공급된 합성 규칙, 유한 행동 후보, 단일 VLM과 세 최적화 시드에 한정된다. 후보 수치가 텍스트에도 포함되고 일부 그림이 반복되므로 미학습 수치에서의 성능을 새로운 실제 도로의 시각적 일반화로 해석할 수는 없다. 또한 P1과 P2는 평가 때에도 제약을 제공받으므로 제약 없이 규칙이 내재화되었는지는 확인하지 않았다. 표현 변경에 따른 차이는 생성 CNL을 사용하는 모델과 입력 인터페이스의 적용 범위를 보여주며, 본 연구에서 그 원인을 기반 모델의 언어 능력만으로 분리하지는 않았다. 오류 탐지 역시 지원된 문법과 주입 오류 범위에 한정된다.\par
+
+후속 연구는 실제 장면에서 제약의 적용 근거를 확보하는 과정과, 다양한 모델·환경에서 생성 CNL을 활용하는 과정을 평가하는 방향으로 진행할 수 있다. 사람의 확인은 관측·규칙·가정의 적절성에, 기계 처리는 구조화·명세 검사·문장 생성에 집중시키는 구성이 유망하다. GuardSynth Studio는 이러한 작업 흐름을 구현하는 기반으로 활용할 수 있으나, 자동 추출 정확도나 작업 시간 절감은 별도의 평가가 필요하다. 본 연구는 그에 앞서 CoC 제약 강화의 행동 선택 효과를 확인하고, 해당 제약을 구조화·검증하여 자연어 학습 입력으로 연결하는 체계적인 개발 경로를 제시한다.\par
+\section{결론}
+
+GuardSynth는 Chain of Causation을 보강할 행동 제약을 체계적으로 개발하는 경로를 제시한다. 제약의 내용과 출처를 식별하고 지원 EBLC 필드·의미론에 연결한 뒤 제한된 논리 표현을 검사하며, CNL을 생성하여 원래 CoC 뒤에 삽입한다. 과제--필드--논리식--CNL--판정 연결을 통해 방법론을 실행 예제 및 평가와 대응시켰다.\par
+
+여섯 합성 후보 선택 과제에서 우리의 기존 자연어 제약 경로와 EBLC 기반 CNL 경로 모두 CoC 단독보다 높은 기본 정확도와 낮은 위반율을 보였다. 별도의 오류·경계 분석은 지원 검사 기능과 함께 공유 근거 오류 및 잔여 모델 위반을 드러냈다. 본 연구는 명시적 제약의 행동 효과에 추적 가능한 정형 개발 인터페이스를 결합하며, 더 넓은 추출 신뢰성과 실제 도로 일반화는 후속 연구로 남긴다.\par
+\section*{집필 지원 고지}
+I--VIII장의 초안 작성·번역·편집·형식 정리에 OpenAI Codex를 사용하였다. 주장·인용의 최종 확인과 책임은 저자에게 있으며, 저자·소속·연구비·선행 원고 출판 정보는 최종 확인이 필요하다.\cite{r15}
+\begin{thebibliography}{99}
+\bibitem{r1} NVIDIA, “Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail,” arXiv:2511.00088, 2025, revised 2026. \url{https://arxiv.org/abs/2511.00088}
+\bibitem{r2} C. Sima et al., “DriveLM: Driving with Graph Visual Question Answering,” ECCV, 2024. \url{https://arxiv.org/abs/2312.14150}
+\bibitem{r3} X. Tian et al., “DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models,” 2024. \url{https://arxiv.org/abs/2402.12289}
+\bibitem{r4} Research team's preceding manuscript, Guard-Aware Trajectory Candidate Selection for Vision-Language Autonomous Driving: Safety-Constrained Chain-of-Causation, supplied revision v01. Publication details pending author confirmation.
+\bibitem{r5} Y. Li et al., “Drive-R1: Bridging Reasoning and Planning in VLMs for Autonomous Driving with Reinforcement Learning,” AAAI, vol. 40, no. 8, pp. 6708--6716, 2026. \url{https://ojs.aaai.org/index.php/AAAI/article/view/37602}
+\bibitem{r6} K. Esterle, L. Gressenbuch, and A. Knoll, “Formalizing Traffic Rules for Machine Interpretability,” IEEE CAVS, 2020. \url{https://arxiv.org/abs/2007.00330}
+\bibitem{r7} T. Cai et al., “Driving with Regulation: Trustworthy and Interpretable Decision-Making for Autonomous Driving with Retrieval-Augmented Reasoning,” AAAI, vol. 40, no. 45, pp. 38287--38295, 2026. \url{https://ojs.aaai.org/index.php/AAAI/article/view/41168}
+\bibitem{r8} Y. Chen, R. Gandhi, Y. Zhang, and C. Fan, “NL2TL: Transforming Natural Languages to Temporal Logics using Large Language Models,” EMNLP, pp. 15880--15903, 2023. \url{https://aclanthology.org/2023.emnlp-main.985/}
+\bibitem{r9} M. Cosler, C. Hahn, D. Mendoza, F. Schmitt, and C. Trippel, “nl2spec: Interactively Translating Unstructured Natural Language to Temporal Logics with Large Language Models,” CAV, 2023. \url{https://arxiv.org/abs/2303.04864}
+\bibitem{r10} N. E. Fuchs, K. Kaljurand, and G. Schneider, “Attempto Controlled English Meets the Challenges of Knowledge Representation, Reasoning, Interoperability and User Interfaces,” 2006. \url{https://attempto.ifi.uzh.ch/site/pubs/papers/FLAIRS0601FuchsN.pdf}
+\bibitem{r11} C. Barrett and C. Tinelli, “Satisfiability Modulo Theories,” Handbook of Model Checking, pp. 305--343, 2018. \url{https://theory.stanford.edu/~barrett/pubs/BT18.pdf}
+\bibitem{r12} L. de Moura and N. Bjørner, “Z3: An Efficient SMT Solver,” TACAS, pp. 337--340, 2008. \url{https://doi.org/10.1007/978-3-540-78800-3_24}
+\bibitem{r13} T. Kuhn, “A Survey and Classification of Controlled Natural Languages,” Computational Linguistics, vol. 40, no. 1, pp. 121--170, 2014. \url{https://aclanthology.org/J14-1005/}
+\bibitem{r14} E. J. Hu et al., “LoRA: Low-Rank Adaptation of Large Language Models,” arXiv:2106.09685, 2021. \url{https://arxiv.org/abs/2106.09685}
+\bibitem{r15} OpenAI, Codex. Software used for drafting, translation, editing, and formatting assistance. \url{https://openai.com/codex/}
+\end{thebibliography}
+\end{document}

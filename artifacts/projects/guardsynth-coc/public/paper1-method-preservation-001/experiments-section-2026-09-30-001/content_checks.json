@@ -1,0 +1,18 @@
+{
+  "ko": {
+    "pages": 7,
+    "text_units_matched": 218,
+    "numerical_table_cells_checked": 57,
+    "warnings": [],
+    "math_paragraphs_excluded_from_text_match": 2,
+    "main_table_caption_with_rows": true
+  },
+  "en": {
+    "pages": 8,
+    "text_units_matched": 218,
+    "numerical_table_cells_checked": 57,
+    "warnings": [],
+    "math_paragraphs_excluded_from_text_match": 2,
+    "main_table_caption_with_rows": true
+  }
+}

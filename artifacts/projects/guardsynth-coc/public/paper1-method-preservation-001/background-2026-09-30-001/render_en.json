@@ -1,0 +1,87 @@
+{
+  "project_id": "guardsynth-coc",
+  "status": "COMPILED_PENDING_LAYOUT_CHECK",
+  "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_BACKGROUND_V01_EN.md",
+  "source_sha256": "7a5021fc8b6c2cf75f4e65609198a47e4c0925864114bbd0b9046469eb4c9ab6",
+  "pdf": "ieee-access-background-v01-en.pdf",
+  "sections": [
+    "A. Vision–Language Models and Chain of Causation",
+    "B. Logical Specifications and Satisfiability-Based Verification",
+    "C. Controlled Natural Language",
+    "D. Low-Rank Adaptation",
+    "References"
+  ],
+  "table_count": 0,
+  "links": [
+    {
+      "label": "[1]",
+      "source_target": "https://arxiv.org/abs/2511.00088",
+      "pdf_target": "https://arxiv.org/abs/2511.00088"
+    },
+    {
+      "label": "[1]",
+      "source_target": "https://arxiv.org/abs/2511.00088",
+      "pdf_target": "https://arxiv.org/abs/2511.00088"
+    },
+    {
+      "label": "[2]",
+      "source_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf",
+      "pdf_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf"
+    },
+    {
+      "label": "[3]",
+      "source_target": "https://doi.org/10.1007/978-3-540-78800-3_24",
+      "pdf_target": "https://doi.org/10.1007/978-3-540-78800-3_24"
+    },
+    {
+      "label": "[2]",
+      "source_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf",
+      "pdf_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf"
+    },
+    {
+      "label": "[4]",
+      "source_target": "https://aclanthology.org/J14-1005/",
+      "pdf_target": "https://aclanthology.org/J14-1005/"
+    },
+    {
+      "label": "[4]",
+      "source_target": "https://aclanthology.org/J14-1005/",
+      "pdf_target": "https://aclanthology.org/J14-1005/"
+    },
+    {
+      "label": "[5]",
+      "source_target": "https://arxiv.org/abs/2106.09685",
+      "pdf_target": "https://arxiv.org/abs/2106.09685"
+    },
+    {
+      "label": "[5]",
+      "source_target": "https://arxiv.org/abs/2106.09685",
+      "pdf_target": "https://arxiv.org/abs/2106.09685"
+    },
+    {
+      "label": "Source",
+      "source_target": "https://arxiv.org/abs/2511.00088",
+      "pdf_target": "https://arxiv.org/abs/2511.00088"
+    },
+    {
+      "label": "Source",
+      "source_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf",
+      "pdf_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf"
+    },
+    {
+      "label": "Source",
+      "source_target": "https://doi.org/10.1007/978-3-540-78800-3_24",
+      "pdf_target": "https://doi.org/10.1007/978-3-540-78800-3_24"
+    },
+    {
+      "label": "Source",
+      "source_target": "https://aclanthology.org/J14-1005/",
+      "pdf_target": "https://aclanthology.org/J14-1005/"
+    },
+    {
+      "label": "Source",
+      "source_target": "https://arxiv.org/abs/2106.09685",
+      "pdf_target": "https://arxiv.org/abs/2106.09685"
+    }
+  ]
+}

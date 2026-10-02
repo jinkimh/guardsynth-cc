@@ -1,0 +1,20 @@
+{
+  "project_id": "sequential-coc-verification",
+  "source_kind": "AUTHORED_SYNTHETIC",
+  "human_gold": false,
+  "independent_external_evaluation": false,
+  "case_count": 144,
+  "family_count": 6,
+  "gap_values": [
+    0,
+    2,
+    6
+  ],
+  "cases_sha256": "0a0008567586a8a5eeff447b915280686adce259bda3ce4a770c4dae434a4cca",
+  "transition_contract_sha256": "e3f5e437dab029813dd4d5e515426e1079e29ce385108aea60665d87d130c4f8",
+  "script_sha256": "1bcc6e7f8c0a401a0c12a946ae01b60e290d2fe9b19fac190b0108014f9a2910",
+  "source_root": "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930",
+  "expected_label_policy": "FIXED_BY_VARIANT_BEFORE_EXECUTION_NO_FILTERING",
+  "claims": "SCENARIO_FEASIBILITY_TRACEABILITY_AND_IMPLEMENTATION_AGREEMENT_ONLY",
+  "verifyta": "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta"
+}

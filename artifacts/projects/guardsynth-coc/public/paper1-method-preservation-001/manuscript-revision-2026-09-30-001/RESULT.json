@@ -1,0 +1,55 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "manuscript-revision-2026-09-30-001",
+  "status": "AUTHOR_REVIEW_REVISION_COMPLETE",
+  "submission_ready": false,
+  "experiment_results_modified": false,
+  "main_tex_pdf_text_matches": true,
+  "checks": {
+    "smt_queries": 16,
+    "bilingual_numeric_cells": 54,
+    "additional_supplement_rows": 22,
+    "exact_cnl_profiles": 5,
+    "terminology": "PASS",
+    "file_naming_scoped": "PASS",
+    "file_naming_repository": "5_PREEXISTING_FINDINGS"
+  },
+  "documents": [
+    {
+      "file": "ieee-access-manuscript-en.pdf",
+      "pages": 18,
+      "sha256": "7ee5f47a711326acd9f1a4911ab1bc9d882d0b9c2ccca329e23e2e740f8c18cc"
+    },
+    {
+      "file": "ieee-access-manuscript-ko.pdf",
+      "pages": 17,
+      "sha256": "91caf6da42ac6a976220985b3e0e9b89246af0b7594a5da43d91853606787435"
+    },
+    {
+      "file": "ieee-access-experiments-supplement-v01-en.pdf",
+      "pages": 13,
+      "sha256": "9e0045fc6e0b464eae37935a1132d4de8273e31679355efa434adcf086c53bb3"
+    },
+    {
+      "file": "ieee-access-experiments-supplement-v01-ko.pdf",
+      "pages": 11,
+      "sha256": "26ad0ede41c1944f726f9697554d2ed07b4afdca04dcb459f70b4bd545d89c84"
+    }
+  ],
+  "main_tex_sha256": "a2aa4030a4e725d97b6962dba565acb3069323fdddc2eb76893956004647514b",
+  "remaining": [
+    "Author and preceding-paper publication metadata",
+    "Portable submission source packaging",
+    "Template color/font/frontmatter warnings"
+  ],
+  "evidence": [
+    "content_checks.json",
+    "RUN_MANIFEST.json",
+    "supplement_build.json",
+    "REPORT_KO.md"
+  ],
+  "skills_applied": [
+    "pages:write-page",
+    "superpowers:verification-before-completion"
+  ]
+}

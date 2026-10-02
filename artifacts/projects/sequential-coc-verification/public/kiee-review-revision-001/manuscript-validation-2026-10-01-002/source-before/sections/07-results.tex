@@ -1,0 +1,134 @@
+\section{\rev{결과}}
+\label{sec:results}
+
+\begin{revision}
+
+\subsection{기존 40쌍의 규칙 실행 결과}
+\label{sec:regression-results}
+표~\ref{tab:regression}은 자연 오류 성능이 아닌 회귀 결과다. 기존 전체 이력 검사는 P1--P3 30/30과 P4 처리 시험 10/10, 현재 사건 검사는 각각 20/30과 0/10이었다. 기준 사례의 확정 모순 표시는 양쪽 모두 0/40이다. 합계 40/40과 20/40을 일반 오류 검출 정확도로 해석하지 않는다.
+
+\begin{table}[t]
+\centering
+\color{revisionblue}
+\bitablecaption{기존 규칙 실행 회귀시험: 주석 문제와 처리 오류를 분리.}{Legacy rule-execution regression, separating annotation-related rules and processing faults.}
+\label{tab:regression}
+\footnotesize
+\begin{tabularx}{\columnwidth}{Ycc}
+\toprule
+시험 & 전체 이력 & 현재 사건 \\
+\midrule
+P1 미해제 의무 충돌 & 10/10 & 0/10 \\
+P2 조기 해제 & 10/10 & 10/10 \\
+P3 행동 순서 & 10/10 & 10/10 \\
+P4 검사기 처리 오류 & 10/10 & 0/10 \\
+기준 사례 모순 표시 & 0/40 & 0/40 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{최초 144개 작성 시나리오}
+\label{sec:first-results}
+표~\ref{tab:first-results}의 전체 이력 경로는 작성 프레임을 기존 단일 의무 형식으로 투영한 결과이며 96/144가 기대 판정과 일치했다. 확정 모순 72개 중 최초 위반 일치는 54/72다. 현재 사건은 72/144, 이전 1/3/5개는 84/90/90개가 일치했다. FSM은 144/144, 최초 위반 72/72였다. UPPAAL이 단순 비교기보다 정확하다는 근거는 없다.
+
+\input{sections/result-tables}
+
+기존 구조화 전체 이력 경로의 혼동 분포는 기대 모순 72건 중 모순 54ㆍ미상 18, 기대 양립 36건 중 양립 6ㆍ미상 30, 기대 근거 부족 36건 중 미상 36이다. 따라서 정상 오탐 0/36만 보고하면 정상 대부분을 판정하지 못한 사실을 숨긴다. 기존 자동 텍스트 경로는 모든 144건을 미상으로 판정했다. 기대 미상 36건만 일치하며 구조화 검사 성공을 자동 추출 성공으로 바꿀 수 없다.
+
+변형별로 기존 경로는 현재 미해제ㆍ이전 미해제ㆍ증거 누락ㆍ다른 대상 해제ㆍ행동 순서 위반에서 각각 18/18이었다. 정상 해제는 6/18이고 복수 일부 해제와 모두 해제는 각각 0/18이다. 간격별 일치 건수와 최초 위반 위치는 표~\ref{tab:first-results}에 함께 제시했다. 창을 늘려도 단일 의무 표현과 누적 미상 처리의 한계는 남는다.
+
+\subsection{실패 분석과 개발 후 동일 사례 재시험}
+\label{sec:retest-results}
+최초 불일치 48건은 복수 일부 해제 18, 복수 모두 해제 18, 중간 대기 후 정상 해제 12다. 복수 사례에서는 단일 의무 투영과 중첩 처리로 별도 조건을 표현하지 못했다. 정상 해제 사례에서는 대기 중 미상이 누적되어 이후 명시적인 정상 해제로도 최종 미상이 남았다. 이 실패는 자연 오류가 아니라 작성 의미와 기존 표현/정책의 불일치다.
+
+\begin{table}[t]
+\centering
+\color{revisionblue}
+\bitablecaption{48개 최초 불일치와 보완의 대상.}{All 48 initial mismatches and the corresponding refinement.}
+\label{tab:failures}
+\scriptsize
+\begin{tabularx}{\columnwidth}{L{.36\columnwidth}cY}
+\toprule
+유형 & 건수 & 보완 내용 \\
+\midrule
+복수 일부 해제 & 18 & C의 조건/의무를 A와 별도로 유지 \\
+복수 모두 해제 & 18 & 각 조건의 참 증거로 각각 해제 \\
+중간 대기 후 정상 해제 & 12 & 미상 대기와 근거 없이 진행한 사건 구분 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[t]
+\centering
+\color{revisionblue}
+\bitablecaption{개발 후 동일 사례 재시험: 조건별 UPPAAL 모델(독립 시험 아님).}{Post-development same-case retest of the condition-indexed UPPAAL model, not an independent test.}
+\label{tab:retest}
+\footnotesize
+\begin{tabularx}{\columnwidth}{Yc}
+\toprule
+대조 항목 & 기대 기록과 일치 \\
+\midrule
+최종 세 분류 & 144/144 \\
+모순의 최초 위반 사건 & 72/72 \\
+문제 위치(모순+근거 부족) & 108/108 \\
+관련 의무 & 108/108 \\
+문제 사유 & 108/108 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+보완 결과는 조건별 표현과 문제 추적을 실행할 수 있음을 보여 준다. 기대 판정을 바꾸지는 않았으나 모델 개발에 같은 실패 사례를 사용했다. 따라서 독립 일반화 성능이 아니며 R3의 개발 미사용 시험 요구를 충족한 결과로 제시하지 않는다. 새 프레임 모델이 자동 NLP 추출을 개선한 것도 아니다.
+
+\subsection{기존 Python--UPPAAL 출력 대조}
+\label{sec:agreement-results}
+표~\ref{tab:implementation}에서 판정ㆍ오류 종류ㆍ최초 위치는 기존 두 구현의 144건 전체에서 일치했다. 미상 사유는 24건이 달랐다. 최초 위반 반례의 접두 경로가 뒤에 누적된 미상 사유를 담지 못한 경우였다. 종료 상태의 추가 질의로 뒤의 사유까지 확인하면 144/144가 일치했다. 원 파서와 최초 로그는 보존했다. 이 출력 범위 진단을 48개 의미 불일치의 해결과 혼합하지 않는다.
+
+\begin{table}[t]
+\centering
+\color{revisionblue}
+\bitablecaption{기존 Python--UPPAAL 구현 일치성 및 종료 질의 진단.}{Legacy Python--UPPAAL output agreement and terminal-query diagnosis.}
+\label{tab:implementation}
+\footnotesize
+\begin{tabularx}{\columnwidth}{Yc}
+\toprule
+대조 항목 & 일치 사례 \\
+\midrule
+최종 판정 / 오류 종류 / 최초 위치 & 각 144/144 \\
+원 반례 접두 경로의 미상 사유 & 120/144 \\
+종료 상태 추가 질의의 미상 사유 & 144/144 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{자연 검토의 일치도와 기록 한계}
+\label{sec:human-results}
+\input{sections/human-tables}
+텍스트 $\kappa=0.027301$, 시간 요구 $\kappa=0.202892$, 행동열 $\kappa=0.291391$을 재현했다. 텍스트의 평균 쌍별 일치율은 0.407407이고 23/27장면에서 네 명의 판정이 달랐다. 표~\ref{tab:reviewer-distribution}에서 텍스트 모순 판정은 검토자별 10/0/1/1건, 해당 없음은 3/5/11/1건으로 크게 다르다. 이는 라벨 적용과 해석의 불안정성을 보여 주지만 원인을 전문성이나 교육 차이로 확정할 수는 없다.
+
+원 메모에는 ``시간 요구가 없는 행동 조절'', ``해제 조건과 행동 순서의 구별'', ``선행 관계를 연결할 정보 부족'' 등의 해석이 남아 있다. 이는 저장된 개별 의견이지 합의 원인의 전수 분석이 아니다. 현재 재분석으로 불일치의 질적 원인별 건수나 합의 형성 절차를 새로 확정하지 않았다. 합의 CSV는 모순 0/27이나 사유 기록도 0/27이다. 이를 객관적인 자연 정답으로 쓰지 않고 재평가ㆍ독립 중재가 미실시임을 유지한다.
+
+
+\begin{table*}[t]
+\centering
+\color{revisionblue}
+\bitablecaption{원 판정의 주요 불일치 예시. 개별 메모는 합의 사유나 확정 원인 분류가 아니다.}{Examples of original disagreements; individual notes are not consensus rationales or adjudicated causes.}
+\label{tab:disagreement-examples}
+\scriptsize
+\begin{tabularx}{\textwidth}{lL{.29\textwidth}Y}
+\toprule
+익명 장면 & 네 원 판정(R1/R2/R3/R4) & 보존된 개별 의견의 요지 \\
+\midrule
+G01 & 모순/해당 없음/해당 없음/모순 없음 & R3: 속도 조절 외 시간 요구가 없다고 해석 \\
+G04 & 모순/외부 근거 필요/외부 근거 필요/모순 없음 & R3: 신호가 바뀐 뒤 출발했는지 알 수 없어 증거 필요 \\
+G22 & 모순 없음/모순 없음/외부 근거 필요/모순 & R3: 보행자 통과 여부에 외부 근거 필요; R4: 정지ㆍ양보 요구로 해석 \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\subsection{궤적과 보조 반응 결과}
+\label{sec:trajectory-results}
+27장면의 궤적 비교는 일치 2, 불일치 7, 미상 18이며 재실행 기록과 장면별 판정 차이는 0이었다. 표~\ref{tab:trajectory-cases}는 각 장면의 저장 사유를 익명 순번으로 제시한다. 행동 일치가 있더라도 해제나 단계 시점 증거가 부족한 사건이 있으면 미상이 될 수 있다. 종방향 행동 불일치가 있는 7건은 문장 사이의 모순이나 위험 주행의 독립 정답이 아니다.
+
+\input{sections/trajectory-table}
+
+보조 반응 134건의 기본 판정은 $125+4+5$다. 탐지 대상 130건을 27설정에서 재집계하면 항상 검출 72, 설정 의존 57, 항상 미검출 1이다. 따라서 기본 설정의 미검출 등을 합친 58건 전체를 ``설정에 따라 바뀜''이라고 서술하지 않는다. 반복 판단의 시계를 처음부터 보존할지 재시작할지에 따라 두 장면의 $D=3$초 판정이 달랐고, 연결 근거 없는 장면 경계의 요구 이월도 별도 시험했다. 이런 결과는 설정과 자료 연결 근거를 보존해야 함을 보여 주며 차량 안전 기준을 확립하지 않는다.
+\end{revision}

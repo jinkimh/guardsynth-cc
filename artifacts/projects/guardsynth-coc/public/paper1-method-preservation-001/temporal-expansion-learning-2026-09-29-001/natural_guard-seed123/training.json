@@ -1,0 +1,23 @@
+{
+  "arm": "NATURAL_GUARD",
+  "seed": 123,
+  "history": [
+    {
+      "epoch": 1,
+      "mean_loss": 0.5354776856489479,
+      "optimizer_steps": 60
+    },
+    {
+      "epoch": 2,
+      "mean_loss": 0.31007390407224494,
+      "optimizer_steps": 60
+    },
+    {
+      "epoch": 3,
+      "mean_loss": 0.08066228763511087,
+      "optimizer_steps": 60
+    }
+  ],
+  "optimizer_updates": 180,
+  "nonzero_lora_B_tensors": 112
+}

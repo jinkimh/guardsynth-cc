@@ -1,0 +1,3414 @@
+{
+  "status": "COMPLETE",
+  "analysis_kind": "POST_HOC_EXPLORATORY_NO_THRESHOLD_TUNING",
+  "source_run": "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001",
+  "row_count": 17280,
+  "definitions": {
+    "safe_progress_loss_units": "best feasible progress minus chosen progress, ONLY valid compliant choices; abstract score units, report safe_n",
+    "gated_progress_loss_fraction": "1 - safe credited progress / best feasible progress; unsafe/invalid credited0; null if best<=0; NOT independent safety evidence",
+    "early_ms_per_entry": "max(0, clear+required_wait-entry) over valid entering choices, including compliant zeros",
+    "early_ms_per_violation": "same shortfall conditional on violations; no violations => null, not zero",
+    "excess_wait_ms_per_safe_entry": "entry-(clear+required_wait) over compliant moving choices; candidate discretization can force positive delay",
+    "unnecessary_stop_rate": "stopped while a feasible positive-progress candidate exists / eligible choices, includes invalid in denominator but reports valid_n",
+    "uncertainty": "descriptive per-seed mean/population SD only; pooled conditional stats differ from equally weighted seed stats; no new significance claims"
+  },
+  "results": {
+    "validation": {
+      "P0": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 591,
+          "violation_n": 129,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0,
+          "release_wait_violation_rate": 0.17916666666666667,
+          "safe_progress_loss_units": 7.267343485617597,
+          "safe_suboptimal_rate": 0.3925549915397631,
+          "gated_progress_loss_fraction": 0.23621843434343434,
+          "early_ms_per_entry": 171.52777777777777,
+          "early_ms_per_violation": 957.3643410852713,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 425.2115059221658
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 180,
+            "violation_n": 60,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.25,
+            "safe_progress_loss_units": 6.166666666666667,
+            "safe_suboptimal_rate": 0.3388888888888889,
+            "gated_progress_loss_fraction": 0.2943181818181818,
+            "early_ms_per_entry": 237.91666666666666,
+            "early_ms_per_violation": 951.6666666666666,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 371.6666666666667,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 221,
+            "violation_n": 19,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.07916666666666666,
+            "safe_progress_loss_units": 8.30316742081448,
+            "safe_suboptimal_rate": 0.45701357466063347,
+            "gated_progress_loss_fraction": 0.152594696969697,
+            "early_ms_per_entry": 76.66666666666667,
+            "early_ms_per_violation": 968.421052631579,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 490.4977375565611,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 190,
+            "violation_n": 50,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.20833333333333334,
+            "safe_progress_loss_units": 7.105263157894737,
+            "safe_suboptimal_rate": 0.3684210526315789,
+            "gated_progress_loss_fraction": 0.2617424242424242,
+            "early_ms_per_entry": 200,
+            "early_ms_per_violation": 960,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 400,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.17916666666666667,
+            "std_population": 0.0727279303421447,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 7.1916990817919615,
+            "std_population": 0.8743615746449973,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.38810783872703375,
+            "std_population": 0.050193210080278744,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.23621843434343434,
+            "std_population": 0.060607986738121566,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 171.52777777777777,
+            "std_population": 68.83986831143565,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 960.0292397660819,
+            "std_population": 6.839980676788165,
+            "defined_seed_n": 3
+          },
+          "early_violation_p95_ms": {
+            "mean": 1000.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "early_violation_max_ms": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 420.72146807440924,
+            "std_population": 50.67701833888053,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "P1": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 706,
+          "violation_n": 14,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0.013888888888888888,
+          "release_wait_violation_rate": 0.005555555555555556,
+          "safe_progress_loss_units": 0.1274787535410765,
+          "safe_suboptimal_rate": 0.0084985835694051,
+          "gated_progress_loss_fraction": 0.02058080808080808,
+          "early_ms_per_entry": 14.444444444444445,
+          "early_ms_per_violation": 742.8571428571429,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 41.5014164305949
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 239,
+            "violation_n": 1,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.004166666666666667,
+            "safe_progress_loss_units": 0.14644351464435146,
+            "safe_suboptimal_rate": 0.008368200836820083,
+            "gated_progress_loss_fraction": 0.005492424242424242,
+            "early_ms_per_entry": 0.4166666666666667,
+            "early_ms_per_violation": 100,
+            "early_violation_p95_ms": 100.0,
+            "early_violation_max_ms": 100,
+            "excess_wait_ms_per_safe_entry": 41.42259414225941,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 229,
+            "violation_n": 11,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.03333333333333333,
+            "release_wait_violation_rate": 0.0125,
+            "safe_progress_loss_units": 0.15283842794759825,
+            "safe_suboptimal_rate": 0.008733624454148471,
+            "gated_progress_loss_fraction": 0.04715909090909091,
+            "early_ms_per_entry": 34.583333333333336,
+            "early_ms_per_violation": 754.5454545454545,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 41.92139737991266,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 238,
+            "violation_n": 2,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.008333333333333333,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.08403361344537816,
+            "safe_suboptimal_rate": 0.008403361344537815,
+            "gated_progress_loss_fraction": 0.00909090909090909,
+            "early_ms_per_entry": 8.333333333333334,
+            "early_ms_per_violation": 1000,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 41.1764705882353,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0.013888888888888888,
+            "std_population": 0.014163943093313291,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.005555555555555556,
+            "std_population": 0.005196746370519363,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 0.12777185201244262,
+            "std_population": 0.03103759938903238,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.008501728878502124,
+            "std_population": 0.0001646020126021258,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.02058080808080808,
+            "std_population": 0.018851014329496776,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 14.444444444444445,
+            "std_population": 14.60250063144522,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 618.1818181818181,
+            "std_population": 379.86513483229413,
+            "defined_seed_n": 3
+          },
+          "early_violation_p95_ms": {
+            "mean": 700.0,
+            "std_population": 424.26406871192853,
+            "defined_seed_n": 3
+          },
+          "early_violation_max_ms": {
+            "mean": 700,
+            "std_population": 424.26406871192853,
+            "defined_seed_n": 3
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 41.506820703469124,
+            "std_population": 0.3098919881180032,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "P2": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 715,
+          "violation_n": 5,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0.005555555555555556,
+          "release_wait_violation_rate": 0.001388888888888889,
+          "safe_progress_loss_units": 0.18181818181818182,
+          "safe_suboptimal_rate": 0.011188811188811189,
+          "gated_progress_loss_fraction": 0.008661616161616162,
+          "early_ms_per_entry": 5.694444444444445,
+          "early_ms_per_violation": 820,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 44.47552447552447
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 239,
+            "violation_n": 1,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.004166666666666667,
+            "safe_progress_loss_units": 0.4393305439330544,
+            "safe_suboptimal_rate": 0.02510460251046025,
+            "gated_progress_loss_fraction": 0.00831439393939394,
+            "early_ms_per_entry": 0.4166666666666667,
+            "early_ms_per_violation": 100,
+            "early_violation_p95_ms": 100.0,
+            "early_violation_max_ms": 100,
+            "excess_wait_ms_per_safe_entry": 58.15899581589958,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.0,
+            "safe_suboptimal_rate": 0,
+            "gated_progress_loss_fraction": 0.0,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 33.333333333333336,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 236,
+            "violation_n": 4,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.016666666666666666,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.1059322033898305,
+            "safe_suboptimal_rate": 0.00847457627118644,
+            "gated_progress_loss_fraction": 0.017670454545454545,
+            "early_ms_per_entry": 16.666666666666668,
+            "early_ms_per_violation": 1000,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 41.94915254237288,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0.005555555555555556,
+            "std_population": 0.007856742013183862,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.001388888888888889,
+            "std_population": 0.0019641855032959655,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 0.1817542491076283,
+            "std_population": 0.1871978786752176,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.01119305959388223,
+            "std_population": 0.01042761975025567,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.008661616161616162,
+            "std_population": 0.007218109790171177,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 5.694444444444445,
+            "std_population": 7.760397247054997,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 550,
+            "std_population": 450.0,
+            "defined_seed_n": 2
+          },
+          "early_violation_p95_ms": {
+            "mean": 550.0,
+            "std_population": 450.0,
+            "defined_seed_n": 2
+          },
+          "early_violation_max_ms": {
+            "mean": 550,
+            "std_population": 450.0,
+            "defined_seed_n": 2
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 44.48049389720193,
+            "std_population": 10.291878552709255,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "NATURAL_GUARD": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 716,
+          "violation_n": 4,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0.005555555555555556,
+          "release_wait_violation_rate": 0,
+          "safe_progress_loss_units": 0.09078212290502793,
+          "safe_suboptimal_rate": 0.006983240223463687,
+          "gated_progress_loss_fraction": 0.0063762626262626266,
+          "early_ms_per_entry": 5.555555555555555,
+          "early_ms_per_violation": 1000,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 39.944134078212294
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 236,
+            "violation_n": 4,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.016666666666666666,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.2330508474576271,
+            "safe_suboptimal_rate": 0.01694915254237288,
+            "gated_progress_loss_fraction": 0.01875,
+            "early_ms_per_entry": 16.666666666666668,
+            "early_ms_per_violation": 1000,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 49.57627118644068,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.0,
+            "safe_suboptimal_rate": 0,
+            "gated_progress_loss_fraction": 0.0,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 33.333333333333336,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.041666666666666664,
+            "safe_suboptimal_rate": 0.004166666666666667,
+            "gated_progress_loss_fraction": 0.0003787878787878789,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 37.083333333333336,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0.005555555555555556,
+            "std_population": 0.007856742013183862,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 0.09157250470809793,
+            "std_population": 0.10147616757361544,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.007038606403013183,
+            "std_population": 0.007211309236796549,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.006376262626262626,
+            "std_population": 0.008750920047246383,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 5.555555555555556,
+            "std_population": 7.856742013183862,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "early_violation_p95_ms": {
+            "mean": 1000.0,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "early_violation_max_ms": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 39.997645951035786,
+            "std_population": 6.943974416727624,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "SHUFFLED_GUARD": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 578,
+          "violation_n": 142,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0,
+          "release_wait_violation_rate": 0.19722222222222222,
+          "safe_progress_loss_units": 6.963667820069205,
+          "safe_suboptimal_rate": 0.3685121107266436,
+          "gated_progress_loss_fraction": 0.2505050505050505,
+          "early_ms_per_entry": 190.41666666666666,
+          "early_ms_per_violation": 965.4929577464789,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 401.55709342560556
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 189,
+            "violation_n": 51,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.2125,
+            "safe_progress_loss_units": 6.216931216931217,
+            "safe_suboptimal_rate": 0.3439153439153439,
+            "gated_progress_loss_fraction": 0.25956439393939396,
+            "early_ms_per_entry": 206.25,
+            "early_ms_per_violation": 970.5882352941177,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 378.30687830687833,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 199,
+            "violation_n": 41,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.17083333333333334,
+            "safe_progress_loss_units": 7.663316582914573,
+            "safe_suboptimal_rate": 0.3969849246231156,
+            "gated_progress_loss_fraction": 0.23115530303030304,
+            "early_ms_per_entry": 165,
+            "early_ms_per_violation": 965.8536585365854,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 430.1507537688442,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 190,
+            "violation_n": 50,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.20833333333333334,
+            "safe_progress_loss_units": 6.973684210526316,
+            "safe_suboptimal_rate": 0.3631578947368421,
+            "gated_progress_loss_fraction": 0.26079545454545455,
+            "early_ms_per_entry": 200,
+            "early_ms_per_violation": 960,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 394.7368421052632,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.19722222222222222,
+            "std_population": 0.018737135504488946,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 6.951310670124035,
+            "std_population": 0.5906962491925953,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.36801938775843385,
+            "std_population": 0.021936585649304556,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.2505050505050505,
+            "std_population": 0.013691564874192206,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 190.41666666666666,
+            "std_population": 18.15251742565997,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 965.480631276901,
+            "std_population": 4.330669206427612,
+            "defined_seed_n": 3
+          },
+          "early_violation_p95_ms": {
+            "mean": 1000.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "early_violation_max_ms": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 401.06482472699525,
+            "std_population": 21.63298991162439,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "LOGIC_GUARD": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 719,
+          "violation_n": 1,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0.001388888888888889,
+          "release_wait_violation_rate": 0,
+          "safe_progress_loss_units": 0.055632823365785816,
+          "safe_suboptimal_rate": 0.005563282336578581,
+          "gated_progress_loss_fraction": 0.0018939393939393942,
+          "early_ms_per_entry": 1.3888888888888888,
+          "early_ms_per_violation": 1000,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 38.38664812239221
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.125,
+            "safe_suboptimal_rate": 0.0125,
+            "gated_progress_loss_fraction": 0.0011363636363636367,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 44.583333333333336,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.041666666666666664,
+            "safe_suboptimal_rate": 0.004166666666666667,
+            "gated_progress_loss_fraction": 0.0003787878787878789,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 37.083333333333336,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 239,
+            "violation_n": 1,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.004166666666666667,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.0,
+            "safe_suboptimal_rate": 0,
+            "gated_progress_loss_fraction": 0.004166666666666667,
+            "early_ms_per_entry": 4.166666666666667,
+            "early_ms_per_violation": 1000,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 33.47280334728033,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0.001388888888888889,
+            "std_population": 0.0019641855032959655,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 0.05555555555555555,
+            "std_population": 0.05196746370519363,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.005555555555555556,
+            "std_population": 0.005196746370519363,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.001893939393939394,
+            "std_population": 0.0016365506814161263,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 1.388888888888889,
+            "std_population": 1.9641855032959654,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "early_violation_p95_ms": {
+            "mean": 1000.0,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "early_violation_max_ms": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 38.37982333798234,
+            "std_population": 4.627571997773188,
+            "defined_seed_n": 3
+          }
+        }
+      }
+    },
+    "test": {
+      "P0": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 582,
+          "violation_n": 138,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0,
+          "release_wait_violation_rate": 0.19166666666666668,
+          "safe_progress_loss_units": 7.096219931271477,
+          "safe_suboptimal_rate": 0.38316151202749144,
+          "gated_progress_loss_fraction": 0.24652146464646466,
+          "early_ms_per_entry": 184.02777777777777,
+          "early_ms_per_violation": 960.1449275362319,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 416.3230240549828
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 180,
+            "violation_n": 60,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.25,
+            "safe_progress_loss_units": 6.166666666666667,
+            "safe_suboptimal_rate": 0.3388888888888889,
+            "gated_progress_loss_fraction": 0.2943181818181818,
+            "early_ms_per_entry": 237.91666666666666,
+            "early_ms_per_violation": 951.6666666666666,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 371.6666666666667,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 213,
+            "violation_n": 27,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.1125,
+            "safe_progress_loss_units": 7.957746478873239,
+            "safe_suboptimal_rate": 0.43661971830985913,
+            "gated_progress_loss_fraction": 0.18028409090909092,
+            "early_ms_per_entry": 110,
+            "early_ms_per_violation": 977.7777777777778,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 471.36150234741785,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 189,
+            "violation_n": 51,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.2125,
+            "safe_progress_loss_units": 7.01058201058201,
+            "safe_suboptimal_rate": 0.36507936507936506,
+            "gated_progress_loss_fraction": 0.2649621212121212,
+            "early_ms_per_entry": 204.16666666666666,
+            "early_ms_per_violation": 960.7843137254902,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 396.8253968253968,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.19166666666666665,
+            "std_population": 0.05803495115493383,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 7.044998385373972,
+            "std_population": 0.7316101368733887,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.38019599075937105,
+            "std_population": 0.04130547206516958,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.24652146464646466,
+            "std_population": 0.04834588457697353,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 184.02777777777777,
+            "std_population": 54.12854784083926,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 963.4095860566449,
+            "std_population": 10.820245590981859,
+            "defined_seed_n": 3
+          },
+          "early_violation_p95_ms": {
+            "mean": 1000.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "early_violation_max_ms": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 413.2845219464938,
+            "std_population": 42.33156556807964,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "P1": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 710,
+          "violation_n": 10,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0.0125,
+          "release_wait_violation_rate": 0.001388888888888889,
+          "safe_progress_loss_units": 0.33098591549295775,
+          "safe_suboptimal_rate": 0.018309859154929577,
+          "gated_progress_loss_fraction": 0.016856060606060607,
+          "early_ms_per_entry": 12.63888888888889,
+          "early_ms_per_violation": 910,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 51.12676056338028
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.6666666666666666,
+            "safe_suboptimal_rate": 0.029166666666666667,
+            "gated_progress_loss_fraction": 0.0060606060606060615,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 62.083333333333336,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 231,
+            "violation_n": 9,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.03333333333333333,
+            "release_wait_violation_rate": 0.004166666666666667,
+            "safe_progress_loss_units": 0.23809523809523808,
+            "safe_suboptimal_rate": 0.017316017316017316,
+            "gated_progress_loss_fraction": 0.03958333333333333,
+            "early_ms_per_entry": 33.75,
+            "early_ms_per_violation": 900,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 50.21645021645022,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 239,
+            "violation_n": 1,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.004166666666666667,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.08368200836820083,
+            "safe_suboptimal_rate": 0.008368200836820083,
+            "gated_progress_loss_fraction": 0.004924242424242425,
+            "early_ms_per_entry": 4.166666666666667,
+            "early_ms_per_violation": 1000,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 41.00418410041841,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0.0125,
+            "std_population": 0.014829275350043488,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.001388888888888889,
+            "std_population": 0.0019641855032959655,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 0.32948130437670187,
+            "std_population": 0.24661892031451385,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.018283628273168023,
+            "std_population": 0.008518460285056316,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.016856060606060607,
+            "std_population": 0.01607730335583652,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 12.63888888888889,
+            "std_population": 15.02441428779698,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 950,
+            "std_population": 50.0,
+            "defined_seed_n": 2
+          },
+          "early_violation_p95_ms": {
+            "mean": 1000.0,
+            "std_population": 0.0,
+            "defined_seed_n": 2
+          },
+          "early_violation_max_ms": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 2
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 51.10132255006732,
+            "std_population": 8.628243636684319,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "P2": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 714,
+          "violation_n": 6,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0.005555555555555556,
+          "release_wait_violation_rate": 0.002777777777777778,
+          "safe_progress_loss_units": 0.23109243697478993,
+          "safe_suboptimal_rate": 0.011204481792717087,
+          "gated_progress_loss_fraction": 0.010454545454545454,
+          "early_ms_per_entry": 5.833333333333333,
+          "early_ms_per_violation": 700,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 44.67787114845938
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 238,
+            "violation_n": 2,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.008333333333333333,
+            "safe_progress_loss_units": 0.6512605042016807,
+            "safe_suboptimal_rate": 0.029411764705882353,
+            "gated_progress_loss_fraction": 0.014318181818181818,
+            "early_ms_per_entry": 0.8333333333333334,
+            "early_ms_per_violation": 100,
+            "early_violation_p95_ms": 100.0,
+            "early_violation_max_ms": 100,
+            "excess_wait_ms_per_safe_entry": 63.02521008403362,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.0,
+            "safe_suboptimal_rate": 0,
+            "gated_progress_loss_fraction": 0.0,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 33.333333333333336,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 236,
+            "violation_n": 4,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.016666666666666666,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.0423728813559322,
+            "safe_suboptimal_rate": 0.00423728813559322,
+            "gated_progress_loss_fraction": 0.017045454545454544,
+            "early_ms_per_entry": 16.666666666666668,
+            "early_ms_per_violation": 1000,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 37.71186440677966,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0.005555555555555556,
+            "std_population": 0.007856742013183862,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.002777777777777778,
+            "std_population": 0.003928371006591931,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 0.2312111285192043,
+            "std_population": 0.29752307896702695,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.011216350947158525,
+            "std_population": 0.012981871053495513,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.010454545454545454,
+            "std_population": 0.007475856456090239,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 5.833333333333334,
+            "std_population": 7.6678743010234784,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 550,
+            "std_population": 450.0,
+            "defined_seed_n": 2
+          },
+          "early_violation_p95_ms": {
+            "mean": 550.0,
+            "std_population": 450.0,
+            "defined_seed_n": 2
+          },
+          "early_violation_max_ms": {
+            "mean": 550,
+            "std_population": 450.0,
+            "defined_seed_n": 2
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 44.6901359413822,
+            "std_population": 13.087502727224857,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "NATURAL_GUARD": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 712,
+          "violation_n": 8,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0.011111111111111112,
+          "release_wait_violation_rate": 0,
+          "safe_progress_loss_units": 0.11938202247191011,
+          "safe_suboptimal_rate": 0.008426966292134831,
+          "gated_progress_loss_fraction": 0.012222222222222223,
+          "early_ms_per_entry": 11.11111111111111,
+          "early_ms_per_violation": 1000,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 41.71348314606742
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 232,
+            "violation_n": 8,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.03333333333333333,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.15086206896551724,
+            "safe_suboptimal_rate": 0.008620689655172414,
+            "gated_progress_loss_fraction": 0.03465909090909091,
+            "early_ms_per_entry": 33.333333333333336,
+            "early_ms_per_violation": 1000,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 42.672413793103445,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.125,
+            "safe_suboptimal_rate": 0.008333333333333333,
+            "gated_progress_loss_fraction": 0.0012500000000000002,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 41.666666666666664,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.08333333333333333,
+            "safe_suboptimal_rate": 0.008333333333333333,
+            "gated_progress_loss_fraction": 0.0007575757575757578,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 40.833333333333336,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0.011111111111111112,
+            "std_population": 0.015713484026367724,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 0.11973180076628352,
+            "std_population": 0.027819033968309592,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.00842911877394636,
+            "std_population": 0.00013546106919282519,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.012222222222222223,
+            "std_population": 0.01586653559670947,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 11.111111111111112,
+            "std_population": 15.713484026367723,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "early_violation_p95_ms": {
+            "mean": 1000.0,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "early_violation_max_ms": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 41.724137931034484,
+            "std_population": 0.7519004561988623,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "SHUFFLED_GUARD": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 578,
+          "violation_n": 142,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0,
+          "release_wait_violation_rate": 0.19722222222222222,
+          "safe_progress_loss_units": 6.955017301038063,
+          "safe_suboptimal_rate": 0.370242214532872,
+          "gated_progress_loss_fraction": 0.2504987373737374,
+          "early_ms_per_entry": 190.13888888888889,
+          "early_ms_per_violation": 964.0845070422536,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 402.94117647058823
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 183,
+            "violation_n": 57,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.2375,
+            "safe_progress_loss_units": 6.420765027322404,
+            "safe_suboptimal_rate": 0.3551912568306011,
+            "gated_progress_loss_fraction": 0.2845643939393939,
+            "early_ms_per_entry": 229.58333333333334,
+            "early_ms_per_violation": 966.6666666666666,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 388.5245901639344,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 205,
+            "violation_n": 35,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.14583333333333334,
+            "safe_progress_loss_units": 7.463414634146342,
+            "safe_suboptimal_rate": 0.3902439024390244,
+            "gated_progress_loss_fraction": 0.20645833333333333,
+            "early_ms_per_entry": 140.41666666666666,
+            "early_ms_per_violation": 962.8571428571429,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 422.9268292682927,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 190,
+            "violation_n": 50,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.20833333333333334,
+            "safe_progress_loss_units": 6.921052631578948,
+            "safe_suboptimal_rate": 0.3631578947368421,
+            "gated_progress_loss_fraction": 0.26047348484848487,
+            "early_ms_per_entry": 200.41666666666666,
+            "early_ms_per_violation": 962,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 395.2631578947368,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.19722222222222222,
+            "std_population": 0.038238610827600564,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 6.935077431015898,
+            "std_population": 0.4257754274277799,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.3695310180021559,
+            "std_population": 0.015002988950063516,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.2504987373737374,
+            "std_population": 0.03265742249717144,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 190.13888888888889,
+            "std_population": 37.120507792397355,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 963.8412698412699,
+            "std_population": 2.028270837455633,
+            "defined_seed_n": 3
+          },
+          "early_violation_p95_ms": {
+            "mean": 1000.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "early_violation_max_ms": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 402.2381924423213,
+            "std_population": 14.88549280459238,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "LOGIC_GUARD": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 719,
+          "violation_n": 1,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0,
+          "release_wait_violation_rate": 0.001388888888888889,
+          "safe_progress_loss_units": 0.06954102920723226,
+          "safe_suboptimal_rate": 0.006954102920723227,
+          "gated_progress_loss_fraction": 0.00202020202020202,
+          "early_ms_per_entry": 0.1388888888888889,
+          "early_ms_per_violation": 100,
+          "early_violation_p95_ms": 100.0,
+          "early_violation_max_ms": 100,
+          "excess_wait_ms_per_safe_entry": 39.499304589707926
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.16666666666666666,
+            "safe_suboptimal_rate": 0.016666666666666666,
+            "gated_progress_loss_fraction": 0.0015151515151515156,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 48.333333333333336,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 239,
+            "violation_n": 1,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.004166666666666667,
+            "safe_progress_loss_units": 0.04184100418410042,
+            "safe_suboptimal_rate": 0.0041841004184100415,
+            "gated_progress_loss_fraction": 0.004545454545454545,
+            "early_ms_per_entry": 0.4166666666666667,
+            "early_ms_per_violation": 100,
+            "early_violation_p95_ms": 100.0,
+            "early_violation_max_ms": 100,
+            "excess_wait_ms_per_safe_entry": 36.82008368200837,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.0,
+            "safe_suboptimal_rate": 0,
+            "gated_progress_loss_fraction": 0.0,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 33.333333333333336,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.001388888888888889,
+            "std_population": 0.0019641855032959655,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 0.06950255695025569,
+            "std_population": 0.07079696589789018,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.006950255695025569,
+            "std_population": 0.007079696589789019,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.00202020202020202,
+            "std_population": 0.001889725952916132,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 0.1388888888888889,
+            "std_population": 0.19641855032959654,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 100,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "early_violation_p95_ms": {
+            "mean": 100.0,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "early_violation_max_ms": {
+            "mean": 100,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 39.495583449558346,
+            "std_population": 6.4093017952878455,
+            "defined_seed_n": 3
+          }
+        }
+      }
+    },
+    "paraphrase": {
+      "P0": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 582,
+          "violation_n": 138,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0,
+          "release_wait_violation_rate": 0.19166666666666668,
+          "safe_progress_loss_units": 7.096219931271477,
+          "safe_suboptimal_rate": 0.38316151202749144,
+          "gated_progress_loss_fraction": 0.24652146464646466,
+          "early_ms_per_entry": 184.02777777777777,
+          "early_ms_per_violation": 960.1449275362319,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 416.3230240549828
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 180,
+            "violation_n": 60,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.25,
+            "safe_progress_loss_units": 6.166666666666667,
+            "safe_suboptimal_rate": 0.3388888888888889,
+            "gated_progress_loss_fraction": 0.2943181818181818,
+            "early_ms_per_entry": 237.91666666666666,
+            "early_ms_per_violation": 951.6666666666666,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 371.6666666666667,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 213,
+            "violation_n": 27,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.1125,
+            "safe_progress_loss_units": 7.957746478873239,
+            "safe_suboptimal_rate": 0.43661971830985913,
+            "gated_progress_loss_fraction": 0.18028409090909092,
+            "early_ms_per_entry": 110,
+            "early_ms_per_violation": 977.7777777777778,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 471.36150234741785,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 189,
+            "violation_n": 51,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.2125,
+            "safe_progress_loss_units": 7.01058201058201,
+            "safe_suboptimal_rate": 0.36507936507936506,
+            "gated_progress_loss_fraction": 0.2649621212121212,
+            "early_ms_per_entry": 204.16666666666666,
+            "early_ms_per_violation": 960.7843137254902,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 396.8253968253968,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.19166666666666665,
+            "std_population": 0.05803495115493383,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 7.044998385373972,
+            "std_population": 0.7316101368733887,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.38019599075937105,
+            "std_population": 0.04130547206516958,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.24652146464646466,
+            "std_population": 0.04834588457697353,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 184.02777777777777,
+            "std_population": 54.12854784083926,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 963.4095860566449,
+            "std_population": 10.820245590981859,
+            "defined_seed_n": 3
+          },
+          "early_violation_p95_ms": {
+            "mean": 1000.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "early_violation_max_ms": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 413.2845219464938,
+            "std_population": 42.33156556807964,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "P1": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 684,
+          "violation_n": 36,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0.016666666666666666,
+          "release_wait_violation_rate": 0.03333333333333333,
+          "safe_progress_loss_units": 0.935672514619883,
+          "safe_suboptimal_rate": 0.04678362573099415,
+          "gated_progress_loss_fraction": 0.05809974747474748,
+          "early_ms_per_entry": 41.94444444444444,
+          "early_ms_per_violation": 838.8888888888889,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 79.23976608187135
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 221,
+            "violation_n": 19,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.07916666666666666,
+            "safe_progress_loss_units": 1.0633484162895928,
+            "safe_suboptimal_rate": 0.04524886877828054,
+            "gated_progress_loss_fraction": 0.08806818181818182,
+            "early_ms_per_entry": 73.75,
+            "early_ms_per_violation": 931.578947368421,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 79.18552036199095,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 224,
+            "violation_n": 16,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.05,
+            "release_wait_violation_rate": 0.016666666666666666,
+            "safe_progress_loss_units": 1.1160714285714286,
+            "safe_suboptimal_rate": 0.0625,
+            "gated_progress_loss_fraction": 0.07619318181818183,
+            "early_ms_per_entry": 51.666666666666664,
+            "early_ms_per_violation": 775,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 93.75,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 239,
+            "violation_n": 1,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.004166666666666667,
+            "safe_progress_loss_units": 0.6485355648535565,
+            "safe_suboptimal_rate": 0.03347280334728033,
+            "gated_progress_loss_fraction": 0.010037878787878788,
+            "early_ms_per_entry": 0.4166666666666667,
+            "early_ms_per_violation": 100,
+            "early_violation_p95_ms": 100.0,
+            "early_violation_max_ms": 100,
+            "excess_wait_ms_per_safe_entry": 65.69037656903765,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0.016666666666666666,
+            "std_population": 0.023570226039551584,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.03333333333333333,
+            "std_population": 0.03280836614171588,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 0.9426518032381926,
+            "std_population": 0.20908244030710907,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.04707389070852029,
+            "std_population": 0.011920362554981483,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.05809974747474748,
+            "std_population": 0.0343289122315807,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 41.94444444444444,
+            "std_population": 30.717374542194065,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 602.1929824561404,
+            "std_population": 360.8116640861228,
+            "defined_seed_n": 3
+          },
+          "early_violation_p95_ms": {
+            "mean": 700.0,
+            "std_population": 424.26406871192853,
+            "defined_seed_n": 3
+          },
+          "early_violation_max_ms": {
+            "mean": 700,
+            "std_population": 424.26406871192853,
+            "defined_seed_n": 3
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 79.5419656436762,
+            "std_population": 11.458065767571172,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "P2": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 711,
+          "violation_n": 9,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0.006944444444444444,
+          "release_wait_violation_rate": 0.005555555555555556,
+          "safe_progress_loss_units": 0.38677918424753865,
+          "safe_suboptimal_rate": 0.01828410689170183,
+          "gated_progress_loss_fraction": 0.01606691919191919,
+          "early_ms_per_entry": 7.5,
+          "early_ms_per_violation": 600,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 51.89873417721519
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 237,
+            "violation_n": 3,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.0125,
+            "safe_progress_loss_units": 1.160337552742616,
+            "safe_suboptimal_rate": 0.05485232067510549,
+            "gated_progress_loss_fraction": 0.023200757575757576,
+            "early_ms_per_entry": 1.25,
+            "early_ms_per_violation": 100,
+            "early_violation_p95_ms": 100.0,
+            "early_violation_max_ms": 100,
+            "excess_wait_ms_per_safe_entry": 88.60759493670886,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 238,
+            "violation_n": 2,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.004166666666666667,
+            "release_wait_violation_rate": 0.004166666666666667,
+            "safe_progress_loss_units": 0.0,
+            "safe_suboptimal_rate": 0,
+            "gated_progress_loss_fraction": 0.008333333333333333,
+            "early_ms_per_entry": 4.583333333333333,
+            "early_ms_per_violation": 550,
+            "early_violation_p95_ms": 955.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 33.19327731092437,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 236,
+            "violation_n": 4,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.016666666666666666,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.0,
+            "safe_suboptimal_rate": 0,
+            "gated_progress_loss_fraction": 0.016666666666666666,
+            "early_ms_per_entry": 16.666666666666668,
+            "early_ms_per_violation": 1000,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 33.898305084745765,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0.006944444444444444,
+            "std_population": 0.007081971546656646,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.005555555555555556,
+            "std_population": 0.005196746370519363,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 0.3867791842475387,
+            "std_population": 0.5469883680064713,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.01828410689170183,
+            "std_population": 0.025857631942124103,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.01606691919191919,
+            "std_population": 0.006084398007809564,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 7.5,
+            "std_population": 6.623121676425758,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 550,
+            "std_population": 367.4234614174767,
+            "defined_seed_n": 3
+          },
+          "early_violation_p95_ms": {
+            "mean": 685.0,
+            "std_population": 414.06521225526785,
+            "defined_seed_n": 3
+          },
+          "early_violation_max_ms": {
+            "mean": 700,
+            "std_population": 424.26406871192853,
+            "defined_seed_n": 3
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 51.899725777459665,
+            "std_population": 25.95797898784217,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "NATURAL_GUARD": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 720,
+          "violation_n": 0,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0,
+          "release_wait_violation_rate": 0,
+          "safe_progress_loss_units": 1.1944444444444444,
+          "safe_suboptimal_rate": 0.06111111111111111,
+          "gated_progress_loss_fraction": 0.011256313131313133,
+          "early_ms_per_entry": 0,
+          "early_ms_per_violation": null,
+          "early_violation_p95_ms": null,
+          "early_violation_max_ms": null,
+          "excess_wait_ms_per_safe_entry": 94.16666666666667
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 1.6666666666666667,
+            "safe_suboptimal_rate": 0.07916666666666666,
+            "gated_progress_loss_fraction": 0.015492424242424243,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 112.08333333333333,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 1.875,
+            "safe_suboptimal_rate": 0.1,
+            "gated_progress_loss_fraction": 0.017897727272727273,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 133.33333333333334,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.041666666666666664,
+            "safe_suboptimal_rate": 0.004166666666666667,
+            "gated_progress_loss_fraction": 0.0003787878787878789,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 37.083333333333336,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 1.1944444444444444,
+            "std_population": 0.8195621384406628,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.06111111111111111,
+            "std_population": 0.04115425663896959,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.011256313131313133,
+            "std_population": 0.007754000575246719,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": null,
+            "std_population": null,
+            "defined_seed_n": 0
+          },
+          "early_violation_p95_ms": {
+            "mean": null,
+            "std_population": null,
+            "defined_seed_n": 0
+          },
+          "early_violation_max_ms": {
+            "mean": null,
+            "std_population": null,
+            "defined_seed_n": 0
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 94.16666666666667,
+            "std_population": 41.28575891138358,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "SHUFFLED_GUARD": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 583,
+          "violation_n": 137,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0,
+          "release_wait_violation_rate": 0.19027777777777777,
+          "safe_progress_loss_units": 6.92967409948542,
+          "safe_suboptimal_rate": 0.3670668953687822,
+          "gated_progress_loss_fraction": 0.2437689393939394,
+          "early_ms_per_entry": 183.19444444444446,
+          "early_ms_per_violation": 962.7737226277372,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 399.4854202401372
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 188,
+            "violation_n": 52,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.21666666666666667,
+            "safe_progress_loss_units": 6.25,
+            "safe_suboptimal_rate": 0.34574468085106386,
+            "gated_progress_loss_fraction": 0.2637310606060606,
+            "early_ms_per_entry": 209.58333333333334,
+            "early_ms_per_violation": 967.3076923076923,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 379.25531914893617,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 205,
+            "violation_n": 35,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.14583333333333334,
+            "safe_progress_loss_units": 7.390243902439025,
+            "safe_suboptimal_rate": 0.3853658536585366,
+            "gated_progress_loss_fraction": 0.20583333333333334,
+            "early_ms_per_entry": 140,
+            "early_ms_per_violation": 960,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 417.5609756097561,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 190,
+            "violation_n": 50,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.20833333333333334,
+            "safe_progress_loss_units": 7.105263157894737,
+            "safe_suboptimal_rate": 0.3684210526315789,
+            "gated_progress_loss_fraction": 0.2617424242424242,
+            "early_ms_per_entry": 200,
+            "early_ms_per_violation": 960,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 400,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.1902777777777778,
+            "std_population": 0.03161057410205845,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 6.915169020111254,
+            "std_population": 0.4845209834995649,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.3665105290470598,
+            "std_population": 0.016231592834862862,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.2437689393939394,
+            "std_population": 0.026836807113065346,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 183.19444444444446,
+            "std_population": 30.79264081554328,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 962.4358974358975,
+            "std_population": 3.44487919039598,
+            "defined_seed_n": 3
+          },
+          "early_violation_p95_ms": {
+            "mean": 1000.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "early_violation_max_ms": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 398.9387649195641,
+            "std_population": 15.656212699661218,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "LOGIC_GUARD": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 719,
+          "violation_n": 1,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0,
+          "release_wait_violation_rate": 0.001388888888888889,
+          "safe_progress_loss_units": 0.06954102920723226,
+          "safe_suboptimal_rate": 0.006954102920723227,
+          "gated_progress_loss_fraction": 0.00202020202020202,
+          "early_ms_per_entry": 0.1388888888888889,
+          "early_ms_per_violation": 100,
+          "early_violation_p95_ms": 100.0,
+          "early_violation_max_ms": 100,
+          "excess_wait_ms_per_safe_entry": 39.499304589707926
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.16666666666666666,
+            "safe_suboptimal_rate": 0.016666666666666666,
+            "gated_progress_loss_fraction": 0.0015151515151515156,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 48.333333333333336,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 239,
+            "violation_n": 1,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.004166666666666667,
+            "safe_progress_loss_units": 0.04184100418410042,
+            "safe_suboptimal_rate": 0.0041841004184100415,
+            "gated_progress_loss_fraction": 0.004545454545454545,
+            "early_ms_per_entry": 0.4166666666666667,
+            "early_ms_per_violation": 100,
+            "early_violation_p95_ms": 100.0,
+            "early_violation_max_ms": 100,
+            "excess_wait_ms_per_safe_entry": 36.82008368200837,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.0,
+            "safe_suboptimal_rate": 0,
+            "gated_progress_loss_fraction": 0.0,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 33.333333333333336,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.001388888888888889,
+            "std_population": 0.0019641855032959655,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 0.06950255695025569,
+            "std_population": 0.07079696589789018,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.006950255695025569,
+            "std_population": 0.007079696589789019,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.00202020202020202,
+            "std_population": 0.001889725952916132,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 0.1388888888888889,
+            "std_population": 0.19641855032959654,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 100,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "early_violation_p95_ms": {
+            "mean": 100.0,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "early_violation_max_ms": {
+            "mean": 100,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 39.495583449558346,
+            "std_population": 6.4093017952878455,
+            "defined_seed_n": 3
+          }
+        }
+      }
+    },
+    "unseen_duration": {
+      "P0": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 587,
+          "violation_n": 133,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0,
+          "release_wait_violation_rate": 0.18472222222222223,
+          "safe_progress_loss_units": 7.231686541737649,
+          "safe_suboptimal_rate": 0.38841567291311757,
+          "gated_progress_loss_fraction": 0.24104797979797982,
+          "early_ms_per_entry": 177.22222222222223,
+          "early_ms_per_violation": 959.3984962406015,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 421.4650766609881
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 180,
+            "violation_n": 60,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.25,
+            "safe_progress_loss_units": 6.166666666666667,
+            "safe_suboptimal_rate": 0.3388888888888889,
+            "gated_progress_loss_fraction": 0.2943181818181818,
+            "early_ms_per_entry": 237.91666666666666,
+            "early_ms_per_violation": 951.6666666666666,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 371.6666666666667,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 217,
+            "violation_n": 23,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.09583333333333334,
+            "safe_progress_loss_units": 8.225806451612904,
+            "safe_suboptimal_rate": 0.4470046082949309,
+            "gated_progress_loss_fraction": 0.16708333333333333,
+            "early_ms_per_entry": 93.75,
+            "early_ms_per_violation": 978.2608695652174,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 481.5668202764977,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 190,
+            "violation_n": 50,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.20833333333333334,
+            "safe_progress_loss_units": 7.105263157894737,
+            "safe_suboptimal_rate": 0.3684210526315789,
+            "gated_progress_loss_fraction": 0.2617424242424242,
+            "early_ms_per_entry": 200,
+            "early_ms_per_violation": 960,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 400,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.18472222222222223,
+            "std_population": 0.06511504538739468,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 7.165912092058103,
+            "std_population": 0.8417334825222185,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.3847715166051329,
+            "std_population": 0.04562715163718759,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.2410479797979798,
+            "std_population": 0.05396524616447598,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 177.22222222222223,
+            "std_population": 61.01981817308654,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 963.3091787439613,
+            "std_population": 11.106331675278307,
+            "defined_seed_n": 3
+          },
+          "early_violation_p95_ms": {
+            "mean": 1000.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "early_violation_max_ms": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 417.74449564772146,
+            "std_population": 46.58799047830616,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "P1": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 704,
+          "violation_n": 16,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0.016666666666666666,
+          "release_wait_violation_rate": 0.005555555555555556,
+          "safe_progress_loss_units": 0.15625,
+          "safe_suboptimal_rate": 0.011363636363636364,
+          "gated_progress_loss_fraction": 0.02361111111111111,
+          "early_ms_per_entry": 17.22222222222222,
+          "early_ms_per_violation": 775,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 44.03409090909091
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.25,
+            "safe_suboptimal_rate": 0.0125,
+            "gated_progress_loss_fraction": 0.002272727272727273,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 45.416666666666664,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 225,
+            "violation_n": 15,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.04583333333333333,
+            "release_wait_violation_rate": 0.016666666666666666,
+            "safe_progress_loss_units": 0.08888888888888889,
+            "safe_suboptimal_rate": 0.008888888888888889,
+            "gated_progress_loss_fraction": 0.06325757575757576,
+            "early_ms_per_entry": 47.5,
+            "early_ms_per_violation": 760,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 41.77777777777778,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 239,
+            "violation_n": 1,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.004166666666666667,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.12552301255230125,
+            "safe_suboptimal_rate": 0.012552301255230125,
+            "gated_progress_loss_fraction": 0.005303030303030303,
+            "early_ms_per_entry": 4.166666666666667,
+            "early_ms_per_violation": 1000,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 44.76987447698745,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0.016666666666666666,
+            "std_population": 0.020693978369099083,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.005555555555555556,
+            "std_population": 0.007856742013183862,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 0.15480396714706338,
+            "std_population": 0.06895519442531547,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.011313730048039672,
+            "std_population": 0.0017147545676001654,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.023611111111111114,
+            "std_population": 0.028061566876380874,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 17.22222222222222,
+            "std_population": 21.477090866753006,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 880,
+            "std_population": 120.0,
+            "defined_seed_n": 2
+          },
+          "early_violation_p95_ms": {
+            "mean": 1000.0,
+            "std_population": 0.0,
+            "defined_seed_n": 2
+          },
+          "early_violation_max_ms": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 2
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 43.988106307143966,
+            "std_population": 1.5850865780675976,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "P2": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 709,
+          "violation_n": 11,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0.0125,
+          "release_wait_violation_rate": 0.002777777777777778,
+          "safe_progress_loss_units": 0.41607898448519043,
+          "safe_suboptimal_rate": 0.018335684062059238,
+          "gated_progress_loss_fraction": 0.019002525252525253,
+          "early_ms_per_entry": 12.777777777777779,
+          "early_ms_per_violation": 836.3636363636364,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 51.763046544428775
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 239,
+            "violation_n": 1,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.004166666666666667,
+            "safe_progress_loss_units": 1.1924686192468619,
+            "safe_suboptimal_rate": 0.0502092050209205,
+            "gated_progress_loss_fraction": 0.014962121212121213,
+            "early_ms_per_entry": 0.4166666666666667,
+            "early_ms_per_violation": 100,
+            "early_violation_p95_ms": 100.0,
+            "early_violation_max_ms": 100,
+            "excess_wait_ms_per_safe_entry": 83.26359832635983,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 238,
+            "violation_n": 2,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.008333333333333333,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.0,
+            "safe_suboptimal_rate": 0,
+            "gated_progress_loss_fraction": 0.008333333333333333,
+            "early_ms_per_entry": 8.333333333333334,
+            "early_ms_per_violation": 1000,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 33.61344537815126,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 232,
+            "violation_n": 8,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.029166666666666667,
+            "release_wait_violation_rate": 0.004166666666666667,
+            "safe_progress_loss_units": 0.04310344827586207,
+            "safe_suboptimal_rate": 0.004310344827586207,
+            "gated_progress_loss_fraction": 0.033712121212121214,
+            "early_ms_per_entry": 29.583333333333332,
+            "early_ms_per_violation": 887.5,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 37.93103448275862,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0.0125,
+            "std_population": 0.012266334536566455,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.002777777777777778,
+            "std_population": 0.0019641855032959655,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 0.411857355840908,
+            "std_population": 0.5522559402007353,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.01817318328283557,
+            "std_population": 0.0227211323769373,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.019002525252525253,
+            "std_population": 0.01074753823460401,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 12.777777777777777,
+            "std_population": 12.314988859811605,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 662.5,
+            "std_population": 400.39043445117414,
+            "defined_seed_n": 3
+          },
+          "early_violation_p95_ms": {
+            "mean": 700.0,
+            "std_population": 424.26406871192853,
+            "defined_seed_n": 3
+          },
+          "early_violation_max_ms": {
+            "mean": 700,
+            "std_population": 424.26406871192853,
+            "defined_seed_n": 3
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 51.6026927290899,
+            "std_population": 22.456923228683614,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "NATURAL_GUARD": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 716,
+          "violation_n": 4,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0.005555555555555556,
+          "release_wait_violation_rate": 0,
+          "safe_progress_loss_units": 0.16061452513966482,
+          "safe_suboptimal_rate": 0.008379888268156424,
+          "gated_progress_loss_fraction": 0.007045454545454546,
+          "early_ms_per_entry": 5.555555555555555,
+          "early_ms_per_violation": 1000,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 41.75977653631285
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 236,
+            "violation_n": 4,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.016666666666666666,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.3177966101694915,
+            "safe_suboptimal_rate": 0.012711864406779662,
+            "gated_progress_loss_fraction": 0.01950757575757576,
+            "early_ms_per_entry": 16.666666666666668,
+            "early_ms_per_violation": 1000,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 46.610169491525426,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.125,
+            "safe_suboptimal_rate": 0.008333333333333333,
+            "gated_progress_loss_fraction": 0.0012500000000000002,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 41.666666666666664,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.041666666666666664,
+            "safe_suboptimal_rate": 0.004166666666666667,
+            "gated_progress_loss_fraction": 0.0003787878787878789,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 37.083333333333336,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0.005555555555555556,
+            "std_population": 0.007856742013183862,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 0.16148775894538606,
+            "std_population": 0.11564443736257778,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.008403954802259887,
+            "std_population": 0.0034889197610256644,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.007045454545454546,
+            "std_population": 0.008819225267155003,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 5.555555555555556,
+            "std_population": 7.856742013183862,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "early_violation_p95_ms": {
+            "mean": 1000.0,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "early_violation_max_ms": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 41.786723163841806,
+            "std_population": 3.8902409495338057,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "SHUFFLED_GUARD": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 584,
+          "violation_n": 136,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0,
+          "release_wait_violation_rate": 0.18888888888888888,
+          "safe_progress_loss_units": 6.926369863013699,
+          "safe_suboptimal_rate": 0.3715753424657534,
+          "gated_progress_loss_fraction": 0.24257575757575758,
+          "early_ms_per_entry": 181.80555555555554,
+          "early_ms_per_violation": 962.5,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 403.93835616438355
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 185,
+            "violation_n": 55,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.22916666666666666,
+            "safe_progress_loss_units": 6.351351351351352,
+            "safe_suboptimal_rate": 0.35135135135135137,
+            "gated_progress_loss_fraction": 0.2762310606060606,
+            "early_ms_per_entry": 221.25,
+            "early_ms_per_violation": 965.4545454545455,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 384.3243243243243,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 208,
+            "violation_n": 32,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.13333333333333333,
+            "safe_progress_loss_units": 7.355769230769231,
+            "safe_suboptimal_rate": 0.3942307692307692,
+            "gated_progress_loss_fraction": 0.19424242424242424,
+            "early_ms_per_entry": 127.91666666666667,
+            "early_ms_per_violation": 959.375,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 426.4423076923077,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 191,
+            "violation_n": 49,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0.20416666666666666,
+            "safe_progress_loss_units": 7.015706806282722,
+            "safe_suboptimal_rate": 0.36649214659685864,
+            "gated_progress_loss_fraction": 0.2572537878787879,
+            "early_ms_per_entry": 196.25,
+            "early_ms_per_violation": 961.2244897959183,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 398.42931937172773,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.18888888888888888,
+            "std_population": 0.040587886656117934,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 6.907609129467768,
+            "std_population": 0.4171152118405417,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.3706914223929931,
+            "std_population": 0.017755497877717297,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.24257575757575758,
+            "std_population": 0.03504394910560791,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 181.80555555555554,
+            "std_population": 39.44835661350385,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 962.0180117501546,
+            "std_population": 2.5445989929472757,
+            "defined_seed_n": 3
+          },
+          "early_violation_p95_ms": {
+            "mean": 1000.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "early_violation_max_ms": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 403.06531712945326,
+            "std_population": 17.50429446647608,
+            "defined_seed_n": 3
+          }
+        }
+      },
+      "LOGIC_GUARD": {
+        "pooled": {
+          "n": 720,
+          "valid_n": 720,
+          "safe_n": 714,
+          "violation_n": 6,
+          "entry_n": 720,
+          "unnecessary_stop_eligible_n": 720,
+          "unnecessary_stop_rate": 0.0,
+          "occupied_entry_rate": 0.004166666666666667,
+          "release_wait_violation_rate": 0.004166666666666667,
+          "safe_progress_loss_units": 3.3333333333333335,
+          "safe_suboptimal_rate": 0.18067226890756302,
+          "gated_progress_loss_fraction": 0.039955808080808085,
+          "early_ms_per_entry": 4.583333333333333,
+          "early_ms_per_violation": 550,
+          "early_violation_p95_ms": 1000.0,
+          "early_violation_max_ms": 1000,
+          "excess_wait_ms_per_safe_entry": 213.72549019607843
+        },
+        "per_seed": [
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 0.7083333333333334,
+            "safe_suboptimal_rate": 0.03333333333333333,
+            "gated_progress_loss_fraction": 0.006609848484848486,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 66.66666666666667,
+            "seed": 42
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 234,
+            "violation_n": 6,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0.0125,
+            "release_wait_violation_rate": 0.0125,
+            "safe_progress_loss_units": 0.042735042735042736,
+            "safe_suboptimal_rate": 0.004273504273504274,
+            "gated_progress_loss_fraction": 0.02537878787878788,
+            "early_ms_per_entry": 13.75,
+            "early_ms_per_violation": 550,
+            "early_violation_p95_ms": 1000.0,
+            "early_violation_max_ms": 1000,
+            "excess_wait_ms_per_safe_entry": 36.75213675213675,
+            "seed": 17
+          },
+          {
+            "n": 240,
+            "valid_n": 240,
+            "safe_n": 240,
+            "violation_n": 0,
+            "entry_n": 240,
+            "unnecessary_stop_eligible_n": 240,
+            "unnecessary_stop_rate": 0.0,
+            "occupied_entry_rate": 0,
+            "release_wait_violation_rate": 0,
+            "safe_progress_loss_units": 9.166666666666666,
+            "safe_suboptimal_rate": 0.5,
+            "gated_progress_loss_fraction": 0.08787878787878789,
+            "early_ms_per_entry": 0,
+            "early_ms_per_violation": null,
+            "early_violation_p95_ms": null,
+            "early_violation_max_ms": null,
+            "excess_wait_ms_per_safe_entry": 533.3333333333334,
+            "seed": 123
+          }
+        ],
+        "seed_summary": {
+          "unnecessary_stop_rate": {
+            "mean": 0.0,
+            "std_population": 0.0,
+            "defined_seed_n": 3
+          },
+          "occupied_entry_rate": {
+            "mean": 0.004166666666666667,
+            "std_population": 0.005892556509887896,
+            "defined_seed_n": 3
+          },
+          "release_wait_violation_rate": {
+            "mean": 0.004166666666666667,
+            "std_population": 0.005892556509887896,
+            "defined_seed_n": 3
+          },
+          "safe_progress_loss_units": {
+            "mean": 3.305911680911681,
+            "std_population": 4.153078538738926,
+            "defined_seed_n": 3
+          },
+          "safe_suboptimal_rate": {
+            "mean": 0.1792022792022792,
+            "std_population": 0.22714826533640378,
+            "defined_seed_n": 3
+          },
+          "gated_progress_loss_fraction": {
+            "mean": 0.039955808080808085,
+            "std_population": 0.034742167136699344,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_entry": {
+            "mean": 4.583333333333333,
+            "std_population": 6.481812160876686,
+            "defined_seed_n": 3
+          },
+          "early_ms_per_violation": {
+            "mean": 550,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "early_violation_p95_ms": {
+            "mean": 1000.0,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "early_violation_max_ms": {
+            "mean": 1000,
+            "std_population": 0.0,
+            "defined_seed_n": 1
+          },
+          "excess_wait_ms_per_safe_entry": {
+            "mean": 212.25071225071227,
+            "std_population": 227.36792055457363,
+            "defined_seed_n": 3
+          }
+        }
+      }
+    }
+  },
+  "timing": {
+    "timings": {
+      "compile_and_solve": {
+        "checks": 144,
+        "mean_ms": 3.4623465625,
+        "median_ms": 3.52439,
+        "p95_ms": 3.78229115,
+        "serial_checks_per_second": 288.82146311718327
+      },
+      "reused_compilation_solve": {
+        "checks": 144,
+        "mean_ms": 2.3215350069444445,
+        "median_ms": 2.3678145,
+        "p95_ms": 2.6214201499999996,
+        "serial_checks_per_second": 430.74948127367634
+      }
+    },
+    "z3": "5.0.0",
+    "python": "3.12.13",
+    "cpu": "",
+    "platform": "Linux-6.1.0-44-amd64-x86_64-with-glibc2.36",
+    "scope": "48 synthetic bindings x3 repeats per mode, single process, warm libraries; excludes model/video/IO/startup; not real-time guarantee"
+  },
+  "limits": [
+    "Same synthetic task and frozen predictions, no retraining.",
+    "Four splits share templates; rows/seeds are not independent road scenes.",
+    "Safe-only statistics must be read with violation rates; composite includes safety by construction.",
+    "Timing varies with hardware/load; this is a bounded CPU microbenchmark."
+  ]
+}

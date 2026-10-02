@@ -1,0 +1,56 @@
+\section{실험 설계}
+\label{sec:experiments}
+
+표~\ref{tab:evaluation-design}은 네 평가가 무엇을 입력으로 쓰고 무엇을 확인하는지 정리한다. 중심 검증은 이전 요구를 기억하는 효과와 Python--UPPAAL 결과 일치를 확인한다. 나머지 세 평가는 한 장면에 의도적으로 넣은 오류, 반응 시간 설정에 따른 판정 변화, 장면 경계 처리를 보조적으로 확인한다. 분석 대상 수와 질문이 다른 결과는 하나로 합산하지 않는다.
+
+\begin{table}[t]
+\centering
+\bitablecaption{평가 블록별 입력, 측정과 해석 경계.}{Inputs, measurements, and interpretation boundaries of the evaluation blocks.}
+\label{tab:evaluation-design}
+\scriptsize
+\begin{tabularx}{\columnwidth}{L{0.16\columnwidth}L{0.43\columnwidth}Y}
+\toprule
+Evaluation & Evidence and comparison & Interpretation boundary \\
+\midrule
+Main consistency & 309 windows/90 scenes; 27 reviews; 40 pairs; 7 test cases & Cross-event consistency; no natural-error rate, independent accuracy, or safety \\
+Fixed-scene check & \texttt{scene-0001}; normal vs. four modified cases & Known-error check in one scene; not natural-error performance \\
+Response settings & 94 scenes/403 CoCs; repeat rule, $D=1$--$5$ s, 27 settings & Result changes under checking settings; not safety classification \\
+Scene boundary & Two-scene boundary; discard vs. carryover & Deliberate boundary-error check; not long-horizon evidence \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+중심 검증 안에서도 세 증거를 구분한다. 자연 자료는 같은 주석을 여러 사람이 얼마나 비슷하게 해석하는지 보여 준다. 합성 쌍은 같은 입력에서 이전 요구를 기억하는지에 따라 판정이 어떻게 달라지는지 보여 준다. 일곱 표준 시험 사례는 같은 판정 규칙을 구현한 Python과 UPPAAL이 최종 판정과 위반 기록을 똑같이 만드는지 확인한다.
+
+\begin{table}[t]
+\centering
+\bitablecaption{연속 CoC 자연 검토의 표본 구성과 판정 절차.}{Sampling and review protocol for the natural sequential-CoC study.}
+\label{tab:natural-review-design}
+\footnotesize
+\begin{tabular}{lr}
+\toprule
+Item & Count \\
+\midrule
+Multi-CoC scenes & 90 \\
+Within-scene adjacent windows & 309 \\
+Automatically selected candidate scenes & 15 \\
+Non-overlapping comparison scenes & 12 \\
+Scene groups reviewed independently & 27 \\
+Independent reviewers & 4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+표~\ref{tab:natural-review-design}에서 사람 검토의 단위는 문장 쌍 하나가 아니라 장면 묶음이다. 자동 후보에서는 장면마다 하나만 택하고, 후보 장면과 겹치지 않는 비교 장면을 함께 골랐다. 따라서 같은 장면의 여러 문장 쌍을 서로 독립된 사례처럼 중복 집계하지 않는다. 다만 무작위 표본이 아니므로 27장면의 결과로 90장면이나 전체 자료의 모순 발생률을 추정하지 않는다.
+
+네 검토자는 어떤 장면이 자동 후보인지, 비교 대상인지, 검사기가 어떤 결과를 냈는지 모른 채 27장면을 각각 판정했다. 시간 조건, 요구된 행동 순서와 문장 사이의 모순 여부를 먼저 독립적으로 평가한 뒤, 의견이 다른 항목은 근거를 함께 검토해 합의했다. 이 합의는 선택한 장면에 대한 검토자들의 공동 기록이며, 별도로 만든 자연 오류 정답 자료는 아니다.
+
+합성 시험은 정지ㆍ양보 요구가 끝나기 전 진행, 조건 충족 전 요구 종료, 행동 순서 위반, 끝난 요구를 목록에 남긴 오류에 각각 10쌍을 사용한다. 두 검사에는 같은 입력을 주고, 각 오류를 몇 건 판정했는지와 정상 기준 사례를 오류로 잘못 판정했는지를 센다. 이 사례들은 무작위 표본이 아니므로 실제 자료의 오류를 얼마나 정확히 찾거나 놓치지 않는지는 계산하지 않는다.
+
+기록된 전후 방향 움직임과 검토자 합의 결과의 관계는 별도 표로 살펴본다. 상대 차량ㆍ보행자 상태와 가속ㆍ제동 장치 명령이 없으므로, 문장의 요구와 자차 움직임이 맞지 않는 경우를 곧바로 안전 위반으로 해석하지 않는다.
+
+중심 검증과 별도로 세 보조 평가는 프로그램과 설정이 의도대로 작동하는지 점검한다. 고정 장면 점검에서는 \texttt{scene-0001}의 최초 감속, 두 반복 판단, 자차 속도 반응과 낮은 품질 사건을 그대로 사용한다. 변경하지 않은 기준 모델과 제한 시간 축소, 반복 시 시간 다시 재기, 반응 제거, 낮은 품질 사건의 정보 덮어쓰기 사례를 비교한다. 각 사례는 관련 검사 조건을 하나 이상 실패해야 하므로, 한 장면에 의도적으로 넣은 네 오류를 검사기가 구분하는지 알 수 있다.
+
+반응 설정 분석은 고정 장면 점검을 전체 자료로 넓힌 것이다. 94장면ㆍ403개 CoC에서 행동 방향이 분명한 134개 사건을 고른다. 130건은 이후 속도 변화를 찾아야 하고, 4건은 사건 시점에 이미 정지ㆍ양보를 만족한다. 제한 시간, 반복 사건에서 시간을 재기 시작하는 시각, 속도 관찰 구간과 최소 변화량을 바꾸어 판정이 얼마나 달라지는지 27개 설정에서 비교한다. 마지막 다섯 후보는 추가 증거와 처리 방식 검토가 필요한 항목이다.
+
+마지막 장면 경계 점검은 한 장면 안의 반응 검사를 두 장면 사이까지 넓힌다. 첫 장면에 아직 끝나지 않은 요구를 두고, 두 장면이 이어진다는 기록 없이 둘째 장면에 반응을 넣은 시험 시간선을 사용한다. 올바른 모델은 경계에서 이전 요구를 폐기하고, 오류를 넣은 모델은 그 요구를 둘째 장면의 반응으로 잘못 완료한다. 이 비교로 자료 연결 근거가 없을 때 이전 장면의 요구를 넘기지 않는지 확인한다.

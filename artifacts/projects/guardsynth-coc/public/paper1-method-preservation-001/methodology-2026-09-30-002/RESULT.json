@@ -1,0 +1,40 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "methodology-2026-09-30-002",
+  "status": "ILLUSTRATED_DRAFT_RENDERED_AND_VERIFIED",
+  "scope": "Approved bilingual methodology revision, not a new training experiment or full-manuscript integration",
+  "pdfs": [
+    {"file": "ieee-access-methodology-v01-ko.pdf", "pages": 10},
+    {"file": "ieee-access-methodology-v01-en.pdf", "pages": 11}
+  ],
+  "additions_per_language": {
+    "figures": 5,
+    "numbered_code_boxes": 4,
+    "expanded_contract_definition": true,
+    "expanded_temporal_and_lifecycle_semantics": true,
+    "code_input_line_and_result_explanations": true
+  },
+  "verification": {
+    "source_text_units_found_in_each_pdf": 203,
+    "temporal_manuscript_queries_matching_expected": 12,
+    "existing_bridge_queries_matching_expected": 100,
+    "lifecycle_illustration_queries_matching_expected": 15,
+    "verbatim_cnl_function_matches_implementation": true,
+    "printed_smt_results_each_language": ["UNSAT", "SAT"],
+    "all_markdown_local_links_exist": true,
+    "overfull_layout_warnings": 0,
+    "missing_character_warnings": 0,
+    "pdf_glyph_rendering_errors_after_font_correction": 0,
+    "visual_review": "All pages reviewed in contact sheets; final English ending rechecked after compacting evidence links. No observed text clipping or figure-label overlap.",
+    "details": ["content_checks.json", "lifecycle_checks.json", "figure_data.json", "manuscript_examples.json", "bridge_verification.json", "evidence_manifest.json"]
+  },
+  "file_naming": {
+    "new_task_violations": 0,
+    "existing_violations": 5,
+    "note": "Existing P003 directory, three historical submission filenames containing (1), and portal_exec.md remain untouched."
+  },
+  "new_training_updates": 0,
+  "claim_boundary": "Figures illustrate encoded contracts and supplied rules, not measured VLM performance or scene-grounding correctness. Explanatory pseudocode, executable SMT illustration, and verbatim implementation are distinguished.",
+  "prior_run_preserved": "methodology-2026-09-30-001",
+  "main_tex_modified": false
+}

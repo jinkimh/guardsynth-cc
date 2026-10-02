@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GuardSynth constraint proposal bundle v0.1",
+  "type": "object",
+  "required": [
+    "frontend_version", "request_id", "status", "reason_codes", "coc_parse",
+    "claim_promoted_to_scene_or_legal_authority", "proposals", "claim_scope"
+  ],
+  "properties": {
+    "frontend_version": {"const": "guardsynth-coc-conditioned-frontend-v0.1"},
+    "request_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["PROPOSED", "REVIEW_REQUIRED", "UNSUPPORTED", "CONFLICT", "NOT_APPLICABLE"]},
+    "reason_codes": {"type": "array", "items": {"type": "string"}},
+    "claim_promoted_to_scene_or_legal_authority": {"const": false},
+    "claim_scope": {"type": "string", "minLength": 1},
+    "coc_parse": {
+      "type": "object",
+      "required": ["parser_version", "language", "epistemic_kind", "evidence_ref", "text_included", "concepts", "unknown_groups"],
+      "properties": {
+        "parser_version": {"const": "guardsynth-coc-conditioned-frontend-v0.1"},
+        "language": {"enum": ["ko", "en"]},
+        "epistemic_kind": {"const": "CLAIMED"},
+        "evidence_ref": {"type": "string", "minLength": 1},
+        "text_included": {"const": false},
+        "concepts": {"type": "object"},
+        "unknown_groups": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "retrieval_query": {"type": "object"},
+    "proposals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "rule_id", "slice", "source_claim_refs", "source_record_refs",
+          "required_predicate_refs", "applicability", "binding_status",
+          "binder_ref", "verdict", "reason_codes", "claim_boundary"
+        ],
+        "properties": {
+          "rule_id": {"type": "string", "minLength": 1},
+          "slice": {"type": "string", "minLength": 1},
+          "source_claim_refs": {"type": "array", "items": {"type": "string"}},
+          "source_record_refs": {"type": "array", "items": {"type": "string"}},
+          "required_predicate_refs": {"type": "array", "items": {"type": "string"}},
+          "retrieval_predicate_overlap": {"type": "integer", "minimum": 0},
+          "applicability": {"enum": ["TRUE", "FALSE", "UNKNOWN", "CONFLICT"]},
+          "binding_status": {"enum": ["BOUND", "AMBIGUOUS", "UNSUPPORTED"]},
+          "target_id": {"type": ["string", "null"]},
+          "zone_id": {"type": ["string", "null"]},
+          "binder_ref": {"type": "string", "minLength": 1},
+          "verdict": {"enum": ["PROPOSED", "REVIEW_REQUIRED", "UNSUPPORTED", "CONFLICT", "NOT_APPLICABLE"]},
+          "reason_codes": {"type": "array", "items": {"type": "string"}},
+          "executable_parameters": {"type": ["object", "null"]},
+          "claim_boundary": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "manuscript-layout-2026-09-30-001",
+  "parent_run": "manuscript-revision-2026-09-30-001",
+  "scope": "English layout and six approved section overviews; user-requested in-place revision",
+  "main_tex_sha256": "a3c5edf72e3d6299f9382ddff6981d99006210d259874ecca6514caae9383bee",
+  "unchanged_korean_sha256": {
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/paper/GUARDSYNTH_COC_METHODS_SETTINGS_PACKAGE_V01_KO.md": "e92d77a88089161bd4da467fcec41d5eb81683092cc54eded3e70c5823a43984",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/paper/IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_KO.md": "2f95d59518acd92fa5a4979beab032989a6e5ee0aad739e1301d13e1aa41c833",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/paper/IEEE_ACCESS_TITLE_ABSTRACT_V01_KO.md": "dd85d8d52ef56131920646d34873c690e7a886c4a3e4efa8c5f15d58b229c61e",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/paper/IEEE_ACCESS_INTRODUCTION_V01_KO.md": "a1c13d99eb4f3989e54254d9e9ec266a088f30f77257df6b05145483a69c140e",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/paper/IEEE_ACCESS_RELATED_WORK_V01_KO.md": "d2d5c9f81db4983a1ddbd35beae7dd4f90e77bca8f5772dc24f5476bb411708c",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/paper/IEEE_ACCESS_BACKGROUND_V01_KO.md": "ed6899beaa9cecc1868777c679ae8785e399af9716283ba6600d146b2a9d61c1",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/paper/IEEE_ACCESS_METHODOLOGY_V01_KO.md": "2f8cf335c278cc4a9c4ed9aaf671b52f40d22777268e904532890b2a940e84ea",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/paper/IEEE_ACCESS_EXPERIMENTS_SUPPLEMENT_V01_KO.md": "2cfbc279bd3a7e54a8d5a2236976ab5c347787f6cb170f0f366520491b4db281",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/paper/IEEE_ACCESS_EXPERIMENTS_V01_KO.md": "f7f90ed01c51e2dac56edad1ec6bbb20ba8581d53ff89a875a96e3089792d59c",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/paper/IEEE_ACCESS_DISCUSSION_V01_KO.md": "771b32355128939adf0048c0965f4203f868c09464c33ad1cc7e048d54c6df7b",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/paper/IEEE_ACCESS_CONCLUSION_V01_KO.md": "9bec72cef3b50ec792661ef8c181e2fb1361836faeaf899eed029cb35e08a1e7",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/manuscript-revision-2026-09-30-001/ieee-access-manuscript-ko.pdf": "91caf6da42ac6a976220985b3e0e9b89246af0b7594a5da43d91853606787435",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/manuscript-revision-2026-09-30-001/ieee-access-experiments-supplement-v01-ko.pdf": "26ad0ede41c1944f726f9697554d2ed07b4afdca04dcb459f70b4bd545d89c84"
+  },
+  "captions_preserved": 19,
+  "section_overviews": {
+    "Related Work": "This section reviews research connecting driving observations, reasoning, and actions, followed by traffic-rule specification and regulation-aware decision making. It then examines natural-language formalization and controlled natural language to clarify how GuardSynth relates to existing approaches.",
+    "Background": "This section introduces the established concepts underlying the proposed method. It begins with vision-language models and CoC, then explains satisfiability-based verification, finite temporal bounds, and modeling assumptions, before outlining controlled natural language and low-rank adaptation.",
+    "Proposed Method": "This section presents the GuardSynth workflow and defines the elements and semantics of EBLC. It then explains how constraints are derived from CoC, observations, and rules, checked logically, and rendered as CNL for insertion into CoC. Executable examples connect each task to its constraint fields, logical formula, generated text, and evaluation verdict.",
+    "Experimental Setup": "This section defines the experimental basis for evaluating behavioral benefits and specification checkability. It introduces the comparison conditions, tasks, and data, then describes the model and training budgets, reference judgments, and evaluation metrics.",
+    "Results": "This section compares action-selection accuracy and constraint violations across tasks, then examines responses to changed contracts and the role of correct case-constraint association. It next reports specification and CNL checks, followed by performance under unseen conditions and the scope of the findings.",
+    "Discussion": "This section interprets the role of explicit constraints in CoC and the value of formal support for their development. It distinguishes evidence validity, specification and translation correctness, and behavioral compliance, then considers the study's limitations and directions for further development."
+  },
+  "substantive_tex_unchanged_except_overviews": true,
+  "experiment_results_modified": false
+}

@@ -1,0 +1,19 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "manuscript-outline-2026-09-30-001",
+  "artifact_class": "public",
+  "purpose": "Bilingual manuscript outline and writing plan",
+  "toolchain": {
+    "pdf_engine": "XeLaTeX",
+    "text_check": "pypdf"
+  },
+  "result": "RESULT.json",
+  "sources": [
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_KO.md",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_EN.md"
+  ],
+  "outputs": [
+    "ieee-access-manuscript-outline-v01-ko.pdf",
+    "ieee-access-manuscript-outline-v01-en.pdf"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "annotation_start_allowed": false,
+  "annotation_started": false,
+  "candidate_source_record_count": 33,
+  "claim_scope": "M16_SCENE_ELIGIBILITY_AND_ACQUISITION_NOT_EXPERT_EFFECT_OR_VEHICLE_SAFETY",
+  "distinct_candidate_count": 23,
+  "eligible_scene_count": 1,
+  "excluded_count": 22,
+  "experiment_id": "GUARDSYNTH-M16-SCENE-ACQUISITION-001",
+  "newly_eligible_count": 0,
+  "prior_eligible_reaudited_count": 4,
+  "prior_eligible_retained_count": 1,
+  "run_date": "2026-08-14",
+  "run_id": "m16-source-acquisition-2026-08-14-v3",
+  "source_alias_deduplicated_count": 10,
+  "source_complete_8_of_8_count": 3,
+  "status": "PARTIAL_DATA_ACQUISITION",
+  "synthetic_required_field_fill_count": 0
+}

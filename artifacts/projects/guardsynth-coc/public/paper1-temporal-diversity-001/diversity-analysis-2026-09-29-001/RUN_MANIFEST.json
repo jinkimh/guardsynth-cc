@@ -1,0 +1,11 @@
+{
+  "project_id": "guardsynth-coc",
+  "input_hashes": {
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/diversity-protocol-2026-09-29-001/RUN_MANIFEST.json": "2306d2caae5344151925ada4f3d1b06266cfcbfd4ee6575cec20819db83749c5",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/diversity-inference-2026-09-29-001/RUN_MANIFEST.json": "e98a279d8d2945e96041f2ba4192f3db2633c3a9d251569e737150f8e2c13d43"
+  },
+  "output_hashes": {
+    "RESULT.json": "a4abb8d8220afac67a682469363bd64fae62aff73593a1eeb65f8bec47744942",
+    "REPORT_KO.md": "6a3af6d72b59f019338e6dd9a76e1ac53cdb84a8fead314da04295c7692f6afb"
+  }
+}

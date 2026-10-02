@@ -1,0 +1,64 @@
+\begin{thebibliography}{10}
+
+\bibitem{hu2023uniad}
+Yihan Hu, Jiazhi Yang, Li~Chen, et~al.
+\newblock Planning-oriented autonomous driving.
+\newblock In {\em Proc. IEEE/CVF Conf. Computer Vision and Pattern
+  Recognition}, pages 17853--17862, 2023.
+
+\bibitem{jiang2023vad}
+Bo~Jiang, Shaoyu Chen, Qing Xu, et~al.
+\newblock {VAD}: Vectorized scene representation for efficient autonomous
+  driving.
+\newblock In {\em Proc. IEEE/CVF Int. Conf. Computer Vision}, pages 8340--8350,
+  2023.
+
+\bibitem{sima2024drivelm}
+Chonghao Sima, Katrin Renz, Kashyap Chitta, et~al.
+\newblock {DriveLM}: Driving with graph visual question answering.
+\newblock {\em arXiv preprint arXiv:2312.14150}, 2023.
+
+\bibitem{tian2024drivevlm}
+Xiaoyu Tian, Junru Gu, Bailin Li, et~al.
+\newblock {DriveVLM}: The convergence of autonomous driving and large
+  vision-language models.
+\newblock In {\em Proc. 8th Conf. Robot Learning}, volume 270, pages
+  4698--4726, 2025.
+
+\bibitem{wang2025alpamayo}
+Yan Wang, Wenjie Luo, Junjie Bai, et~al.
+\newblock {Alpamayo-R1}: Bridging reasoning and action prediction for
+  generalizable autonomous driving in the long tail.
+\newblock {\em arXiv preprint arXiv:2511.00088}, 2025.
+
+\bibitem{xie2025drivebench}
+Shaoyuan Xie, Lingdong Kong, Yuhao Dong, et~al.
+\newblock Are {VLMs} ready for autonomous driving? an empirical study from the
+  reliability, data, and metric perspectives.
+\newblock In {\em Proc. IEEE/CVF Int. Conf. Computer Vision}, pages 6585--6597,
+  2025.
+
+\bibitem{shalev2017rss}
+Shai Shalev-Shwartz, Shaked Shammah, and Amnon Shashua.
+\newblock On a formal model of safe and scalable self-driving cars.
+\newblock {\em arXiv preprint arXiv:1708.06374}, 2017.
+
+\bibitem{katz2019marabou}
+Guy Katz, Derek~A. Huang, Duligur Ibeling, et~al.
+\newblock The {Marabou} framework for verification and analysis of deep neural
+  networks.
+\newblock In {\em Proc. Int. Conf. Computer Aided Verification}, pages
+  443--452, 2019.
+
+\bibitem{fremont2019scenic}
+Daniel~J. Fremont, Tommaso Dreossi, Shromona Ghosh, et~al.
+\newblock {Scenic}: A language for scenario specification and scene generation.
+\newblock In {\em Proc. ACM SIGPLAN Conf. Programming Language Design and
+  Implementation}, pages 63--78, 2019.
+
+\bibitem{zhang2023cat}
+Linrui Zhang, Zhenghao Peng, Quanyi Li, and Bolei Zhou.
+\newblock {CAT}: Closed-loop adversarial training for safe end-to-end driving.
+\newblock {\em arXiv preprint arXiv:2310.12432}, 2023.
+
+\end{thebibliography}

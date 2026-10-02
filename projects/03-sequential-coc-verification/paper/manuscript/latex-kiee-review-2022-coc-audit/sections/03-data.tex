@@ -1,0 +1,103 @@
+\section{데이터와 증거 수준}
+\label{sec:data}
+
+\subsection{평가 데이터의 출처}
+본 논문은 nuScenes 기반 주행 레코드에 추론 주석이 결합된 CoC-Nusc 형식 데이터를 사용한다. 원천 주행 기록은 nuScenes v1.0-trainval 계열이며, 공식 nuScenes는 카메라, 라이다/레이더, 자차 자세 및 선택적 CAN 버스 확장을 제공한다 \cite{caesar2020nuscenes,nuscenes2026website}. 그러나 본 논문의 로컬 CoC-Nusc 실험에서 직접 사용한 물리 증거는 변환된 카메라 패키지, 장면 내부 자차 움직임 parquet, 추론 주석이다. 제3자 변환 과정은 nuScenes 장면을 PhysicalAI-AV 호환 디렉터리와 타임스탬프 관례로 재구성하고, NVIDIA 공개 CoC 자동 레이블러 형식의 행동 주석을 생성한다 \cite{nvidia2026autolabeler}. NVIDIA는 자동 레이블러 소프트웨어를 제공하지만, 본 연구에서 사용한 CoC-Nusc 변환 데이터셋을 생성하거나 인증한 것은 아니다.
+
+따라서 본 논문에서 ``CoC-Nusc''는 공식 nuScenes 원본 자체를 의미하지 않는다. 이는 nuScenes 주행 기록을 기반으로 한 변환 평가 데이터이며, 추론 문장과 품질 점수는 VLM/LLM 기반 자동 레이블링 절차에서 생성된 약한 주석이다. 본 논문의 모델 생성기와 \uppaal 관찰자는 이 변환 데이터를 추가로 해석하여 파싱된 행동 의도, 차량 움직임에서 확인한 반응, 연구자가 선택한 시간 검증 조건, 변이 모델을 도출한다. 표~\ref{tab:provenance-stack}에서는 이 계층을 구분한다.
+
+\begin{table*}[t]
+\centering
+\bitablecaption{평가 데이터의 출처 계층.}{Provenance hierarchy of the evaluation data.}
+\label{tab:provenance-stack}
+\footnotesize
+\begin{tabularx}{\textwidth}{L{0.15\textwidth}L{0.18\textwidth}Y L{0.17\textwidth}}
+\toprule
+Layer & Artifact & Role in this work & Evidence status \\
+\midrule
+nuScenes/Motional & v1.0-trainval, optional CAN extension & Multi-camera scenes, timestamps, ego pose/speed; actuator commands are not used here & Source driving log \\
+CoC-Nusc transform & PhysicalAI-compatible data & Resampling, camera packaging, ego-motion parquet, clip index & Derived compatible data \\
+NVIDIA & CoC auto-labeler & Meta-actions, keyframes, VLM prompt, validator & Public labeling software \\
+Qwen/Qwen3.5-35B-A3B & Generated reasoning and self-evaluation & One-sentence behavior annotation, quality score & Machine-generated weak label \\
+This work & Compiler/observers & Intent parsing, response detection, contracts, mutations & Derived verification evidence \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+표~\ref{tab:provenance-stack}의 출처 구분은 이후 실험 결과를 해석할 때 기준이 된다. 예를 들어 CoC 문장과 품질 점수는 원천 센서값이 아니라 기계 생성 약한 레이블이며, 본 연구의 의도 분류와 응답 시작 시각은 다시 한 번 규칙으로 도출된 검증 증거이다. 따라서 어떤 모델이 통과하더라도 그 통과는 원천 주행 기록 전체의 안전성을 의미하지 않고, 해당 계층에서 허용되는 주장으로 제한된다.
+
+\subsection{추론 주석 생성 절차}
+CoC 주석은 이미 기록된 영상과 자차 궤적에서 메타 행동을 도출하고, 행동 전환 근처의 키프레임을 선택한 뒤, 영상 클립, 자차 궤적, 메타 행동 힌트를 VLM/LLM에 입력하여 인과적 행동 주석을 생성하는 절차를 따른다 \cite{nvidia2026autolabeler}. 즉 온라인 제어기가 추론을 출력한 것이 아니라, 기록된 미래 움직임을 포함한 클립에서 생성된 회고적 보조 레이블이다.
+
+\begin{figure}[t]
+\centering
+\input{figures/annotation-flow}
+\bifigcaption{CoC 추론 주석 생성과 본 논문 검증 입력으로의 변환. 자동 레이블링은 기록된 궤적에서 메타 행동을 먼저 도출하므로, 생성 문장은 온라인 인과 증명이 아니라 회고적 추론 지도 신호로 해석된다.}{Generation of CoC reasoning annotations and transformation into the verification inputs used in this work.}
+\label{fig:annotation-flow}
+\end{figure}
+
+학습 관점에서 추론 주석은 기존 E2E 궤적 샘플을 확장하는 보조 목표이다. 일반적인 E2E 샘플이 관측 이력 $x_t$와 미래 궤적 $y_t$의 쌍이라면, 추론 보강형 샘플은 인과 문장 $z_t$를 추가해 $(x_t,z_t,y_t)$ 또는 쌍 목표 $(z_t,y_t)$를 구성한다. Alpamayo는 이런 방향의 대표 사례로 CoC 문장과 궤적 예측을 연결해 드문 주행 상황 일반화를 목표로 한다 \cite{wang2025alpamayo}. 그러나 본 논문은 실제 E2E 모델을 미세조정하지 않고, 생성된 추론 주석과 기록 자차 움직임이 검증 가능한 에피소드 궤적을 이루는지 다룬다.
+
+그림~\ref{fig:annotation-flow}에서 중요한 지점은 메타 행동 추출이 기록된 궤적에 조건화되어 CoC 생성보다 먼저 수행된다는 것이다. 즉 CoC 문장은 주행 중 온라인으로 산출된 제어 판단이 아니라, 기록된 영상과 궤적을 함께 본 뒤 생성된 회고적 설명이다. 따라서 CoC와 같은 궤적 사이의 일치는 독립적인 인과 증거가 아니다. 이 때문에 본 논문은 CoC 문장을 직접 제어 명령으로 해석하지 않고, 검증기가 확인할 파싱된 추상 행동 의도와 연구자 선택 시간 검증 조건의 입력으로만 사용한다.
+
+\subsection{연속 CoC 주 실험과 보조 단일사건 분석의 표본}
+추론 파일 전체에는 743개 장면과 3,218개 CoC 사건이 있다. 이 가운데 로컬 자차 궤적과 연결되는 부분집합은 94개 장면ㆍ403개 사건이며, CoC가 두 개 이상인 90개 장면에서 309개 장면 내부 인접 창을 구성했다. 연속 CoC 자연 자료 검토는 자동 후보 15개 장면과 겹치지 않는 대응 대조 12개 장면, 총 27개 장면 클러스터만을 선택했다. 따라서 309개 창은 추출 재고이고 27개 장면은 사람 검토 표본이며, 둘을 같은 평가 분모로 사용하지 않는다. 이 주 실험은 403개 사건 전체의 텍스트를 대상으로 창을 구성했으며, 아래의 \texttt{quality\_pass} 선별은 별도의 보조 단일사건 반응 분석에만 적용했다.
+
+청크~0의 보조 단일사건 분석은 다음의 축소 흐름으로 구성된다.
+\begin{quote}
+\small
+403 CoC 주석 $\rightarrow$ 290 기계 품질 통과 주석 $=134$ 방향이 명시된 CoC 사건별 검증 후보 $+156$ 제외 $\rightarrow$ 130 속도 탐지기 사례 $+$ 4 이미 충족된 사례.
+\end{quote}
+290개 품질 통과 사건 중 156개는 영어 정규식 기반 의도 파서에서 방향이 모호하거나 비방향적이거나 복합 의도로 판정되어 제외했고, 추론 범위를 방향이 명시된 134개 사건으로 제한했다. 이 134건은 단일 이벤트 선별의 \emph{주석 사건별 검증 조건} 134개이다. 반복 사건끼리 같은 응답 시작을 공유할 수 있으므로 독립 응답 134개를 뜻하지 않으며, \preserve/\reset 상태 분석은 선택한 에피소드 사례에만 적용했다. 즉 $134=125+4+5$이며, 기본 분석 설정에서는 125개 속도 변화 계약 통과, 4개 이미 충족된 계약 통과, 5개 검토 후보로 분기한다. 이 수는 기록 전체 또는 403개 주석 전체에 대한 안전 판정이 아니다.
+
+초기 기본 탐지기 선별에서는 검토 후보가 8건이었다. 이후 STOP/YIELD 사건 시점의 속도가 $0.5$~m/s 이하이면 이미 충족된 것으로 처리하는 규칙을 사후 추가하여 \texttt{scene-0046@10000000}, \texttt{scene-0159@4500000}, \texttt{scene-0159@4900000}을 재분류했고 후보가 5건이 되었다. 이 $0.5$~m/s 임계값은 요구사항에서 독립적으로 도출한 값이 아니라 해당 분석 대상 집합에 맞춘 탐색적 보정 논리이다.
+
+여기서 \texttt{quality\_pass}는 Qwen/Qwen3.5-35B-A3B가 생성한 \emph{기계 생성 검증 입력 수락 신호}이다. 상류 README에는 \texttt{Qwen/Qwen3.5-35B-A3B}라는 모델명은 기록되어 있으나, 불변 모델 스냅샷ㆍ태그ㆍ해시와 자동 레이블러 커밋은 보존되어 있지 않다. 따라서 특정 리비전을 추정하지 않으며, 이 누락을 재현성 한계로 취급한다. 이는 인간 정답(human gold)이나 주석 내용의 사실성을 보증하는 표지가 아니다. 다섯 검토 후보에 대한 시각 점검도 각 후보의 전방 카메라 네 프레임을 사용한 AI 선별(triage)이며, 독립적인 인간 검증이 아니다. 이 점검은 검토 우선순위를 돕는 보조 문맥일 뿐 CoC--궤적 일치의 독립 인과 근거나 물리 안전성 결론을 제공하지 않는다.
+
+\subsection{데이터 한 건의 실제 구조}
+CoC-Nusc 추론 파일은 \path{data/baseline/coc_nusc/reasoning/ood_reasoning.parquet}이며, \texttt{clip\_id}별 행 안에 \texttt{events} JSON 문자열이 저장된다. 각 사건이 하나의 추론 보강형 레코드이다. 핵심 필드는 \texttt{clip\_id}, \texttt{event\_start\_timestamp}, \texttt{cot}, \texttt{quality}, \texttt{quality\_pass}이다.
+
+\noindent\begin{minipage}{\columnwidth}
+\begin{lstlisting}[caption={scene-0001의 CoC 사건 레코드 예시. 점수는 모델이 생성한 검증 신호이다.},label={lst:coc-record}]
+{
+  "clip_id": "scene-0001",
+  "event_start_timestamp": 2500000,
+  "cot": "Decelerate to maintain a safe distance from
+          the lead truck ahead while navigating through
+          the construction zone.",
+  "quality": {
+    "visual_evidence_score": 0.90,
+    "behavior_match_score": 0.95,
+    "decision_supported_by_video": 0.75,
+    "causal_consistency_score": 0.70
+  },
+  "quality_pass": true
+}
+\end{lstlisting}
+\end{minipage}
+
+같은 \texttt{clip\_id} 안의 CoC 주석 사건 목록을 시간순으로 정렬하면 장면 내부 사건열이 된다. \texttt{scene-0001}에는 2.5초, 3.5초, 4.8초에 트럭/공사 구간 관련 감속 추론이 반복되고, 6.3초에는 좌측 회피 추론이 나타나며, 9.3초에는 낮은 품질의 사건이 나타난다. 자차 움직임 보조 파일은 \texttt{data/baseline/coc\_nusc/labels/egomotion/scene-0001.egomotion.parquet}이며 타임스탬프, 위치, 쿼터니언, 속도, 가속도, 곡률 등을 포함한다. 본 논문은 $v=\sqrt{v_x^2+v_y^2}$로 자차 속도를 계산하고, CoC 주석 사건 이후의 지속적 속도 변화를 차량 움직임에서 확인한 반응으로 도출한다.
+
+\subsection{증거 수준 구분}
+모든 사건과 전환은 네 수준으로 구분한다. 이 구분은 ``검증 도구가 실행되었다''는 사실이 ``차량이 안전하다''는 주장으로 확대 해석되는 것을 방지하기 위해 필요하다.
+
+\begin{table}[t]
+\centering
+\bitablecaption{증거 수준과 허용되는 주장.}{Evidence levels and permitted claims.}
+\label{tab:evidence-level}
+\footnotesize
+\begin{tabularx}{\columnwidth}{L{0.24\columnwidth}YY}
+\toprule
+Level & Example & Allowed claim \\
+\midrule
+Observed evidence & \texttt{cot}, timestamp, camera frame, ego-motion row & The record exists in the data \\
+Derived evidence & Intent, ego speed, response onset, latency & The response is computed under stated rules \\
+Synthetic assumption & $D$, repeat semantics, detector setting & Candidate requirements and sensitivity are tested \\
+Synthetic mutation & No response, clock reset, overwrite, orphan response & Queries detect injected known faults \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+표~\ref{tab:evidence-level}에서는 표~\ref{tab:provenance-stack}의 출처 계층을 주장 수준으로 다시 번역한다. 관측 증거는 ``데이터에 그렇게 기록되어 있다''는 주장만 허용하고, 도출 증거는 ``정해진 규칙으로 계산했다''는 주장만 허용한다. 합성 가정과 인위적 오류 사례는 모델 체킹 절차를 시험하기 위한 입력이므로, 학습용 정상 궤적이나 실제 위험 사례로 바로 승격하지 않는다.
+
+원천 근거가 있는 계약 통과(PASS)는 검증 조건 충족 항목이 될 수 있지만, 인위적 오류 사례는 검사기 회귀 시험 전용이다. 기한이 독립 요구사항으로 정당화되지 않은 검토 후보(FAIL)는 학습용 위험 레이블이 아니다. 장면 간 연속성 증거가 없으면 출처 불충분으로 기록하고 장기 시퀀스 샘플로 묶지 않으며, 독립 클립/창 샘플로만 유지한다.

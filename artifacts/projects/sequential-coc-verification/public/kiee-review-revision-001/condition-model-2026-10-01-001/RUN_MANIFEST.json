@@ -1,0 +1,12 @@
+{
+  "project_id": "sequential-coc-verification",
+  "source_run": "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001",
+  "cases_sha256": "0a0008567586a8a5eeff447b915280686adce259bda3ce4a770c4dae434a4cca",
+  "script_sha256": "5bab483b5823afa717efaed1d6a6cdc795e619ca3bca0f6f8378deb4d970beae",
+  "verifyta": "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+  "verifyta_version": "UPPAAL 5.0.0 (rev. 714BA9DB36F49691), June 2023",
+  "labels_changed": false,
+  "new_independent_sample": false,
+  "conditions": "identifier-linked authored symbolic evidence; no automatic NLP",
+  "semantics": "unknown waiting alone is not a problem; unresolved GO is UNKNOWN; false release at GO is CONTRADICTION; all matching obligations independently tracked"
+}

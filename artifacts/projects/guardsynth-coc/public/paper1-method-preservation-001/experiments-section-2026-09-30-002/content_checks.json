@@ -1,0 +1,18 @@
+{
+  "ko": {
+    "pages": 8,
+    "text_units_matched": 267,
+    "missing_text_units": 0,
+    "math_paragraphs_excluded_from_automated_text_match": 2,
+    "overfull_or_missing_character_warnings": 0,
+    "layout_contact_sheet_reviewed": true
+  },
+  "en": {
+    "pages": 11,
+    "text_units_matched": 267,
+    "missing_text_units": 0,
+    "math_paragraphs_excluded_from_automated_text_match": 2,
+    "overfull_or_missing_character_warnings": 0,
+    "layout_contact_sheet_reviewed": true
+  }
+}

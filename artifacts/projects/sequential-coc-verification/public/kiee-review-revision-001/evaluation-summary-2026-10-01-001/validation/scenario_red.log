@@ -1,0 +1,93 @@
+FFFFFFFFFFF
+======================================================================
+FAIL: test_explicit_normal_release_is_bound_to_original_condition (test_scenario_evaluation.ScenarioEvaluationTests.test_explicit_normal_release_is_bound_to_original_condition)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_scenario_evaluation.py", line 10, in setUp
+    self.assertTrue(MODULE.exists(), 'scenario evaluation implementation absent')
+AssertionError: False is not true : scenario evaluation implementation absent
+
+======================================================================
+FAIL: test_foreign_release_never_becomes_active_release (test_scenario_evaluation.ScenarioEvaluationTests.test_foreign_release_never_becomes_active_release)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_scenario_evaluation.py", line 10, in setUp
+    self.assertTrue(MODULE.exists(), 'scenario evaluation implementation absent')
+AssertionError: False is not true : scenario evaluation implementation absent
+
+======================================================================
+FAIL: test_frames_have_exact_source_spans (test_scenario_evaluation.ScenarioEvaluationTests.test_frames_have_exact_source_spans)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_scenario_evaluation.py", line 10, in setUp
+    self.assertTrue(MODULE.exists(), 'scenario evaluation implementation absent')
+AssertionError: False is not true : scenario evaluation implementation absent
+
+======================================================================
+FAIL: test_fsm_all_releases_allow_proceed (test_scenario_evaluation.ScenarioEvaluationTests.test_fsm_all_releases_allow_proceed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_scenario_evaluation.py", line 10, in setUp
+    self.assertTrue(MODULE.exists(), 'scenario evaluation implementation absent')
+AssertionError: False is not true : scenario evaluation implementation absent
+
+======================================================================
+FAIL: test_fsm_missing_release_is_unknown_not_false (test_scenario_evaluation.ScenarioEvaluationTests.test_fsm_missing_release_is_unknown_not_false)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_scenario_evaluation.py", line 10, in setUp
+    self.assertTrue(MODULE.exists(), 'scenario evaluation implementation absent')
+AssertionError: False is not true : scenario evaluation implementation absent
+
+======================================================================
+FAIL: test_fsm_multi_requirement_cannot_disappear (test_scenario_evaluation.ScenarioEvaluationTests.test_fsm_multi_requirement_cannot_disappear)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_scenario_evaluation.py", line 10, in setUp
+    self.assertTrue(MODULE.exists(), 'scenario evaluation implementation absent')
+AssertionError: False is not true : scenario evaluation implementation absent
+
+======================================================================
+FAIL: test_fsm_recent_context_loses_old_obligation (test_scenario_evaluation.ScenarioEvaluationTests.test_fsm_recent_context_loses_old_obligation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_scenario_evaluation.py", line 10, in setUp
+    self.assertTrue(MODULE.exists(), 'scenario evaluation implementation absent')
+AssertionError: False is not true : scenario evaluation implementation absent
+
+======================================================================
+FAIL: test_missing_class_metric_is_undefined (test_scenario_evaluation.ScenarioEvaluationTests.test_missing_class_metric_is_undefined)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_scenario_evaluation.py", line 10, in setUp
+    self.assertTrue(MODULE.exists(), 'scenario evaluation implementation absent')
+AssertionError: False is not true : scenario evaluation implementation absent
+
+======================================================================
+FAIL: test_no_case_filtering_and_balanced_factorial (test_scenario_evaluation.ScenarioEvaluationTests.test_no_case_filtering_and_balanced_factorial)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_scenario_evaluation.py", line 10, in setUp
+    self.assertTrue(MODULE.exists(), 'scenario evaluation implementation absent')
+AssertionError: False is not true : scenario evaluation implementation absent
+
+======================================================================
+FAIL: test_projection_declares_multi_requirement_loss (test_scenario_evaluation.ScenarioEvaluationTests.test_projection_declares_multi_requirement_loss)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_scenario_evaluation.py", line 10, in setUp
+    self.assertTrue(MODULE.exists(), 'scenario evaluation implementation absent')
+AssertionError: False is not true : scenario evaluation implementation absent
+
+======================================================================
+FAIL: test_unknown_positive_stays_in_recall_denominator (test_scenario_evaluation.ScenarioEvaluationTests.test_unknown_positive_stays_in_recall_denominator)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_scenario_evaluation.py", line 10, in setUp
+    self.assertTrue(MODULE.exists(), 'scenario evaluation implementation absent')
+AssertionError: False is not true : scenario evaluation implementation absent
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.003s
+
+FAILED (failures=11)

@@ -1,0 +1,43 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "discussion-section-2026-09-30-001",
+  "status": "bilingual_discussion_draft_complete",
+  "documents": {
+    "ko": {
+      "pdf": "ieee-access-discussion-v01-ko.pdf",
+      "pages": 2,
+      "paragraphs_verified": 8,
+      "subsections": 4,
+      "overflow_or_glyph_warnings": 0,
+      "pdf_sha256": "9288cdf8c13b3df180d79bb2024710201886f0da74eb82d560d4336b0f1bfce3",
+      "source_sha256": "eab9889e7691fda6b4c3065a3cbcb9557801304bab55f6bf480c3ed584f8b5da"
+    },
+    "en": {
+      "pdf": "ieee-access-discussion-v01-en.pdf",
+      "pages": 2,
+      "paragraphs_verified": 8,
+      "subsections": 4,
+      "overflow_or_glyph_warnings": 0,
+      "pdf_sha256": "a98335951c1e7975992de8d74d55806562d9d8c8859573c0a3edf99bb9178209",
+      "source_sha256": "fbfcc25f0565026d2d74a3a36f437c838289db9989ed8e1698161e133157e33c",
+      "words_including_headings": 703
+    }
+  },
+  "structure": [
+    "Role of explicit constraints in CoC",
+    "Formal support for constraint development",
+    "Evidence validity, specification verification, and behavioral compliance",
+    "Scope and further development"
+  ],
+  "verification": {
+    "visual_review": "both languages, all four pages",
+    "paragraph_equivalence": "8 body paragraphs per language matched to PDF after whitespace and typesetting-hyphen normalization",
+    "latex_overflow_and_missing_glyphs": 0,
+    "source_hashes": "verified",
+    "new_file_naming_violations": 0,
+    "existing_unrelated_file_naming_violations": 5
+  },
+  "main_tex_modified": false,
+  "new_experiments": 0,
+  "claim_boundary": "No universal P2 superiority, causal verification gain, road-safety or Studio productivity claim"
+}

@@ -1,0 +1,24 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=16pt]{geometry}
+\usepackage{fontspec,kotex,xcolor,hyperref,fancyhdr}
+\setmainfont{DejaVu Serif}
+\setmainhangulfont{Noto Sans CJK KR}
+\definecolor{navy}{HTML}{173E59}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small GuardSynth CoC}
+\fancyhead[R]{\small 제목·초록 검토안 · 한글}
+\fancyfoot[L]{\small v0.1 · 2026-09-30}
+\fancyfoot[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{3em}
+\linespread{1.15}
+\hypersetup{pdftitle={GuardSynth: CoC 기반 VLM 학습을 위한 행동 제약의 정형 명세와 검증},pdfsubject={Title and abstract for author review},pdfauthor={GuardSynth project}}
+\begin{document}
+\vspace*{8mm}
+{\Large\bfseries\color{navy}\raggedright GuardSynth: CoC 기반 VLM 학습을 위한 행동 제약의 정형 명세와 검증\par}
+\vspace{8mm}
+{\large\bfseries 초록\par}
+\vspace{3mm}
+Chain of Cognition(CoC)은 장면 이해와 행동 판단을 연결하여 시각언어모델(VLM)의 학습에 활용된다. 그러나 상황과 행동의 이유를 설명하는 CoC 기반 학습만으로는 올바른 행동 선택과 제약 준수를 충분히 학습하는 데 한계가 있다. 본 논문은 이러한 한계를 보완하기 위해 행동 제약을 체계적으로 명세·검증하고 CoC 학습 데이터에 결합하는 GuardSynth를 제안한다. 행동 제약의 범위·특성·구성 요소를 정의하고, 적용 조건, 금지 행동, 유지·해제 조건, 시간 및 근거를 Evidence-Bound Lifecycle Contracts(EBLC)로 명세한다. 이어 제한된 논리 모델에서 일관성과 지정 속성을 검증하고, 명세에 대응하는 통제 자연어(Controlled Natural Language, CNL)를 생성하여 CoC를 보강한다. 통제된 합성 시각·시간 과제에서 Qwen3-VL-2B-Instruct를 동일한 LoRA 학습 예산과 세 개의 시드로 비교하였으며, 제약 추가 조건에는 학습과 평가 모두에서 제약을 제공하였다. CoC 단독, 기존 자연어 제약 추가, EBLC 기반 CNL 추가 조건의 평균 행동 선택 정확도는 각각 49.86\%, 96.81\%, 98.06\%였으며, 제약 위반율은 19.17\%, 1.39\%, 0.83\%였다. 결과는 행동 제약의 정형 명세·검증을 CoC 학습에 연결하는 체계와 명시적 제약 제공에 따른 행동 선택 개선을 보여준다.
+\end{document}

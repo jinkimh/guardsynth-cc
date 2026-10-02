@@ -1,0 +1,40 @@
+{
+  "annotation_start_allowed": false,
+  "audit_version": "guardsynth-m16-geometry-candidate-v0.1",
+  "claim_scope": "M16_MACHINE_GEOMETRY_CANDIDATES_FOR_CURATOR_REVIEW_NOT_MAP_GROUND_TRUTH_SOURCE_COMPLETE_EXPERT_EFFECT_OR_VEHICLE_SAFETY",
+  "classified_event_count": 98,
+  "coordinate_frame": "camera_front_wide_120fov_pixel",
+  "curator_pending_count": 98,
+  "curator_review_screen_generated": true,
+  "curator_review_screen_scope": "VISIBLE_GEOMETRY_CONFIRMATION_AND_PIXEL_POLYGON_CORRECTION_ONLY",
+  "frame_candidate_count": 490,
+  "human_video_observation_promoted_to_geometry": false,
+  "machine_candidate_promoted_to_ground_truth": false,
+  "model": {
+    "name": "TwinLiteNetPlus_Large",
+    "source_license": "MIT",
+    "source_license_sha256": "6f5d45253175ad2d856dc82acfed573cd86e64a4e4ef93a250e2f83357159946",
+    "source_revision": "90f1b8695ae311d5123b05f8534b2e11e42499d2",
+    "source_url": "https://github.com/chequanghuy/TwinLiteNetPlus",
+    "task": [
+      "drivable_area_segmentation",
+      "lane_segmentation"
+    ],
+    "training_domain": "BDD100K",
+    "weight_sha256": "5605d1a8ce762c1b6f7d23f4c2e7ec9384bfd6e6887b040b43e1f8902a817e22",
+    "weight_url": "https://drive.google.com/uc?id=1H8P-GrOUBOaVs5LEqXBfz0dC9gguUUio"
+  },
+  "new_eligible_count": 0,
+  "new_source_complete_count": 0,
+  "slice_candidate_counts": {
+    "FOLLOWING_CUT_IN": 33,
+    "PEDESTRIAN_CYCLIST_YIELD": 32,
+    "STOP_SIGNALS": 33
+  },
+  "source_bound_machine_candidate_count": 98,
+  "source_field_updates_before_curator_review": 0,
+  "status": "M16_SOURCE_GEOMETRY_CANDIDATES_GENERATED_CURATOR_REVIEW_REQUIRED",
+  "synthetic_required_field_fill_count": 0,
+  "unique_source_video_count": 81,
+  "unit": "pixel"
+}

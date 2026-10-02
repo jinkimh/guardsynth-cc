@@ -1,0 +1,24 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "background-2026-09-30-003",
+  "status": "REVISED_DRAFT_COMPILED_AND_CHECKED",
+  "changes": [
+    "Removed elementary variables and logical operators subsection and its table",
+    "Renumbered satisfiability and finite temporal bounds subsections",
+    "Replaced LoRA notation table with concise prose; retained formula and numerical example"
+  ],
+  "outputs": {
+    "ko": {"pdf": "ieee-access-background-v01-ko.pdf", "pages": 3, "text_units_checked": 34, "tables": 0},
+    "en": {"pdf": "ieee-access-background-v01-en.pdf", "pages": 3, "text_units_checked": 34, "tables": 0}
+  },
+  "checks": {
+    "xelatex_two_pass_build": "PASS",
+    "markdown_prose_preserved": "PASS",
+    "bilingual_reference_urls": 5,
+    "missing_glyph_warnings": 0,
+    "overfull_hbox_warnings": 0,
+    "visual_review": "All six pages inspected",
+    "file_naming": "Five pre-existing unrelated violations; no new-file violations"
+  },
+  "integration": "Standalone Section III; previous completed PDF snapshots retained"
+}

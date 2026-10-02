@@ -1,0 +1,16 @@
+{
+  "actual_vehicle_validation_deferred_to_m21": true,
+  "annotation_start_allowed": false,
+  "claim_scope": "M16_PILOT_PREFLIGHT_NOT_EXPERT_RESULT_OR_VEHICLE_SAFETY",
+  "eligible_scene_count": 1,
+  "protocol_version": "guardsynth-expert-pilot-v0.1",
+  "reason_codes": [
+    "M16_REQUIRES_60_SOURCE_COMPLETE_SCENES",
+    "M16_GEOMETRY_AUTHORITY_AND_LIFECYCLE_FIELDS_NOT_CLOSED",
+    "M16_SLICE_AND_OUTCOME_QUOTAS_NOT_MET"
+  ],
+  "status": "BLOCKED_DATA_SHORTFALL",
+  "synthetic_scene_fill_performed": false,
+  "target_scene_count": 60,
+  "total_scene_shortfall": 59
+}

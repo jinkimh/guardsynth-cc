@@ -1,0 +1,3866 @@
+[
+  {
+    "duration_ms": 200,
+    "core": {
+      "grammar_version": "eblc-core-v0.1",
+      "model_id": "diversity_release",
+      "horizon": 2,
+      "source_refs": [
+        "paper1-temporal-diversity-v0.1",
+        "SUPPLIED_SYNTHETIC_SOURCE"
+      ],
+      "claim_scope": "SUPPLIED_SINGLE_TRANSITION_INTEGER_TICKS_ONLY",
+      "declarations": [
+        {
+          "name": "entry_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        },
+        {
+          "name": "clear_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        },
+        {
+          "name": "enters",
+          "sort": "BOOL",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": null,
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        }
+      ],
+      "clauses": [
+        {
+          "id": "release_gate",
+          "kind": "INVARIANT",
+          "enforcement": "INITIAL",
+          "formula": {
+            "op": "implies",
+            "left": {
+              "op": "var",
+              "name": "enters",
+              "offset": 0
+            },
+            "right": {
+              "op": "ge",
+              "left": {
+                "op": "var",
+                "name": "entry_ms",
+                "offset": 0
+              },
+              "right": {
+                "op": "add",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 200,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              }
+            }
+          },
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Entry gate over millisecond tick counts."
+        }
+      ],
+      "queries": [
+        {
+          "id": "base",
+          "formula": {
+            "op": "literal",
+            "sort": "BOOL",
+            "value": true,
+            "enum_name": null,
+            "unit": null,
+            "frame": null
+          },
+          "expected": "SAT",
+          "classification": "CONSISTENCY",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Internal consistency does not prove source truth."
+        },
+        {
+          "id": "boundary_0_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2900,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_0_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2900,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "UNSAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_1_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3000,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_1_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3000,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_2_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3100,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_2_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3100,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        }
+      ]
+    },
+    "checks": {
+      "model_id": "diversity_release",
+      "engine": "Z3_BOUNDED_SMT",
+      "z3_version": "5.0.0",
+      "grammar_version": "eblc-core-v0.1",
+      "compiler_version": "eblc-core-smt-compiler-v0.1",
+      "query_count": 7,
+      "matches_expected": 7,
+      "agreement": 1.0,
+      "results": [
+        {
+          "query_id": "base",
+          "classification": "CONSISTENCY",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Internal consistency does not prove source truth.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": -1,
+            "diversity_release__clear_ms__const": -200,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x41 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 200))))\n (=> diversity_release__enters__const $x41)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_0_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 2900,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x41 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 200))))\n (=> diversity_release__enters__const $x41)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 2900 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_0_1",
+          "classification": "EXAMPLE",
+          "expected": "UNSAT",
+          "status": "UNSAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": null,
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x41 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 200))))\n (=> diversity_release__enters__const $x41)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 2900 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_1_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 3000,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x41 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 200))))\n (=> diversity_release__enters__const $x41)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3000 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_1_1",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 3000,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": true
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x41 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 200))))\n (=> diversity_release__enters__const $x41)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3000 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_2_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 3100,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x41 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 200))))\n (=> diversity_release__enters__const $x41)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3100 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_2_1",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 3100,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": true
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x41 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 200))))\n (=> diversity_release__enters__const $x41)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3100 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        }
+      ]
+    }
+  },
+  {
+    "duration_ms": 500,
+    "core": {
+      "grammar_version": "eblc-core-v0.1",
+      "model_id": "diversity_release",
+      "horizon": 2,
+      "source_refs": [
+        "paper1-temporal-diversity-v0.1",
+        "SUPPLIED_SYNTHETIC_SOURCE"
+      ],
+      "claim_scope": "SUPPLIED_SINGLE_TRANSITION_INTEGER_TICKS_ONLY",
+      "declarations": [
+        {
+          "name": "entry_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        },
+        {
+          "name": "clear_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        },
+        {
+          "name": "enters",
+          "sort": "BOOL",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": null,
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        }
+      ],
+      "clauses": [
+        {
+          "id": "release_gate",
+          "kind": "INVARIANT",
+          "enforcement": "INITIAL",
+          "formula": {
+            "op": "implies",
+            "left": {
+              "op": "var",
+              "name": "enters",
+              "offset": 0
+            },
+            "right": {
+              "op": "ge",
+              "left": {
+                "op": "var",
+                "name": "entry_ms",
+                "offset": 0
+              },
+              "right": {
+                "op": "add",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 500,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              }
+            }
+          },
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Entry gate over millisecond tick counts."
+        }
+      ],
+      "queries": [
+        {
+          "id": "base",
+          "formula": {
+            "op": "literal",
+            "sort": "BOOL",
+            "value": true,
+            "enum_name": null,
+            "unit": null,
+            "frame": null
+          },
+          "expected": "SAT",
+          "classification": "CONSISTENCY",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Internal consistency does not prove source truth."
+        },
+        {
+          "id": "boundary_0_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3200,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_0_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3200,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "UNSAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_1_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3300,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_1_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3300,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_2_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3400,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_2_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3400,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        }
+      ]
+    },
+    "checks": {
+      "model_id": "diversity_release",
+      "engine": "Z3_BOUNDED_SMT",
+      "z3_version": "5.0.0",
+      "grammar_version": "eblc-core-v0.1",
+      "compiler_version": "eblc-core-smt-compiler-v0.1",
+      "query_count": 7,
+      "matches_expected": 7,
+      "agreement": 1.0,
+      "results": [
+        {
+          "query_id": "base",
+          "classification": "CONSISTENCY",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Internal consistency does not prove source truth.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": -1,
+            "diversity_release__clear_ms__const": -500,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x10 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 500))))\n (=> diversity_release__enters__const $x10)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_0_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 3200,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x10 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 500))))\n (=> diversity_release__enters__const $x10)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3200 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_0_1",
+          "classification": "EXAMPLE",
+          "expected": "UNSAT",
+          "status": "UNSAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": null,
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x10 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 500))))\n (=> diversity_release__enters__const $x10)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3200 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_1_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 3300,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x10 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 500))))\n (=> diversity_release__enters__const $x10)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3300 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_1_1",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 3300,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": true
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x10 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 500))))\n (=> diversity_release__enters__const $x10)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3300 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_2_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 3400,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x10 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 500))))\n (=> diversity_release__enters__const $x10)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3400 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_2_1",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 3400,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": true
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x10 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 500))))\n (=> diversity_release__enters__const $x10)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3400 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        }
+      ]
+    }
+  },
+  {
+    "duration_ms": 600,
+    "core": {
+      "grammar_version": "eblc-core-v0.1",
+      "model_id": "diversity_release",
+      "horizon": 2,
+      "source_refs": [
+        "paper1-temporal-diversity-v0.1",
+        "SUPPLIED_SYNTHETIC_SOURCE"
+      ],
+      "claim_scope": "SUPPLIED_SINGLE_TRANSITION_INTEGER_TICKS_ONLY",
+      "declarations": [
+        {
+          "name": "entry_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        },
+        {
+          "name": "clear_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        },
+        {
+          "name": "enters",
+          "sort": "BOOL",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": null,
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        }
+      ],
+      "clauses": [
+        {
+          "id": "release_gate",
+          "kind": "INVARIANT",
+          "enforcement": "INITIAL",
+          "formula": {
+            "op": "implies",
+            "left": {
+              "op": "var",
+              "name": "enters",
+              "offset": 0
+            },
+            "right": {
+              "op": "ge",
+              "left": {
+                "op": "var",
+                "name": "entry_ms",
+                "offset": 0
+              },
+              "right": {
+                "op": "add",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 600,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              }
+            }
+          },
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Entry gate over millisecond tick counts."
+        }
+      ],
+      "queries": [
+        {
+          "id": "base",
+          "formula": {
+            "op": "literal",
+            "sort": "BOOL",
+            "value": true,
+            "enum_name": null,
+            "unit": null,
+            "frame": null
+          },
+          "expected": "SAT",
+          "classification": "CONSISTENCY",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Internal consistency does not prove source truth."
+        },
+        {
+          "id": "boundary_0_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3300,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_0_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3300,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "UNSAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_1_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3400,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_1_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3400,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_2_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3500,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_2_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3500,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        }
+      ]
+    },
+    "checks": {
+      "model_id": "diversity_release",
+      "engine": "Z3_BOUNDED_SMT",
+      "z3_version": "5.0.0",
+      "grammar_version": "eblc-core-v0.1",
+      "compiler_version": "eblc-core-smt-compiler-v0.1",
+      "query_count": 7,
+      "matches_expected": 7,
+      "agreement": 1.0,
+      "results": [
+        {
+          "query_id": "base",
+          "classification": "CONSISTENCY",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Internal consistency does not prove source truth.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": -1,
+            "diversity_release__clear_ms__const": -600,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x38 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 600))))\n (=> diversity_release__enters__const $x38)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_0_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 3300,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x38 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 600))))\n (=> diversity_release__enters__const $x38)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3300 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_0_1",
+          "classification": "EXAMPLE",
+          "expected": "UNSAT",
+          "status": "UNSAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": null,
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x38 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 600))))\n (=> diversity_release__enters__const $x38)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3300 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_1_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 3400,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x38 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 600))))\n (=> diversity_release__enters__const $x38)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3400 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_1_1",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 3400,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": true
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x38 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 600))))\n (=> diversity_release__enters__const $x38)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3400 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_2_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 3500,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x38 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 600))))\n (=> diversity_release__enters__const $x38)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3500 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_2_1",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 3500,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": true
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x38 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 600))))\n (=> diversity_release__enters__const $x38)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3500 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        }
+      ]
+    }
+  },
+  {
+    "duration_ms": 1200,
+    "core": {
+      "grammar_version": "eblc-core-v0.1",
+      "model_id": "diversity_release",
+      "horizon": 2,
+      "source_refs": [
+        "paper1-temporal-diversity-v0.1",
+        "SUPPLIED_SYNTHETIC_SOURCE"
+      ],
+      "claim_scope": "SUPPLIED_SINGLE_TRANSITION_INTEGER_TICKS_ONLY",
+      "declarations": [
+        {
+          "name": "entry_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        },
+        {
+          "name": "clear_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        },
+        {
+          "name": "enters",
+          "sort": "BOOL",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": null,
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        }
+      ],
+      "clauses": [
+        {
+          "id": "release_gate",
+          "kind": "INVARIANT",
+          "enforcement": "INITIAL",
+          "formula": {
+            "op": "implies",
+            "left": {
+              "op": "var",
+              "name": "enters",
+              "offset": 0
+            },
+            "right": {
+              "op": "ge",
+              "left": {
+                "op": "var",
+                "name": "entry_ms",
+                "offset": 0
+              },
+              "right": {
+                "op": "add",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 1200,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              }
+            }
+          },
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Entry gate over millisecond tick counts."
+        }
+      ],
+      "queries": [
+        {
+          "id": "base",
+          "formula": {
+            "op": "literal",
+            "sort": "BOOL",
+            "value": true,
+            "enum_name": null,
+            "unit": null,
+            "frame": null
+          },
+          "expected": "SAT",
+          "classification": "CONSISTENCY",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Internal consistency does not prove source truth."
+        },
+        {
+          "id": "boundary_0_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3900,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_0_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 3900,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "UNSAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_1_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 4000,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_1_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 4000,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_2_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 4100,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_2_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 4100,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        }
+      ]
+    },
+    "checks": {
+      "model_id": "diversity_release",
+      "engine": "Z3_BOUNDED_SMT",
+      "z3_version": "5.0.0",
+      "grammar_version": "eblc-core-v0.1",
+      "compiler_version": "eblc-core-smt-compiler-v0.1",
+      "query_count": 7,
+      "matches_expected": 7,
+      "agreement": 1.0,
+      "results": [
+        {
+          "query_id": "base",
+          "classification": "CONSISTENCY",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Internal consistency does not prove source truth.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": -1,
+            "diversity_release__clear_ms__const": -1200,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x51 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1200))))\n (=> diversity_release__enters__const $x51)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_0_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 3900,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x51 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1200))))\n (=> diversity_release__enters__const $x51)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3900 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_0_1",
+          "classification": "EXAMPLE",
+          "expected": "UNSAT",
+          "status": "UNSAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": null,
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x51 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1200))))\n (=> diversity_release__enters__const $x51)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 3900 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_1_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 4000,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x51 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1200))))\n (=> diversity_release__enters__const $x51)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 4000 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_1_1",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 4000,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": true
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x51 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1200))))\n (=> diversity_release__enters__const $x51)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 4000 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_2_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 4100,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x51 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1200))))\n (=> diversity_release__enters__const $x51)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 4100 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_2_1",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 4100,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": true
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x51 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1200))))\n (=> diversity_release__enters__const $x51)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 4100 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        }
+      ]
+    }
+  },
+  {
+    "duration_ms": 1400,
+    "core": {
+      "grammar_version": "eblc-core-v0.1",
+      "model_id": "diversity_release",
+      "horizon": 2,
+      "source_refs": [
+        "paper1-temporal-diversity-v0.1",
+        "SUPPLIED_SYNTHETIC_SOURCE"
+      ],
+      "claim_scope": "SUPPLIED_SINGLE_TRANSITION_INTEGER_TICKS_ONLY",
+      "declarations": [
+        {
+          "name": "entry_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        },
+        {
+          "name": "clear_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        },
+        {
+          "name": "enters",
+          "sort": "BOOL",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": null,
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        }
+      ],
+      "clauses": [
+        {
+          "id": "release_gate",
+          "kind": "INVARIANT",
+          "enforcement": "INITIAL",
+          "formula": {
+            "op": "implies",
+            "left": {
+              "op": "var",
+              "name": "enters",
+              "offset": 0
+            },
+            "right": {
+              "op": "ge",
+              "left": {
+                "op": "var",
+                "name": "entry_ms",
+                "offset": 0
+              },
+              "right": {
+                "op": "add",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 1400,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              }
+            }
+          },
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Entry gate over millisecond tick counts."
+        }
+      ],
+      "queries": [
+        {
+          "id": "base",
+          "formula": {
+            "op": "literal",
+            "sort": "BOOL",
+            "value": true,
+            "enum_name": null,
+            "unit": null,
+            "frame": null
+          },
+          "expected": "SAT",
+          "classification": "CONSISTENCY",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Internal consistency does not prove source truth."
+        },
+        {
+          "id": "boundary_0_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 4100,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_0_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 4100,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "UNSAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_1_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 4200,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_1_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 4200,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_2_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 4300,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_2_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 4300,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        }
+      ]
+    },
+    "checks": {
+      "model_id": "diversity_release",
+      "engine": "Z3_BOUNDED_SMT",
+      "z3_version": "5.0.0",
+      "grammar_version": "eblc-core-v0.1",
+      "compiler_version": "eblc-core-smt-compiler-v0.1",
+      "query_count": 7,
+      "matches_expected": 7,
+      "agreement": 1.0,
+      "results": [
+        {
+          "query_id": "base",
+          "classification": "CONSISTENCY",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Internal consistency does not prove source truth.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": -1,
+            "diversity_release__clear_ms__const": -1400,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x34 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1400))))\n (=> diversity_release__enters__const $x34)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_0_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 4100,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x34 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1400))))\n (=> diversity_release__enters__const $x34)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 4100 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_0_1",
+          "classification": "EXAMPLE",
+          "expected": "UNSAT",
+          "status": "UNSAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": null,
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x34 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1400))))\n (=> diversity_release__enters__const $x34)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 4100 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_1_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 4200,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x34 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1400))))\n (=> diversity_release__enters__const $x34)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 4200 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_1_1",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 4200,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": true
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x34 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1400))))\n (=> diversity_release__enters__const $x34)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 4200 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_2_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 4300,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x34 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1400))))\n (=> diversity_release__enters__const $x34)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 4300 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_2_1",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 4300,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": true
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x34 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1400))))\n (=> diversity_release__enters__const $x34)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 4300 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        }
+      ]
+    }
+  },
+  {
+    "duration_ms": 1500,
+    "core": {
+      "grammar_version": "eblc-core-v0.1",
+      "model_id": "diversity_release",
+      "horizon": 2,
+      "source_refs": [
+        "paper1-temporal-diversity-v0.1",
+        "SUPPLIED_SYNTHETIC_SOURCE"
+      ],
+      "claim_scope": "SUPPLIED_SINGLE_TRANSITION_INTEGER_TICKS_ONLY",
+      "declarations": [
+        {
+          "name": "entry_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        },
+        {
+          "name": "clear_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        },
+        {
+          "name": "enters",
+          "sort": "BOOL",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": null,
+          "frame": null,
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ]
+        }
+      ],
+      "clauses": [
+        {
+          "id": "release_gate",
+          "kind": "INVARIANT",
+          "enforcement": "INITIAL",
+          "formula": {
+            "op": "implies",
+            "left": {
+              "op": "var",
+              "name": "enters",
+              "offset": 0
+            },
+            "right": {
+              "op": "ge",
+              "left": {
+                "op": "var",
+                "name": "entry_ms",
+                "offset": 0
+              },
+              "right": {
+                "op": "add",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 1500,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              }
+            }
+          },
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Entry gate over millisecond tick counts."
+        }
+      ],
+      "queries": [
+        {
+          "id": "base",
+          "formula": {
+            "op": "literal",
+            "sort": "BOOL",
+            "value": true,
+            "enum_name": null,
+            "unit": null,
+            "frame": null
+          },
+          "expected": "SAT",
+          "classification": "CONSISTENCY",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Internal consistency does not prove source truth."
+        },
+        {
+          "id": "boundary_0_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 4200,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_0_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 4200,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "UNSAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_1_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 4300,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_1_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 4300,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_2_0",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 4400,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        },
+        {
+          "id": "boundary_2_1",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 2800,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 4400,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "description": "Independent supplied-rule boundary oracle."
+        }
+      ]
+    },
+    "checks": {
+      "model_id": "diversity_release",
+      "engine": "Z3_BOUNDED_SMT",
+      "z3_version": "5.0.0",
+      "grammar_version": "eblc-core-v0.1",
+      "compiler_version": "eblc-core-smt-compiler-v0.1",
+      "query_count": 7,
+      "matches_expected": 7,
+      "agreement": 1.0,
+      "results": [
+        {
+          "query_id": "base",
+          "classification": "CONSISTENCY",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Internal consistency does not prove source truth.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": -1,
+            "diversity_release__clear_ms__const": -1500,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x17 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1500))))\n (=> diversity_release__enters__const $x17)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_0_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 4200,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x17 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1500))))\n (=> diversity_release__enters__const $x17)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 4200 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_0_1",
+          "classification": "EXAMPLE",
+          "expected": "UNSAT",
+          "status": "UNSAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": null,
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x17 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1500))))\n (=> diversity_release__enters__const $x17)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 4200 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_1_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 4300,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x17 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1500))))\n (=> diversity_release__enters__const $x17)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 4300 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_1_1",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 4300,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": true
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x17 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1500))))\n (=> diversity_release__enters__const $x17)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 4300 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_2_0",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 4400,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x17 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1500))))\n (=> diversity_release__enters__const $x17)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 4400 diversity_release__entry_ms__const) (= diversity_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "boundary_2_1",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Independent supplied-rule boundary oracle.",
+          "source_refs": [
+            "paper1-temporal-diversity-v0.1",
+            "SUPPLIED_SYNTHETIC_SOURCE"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "diversity_release__entry_ms__const": 4400,
+            "diversity_release__clear_ms__const": 2800,
+            "diversity_release__enters__const": true
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun diversity_release__clear_ms__const () Int)\n(declare-fun diversity_release__entry_ms__const () Int)\n(declare-fun diversity_release__enters__const () Bool)\n(assert\n (let (($x17 (>= diversity_release__entry_ms__const (+ diversity_release__clear_ms__const 1500))))\n (=> diversity_release__enters__const $x17)))\n(assert\n (and (= 2800 diversity_release__clear_ms__const) (= 4400 diversity_release__entry_ms__const) (= diversity_release__enters__const true)))\n(check-sat)\n"
+        }
+      ]
+    }
+  }
+]

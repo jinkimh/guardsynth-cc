@@ -1,0 +1,166 @@
+{
+  "source_run": "condition-model-2026-10-01-001",
+  "experiment_rerun": false,
+  "records": [
+    {
+      "case_id": "pedestrian-held_local_conflict-gap0",
+      "encoded": {
+        "event_ids": [
+          "pedestrian-held_local_conflict-gap0:e0",
+          "pedestrian-held_local_conflict-gap0:e1"
+        ],
+        "obligation_ids": [
+          "A"
+        ],
+        "conditions": [
+          "A"
+        ],
+        "actions": [
+          0,
+          2
+        ],
+        "new_obligations": [
+          0,
+          -1
+        ],
+        "preconditions": [
+          1,
+          -1
+        ],
+        "observations": [
+          -1,
+          0
+        ]
+      },
+      "expected": {
+        "verdict": "CONTRADICTION",
+        "reason": "UNRELEASED_OBLIGATION",
+        "obligation_id": "A",
+        "first_event_id": "pedestrian-held_local_conflict-gap0:e1",
+        "issue_event_id": "pedestrian-held_local_conflict-gap0:e1"
+      },
+      "prediction": {
+        "verdict": "CONTRADICTION",
+        "first_event_id": "pedestrian-held_local_conflict-gap0:e1",
+        "first_issue_event_id": "pedestrian-held_local_conflict-gap0:e1",
+        "obligation_id": "A",
+        "reasons": [
+          "UNRELEASED_OBLIGATION"
+        ],
+        "query_statuses": [
+          false,
+          true,
+          true,
+          true,
+          false
+        ]
+      }
+    },
+    {
+      "case_id": "pedestrian-released_normal-gap0",
+      "encoded": {
+        "event_ids": [
+          "pedestrian-released_normal-gap0:e0",
+          "pedestrian-released_normal-gap0:e1"
+        ],
+        "obligation_ids": [
+          "A"
+        ],
+        "conditions": [
+          "A"
+        ],
+        "actions": [
+          0,
+          2
+        ],
+        "new_obligations": [
+          0,
+          -1
+        ],
+        "preconditions": [
+          1,
+          -1
+        ],
+        "observations": [
+          -1,
+          1
+        ]
+      },
+      "expected": {
+        "verdict": "CONSISTENT",
+        "reason": null,
+        "obligation_id": null,
+        "first_event_id": null,
+        "issue_event_id": null
+      },
+      "prediction": {
+        "verdict": "CONSISTENT",
+        "first_event_id": null,
+        "first_issue_event_id": null,
+        "obligation_id": null,
+        "reasons": [],
+        "query_statuses": [
+          true,
+          true,
+          true,
+          false,
+          false
+        ]
+      }
+    },
+    {
+      "case_id": "pedestrian-missing_release-gap0",
+      "encoded": {
+        "event_ids": [
+          "pedestrian-missing_release-gap0:e0",
+          "pedestrian-missing_release-gap0:e1"
+        ],
+        "obligation_ids": [
+          "A"
+        ],
+        "conditions": [
+          "A"
+        ],
+        "actions": [
+          0,
+          2
+        ],
+        "new_obligations": [
+          0,
+          -1
+        ],
+        "preconditions": [
+          1,
+          -1
+        ],
+        "observations": [
+          -1,
+          -1
+        ]
+      },
+      "expected": {
+        "verdict": "UNKNOWN",
+        "reason": "RELEASE_EVIDENCE_MISSING",
+        "obligation_id": "A",
+        "first_event_id": null,
+        "issue_event_id": "pedestrian-missing_release-gap0:e1"
+      },
+      "prediction": {
+        "verdict": "UNKNOWN",
+        "first_event_id": null,
+        "first_issue_event_id": "pedestrian-missing_release-gap0:e1",
+        "obligation_id": "A",
+        "reasons": [
+          "RELEASE_EVIDENCE_MISSING"
+        ],
+        "query_statuses": [
+          true,
+          false,
+          true,
+          false,
+          false
+        ]
+      }
+    }
+  ]
+}

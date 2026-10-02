@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>연구 프로젝트 · GuardSynth-CC</title><link rel="stylesheet" href="portal.css"></head>
+<body data-page="projects">
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <header class="topbar"><nav class="nav" aria-label="주 메뉴"><a class="brand" href="index.html"><span class="brand-mark">GS</span>Research Operations</a><span class="classification">LOCAL · RESTRICTED</span><div class="nav-links"><a aria-current="page" href="projects.html">프로젝트</a><a href="platform.html">플랫폼</a><a href="evidence.html">근거</a><a href="reviews.html">검토</a><a href="papers.html">논문</a><a href="meetings.html">회의·결정</a></div></nav></header>
+  <main id="main" class="shell">
+    <section class="section section-first"><p class="eyebrow">Research owners</p><h1>연구 프로젝트</h1><p>각 연구 질문은 독립 원장과 산출물 소유권을 갖습니다. 숫자는 표시 순서이며 소유권 ID에는 포함되지 않습니다.</p></section>
+    <section class="section" aria-labelledby="relation-title">
+      <div class="section-head"><div><p class="eyebrow">Ownership and dependency</p><h2 id="relation-title">프로젝트–플랫폼 관계 지도</h2></div><div class="operation-actions"><button id="relation-zoom-out" class="button ghost" type="button">축소</button><button id="relation-zoom-in" class="button ghost" type="button">확대</button><button id="relation-fit" class="button ghost" type="button">전체 맞춤</button></div></div>
+      <div class="relation-viewport"><div id="relation-map" class="relation-map" aria-label="EBLC 플랫폼과 소비 프로젝트 관계"></div></div>
+      <p class="metric-note"><strong>범례:</strong> ■ 독립 연구 프로젝트 · ◆ 공용 구현 플랫폼 · → 구현 의존성</p>
+      <details><summary>키보드 접근 가능한 관계 표</summary><table class="guide-table"><thead><tr><th>소비 프로젝트</th><th>의존 대상</th><th>관계</th></tr></thead><tbody id="relation-table"></tbody></table></details>
+    </section>
+    <section class="section"><div id="project-card-list" class="grid two"></div></section>
+  </main>
+  <footer class="footer">권위 문서 live 투영 · <span id="generated-date"></span></footer>
+  <script src="portal-data.js"></script><script src="portal.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GuardSynth expert pilot stratified slot manifest v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "slot_manifest_version", "randomization_seed", "slot_count", "slots",
+    "source_bindings_included"
+  ],
+  "properties": {
+    "slot_manifest_version": {"const": "guardsynth-expert-pilot-slots-v0.1"},
+    "randomization_seed": {"type": "integer", "minimum": 0},
+    "slot_count": {"const": 60},
+    "source_bindings_included": {"const": false},
+    "slots": {
+      "type": "array",
+      "minItems": 60,
+      "maxItems": 60,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["slot_id", "slice", "outcome", "joint_cell_size"],
+        "properties": {
+          "slot_id": {"type": "string", "minLength": 1},
+          "slice": {
+            "enum": ["PEDESTRIAN_CYCLIST_YIELD", "STOP_SIGNALS", "FOLLOWING_CUT_IN"]
+          },
+          "outcome": {
+            "enum": [
+              "NOMINAL", "HAZARD_TRUE_ACTIVE", "UNKNOWN", "CONFLICT", "RELEASE",
+              "REACTIVATION"
+            ]
+          },
+          "joint_cell_size": {"enum": [3, 4]}
+        }
+      }
+    }
+  }
+}

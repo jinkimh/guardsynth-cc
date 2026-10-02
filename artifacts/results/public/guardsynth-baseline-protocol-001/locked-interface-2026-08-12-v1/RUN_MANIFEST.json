@@ -1,0 +1,13 @@
+{
+  "claim_scope": "BASELINE_INTERFACE_AND_ABSTENTION_SMOKE_NOT_PERFORMANCE_RANKING_OR_VEHICLE_SAFETY",
+  "code_hash": "3d7826b294a21345e93b67bb63bc9d91f8ea649b1b78fc71d454a4e784e2f439",
+  "deterministic": true,
+  "experiment_id": "GUARDSYNTH-BASELINE-PROTOCOL-001",
+  "input_class": "PUBLIC_SYNTHETIC",
+  "input_hashes": {
+    "source_catalog_kr_v0_1.json": "a5c0116394be11e0a22230652822bdf0cb221267c34e730d3b96c987140dfbb2"
+  },
+  "random_seed": null,
+  "run_date": "2026-08-12",
+  "run_id": "locked-interface-2026-08-12-v1"
+}

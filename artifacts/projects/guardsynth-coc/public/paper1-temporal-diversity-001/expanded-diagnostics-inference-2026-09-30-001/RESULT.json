@@ -1,0 +1,7 @@
+{
+  "status": "COMPLETE",
+  "prediction_rows": 2160,
+  "physical_model_calls": 1476,
+  "optimizer_updates": 0,
+  "reused_adapter_count": 9
+}

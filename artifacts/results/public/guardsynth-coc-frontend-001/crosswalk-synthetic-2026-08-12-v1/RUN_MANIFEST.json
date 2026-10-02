@@ -1,0 +1,15 @@
+{
+  "claim_promoted_to_scene_or_legal_authority": false,
+  "claim_scope": "REVIEWABLE_CONSTRAINT_PROPOSAL_NOT_LEGAL_DECISION_OR_VEHICLE_SAFETY_VALIDATION",
+  "coc_text_in_output": false,
+  "code_hash": "37179b51b2b42de904fa8f1f80872f79851f9853383a76cd293d60da79ded791",
+  "deterministic": true,
+  "experiment_id": "GUARDSYNTH-COC-FRONTEND-001",
+  "input_class": "PUBLIC_SYNTHETIC",
+  "input_hashes": {
+    "frontend_request": "9d1a986b7e4b2ff7917a38686bcf426becb1361215df18a43d2e3f6b9a49ee1a",
+    "source_catalog": "a5c0116394be11e0a22230652822bdf0cb221267c34e730d3b96c987140dfbb2"
+  },
+  "run_date": "2026-08-12",
+  "run_id": "crosswalk-synthetic-2026-08-12-v1"
+}

@@ -1,0 +1,54 @@
+{
+  "project_id": "sequential-coc-verification",
+  "status": "CONTROLLED_EXPERIMENTS_COMPLETE_INTRO_REVISED_FULL_PAPER_PENDING",
+  "source_hashes": {
+    "projects/03-sequential-coc-verification/experiments/kiee_review_revision/scenario_evaluation.py": "1bcc6e7f8c0a401a0c12a946ae01b60e290d2fe9b19fac190b0108014f9a2910",
+    "projects/03-sequential-coc-verification/experiments/kiee_review_revision/audit_terminal_evidence.py": "b92b4b5c63654df0c67a0ec2b5fb68345f8d803fed743877a7d96aa78adb7cd9",
+    "projects/03-sequential-coc-verification/experiments/kiee_review_revision/condition_model.py": "5bab483b5823afa717efaed1d6a6cdc795e619ca3bca0f6f8378deb4d970beae",
+    "projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_evidence_analysis.py": "3eff8259c0e4bedc96715aabae7548d51c0965eac07514df3938c319d56d6020",
+    "projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_review_packet.py": "606268fe276fbb2cf7bdd3081efc688b4bb890d280c8c5a1e0a3d2537b90a73f",
+    "projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_scenario_evaluation.py": "12f2ec8c5d657829b6b8e9e30fa3c81a9891a0398b630ea04a4f8a7601f579c2",
+    "projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_terminal_evidence.py": "8e6a36598654cc9aeb00a23cb049876570b8d9254c59ae7cc19024f95358e3b6",
+    "projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_condition_model.py": "cec82ce072e14f00795ccb8a3fde343fd072bb69a85f0aef5195242aa594e0ba",
+    "projects/03-sequential-coc-verification/experiments/sequential_coc/contract_compiler.py": "2f61ed092464223856711f9a68989b50a89090cfbc2821eab11d334818a1ff89",
+    "projects/03-sequential-coc-verification/experiments/sequential_coc/stateful_checker.py": "76ddd60bae02f3d3a814ad7bc16450c89cfe3a572f72df1bb27e180f106a0d10",
+    "projects/03-sequential-coc-verification/experiments/sequential_coc/uppaal_generator.py": "eec65904980bd34560ec67019e89b858f57c973e4abb87d7b606c88217b092fe",
+    "projects/03-sequential-coc-verification/experiments/sequential_coc/run_uppaal.py": "992c20263b0c81f1db0fadae741194387cca60cd829b2e76faaff06646d08b4c"
+  },
+  "runs": {
+    "controlled-scenarios-2026-10-01-001": {
+      "status": "COMPLETED",
+      "case_count": 144,
+      "semantic_mismatch_count": 48,
+      "python_uppaal_mismatch_count": 24,
+      "solver_errors": [],
+      "elapsed_seconds": 13.379456281661987,
+      "natural_error_accuracy_established": false,
+      "automated_extraction_validated": false
+    },
+    "terminal-evidence-2026-10-01-001": {
+      "status": "COMPLETED",
+      "cases": 144,
+      "terminal_reason_mismatches": 0,
+      "original_reason_mismatches": 24,
+      "legacy_code_changed": false
+    },
+    "condition-model-2026-10-01-001": {
+      "status": "COMPLETED",
+      "case_count": 144,
+      "verdict_matches": 144,
+      "first_violation_matches": 72,
+      "positive_count": 72,
+      "issue_location_matches": 108,
+      "issue_obligation_matches": 108,
+      "issue_reason_matches": 108,
+      "issue_count": 108,
+      "evaluation_kind": "POST_BASELINE_DEVELOPMENT_SAME_CASE_RETEST",
+      "legacy_implementation_changed": false
+    }
+  },
+  "human_review_completed": false,
+  "natural_error_accuracy_claimed": false,
+  "independent_external_validation": false,
+  "run_date": "2026-10-01"
+}

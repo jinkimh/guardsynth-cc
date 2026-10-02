@@ -1,0 +1,202 @@
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022/Debian) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./ieee-access-manuscript-ko.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-01-16>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/home/jinhyun/texmf/tex/latex/cjk-ko/kotex.sty
+(/home/jinhyun/texmf/tex/latex/kotex-utf/kotex.cfg)
+(/home/jinhyun/texmf/tex/xetex/xetexko/xetexko.sty
+(/usr/share/texlive/texmf-dist/tex/generic/unicode-data/load-unicode-xetex-clas
+ses.tex 
+load-unicode-xetex-classes.tex v1.16 (2022-09-17)
+Reading Unicode east Asian character class data
+# LineBreak-15.0.0.txt 
+# Date: 2022-07-28, 09:20:42 GMT [KW, LI] 
+# EastAsianWidth-15.0.0.txt 
+# Date: 2022-05-24, 17:40:20 GMT [KW, LI] 
+) (/home/jinhyun/texmf/tex/latex/cjk-ko/kolabels-utf.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(./ieee-access-manuscript-ko.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(./ieee-access-manuscript-ko.out) (./ieee-access-manuscript-ko.out)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+[]\TU/NotoSansCJKKR(0)/m/n/10 선 행 원 고 []\TU/DejaVuSerif(0)/m/n/10 Guard-Aware T
+rajectory Can-
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+\TU/DejaVuSerif(0)/m/n/10 didate Selection for Vision-Language Au-
+[1] [2] [3] [4]
+Underfull \hbox (badness 1454) in paragraph at lines 194--194
+\TU/NotoSansCJKKR(0)/m/n/10 프 로 파 일 의 공 통 구 성 을 설 명 하 기 위 해 계 약 을 $\OML/cmm/m/i
+t/10 C \OT1/cmr/m/n/10 =
+[5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]
+Underfull \hbox (badness 5050) in paragraph at lines 644--645
+\TU/DejaVuSerif(0)/m/n/10 arXiv:2511.00088, 2025, revised 2026.
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 645--646
+\TU/DejaVuSerif(0)/m/n/10 2024. []$[][][][][] [] [] [] [][][][][] [] [][][] [] 
+[][][] [] [][][][] []
+
+Underfull \hbox (badness 3954) in paragraph at lines 647--648
+[]\TU/DejaVuSerif(0)/m/n/10 Research team\TU/NotoSansCJKKR(0)/m/n/10 ’\TU/DejaV
+uSerif(0)/m/n/10 s preceding manuscript,
+
+Underfull \hbox (badness 10000) in paragraph at lines 647--648
+\TU/DejaVuSerif(0)/m/n/10 Guard-Aware Trajectory Candidate Se-
+
+Underfull \hbox (badness 1515) in paragraph at lines 647--648
+\TU/DejaVuSerif(0)/m/n/10 lection for Vision-Language Autonomous
+
+Underfull \hbox (badness 10000) in paragraph at lines 647--648
+\TU/DejaVuSerif(0)/m/n/10 Driving: Safety-Constrained Chain-of-
+
+Underfull \hbox (badness 7030) in paragraph at lines 648--649
+\TU/DejaVuSerif(0)/m/n/10 Driving with Reinforcement Learning,[]
+
+Underfull \hbox (badness 3826) in paragraph at lines 648--649
+\TU/DejaVuSerif(0)/m/n/10 AAAI, vol. 40, no. 8, pp. 6708–6716,
+
+Underfull \hbox (badness 3179) in paragraph at lines 649--650
+[]\TU/DejaVuSerif(0)/m/n/10 Formalizing Traffic Rules for Machine
+
+Underfull \hbox (badness 1577) in paragraph at lines 650--651
+[]\TU/DejaVuSerif(0)/m/n/10 T. Cai et al., []Driving with Regulation:
+
+Underfull \hbox (badness 1838) in paragraph at lines 650--651
+\TU/DejaVuSerif(0)/m/n/10 Trustworthy and Interpretable Decision-
+
+Underfull \hbox (badness 10000) in paragraph at lines 650--651
+\TU/DejaVuSerif(0)/m/n/10 Making for Autonomous Driving with
+
+Underfull \hbox (badness 10000) in paragraph at lines 650--651
+\TU/DejaVuSerif(0)/m/n/10 Retrieval-Augmented Reasoning,[] AAAI,
+
+Underfull \hbox (badness 10000) in paragraph at lines 650--651
+[]$[][][][][] [] [] [] [][][] [] [][][][] [] [][][] [] [][][][][] [] [][][] [] 
+[][][][] []
+
+Underfull \hbox (badness 6364) in paragraph at lines 651--652
+\TU/DejaVuSerif(0)/m/n/10 to Temporal Logics using Large Lan-
+
+Underfull \hbox (badness 4441) in paragraph at lines 651--652
+\TU/DejaVuSerif(0)/m/n/10 2023. []$[][][][][] [] [] [] [][][][][][][][][][][][]
+ [] [][][] [] [][][][] []
+
+Underfull \hbox (badness 5460) in paragraph at lines 652--653
+[]\TU/DejaVuSerif(0)/m/n/10 M. Cosler, C. Hahn, D. Mendoza, F.
+
+Underfull \hbox (badness 10000) in paragraph at lines 653--654
+[]\TU/DejaVuSerif(0)/m/n/10 N. E. Fuchs, K. Kaljurand, and G.
+
+Underfull \hbox (badness 10000) in paragraph at lines 653--654
+\TU/DejaVuSerif(0)/m/n/10 Schneider, []Attempto Controlled En-
+
+Underfull \hbox (badness 10000) in paragraph at lines 653--654
+\TU/DejaVuSerif(0)/m/n/10 Representation, Reasoning, Interop-
+
+Underfull \hbox (badness 10000) in paragraph at lines 653--654
+\TU/DejaVuSerif(0)/m/n/10 erability and User Interfaces,[] 2006.
+
+Underfull \hbox (badness 10000) in paragraph at lines 653--654
+[]$[][][][][] [] [] [] [][][][][][][][] [] [][][] [] [][][] [] [][] [] [][][][]
+ []
+
+Underfull \hbox (badness 1859) in paragraph at lines 654--655
+[]\TU/DejaVuSerif(0)/m/n/10 C. Barrett and C. Tinelli, []Satisfiability
+
+Underfull \hbox (badness 5331) in paragraph at lines 654--655
+\TU/DejaVuSerif(0)/m/n/10 Modulo Theories,[] Handbook of Model
+
+Underfull \hbox (badness 5592) in paragraph at lines 654--655
+\TU/DejaVuSerif(0)/m/n/10 Checking, pp. 305–343, 2018. []$[][][][][] []
+
+Underfull \hbox (badness 10000) in paragraph at lines 654--655
+[] [] [][][][][][] [] [][][][][][][][] [] [][][] [] [][][][][][][][] [] [][][][
+] []
+
+Underfull \hbox (badness 1629) in paragraph at lines 655--656
+[]\TU/DejaVuSerif(0)/m/n/10 L. de Moura and N. Bjørner, []Z3: An
+
+Underfull \hbox (badness 1424) in paragraph at lines 655--656
+\TU/DejaVuSerif(0)/m/n/10 Efficient SMT Solver,[] TACAS, pp. 337–
+
+Underfull \hbox (badness 10000) in paragraph at lines 655--656
+\TU/DejaVuSerif(0)/m/n/10 340, 2008. []$[][][][][] [] [] [] [][][] [] [][][] []
+ [][] [] [][][][] []
+
+Underfull \hbox (badness 2376) in paragraph at lines 656--657
+\TU/DejaVuSerif(0)/m/n/10 170, 2014. []$[][][][][] [] [] [] [][][][][][][][][][
+][][] [] [][][] []
+
+Underfull \hbox (badness 10000) in paragraph at lines 657--658
+\TU/DejaVuSerif(0)/m/n/10 tation of Large Language Models,[]
+
+Underfull \hbox (badness 10000) in paragraph at lines 657--658
+\TU/DejaVuSerif(0)/m/n/10 arXiv:2106.09685, 2021. []$[][][][][] []
+[17] (./ieee-access-manuscript-ko.aux) )
+(see the transcript file for additional information)
+Output written on ieee-access-manuscript-ko.pdf (17 pages).
+Transcript written on ieee-access-manuscript-ko.log.

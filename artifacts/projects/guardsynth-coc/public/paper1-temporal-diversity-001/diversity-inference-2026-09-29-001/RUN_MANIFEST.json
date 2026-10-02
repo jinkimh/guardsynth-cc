@@ -1,0 +1,25 @@
+{
+  "project_id": "guardsynth-coc",
+  "status": "COMPLETE",
+  "resource": {
+    "physical_index": 4,
+    "uuid": "GPU-d61c0e1c-ef24-441f-9f39-fa4de192fee0",
+    "snapshot": "4, GPU-d61c0e1c-ef24-441f-9f39-fa4de192fee0, 0, 81153, 0"
+  },
+  "started_at_utc": "2026-09-29T18:44:06.398190+00:00",
+  "input_hashes": {
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/diversity-protocol-2026-09-29-001/RUN_MANIFEST.json": "2306d2caae5344151925ada4f3d1b06266cfcbfd4ee6575cec20819db83749c5"
+  },
+  "output_hashes": {
+    "p0-seed42.jsonl": "4ba63c050e4827a9588ae35ae5a6b4ab89f28059ffac4676c3ab2e20801a653e",
+    "p1-seed42.jsonl": "560dc83cee89991ab7d8775c16a5b523b0a5ae75904ce060ad2ce11ef6d8b8c6",
+    "p2-seed42.jsonl": "51cee84a2e146871c1b77ff0392d6fd807463e5d5e23111b5f7b9b107c0e39fe",
+    "p0-seed17.jsonl": "2e4357f802324a48b8cc43aef617841ac792d1e37cbdd88021068cedd5f8cf02",
+    "p1-seed17.jsonl": "03f79de0a9e2f771e297a55e55df427ce139374525eb532c67ca2fde057acdb1",
+    "p2-seed17.jsonl": "226bfd4d413543b0f86f9b5682e352fd90843ba2908df1d17bd9147b1352962a",
+    "p0-seed123.jsonl": "f4be616670321afd430a8ccd723c2c99eb9faf226f9dbb4cb981941f379aa6a0",
+    "p1-seed123.jsonl": "70657b1687262b19c61039f9fb4945f72ba8489f4b83339ebc52441574bf25df",
+    "p2-seed123.jsonl": "dafcfc0aef411de0b06af156e81ad527e03e2245af0c7b7ab7592cd0744d3d38",
+    "RESULT.json": "d3efe242d132f8bd353469968f3d584c5606393c94a271b54aa6204c4a97d195"
+  }
+}

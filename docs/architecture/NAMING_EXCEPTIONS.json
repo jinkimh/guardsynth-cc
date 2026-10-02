@@ -1,0 +1,25 @@
+{
+  "policy_version": "1.1",
+  "exceptions": [
+    {
+      "pattern": "projects/*/paper/**/fonts/*",
+      "reason": "Upstream font filenames are preserved with their license metadata."
+    },
+    {
+      "pattern": "projects/*/paper/**/*.sty",
+      "reason": "Publisher and upstream LaTeX style filenames are external interfaces."
+    },
+    {
+      "pattern": "projects/*/paper/**/*.cls",
+      "reason": "Publisher LaTeX class filenames are external interfaces."
+    },
+    {
+      "pattern": "artifacts/projects/guardsynth-coc/restricted/guardsynth-project-portal-001/portal-2026-08-12-v6/reviews/*.html",
+      "reason": "The completed v6 portal run is immutable; its recorded review bundle paths are preserved for manifest reproducibility."
+    },
+    {
+      "pattern": "artifacts/projects/guardsynth-coc/restricted/guardsynth-eblc-learning-001/paper1-vlm-smoke-2026-09-06-002/adapters/L[0-3]",
+      "reason": "PEFT generated these four adapter directories from arm identifiers in the completed hash-manifested 002 run. Preserve immutable checkpoint provenance; the producer now uses lowercase adapter names. This exception admits only these exact four directories, not later runs."
+    }
+  ]
+}

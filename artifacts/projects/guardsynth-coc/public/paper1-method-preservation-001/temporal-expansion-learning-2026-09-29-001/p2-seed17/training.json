@@ -1,0 +1,23 @@
+{
+  "arm": "P2",
+  "seed": 17,
+  "history": [
+    {
+      "epoch": 1,
+      "mean_loss": 0.5141117209258179,
+      "optimizer_steps": 60
+    },
+    {
+      "epoch": 2,
+      "mean_loss": 0.10106274605747055,
+      "optimizer_steps": 60
+    },
+    {
+      "epoch": 3,
+      "mean_loss": 0.010354568248721444,
+      "optimizer_steps": 60
+    }
+  ],
+  "optimizer_updates": 180,
+  "nonzero_lora_B_tensors": 112
+}

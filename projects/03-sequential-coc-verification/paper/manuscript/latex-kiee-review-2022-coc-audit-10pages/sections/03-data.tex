@@ -1,0 +1,57 @@
+\section{데이터와 증거 범위}
+\label{sec:data}
+
+본 연구는 nuScenes 주행 기록을 실험용 형식으로 바꾸고 CoC 자동 생성 결과를 결합한 CoC-Nusc 자료를 사용한다 \cite{caesar2020nuscenes,nvidia2026autolabeler}. 실제 입력은 변환된 카메라 영상 묶음, 장면 안의 자차 움직임과 주행이 끝난 뒤 생성한 CoC이다. 자동 생성기는 먼저 기록 궤적에서 감속ㆍ정지ㆍ진행 같은 행동 분류를 계산하고, 그 정보를 시각ㆍ언어 모델(VLM/LLM)에 제공해 CoC를 만든다. 따라서 이 CoC는 사람이 직접 확정한 정답이나 주행 중 제어기의 판단이 아니라, 기록을 사후에 설명한 자동 생성 주석이다.
+
+\begin{table*}[t]
+\centering
+\bitablecaption{평가 자료의 출처와 본 논문에서 허용되는 해석.}{Data sources and permitted interpretation of the evaluation data.}
+\label{tab:provenance-stack}
+\footnotesize
+\begin{tabularx}{\textwidth}{L{0.18\textwidth}L{0.24\textwidth}L{0.29\textwidth}Y}
+\toprule
+Source & Content & Role & What it can show \\
+\midrule
+nuScenes & Sensor records and ego-vehicle state & Original driving record & What the sensors recorded \\
+CoC-Nusc processing & Aligned camera images and ego-motion table & Match records within a scene & Values calculated from the records \\
+Automatic CoC generator & Explanation text and quality score & Machine-generated sequential annotation & Explanation generated after the drive \\
+This work & Shared checking format, checker, and test cases & Check consistency across events & Decision under the stated rules \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+표~\ref{tab:provenance-stack}은 각 자료가 어디에서 왔고 어떤 결론까지 허용하는지를 보여 준다. CoC 문장과 품질 점수는 센서가 직접 측정한 값이 아니라 기계가 만든 주석이며, 행동 종류와 검사 결과도 본 연구가 정한 규칙으로 계산한 값이다. 따라서 검사 통과는 정한 일관성 오류를 찾지 못했다는 뜻이지, 원천 기록이 모두 사실이거나 차량이 안전했다는 인증은 아니다.
+
+\begin{figure}[t]
+\centering
+\input{figures/annotation-flow}
+\bifigcaption{기록 영상과 미래 궤적에서 자동 CoC 주석을 만들고 검사 입력으로 바꾸는 순서. 행동 종류를 기록 궤적에서 먼저 계산하므로 CoC와 궤적이 일치해도 올바른 원인을 찾았다고 단정할 수 없다.}{How automatic CoC annotations are generated after a drive and converted into checking inputs.}
+\label{fig:annotation-flow}
+\end{figure}
+
+그림~\ref{fig:annotation-flow}에서 자동 생성기는 기록 궤적에서 행동 종류와 행동이 바뀌는 대표 시점을 먼저 고른 뒤, 영상ㆍ궤적ㆍ행동 정보를 이용해 CoC를 만든다. 즉 CoC는 주행 중 제어기가 내린 판단이 아니라 이후의 움직임까지 본 뒤 작성된 설명이다. 그래서 CoC와 기록 궤적이 맞는다는 사실만으로 모델이 올바른 원인을 찾았다고 보지 않으며, 문장 사이의 모순과 반응 시간을 검사하는 입력으로만 사용한다.
+
+자차 궤적과 연결되는 자료는 94장면ㆍ403개 CoC 사건이다. 이 중 CoC가 두 개 이상인 90장면에서 시간상 이웃한 문장 쌍 309개를 만들었다. 사람 검토에는 자동으로 고른 후보 15장면과 이들과 겹치지 않는 비교 대상 12장면, 총 27개 장면 묶음을 사용했다. 따라서 309는 자동 추출한 전체 문장 쌍 수이고, 27은 무작위로 뽑지 않은 사람 검토 대상 수이다.
+
+한 사건의 요구와 자차 반응 시간을 비교하는 보조 분석은 대상 수가 다르다. 403개 사건 중 기계 품질 기준을 통과한 290개를 먼저 남기고, 그중 감속ㆍ가속 방향이 분명한 134개만 검사했다. 방향이 모호하거나 여러 행동이 섞인 156개는 제외했다. 134건 가운데 130건은 이후의 속도 변화를 찾아야 했고, 4건은 사건 시점에 이미 정지ㆍ양보 조건을 만족했다. 반복된 CoC가 같은 반응을 가리킬 수 있으므로 134를 서로 완전히 독립된 주행 사례 수로 해석하지 않는다. 이 선별 과정은 중심 분석의 403개 사건과 309개 문장 쌍에는 적용하지 않았다.
+
+검토자는 시간 조건이 분명한지, 요구된 행동 순서가 무엇인지, 문장들이 서로 모순되지 않는지를 판정했다. 보행자 통과처럼 자료에 없는 외부 상태가 필요하면 추측하지 않고 {\unknown}으로 남겼다. 기록 궤적은 문장과 움직임을 따로 비교하는 데만 사용했으며, 사람 운전 기록을 곧바로 안전 정답으로 보지 않았다. 센서 기록, 그 기록에서 계산한 값, 연구자가 정한 검사 규칙과 의도적으로 만든 변형 사례는 서로 구분해 보고한다.
+
+\begin{table}[t]
+\centering
+\bitablecaption{증거 수준과 허용되는 주장.}{Evidence levels and permitted claims.}
+\label{tab:evidence-level}
+\footnotesize
+\begin{tabularx}{\columnwidth}{L{0.25\columnwidth}YY}
+\toprule
+Source type & Example & What it can show \\
+\midrule
+Recorded & CoC text, time, ego-motion row & The record exists \\
+Calculated & Extracted action or check result & A result under the stated rules \\
+Researcher-defined rule & Requirement-ending and memory rules & How the proposed checker behaves \\
+Controlled modified case & One deliberately changed item & A known rule is exercised \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+검사 통과는 기록의 사실성이나 안전성을 새로 인증하지 않는다. 자료에 없는 요구 종료 여부와 외부 객체 상태는 {\unknown}으로 유지하며, 의도적으로 만든 변형 사례의 판정을 자연 자료의 오류 정답으로 사용하지 않는다.

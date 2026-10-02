@@ -1,0 +1,142 @@
+\section{\rev{제안 방법과 구현}}
+\label{sec:method}
+
+\begin{revision}
+
+\subsection{단계별 처리와 입력 정리}
+\label{sec:workflow}
+제안 절차는 입력 정리, 프레임 구성, 모델 실행과 근거 회수의 네 단계다. 그림~\ref{fig:method-pipeline}은 자료에서 판정 기록까지의 연결을 보여 준다. 입력 정리 단계에서는 같은 장면 안의 사건 순서를 고정하고 원 사건 IDㆍ원문ㆍ자료 출처를 보존한다. 기존 구조화 경로는 시각과 단계 인덱스가 역전된 입력을 거부하고, 작성 경로는 저장된 사건 배열 순서를 그대로 사용한다. 한 문장에 명시적으로 ``정지한 뒤 진행''이 있으면 두 단계가 같은 원문을 가리킬 수 있으므로 사건 위치와 단계 위치를 함께 보존한다.
+
+\begin{figure*}[t]
+\centering
+\color{revisionblue}
+\input{figures/method-pipeline}
+\bifigcaption{입력 정리--프레임/배열 구성--검사--원문 회수의 단계별 흐름. 자동 문구 추출과 설계자 작성 입력을 구분하고 최초 결과와 보완 재시험을 별도 보고한다.}{Step-by-step checking and source recovery, separating input paths and evaluation stages.}
+\label{fig:method-pipeline}
+\end{figure*}
+
+둘째 단계는 행동뿐 아니라 의무ㆍ해제 조건ㆍ선행조건과 그 근거 구절을 프레임에 담는다. 자동 파서가 찾은 조건 문구와 작성 프레임의 명시적 참ㆍ거짓 증거를 혼합하지 않는다. 셋째 단계에서는 각 사건을 읽으며 해당 의무만 생성ㆍ유지ㆍ해제하고 진행 순간의 위반을 기록한다. 기존 단일 의무 경로, 조건별 FSM과 보완 UPPAAL은 어떤 표현과 정책을 실행하는지 구분한다. 넷째 단계에서는 최종 판정뿐 아니라 최초 사건ㆍ의무ㆍ사유를 원문으로 돌려주고, 최초 시험ㆍ동일 사례 재시험ㆍ자연 검토ㆍ보조 반응 결과를 각각 보고한다. 이 분리는 수치의 분모뿐 아니라 판정이 답하는 질문을 보존한다.
+
+\subsection{자동 텍스트 변환과 작성 프레임}
+\label{sec:extraction}
+기존 자동 변환은 LLM 호출이나 수작업 정답 입력을 쓰지 않는 정규식 기반 영어 파서다. \texttt{stop/halt/hold}, \texttt{yield/decelerate/slow down}, \texttt{accelerate/proceed/resume/move forward}, \texttt{maintain/keep speed}를 행동 종류로 묶는다. 명령형ㆍ조동사ㆍ주어 문맥을 확인하여 단순 언급을 행동으로 해석하는 것을 제한한다. \texttt{then/and then}으로 단계 순서를 나누되 \texttt{until then}은 단계 경계로 자르지 않는다. \texttt{until} 뒤 구절은 해제 조건, \texttt{once/after} 뒤 구절은 계기로 보존하고 조건 구절 내부의 행동 단어는 제외한다.
+
+정지ㆍ양보 대상이 없으면 \texttt{UNKNOWN\_MISSING\_TARGET}, 명확한 순서 없는 복수 행동이면 \texttt{UNKNOWN\_AMBIGUOUS\_ORDER}로 둔다. 명시적 단계가 각각 단일 행동일 때만 다음 행동을 연결한다. 부정 표현을 참ㆍ거짓 관측 증거로 읽거나 동의 표현을 범용 의미로 해석하는 기능은 없다. \texttt{release\_known}과 \texttt{satisfaction\_known}은 모두 false로 시작한다. 문구를 찾은 것과 해당 조건이 실제로 충족되었음을 안 것은 다르다.
+
+작성 프레임은 설계자가 원문과 동시에 만든다. \texttt{action}, \texttt{obligation\{id,target,condition\_id\}}, \texttt{evidence\{condition\_id,value\}}, \texttt{precondition}과 \texttt{source\_spans}를 가진다. True/False는 작성 문장이 명시한 조건 상태이며 사람의 독립 센서 정답이 아니다. 기존 모델에 입력할 때 조건 A를 단일 해제 채널에 투영하고 B/OTHER를 A로 바꾸지 않는다. 두 번째 의무 C의 별도 해제 정보를 담지 못한 손실도 기록한다. 조건별 모델은 프레임의 각 의무를 직접 인코딩한다.
+
+\begin{table*}[t]
+\centering
+\color{revisionblue}
+\bitablecaption{가상 보행자 사례의 원문--작성 프레임--모델 상태--판정 연결(중간 사건 0개).}{End-to-end authored pedestrian example with zero intervening events.}
+\label{tab:worked-example}
+\scriptsize
+\begin{tabularx}{\textwidth}{L{.20\textwidth}L{.32\textwidth}L{.25\textwidth}Y}
+\toprule
+사건/변형 & 실제 작성 원문 구절 & 프레임과 상태 & 출력 \\
+\midrule
+공통 e0 & Stop until the pedestrian has passed. The required mirror check has been completed. & STOP; 의무 A, 대상 pedestrian; 해제조건 A; precondition=T; active[A]=true, known[A]=? & 의무 시작; 문제 없음 \\
+미해제 e1 & The pedestrian is still crossing. The traffic signal is green. Proceed. & GO; evidence A=F, B=T; active[A]=true & 모순; e1, A, UNRELEASED\_OBLIGATION \\
+증거 누락 e1 & The traffic signal is green. Proceed. & GO; evidence B=T; known[A]=? & 근거 부족; e1, A, RELEASE\_EVIDENCE\_MISSING \\
+정상 해제 e1 & The pedestrian has passed. The traffic signal is green. Proceed. & GO; evidence A=T, B=T; active[A]=false & 해당 의무와 양립 \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+표~\ref{tab:worked-example}의 원문은 저장된 작성 사례에서 가져왔다. 미해제 e1의 \texttt{Proceed}는 문자 위치 [63,70), A 증거는 [0,33), B 증거는 [34,62)에 연결된다. 사건 ID는 \texttt{pedestrian-held\_local\_conflict-gap0:e1}이다. 누락ㆍ정상 변형도 각각의 case ID에 e1을 연결한다. 실제 입력은 UTF-8 구절의 문자열 인덱스이며 이 예의 원문은 ASCII다. 자동 파서에 같은 문장을 넣는 경로는 증거를 확정하지 않으므로 작성 프레임의 성공과 혼합하지 않는다.
+
+작성 사례에는 원문 구절의 \texttt{start/end} 위치와 구절의 역할이 저장되어 있다. 같은 e1에 진행 행동 구절, A의 상태 구절, B의 신호 구절이 있더라도 각각 다른 역할과 조건 ID로 연결된다. 표현 단계에서 A의 근거가 비어 있으면 추측으로 B를 A에 할당하지 않는다. 따라서 표~\ref{tab:worked-example}의 세 변형은 동일한 GO와 B=T를 유지하면서 A=F/미상/T만 바꾼 비교가 된다. 판정 차이가 새 출발 근거의 유무가 아니라 이전 의무의 해제 근거에서 비롯됨을 직접 읽을 수 있다.
+
+\subsection{기존 검사기와 보완 모델의 차이}
+\label{sec:models}
+기존 Python은 활성 의무 한 개, 행동 4종, 상태 6종과 누적 오류ㆍ미상 사유를 관리한다. 단계마다 해석 미상, 알려진 증거 갱신, 오류 규칙, 상태 전이, 누적 출력 순으로 처리한다. 복수 의무는 \texttt{OVERLAPPING\_OBLIGATION}, 대기 중 해제 미상도 누적 미상으로 남을 수 있다. 기존 UPPAAL은 같은 전이 규약과 해시를 사용한다. 이 두 경로는 동결하여 최초 실패를 보존했다.
+
+여기서 6개 상태는 \texttt{INACTIVE}, \texttt{ACTIVE}, \texttt{SATISFIED\_WAIT\_RELEASE}, \texttt{RELEASED}, \texttt{VIOLATED}, \texttt{UNKNOWN}이다. 요구 행동을 이미 만족한 상태와 의무의 해제는 같지 않다. 예를 들어 이미 정지했다는 정보가 있어도 보행자 통과 여부가 미상이면 정지 의무의 종료 근거는 남는다. 또한 최종 판정은 마지막 보이는 상태만 읽지 않고 누적 오류와 미상 사유를 읽는다. 이 정책 때문에 대기에서 추가된 미상이 나중의 해제로 지워지지 않는 최초 실패가 생겼다. 이 설명은 동결된 기존 모델의 동작이며 보완 모델의 상태 위치 이름으로 사용하지 않는다.
+
+보완 모델은 실패 분석 뒤 별도 개발했다. 각 의무의 \texttt{active[K]}, 조건별 \texttt{known[K]}(-1/0/1), 선행조건, 사건 인덱스, \texttt{bad/missing} 누적 플래그와 최초 위치ㆍ의무를 둔다. 입력의 의무 등록 순서가 배열 순서이며 선행조건 위반을 먼저, 의무를 등록 순서대로 판정한다. 같은 사건의 여러 위반을 개별 사유로 누적하되 최초 의무 출력은 이 우선순위로 하나를 선택한다. 모든 문제의 전체 순위나 모든 관련 의무 목록을 반환하는 기능은 아니다.
+
+보완 인코더는 한 사례의 사건 수를 N, 의무 수를 K로 두고 의무 ID의 최초 등록 순서를 배열 인덱스 j로 고정한다. \texttt{actions[N]}는 STOP=0, WAIT=1, GO=2, \texttt{creates[N]}는 새 의무의 인덱스 또는 -1이다. \texttt{preconditions[N]}와 평탄화한 \texttt{observations[N*K]}는 미상=-1, 거짓=0, 참=1을 담는다. 각 \texttt{observations[i*K+j]}는 j번째 의무에 연결된 조건 ID와 일치하는 증거만 읽는다. 관련 의무가 없는 B/OTHER의 참 증거는 A의 채널로 들어가지 않는다.
+
+\texttt{active[j]}는 남아 있는 의무, \texttt{known[j]}는 그 의무의 최근 알려진 해제 상태다. 둘은 다른 역할이다. 알려진 참으로 active를 해제한 뒤에도 known은 기록으로 남고, 뒤의 미상 관측은 이를 덮지 않는다. \texttt{bad/missing}은 전체 경로의 문제 플래그이고 \texttt{bad\_hold/bad\_pre}는 모순 사유다. 최초 사건/의무 변수는 -1로 시작하고 첫 해당 문제에서만 채운다. 선행조건 위반의 의무 인덱스 -2는 \texttt{PRECONDITION}으로 되돌린다. 따라서 실행 변수의 배열 순서와 사람이 읽는 원 의무 ID 사이의 매핑도 결과의 일부다.
+
+\begin{table}[t]
+\centering
+\color{revisionblue}
+\bitablecaption{보완 모델의 조건별 상태 갱신과 기록 순서.}{Update and recording order in the condition-indexed model.}
+\label{tab:transition}
+\scriptsize
+\begin{tabularx}{\columnwidth}{L{.27\columnwidth}Y}
+\toprule
+단계 & 실행과 기록 \\
+\midrule
+1. 등록 & 현재 사건의 새 의무를 active에 넣음 \\
+2. 증거 & 알려진 선행조건과 조건별 증거만 갱신; 미상은 이전 값 보존 \\
+3. 해제 & 각 의무의 known=1이면 해당 active만 false \\
+4. 진행 & GO일 때 precondition=0이면 bad; 이후 등록 순서로 active/known=0이면 bad, -1이면 missing \\
+5. 최초 기록 & 최초 bad/missing의 사건ㆍ의무 인덱스를 한 번만 기록; 이후 플래그 누적 \\
+6. 종료 & 사건 배열 끝에서 Done; 미래 해제의 부재만으로 오류를 추가하지 않음 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{lstlisting}[caption={보완 모델의 핵심 실행 순서(실제 XML의 step 함수 요약).},label={lst:condition-step}]
+activate(creates[idx]);
+update_known_precondition_if_present();
+for j in obligation_registration_order:
+    if observation(idx,j) >= 0: known[j] = observation(idx,j)
+    if active[j] and known[j] == 1: active[j] = false
+if actions[idx] == GO:
+    record_bad_if(precondition == 0, PRECONDITION)
+    for j in obligation_registration_order:
+        record_bad_if(active[j] and known[j] == 0, j)
+        record_missing_if(active[j] and known[j] == -1, j)
+// idx++ is on the Run self-loop edge, outside step().
+\end{lstlisting}
+
+표~\ref{tab:transition}와 목록~\ref{lst:condition-step}에서 증거 갱신과 해제가 행동 검사보다 먼저다. 같은 사건에 A의 참 증거와 GO가 있으면 A를 해제한 뒤 진행을 검사한다. A=T이고 C=F이면 A만 지워지고 C가 남아 모순을 기록한다. 미상인 채 WAIT한 단계에서는 문제가 추가되지 않지만, 그 상태에서 GO하면 근거 부족을 기록한다. 현재 구현의 선행조건은 하나의 알려진 값을 보존하며 거짓인 경우에만 \texttt{bad\_pre}를 세운다. 선행조건 미상 자체를 별도의 \texttt{missing} 사유로 판정하는 범용 모니터는 아니다.
+
+WAIT는 작성 자료에서 유지ㆍ대기 단계를 나타내는 기호다. 실제 속도나 이동을 적분하지 않으므로 \texttt{Maintain speed}라는 문구를 물리적으로 안전한 정지라고 보장하지 않는다. 이 단계는 명시된 GO 전환 위반을 검사하기 위한 중간 사건이다.
+
+\subsection{UPPAAL 상태ㆍ질의와 추적}
+\label{sec:queries}
+보완 모델은 committed 위치 Run에서 \texttt{idx<N}일 때 \texttt{step(),idx++}로 자기 전이하고, \texttt{idx==N}이면 Done으로 이동한다. committed 처리로 한 사건의 갱신을 끝내고 다음 사건을 읽는다. 정량 시간 시계는 없다. 다음 다섯 질의를 실제 verifyta 5.0.0에 실행했다. 경로ㆍ상태 양화사의 의미는 공식 문서에 따른다 \cite{uppaalqueries}.
+
+\noindent\begin{minipage}{\columnwidth}
+\begin{lstlisting}[caption={보완 모델의 실제 queries.q.},label={lst:queries}]
+A[] not bad
+A[] not missing
+A<> Observer.Done
+E<> Observer.Done && bad_hold
+E<> Observer.Done && bad_pre
+\end{lstlisting}
+\end{minipage}
+
+\begin{figure}[t]
+\centering
+\color{revisionblue}
+\input{figures/condition-observer}
+\bifigcaption{실제 보완 XML의 두 위치와 전이. 의무 상태와 bad/missing은 위치가 아닌 변수이며 시계ㆍ환경 프로세스는 없다.}{The two locations and transitions of the actual condition-indexed XML.}
+\label{fig:condition-observer}
+\end{figure}
+
+그림~\ref{fig:condition-observer}의 템플릿은 \texttt{ScenarioObserver} 하나이고 시스템 인스턴스 이름은 \texttt{Observer}다. 초기 위치는 Run이며 N개의 사건을 모두 읽은 뒤 Done으로 간다. 자기 전이의 \texttt{step()}이 현재 idx의 등록ㆍ증거ㆍ판정을 처리하고, 같은 전이의 \texttt{idx++}가 다음 사건으로 옮긴다. \texttt{step()} 안에서 인덱스를 다시 증가시키지 않는다. committed 위치에서 임의의 시간 지연 없이 이 갱신을 실행한다. 여기서 시간성은 사건 순서와 조건 유지/해제이며, 초 단위 경과 시간을 검증한 것이 아니다.
+
+\texttt{A[] not bad}는 모든 도달 상태에서 bad가 거짓인지, \texttt{A[] not missing}은 근거 없는 진행 기록이 없는지를 묻는다. \texttt{A<> Observer.Done}은 모든 실행이 입력 처리를 끝내는지를 확인한다. 마지막 두 \texttt{E<>} 질의는 완료 경로에서 어떤 모순 사유가 누적되었는지 찾는다. 앞의 안전 속성에서 얻는 최초 반례와 끝까지 처리한 누적 사유는 서로 다른 범위의 출력이므로 함께 읽는다.
+
+첫 질의의 실패는 모순, 둘째 질의만 실패하면 근거 부족이다. 셋째는 전체 배열의 처리 완료를 확인하고 넷째ㆍ다섯째는 종료 상태에서 미해제 의무 및 선행조건 위반 사유를 확인한다. 진단 경로의 \texttt{first\_bad\_idx/first\_missing\_idx}, 관련 의무 인덱스를 원 사건/의무 ID로 되돌린다. 조건 B는 A에 대응하는 관측 배열에 들어가지 않는다.
+
+\subsection{원문에서 판정 기록까지의 실제 연결 사례}
+\label{sec:trace}
+표~\ref{tab:worked-example}의 미해제 사례는 저장 XML에서 N=2, K=1이고, \texttt{actions=\{0,2\}}, \texttt{creates=\{0,-1\}}, \texttt{preconditions=\{1,-1\}}, \texttt{observations=\{-1,0\}}으로 인코딩된다. e0 뒤에는 active[0]=true, known[0]=-1, idx=1이며 bad와 missing은 거짓이다. e1에서 A=F를 읽은 뒤 GO를 검사하면 active[0]이 남고 bad 및 bad\_hold가 참이 된다. \texttt{first\_bad\_idx=1}, \texttt{first\_bad\_obligation=0}을 기록하고 idx=2에서 Done으로 간다.
+
+저장 질의 결과는 순서대로 거짓/참/참/참/거짓이다. 이를 원 사건 ID \texttt{pedestrian-held\_local\_conflict-gap0:e1}, 의무 A, 사유 \texttt{UNRELEASED\_OBLIGATION}으로 되돌린다. 원문 회수는 새 자연어 설명을 생성하는 과정이 아니다. 사건 ID를 사례 입력의 \texttt{source\_spans}와 연결하면 e1의 ``Proceed''와 ``The pedestrian is still crossing''을, 의무 ID로 e0의 ``Stop until the pedestrian has passed''를 찾아 함께 제시할 수 있다. B의 녹색 신호 구절은 별도 근거로 남는다. verifyta 출력 파서는 사건ㆍ의무ㆍ사유를 반환하며, 원문 구절은 보존 입력의 이 매핑으로 회수한다.
+
+증거 누락 변형은 \texttt{observations=\{-1,-1\}}이고 GO 뒤 missing이 참, bad는 거짓이다. 질의 결과는 참/거짓/참/거짓/거짓이고 최초 근거 부족 사건은 e1, 의무는 A다. 정상 해제 변형은 \texttt{observations=\{-1,1\}}로 e1의 행동 검사 전에 active[0]을 지우며 참/참/참/거짓/거짓이다. 세 결과는 동일한 사건 흐름에서 해제 증거의 차이를 구분한다. 이 기록을 읽으면 위반 문구를 다시 보아야 하는지, A의 관측을 보충해야 하는지, 명시된 의무에 대해서는 양립하는지를 구분할 수 있다.
+
+\subsection{고정 기존 모델과 보조 모델의 위치}
+\label{sec:model-scope}
+
+기존 모델은 P1--P4 플래그별 \texttt{A[] not flag}, \texttt{A[] not sticky\_unknown}, \texttt{A<> Observer.Done}을 사용했다. 최초 반례 접두 경로가 뒤에 생긴 미상 사유를 담지 못한 24건은 종료 상태 추가 질의로 진단했다. 원 파서는 변경하지 않았다. 두 기존 구현의 일치는 고정 규칙의 구현 일치성이지 그 규칙의 독립 타당성이나 자연어 해석의 정답성이 아니다.
+
+보조 반응 모델은 기록 사건과 자차 속도 반응을 재생하고 제한 시간ㆍ반복 시계ㆍ출처 덮어쓰기를 검사한다. 중심 조건별 모델과 질문 및 입력이 다르므로 그 성공을 중심 문장 검사의 안전 검증으로 합치지 않는다.
+\end{revision}

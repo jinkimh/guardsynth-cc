@@ -1,0 +1,341 @@
+{
+  "project_id": "guardsynth-coc",
+  "version": "v0.1",
+  "observer": "AI_ASSISTANT",
+  "audience": "COORDINATOR_ONLY_NOT_ACTION_REVIEWER",
+  "original_coc_exposed": true,
+  "independent_human_review": false,
+  "method": "AI visual inspection of browser-displayed original JPEGs; four sampled past frames per scene, not continuous video. No overlays. 1200x730 viewport, 600px-wide frames, JPEG screenshot quality 55. Last frame enlarged to 1200px for #66/#79/#88. Rerunning the audit verifies records, not visual judgments.",
+  "records": [
+    {
+      "candidate_index": 1,
+      "inspected_frames": [
+        {
+          "ordinal": 0,
+          "timestamp_us": -118824,
+          "sha256": "a7897accd1cc920d00dc82f8a29d32631ad0a4c93dc9006b4e0da9587d8fb145"
+        },
+        {
+          "ordinal": 2,
+          "timestamp_us": 414428,
+          "sha256": "472e6d3c98e4fb80de81474fa655448ff105fbbbf8fe2e9b21633773322873e3"
+        },
+        {
+          "ordinal": 4,
+          "timestamp_us": 947817,
+          "sha256": "3c98c02c934b940984aa595676c5a0a1224933d1d7837975a94d2e95636c20d7"
+        },
+        {
+          "ordinal": 6,
+          "timestamp_us": 1481161,
+          "sha256": "cfa4aba7e8bf7142d9daa69f80526fb94e40c408ee6378da16cb58a274cf8869"
+        }
+      ],
+      "last_frame_enlarged": false,
+      "context_status": "SCENE_COMPATIBLE_NOT_INTENT",
+      "endpoint_axis": "LATERAL_PATH",
+      "observation_ko": "전방 공사 구간과 콘, 우측 작업자의 SLOW 표지, 교차로 STOP 노면 표시와 도로 표지가 보입니다. 임시 통로라는 환경 설명은 영상과 양립합니다.",
+      "limitation_ko": "콘 사이를 어떻게 통과할지와 우측 조향의 필요성은 별도 판단입니다. 작업자 통제와 교차로 통제를 생략하면 안 됩니다.",
+      "endpoint_note_ko": "임시 통로를 따르는 조향·측방 간격 선택. 우측 조향 자체를 질문의 전제로 넣지 않습니다.",
+      "action_gold": null,
+      "context_accepted": false
+    },
+    {
+      "candidate_index": 17,
+      "inspected_frames": [
+        {
+          "ordinal": 0,
+          "timestamp_us": -126299,
+          "sha256": "fc0635957e924e7a8862ac1074826ebdc7428f2b4f4d1578b95b7437dd3ceebf"
+        },
+        {
+          "ordinal": 2,
+          "timestamp_us": 4540412,
+          "sha256": "62b40e8ad358b196ef143208b801dcc9c3641f6b165cf028d50815619e1a7050"
+        },
+        {
+          "ordinal": 4,
+          "timestamp_us": 9207108,
+          "sha256": "4c85e1b0133765161552877a5a764109b0986d0e6ca4d9c58c568748694cca8d"
+        },
+        {
+          "ordinal": 6,
+          "timestamp_us": 13873696,
+          "sha256": "18bb3f346c5b1a4c92e362684839c4d81ba97cd45352514f984174dbc11f8101"
+        }
+      ],
+      "last_frame_enlarged": false,
+      "context_status": "SCENE_COMPATIBLE_NOT_INTENT",
+      "endpoint_axis": "LATERAL_PATH",
+      "observation_ko": "과거 프레임에는 교차로와 횡단 보행자가, 마지막 프레임에는 좌측 콘과 우측 픽업 차량 옆 작업자가 보입니다.",
+      "limitation_ko": "이전 횡단 상황과 현재 우측 작업자 상황을 같은 상태로 합치지 않습니다. 과거 카메라 방향 변화는 앞으로의 예정 경로가 아닙니다.",
+      "endpoint_note_ko": "콘 통로 안의 측방 간격·조향 선택. 좌측 이동 권고나 우측 작업자를 피하라는 원문 이유는 정답 단서로 주지 않습니다.",
+      "action_gold": null,
+      "context_accepted": false
+    },
+    {
+      "candidate_index": 37,
+      "inspected_frames": [
+        {
+          "ordinal": 0,
+          "timestamp_us": -132414,
+          "sha256": "f1ce3fe362c9a76661fd87b1ed5254f697f1aa4768d4d95fbc127150a8e64024"
+        },
+        {
+          "ordinal": 2,
+          "timestamp_us": 4300849,
+          "sha256": "40b719dd458f52a6ba5bf2b97bc2000e33dfc3ac08b852b1b5849e6f9ceaa5e7"
+        },
+        {
+          "ordinal": 4,
+          "timestamp_us": 8734197,
+          "sha256": "d1461d57aca6a88aaab0814ba9442bd28500ee654affe71783e8807fb5449b9d"
+        },
+        {
+          "ordinal": 6,
+          "timestamp_us": 13167539,
+          "sha256": "c71cc793afcfcb63b8b04828cbd6f6fdf15c23d4d6839ad9036073f14d82d0d5"
+        }
+      ],
+      "last_frame_enlarged": false,
+      "context_status": "SCENE_COMPATIBLE_NOT_INTENT",
+      "endpoint_axis": "LATERAL_PATH",
+      "observation_ko": "마지막 프레임에 차도 양쪽 콘과 우측 작업자가 보이며 전방에 공사 통로가 이어집니다.",
+      "limitation_ko": "콘의 존재가 정확한 차로 경계, 안전 폭 또는 우측 조향의 정답을 확정하지는 않습니다.",
+      "endpoint_note_ko": "임시 통로의 조향·측방 여유 선택. 진입 허가/보류 이진 질문으로 대체하지 않습니다.",
+      "action_gold": null,
+      "context_accepted": false
+    },
+    {
+      "candidate_index": 50,
+      "inspected_frames": [
+        {
+          "ordinal": 0,
+          "timestamp_us": -80826,
+          "sha256": "0209e5d6ffdd37f75abff48fbfe870b68966a1038bc747332323915c63ba8be5"
+        },
+        {
+          "ordinal": 2,
+          "timestamp_us": 2785838,
+          "sha256": "e0e6e1b5a3b6bc83331c3624d99554ba416d1f1c7e5d67cf370c943ad92b91ed"
+        },
+        {
+          "ordinal": 4,
+          "timestamp_us": 5619177,
+          "sha256": "9f0728338191dd83e18c54614b2309181390a8338e95dcdd5a39e359da52e948"
+        },
+        {
+          "ordinal": 6,
+          "timestamp_us": 8485846,
+          "sha256": "a08d4fa62c96548d416ddb718157bbcfa4de3eec7c26e9046060d73b006345a9"
+        }
+      ],
+      "last_frame_enlarged": false,
+      "context_status": "SCENE_COMPATIBLE_NOT_INTENT",
+      "endpoint_axis": "LONGITUDINAL",
+      "observation_ko": "전방 검정 차량과 교차로 작업자들이 보입니다. 마지막 프레임에도 전방 차량과 작업자가 남아 있습니다.",
+      "limitation_ko": "선행차가 보인다는 사실과 속도를 회복해도 된다는 판단은 다릅니다. 작업자 지시·보행자 해소·안전 거리는 별도 확인 대상입니다.",
+      "endpoint_note_ko": "선행차 추종 상황에서 속도 유지·감속·정지·회복의 적절성. resume speed/after 문구를 입력에서 제외합니다.",
+      "action_gold": null,
+      "context_accepted": false
+    },
+    {
+      "candidate_index": 61,
+      "inspected_frames": [
+        {
+          "ordinal": 0,
+          "timestamp_us": -64995,
+          "sha256": "64b61e39614926d63953742014b3a7ebab2746557be90fdb0a7861104c4afdef"
+        },
+        {
+          "ordinal": 2,
+          "timestamp_us": 468357,
+          "sha256": "eadb35a1e8e7845300ccac1ca0ad872bc59c38083a931111852342def3202798"
+        },
+        {
+          "ordinal": 4,
+          "timestamp_us": 1001679,
+          "sha256": "316499cff1683cd61aadad1671855388720481bc6a743b33b6a73a1ee25b7c77"
+        },
+        {
+          "ordinal": 6,
+          "timestamp_us": 1535003,
+          "sha256": "9a7190fdb9f77ef3aee50c1b27e687b8e3285b48054dfaffb87e7e4c3fd085e6"
+        }
+      ],
+      "last_frame_enlarged": false,
+      "context_status": "SCENE_COMPATIBLE_NOT_INTENT",
+      "endpoint_axis": "LATERAL_PATH",
+      "observation_ko": "우측 공사 장비와 콘 열, 차도 안쪽 콘들이 임시 통로를 이루는 모습이 보입니다.",
+      "limitation_ko": "원근 영상만으로 정확한 차로 폭이나 차량 여유를 수치화하지 않습니다. 우측 조향이 필요한지는 독립 판단 대상입니다.",
+      "endpoint_note_ko": "공사 통로 안의 조향·측방 간격 선택. 임의 직진/우회전 경로를 만들지 않습니다.",
+      "action_gold": null,
+      "context_accepted": false
+    },
+    {
+      "candidate_index": 66,
+      "inspected_frames": [
+        {
+          "ordinal": 0,
+          "timestamp_us": -142416,
+          "sha256": "8c553d121af129c31573eaeb41260b30d40372bce434a69bb93b740cf3141ebf"
+        },
+        {
+          "ordinal": 2,
+          "timestamp_us": 424245,
+          "sha256": "de93f1ccd938977a292153da3b69a1c5f085ed233872c5194d396229024e62d9"
+        },
+        {
+          "ordinal": 4,
+          "timestamp_us": 957612,
+          "sha256": "9050b2c6e0896aa5079b5b0ff5e9e0b982fe6f846165a0d53bf5418a3c640ad2"
+        },
+        {
+          "ordinal": 6,
+          "timestamp_us": 1524302,
+          "sha256": "5fae4e16c73ca8b7c7a2eb1879921e6095461ab52f638a0746abc18c9eca0cb2"
+        }
+      ],
+      "last_frame_enlarged": true,
+      "context_status": "ANSWER_BEARING_CONTEXT_BLOCKED",
+      "endpoint_axis": "LATERAL_MANEUVER",
+      "observation_ko": "양쪽 주차 차량과 차량 옆 사람들이 보입니다. 확대된 마지막 프레임에서도 왼쪽 변경 대상 차로의 명확한 경계는 확인하기 어렵습니다.",
+      "limitation_ko": "Lane change to the left는 원문 행동 자체입니다. 이를 조건으로 고정하고 속도만 묻는 것은 원래 차로 변경 선택을 대체합니다.",
+      "endpoint_note_ko": "차로 변경/차로 내 회피/유지 여부를 구별할 원래 측방 행동 과제. 변경 가능 차로와 대상 연결이 불명확하면 판단 불가로 남깁니다.",
+      "action_gold": null,
+      "context_accepted": false
+    },
+    {
+      "candidate_index": 79,
+      "inspected_frames": [
+        {
+          "ordinal": 0,
+          "timestamp_us": -152279,
+          "sha256": "6d94d9fef2eb57979bd201ed8a2d66b240bb3e5a0fe1a1ae9f3602d28a5a3ca4"
+        },
+        {
+          "ordinal": 2,
+          "timestamp_us": 3647703,
+          "sha256": "b5a7daaaac34a1db6d0905320f208f677837a8d509300aa453c2e6bce974aab6"
+        },
+        {
+          "ordinal": 4,
+          "timestamp_us": 7447713,
+          "sha256": "894755b1cbff80499fe95a44ae10f131ab8bd1747cf9bd5d2fda5df91632cd43"
+        },
+        {
+          "ordinal": 6,
+          "timestamp_us": 11247697,
+          "sha256": "e5b74fb0ae6a3acdb919a08bc173cce0f51728664450d2959a56959c9ab76959"
+        }
+      ],
+      "last_frame_enlarged": true,
+      "context_status": "PARTIAL_CONTEXT_UNRESOLVED",
+      "endpoint_axis": "LONGITUDINAL",
+      "observation_ko": "굽은 도로와 우측 공사 장비가 보입니다. 확대된 마지막 프레임에는 먼 전방 차량도 보입니다.",
+      "limitation_ko": "도로 굽음은 교차로 좌/우회전이나 운전자 의도를 증명하지 않습니다. 먼 차량의 운동·충돌 관계도 정지 표본만으로 확정하지 않습니다.",
+      "endpoint_note_ko": "원래 굽은 도로/공사 문맥의 감속·속도 선택. while turning을 임의 좌회전으로 바꾸지 않고 경로 민감한 평가는 보류합니다.",
+      "action_gold": null,
+      "context_accepted": false
+    },
+    {
+      "candidate_index": 86,
+      "inspected_frames": [
+        {
+          "ordinal": 0,
+          "timestamp_us": -112701,
+          "sha256": "c3b205b516935c8efc5fc6e45854bfa523c39229cdbe227714ba0708f442e3aa"
+        },
+        {
+          "ordinal": 2,
+          "timestamp_us": 3220620,
+          "sha256": "5432100449fd1da2a1f10f915097b69155a9a0dcaca4e9c60c2853459f90f250"
+        },
+        {
+          "ordinal": 4,
+          "timestamp_us": 6553949,
+          "sha256": "9c117e3b91b41ea60cbeb2827fa5381e9502a9d46d0f0e77e1e0e1ec46f88f38"
+        },
+        {
+          "ordinal": 6,
+          "timestamp_us": 9887294,
+          "sha256": "a0a45565914ab69b673931c901130fcfed4f83443b3bea1440cd1cfeacac112d"
+        }
+      ],
+      "last_frame_enlarged": false,
+      "context_status": "SCENE_COMPATIBLE_NOT_INTENT",
+      "endpoint_axis": "LONGITUDINAL",
+      "observation_ko": "콘으로 좁아진 도로와 작업자가 보입니다. 이전 표본에서는 작업자 표지에 STOP, 마지막 표본에서는 SLOW가 읽힙니다.",
+      "limitation_ko": "표지 변화가 자유로운 가속 허가를 뜻하지 않습니다. proceed straight는 원문의 진행 문맥이며 예정 경로 로그로 인증하지 않습니다.",
+      "endpoint_note_ko": "같은 전방 진행 문맥에서 속도 유지·감속·정지·회복 선택. gentle acceleration 및 안전거리 결론은 입력에서 제외합니다.",
+      "action_gold": null,
+      "context_accepted": false
+    },
+    {
+      "candidate_index": 88,
+      "inspected_frames": [
+        {
+          "ordinal": 0,
+          "timestamp_us": -58152,
+          "sha256": "24ef03a286e8e35db15ab35d057be3f0dfc58fc3ee8bb8a3088663a3eab4ea3a"
+        },
+        {
+          "ordinal": 2,
+          "timestamp_us": 2575168,
+          "sha256": "ba426beaede7b742ff5a31964479de8afdd81ebff57b713fa30bc7b27e4f3d89"
+        },
+        {
+          "ordinal": 4,
+          "timestamp_us": 5208485,
+          "sha256": "3c1e10cc492b5be117c756523b5c27a35d40387ec05d6ed505d2ff8d7f3f5854"
+        },
+        {
+          "ordinal": 6,
+          "timestamp_us": 7841833,
+          "sha256": "105785fddb31192993df1d47b603728bc5ca2eb44efa0a8d49f5d646231151f0"
+        }
+      ],
+      "last_frame_enlarged": true,
+      "context_status": "SCENE_COMPATIBLE_NOT_INTENT",
+      "endpoint_axis": "LONGITUDINAL",
+      "observation_ko": "교차로와 횡단보도, 적색 신호들이 보입니다. 마지막 확대 프레임에는 우측 횡단보도 위 보행자와 좌측 차량이 보입니다.",
+      "limitation_ko": "교차로 통과 문맥은 양립하지만 강한 가속/해소 완료를 정답으로 수용할 수 없습니다. 신호 적용 방향·보행자와 실제 경로의 관계는 미확정이며 CoC 오류 확정도 아닙니다.",
+      "endpoint_note_ko": "원래 교차로 상황의 속도·출발 여부. 보행자 해소만으로 통제 해제를 추론하지 않습니다. 원문과 영상의 잠재 불일치를 삭제 없이 보존합니다.",
+      "action_gold": null,
+      "context_accepted": false
+    },
+    {
+      "candidate_index": 94,
+      "inspected_frames": [
+        {
+          "ordinal": 0,
+          "timestamp_us": -112701,
+          "sha256": "c3b205b516935c8efc5fc6e45854bfa523c39229cdbe227714ba0708f442e3aa"
+        },
+        {
+          "ordinal": 2,
+          "timestamp_us": 3820619,
+          "sha256": "0bbda1443ee186ef436bc7521db2ad2357c47db9dc31d7925e95fcaf5c193646"
+        },
+        {
+          "ordinal": 4,
+          "timestamp_us": 7753945,
+          "sha256": "736a44e876a10bafaf1d3ace40ff4a2424e70d17141a38063b359c787bda0bae"
+        },
+        {
+          "ordinal": 6,
+          "timestamp_us": 11687297,
+          "sha256": "d896f8104707dbb5676a94241aa2579a27a58e0b426a5fa735448698571dadee"
+        }
+      ],
+      "last_frame_enlarged": false,
+      "context_status": "SCENE_COMPATIBLE_NOT_INTENT",
+      "endpoint_axis": "LONGITUDINAL",
+      "observation_ko": "전방 콘 통로와 우측 작업자가 보이고 마지막 프레임에서 SLOW 표지가 크게 보입니다.",
+      "limitation_ko": "이 후보는 #86과 같은 원본 clip의 다른 시점입니다. 두 사례를 독립 장면/서로 다른 split으로 계산하면 안 됩니다.",
+      "endpoint_note_ko": "기존 공사 통로의 속도 조절 선택. 구체적인 적정 속도나 수치 감속량은 근거 없이 만들지 않습니다.",
+      "action_gold": null,
+      "context_accepted": false
+    }
+  ]
+}

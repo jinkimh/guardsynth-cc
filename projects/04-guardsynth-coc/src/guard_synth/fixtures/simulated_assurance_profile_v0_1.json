@@ -1,0 +1,19 @@
+{
+  "model_version": "guardsynth-simulated-longitudinal-model-v0.1",
+  "profile_id": "GUARDSYNTH-SIM-LONGITUDINAL-v0.1",
+  "profile_class": "SIMULATED_ASSURANCE",
+  "simulation_vehicle_binding_key": "simulator:guardsynth-delay-constant-deceleration:v0.1",
+  "scope": "SIMULATOR_ONLY_NOT_REAL_VEHICLE_ASSURANCE",
+  "parameters": {
+    "maximum_service_deceleration_mps2": 3.0,
+    "response_time_s": 0.5,
+    "position_uncertainty_m": 0.5,
+    "integration_step_s": 0.01
+  },
+  "limitations": [
+    "MODEL_PARAMETERS_NOT_MEASURED_FROM_THE_RECORDED_VEHICLE",
+    "NO_TIRE_ROAD_GRADE_THERMAL_OR_ACTUATOR_FAULT_MODEL",
+    "NO_JERK_LIMIT_IN_EBLC_V0_2_STOPPING_DERIVATION",
+    "NOT_REAL_VEHICLE_SAFETY_ASSURANCE"
+  ]
+}

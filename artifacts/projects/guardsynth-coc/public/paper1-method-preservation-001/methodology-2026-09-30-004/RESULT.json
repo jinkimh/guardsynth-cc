@@ -1,0 +1,34 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "methodology-2026-09-30-004",
+  "status": "COC_CNL_COMPARISON_ADDED_AND_PDF_VERIFIED",
+  "changes": [
+    "Bilingual CNL integration section compares original CoC and added CNL in three rows",
+    "Temporal 0.5-second and 1.5-second rows match actual synthetic training text",
+    "Worker STOP row is explicitly a summary of real-scene development output",
+    "A short note distinguishes constraint augmentation from original-CoC factual validation"
+  ],
+  "pdfs": [
+    {"file": "ieee-access-methodology-v01-ko.pdf", "pages": 10, "comparison_page": 9},
+    {"file": "ieee-access-methodology-v01-en.pdf", "pages": 12, "comparison_page": 11}
+  ],
+  "checks": {
+    "xelatex_passes_per_language": 2,
+    "figures_per_language": 5,
+    "code_boxes_per_language": 4,
+    "tables_per_language": 4,
+    "temporal_cnl_strings_match_training_records": true,
+    "figure_semantic_data_unchanged_from_previous_snapshot": true,
+    "missing_character_or_overfull_warnings": 0,
+    "visual_review": "Korean page 9 and English page 11 inspected; comparison rows are readable and remain together without clipping."
+  },
+  "file_naming_check": {
+    "existing_violations": 5,
+    "new_task_violations": 0,
+    "note": "Unrelated P003 directory, three historical (1) submission filenames and portal_exec.md remain unchanged."
+  },
+  "new_training_updates": 0,
+  "solver_rerun": false,
+  "previous_snapshot_preserved": "methodology-2026-09-30-003",
+  "main_tex_modified": false
+}

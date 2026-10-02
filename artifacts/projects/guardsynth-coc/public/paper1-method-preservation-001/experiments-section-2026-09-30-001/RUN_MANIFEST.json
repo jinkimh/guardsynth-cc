@@ -1,0 +1,75 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "experiments-section-2026-09-30-001",
+  "sources": [
+    {
+      "language": "ko",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_EXPERIMENTS_V01_KO.md",
+      "source_sha256": "f8aa47a5a600a13457493964c1133a847a1c7f62d6d6677c7ceac869a4d8f39a",
+      "pdf": "ieee-access-experiments-v01-ko.pdf",
+      "figures": 4,
+      "code_boxes": 0,
+      "tables": 5,
+      "links": [
+        {
+          "label": "동결된 확장 실험 설정",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-protocol-2026-09-29-001/protocol.json"
+        },
+        {
+          "label": "전체 주 지표와 시드별 수치",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv"
+        },
+        {
+          "label": "오류 주입 D4 원자료",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/diversity-analysis-2026-09-29-001/RESULT.json"
+        },
+        {
+          "label": "추가 행동 지표와 처리시간",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-secondary-metrics-2026-09-29-001/RESULT.json"
+        },
+        {
+          "label": "그림 8의 선택 기준과 실제 예측",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/experiments-section-2026-09-30-001/selected_cases.json"
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_EXPERIMENTS_V01_EN.md",
+      "source_sha256": "5755df962684fca6f4a077a491bd23e80f87b9136578cdb6d16a320173eaf31d",
+      "pdf": "ieee-access-experiments-v01-en.pdf",
+      "figures": 4,
+      "code_boxes": 0,
+      "tables": 5,
+      "links": [
+        {
+          "label": "Frozen expanded-experiment protocol",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-protocol-2026-09-29-001/protocol.json"
+        },
+        {
+          "label": "All primary metrics and individual seeds",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv"
+        },
+        {
+          "label": "Injected-error D4 records",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/diversity-analysis-2026-09-29-001/RESULT.json"
+        },
+        {
+          "label": "Additional behavioral metrics and timings",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-secondary-metrics-2026-09-29-001/RESULT.json"
+        },
+        {
+          "label": "Figure 8 selection rule and recorded predictions",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/experiments-section-2026-09-30-001/selected_cases.json"
+        }
+      ]
+    }
+  ],
+  "purpose": "Bilingual experimental evaluation with original-prediction figures; no new training",
+  "builders": {
+    "projects/04-guardsynth-coc/paper/render_experiments.py": "e828769688ff70aeb8dabb2fe8fda246f13b85517b36b6a2ced8134b7ca3d961",
+    "projects/04-guardsynth-coc/paper/render_experiments_figures.py": "c8e48f7b35b5f86eb1a1863bf39fdb38b750881347a30dbaa65b023b6bdd24b3"
+  },
+  "reproduce": "Run render_experiments_figures.py then render_experiments.py before RESULT.json is finalized; generated TeX also compiles twice with XeLaTeX.",
+  "prior_snapshot": "First experiments-section draft; existing methodology snapshots preserved"
+}

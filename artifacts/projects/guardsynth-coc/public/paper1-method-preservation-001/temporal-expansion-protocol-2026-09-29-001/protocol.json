@@ -1,0 +1,79 @@
+{
+  "protocol_id": "temporal-expanded-six-arm-v0.1",
+  "arms": [
+    "P0",
+    "P1",
+    "P2",
+    "NATURAL_GUARD",
+    "SHUFFLED_GUARD",
+    "LOGIC_GUARD"
+  ],
+  "seeds": [
+    42,
+    17,
+    123
+  ],
+  "train_rows": 960,
+  "evaluation_rows_per_split": 240,
+  "evaluation": [
+    "validation",
+    "test",
+    "paraphrase",
+    "unseen_duration"
+  ],
+  "epochs": 3,
+  "batch_size": 2,
+  "gradient_accumulation": 8,
+  "learning_rate": 0.0002,
+  "lora_rank": 8,
+  "lora_alpha": 16,
+  "lora_dropout": 0.05,
+  "optimizer_updates_per_arm_seed": 180,
+  "total_optimizer_updates": 3240,
+  "checkpoint_policy": "FINAL_FIXED_BUDGET_NO_VALIDATION_SELECTION",
+  "model_revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "initialization": "SAME_PRETRAINED_BASE_EACH_ARM_SEED_NO_OLD_ADAPTER",
+  "metrics": {
+    "accuracy": "correct",
+    "guard_violation_rate": "guard_violation",
+    "hold_violation_rate": "hold_violation",
+    "deadlock_rate": "deadlock",
+    "goal_completion_rate": "goal_complete",
+    "safe_goal_completion_rate": "safe_goal_complete",
+    "coverage": "valid",
+    "contract_swap_pair_accuracy": "pair_correct"
+  },
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20260929,
+  "cluster": "CLEAR_TIME_WITH_ALL_CANDIDATE_ROTATIONS_PATTERNS_AND_CONTRACT_PAIRS",
+  "primary_comparisons": [
+    "P2-P0",
+    "P2-P1"
+  ],
+  "claim": "CONTROLLED_SYNTHETIC_EFFECT_PRESERVATION_NOT_VERIFICATION_CAUSAL_GAIN",
+  "test_exposure_policy": "NO_TUNING_FROM_TEST_OR_VALIDATION",
+  "success_criteria": {
+    "P1_replication_max_violation": 0.05,
+    "P1_replication_min_safe_completion": 0.95,
+    "P2_max_violation": 0.05,
+    "P2_min_safe_completion": 0.95,
+    "P2_minus_P0_max_violation_difference": -0.2,
+    "P2_minus_P0_min_safe_completion_difference": 0.2,
+    "P2_minus_P1_violation_margin": 0.05,
+    "P2_minus_P1_safe_completion_margin": -0.05,
+    "require_all_three_seeds_for_point_criteria": true,
+    "formal_noninferiority_claim": false,
+    "inference": "EXPLORATORY_TEMPLATE_REUSE_NOT_INDEPENDENT_ENVIRONMENT_CONFIRMATION"
+  },
+  "criteria_scope": "TEST_POINT_CRITERIA_ONLY_GENERALIZATION_REPORTED_SEPARATELY",
+  "historical_comparison": "DESCRIPTIVE_DIFFERENT_TRAINING_BUDGET_NOT_CAUSAL_DATA_SCALING",
+  "prior_controls": "All five original controls plus P2; logic text is not the executable oracle.",
+  "paraphrase_note": "P0/LOGIC inputs unchanged; not independent additional evidence.",
+  "limits": [
+    "60 synthetic images, not diverse physical environments.",
+    "P0 input lacks duration and can have conflicting target pairs.",
+    "3 seeds and10 test clear-time clusters do not establish formal equivalence.",
+    "240 test variants share images with paraphrase/unseen-duration; report separately.",
+    "UNKNOWN/occlusion and reoccupation are not tested."
+  ]
+}

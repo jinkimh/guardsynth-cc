@@ -1,0 +1,96 @@
+\begin{thebibliography}{10}
+
+\bibitem{sima2024drivelm}
+Chonghao Sima, Katrin Renz, Kashyap Chitta, Li~Chen, Hanxue Zhang, Chengen Xie,
+  Jens Beisswenger, Ping Luo, Andreas Geiger, and Hongyang Li.
+\newblock {DriveLM}: Driving with graph visual question answering.
+\newblock {\em arXiv preprint arXiv:2312.14150}, 2023.
+
+\bibitem{tian2024drivevlm}
+Xiaoyu Tian, Junru Gu, Bailin Li, Yicheng Liu, Yang Wang, Zhiyong Zhao, Kun
+  Zhan, Peng Jia, Xianpeng Lang, and Hang Zhao.
+\newblock {DriveVLM}: The convergence of autonomous driving and large
+  vision-language models.
+\newblock In {\em Proc. 8th Conf. Robot Learning (CoRL)}, volume 270 of {\em
+  Proceedings of Machine Learning Research}, pages 4698--4726. PMLR, 2025.
+
+\bibitem{uppaalofficial}
+{UPPAAL Team}.
+\newblock {UPPAAL}: Official tool description.
+\newblock \url{https://uppaal.org/}.
+\newblock Accessed Oct. 1, 2026.
+
+\bibitem{uppaalname}
+{CISS, Aalborg University}.
+\newblock Industrial and scientific evergreen from danish computer scientist.
+\newblock
+  \url{https://www.ciss.dk/industrial-and-scientific-evergreen-from-danish-computer-scientist/}.
+\newblock Developer interview; accessed Oct. 1, 2026.
+
+\bibitem{behrmann2004uppaal}
+Gerd Behrmann, Alexandre David, and Kim~G. Larsen.
+\newblock A tutorial on {UPPAAL}.
+\newblock In {\em Formal Methods for the Design of Real-Time Systems}, volume
+  3185 of {\em Lecture Notes in Computer Science}, pages 200--236. Springer,
+  2004.
+
+\bibitem{mayumu2026faithfulness}
+Nicanor Mayumu, Xiaoheng Deng, and Patrick Mukala.
+\newblock Is {VLA} reasoning faithful? probing safety of chain-of-causation in
+  autonomous driving models.
+\newblock {\em arXiv preprint arXiv:2605.17268}, 2026.
+
+\bibitem{nguyen2026vladrivebench}
+Thach Nguyen, Danhua Guo, Tom Lampo, Fei Wu, and Burhan Yaman.
+\newblock {VLADriveBench}: Evaluating {CoT}-action relationship in {VLA} for
+  autonomous driving.
+\newblock {\em arXiv preprint arXiv:2606.12706}, 2026.
+
+\bibitem{leucker2009runtime}
+Martin Leucker and Christian Schallhart.
+\newblock A brief account of runtime verification.
+\newblock {\em Journal of Logic and Algebraic Programming}, 78(5):293--303,
+  2009.
+
+\bibitem{bauer2011runtime}
+Andreas Bauer, Martin Leucker, and Christian Schallhart.
+\newblock Runtime verification for {LTL} and {TLTL}.
+\newblock {\em ACM Transactions on Software Engineering and Methodology},
+  20(4):14:1--14:64, 2011.
+
+\bibitem{uppaalqueries}
+{UPPAAL Team}.
+\newblock Semantics of the symbolic queries.
+\newblock
+  \url{https://docs.uppaal.org/language-reference/query-semantics/symb_queries/}.
+\newblock Accessed Oct. 1, 2026.
+
+\bibitem{fremont2019scenic}
+Daniel~J. Fremont, Tommaso Dreossi, Shromona Ghosh, Xiangyu Yue, Alberto~L.
+  Sangiovanni-Vincentelli, and Sanjit~A. Seshia.
+\newblock {Scenic}: A language for scenario specification and scene generation.
+\newblock In {\em Proc. ACM SIGPLAN Conf. Programming Language Design and
+  Implementation (PLDI)}, pages 63--78, 2019.
+
+\bibitem{dreossi2019verifai}
+Tommaso Dreossi, Daniel~J. Fremont, Shromona Ghosh, Edward Kim, Hadi
+  Ravanbakhsh, Marcell Vazquez-Chanlatte, and Sanjit~A. Seshia.
+\newblock {VerifAI}: A toolkit for the formal design and analysis of artificial
+  intelligence-based systems.
+\newblock In {\em Proc. Int. Conf. Computer Aided Verification (CAV)}, pages
+  432--442, 2019.
+
+\bibitem{caesar2020nuscenes}
+Holger Caesar, Varun Bankiti, Alex~H. Lang, Sourabh Vora, Venice~Erin Liong,
+  Qiang Xu, Anush Krishnan, Yu~Pan, Giancarlo Baldan, and Oscar Beijbom.
+\newblock {nuScenes}: A multimodal dataset for autonomous driving.
+\newblock In {\em Proc. IEEE/CVF Conf. Computer Vision and Pattern Recognition
+  (CVPR)}, pages 11621--11631, 2020.
+
+\bibitem{nvidia2026autolabeler}
+{NVIDIA Corporation}.
+\newblock {Chain-of-Causation (CoC) Autolabeling Pipeline}.
+\newblock GitHub repository, 2026.
+\newblock Accessed Aug. 1, 2026.
+
+\end{thebibliography}

@@ -1,0 +1,43 @@
+\documentclass[9pt,twocolumn]{extarticle}
+\usepackage{kiee-review}
+
+\kieeenglishtitle{Guard-Aware Trajectory Candidate Selection for Vision-Language Autonomous Driving:\ Safety-Constrained Chain-of-Causation}
+\kieekoreantitle{비전-언어 자율주행 모델의 실행 가드 기반 궤적 후보 선택:\ Safety-Constrained Chain-of-Causation}
+
+\begin{document}
+
+\makekieefrontmatter{%
+\begin{kieekoreanabstract}
+\revtwo{주행 비전-언어 모델의 인과 연쇄(CoC)는 장면 해석과 행동 목표를 연결하지만, 같은 목표를 달성하는 궤적의 실행 허용 범위를 명시하지 않을 수 있다. 본 논문은 기본 CoC에 활성화ㆍ불변ㆍ수치 경계ㆍ금지ㆍ해제ㆍ대체 행동ㆍ종료 조건으로 구성된 자연어 실행 가드를 결합하는 Safety-Constrained CoC를 제안한다. 모델은 장면, CoC, 가드 및 수치가 기술된 궤적 후보를 입력받아 하나를 선택하고, 모델 외부 결정적 검증기는 후보의 저장 측정값을 가드 경계와 직접 비교한다. 또한 장면ㆍ목표ㆍ후보를 고정하고 가드만 바꾸는 쌍대 계약 평가로 모델이 조건 변화에 따라 선택을 전환하는지 측정한다. LoRA로 조정한 Qwen3-VL-2B-Instruct의 세 난수 초기값 표준 시간 평가에서 가드 정보가 없는 조건의 위반률 0.319가 제약 통합 CoC에서 0.000으로 감소했고, 가드 준수 목표 완료율과 계약 쌍 정확도는 모두 1.000이었다. 반면 미관측 시간값에서는 후보 정확도 0.635, 위반률 0.351 및 계약 쌍 정확도 0.306으로 저하되었다. 따라서 결과는 합성 후보 선택에서의 가드 조건화 효과를 지지하지만, 연속 궤적 생성이나 실제 차량의 실행 안전을 보장하지 않는다.}
+\end{kieekoreanabstract}
+\begin{kieeabstract}
+\revtwo{Driving VLMs use Chain-of-Causation (CoC) to link scenes to behavior, but CoC may omit when a trajectory is executable. We propose Safety-Constrained CoC, appending a natural-language guard with activation, invariant, bound, prohibition, release, fallback, and termination clauses. Given a scene, CoC, guard, and trajectory candidates, the model selects one candidate; an external deterministic verifier compares its measurements with the guard. Our paired-contract benchmark changes only the guard while fixing the scene, objective, and candidates. In three-seed temporal tests with LoRA-tuned Qwen3-VL-2B-Instruct, the violation rate decreased from 0.319 without a guard to 0.000, while compliant completion and paired accuracy reached 1.000. For unseen time values, candidate accuracy, violation rate, and paired accuracy were 0.635, 0.351, and 0.306. The results support guard-conditioned synthetic candidate selection, not continuous trajectory generation or vehicle-level safety.}
+\end{kieeabstract}
+\kieekeywords{Autonomous driving, Vision-language model, Chain-of-Causation, Execution guard, Trajectory selection, Paired-contract benchmark}
+}
+
+\input{sections/01-introduction}
+\input{sections/02-related-work}
+\input{sections/03-problem}
+\raggedbottom
+\input{sections/04-method}
+\input{sections/05-experiments}
+\flushbottom
+\input{sections/07-discussion}
+\input{sections/08-conclusion}
+
+\noindent\begin{minipage}{\columnwidth}
+\section*{감사의 글}
+\begingroup
+\raggedright
+본 연구는 대한민국 정부(교육과학기술부)의 재원으로 한국연구재단(NRF)의 지원을 받아 수행되었으며(\nolinkurl{NRF-2023R1A2C1006639}), 대한민국 정부(과학기술정보통신부)의 재원으로 정보통신기획평가원(IITP)의 지역지능화혁신인재양성사업 지원을 받아 수행되었음(\nolinkurl{IITP-2026-RS-2024-00436773}).
+\par
+\endgroup
+\end{minipage}
+
+\bibliographystyle{unsrt}
+\begingroup
+\fontsize{8pt}{12pt}\selectfont
+\bibliography{references}
+\endgroup
+\end{document}

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>산출물 실행 목록 · GuardSynth-CC</title><link rel="stylesheet" href="portal.css"></head>
+<body data-page="artifact">
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <header class="topbar"><nav class="nav" aria-label="주 메뉴"><a class="brand" href="index.html"><span class="brand-mark">GS</span>Research Operations</a><div class="nav-links"><a href="projects.html">프로젝트</a><a href="evidence.html">근거</a><a aria-current="page" href="artifact.html">산출물</a><a href="reviews.html">검토</a></div></nav></header>
+  <main id="main" class="shell">
+    <section class="section section-first"><p class="eyebrow">Opaque run identifiers</p><h1>산출물 실행 목록</h1><p>브라우저에는 소유자, 분류, 불투명 ID와 결과·보고서 존재 여부만 제공합니다.</p></section>
+    <form id="artifact-filters" class="toolbar section" role="search">
+      <label>검색<input id="artifact-search" type="search" placeholder="run, experiment, owner"></label>
+      <label>소유자<select id="artifact-owner"><option value="">모든 owner</option></select></label>
+      <label>분류<select id="artifact-class"><option value="">모든 classification</option></select></label>
+    </form>
+    <p id="artifact-filter-count" class="metric-note" aria-live="polite"></p>
+    <section id="artifact-list" class="grid three section"></section>
+  </main>
+  <footer class="footer">canonical path 비공개 · <span id="generated-date"></span></footer>
+  <script src="portal-data.js"></script><script src="portal.js"></script>
+</body>
+</html>

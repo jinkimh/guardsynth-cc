@@ -1,0 +1,54 @@
+{
+  "project_id": "sequential-coc-verification",
+  "status": "E6_DOCUMENTS_COMPLETE",
+  "deliverables": {
+    "main": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/main.pdf",
+      "pages": 8,
+      "sha256": "8439f5b778f9caf55b633ef398d4fc420977d8573998fece87b3a1b59a3f53f0"
+    },
+    "main-clean": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/main-clean.pdf",
+      "pages": 8,
+      "sha256": "7c99b20b47f189a689a8a3f98680244a3b4bcc2dfbd6ecf0b7fb7d86b2f0895c"
+    },
+    "response-to-reviewer-1": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/response-to-reviewer-1.pdf",
+      "pages": 10,
+      "sha256": "5a68ee018a88a4ea7b933df0596e3b0aabc3be7f0cba1658d64443fee3cecd66"
+    },
+    "response-to-reviewer-2": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/response-to-reviewer-2.pdf",
+      "pages": 9,
+      "sha256": "07347a5acbbbcfd3aed7d7d511caa0e2808d8a761f00fb6d2de768634371d6a6"
+    },
+    "response-to-reviewer-3": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/response-to-reviewer-3.pdf",
+      "pages": 12,
+      "sha256": "b1cde3edb33d347ea2661f1d94b16a5533f619e8bedfb72bb541413c8bc63c2c"
+    }
+  },
+  "reviewer_items": {
+    "reviewer_1": 9,
+    "reviewer_2": 8,
+    "reviewer_3": 11
+  },
+  "document_validation": "PASS",
+  "marked_clean_identical_text": true,
+  "location_macros_match_final_aux": true,
+  "original_submission_unchanged": true,
+  "frozen_code_hashes_match": true,
+  "experiments_rerun_in_e6": false,
+  "new_scope_naming_violations": 0,
+  "pre_existing_sparse_naming_warnings": 12,
+  "full_repository_naming_pass_claimed": false,
+  "human_re_evaluation_completed": false,
+  "independent_development_unused_test_completed": false,
+  "natural_error_accuracy_established": false,
+  "automated_semantic_extraction_validated": false,
+  "uppaal_accuracy_superiority_claimed": false,
+  "quantitative_time_vehicle_dynamics_or_safety_established": false,
+  "editorial_metadata_confirmed": false,
+  "external_action_performed": false,
+  "next_action": "Author review and manuscript ID/editorial revision round confirmation"
+}

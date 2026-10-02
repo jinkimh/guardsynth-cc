@@ -1,0 +1,37 @@
+[2K
+Verifying formula 1 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-wrong_release-gap0/queries.q:1
+[2K -- Formula is satisfied.
+[2K
+Verifying formula 2 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-wrong_release-gap0/queries.q:2
+[2K -- Formula is satisfied.
+[2K
+Verifying formula 3 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-wrong_release-gap0/queries.q:3
+[2K -- Formula is satisfied.
+[2K
+Verifying formula 4 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-wrong_release-gap0/queries.q:4
+[2K -- Formula is satisfied.
+[2K
+Verifying formula 5 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-wrong_release-gap0/queries.q:5
+[2K -- Formula is NOT satisfied.
+ -- Showing witness trace:
+
+State:
+( Observer.Run )
+idx=0 first_violation_idx=-1 observer_state=0 active=0 active_action=3 active_target=0 active_satisfaction_known=0 active_satisfaction_value=0 active_release_known=0 active_release_value=0 sticky_hold_go_conflict=0 sticky_premature_release=0 sticky_order_violation=0 sticky_stale_obligation=0 sticky_unknown=0 sticky_parse_status_unknown=0 sticky_overlapping_obligation=0 sticky_stale_release_unknown=0 sticky_active_release_unknown=0 sticky_active_satisfaction_unknown=0
+
+Transition:
+  Observer.Run->Observer.Run { idx < EVENT_COUNT, tau, step(), idx++ }
+
+State:
+( Observer.Run )
+idx=1 first_violation_idx=-1 observer_state=2 active=1 active_action=0 active_target=1 active_satisfaction_known=1 active_satisfaction_value=1 active_release_known=0 active_release_value=0 sticky_hold_go_conflict=0 sticky_premature_release=0 sticky_order_violation=0 sticky_stale_obligation=0 sticky_unknown=0 sticky_parse_status_unknown=0 sticky_overlapping_obligation=0 sticky_stale_release_unknown=0 sticky_active_release_unknown=0 sticky_active_satisfaction_unknown=0
+
+Transition:
+  Observer.Run->Observer.Run { idx < EVENT_COUNT, tau, step(), idx++ }
+
+State:
+( Observer.Run )
+idx=2 first_violation_idx=-1 observer_state=5 active=1 active_action=0 active_target=1 active_satisfaction_known=1 active_satisfaction_value=1 active_release_known=0 active_release_value=0 sticky_hold_go_conflict=0 sticky_premature_release=0 sticky_order_violation=0 sticky_stale_obligation=0 sticky_unknown=1 sticky_parse_status_unknown=0 sticky_overlapping_obligation=0 sticky_stale_release_unknown=0 sticky_active_release_unknown=1 sticky_active_satisfaction_unknown=0
+[2K
+Verifying formula 6 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-wrong_release-gap0/queries.q:6
+[2K -- Formula is satisfied.

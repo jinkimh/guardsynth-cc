@@ -1,0 +1,34 @@
+{
+  "ko": {
+    "pages": 9,
+    "text_units_checked": 207,
+    "figures": 5,
+    "code_boxes": 4,
+    "source_sha256": "97e72c769f124954b2ccb878c55a0d502f1c7735b20f1a37716d739b58b61f4a",
+    "pdf_sha256": "1c353c883f55041cb4d9174ad4d037fca617cd63d8be82b8e3bb79b4cc978135",
+    "verbatim_renderer_matches_source": true,
+    "executed_smt_verdicts": [
+      "UNSAT",
+      "SAT"
+    ]
+  },
+  "en": {
+    "pages": 11,
+    "text_units_checked": 207,
+    "figures": 5,
+    "code_boxes": 4,
+    "source_sha256": "0e2e716388ed26ac58feefd98348bd1923db5749d26c9f28882007c340450e02",
+    "pdf_sha256": "eab35a734c98e80d41b3d704dfd187ff03408df85b1a54ba315f995683d00993",
+    "verbatim_renderer_matches_source": true,
+    "executed_smt_verdicts": [
+      "UNSAT",
+      "SAT"
+    ]
+  },
+  "lifecycle_queries_matching_expected": 15,
+  "bridge_queries_matching_expected": 100,
+  "temporal_manuscript_queries_matching_expected": 12,
+  "new_model_training_updates": 0,
+  "figure_semantic_data_unchanged": true,
+  "proper_math_subscripts_both_languages": true
+}

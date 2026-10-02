@@ -1,0 +1,64 @@
+\section{문제 정의}
+\label{sec:problem}
+
+장면 입력을 $x$, 요구사항을 기술한 CoC를 $R$, 실행 가드를 $G$, 궤적 후보 집합을 $\mathcal{T}(x)=\{\tau_1,\ldots,\tau_K\}$라 하자. $\mathrm{Goal}(\tau,R)$는 후보가 요구사항의 행동 목표를 완료하는지, $\mathrm{Sat}(\tau,G)$는 후보가 실행 가드를 만족하는지를 나타낸다. 궤적의 진행도 또는 효용은 $U(\tau)$로 둔다. 본 연구의 선택 목표는 다음과 같다.
+\begin{equation}
+\begin{aligned}
+\tau^*&=\arg\max_{\tau\in\mathcal{T}(x)} U(\tau),\\
+\mathrm{s.t.}\quad &\mathrm{Goal}(\tau,R)=1,\quad \mathrm{Sat}(\tau,G)=1.
+\end{aligned}
+\label{eq:selection}
+\end{equation}
+
+$\mathrm{Goal}=1$이지만 $\mathrm{Sat}=0$인 후보는 행동 목표를 달성하더라도 현재 실행 조건을 위반하는 반례다. 반대로 가드를 위반하지 않지만 목표를 완료하지 못하는 후보는 교착 후보로 구분한다. 따라서 항상 정지하는 정책은 가드 위반률이 낮더라도 바람직한 정책으로 볼 수 없다.
+
+\begin{table}[t]
+\centering
+\caption{Safety-Constrained CoC의 실행 가드 유형.}
+\label{tab:taxonomy}
+\footnotesize
+\begin{tabularx}{\columnwidth}{L{0.30\columnwidth}Y}
+\toprule
+유형 & 의미와 예 \\
+\midrule
+활성화(Activation) & 보행자가 상충 구역에 들어오면 양보 의무 활성화 \\
+불변 조건(Invariant) & 의무가 활성화된 동안 정지선 통과 금지 \\
+수치 경계(Bound) & 차량 간격 $\geq6$ m, 감속도 $\leq4$ m/s$^2$ \\
+금지 조건(Prohibition) & 차량 간격이 기준 미만이면 차선 변경 계속 금지 \\
+해제 조건(Release) & 상충 구역이 1.5초 연속으로 비면 출발 허용 \\
+대체 동작(Fallback) & 관측이 불확실하면 정지 상태 유지 \\
+종료 조건(Termination) & 안전 간격을 유지한 상태에서 차선 변경 완료 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{표 1로부터 S-C CoC 구성}
+
+표~\ref{tab:taxonomy}는 하나의 완성된 안전 명세가 아니라 장면과 행동 목표에 따라 선택하는 실행 가드의 구성 요소를 제시한다. 표에 정리된 일곱 가지 가드 유형의 집합을 $\mathcal{G}_{\mathrm{tax}}$라 하고, 장면 $x$와 요구사항 $R$에 필요한 가드의 부분집합을 $\mathcal{S}(x,R)$라 하면, 실행 가드와 S-C CoC의 구성 관계는 다음과 같이 나타낼 수 있다.
+\begin{equation}
+\begin{aligned}
+\mathcal{S}(x,R)&\subseteq\mathcal{G}_{\mathrm{tax}},\\
+G(x,R)&=\bigwedge_{g\in\mathcal{S}(x,R)}g,\\
+\mathrm{SCCoC}(x,R)&=R\oplus G(x,R).
+\end{aligned}
+\label{eq:sccoc-compose}
+\end{equation}
+여기서 $\oplus$는 행동 요구사항과 선택된 가드 문장을 하나의 S-C CoC로 결합함을 뜻한다. 표의 모든 유형을 항상 사용하는 것은 아니며, 장면과 목표에 관련된 조건만 선택한다.
+
+\paragraph{보행자 양보 예.}
+기본 CoC가 "보행자에게 양보한 뒤 진행한다"라면 활성화, 불변 조건, 수치 경계, 해제 조건 및 대체 동작을 선택할 수 있다. 이때 표~\ref{tab:taxonomy}로부터 다음 S-C CoC를 구성할 수 있다.
+\begin{quote}
+\small
+보행자가 상충 구역에 있으면 양보 의무를 활성화한다. 의무가 활성화된 동안 정지선을 넘지 않고 감속도를 $4\,\mathrm{m/s^2}$ 이하로 유지한다. 관측이 불확실하면 정지 상태를 유지한다. 상충 구역이 1.5초 이상 연속으로 비어 있을 때만 의무를 해제하고 출발한다.
+\end{quote}
+이 문장은 단순히 "양보한다"는 목표뿐 아니라 정지 위치, 감속 한계, 불확실할 때의 행동 및 출발 허용 시점을 함께 규정한다.
+
+\paragraph{차선 변경 예.}
+기본 CoC가 "안전하게 목표 차선으로 이동한다"라면 수치 경계, 금지 조건, 해제 조건 및 종료 조건을 선택할 수 있다. 구성된 S-C CoC는 다음과 같다.
+\begin{quote}
+\small
+목표 차선의 차량 간격이 6 m 미만이면 차선 변경을 계속하지 않는다. 안전 간격이 다시 확보되면 차선 변경을 재개할 수 있다. 목표 차선에 진입한 뒤 안전 간격이 유지될 때 차선 변경을 완료한다.
+\end{quote}
+이 예에서는 같은 차선 변경 목표라도 차량 간격에 따라 계속 진행, 중단, 재개 및 완료 시점이 달라진다.
+
+표~\ref{tab:taxonomy}만으로 장면에 필요한 S-C CoC가 자동으로 결정되는 것은 아니다. 장면에서 관측 가능한 상태와 기본 CoC의 행동 목표를 함께 사용하여 관련 가드를 선택해야 한다. 따라서 본 연구의 가드는 현재 데이터와 궤적 후보에서 측정 가능한 실행 의무를 구조화한 부분 계약이며, 완전한 도로 안전 명세를 의미하지 않는다.

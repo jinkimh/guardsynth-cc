@@ -1,0 +1,185 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "background-2026-09-30-002",
+  "artifact_class": "public",
+  "purpose": "Bilingual background manuscript and PDF snapshot; established foundations only",
+  "sources": [
+    {
+      "project_id": "guardsynth-coc",
+      "status": "COMPILED_PENDING_LAYOUT_CHECK",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_BACKGROUND_V01_KO.md",
+      "source_sha256": "3ef2c119ceb37a2456d6a1b4c9ac3a8183e1bbad4b9f54f945454a056fee2ecd",
+      "pdf": "ieee-access-background-v01-ko.pdf",
+      "sections": [
+        "A. 시각언어모델과 Chain of Causation",
+        "B. 논리 명세와 만족 가능성 기반 검증",
+        "C. 통제 자연어",
+        "D. 저랭크 적응 학습",
+        "참고문헌"
+      ],
+      "table_count": 2,
+      "links": [
+        {
+          "label": "[1]",
+          "source_target": "https://arxiv.org/abs/2511.00088",
+          "pdf_target": "https://arxiv.org/abs/2511.00088"
+        },
+        {
+          "label": "[1]",
+          "source_target": "https://arxiv.org/abs/2511.00088",
+          "pdf_target": "https://arxiv.org/abs/2511.00088"
+        },
+        {
+          "label": "[2]",
+          "source_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf",
+          "pdf_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf"
+        },
+        {
+          "label": "[3]",
+          "source_target": "https://doi.org/10.1007/978-3-540-78800-3_24",
+          "pdf_target": "https://doi.org/10.1007/978-3-540-78800-3_24"
+        },
+        {
+          "label": "[2]",
+          "source_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf",
+          "pdf_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf"
+        },
+        {
+          "label": "[4]",
+          "source_target": "https://aclanthology.org/J14-1005/",
+          "pdf_target": "https://aclanthology.org/J14-1005/"
+        },
+        {
+          "label": "[4]",
+          "source_target": "https://aclanthology.org/J14-1005/",
+          "pdf_target": "https://aclanthology.org/J14-1005/"
+        },
+        {
+          "label": "[5]",
+          "source_target": "https://arxiv.org/abs/2106.09685",
+          "pdf_target": "https://arxiv.org/abs/2106.09685"
+        },
+        {
+          "label": "[5]",
+          "source_target": "https://arxiv.org/abs/2106.09685",
+          "pdf_target": "https://arxiv.org/abs/2106.09685"
+        },
+        {
+          "label": "원문",
+          "source_target": "https://arxiv.org/abs/2511.00088",
+          "pdf_target": "https://arxiv.org/abs/2511.00088"
+        },
+        {
+          "label": "원문",
+          "source_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf",
+          "pdf_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf"
+        },
+        {
+          "label": "원문",
+          "source_target": "https://doi.org/10.1007/978-3-540-78800-3_24",
+          "pdf_target": "https://doi.org/10.1007/978-3-540-78800-3_24"
+        },
+        {
+          "label": "원문",
+          "source_target": "https://aclanthology.org/J14-1005/",
+          "pdf_target": "https://aclanthology.org/J14-1005/"
+        },
+        {
+          "label": "원문",
+          "source_target": "https://arxiv.org/abs/2106.09685",
+          "pdf_target": "https://arxiv.org/abs/2106.09685"
+        }
+      ]
+    },
+    {
+      "project_id": "guardsynth-coc",
+      "status": "COMPILED_PENDING_LAYOUT_CHECK",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_BACKGROUND_V01_EN.md",
+      "source_sha256": "e03351c6d0cab123deba53a4a8a5d01c12295341024045c137d2f973616ea41b",
+      "pdf": "ieee-access-background-v01-en.pdf",
+      "sections": [
+        "A. Vision–Language Models and Chain of Causation",
+        "B. Logical Specifications and Satisfiability-Based Verification",
+        "C. Controlled Natural Language",
+        "D. Low-Rank Adaptation",
+        "References"
+      ],
+      "table_count": 2,
+      "links": [
+        {
+          "label": "[1]",
+          "source_target": "https://arxiv.org/abs/2511.00088",
+          "pdf_target": "https://arxiv.org/abs/2511.00088"
+        },
+        {
+          "label": "[1]",
+          "source_target": "https://arxiv.org/abs/2511.00088",
+          "pdf_target": "https://arxiv.org/abs/2511.00088"
+        },
+        {
+          "label": "[2]",
+          "source_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf",
+          "pdf_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf"
+        },
+        {
+          "label": "[3]",
+          "source_target": "https://doi.org/10.1007/978-3-540-78800-3_24",
+          "pdf_target": "https://doi.org/10.1007/978-3-540-78800-3_24"
+        },
+        {
+          "label": "[2]",
+          "source_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf",
+          "pdf_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf"
+        },
+        {
+          "label": "[4]",
+          "source_target": "https://aclanthology.org/J14-1005/",
+          "pdf_target": "https://aclanthology.org/J14-1005/"
+        },
+        {
+          "label": "[4]",
+          "source_target": "https://aclanthology.org/J14-1005/",
+          "pdf_target": "https://aclanthology.org/J14-1005/"
+        },
+        {
+          "label": "[5]",
+          "source_target": "https://arxiv.org/abs/2106.09685",
+          "pdf_target": "https://arxiv.org/abs/2106.09685"
+        },
+        {
+          "label": "[5]",
+          "source_target": "https://arxiv.org/abs/2106.09685",
+          "pdf_target": "https://arxiv.org/abs/2106.09685"
+        },
+        {
+          "label": "Source",
+          "source_target": "https://arxiv.org/abs/2511.00088",
+          "pdf_target": "https://arxiv.org/abs/2511.00088"
+        },
+        {
+          "label": "Source",
+          "source_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf",
+          "pdf_target": "https://theory.stanford.edu/~barrett/pubs/BT18.pdf"
+        },
+        {
+          "label": "Source",
+          "source_target": "https://doi.org/10.1007/978-3-540-78800-3_24",
+          "pdf_target": "https://doi.org/10.1007/978-3-540-78800-3_24"
+        },
+        {
+          "label": "Source",
+          "source_target": "https://aclanthology.org/J14-1005/",
+          "pdf_target": "https://aclanthology.org/J14-1005/"
+        },
+        {
+          "label": "Source",
+          "source_target": "https://arxiv.org/abs/2106.09685",
+          "pdf_target": "https://arxiv.org/abs/2106.09685"
+        }
+      ]
+    }
+  ],
+  "builder_sha256": "4a57312ac0ca502f40c1fc3f269e98cb5a380c1cc34330b0c933f1aff1407402",
+  "reproduction": "Generated TeX snapshots compile twice with XeLaTeX; Markdown remains canonical.",
+  "integration": "Standalone Section III; historical main.tex and completed PDFs unchanged"
+}

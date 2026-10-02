@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "sample_manifest.schema.json",
+  "title": "Opaque review sample manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "project_id", "review_round_id", "review_type", "classification", "samples"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "project_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "review_round_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "review_type": {"enum": ["M16_SOURCE_REVIEW", "M16_EXPERT_PILOT", "IMAGE_ONLY_SCENE_REVIEW", "ASSOCIATION_LIFECYCLE_REVIEW", "SPECIFICATION_INTERFACE_REVIEW", "EBLC_LANGUAGE_EVALUATION", "PAPER_INTERNAL_CLAIM_REVIEW"]},
+    "classification": {"enum": ["RESTRICTED", "PUBLIC", "INTERMEDIATE"]},
+    "samples": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["sample_id", "slice", "outcome", "source_closure", "required_sources", "reason_codes"],
+        "properties": {
+          "sample_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+          "slice": {"type": "string", "minLength": 1},
+          "outcome": {"type": "string", "minLength": 1},
+          "source_closure": {"enum": ["SOURCE_COMPLETE", "REVIEW_REQUIRED", "UNSUPPORTED", "CONFLICT"]},
+          "required_sources": {
+            "type": "object",
+            "propertyNames": {"enum": ["timestamps", "ego_pose_speed", "actor_control_state", "lane_zone_association", "conflict_geometry", "coordinate_transform", "applicable_rule", "recorded_rig_binding"]},
+            "additionalProperties": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["source_id", "sha256"],
+              "properties": {
+                "source_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+                "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+              }
+            }
+          },
+          "reason_codes": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

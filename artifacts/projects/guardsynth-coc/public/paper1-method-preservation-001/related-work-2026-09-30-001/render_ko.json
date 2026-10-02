@@ -1,0 +1,107 @@
+{
+  "project_id": "guardsynth-coc",
+  "status": "COMPILED_PENDING_LAYOUT_CHECK",
+  "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_RELATED_WORK_V01_KO.md",
+  "source_sha256": "f16f54cb31f85fa21a300667ed0a2e39a000cc01df644d46563f44b98bcc3c82",
+  "pdf": "ieee-access-related-work-v01-ko.pdf",
+  "sections": [
+    "A. 추론 기반 자율주행과 CoC",
+    "B. 교통 규칙의 명세와 규정 기반 판단",
+    "C. 자연어–정형 명세 변환과 제어 자연어",
+    "D. 본 연구의 위치",
+    "참고문헌"
+  ],
+  "table_count": 1,
+  "links": [
+    {
+      "label": "1",
+      "source_target": "https://arxiv.org/abs/2511.00088",
+      "pdf_target": "https://arxiv.org/abs/2511.00088"
+    },
+    {
+      "label": "2",
+      "source_target": "https://arxiv.org/abs/2312.14150",
+      "pdf_target": "https://arxiv.org/abs/2312.14150"
+    },
+    {
+      "label": "3",
+      "source_target": "https://arxiv.org/abs/2402.12289",
+      "pdf_target": "https://arxiv.org/abs/2402.12289"
+    },
+    {
+      "label": "4",
+      "source_target": "https://ojs.aaai.org/index.php/AAAI/article/view/37602",
+      "pdf_target": "https://ojs.aaai.org/index.php/AAAI/article/view/37602"
+    },
+    {
+      "label": "5",
+      "source_target": "https://arxiv.org/abs/2007.00330",
+      "pdf_target": "https://arxiv.org/abs/2007.00330"
+    },
+    {
+      "label": "6",
+      "source_target": "https://ojs.aaai.org/index.php/AAAI/article/view/41168",
+      "pdf_target": "https://ojs.aaai.org/index.php/AAAI/article/view/41168"
+    },
+    {
+      "label": "7",
+      "source_target": "https://aclanthology.org/2023.emnlp-main.985/",
+      "pdf_target": "https://aclanthology.org/2023.emnlp-main.985/"
+    },
+    {
+      "label": "8",
+      "source_target": "https://arxiv.org/abs/2303.04864",
+      "pdf_target": "https://arxiv.org/abs/2303.04864"
+    },
+    {
+      "label": "9",
+      "source_target": "https://attempto.ifi.uzh.ch/site/pubs/papers/FLAIRS0601FuchsN.pdf",
+      "pdf_target": "https://attempto.ifi.uzh.ch/site/pubs/papers/FLAIRS0601FuchsN.pdf"
+    },
+    {
+      "label": "원 논문",
+      "source_target": "https://arxiv.org/abs/2511.00088",
+      "pdf_target": "https://arxiv.org/abs/2511.00088"
+    },
+    {
+      "label": "원 논문",
+      "source_target": "https://arxiv.org/abs/2312.14150",
+      "pdf_target": "https://arxiv.org/abs/2312.14150"
+    },
+    {
+      "label": "원 논문",
+      "source_target": "https://arxiv.org/abs/2402.12289",
+      "pdf_target": "https://arxiv.org/abs/2402.12289"
+    },
+    {
+      "label": "출판 논문",
+      "source_target": "https://ojs.aaai.org/index.php/AAAI/article/view/37602",
+      "pdf_target": "https://ojs.aaai.org/index.php/AAAI/article/view/37602"
+    },
+    {
+      "label": "원 논문",
+      "source_target": "https://arxiv.org/abs/2007.00330",
+      "pdf_target": "https://arxiv.org/abs/2007.00330"
+    },
+    {
+      "label": "출판 논문",
+      "source_target": "https://ojs.aaai.org/index.php/AAAI/article/view/41168",
+      "pdf_target": "https://ojs.aaai.org/index.php/AAAI/article/view/41168"
+    },
+    {
+      "label": "출판 논문",
+      "source_target": "https://aclanthology.org/2023.emnlp-main.985/",
+      "pdf_target": "https://aclanthology.org/2023.emnlp-main.985/"
+    },
+    {
+      "label": "원 논문",
+      "source_target": "https://arxiv.org/abs/2303.04864",
+      "pdf_target": "https://arxiv.org/abs/2303.04864"
+    },
+    {
+      "label": "원 논문",
+      "source_target": "https://attempto.ifi.uzh.ch/site/pubs/papers/FLAIRS0601FuchsN.pdf",
+      "pdf_target": "https://attempto.ifi.uzh.ch/site/pubs/papers/FLAIRS0601FuchsN.pdf"
+    }
+  ]
+}

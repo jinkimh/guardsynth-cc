@@ -1,0 +1,56 @@
+\section{문제 정의}
+\label{sec:problem}
+
+본 논문은 서로 다른 두 질문을 따로 검사한다. 중심인 \emph{연속 문장 검사}는 이전 CoC의 요구와 종료 조건을 기억하여 앞뒤 문장과 검사 상태가 정한 규칙에 맞는지 확인한다. 보조인 \emph{반응 시간 검사}는 문장에서 읽어 낸 행동 요구와 기록된 자차 속도 변화가 정해 둔 시간 안에 맞는지 확인한다. 첫 번째는 문장과 요구 상태의 일관성, 두 번째는 요구 시점과 속도 반응 시점의 관계를 다루므로, 한 검사를 통과해도 다른 검사까지 통과했다는 뜻은 아니다.
+
+수식에 앞서 기호의 뜻을 설명한다. 장면 $s$의 사건을 시간순으로 늘어놓은 목록이 $E_s=(e_1,\ldots,e_n)$이다. 사건 $e_i$ 직전과 직후에 아직 지켜야 하는 요구의 집합을 각각 $A_{i-1}$과 $A_i$라 한다. 행동 표현은 정지ㆍ유지, 양보ㆍ감속, 가속ㆍ진행, 현재 행동 유지의 네 종류로 묶는다. 요구 $o$가 끝났다는 증거 $q_i(o)$는 참, 거짓, 미상 중 하나이며, 미상일 때는 요구를 임의로 지우지 않는다. $\mathrm{sat}(e_i)$는 현재 사건에 적힌 선행조건이 충족됐는지를 뜻하고, $A_i^{-}$는 종료 증거를 먼저 반영한 뒤 현재 행동을 실행하기 직전의 요구 집합이다.
+
+다섯 검사 문제는 다음과 같다. P1은 이전 요구와 현재 행동의 충돌, P2와 P3은 한 사건 안의 종료ㆍ순서 규칙 위반, P4는 끝난 요구를 목록에 남긴 검사 처리 오류이다. 본 논문은 P1--P4를 묶어 \emph{일관성 오류}라고 부른다. P5는 이들과 별개로 요구와 자차 반응의 시간 차이를 검사한다.
+\begin{description}
+\item[\textbf{P1: 끝나지 않은 요구와 진행의 충돌.}]
+$C_1(i)\equiv \mathrm{go}(e_i)\land\exists o\in A_i^{-}:\mathrm{hold}(o)$. 아직 끝나지 않은 정지ㆍ양보 요구가 있는데 진행을 시작했는지 판정한다.
+
+\item[\textbf{P2: 조건 충족 전 종료.}]
+$C_2(i)\equiv\exists o:\mathrm{release}(e_i,o)\land q_i(o)=\textsc{False}$. 종료 조건을 아직 만족하지 않았는데 요구를 끝냈는지 판정한다.
+
+\item[\textbf{P3: 행동 순서 위반.}]
+$C_3(i)\equiv\mathrm{go}(e_i)\land\mathrm{sat}(e_i)=\textsc{False}$. 현재 사건이 필수 선행조건의 미충족을 명시하면서 후속 행동을 시작했는지 판정한다.
+
+\item[\textbf{P4: 종료 뒤 남은 요구.}]
+$C_4(i)\equiv\exists o\in A_{i-1}:q_i(o)=\textsc{True}\land o\in A_i$. 직전까지 남아 있던 요구가 종료 조건을 만족한 뒤에도 사라지지 않았는지 판정한다.
+
+\item[\textbf{P5: 제한 시간 내 반응.}]
+검사 대상으로 받아들인 사건의 시각 $\tau_i$, 요구 행동 $a_i$, 시험용 제한 시간 $D_i$와 그 행동에 맞는 속도 변화 조건 $R_{a_i}$에 대하여
+\begin{equation}
+\exists t_r\in[\tau_i,\tau_i+D_i):R_{a_i}(t_r)
+\label{eq:response-contract}
+\end{equation}
+의 만족 여부를 판정한다.
+\end{description}
+
+P1--P4 중 가장 먼저 발생한 위반 위치는
+\begin{equation}
+i^*=\min\{i\mid\bigvee_{k=1}^{4}C_k(i)\}
+\end{equation}
+로 정한다. P1--P4가 한 번도 발생하지 않으면 문장열 $E_s$를 일관된 것으로 판정한다. 하나라도 발생하면 가장 먼저 발생한 위치 $i^*$와 오류 종류를 함께 반환한다. 현재 사건만 보는 검사는 매 사건에서 이전 요구를 비우고($A_{i-1}=\emptyset$), 이전 요구를 기억하는 검사는 $A_{i-1}$을 다음 사건으로 전달한다.
+
+\begin{table}[t]
+\centering
+\bitablecaption{현재 사건만 보는 검사와 이전 요구를 기억하는 검사의 차이.}{Difference between checking only the current event and retaining prior requirements.}
+\label{tab:event-vs-stateful}
+\footnotesize
+\begin{tabularx}{\columnwidth}{L{0.29\columnwidth}YY}
+\toprule
+Item & Current event only & Prior requirements retained \\
+\midrule
+Input & Current event & Ordered event sequence \\
+Prior requirement & Discarded & Retained until its end condition \\
+Missing evidence & Recorded only for the event & Requirement and reason are retained \\
+Output & Error found in that event & Decision, error type, and first violating event \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+위 표의 핵심 차이는 이전 요구를 다음 사건으로 넘기는지 여부이다. P5의 반응 시각 $t_r$은 자차 속도를 $W$ 길이의 구간으로 살펴보고, 속도 변화가 최소값 $\delta$를 넘으며, 그 변화 방향이 요구 행동과 $\rho$ 비율 이상 맞을 때 정한다. 기본값은 $W=0.5$초, $\delta=0.1$~m/s, $\rho=0.7$, $D=3$초이며 법규나 안전 기준에서 정한 값은 아니다. 반복 CoC에는 첫 판단 시각 유지, 반복마다 시계 재시작, 중복 사건 제거의 세 방식을 비교한다. 두 장면이 실제로 이어진다는 자료가 없으면 이전 장면의 반응 요구를 다음 장면으로 넘기지 않는다.
+
+따라서 본 문제는 미리 정한 규칙 아래에서 CoC 문장과 검사 상태가 앞뒤로 일관되는지, 그리고 요구 행동과 기록된 반응 시점이 맞는지를 확인한다. 장면 설명이 실제로 참인지, 기록 궤적이 안전한지, 법규를 지켰는지 또는 제어 성능이 좋은지는 판정하지 않는다.

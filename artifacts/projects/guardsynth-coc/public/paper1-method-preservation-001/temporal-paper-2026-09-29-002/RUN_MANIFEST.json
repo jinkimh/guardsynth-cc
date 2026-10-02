@@ -1,0 +1,16 @@
+{
+  "project_id": "guardsynth-coc",
+  "input_hashes": {
+    "projects/04-guardsynth-coc/paper/main.tex": "331aa5b917243c44deb4e9ec679228b51f8c9d4f62dc01ec887a3b92ce09ba99",
+    "artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/diversity-analysis-2026-09-29-001/RUN_MANIFEST.json": "01c8bc5742e6545ce019f224b92be6ab3708b305fdc7eecf794e88d39b1d38b6",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-paper-2026-09-29-001/storyboards.pdf": "7bd4e2eb10aff784228e441ce2b9a33eec28fb58555fa864aacd5ea3bad77103"
+  },
+  "output_hashes": {
+    "main.tex": "331aa5b917243c44deb4e9ec679228b51f8c9d4f62dc01ec887a3b92ce09ba99",
+    "main.log": "579a0abc778f17506abe8d86c0830c7182d2a163518ebbca32ca1919aa52ccc8",
+    "main.aux": "632cf130593893dc647af6526d9eaea96c36e5ed5a039341a6609b4dd3c2821c",
+    "main.out": "9385db1cf74033734d348e43a0541f259ede7bab4beca6891fc8ddc87a555053",
+    "main.pdf": "69962df44809f95e6c63533d3dc94e65f0f491ffdea021e452ccff52d7323f56",
+    "RESULT.json": "41074d9336d3a5cac8b3e6ea506e862258e4fe6001f26591d2ec02b165e57a3b"
+  }
+}

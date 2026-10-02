@@ -1,0 +1,41 @@
+{
+  "annotation_version": "guardsynth-expert-annotation-v0.1",
+  "assignment_id": "TRAINING-A-001",
+  "reviewer_pseudonym": "TRAINING-REVIEWER",
+  "scene_ref_hash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "interface_mode": "COMPLETE_AUTHORING",
+  "applicability": "APPLICABLE",
+  "guard_fields": {
+    "guard_type": "STOP_BEFORE_ZONE",
+    "target_id": "pedestrian-training-1",
+    "zone_id": "crosswalk-training-1",
+    "operator": "EGO_FRONT_LEQ_ZONE_ENTRY_MINUS_MARGIN",
+    "range": {
+      "lower": null,
+      "upper": 13.5
+    },
+    "unit": "m",
+    "coordinate_frame": "dataset_rig"
+  },
+  "source_sufficiency": {
+    "verdict": "SUFFICIENT",
+    "source_refs": [
+      "TRAINING-SCENE-GEOMETRY-v0.1",
+      "TRAINING-TARGET-ZONE-ASSOCIATION-v0.1",
+      "TRAINING-SYSTEM-REQUIREMENT-v0.1"
+    ],
+    "reason_codes": []
+  },
+  "lifecycle": {
+    "activation": "fresh pedestrian-crossing TRUE",
+    "maintain": "while hazard is TRUE or approved UNKNOWN hold applies",
+    "release": "two consecutive fresh FALSE observations",
+    "reactivation": "fresh TRUE after release",
+    "expiry": "scene scope invalid",
+    "fallback": "approved hold on fresh UNKNOWN"
+  },
+  "confidence": 0.9,
+  "corrections": [],
+  "started_at": "2026-08-12T00:00:00Z",
+  "completed_at": "2026-08-12T00:02:00Z"
+}

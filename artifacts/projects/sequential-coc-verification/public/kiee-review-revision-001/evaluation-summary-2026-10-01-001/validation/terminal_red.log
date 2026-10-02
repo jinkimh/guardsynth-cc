@@ -1,0 +1,29 @@
+FFF
+======================================================================
+FAIL: test_complete_state_retains_multiple_reasons (test_terminal_evidence.TerminalEvidenceTests.test_complete_state_retains_multiple_reasons)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_terminal_evidence.py", line 8, in setUp
+    self.assertTrue(MODULE.exists(),'terminal evidence audit absent')
+AssertionError: False is not true : terminal evidence audit absent
+
+======================================================================
+FAIL: test_incomplete_solver_output_rejected (test_terminal_evidence.TerminalEvidenceTests.test_incomplete_solver_output_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_terminal_evidence.py", line 8, in setUp
+    self.assertTrue(MODULE.exists(),'terminal evidence audit absent')
+AssertionError: False is not true : terminal evidence audit absent
+
+======================================================================
+FAIL: test_unreachable_completion_rejected (test_terminal_evidence.TerminalEvidenceTests.test_unreachable_completion_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/experiments/kiee_review_revision/tests/test_terminal_evidence.py", line 8, in setUp
+    self.assertTrue(MODULE.exists(),'terminal evidence audit absent')
+AssertionError: False is not true : terminal evidence audit absent
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=3)

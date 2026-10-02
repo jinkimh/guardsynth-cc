@@ -1,0 +1,19 @@
+{
+  "association_queue_candidate_count": 59,
+  "association_review_status_counts": {
+    "INSUFFICIENT_SOURCE_GEOMETRY_FOR_ASSOCIATION": 23,
+    "REVIEWABLE_ACTOR_ASSOCIATION_LANE_MISSING": 14,
+    "REVIEWABLE_ACTOR_ASSOCIATION_ZONE_MISSING": 12,
+    "REVIEWABLE_CONTROL_ASSOCIATION_LANE_MISSING": 10
+  },
+  "audit_version": "guardsynth-m16-calibration-association-audit-v0.1",
+  "calibration_5_of_5_candidate_count": 59,
+  "calibration_candidate_count": 59,
+  "calibration_variant_review_count": 59,
+  "claim_scope": "CALIBRATION_AND_ASSOCIATION_REVIEW_QUEUE_NOT_VEHICLE_SAFETY",
+  "final_outcome_assigned_count": 0,
+  "newly_eligible_candidate_count": 0,
+  "recorded_rig_binding_available_count": 59,
+  "source_complete_8_of_8_candidate_count": 0,
+  "verified_coordinate_transform_count": 0
+}

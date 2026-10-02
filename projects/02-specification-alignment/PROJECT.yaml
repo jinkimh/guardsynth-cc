@@ -1,0 +1,14 @@
+project_id: specification-alignment
+project_order: 2
+title: Specification Alignment Gap
+research_question: How do natural-language, structured, raw-logic, and executable specification interfaces differ for AI control?
+status: writing_plan
+dependencies:
+  - eblc-bcv
+artifact_root: artifacts/projects/specification-alignment
+canonical_status: STATUS.md
+canonical_research_plan: docs/plans/01_RESEARCH_PLAN_V01.md
+canonical_milestones: docs/plans/02_PROJECT_MILESTONES.md
+canonical_execution_tracker: docs/plans/03_PROJECT_EXECUTION_TRACKER.md
+survey_index: docs/surveys/README.md
+paper_root: paper

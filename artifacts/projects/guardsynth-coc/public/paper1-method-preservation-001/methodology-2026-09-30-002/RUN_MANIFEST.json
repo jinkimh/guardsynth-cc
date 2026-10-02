@@ -1,0 +1,163 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "methodology-2026-09-30-002",
+  "sources": [
+    {
+      "language": "ko",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_METHODOLOGY_V01_KO.md",
+      "source_sha256": "2d5b185dc8998dadf0508fe28b6f35bc17d7a9be9590d3d41f17577e02ca30f1",
+      "pdf": "ieee-access-methodology-v01-ko.pdf",
+      "figures": 5,
+      "code_boxes": 4,
+      "tables": 3,
+      "links": [
+        {
+          "label": "S1",
+          "target": "../experiments/paper1_cnl_learning/temporal_preservation.py"
+        },
+        {
+          "label": "S2",
+          "target": "../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py"
+        },
+        {
+          "label": "S1",
+          "target": "../experiments/paper1_cnl_learning/temporal_preservation.py"
+        },
+        {
+          "label": "S3",
+          "target": "../experiments/paper1_cnl_learning/temporal_training_data.py"
+        },
+        {
+          "label": "S2",
+          "target": "../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py"
+        },
+        {
+          "label": "S3",
+          "target": "../experiments/paper1_cnl_learning/temporal_training_data.py"
+        },
+        {
+          "label": "S4",
+          "target": "../src/guard_synth/qualitative_scene_contract.py"
+        },
+        {
+          "label": "S1",
+          "target": "../experiments/paper1_cnl_learning/temporal_preservation.py"
+        },
+        {
+          "label": "S5",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/methodology-2026-09-30-001/manuscript_examples.json"
+        },
+        {
+          "label": "S1",
+          "target": "../experiments/paper1_cnl_learning/temporal_preservation.py"
+        },
+        {
+          "label": "S1 시간 계약·Core 변환·검증·CNL 생성",
+          "target": "../experiments/paper1_cnl_learning/temporal_preservation.py"
+        },
+        {
+          "label": "S2 정성적 계약의 파서와 수명주기 의미",
+          "target": "../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py"
+        },
+        {
+          "label": "S3 학습 입력과 독립 참조 계산",
+          "target": "../experiments/paper1_cnl_learning/temporal_training_data.py"
+        },
+        {
+          "label": "S4 제한된 실제 장면 adapter",
+          "target": "../src/guard_synth/qualitative_scene_contract.py"
+        },
+        {
+          "label": "S5 원고 예제의 실행 질의와 결과",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/methodology-2026-09-30-001/manuscript_examples.json"
+        },
+        {
+          "label": "원고 예제의 두 학습 입력 레코드",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/methodology-2026-09-30-001/learning_input_examples.json"
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_METHODOLOGY_V01_EN.md",
+      "source_sha256": "f3b5d5371b8ceb868fd87b6d24105baa7e1989155da7abbe3be6df9e1e402b4f",
+      "pdf": "ieee-access-methodology-v01-en.pdf",
+      "figures": 5,
+      "code_boxes": 4,
+      "tables": 3,
+      "links": [
+        {
+          "label": "S1",
+          "target": "../experiments/paper1_cnl_learning/temporal_preservation.py"
+        },
+        {
+          "label": "S2",
+          "target": "../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py"
+        },
+        {
+          "label": "S1",
+          "target": "../experiments/paper1_cnl_learning/temporal_preservation.py"
+        },
+        {
+          "label": "S3",
+          "target": "../experiments/paper1_cnl_learning/temporal_training_data.py"
+        },
+        {
+          "label": "S2",
+          "target": "../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py"
+        },
+        {
+          "label": "S3",
+          "target": "../experiments/paper1_cnl_learning/temporal_training_data.py"
+        },
+        {
+          "label": "S4",
+          "target": "../src/guard_synth/qualitative_scene_contract.py"
+        },
+        {
+          "label": "S1",
+          "target": "../experiments/paper1_cnl_learning/temporal_preservation.py"
+        },
+        {
+          "label": "S5",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/methodology-2026-09-30-001/manuscript_examples.json"
+        },
+        {
+          "label": "S1",
+          "target": "../experiments/paper1_cnl_learning/temporal_preservation.py"
+        },
+        {
+          "label": "S1 Temporal contracts, Core lowering, verification, and CNL generation",
+          "target": "../experiments/paper1_cnl_learning/temporal_preservation.py"
+        },
+        {
+          "label": "S2 Qualitative contract parsing and lifecycle semantics",
+          "target": "../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py"
+        },
+        {
+          "label": "S3 Learning inputs and independent reference calculation",
+          "target": "../experiments/paper1_cnl_learning/temporal_training_data.py"
+        },
+        {
+          "label": "S4 Restricted real-scene adapter",
+          "target": "../src/guard_synth/qualitative_scene_contract.py"
+        },
+        {
+          "label": "S5 Executed manuscript queries and results",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/methodology-2026-09-30-001/manuscript_examples.json"
+        },
+        {
+          "label": "Two example learning-input records",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/methodology-2026-09-30-001/learning_input_examples.json"
+        }
+      ]
+    }
+  ],
+  "purpose": "Illustrated bilingual methodology revision; no new model experiment",
+  "builders": {
+    "projects/04-guardsynth-coc/paper/render_methodology.py": "fdb2952852567860c83cd8f8cb2be2bb006f4a9b0195322c38484f0447b8246c",
+    "projects/04-guardsynth-coc/paper/render_methodology_figures.py": "bb685eaa7c7115f51f614d67786113a217febbecbdb76a43f98e799cbb54ec33"
+  },
+  "reproduce": "Run render_methodology_figures.py then render_methodology.py before RESULT.json is finalized; generated TeX also compiles twice with XeLaTeX.",
+  "prior_snapshot": "methodology-2026-09-30-001; preserved unchanged"
+}

@@ -1,0 +1,144 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{kiee-review}[2026/08/05 KIEE 2022 anonymous review format]
+
+\RequirePackage{fontspec}
+\RequirePackage[a4paper,left=18.01mm,right=18.01mm,top=18.99mm,bottom=18.99mm,
+  headsep=10mm,footskip=10mm]{geometry}
+\RequirePackage{amsmath,amssymb}
+\RequirePackage{booktabs}
+\RequirePackage{tabularx}
+\RequirePackage{graphicx}
+\RequirePackage{float}
+\IfFileExists{placeins.sty}{\RequirePackage{placeins}}{}
+\RequirePackage{xcolor}
+\RequirePackage{tikz}
+\RequirePackage{url}
+\RequirePackage{xspace}
+\RequirePackage{listings}
+\RequirePackage{caption}
+\RequirePackage[hidelinks]{hyperref}
+
+% The font files and OFL license are bundled so the review PDF is reproducible.
+\setmainfont[
+  Path=fonts/,
+  Extension=.otf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold
+]{NotoSerifCJKkr}
+\setsansfont[
+  Path=fonts/,
+  Extension=.otf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold
+]{NotoSerifCJKkr}
+
+\setlength{\columnsep}{8mm}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0pt}
+\newcommand{\kieebodyfont}{\fontsize{8.5pt}{12.75pt}\selectfont}
+
+\definecolor{safe}{RGB}{40,120,90}
+\definecolor{guard}{RGB}{40,95,160}
+\definecolor{warning}{RGB}{180,120,35}
+\definecolor{unsafe}{RGB}{165,55,55}
+\definecolor{neutral}{RGB}{70,70,70}
+% Interfaces required by the independently copied CoC-audit figures.
+\usetikzlibrary{arrows.meta,positioning,fit,shapes.geometric,calc}
+\definecolor{observed}{RGB}{40,120,90}
+\definecolor{derived}{RGB}{40,95,160}
+\definecolor{assumed}{RGB}{180,120,35}
+\definecolor{blocked}{RGB}{165,55,55}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\coc}{\textsc{CoC}\xspace}
+\newcommand{\uppaal}{\textsc{UPPAAL}\xspace}
+\newcommand{\unknown}{미상\xspace}
+\newcommand{\preserve}{보존\xspace}
+\newcommand{\reset}{재시작\xspace}
+\newcommand{\dedup}{중복 제거\xspace}
+% LuaTeX treats following Hangul particles as part of a control word.  These
+% particle-aware aliases preserve the copied source text without changing its
+% Korean wording.
+\newcommand{\uppaal은}{\textsc{UPPAAL}은\xspace}
+\newcommand{\uppaal의}{\textsc{UPPAAL}의\xspace}
+\newcommand{\preserve는}{보존은\xspace}
+\newcommand{\preserve를}{보존을\xspace}
+\newcommand{\reset은}{재시작은\xspace}
+\newcommand{\dedup은}{중복 제거는\xspace}
+\newcommand{\unknown이다}{미상이다\xspace}
+\newcommand{\unknown으로}{미상으로\xspace}
+\newcommand{\sccoc}{Safety-Constrained CoC\xspace}
+\newcommand{\vlm}{VLM\xspace}
+\newcommand{\placeholder}[1]{%
+  \fbox{\parbox[c][34mm][c]{0.94\linewidth}{\centering\small #1}}}
+\lstset{basicstyle=\ttfamily\scriptsize,breaklines=true,
+  breakatwhitespace=false,columns=fullflexible,keepspaces=true}
+
+\renewcommand{\figurename}{그림}
+\renewcommand{\tablename}{표}
+\renewcommand{\refname}{참고문헌}
+\captionsetup{font=footnotesize,labelfont=bf,labelsep=period,justification=centering,
+  singlelinecheck=false,skip=3pt}
+\newcommand{\bifigcaption}[2]{%
+  \caption[#1]{#1\\[-0.2ex]\normalfont Fig.~\thefigure. #2}}
+\newcommand{\bitablecaption}[2]{%
+  \caption[#1]{#1\\[-0.2ex]\normalfont Table~\thetable. #2}}
+
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+  {1.25\baselineskip plus .2\baselineskip minus .1\baselineskip}%
+  {.45\baselineskip}%
+  {\centering\fontsize{9pt}{13.5pt}\selectfont\bfseries}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+  {1.05\baselineskip plus .2\baselineskip minus .1\baselineskip}%
+  {.25\baselineskip}%
+  {\fontsize{8.5pt}{12.75pt}\selectfont\bfseries}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+  {.8\baselineskip plus .1\baselineskip minus .1\baselineskip}%
+  {.2\baselineskip}%
+  {\fontsize{8.5pt}{12.75pt}\selectfont\bfseries}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+  {.7\baselineskip plus .1\baselineskip minus .1\baselineskip}%
+  {-1em}%
+  {\fontsize{8.5pt}{12.75pt}\selectfont\bfseries}}
+\setlength{\@fptop}{0pt}
+\setlength{\@dblfptop}{0pt}
+\makeatother
+
+\newcommand{\kieeenglishtitle}[1]{\def\kieeenglishtitletext{#1}}
+\newcommand{\kieekoreantitle}[1]{\def\kieekoreantitletext{#1}}
+\newenvironment{kieeabstract}
+  {\par\vspace{5pt}\fontsize{8.5pt}{12.75pt}\selectfont\noindent
+   \textbf{Abstract: }\ignorespaces}
+  {\par}
+\newcommand{\kieekeywords}[1]{%
+  \par\vspace{3pt}\fontsize{8.5pt}{12.75pt}\selectfont\noindent
+  \textbf{Key Words: }#1\par}
+\newcommand{\makekieefrontmatter}[1]{%
+  \twocolumn[{%
+    \begin{minipage}{\textwidth}
+      \centering
+      {\fontsize{16pt}{20pt}\selectfont\bfseries \kieeenglishtitletext\par}
+      \vspace{5pt}
+      {\fontsize{14pt}{18pt}\selectfont\bfseries \kieekoreantitletext\par}
+      \vspace{8pt}
+      \begin{minipage}{0.94\textwidth}
+        #1
+      \end{minipage}
+      \vspace{10pt}
+    \end{minipage}%
+  }]%
+  \kieebodyfont
+}
+
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.90}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.85}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\dblfloatpagefraction}{0.85}
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{6}
+\setcounter{dbltopnumber}{3}

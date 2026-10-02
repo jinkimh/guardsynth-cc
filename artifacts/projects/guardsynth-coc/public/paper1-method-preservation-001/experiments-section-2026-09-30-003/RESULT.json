@@ -1,0 +1,52 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "experiments-section-2026-09-30-003",
+  "status": "korean_compact_section_and_separate_supplement_complete",
+  "prior_snapshot": "experiments-section-2026-09-30-002",
+  "documents": {
+    "ieee-access-experiments-supplement-v01-ko.pdf": {
+      "pages": 11,
+      "sha256": "1ce1fe62a22d6606bd3a0a1a269bf294ddb7f853ddd84bc0c8f20f89d40b5542",
+      "overflow_warnings": 0,
+      "replacement_glyphs": 0,
+      "broken_links": 0
+    },
+    "ieee-access-experiments-v01-ko.pdf": {
+      "pages": 3,
+      "sha256": "d722b560f75d5fe925365c67870f3659e3619c6c011f023d855d0d8b84b0abbc",
+      "overflow_warnings": 0,
+      "replacement_glyphs": 0,
+      "broken_links": 0,
+      "body_paragraphs_verified": 20
+    }
+  },
+  "main_content": {
+    "pages": 3,
+    "tables": 4,
+    "figures": 3
+  },
+  "supplement_content": {
+    "pages": 11,
+    "tables": 11,
+    "figures": 4
+  },
+  "changes": [
+    "P1 is the original proposed constraint-enhancement approach; P2 is its EBLC verification and CNL generation support path.",
+    "Six task types, contract pairs, shuffled association control, formal quality, SAT/UNSAT boundary and unseen numeric conditions in main text.",
+    "Full prior temporal details, all added task conditions, adverse paraphrase outcomes, cost-learning, image diagnostics and original operational decisions retained in separate supplement."
+  ],
+  "verification": {
+    "primary_and_unseen_table_rows_recomputed": 9,
+    "main_body_paragraphs_pdf_checked": 20,
+    "pdf_text_and_links": "pass",
+    "main_all_pages_visual_review": "pass",
+    "latex_overflow_or_missing_glyph_warnings": 0,
+    "file_naming_new_violations": 0,
+    "file_naming_existing_unrelated_violations": 5
+  },
+  "original_experiment_outputs_modified": false,
+  "new_training_runs": 0,
+  "english_modified": false,
+  "main_tex_modified": false,
+  "integration_status": "standalone_korean_revision"
+}

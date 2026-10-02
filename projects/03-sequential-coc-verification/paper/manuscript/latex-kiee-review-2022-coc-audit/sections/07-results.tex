@@ -1,0 +1,237 @@
+\section{실험 결과}
+\label{sec:results}
+
+표~\ref{tab:result-claim-matrix}는 네 실험 블록의 결과를 해석하기 전에 직접 지지되는 주장과 지지되지 않는 주장을 먼저 고정한다. 중심 연속 CoC 결과와 보조 반응 시간ㆍ출처 결과는 서로 다른 계약 층이다. 여기서 통과와 실패는 선택한 계약과 검증 정책에 대한 판정이며, 차량의 물리적 안전/위험 판정이 아니다.
+
+\begin{table*}[t]
+\centering
+\bitablecaption{결과--주장 해석 행렬.}{Result-to-claim interpretation matrix.}
+\label{tab:result-claim-matrix}
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{0.92}
+\begin{tabularx}{\textwidth}{@{}L{0.27\textwidth}L{0.34\textwidth}Y@{}}
+\toprule
+Result & Directly supported claim & Claim not supported \\
+\midrule
+27 selected natural scenes: 0 consensus textual contradictions; independent textual-consistency ratings yielded Fleiss $\kappa=0.027$ & Describes no consensus textual contradiction in this selected sample and low pre-consensus inter-rater agreement. & Absence or prevalence of contradictions in all natural data; natural-error detection performance; objective truth of consensus labels. \\
+\midrule
+40 deterministic synthetic baseline--mutation pairs: stateful 40/40 versus event-local 20/40 mutation contradictions; no baseline contradictions & Confirms regression coverage of four generator-enforced transition rules and the checkers' state-memory difference. & Accuracy, recall, or false-positive rate on an independent set; realism of natural-language mutations; generalization to unseen contradictions. \\
+\midrule
+0/7 verdict mismatches across UPPAAL fixtures and Python cases generated from the same semantics & Confirms matching serialization of verdict, first violation, and {\unknown} reason for the fixed cases. & Independent validation of contract semantics; equivalence for all natural sequences; timing-deadline verification; safety-controller synthesis. \\
+\midrule
+Expected-oracle agreement for \texttt{scene-0001} timing mutations; 282 models $\times$ 4 queries $=$ 1,128 flag/query serialization checks over 94 scenes & The former distinguishes timing mutations in one scene-level observer; the latter checks label--flag--expected-verdict serialization. & Cohort-level observer detection power; actual error-detection rate; coverage of every fault or unseen batch behavior. \\
+\midrule
+At $D=3$ s, 134 annotation-event candidates route to 125 speed-change passes, 4 already-satisfied passes, and 5 review candidates & Under the stated detector/deadline policy, direction-explicit event-local screening yields $134=125+4+5$ routing. & 134 independent responses or episode contracts; safety certification of 125+4 items; 5 actual faults; a safety-derived $D=3$ s threshold. \\
+\midrule
+\preserve fails and \reset passes for \texttt{scene-0028} and \texttt{scene-0074} & The repeat-event clock policy must be declared before training/verification; its choice can reverse a verdict. & Either scene is hazardous; either repeat policy is the correct control requirement. \\
+\midrule
+Response-verdict distribution over 27 settings for 130 speed-change detector targets & Detector agreement on derived ego-motion evidence is a sensitivity and review-priority signal. & The 27 settings cover every valid detector; failure under one setting proves an actual violation. \\
+\midrule
+Separate 13-chain outputs: 4 all-query passes, 9 non-passes, 8 deadline flags, 7 response-reachability flags, and 0 boundary flags & Records technical execution counts for the metadata mirror, slow-intent-first parser, $W=1.0$ s/$\delta=0.7$ m/s detector, and \texttt{LoopSource}/\texttt{Monitor}. & Quantitative evidence for the shared contract; official trainval results; object/hazard continuity; long-episode generalization. \\
+\midrule
+Aggregate artifact records 13/13 agreement between script-comparable and \uppaal verdicts & The agreement value is recorded in \texttt{workshop-experiment-results.json}. & Independent implementation or item-level reproducibility; numerical superiority of \uppaal; dispensability of general model checks; vehicle-safety assurance. \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table*}
+
+\subsection{출처--도출 증거 매핑과 알려진 합성 결함 구분}
+\label{sec:results-rq1}
+
+\texttt{scene-0001}에서는 CoC 판단 시점과 품질 상태를 원천 증거로, 자차 속도에서 계산한 응답 시작을 도출 증거로 보존하고, $D=3$초와 \preserve를 검증 정책으로 분리했다. 정상 모델의 첫 검증 입력 수락 감속 사건은 2.5초, 응답 시작은 4.6597초였으므로 최초 시작 사건 기준 지연은 약 2.1597초이다. 이에 따라 정상 모델은 $D=3$초에서 모든 질의를 통과하고, 기한만 2초로 바꾼 인위적 오류 사례는 기한 질의에 실패했다.
+
+\begin{table}[!htbp]
+\centering
+\bitablecaption{\texttt{scene-0001} 변이 오라클 결과.}{Mutation-oracle results for scene-0001.}
+\label{tab:scene1-results}
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\begin{tabular}{lcccccc}
+\toprule
+Variant & Act. & Resp. & Dline & Reset & Ovr. & Dlock \\
+\midrule
+\texttt{normal} & P & P & P & P & P & P \\
+\texttt{D2s} & P & P & F & P & P & P \\
+\texttt{clk\_rst} & P & P & P & F & P & P \\
+\texttt{no\_resp} & P & F & F & P & P & P \\
+\texttt{untrust\_ovr} & P & P & P & P & F & P \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+표~\ref{tab:scene1-results}의 \texttt{D2s}, \texttt{clk\_rst}, \texttt{no\_resp}, \texttt{untrust\_ovr}는 각각 \texttt{deadline\_2s}, \texttt{clock\_reset}, \texttt{no\_response}, \texttt{untrusted\_overwrite} 인위적 오류 사례의 축약이다. 이 \texttt{scene-0001} 결과가 관찰자 수준 시간 변이의 직접 근거이다. 별도 두 템플릿 분석 대상 집합 모델은 94개 장면으로부터 기준ㆍ출처 변이ㆍ응답 변이 282개를 만들고 모델당 4개 질의, 총 $282 \times 4 = 1{,}128$개 판정을 기록했다. 그러나 생성 변이가 위반 불리언을 직접 설정하고 기대 판정도 같은 레이블에서 도출되므로, 이 일치는 플래그/질의 직렬화 회귀일 뿐 분석 대상 집합 관찰자의 미관측 결함 검출력 측정이 아니다.
+
+\texttt{scene-0001-chained} 정상 모델은 \textsc{Follow} $\rightarrow$ \textsc{Decelerate} $\rightarrow$ \textsc{Stop/Hold} $\rightarrow$ \textsc{Recover} 흐름의 도달 가능성, 기한, 순서, 위험 해소, 교착 속성을 만족했고, \texttt{late\_stop}, \texttt{skip\_hold}, \texttt{premature\_recovery}, \texttt{no\_recovery} 변이는 의도한 질의를 위반했다. 그러나 일곱 전환 중 원천 CoC와 도출 자차 움직임에 근거한 전환은 두 개뿐이고 나머지 단계는 합성 프로토콜 가정이다. 따라서 이 결과는 다단계 관찰자의 표현력 시험이지, 합성 시퀀스의 학습용 정상성 근거가 아니다.
+
+\subsection{일괄 선별, 정책 반전과 민감도}
+\label{sec:results-rq2}
+
+청크 0의 94개 장면과 403개 CoC 주석 중 290개가 품질 관문을 통과했다. 영어 정규식/복합 의도 규칙에서 방향이 명시된 134개를 주석 사건별 검증 조건으로 포함하고, 모호ㆍ비방향ㆍ복합 의도 156개를 제외했다($290=134+156$). 이 중 130개는 속도 변화 탐지 대상이고, 4개 정지/양보 사건은 사건 시점에 이미 정지 조건을 만족했다. 기본 $D=3$초와 \preserve 정책에서 125개 속도 변화 계약이 통과했으며, 이미 만족된 4개도 계약 통과로 분류되었고 5개가 검토 후보로 남았다. 반복 사건은 같은 응답 시작을 공유할 수 있으므로 이 134건은 독립 응답이나 134개 에피소드가 아니다.
+
+\begin{align}
+134 &= 130_{\mathrm{speed\text{-}detector}} + 4_{\mathrm{already\text{-}sat.}}, \\
+134 &= 125_{\mathrm{speed\text{-}pass}}
+     + 4_{\mathrm{already\text{-}sat.}}
+     + 5_{\mathrm{review}},\\
+130 &= 125_{\mathrm{speed\text{-}pass}} + 5_{\mathrm{review}} .
+\label{eq:cohort-counts}
+\end{align}
+
+이 분류는 기록 궤적을 바꾸지 않고 동일 입력에 검증 정책을 적용한 결과이다. 초기 기본 탐지기의 검토 후보 8건을 살핀 뒤 $v\leq0.5$~m/s STOP/YIELD 이미 충족 규칙을 사후 추가하여 \texttt{scene-0046@10000000}, \texttt{scene-0159@4500000}, \texttt{scene-0159@4900000}을 재분류했고 5건이 남았다. 이 임계값은 분석 대상 집합 보정 탐색 논리이므로 독립 검증이 필요하다. 따라서 125+4건은 물리 안전 사례가 아니며, 검토 후보 5건도 실제 결함으로 확정되지 않는다.
+
+\subsubsection{반복 정책, 기한과 연결 오류}
+
+\texttt{scene-0028}에서는 첫 감속 판단 이후 약 3.24초, 반복 판단 이후 약 1.24초에 응답이 나타난다. \texttt{scene-0074}에서는 첫 가속 판단 이후 약 3.36초, 반복 판단 이후 약 0.86초에 응답이 나타난다. 두 장면 모두 $D=3$초에서 \preserve는 실패하고 \reset은 통과한다. 이는 동일 기록의 \emph{정책 반전} 예이며, 두 장면이 위험하다는 증거가 아니다. \preserve는 지연을 최초 사건부터 재해석하는 정책으로서 유일하게 올바른 의미론이 아니다.
+
+\begin{table*}[t]
+\centering
+\bitablecaption{다섯 검토 후보의 정책ㆍ기한 기반 유형화. 물리 안전성은 모두 \unknown이다.}{Policy- and deadline-based categorization of the five review candidates; physical safety is unknown.}
+\label{tab:candidate-summary}
+\footnotesize
+\begin{tabularx}{\textwidth}{L{0.12\textwidth}L{0.18\textwidth}L{0.15\textwidth}L{0.15\textwidth}YY}
+\toprule
+Scene & Target intent & Preserve pass $D$ & Reset pass $D$ & Key finding & Review route \\
+\midrule
+0019 & Yield/decelerate & none & none & Default detector: no response; 4/27 profiles detect one & Repeat/evidence review \\
+0028 & Red-light stop & 4,5 & 3,4,5 & $D=3$ reversal; synthetic, non-atomic dedup orphan & Repeat/lineage review \\
+0042 & Lead-car deceleration & 4,5 & 4,5 & 3 s/4 s deadline boundary & Deadline review \\
+0065 & Bus-related deceleration & 4,5 & 4,5 & Deadline boundary; causal basis unknown & Evidence review \\
+0074 & Route acceleration & 4,5 & 3,4,5 & $D=3$ policy reversal & Repeat-policy review \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\texttt{scene-0042}와 \texttt{scene-0065}는 3초에서 실패하고 4초와 5초에서 통과하는 기한 구간 사례이다. 계약은 $r<D$의 반개구 의미론을 사용하지만 저장 집계에는 정확히 $r=D$인 사례가 없다. $D=3$초는 법규, 차량 요구사항, 동역학 또는 상대 객체 상태에서 도출한 안전 기한이 아니므로, 이 판정은 기한 요구사항 보정과 추가 증거 검토를 요청하는 분류 신호로만 사용한다.
+
+\texttt{scene-0028}의 1초 중복 제거 시험에서는 0.7초 간격의 수락된 STOP 트리거 하나를 제거하면서 그 트리거에 연결된 도출 응답을 원자적으로 제거ㆍ재연결하지 않는 조건을 합성했다. 관찰자가 검출한 \texttt{orphan\_response}는 이 \emph{합성 연결 오류}에 대한 전처리 계보 회귀 신호이다. 이는 자연 발생 운전 오류나 정상 궤적 레이블이 아니다.
+
+\subsubsection{27개 탐지기 설정 민감도와 AI 선별}
+
+130개 속도 변화 탐지 대상에 창, 속도 변화 임계값, 방향 비율을 각각 세 단계로 조합한 27개 설정을 적용했다. 설정별 응답 판정의 일치도 분포는 표~\ref{tab:detector-sensitivity}와 같다. 이 분포는 도출 자차 움직임 증거가 탐지 정책에 얼마나 민감한지를 나타내며, 단일 설정의 실패를 무조건적 계약 위반으로 승격하는 근거가 아니다.
+
+\begin{table}[t]
+\centering
+\bitablecaption{27개 응답 탐지 설정에 대한 민감도.}{Sensitivity across 27 response-detector configurations.}
+\label{tab:detector-sensitivity}
+\footnotesize
+\begin{tabular}{lr}
+\toprule
+Detector settings finding response & Event count \\
+\midrule
+27/27 & 72 \\
+18--26/27 & 51 \\
+9--17/27 & 2 \\
+1--8/27 & 4 \\
+0/27 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+다섯 최종 후보에 대한 전방 카메라 프레임 검토는 독립 인간 정답이 아니라 \emph{AI 선별(triage)} 단계였다. 그 목적은 반복 정책, 기한 경계, 연결 관계, 추가 센서 필요성에 따라 후속 검토 경로를 배정하는 데 있으며, 영상의 단어 패턴으로 원인을 추정하거나 통계적 결론을 내리는 데 있지 않다. 따라서 다섯 후보의 물리 안전성은 모두 \unknown으로 유지한다.
+
+\subsection{로컬 독립성, 경계 변이와 체인 구현 기본 동작}
+\label{sec:results-rq3}
+
+로컬 CoC-Nusc의 98개 자차 움직임 파일은 모두 타임스탬프가 0에서 시작하고 시작 자세도 원점 근처로 초기화되며, 장면 사이 로그/이전ㆍ다음 관계가 없다. 이 출처 조건에서는 각 장면을 독립 에피소드로 닫고 대기 의무를 다음 장면으로 이월하지 않는 것이 기본 정책이다. 이는 연속 주행이 없다는 증명이 아니라, 연속성 근거가 없을 때 적용하는 오류 차단 시험이다.
+
+합성 두 장면 경계 시험에서 올바른 \texttt{correct\_discard}는 검증되지 않은 경계에서 활성 의무를 \texttt{Discarded}로 닫아 모든 질의를 통과했다. \texttt{buggy\_carryover}는 이전 장면의 의무를 다음 장면 응답으로 완료하도록 합성한 경계 결함이며, 폐기 도달성, 교차 경계 완료 금지, 이월 금지 질의를 기대대로 위반했다.
+
+\begin{table}[t]
+\centering
+\bitablecaption{경계 이월 오류 차단 시험 실험 결과.}{Results of the boundary-carryover negative control.}
+\label{tab:boundary-negative-control}
+\scriptsize
+\begin{tabular}{lccccc}
+\toprule
+Variant & Complete & Discard & No cross & No carry & Deadlock \\
+\midrule
+\texttt{correct} & P & P & P & P & P \\
+\texttt{carry} & P & F & F & F & P \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+공식 nuScenes mini는 연속성 스키마 확인에만 사용했다 \cite{nuscenes2026website}. Trainval 후보 적격성은 별도의 nuScenes 호환 메타데이터 미러에서 검증했다. 미러의 850개 장면, 200,644개 샘플, 68개 로그에서 동일 로그 인접 쌍은 782개였고, 간격 1초 이하인 쌍은 391개였다. 양쪽 장면의 로컬 추론과 자차 움직임까지 요구하면 16개 엄격 쌍이 남았고, 이를 13개 엄격 체인으로 묶었다.
+
+13체인 총계의 직접 출처는 \texttt{uppaal-loop-batch-all-strict-1s.json} 산출물이다. 이 파일은 전체 질의 통과 4개, 비통과 9개, 중복 집계한 기한 실패 8개, 응답 도달성 실패 7개, 경계 실패 0개를 기록한다. 다만 생성기는 공유 계약과 달리 느린 의도 토큰을 먼저 찾는 부분문자열 파서, $W=1.0$초와 $\delta=0.7$~m/s, 방향 비율 없는 응답 탐지기를 사용한다. 복합 의도는 감속으로 오분류될 수 있으므로 이 수는 \texttt{LoopSource}/\texttt{Monitor} 구현 파이프라인의 기술적 기본 동작 결과이지 공유 계약의 정량 결과가 아니다.
+
+\begin{table}[t]
+\centering
+\bitablecaption{메타데이터 미러 적격성 집계와 별도 구현의 13체인 기본 동작 결과.}{Metadata-mirror eligibility counts and 13-chain outputs from a separate implementation.}
+\label{tab:scene-continuity-results}
+\footnotesize
+\begin{tabular}{lr}
+\toprule
+Item & Value \\
+\midrule
+Trainval mirror scenes & 850 \\
+Trainval mirror samples & 200,644 \\
+Same-log adjacent pairs & 782 \\
+Gap $\leq$ 1 s pairs & 391 \\
+Strict pairs with local reasoning + ego motion & 16 \\
+Derived strict chains & 13 \\
+Smoke artifact: all-query-pass & 4 \\
+Smoke artifact: non-all-query-pass & 9 \\
+Smoke artifact: deadline flag & 8 \\
+Smoke artifact: response-reachability flag & 7 \\
+Smoke artifact: boundary flag & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+연속성 적격성은 장면을 연결할 수 있는 출처 조건이다. 직접 결과는 출처 없는 이월을 차단한 경계 오류 차단 시험이며, 표의 13체인 플래그는 별도 구현의 기술 출력으로만 남긴다. 따라서 0/8/7을 공유 계약의 경계ㆍ기한ㆍ응답 성능이나 공식 trainval 인증, 객체ㆍ위험 연속성, 데이터셋 일반화로 해석하지 않는다.
+
+\subsection{집계 일치 기록과 정형 명세의 부가가치}
+\label{sec:results-rq4}
+
+보존된 집계 산출물 \texttt{workshop-experiment-results.json}은 별도 체인 구현에서 타임스탬프 스크립트와 \uppaal의 비교 가능한 판정이 13/13 일치했다고 기록한다. 그러나 실행 가능한 스크립트 기준선이나 항목별 비교 출력은 보존되지 않아 이 기록으로 독립 구현 또는 항목별 재현성을 주장할 수 없다. 또한 체인 구현은 공유 계약과 다른 파서ㆍ탐지기를 사용하므로 이 일치는 중심 주장의 정량 근거가 아니다.
+
+정형화의 질적 부가가치는 모델군별로 상태 생명주기, 반복 정책, 출처 플래그, 경계 및 교착 질의를 명시하고 판정을 사건ㆍ정책 상태와 연결된 반례로 추적할 수 있다는 점이다. 이는 하나의 통합 모델을 실행했다는 뜻이 아니며, 5개 템플릿의 \texttt{scene-0001}, 2개 템플릿의 분석 대상 집합, \texttt{LoopSource}/\texttt{Monitor} 체인 모델을 구분해야 한다. 정형 모델의 주장은 수치적 우월성이 아니라 이 명세ㆍ추적 구조에 한정한다.
+
+\subsection{연속 CoC 계약의 상태형 회귀 시험과 UPPAAL 구현 일치}
+\label{sec:results-sequential}
+
+결정적 합성 기준--변형 40쌍에서 상태형 규칙은 변형 40건을 모두 모순으로 판정했고 사건별 규칙은 20건을 모순으로 판정했다. 두 규칙 모두 대응 합성 기준 사례 40건에서는 모순을 보고하지 않았다. 유형별로 \texttt{HOLD\_GO\_CONFLICT}와 \texttt{STALE\_OBLIGATION}은 사건별 규칙이 각각 0/10, 상태형 규칙이 각각 10/10을 모순으로 판정했다. \texttt{PREMATURE\_RELEASE}와 \texttt{ORDER\_VIOLATION}은 두 규칙이 모두 각각 10/10을 모순으로 판정했다. 다만 합성 생성기는 상태형 판정을 수락 사후조건으로 사용한다. 따라서 이 수는 확률적 성능 지표가 아니라 네 규칙 유형의 회귀 fixture가 의도대로 실행되었다는 커버리지 기록이다.
+
+\begin{table}[t]
+\centering
+\bitablecaption{합성 기준--변형 쌍의 모순 유형별 회귀 시험 결과. 분모는 각 유형의 변형 10건이다.}{Rule-conformance results for synthetic baseline--mutation pairs.}
+\label{tab:sequential-mutation-results}
+\scriptsize
+\begin{tabularx}{\columnwidth}{L{0.42\columnwidth}rr}
+\toprule
+Contradiction type & Event-local rules & Stateful rules \\
+\midrule
+\texttt{HOLD\_GO\_CONFLICT} & 0/10 & 10/10 \\
+\texttt{PREMATURE\_RELEASE} & 10/10 & 10/10 \\
+\texttt{ORDER\_VIOLATION} & 10/10 & 10/10 \\
+\texttt{STALE\_OBLIGATION} & 0/10 & 10/10 \\
+\midrule
+All mutations classified as contradictory & 20/40 & 40/40 \\
+Synthetic baselines classified as contradictory & 0/40 & 0/40 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+네 검토자의 독립 판정에서 관측 쌍 일치도/Fleiss $\kappa$는 시간 요구 0.698/0.203, 행동열 0.340/0.291, 텍스트 일관성 0.407/0.027이었다. 27개 장면 모두 적어도 한 항목에서 의견이 갈렸고, 낮은 일치도 때문에 독립 판정의 다수결을 정답으로 사용하지 않고 전 항목을 별도로 합의했다. 합의 결과는 시간 요구 있음 27/27, 텍스트 일관 27/27, 텍스트 모순 0/27, 외부 증거 필요 {\unknown} 0/27이었다. 자동 선별 후보 15장면과 대응 대조 12장면 모두 텍스트 일관으로 합의되었다. 이 결과는 선택 표본의 합의 기록일 뿐 자연 자료 전체의 모순 부재나 발생 빈도를 추정하지 않으며, 합성 시험의 판정 수와 결합해 자연 오류 검출 성능을 계산할 수도 없다.
+
+합의된 텍스트 논리 판정과 기록된 종방향 궤적 계약의 기준 설정을 장면 단위로 교차하면 표~\ref{tab:logic-trajectory-cross}와 같다. 텍스트는 27장면 모두 논리적으로 일관했지만 궤적 계약은 2장면 정렬, 7장면 비정렬, 18장면 {\unknown}이었다. 이는 설명 내부의 양립 가능성과 관측 행동의 계약 정렬이 서로 다른 속성임을 보여 준다. 특히 7건은 상대 객체의 해제 상태, 사람 운전의 대안 가능성, 차량 동역학을 포함하지 않으므로 교통법규나 물리 안전 위반이 아니다.
+
+\begin{table}[t]
+\centering
+\bitablecaption{합의된 텍스트 논리 판정과 기준 궤적 계약 판정의 장면 단위 교차표.}{Scene-level cross-tab of consensus textual logic and baseline trajectory-contract verdicts.}
+\label{tab:logic-trajectory-cross}
+\footnotesize
+\begin{tabular}{lrrr}
+\toprule
+Consensus text verdict & Aligned & Not aligned & {\unknown} \\
+\midrule
+Consistent & 2 & 7 & 18 \\
+Contradictory & 0 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+실제 \texttt{verifyta}로 실행한 일곱 개 정식 시험 사례에서 Python과 UPPAAL의 판정, 모순 유형, 첫 위반 사건과 {\unknown} 사유는 모두 일치하여 불일치는 0/7이었다. 대표 \texttt{HOLD\_GO\_CONFLICT} 실행 경로는 해제되지 않은 정지 의무가 활성인 상태에서 다음 진행 사건을 읽고 고정 위반 플래그와 첫 위반 사건 인덱스에 도달한다. UPPAAL 모델은 Python과 같은 전이 규칙에서 생성되고 실제 시간 지연 제약 없이 committed 전환으로 사건 순서를 소비한다. 그러므로 이 결과는 정해진 일곱 사례의 구현 일치와 상태 추적을 지지하지만, 독립 의미 검증, 가능한 환경 전체 탐색, 반응 기한 검증 또는 안전 제어기 합성을 뜻하지 않는다.

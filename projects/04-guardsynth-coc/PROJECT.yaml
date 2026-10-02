@@ -1,0 +1,26 @@
+project_id: guardsynth-coc
+project_order: 4
+title: GuardSynth-CoC
+research_question: Does fine-tuning a multimodal VLM with source-grounded constraints extracted from CoC and scenes, verified in EBLC and rendered as natural-language supervision, improve held-out visual action performance under matched training budgets?
+status: research_active_m16_m17_original_context_validation_pending
+dependencies:
+  - eblc-bcv
+related_research:
+  - eblc-language-verification
+artifact_root: artifacts/projects/guardsynth-coc
+canonical_status: STATUS.md
+canonical_research_plan: docs/plans/01_RESEARCH_PLAN_V02.md
+canonical_milestones: docs/plans/02_PROJECT_MILESTONES.md
+canonical_execution_tracker: docs/plans/03_PROJECT_EXECUTION_TRACKER.md
+survey_index: docs/surveys/README.md
+paper_root: paper
+subprojects:
+  - id: guardsynth-studio
+    title: GuardSynth Studio — CoC & EBLC Data Workbench
+    kind: engineering_tool
+    status: local_implemented_provider_acceptance_pending
+    requirements: docs/requirements/GUARDSYNTH_STUDIO_REQUIREMENTS_V01.md
+    design: docs/designs/GUARDSYNTH_STUDIO_DESIGN_V01.md
+    design_verification: docs/reports/GUARDSYNTH_STUDIO_DESIGN_VERIFICATION_REPORT_V01.md
+    application: ../../apps/guardsynth_studio
+    implementation_verification: docs/reports/GUARDSYNTH_STUDIO_IMPLEMENTATION_VERIFICATION_REPORT_V01.md

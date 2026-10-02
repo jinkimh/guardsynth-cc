@@ -1,0 +1,11 @@
+\begin{tikzpicture}[
+ box/.style={draw=revisionblue,rounded corners,align=center,text width=3.4cm,minimum height=11mm,font=\footnotesize,text=revisionblue},
+ flow/.style={-{Latex},draw=revisionblue,thick}]
+\node[box] (text) at (0,0) {Stored CoC text\\rule-based phrase extraction\\observed evidence unresolved};
+\node[box] (frame) at (0,-1.7) {Authored text + frames\\condition IDs and source spans\\fixed scenario expectations};
+\node[box] (check) at (5,-.85) {Frozen single-obligation path\\FSM comparator\\condition-indexed UPPAAL};
+\node[box] (trace) at (10,-.85) {Decision + first issue event\\obligation + reason\\XML / queries / logs};
+\draw[flow] (text.east) -- (check.north west);
+\draw[flow] (frame.east) -- (check.south west);
+\draw[flow] (check.east) -- (trace.west);
+\end{tikzpicture}

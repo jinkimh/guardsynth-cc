@@ -1,0 +1,113 @@
+{
+  "claim_scope": "COC_CONDITIONED_LEGAL_PROPOSAL_WITH_SEPARATE_SIMULATION_POLICY_NOT_LEGAL_DECISION_OR_REAL_VEHICLE_SAFETY",
+  "context_graph": {
+    "coc_claims": [
+      {
+        "claim_id": "frontend_coc_claim",
+        "epistemic_kind": "CLAIMED",
+        "evidence_ref": "coc-sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    ],
+    "graph_id": "synthetic_crosswalk_frontend_v0_1__materialized__context_graph",
+    "instances": [
+      {
+        "association": {
+          "candidate_target_entity_ids": [
+            "pedestrian-1"
+          ],
+          "candidate_zone_ids": [
+            "crosswalk-1"
+          ],
+          "coordinate_transform_ref": "PUBLIC-SYNTHETIC-RIG-TRANSFORM-v0.1",
+          "evidence_refs": [
+            "PUBLIC-SYNTHETIC-PED-CROSSWALK-ASSOCIATION-v0.1",
+            "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1",
+            "PUBLIC-SYNTHETIC-RIG-TRANSFORM-v0.1"
+          ],
+          "selected_target_entity_id": "pedestrian-1",
+          "selected_zone_id": "crosswalk-1",
+          "zone_geometry_ref": "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+        },
+        "contract_id": "C0",
+        "hazard_fact": {
+          "epistemic_kind": "DERIVED",
+          "maximum_age_s": 0.2,
+          "source_ref": "PUBLIC-SYNTHETIC-SCENE-PED-CROSSING-v0.1",
+          "timestamp_s": 1.0,
+          "truth": "TRUE"
+        },
+        "instance_id": "frontend_scene_0",
+        "overrides_contracts": [],
+        "zone_entry": {
+          "evidence_refs": [
+            "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+          ],
+          "frame": "dataset_rig",
+          "unit": "m",
+          "value": 15.0
+        }
+      }
+    ],
+    "source_refs": [
+      "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1",
+      "PUBLIC-SYNTHETIC-PED-CROSSWALK-ASSOCIATION-v0.1",
+      "PUBLIC-SYNTHETIC-RIG-TRANSFORM-v0.1",
+      "PUBLIC-SYNTHETIC-SCENE-PED-CROSSING-v0.1"
+    ],
+    "timestamp_s": 1.0
+  },
+  "frames": 8,
+  "generator_version": "guard-synth-source-aware-generator-v0.1",
+  "policy": {
+    "action_domain": [
+      "STOP",
+      "CREEP",
+      "PROCEED"
+    ],
+    "allowed_actions": [
+      "STOP"
+    ],
+    "always_active": false,
+    "compiler_policy_evidence_ref": "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+    "composition_evidence_refs": [
+      "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+    ],
+    "enforce_invariant": true,
+    "expiry_timestamp_s": null,
+    "force_deadlock": false,
+    "position_epsilon_m": 1e-09,
+    "predicate_evidence_ref": "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+    "reactivation_enabled": true,
+    "release_enabled": true,
+    "speed_epsilon_mps": 1e-09,
+    "subject_id": "ego",
+    "time_epsilon_s": 1e-09,
+    "unknown_policy": "APPROVED_HOLD"
+  },
+  "predicate_spec_ref": "geometric_pedestrian_corridor_overlap",
+  "request_id": "synthetic_crosswalk_frontend_v0_1__materialized",
+  "rule_template_ref": "GS-SIM-PED-CORRIDOR-001",
+  "source_refs": [
+    "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+    "KR-RTA-2026-ART27",
+    "KR-RTA-27-1",
+    "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+    "P0B-SYNTHETIC-COMPOSITION-POLICY-v0",
+    "P0B-SYNTHETIC-PREDICATE-SPEC-v0",
+    "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+    "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1",
+    "PUBLIC-SYNTHETIC-PED-CROSSWALK-ASSOCIATION-v0.1",
+    "PUBLIC-SYNTHETIC-RIG-TRANSFORM-v0.1",
+    "PUBLIC-SYNTHETIC-SCENE-PED-CROSSING-v0.1",
+    "coc-sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d"
+  ],
+  "template_program_ref": "p0b_pedestrian_conflict_zone_program_v02",
+  "vehicle_profile": {
+    "evidence_ref": "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+    "maximum_service_deceleration_mps2": 3.0,
+    "position_uncertainty_m": 0.5,
+    "profile_id": "GUARDSYNTH-SIM-LONGITUDINAL-v0.1",
+    "response_time_s": 0.5
+  }
+}

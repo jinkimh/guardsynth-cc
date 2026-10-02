@@ -1,0 +1,21 @@
+{
+  "actual_vehicle_validated": false,
+  "case_count": 24,
+  "claim_promotions": 0,
+  "claim_scope": "LOCKED_SYNTHETIC_FRONTEND_PROTOCOL_AND_SUPPORTED_COMPILER_PATH_NOT_NLP_ACCURACY_LEGAL_DECISION_OR_VEHICLE_SAFETY",
+  "coc_text_outputs": 0,
+  "empirical_scene_accuracy_evaluated": false,
+  "operational_policy_coverage": {
+    "complete": false,
+    "primary_rules": 3,
+    "supported_primary_rules": 1
+  },
+  "rates": {
+    "compiler_on_supported_proposals": 1.0,
+    "expected_verdict": 1.0,
+    "schema_parse": 1.0
+  },
+  "slice_count": 3,
+  "software_gate_passed": true,
+  "status": "EXECUTED"
+}

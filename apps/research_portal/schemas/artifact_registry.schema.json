@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "artifact_registry.schema.json",
+  "title": "Client-safe artifact registry",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["artifact_id", "owner_kind", "owner_id", "classification", "run_label", "manifest_hash", "assets"],
+    "properties": {
+      "artifact_id": {"type": "string", "pattern": "^art-[a-f0-9]{20}$"},
+      "owner_kind": {"enum": ["PROJECT", "PLATFORM"]},
+      "owner_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+      "classification": {"enum": ["public", "restricted", "intermediate", "legacy_immutable"]},
+      "run_label": {"type": "string", "minLength": 1, "maxLength": 256},
+      "experiment_id": {"type": "string"},
+      "created_at": {"type": "string"},
+      "claim_scope": {"type": "string"},
+      "has_result": {"type": "boolean"},
+      "has_report": {"type": "boolean"},
+      "manifest_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+      "assets": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["asset_id", "label", "media_type", "size_bytes", "sha256"],
+          "properties": {
+            "asset_id": {"type": "string", "pattern": "^asset-[a-f0-9]{20}$"},
+            "label": {"type": "string", "minLength": 1},
+            "media_type": {"enum": ["application/json", "application/pdf", "text/csv", "text/html", "text/markdown"]},
+            "size_bytes": {"type": "integer", "minimum": 0},
+            "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+          }
+        }
+      }
+    }
+  }
+}

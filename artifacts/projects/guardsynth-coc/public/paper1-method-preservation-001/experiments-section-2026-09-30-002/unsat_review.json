@@ -1,0 +1,129 @@
+{
+  "project_id": "guardsynth-coc",
+  "runtime": {
+    "version": "5.0.0",
+    "module_path": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages/z3/__init__.py",
+    "prefix": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36",
+    "python_site_packages": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages",
+    "source": "PROJECT_LOCAL_ISOLATED_BUILD"
+  },
+  "bridge": {
+    "SAT": 76,
+    "UNSAT": 24
+  },
+  "manuscript_examples": {
+    "SAT": 8,
+    "UNSAT": 4
+  },
+  "candidate_bindings": {
+    "UNSAT": 1920,
+    "SAT": 3840
+  },
+  "candidate_bindings_by_split": {
+    "train": {
+      "UNSAT": 1280,
+      "SAT": 2560
+    },
+    "validation": {
+      "UNSAT": 320,
+      "SAT": 640
+    },
+    "test": {
+      "UNSAT": 320,
+      "SAT": 640
+    }
+  },
+  "unique_assignments": {
+    "UNSAT": 420,
+    "SAT": 540
+  },
+  "unsat_reasons_with_repetitions": {
+    "before_clear": 480,
+    "wait_incomplete": 1440
+  },
+  "rows_with_admissible_entry_and_sat_reference": 1440,
+  "unexpected_unmodified_outcomes": 0,
+  "solver_unknown": 0,
+  "injected_errors": {
+    "valid": {
+      "contracts": 24,
+      "stored_base_sat": 24
+    },
+    "threshold_change": {
+      "contracts": 24,
+      "stored_base_sat": 24,
+      "SAT_to_UNSAT": 24
+    },
+    "reverse_comparison": {
+      "contracts": 24,
+      "stored_base_sat": 24,
+      "UNSAT_to_SAT": 24,
+      "SAT_to_UNSAT": 24
+    },
+    "delete_release": {
+      "contracts": 24,
+      "stored_base_sat": 24,
+      "UNSAT_to_SAT": 24
+    },
+    "unit_error": {
+      "contracts": 24,
+      "stored_base_sat": 0
+    },
+    "cnl_threshold": {
+      "contracts": 24,
+      "stored_base_sat": 24
+    },
+    "cnl_negation": {
+      "contracts": 24,
+      "stored_base_sat": 24
+    },
+    "shared_source_error": {
+      "contracts": 24,
+      "stored_base_sat": 24
+    }
+  },
+  "representative_core": {
+    "duration_ms": 500,
+    "query_id": "before_release",
+    "core": [
+      "clause_0",
+      "clause_1",
+      "clause_2",
+      "clause_3"
+    ],
+    "deletion_checks": [
+      {
+        "removed": "clause_0",
+        "expression": "Implies(supplied_temporal_release__enters__const,\n        supplied_temporal_release__entry_ms__const >=\n        supplied_temporal_release__clear_ms__const + 500)",
+        "remaining_status": "SAT"
+      },
+      {
+        "removed": "clause_1",
+        "expression": "11000 == supplied_temporal_release__clear_ms__const",
+        "remaining_status": "SAT"
+      },
+      {
+        "removed": "clause_2",
+        "expression": "11499 == supplied_temporal_release__entry_ms__const",
+        "remaining_status": "SAT"
+      },
+      {
+        "removed": "clause_3",
+        "expression": "supplied_temporal_release__enters__const == True",
+        "remaining_status": "SAT"
+      }
+    ],
+    "deletion_minimal": true
+  },
+  "original_runs_modified": false,
+  "new_model_calls": 0,
+  "input_hashes": {
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/methodology-2026-09-30-001/bridge_verification.json": "1d1b558b47986ae3da3659708540420c9f92574e9777d55bc02fd70bcba1b2c9",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/methodology-2026-09-30-001/manuscript_examples.json": "2f061552d6be9c5f08fef26d045501d41c2c1e72293510bad406a8bc97064d88",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-training-data-2026-09-29-001/train_paired.jsonl": "98617d2d3b7331ea6aaa7c7637367a881a3e05741b2ba06163ff8ef273c13e8c",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-training-data-2026-09-29-001/validation_paired.jsonl": "8b885df52624d4242eb38bff5bb10f58a03e511c5dc3993aabb988d6e703ebd6",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-training-data-2026-09-29-001/test_paired.jsonl": "556a01447b1640188aefe9970fd7a7e78fca8cf3f0b53d671953344cec3172a8",
+    "artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/diversity-protocol-2026-09-29-001/constraint_quality.json": "3d069418a501611f0623a46d0b1e091a26bcf111d9727fe245d2e2e72f90d700"
+  },
+  "script_sha256": "55b78ca3958c97c8228d57253071172ff7a2e9083b046d3bea739eb62a5d1c10"
+}

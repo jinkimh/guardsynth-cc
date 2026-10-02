@@ -1,0 +1,32 @@
+test_compiled_figure_and_table_environments_use_bilingual_captions (test_kiee_format.KieeFormatTests.test_compiled_figure_and_table_environments_use_bilingual_captions) ... ok
+test_compiled_sources_have_no_broken_commands_or_invalid_characters (test_kiee_format.KieeFormatTests.test_compiled_sources_have_no_broken_commands_or_invalid_characters) ... ok
+test_english_abstract_has_50_to_200_words (test_kiee_format.KieeFormatTests.test_english_abstract_has_50_to_200_words) ... ok
+test_english_abstract_has_no_citations_references_footnotes_or_equations (test_kiee_format.KieeFormatTests.test_english_abstract_has_no_citations_references_footnotes_or_equations) ... ok
+test_english_keywords_are_exactly_six (test_kiee_format.KieeFormatTests.test_english_keywords_are_exactly_six) ... ok
+test_english_title_matches_the_approved_review_copy (test_kiee_format.KieeFormatTests.test_english_title_matches_the_approved_review_copy) ... ok
+test_fixture_is_not_visible_to_readers (test_kiee_format.KieeFormatTests.test_fixture_is_not_visible_to_readers) ... ok
+test_korean_acknowledgments_preserve_funders_and_grant_numbers (test_kiee_format.KieeFormatTests.test_korean_acknowledgments_preserve_funders_and_grant_numbers) ... ok
+test_local_fonts_and_ofl_license_are_present (test_kiee_format.KieeFormatTests.test_local_fonts_and_ofl_license_are_present) ... ok
+test_main_compiles_all_ten_sections_in_order (test_kiee_format.KieeFormatTests.test_main_compiles_all_ten_sections_in_order) ... ok
+test_no_source_relative_inputs (test_kiee_format.KieeFormatTests.test_no_source_relative_inputs) ... ok
+test_sections_preserve_core_question_values_and_scope (test_kiee_format.KieeFormatTests.test_sections_preserve_core_question_values_and_scope) ... ok
+test_style_uses_required_geometry_and_column_gap (test_kiee_format.KieeFormatTests.test_style_uses_required_geometry_and_column_gap) ... ok
+test_table_bodies_and_figure_labels_are_english_only (test_kiee_format.KieeFormatTests.test_table_bodies_and_figure_labels_are_english_only) ... ok
+test_target_contains_no_symlinks (test_kiee_format.KieeFormatTests.test_target_contains_no_symlinks) ... ok
+test_target_source_is_anonymous (test_kiee_format.KieeFormatTests.test_target_source_is_anonymous) ... ok
+test_braced_argument_keeps_nested_and_escaped_braces (test_korean_editorial_integrity.KoreanEditorialIntegrityTests.test_braced_argument_keeps_nested_and_escaped_braces) ... ok
+test_citations_labels_refs_numbers_units_and_math_match_baseline (test_korean_editorial_integrity.KoreanEditorialIntegrityTests.test_citations_labels_refs_numbers_units_and_math_match_baseline) ... ok
+test_compiled_korean_prose_has_no_disallowed_literal_terms (test_korean_editorial_integrity.KoreanEditorialIntegrityTests.test_compiled_korean_prose_has_no_disallowed_literal_terms) ... ok
+test_english_bilingual_captions_match_baseline (test_korean_editorial_integrity.KoreanEditorialIntegrityTests.test_english_bilingual_captions_match_baseline) ... ok
+test_english_front_matter_matches_baseline (test_korean_editorial_integrity.KoreanEditorialIntegrityTests.test_english_front_matter_matches_baseline) ... ok
+test_manifest_includes_figure_pdf_and_detects_its_change (test_korean_editorial_integrity.KoreanEditorialIntegrityTests.test_manifest_includes_figure_pdf_and_detects_its_change) ... ok
+test_non_prose_assets_match_baseline_hashes (test_korean_editorial_integrity.KoreanEditorialIntegrityTests.test_non_prose_assets_match_baseline_hashes) ... ok
+test_numeric_unit_pairs_include_standalone_seconds_and_percent_forms (test_korean_editorial_integrity.KoreanEditorialIntegrityTests.test_numeric_unit_pairs_include_standalone_seconds_and_percent_forms) ... ok
+test_original_source_and_template_manifests_remain_unchanged (test_korean_editorial_integrity.KoreanEditorialIntegrityTests.test_original_source_and_template_manifests_remain_unchanged) ... skipped 'original source/template preservation fixtures are not present'
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.459s
+
+OK (skipped=1)
+Manual Korean term review (not automatically disallowed):
+  main.tex:27: 감사

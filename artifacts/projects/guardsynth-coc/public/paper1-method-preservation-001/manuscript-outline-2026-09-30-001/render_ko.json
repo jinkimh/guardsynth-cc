@@ -1,0 +1,56 @@
+{
+  "project_id": "guardsynth-coc",
+  "status": "COMPILED_PENDING_LAYOUT_CHECK",
+  "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_KO.md",
+  "source_sha256": "c6d0545d2bba3beab3e5bcd891869b3f697518a28cb86bd3055e1e5106a29408",
+  "pdf": "ieee-access-manuscript-outline-v01-ko.pdf",
+  "sections": [
+    "1 논문의 중심과 제안 제목",
+    "2 논리 흐름과 기여",
+    "3 제안하는 본문 8개 장",
+    "4 초록과 핵심 결과의 배치",
+    "5 본문 그림과 표의 최소 구성",
+    "6 본문 밖으로 옮길 내용",
+    "7 작성 순서와 완료 기준",
+    "8 집필 전 확인할 사항",
+    "9 집필 근거"
+  ],
+  "table_count": 4,
+  "links": [
+    {
+      "label": "상세 근거 패키지",
+      "source_target": "GUARDSYNTH_COC_METHODS_SETTINGS_PACKAGE_V01_KO.md",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/paper/GUARDSYNTH_COC_METHODS_SETTINGS_PACKAGE_V01_KO.md"
+    },
+    {
+      "label": "영문판",
+      "source_target": "IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_EN.md",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/paper/IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_EN.md"
+    },
+    {
+      "label": "상세 한글 패키지",
+      "source_target": "GUARDSYNTH_COC_METHODS_SETTINGS_PACKAGE_V01_KO.md",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/paper/GUARDSYNTH_COC_METHODS_SETTINGS_PACKAGE_V01_KO.md"
+    },
+    {
+      "label": "실험 마감 보고서",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-experiment-closure-2026-09-29-001/REPORT_KO.md",
+      "pdf_target": "../temporal-experiment-closure-2026-09-29-001/REPORT_KO.md"
+    },
+    {
+      "label": "전체 수치 CSV",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv",
+      "pdf_target": "../temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv"
+    },
+    {
+      "label": "시간 계약과 검증 코드",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_preservation.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py"
+    },
+    {
+      "label": "IEEE Access 작성 안내",
+      "source_target": "https://ieeeaccess.ieee.org/authors/preparing-your-article/",
+      "pdf_target": "https://ieeeaccess.ieee.org/authors/preparing-your-article/"
+    }
+  ]
+}

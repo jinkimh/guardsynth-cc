@@ -1,0 +1,1 @@
+"""GuardSynth-CoC integration tests."""

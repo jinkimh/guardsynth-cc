@@ -1,0 +1,148 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{hu2023uniad}
+\citation{jiang2023vad}
+\citation{sima2024drivelm}
+\citation{tian2024drivevlm}
+\citation{wang2025alpamayo}
+\@writefile{toc}{\contentsline {section}{\numberline {1}서론}{1}{section.1}\protected@file@percent }
+\newlabel{sec:introduction}{{1}{1}{서론}{section.1}{}}
+\citation{sima2024drivelm}
+\citation{tian2024drivevlm}
+\citation{wang2025alpamayo}
+\citation{xie2025drivebench}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces 기본 CoC와 제약 통합 CoC의 선택 기준 차이. 세 후보는 모두 `보행자에게 양보한 뒤 진행'이라는 목표와 관련되지만, 빨간 궤적은 정지선ㆍ동역학 제약을 위반하고 회색 궤적은 허용되지만 지나치게 보수적이다. 기본 CoC만으로는 두 실행 품질을 구별하기 어렵고, 제약 통합 CoC는 목표를 완료하면서 제약을 지키는 녹색 후보를 선택할 기준을 제공한다.}}{2}{figure.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:concept}{{1}{2}{기본 CoC와 제약 통합 CoC의 선택 기준 차이. 세 후보는 모두 `보행자에게 양보한 뒤 진행'이라는 목표와 관련되지만, 빨간 궤적은 정지선ㆍ동역학 제약을 위반하고 회색 궤적은 허용되지만 지나치게 보수적이다. 기본 CoC만으로는 두 실행 품질을 구별하기 어렵고, 제약 통합 CoC는 목표를 완료하면서 제약을 지키는 녹색 후보를 선택할 기준을 제공한다}{figure.caption.1}{}}
+\citation{shalev2017rss}
+\citation{katz2019marabou}
+\citation{fremont2019scenic}
+\citation{zhang2023cat}
+\@writefile{toc}{\contentsline {section}{\numberline {2}관련 연구}{3}{section.2}\protected@file@percent }
+\newlabel{sec:related}{{2}{3}{관련 연구}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}추론 보강형 E2E/VLA 자율주행}{3}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}주행 안전 제약과 검증}{3}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}자연어와 정형 명세의 역할}{3}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}차별점}{3}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}문제 정의}{3}{section.3}\protected@file@percent }
+\newlabel{sec:problem}{{3}{3}{문제 정의}{section.3}{}}
+\newlabel{eq:selection}{{1}{3}{문제 정의}{equation.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}표 1로부터 S-C CoC 구성}{3}{subsection.3.1}\protected@file@percent }
+\newlabel{eq:sccoc-compose}{{2}{3}{표 1로부터 S-C CoC 구성}{equation.3.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{보행자 양보 예.}{3}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{차선 변경 예.}{3}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Safety-Constrained CoC와 평가 방법}{3}{section.4}\protected@file@percent }
+\newlabel{sec:method}{{4}{3}{Safety-Constrained CoC와 평가 방법}{section.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces 관련 연구 흐름과 본 연구의 역할 비교. 이 표는 성능 순위가 아니라 연구 질문과 증거 범위의 차이를 나타낸다.}}{4}{table.caption.2}\protected@file@percent }
+\newlabel{tab:prior-comparison}{{1}{4}{관련 연구 흐름과 본 연구의 역할 비교. 이 표는 성능 순위가 아니라 연구 질문과 증거 범위의 차이를 나타낸다}{table.caption.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces 실행 가드를 구성하는 일곱 요소. 각 행은 `언제 의무가 시작되는가, 유지 중 무엇을 지켜야 하는가, 언제 끝나는가, 불확실하면 무엇을 하는가' 중 하나를 담당한다. 모든 장면에 일곱 요소를 전부 쓰는 것은 아니다.}}{4}{table.caption.3}\protected@file@percent }
+\newlabel{tab:taxonomy}{{2}{4}{실행 가드를 구성하는 일곱 요소. 각 행은 `언제 의무가 시작되는가, 유지 중 무엇을 지켜야 하는가, 언제 끝나는가, 불확실하면 무엇을 하는가' 중 하나를 담당한다. 모든 장면에 일곱 요소를 전부 쓰는 것은 아니다}{table.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}제안 방법의 전체 흐름}{4}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}CoC와 실행 가드의 입력 방식}{4}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}같은 장면에서 실행 조건만 바꾸는 평가}{4}{subsection.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces 제안 평가의 흐름. 왼쪽의 장면ㆍ기본 CoCㆍ실행 가드를 모델에 입력하면 모델이 가운데의 후보 A--D 중 하나를 선택한다. 오른쪽의 규칙 기반 검증기는 선택된 후보의 정지 위치, 간격, 속도 및 시간을 가드의 기준값과 비교하여 가드 위반률, 가드 준수 목표 완료율 및 계약 쌍 정확도를 계산한다. 검증기는 모델의 자기평가가 아니라 후보 수치에 결정 규칙을 적용한다.}}{5}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:pipeline}{{2}{5}{제안 평가의 흐름. 왼쪽의 장면ㆍ기본 CoCㆍ실행 가드를 모델에 입력하면 모델이 가운데의 후보 A--D 중 하나를 선택한다. 오른쪽의 규칙 기반 검증기는 선택된 후보의 정지 위치, 간격, 속도 및 시간을 가드의 기준값과 비교하여 가드 위반률, 가드 준수 목표 완료율 및 계약 쌍 정확도를 계산한다. 검증기는 모델의 자기평가가 아니라 후보 수치에 결정 규칙을 적용한다}{figure.caption.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces 실험 조건의 공통 이름과 차이. `제약 통합 CoC'는 제안 조건이며, `제약--정답 대응 교란'은 제약 문장의 추가 효과와 올바른 의미 대응의 효과를 구분하기 위한 음성 통제군이다.}}{5}{table.caption.7}\protected@file@percent }
+\newlabel{tab:representations}{{3}{5}{실험 조건의 공통 이름과 차이. `제약 통합 CoC'는 제안 조건이며, `제약--정답 대응 교란'은 제약 문장의 추가 효과와 올바른 의미 대응의 효과를 구분하기 위한 음성 통제군이다}{table.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}모델 학습과 정답 후보 생성}{5}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}모델 외부 궤적 검증과 평가 지표}{5}{subsection.4.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces 쌍대 계약의 차선 변경 예. 장면, CoC 목표, 현재 간격 7.2 m 및 후보 A/B는 고정하고 최소 간격만 5.5 m에서 9.0 m로 바꾼다. 완화 계약에서는 즉시 차선 변경하는 후보 A가 허용되지만, 엄격 계약에서는 같은 후보가 최소 간격을 위반하므로 중단 후 재시도하는 후보 B를 선택한다.}}{6}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:pair}{{3}{6}{쌍대 계약의 차선 변경 예. 장면, CoC 목표, 현재 간격 7.2 m 및 후보 A/B는 고정하고 최소 간격만 5.5 m에서 9.0 m로 바꾼다. 완화 계약에서는 즉시 차선 변경하는 후보 A가 허용되지만, 엄격 계약에서는 같은 후보가 최소 간격을 위반하므로 중단 후 재시도하는 후보 B를 선택한다}{figure.caption.8}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces 시간 과제 후보를 행동 의미로 해석하는 방법. 행은 후보 문자가 아니라 실제 행동 역할이며, 열은 같은 장면에 적용한 짧은 대기(완화)와 긴 대기(엄격) 계약의 판정이다. 완화 계약은 짧은 대기 후 진입, 엄격 계약은 긴 대기 후 진입을 정답으로 만든다.}}{6}{table.caption.9}\protected@file@percent }
+\newlabel{tab:candidate-roles}{{4}{6}{시간 과제 후보를 행동 의미로 해석하는 방법. 행은 후보 문자가 아니라 실제 행동 역할이며, 열은 같은 장면에 적용한 짧은 대기(완화)와 긴 대기(엄격) 계약의 판정이다. 완화 계약은 짧은 대기 후 진입, 엄격 계약은 긴 대기 후 진입을 정답으로 만든다}{table.caption.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces 모델 외부 검증기의 판정값과 읽는 법. 검증기는 모델의 설명을 믿지 않고 선택된 후보의 저장 수치를 계약 경계와 직접 비교한다.}}{6}{table.caption.10}\protected@file@percent }
+\newlabel{tab:verifier-fields}{{5}{6}{모델 외부 검증기의 판정값과 읽는 법. 검증기는 모델의 설명을 믿지 않고 선택된 후보의 저장 수치를 계약 경계와 직접 비교한다}{table.caption.10}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces 표와 그림에 반복해서 사용하는 지표. 후보 정확도ㆍ가드 준수 목표 완료율ㆍ계약 쌍 정확도는 높을수록 좋고, 가드 위반률ㆍ교착률ㆍ과도한 보수 선택률은 낮을수록 좋다.}}{6}{table.caption.11}\protected@file@percent }
+\newlabel{tab:method-metrics}{{6}{6}{표와 그림에 반복해서 사용하는 지표. 후보 정확도ㆍ가드 준수 목표 완료율ㆍ계약 쌍 정확도는 높을수록 좋고, 가드 위반률ㆍ교착률ㆍ과도한 보수 선택률은 낮을수록 좋다}{table.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}학습된 가드 준수와 실제 실행 안전의 구분}{6}{subsection.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}실험 및 결과}{7}{section.5}\protected@file@percent }
+\newlabel{sec:experiments}{{5}{7}{실험 및 결과}{section.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{평가 이름을 읽는 법.}{7}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Alpamayo-R1 사전학습 상태 진단}{7}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{확인 목적.}{7}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{비교 방법.}{7}{section*.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{결과.}{7}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{의미.}{7}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}최소 가드-행동 학습과 초기 과제의 한계}{7}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{확인 목적.}{7}{section*.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{비교 방법.}{7}{section*.19}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Alpamayo-R1 사전 진단. 첫 막대 0.263 m는 문장을 추가했을 때 기본 CoC와 달라진 정도이므로 `추가 문장에 대한 반응'을 나타낸다. 두 번째 막대 0.008 m는 대기 가드와 반대 가드의 차이이므로 `반대 의미의 구별'을 나타낸다. 두 번째 값이 매우 작아 이 한 장면만으로 의미에 맞는 가드 준수를 확인할 수 없다.}}{8}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:r1-diagnostic}{{4}{8}{Alpamayo-R1 사전 진단. 첫 막대 0.263 m는 문장을 추가했을 때 기본 CoC와 달라진 정도이므로 `추가 문장에 대한 반응'을 나타낸다. 두 번째 막대 0.008 m는 대기 가드와 반대 가드의 차이이므로 `반대 의미의 구별'을 나타낸다. 두 번째 값이 매우 작아 이 한 장면만으로 의미에 맞는 가드 준수를 확인할 수 없다}{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {paragraph}{결과.}{8}{section*.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{의미.}{8}{section*.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}동일 목표를 달성하는 정적 궤적 후보}{8}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{확인 목적.}{8}{section*.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{비교 방법.}{8}{section*.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{결과.}{8}{section*.26}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{의미.}{8}{section*.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}정지-대기-해제-출발 시간 조건}{8}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{확인 목적.}{8}{section*.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{비교 방법.}{8}{section*.29}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces 실험 전체의 읽기 안내. 각 행은 연구 질문과 평가 설정, 핵심 비교, 주요 지표 및 증거의 범위를 요약한다. 서로 다른 모델ㆍ과제의 행 사이 수치를 직접 성능 순위로 비교하지 않는다.}}{9}{table.caption.22}\protected@file@percent }
+\newlabel{tab:suite}{{7}{9}{실험 전체의 읽기 안내. 각 행은 연구 질문과 평가 설정, 핵심 비교, 주요 지표 및 증거의 범위를 요약한다. 서로 다른 모델ㆍ과제의 행 사이 수치를 직접 성능 순위로 비교하지 않는다}{table.caption.22}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces 같은 행동 목표를 달성하는 정적 후보의 표준 평가. 후보 정확도와 계약 쌍 정확도는 높을수록 좋고, 가드 위반률과 과도한 보수 선택률은 낮을수록 좋다. 모든 조건의 목표 완료율이 1.000이므로 위반 감소가 목표 포기의 결과는 아니다. 모든 비율은 평가 예 144개를 분모로 한다.}}{9}{table.caption.25}\protected@file@percent }
+\newlabel{tab:static}{{8}{9}{같은 행동 목표를 달성하는 정적 후보의 표준 평가. 후보 정확도와 계약 쌍 정확도는 높을수록 좋고, 가드 위반률과 과도한 보수 선택률은 낮을수록 좋다. 모든 조건의 목표 완료율이 1.000이므로 위반 감소가 목표 포기의 결과는 아니다. 모든 비율은 평가 예 144개를 분모로 한다}{table.caption.25}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces 정지--대기--해제--출발 시간 과제의 표준 평가. 값은 세 난수 초기값 결과의 평균$\pm $모집단 표준편차다. 후보 정확도ㆍ계약 쌍 정확도와 가드 준수 목표 완료율은 높을수록 좋고, 가드 위반률과 교착률은 낮을수록 좋다.}}{9}{table.caption.30}\protected@file@percent }
+\newlabel{tab:temporal}{{9}{9}{정지--대기--해제--출발 시간 과제의 표준 평가. 값은 세 난수 초기값 결과의 평균$\pm $모집단 표준편차다. 후보 정확도ㆍ계약 쌍 정확도와 가드 준수 목표 완료율은 높을수록 좋고, 가드 위반률과 교착률은 낮을수록 좋다}{table.caption.30}{}}
+\@writefile{toc}{\contentsline {paragraph}{결과.}{9}{section*.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{의미.}{10}{section*.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}정지ㆍ차선 변경과 복합 표현 변화}{10}{subsection.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{확인 목적.}{10}{section*.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{비교 방법.}{10}{section*.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{결과.}{10}{section*.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{의미.}{10}{section*.38}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces 정지ㆍ차선 변경 과제의 표준 평가와 복합 표현 변화 평가. 값은 세 난수 초기값 결과의 평균$\pm $표본 표준편차다. `복합 표현 변화'에는 경계 등호, 부정ㆍ금지, 절 순서 변경 및 m--cm 단위 변환이 함께 포함된다. 단위 정규화 행은 저장 어댑터의 재평가 결과다.}}{11}{table.caption.35}\protected@file@percent }
+\newlabel{tab:maneuver}{{10}{11}{정지ㆍ차선 변경 과제의 표준 평가와 복합 표현 변화 평가. 값은 세 난수 초기값 결과의 평균$\pm $표본 표준편차다. `복합 표현 변화'에는 경계 등호, 부정ㆍ금지, 절 순서 변경 및 m--cm 단위 변환이 함께 포함된다. 단위 정규화 행은 저장 어댑터의 재평가 결과다}{table.caption.35}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces 저장 어댑터의 영상 절제 재평가. 각 셀은 `후보 정확도/계약 쌍 정확도' 순서의 세 난수 초기값 평균이다. 단색 영상은 시각 정보를 제거한다. 충돌 영상은 시간 과제에서 상충 구역이 비기 시작한 시각을 실제와 다르게 표시하고, 다중 주행 과제에서는 문장과 반대되는 행동 도식을 제시한다. 충돌 영상은 입력 전제를 바꾸므로 강건성 향상이 아니라 영상 의존성 진단으로만 읽는다.}}{11}{table.caption.37}\protected@file@percent }
+\newlabel{tab:image-ablation}{{11}{11}{저장 어댑터의 영상 절제 재평가. 각 셀은 `후보 정확도/계약 쌍 정확도' 순서의 세 난수 초기값 평균이다. 단색 영상은 시각 정보를 제거한다. 충돌 영상은 시간 과제에서 상충 구역이 비기 시작한 시각을 실제와 다르게 표시하고, 다중 주행 과제에서는 문장과 반대되는 행동 도식을 제시한다. 충돌 영상은 입력 전제를 바꾸므로 강건성 향상이 아니라 영상 의존성 진단으로만 읽는다}{table.caption.37}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}폐루프 보조 실험}{11}{subsection.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{확인 목적.}{11}{section*.40}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{비교 방법.}{11}{section*.41}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{결과.}{11}{section*.43}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces 입력 변화에 따른 성능. (a)는 제약 통합 CoC의 시간 과제를 비교한다. 빨간색 가드 위반률은 낮을수록, 초록색 가드 준수 목표 완료율과 파란색 계약 쌍 정확도는 높을수록 좋다. 표준 평가에서는 위반률 0.000, 나머지 두 지표 1.000이지만 동일 의미 문장 변형 평가에서 낮아지고, 미관측 시간값 평가에서 가장 크게 낮아진다. (b)는 정지ㆍ차선 변경 과제의 계약 쌍 정확도다. 파란색은 표준 평가, 주황색은 경계ㆍ부정ㆍ순서ㆍ단위 변화가 함께 든 복합 표현 변화 평가다. 기본 CoC와 대응 교란 통제군은 낮고 제약 통합 CoC만 두 평가에서 높은 값을 유지한다. (a)의 오차 막대는 모집단 표준편차이며 (b)의 표 값은 표본 표준편차를 사용한다.}}{12}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:temporal-pair}{{5}{12}{입력 변화에 따른 성능. (a)는 제약 통합 CoC의 시간 과제를 비교한다. 빨간색 가드 위반률은 낮을수록, 초록색 가드 준수 목표 완료율과 파란색 계약 쌍 정확도는 높을수록 좋다. 표준 평가에서는 위반률 0.000, 나머지 두 지표 1.000이지만 동일 의미 문장 변형 평가에서 낮아지고, 미관측 시간값 평가에서 가장 크게 낮아진다. (b)는 정지ㆍ차선 변경 과제의 계약 쌍 정확도다. 파란색은 표준 평가, 주황색은 경계ㆍ부정ㆍ순서ㆍ단위 변화가 함께 든 복합 표현 변화 평가다. 기본 CoC와 대응 교란 통제군은 낮고 제약 통합 CoC만 두 평가에서 높은 값을 유지한다. (a)의 오차 막대는 모집단 표준편차이며 (b)의 표 값은 표본 표준편차를 사용한다}{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces 폐루프 보조 실험. (a)의 빨간 막대는 가드 위반률, 주황 막대는 충돌률이며 둘 다 낮을수록 좋다. 출발 허용 뒤 위험이 다시 나타날 때 상태 전용과 상태+CoC는 약 0.47--0.49의 위반률을 보이고, 최신 동적 계약은 0.214, 계약+차단장치는 0.048로 낮춘다. 계약 정보가 0.4초 늦으면 다시 악화된다. (b)는 $t=0$ 출발 허용, $t=0.6$ ego 진입, $t=0.8$ 위험 재등장 순서와 다시 대기로 돌아가야 하는 이유를 보여준다. 미래정보 상한은 앞 상황을 완벽히 안다는 비현실적 참고값이다.}}{12}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:release-reversal}{{6}{12}{폐루프 보조 실험. (a)의 빨간 막대는 가드 위반률, 주황 막대는 충돌률이며 둘 다 낮을수록 좋다. 출발 허용 뒤 위험이 다시 나타날 때 상태 전용과 상태+CoC는 약 0.47--0.49의 위반률을 보이고, 최신 동적 계약은 0.214, 계약+차단장치는 0.048로 낮춘다. 계약 정보가 0.4초 늦으면 다시 악화된다. (b)는 $t=0$ 출발 허용, $t=0.6$ ego 진입, $t=0.8$ 위험 재등장 순서와 다시 대기로 돌아가야 하는 이유를 보여준다. 미래정보 상한은 앞 상황을 완벽히 안다는 비현실적 참고값이다}{figure.caption.42}{}}
+\@writefile{toc}{\contentsline {paragraph}{의미.}{12}{section*.45}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces 차단장치의 안전 이득과 개입 비용. 값은 세 난수 초기값 평균이며, 변화량은 차단장치가 없는 대응 계약 대비 차단장치 조건의 차이다. 모든 조건의 목표 완료율은 1.000이었다.}}{13}{table.caption.44}\protected@file@percent }
+\newlabel{tab:shield-cost}{{12}{13}{차단장치의 안전 이득과 개입 비용. 값은 세 난수 초기값 평균이며, 변화량은 차단장치가 없는 대응 계약 대비 차단장치 조건의 차이다. 모든 조건의 목표 완료율은 1.000이었다}{table.caption.44}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}논의와 연구 범위}{13}{section.6}\protected@file@percent }
+\newlabel{sec:discussion}{{6}{13}{논의와 연구 범위}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}기본 CoC와 실행 가드가 맡는 역할}{13}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}제약 통합 CoC가 높은 결과를 보인 이유}{13}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}수치 조건은 모델 외부 검증기가 다시 확인해야 한다}{13}{subsection.6.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces 자연어 실행 가드를 실제 검사에 연결하는 네 단계. 위에서 아래로 (1) 자연어 제약 통합 CoC를 읽고, (2) 조건 종류ㆍ비교 방향ㆍ값ㆍ단위ㆍ대체 행동으로 나누며, (3) 600 cm를 6.0 m처럼 기준 단위로 통일하고, (4) 모델 외부 검증기 또는 차단장치가 선택한 궤적의 거리ㆍ속도ㆍ시간을 수치 경계와 비교한다. 모델은 목표와 가드를 해석하고 결정적 검증기는 정확한 수치 판정을 담당한다.}}{14}{figure.caption.46}\protected@file@percent }
+\newlabel{fig:future-architecture}{{7}{14}{자연어 실행 가드를 실제 검사에 연결하는 네 단계. 위에서 아래로 (1) 자연어 제약 통합 CoC를 읽고, (2) 조건 종류ㆍ비교 방향ㆍ값ㆍ단위ㆍ대체 행동으로 나누며, (3) 600 cm를 6.0 m처럼 기준 단위로 통일하고, (4) 모델 외부 검증기 또는 차단장치가 선택한 궤적의 거리ㆍ속도ㆍ시간을 수치 경계와 비교한다. 모델은 목표와 가드를 해석하고 결정적 검증기는 정확한 수치 판정을 담당한다}{figure.caption.46}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}학습된 가드와 실행 차단장치는 역할이 다르다}{14}{subsection.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}주 실험이 실제로 확인한 것}{14}{subsection.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}결과를 해석할 때의 실험적 한계}{14}{subsection.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7}실제 제약 조건의 생성은 본 논문의 범위가 아니다}{15}{subsection.6.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8}Alpamayo-R1과 실제 도로로 확장할 때의 범위}{15}{subsection.6.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}결론}{15}{section.7}\protected@file@percent }
+\newlabel{sec:conclusion}{{7}{15}{결론}{section.7}{}}
+\bibstyle{unsrt}
+\bibdata{references}
+\bibcite{hu2023uniad}{1}
+\bibcite{jiang2023vad}{2}
+\bibcite{sima2024drivelm}{3}
+\bibcite{tian2024drivevlm}{4}
+\bibcite{wang2025alpamayo}{5}
+\bibcite{xie2025drivebench}{6}
+\bibcite{shalev2017rss}{7}
+\bibcite{katz2019marabou}{8}
+\bibcite{fremont2019scenic}{9}
+\bibcite{zhang2023cat}{10}
+\gdef \@abspage@last{16}

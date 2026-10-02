@@ -1,0 +1,7 @@
+{
+  "project_id": "sequential-coc-verification",
+  "source_run": "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001",
+  "source_results_sha256": "006942ce8ff18020278a7b5d702fd4ad3cd2f3f69a035870779215f6d9cac3c7",
+  "script_sha256": "b92b4b5c63654df0c67a0ec2b5fb68345f8d803fed743877a7d96aa78adb7cd9",
+  "purpose": "DIAGNOSTIC_TERMINAL_QUERY_NOT_NEW_TEST_SET"
+}

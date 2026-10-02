@@ -1,0 +1,1108 @@
+[
+  {
+    "duration_ms": 500,
+    "contract": {
+      "version": "supplied-temporal-eblc-profile-v0.1",
+      "subject": "ego",
+      "target": "pedestrian_conflict_zone",
+      "hold": "NO_ENTRY_WHILE_OCCUPIED",
+      "release_clear_ms": 500,
+      "time_unit": "ms",
+      "source_kind": "SUPPLIED_SYNTHETIC_RULE",
+      "assumption": "SINGLE_CLEAR_TRANSITION_NO_REOCCUPATION",
+      "source_refs": [
+        "Project01/temporal_guard_world.py::_guard",
+        "paper1-method-preservation-v0.1"
+      ]
+    },
+    "core": {
+      "grammar_version": "eblc-core-v0.1",
+      "model_id": "supplied_temporal_release",
+      "horizon": 2,
+      "source_refs": [
+        "Project01/temporal_guard_world.py::_guard",
+        "paper1-method-preservation-v0.1"
+      ],
+      "claim_scope": "SYNTHETIC_SINGLE_CLEAR_TRANSITION_NOT_VEHICLE_SAFETY",
+      "declarations": [
+        {
+          "name": "entry_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ]
+        },
+        {
+          "name": "clear_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ]
+        },
+        {
+          "name": "enters",
+          "sort": "BOOL",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": null,
+          "frame": null,
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ]
+        }
+      ],
+      "clauses": [
+        {
+          "id": "entry_release_gate",
+          "kind": "INVARIANT",
+          "enforcement": "INITIAL",
+          "formula": {
+            "op": "implies",
+            "left": {
+              "op": "var",
+              "name": "enters",
+              "offset": 0
+            },
+            "right": {
+              "op": "ge",
+              "left": {
+                "op": "var",
+                "name": "entry_ms",
+                "offset": 0
+              },
+              "right": {
+                "op": "add",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 500,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              }
+            }
+          },
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Integer millisecond entry gate after single clear transition."
+        }
+      ],
+      "queries": [
+        {
+          "id": "base_consistency",
+          "formula": {
+            "op": "literal",
+            "sort": "BOOL",
+            "value": true,
+            "enum_name": null,
+            "unit": null,
+            "frame": null
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Manuscript illustration, separate from learning evaluation"
+        },
+        {
+          "id": "before_release",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 11000,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 11499,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "UNSAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Manuscript illustration, separate from learning evaluation"
+        },
+        {
+          "id": "at_release",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 11000,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 11500,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Manuscript illustration, separate from learning evaluation"
+        },
+        {
+          "id": "after_release",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 11000,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 11501,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Manuscript illustration, separate from learning evaluation"
+        },
+        {
+          "id": "defer_entry",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 11000,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 11499,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Manuscript illustration, separate from learning evaluation"
+        },
+        {
+          "id": "symbolic_early_entry",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "var",
+                "name": "enters",
+                "offset": 0
+              },
+              {
+                "op": "lt",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "add",
+                  "left": {
+                    "op": "var",
+                    "name": "clear_ms",
+                    "offset": 0
+                  },
+                  "right": {
+                    "op": "literal",
+                    "sort": "INT",
+                    "value": 500,
+                    "enum_name": null,
+                    "unit": "1",
+                    "frame": null
+                  }
+                }
+              }
+            ]
+          },
+          "expected": "UNSAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Manuscript illustration, separate from learning evaluation"
+        }
+      ]
+    },
+    "cnl": "Do not enter the pedestrian conflict zone while it is occupied. Enter only after the zone has remained clear for at least 0.5 s.",
+    "checks": {
+      "model_id": "supplied_temporal_release",
+      "engine": "Z3_BOUNDED_SMT",
+      "z3_version": "5.0.0",
+      "grammar_version": "eblc-core-v0.1",
+      "compiler_version": "eblc-core-smt-compiler-v0.1",
+      "query_count": 6,
+      "matches_expected": 6,
+      "agreement": 1.0,
+      "results": [
+        {
+          "query_id": "base_consistency",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Manuscript illustration, separate from learning evaluation",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "supplied_temporal_release__entry_ms__const": -1,
+            "supplied_temporal_release__clear_ms__const": -500,
+            "supplied_temporal_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x23 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x23)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "before_release",
+          "classification": "EXAMPLE",
+          "expected": "UNSAT",
+          "status": "UNSAT",
+          "matches_expected": true,
+          "description": "Manuscript illustration, separate from learning evaluation",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": null,
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x23 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x23)))\n(assert\n (and (= 11000 supplied_temporal_release__clear_ms__const) (= 11499 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "at_release",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Manuscript illustration, separate from learning evaluation",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "supplied_temporal_release__entry_ms__const": 11500,
+            "supplied_temporal_release__clear_ms__const": 11000,
+            "supplied_temporal_release__enters__const": true
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x23 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x23)))\n(assert\n (and (= 11000 supplied_temporal_release__clear_ms__const) (= 11500 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "after_release",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Manuscript illustration, separate from learning evaluation",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "supplied_temporal_release__entry_ms__const": 11501,
+            "supplied_temporal_release__clear_ms__const": 11000,
+            "supplied_temporal_release__enters__const": true
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x23 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x23)))\n(assert\n (and (= 11000 supplied_temporal_release__clear_ms__const) (= 11501 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "defer_entry",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Manuscript illustration, separate from learning evaluation",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "supplied_temporal_release__entry_ms__const": 11499,
+            "supplied_temporal_release__clear_ms__const": 11000,
+            "supplied_temporal_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x23 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 500))))\n (=> supplied_temporal_release__enters__const $x23)))\n(assert\n (and (= 11000 supplied_temporal_release__clear_ms__const) (= 11499 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "symbolic_early_entry",
+          "classification": "EXAMPLE",
+          "expected": "UNSAT",
+          "status": "UNSAT",
+          "matches_expected": true,
+          "description": "Manuscript illustration, separate from learning evaluation",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": null,
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let ((?x20 (+ supplied_temporal_release__clear_ms__const 500)))\n (=> supplied_temporal_release__enters__const (>= supplied_temporal_release__entry_ms__const ?x20))))\n(assert\n (let ((?x20 (+ supplied_temporal_release__clear_ms__const 500)))\n(and supplied_temporal_release__enters__const (< supplied_temporal_release__entry_ms__const ?x20))))\n(check-sat)\n"
+        }
+      ]
+    }
+  },
+  {
+    "duration_ms": 1500,
+    "contract": {
+      "version": "supplied-temporal-eblc-profile-v0.1",
+      "subject": "ego",
+      "target": "pedestrian_conflict_zone",
+      "hold": "NO_ENTRY_WHILE_OCCUPIED",
+      "release_clear_ms": 1500,
+      "time_unit": "ms",
+      "source_kind": "SUPPLIED_SYNTHETIC_RULE",
+      "assumption": "SINGLE_CLEAR_TRANSITION_NO_REOCCUPATION",
+      "source_refs": [
+        "Project01/temporal_guard_world.py::_guard",
+        "paper1-method-preservation-v0.1"
+      ]
+    },
+    "core": {
+      "grammar_version": "eblc-core-v0.1",
+      "model_id": "supplied_temporal_release",
+      "horizon": 2,
+      "source_refs": [
+        "Project01/temporal_guard_world.py::_guard",
+        "paper1-method-preservation-v0.1"
+      ],
+      "claim_scope": "SYNTHETIC_SINGLE_CLEAR_TRANSITION_NOT_VEHICLE_SAFETY",
+      "declarations": [
+        {
+          "name": "entry_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ]
+        },
+        {
+          "name": "clear_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ]
+        },
+        {
+          "name": "enters",
+          "sort": "BOOL",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": null,
+          "frame": null,
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ]
+        }
+      ],
+      "clauses": [
+        {
+          "id": "entry_release_gate",
+          "kind": "INVARIANT",
+          "enforcement": "INITIAL",
+          "formula": {
+            "op": "implies",
+            "left": {
+              "op": "var",
+              "name": "enters",
+              "offset": 0
+            },
+            "right": {
+              "op": "ge",
+              "left": {
+                "op": "var",
+                "name": "entry_ms",
+                "offset": 0
+              },
+              "right": {
+                "op": "add",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 1500,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              }
+            }
+          },
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Integer millisecond entry gate after single clear transition."
+        }
+      ],
+      "queries": [
+        {
+          "id": "base_consistency",
+          "formula": {
+            "op": "literal",
+            "sort": "BOOL",
+            "value": true,
+            "enum_name": null,
+            "unit": null,
+            "frame": null
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Manuscript illustration, separate from learning evaluation"
+        },
+        {
+          "id": "before_release",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 11000,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 12499,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "UNSAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Manuscript illustration, separate from learning evaluation"
+        },
+        {
+          "id": "at_release",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 11000,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 12500,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Manuscript illustration, separate from learning evaluation"
+        },
+        {
+          "id": "after_release",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 11000,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 12501,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": true,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Manuscript illustration, separate from learning evaluation"
+        },
+        {
+          "id": "defer_entry",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 11000,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 12499,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              },
+              {
+                "op": "eq",
+                "left": {
+                  "op": "var",
+                  "name": "enters",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "BOOL",
+                  "value": false,
+                  "enum_name": null,
+                  "unit": null,
+                  "frame": null
+                }
+              }
+            ]
+          },
+          "expected": "SAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Manuscript illustration, separate from learning evaluation"
+        },
+        {
+          "id": "symbolic_early_entry",
+          "formula": {
+            "op": "and",
+            "args": [
+              {
+                "op": "var",
+                "name": "enters",
+                "offset": 0
+              },
+              {
+                "op": "lt",
+                "left": {
+                  "op": "var",
+                  "name": "entry_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "add",
+                  "left": {
+                    "op": "var",
+                    "name": "clear_ms",
+                    "offset": 0
+                  },
+                  "right": {
+                    "op": "literal",
+                    "sort": "INT",
+                    "value": 1500,
+                    "enum_name": null,
+                    "unit": "1",
+                    "frame": null
+                  }
+                }
+              }
+            ]
+          },
+          "expected": "UNSAT",
+          "classification": "EXAMPLE",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Manuscript illustration, separate from learning evaluation"
+        }
+      ]
+    },
+    "cnl": "Do not enter the pedestrian conflict zone while it is occupied. Enter only after the zone has remained clear for at least 1.5 s.",
+    "checks": {
+      "model_id": "supplied_temporal_release",
+      "engine": "Z3_BOUNDED_SMT",
+      "z3_version": "5.0.0",
+      "grammar_version": "eblc-core-v0.1",
+      "compiler_version": "eblc-core-smt-compiler-v0.1",
+      "query_count": 6,
+      "matches_expected": 6,
+      "agreement": 1.0,
+      "results": [
+        {
+          "query_id": "base_consistency",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Manuscript illustration, separate from learning evaluation",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "supplied_temporal_release__entry_ms__const": -1,
+            "supplied_temporal_release__clear_ms__const": -1500,
+            "supplied_temporal_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x44 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x44)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "before_release",
+          "classification": "EXAMPLE",
+          "expected": "UNSAT",
+          "status": "UNSAT",
+          "matches_expected": true,
+          "description": "Manuscript illustration, separate from learning evaluation",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": null,
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x44 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x44)))\n(assert\n (and (= 11000 supplied_temporal_release__clear_ms__const) (= 12499 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "at_release",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Manuscript illustration, separate from learning evaluation",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "supplied_temporal_release__entry_ms__const": 12500,
+            "supplied_temporal_release__clear_ms__const": 11000,
+            "supplied_temporal_release__enters__const": true
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x44 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x44)))\n(assert\n (and (= 11000 supplied_temporal_release__clear_ms__const) (= 12500 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "after_release",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Manuscript illustration, separate from learning evaluation",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "supplied_temporal_release__entry_ms__const": 12501,
+            "supplied_temporal_release__clear_ms__const": 11000,
+            "supplied_temporal_release__enters__const": true
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x44 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x44)))\n(assert\n (and (= 11000 supplied_temporal_release__clear_ms__const) (= 12501 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const true)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "defer_entry",
+          "classification": "EXAMPLE",
+          "expected": "SAT",
+          "status": "SAT",
+          "matches_expected": true,
+          "description": "Manuscript illustration, separate from learning evaluation",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": {
+            "supplied_temporal_release__entry_ms__const": 12499,
+            "supplied_temporal_release__clear_ms__const": 11000,
+            "supplied_temporal_release__enters__const": false
+          },
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let (($x44 (>= supplied_temporal_release__entry_ms__const (+ supplied_temporal_release__clear_ms__const 1500))))\n (=> supplied_temporal_release__enters__const $x44)))\n(assert\n (and (= 11000 supplied_temporal_release__clear_ms__const) (= 12499 supplied_temporal_release__entry_ms__const) (= supplied_temporal_release__enters__const false)))\n(check-sat)\n"
+        },
+        {
+          "query_id": "symbolic_early_entry",
+          "classification": "EXAMPLE",
+          "expected": "UNSAT",
+          "status": "UNSAT",
+          "matches_expected": true,
+          "description": "Manuscript illustration, separate from learning evaluation",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "definedness_constraint_count": 0,
+          "witness": null,
+          "reason_unknown": null,
+          "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun supplied_temporal_release__clear_ms__const () Int)\n(declare-fun supplied_temporal_release__entry_ms__const () Int)\n(declare-fun supplied_temporal_release__enters__const () Bool)\n(assert\n (let ((?x43 (+ supplied_temporal_release__clear_ms__const 1500)))\n (=> supplied_temporal_release__enters__const (>= supplied_temporal_release__entry_ms__const ?x43))))\n(assert\n (let ((?x43 (+ supplied_temporal_release__clear_ms__const 1500)))\n(and supplied_temporal_release__enters__const (< supplied_temporal_release__entry_ms__const ?x43))))\n(check-sat)\n"
+        }
+      ]
+    }
+  }
+]

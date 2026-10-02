@@ -1,0 +1,22 @@
+{
+  "project_id": "guardsynth-coc",
+  "input_hashes": {
+    "projects/04-guardsynth-coc/paper/main.tex": "fd70c1293cec7b5727e95b32029a3ed31f11dff842f86b917c45236860ecd218",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-analysis-2026-09-29-001/RUN_MANIFEST.json": "1f7fbcd3f6f8e3ab63c6760260c694306de0ffe481114731601df841735f7c3a",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-protocol-2026-09-29-001/RUN_MANIFEST.json": "47bf158907b1cb7af352230fe2b99825945ef1d9a70af898563ffbc8ac16489b"
+  },
+  "output_hashes": {
+    "storyboards.pdf": "7bd4e2eb10aff784228e441ce2b9a33eec28fb58555fa864aacd5ea3bad77103",
+    "storyboards.png": "29c0729fbbf6a695d5356962f57c11aa0085c4ed28a3579b9962955bc7df9e7f",
+    "main.tex": "fd70c1293cec7b5727e95b32029a3ed31f11dff842f86b917c45236860ecd218",
+    "main.log": "dcbddcd78271ea990f9ffa1df2c1198b4c796531fc23070d40b20bc667891649",
+    "main.aux": "6db2617d87f1453e9bbbf0c478566467a280f6468144f5dad0954c577cb37efc",
+    "main.out": "261e50d9a3fe43ceb069f66e15c83f884320fbc8d3c0e8b9e9fcd058f10242d1",
+    "main.pdf": "5c17249ca6ad1dc4fb41dc27ac6f30fb4a6884f430364acef0cf5164d61c4736",
+    "RESULT.json": "686b3de5757b0f416c2ed5fe0b8fdc78c4340685aedfc1066856dc239cb45327",
+    "source_snapshot/temporal_preservation.py": "9882832b2a56468d5e156c1c98fac22eef0edb278347a01a0b3e2e85a621c763",
+    "source_snapshot/train_temporal_preservation.py": "c2522303f94fc59f0688a160f739382f9479bd8d943a056c87b74fea41308000",
+    "source_snapshot/analyze_temporal_preservation.py": "0686cfa8459be21a51097dc882b028ee0b0aca8c46c7845239865e184a85b629",
+    "source_snapshot/temporal_preservation_config.json": "44bd1db3726357523b5af8744bf8ba1e21b8f9bd89e481d99791de648567767f"
+  }
+}

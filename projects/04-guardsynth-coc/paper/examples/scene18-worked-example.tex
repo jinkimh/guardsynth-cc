@@ -1,0 +1,75 @@
+% Owner: guardsynth-coc. Methods illustration, not an empirical success case.
+% Requires amsmath, booktabs and hyperref. No restricted imagery is embedded here.
+\subsection{Worked illustration: from a driving reason to conditional supervision}
+\label{sec:scene18-worked-example}
+
+A development clip provides the original CoC, ``Yield to the traffic on the main
+road and keep a safe distance from the pedestrian crossing the road.''
+At the associated event time (9.788430\,s), the CASCADE annotation links an ego
+yield action to a walking pedestrian candidate, \texttt{Agent3}. Existing human
+review describes a visible hazard over an adjacent time window; it does not
+establish an event-time collision predicate. Article~21 of the 1968 Convention
+on Road Traffic supplies a pedestrian-protection reference, not an automatic
+scene-level legal determination.\footnote{UNECE, Convention on Road Traffic,
+Article~21: \url{https://unece.org/DAM/trans/conventn/Conv_road_traffic_EN.pdf}.}
+Main-road priority remains a separately conditioned obligation, not a conclusion
+derived from that article.
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.18\linewidth}p{0.77\linewidth}@{}}
+\toprule
+Stage & Illustration and evidence boundary \\
+\midrule
+Inputs & Original CoC, event-linked scene, structured actor annotation,
+prior review and a normative reference. \\
+Candidate & Conditional prohibition of conflict-zone entry; target identity,
+zone binding and event-time truth remain unresolved. \\
+Specification & Manually authored EBLC-structured design and its direct logical
+encoding; not an accepted executable EBLC program. \\
+CNL & Clause-aligned, manually authored sentences assembled deterministically;
+independent semantic fidelity remains pending. \\
+Supervision & Original CoC plus CNL in the assistant target, with common visual
+input and an independent action label; the present label is null and export is blocked. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Let $p_t,r_t\in\{T,F,U,C\}$ denote pedestrian conflict and a main-road yielding
+obligation, with symbolic evidence-validity inputs $v^p_t,v^r_t$. Define
+$o_t=v^p_t\land(p_t=T)$ and $c_t=v^p_t\land(p_t=F)$. For activation $a_t$
+and zone-entry action $e_t$, the illustrative policy is
+\begin{align}
+ a_t &= \begin{cases}
+ T & o_t,\\
+ F & c_t,\\
+ a_{t-1} & \text{otherwise},
+ \end{cases} \\
+ a_t &\Rightarrow \neg e_t, \qquad
+ (v^r_t\land r_t=T)\Rightarrow\neg e_t.
+\end{align}
+The prior state $a_{-1}$ is a free input. These lifecycle and action choices are
+research design assumptions, not measured scene facts or verbatim treaty rules.
+
+Z3~4.16.0 checked the manual encoding over three abstract decisions. All eleven
+query premises were satisfiable. Confirmed-conflict entry, unsupported release
+of a live obligation, and entry against a confirmed independent yield obligation
+were UNSAT; an all-clear entry scenario was SAT. Importantly, entry remained SAT
+with an initially inactive pedestrian obligation and UNKNOWN evidence, and with
+an UNKNOWN main-road obligation. A review flag alone did not prohibit entry.
+Removing the entry prohibition also exposed a violating SAT model. The example
+therefore reveals policy gaps rather than reporting a complete safety proof.
+
+The corresponding CNL includes ``While the pedestrian obligation is active,
+do not enter the conflict zone,'' together with explicit evidence, retention,
+release, reactivation, review and independent-obligation clauses. It must preserve
+the policy gaps instead of silently repairing them during rendering. The intended
+supervision layout is
+\begin{gather*}
+ \text{Model input: past/present visual input + common question/actions}\\
+ \longmapsto\quad\text{Assistant target: CoC + CNL + independent action label}.
+\end{gather*}
+No gold CNL is supplied at evaluation. This worked illustration is not automatic
+constraint extraction, production EBLC compilation, independently validated CNL,
+or real-scene training/effect evidence. The unresolved policy, binding and action
+gold prevent its export as a validated training example.

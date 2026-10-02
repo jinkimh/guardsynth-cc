@@ -1,0 +1,16 @@
+{
+  "requirement_version": "guardsynth-simulated-corridor-requirement-v0.1",
+  "evidence_id": "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+  "rule_id": "GS-SIM-PED-CORRIDOR-001",
+  "predicate_id": "geometric_pedestrian_corridor_overlap",
+  "scope": "SIMULATED_LONGITUDINAL_PEDESTRIAN_CORRIDOR_SLICE",
+  "activation": "source-linked pedestrian oriented box overlaps the ego corridor",
+  "invariant": "ego front does not pass the sourced dynamic corridor entry while active",
+  "stop_margin_m": 1.5,
+  "release_clear_frames": 2,
+  "fallback": "HOLD_PRIOR_LIVE_OBLIGATION_ON_FRESH_UNKNOWN",
+  "fallback_approved": true,
+  "coordinate_frame": "dataset_rig",
+  "maximum_age_s": 0.2,
+  "claim_boundary": "SYSTEM_REQUIREMENT_FOR_SIMULATION_NOT_LEGAL_INTERPRETATION_OR_REAL_VEHICLE_SAFETY"
+}

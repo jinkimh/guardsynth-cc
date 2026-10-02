@@ -1,0 +1,399 @@
+{
+  "project_id": "safety-constrained-coc",
+  "version": "V01",
+  "execution_scope": "Synthetic scene, prompt and oracle-label generation only; no model inference or training.",
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "pillow": "12.3.0"
+  },
+  "source_sha256": {
+    "projects/01-safety-constrained-coc/experiments/vlm_guard_learning/temporal_guard_world.py": "ff6aff71aeee645fd05fef6fda4972f7545288d5c264560507c79040c8efc16d",
+    "projects/01-safety-constrained-coc/experiments/vlm_guard_learning/maneuver_guard_world.py": "0a63e79abbbd4107dea2774f7c7350c429735cad38b7cdf48fde5c965ac87264",
+    "projects/01-safety-constrained-coc/experiments/vlm_guard_learning/train_qwen_temporal_guard_lora.py": "d8f30afb45c6caeb1f937a01e16ab8e32030ae72a89f97effebb2a94b400c207",
+    "projects/01-safety-constrained-coc/paper/patents/build_coc_supplement.py": "b612c9d2a6f2623c30758be344793f6c265b25dc1c37db4e8e3cb07474678a47",
+    "projects/01-safety-constrained-coc/paper/patents/COC_GENERATION_USAGE_SUPPLEMENT_V01.md": "dc4dcaac634f7c8cbd8f6453b2f66156ce726bb16f124505df81a7a1c596c03c"
+  },
+  "records": [
+    {
+      "task": "temporal",
+      "generation": {
+        "num_scenes": 4,
+        "seed": 42,
+        "split": "train"
+      },
+      "mode": "RICH_COC",
+      "example": {
+        "scene": {
+          "scene_id": 2,
+          "clear_time": 3.0,
+          "visual_seed": 4200320,
+          "candidates": [
+            {
+              "label": "A",
+              "entry_time": 2.5,
+              "progress": 110.0,
+              "role": "premature"
+            },
+            {
+              "label": "B",
+              "entry_time": 3.5,
+              "progress": 100.0,
+              "role": "short_wait"
+            },
+            {
+              "label": "C",
+              "entry_time": 4.5,
+              "progress": 85.0,
+              "role": "long_wait"
+            },
+            {
+              "label": "D",
+              "entry_time": null,
+              "progress": 0.0,
+              "role": "deadlock"
+            }
+          ]
+        },
+        "required_clear_duration": 0.5,
+        "contract_level": "short",
+        "guard_text": "Do not enter while the pedestrian conflict zone is occupied. After it becomes clear, remain stopped for at least 0.5 s before entering.",
+        "rich_coc_text": "Yield to the crossing pedestrian, then proceed through the intersection. Do not enter while the pedestrian conflict zone is occupied. After it becomes clear, remain stopped for at least 0.5 s before entering.",
+        "logic_guard_text": "INVARIANT occupied(conflict_zone) -> ego_before_stop_line; RELEASE clear_duration_s >= 0.5; FALLBACK uncertain(occupancy) -> HOLD",
+        "target": "B",
+        "split": "train"
+      },
+      "prompt": "Requirement CoC: Yield to the crossing pedestrian, then proceed through the intersection. Do not enter while the pedestrian conflict zone is occupied. After it becomes clear, remain stopped for at least 0.5 s before entering.\nCandidate A: enters the intersection at t=2.5 s and completes the route; route progress 110.0 m.\nCandidate B: enters the intersection at t=3.5 s and completes the route; route progress 100.0 m.\nCandidate C: enters the intersection at t=4.5 s and completes the route; route progress 85.0 m.\nCandidate D: remains stopped through the horizon; route progress 0 m.\nThe storyboard is ordered by time and shows when the conflict zone becomes clear. Select the admissible candidate with greatest route progress. Answer exactly A, B, C, or D.",
+      "assistant_target": "B",
+      "candidate_verdicts": [
+        {
+          "label": "A",
+          "guard_nonviolating": false,
+          "goal_complete": true,
+          "jointly_satisfying": false,
+          "progress_m": 110.0
+        },
+        {
+          "label": "B",
+          "guard_nonviolating": true,
+          "goal_complete": true,
+          "jointly_satisfying": true,
+          "progress_m": 100.0
+        },
+        {
+          "label": "C",
+          "guard_nonviolating": true,
+          "goal_complete": true,
+          "jointly_satisfying": true,
+          "progress_m": 85.0
+        },
+        {
+          "label": "D",
+          "guard_nonviolating": true,
+          "goal_complete": false,
+          "jointly_satisfying": false,
+          "progress_m": 0.0
+        }
+      ],
+      "image_size": [
+        224,
+        224
+      ],
+      "image_rgb_sha256": "e80af4e7d3c6ca6acd49044e44633a849c6bbf4c467e9f0ec510d2426d5a4a89",
+      "joint_goal_guard_target": "B"
+    },
+    {
+      "task": "temporal",
+      "generation": {
+        "num_scenes": 4,
+        "seed": 42,
+        "split": "train"
+      },
+      "mode": "RICH_COC",
+      "example": {
+        "scene": {
+          "scene_id": 2,
+          "clear_time": 3.0,
+          "visual_seed": 4200320,
+          "candidates": [
+            {
+              "label": "A",
+              "entry_time": 2.5,
+              "progress": 110.0,
+              "role": "premature"
+            },
+            {
+              "label": "B",
+              "entry_time": 3.5,
+              "progress": 100.0,
+              "role": "short_wait"
+            },
+            {
+              "label": "C",
+              "entry_time": 4.5,
+              "progress": 85.0,
+              "role": "long_wait"
+            },
+            {
+              "label": "D",
+              "entry_time": null,
+              "progress": 0.0,
+              "role": "deadlock"
+            }
+          ]
+        },
+        "required_clear_duration": 1.5,
+        "contract_level": "long",
+        "guard_text": "Do not enter while the pedestrian conflict zone is occupied. After it becomes clear, remain stopped for at least 1.5 s before entering.",
+        "rich_coc_text": "Yield to the crossing pedestrian, then proceed through the intersection. Do not enter while the pedestrian conflict zone is occupied. After it becomes clear, remain stopped for at least 1.5 s before entering.",
+        "logic_guard_text": "INVARIANT occupied(conflict_zone) -> ego_before_stop_line; RELEASE clear_duration_s >= 1.5; FALLBACK uncertain(occupancy) -> HOLD",
+        "target": "C",
+        "split": "train"
+      },
+      "prompt": "Requirement CoC: Yield to the crossing pedestrian, then proceed through the intersection. Do not enter while the pedestrian conflict zone is occupied. After it becomes clear, remain stopped for at least 1.5 s before entering.\nCandidate A: enters the intersection at t=2.5 s and completes the route; route progress 110.0 m.\nCandidate B: enters the intersection at t=3.5 s and completes the route; route progress 100.0 m.\nCandidate C: enters the intersection at t=4.5 s and completes the route; route progress 85.0 m.\nCandidate D: remains stopped through the horizon; route progress 0 m.\nThe storyboard is ordered by time and shows when the conflict zone becomes clear. Select the admissible candidate with greatest route progress. Answer exactly A, B, C, or D.",
+      "assistant_target": "C",
+      "candidate_verdicts": [
+        {
+          "label": "A",
+          "guard_nonviolating": false,
+          "goal_complete": true,
+          "jointly_satisfying": false,
+          "progress_m": 110.0
+        },
+        {
+          "label": "B",
+          "guard_nonviolating": false,
+          "goal_complete": true,
+          "jointly_satisfying": false,
+          "progress_m": 100.0
+        },
+        {
+          "label": "C",
+          "guard_nonviolating": true,
+          "goal_complete": true,
+          "jointly_satisfying": true,
+          "progress_m": 85.0
+        },
+        {
+          "label": "D",
+          "guard_nonviolating": true,
+          "goal_complete": false,
+          "jointly_satisfying": false,
+          "progress_m": 0.0
+        }
+      ],
+      "image_size": [
+        224,
+        224
+      ],
+      "image_rgb_sha256": "e80af4e7d3c6ca6acd49044e44633a849c6bbf4c467e9f0ec510d2426d5a4a89",
+      "joint_goal_guard_target": "C"
+    },
+    {
+      "task": "lane_change",
+      "generation": {
+        "num_scenes": 4,
+        "seed": 42,
+        "split": "train"
+      },
+      "mode": "INLINE_CONSTRAINT",
+      "example": {
+        "scene": {
+          "scene_id": 1,
+          "maneuver": "lane_change",
+          "visual_seed": 4200223,
+          "candidates": [
+            {
+              "label": "D",
+              "role": "unsafe_continue",
+              "progress": 110.0,
+              "goal_complete": true,
+              "stop_offset_m": null,
+              "peak_decel": null,
+              "peak_jerk": null,
+              "min_gap_m": 2.0
+            },
+            {
+              "label": "A",
+              "role": "early_continue",
+              "progress": 100.0,
+              "goal_complete": true,
+              "stop_offset_m": null,
+              "peak_decel": null,
+              "peak_jerk": null,
+              "min_gap_m": 5.7
+            },
+            {
+              "label": "B",
+              "role": "abort_then_retry",
+              "progress": 85.0,
+              "goal_complete": true,
+              "stop_offset_m": null,
+              "peak_decel": null,
+              "peak_jerk": null,
+              "min_gap_m": 12.3
+            },
+            {
+              "label": "C",
+              "role": "abort_deadlock",
+              "progress": 0.0,
+              "goal_complete": false,
+              "stop_offset_m": null,
+              "peak_decel": null,
+              "peak_jerk": null,
+              "min_gap_m": null
+            }
+          ]
+        },
+        "contract_level": "permissive",
+        "constraint_text": "Maintain a gap of at least 5.2 m during the lane change. If the gap drops below this bound, abort and retry only after it is restored.",
+        "target": "A",
+        "split": "train",
+        "max_decel": null,
+        "max_jerk": null,
+        "min_gap": 5.2
+      },
+      "prompt": "Requirement CoC: Change to the left lane and continue along the route. Maintain a gap of at least 5.2 m during the lane change. If the gap drops below this bound, abort and retry only after it is restored.\nCandidate A: early continue and eventually completes the lane change; minimum gap 5.7 m; route progress 100.0 m.\nCandidate B: abort then retry and eventually completes the lane change; minimum gap 12.3 m; route progress 85.0 m.\nCandidate C: aborts and remains stopped; lane-change goal not completed; route progress 0 m.\nCandidate D: unsafe continue and eventually completes the lane change; minimum gap 2.0 m; route progress 110.0 m.\nSelect the admissible goal-completing candidate with greatest route progress. Answer exactly A, B, C, or D.",
+      "assistant_target": "A",
+      "candidate_verdicts": [
+        {
+          "label": "A",
+          "guard_nonviolating": true,
+          "goal_complete": true,
+          "jointly_satisfying": true,
+          "progress_m": 100.0
+        },
+        {
+          "label": "B",
+          "guard_nonviolating": true,
+          "goal_complete": true,
+          "jointly_satisfying": true,
+          "progress_m": 85.0
+        },
+        {
+          "label": "C",
+          "guard_nonviolating": true,
+          "goal_complete": false,
+          "jointly_satisfying": false,
+          "progress_m": 0.0
+        },
+        {
+          "label": "D",
+          "guard_nonviolating": false,
+          "goal_complete": true,
+          "jointly_satisfying": false,
+          "progress_m": 110.0
+        }
+      ],
+      "image_size": [
+        224,
+        224
+      ],
+      "image_rgb_sha256": "3d2b3fc46ee8adbf8e317b20918063d4fc844ab31cbd45e103fe36e6846be930",
+      "joint_goal_guard_target": "A"
+    },
+    {
+      "task": "lane_change",
+      "generation": {
+        "num_scenes": 4,
+        "seed": 42,
+        "split": "train"
+      },
+      "mode": "INLINE_CONSTRAINT",
+      "example": {
+        "scene": {
+          "scene_id": 1,
+          "maneuver": "lane_change",
+          "visual_seed": 4200223,
+          "candidates": [
+            {
+              "label": "D",
+              "role": "unsafe_continue",
+              "progress": 110.0,
+              "goal_complete": true,
+              "stop_offset_m": null,
+              "peak_decel": null,
+              "peak_jerk": null,
+              "min_gap_m": 2.0
+            },
+            {
+              "label": "A",
+              "role": "early_continue",
+              "progress": 100.0,
+              "goal_complete": true,
+              "stop_offset_m": null,
+              "peak_decel": null,
+              "peak_jerk": null,
+              "min_gap_m": 5.7
+            },
+            {
+              "label": "B",
+              "role": "abort_then_retry",
+              "progress": 85.0,
+              "goal_complete": true,
+              "stop_offset_m": null,
+              "peak_decel": null,
+              "peak_jerk": null,
+              "min_gap_m": 12.3
+            },
+            {
+              "label": "C",
+              "role": "abort_deadlock",
+              "progress": 0.0,
+              "goal_complete": false,
+              "stop_offset_m": null,
+              "peak_decel": null,
+              "peak_jerk": null,
+              "min_gap_m": null
+            }
+          ]
+        },
+        "contract_level": "restrictive",
+        "constraint_text": "Maintain a gap of at least 9.0 m during the lane change. If the gap drops below this bound, abort and retry only after it is restored.",
+        "target": "B",
+        "split": "train",
+        "max_decel": null,
+        "max_jerk": null,
+        "min_gap": 9.0
+      },
+      "prompt": "Requirement CoC: Change to the left lane and continue along the route. Maintain a gap of at least 9.0 m during the lane change. If the gap drops below this bound, abort and retry only after it is restored.\nCandidate A: early continue and eventually completes the lane change; minimum gap 5.7 m; route progress 100.0 m.\nCandidate B: abort then retry and eventually completes the lane change; minimum gap 12.3 m; route progress 85.0 m.\nCandidate C: aborts and remains stopped; lane-change goal not completed; route progress 0 m.\nCandidate D: unsafe continue and eventually completes the lane change; minimum gap 2.0 m; route progress 110.0 m.\nSelect the admissible goal-completing candidate with greatest route progress. Answer exactly A, B, C, or D.",
+      "assistant_target": "B",
+      "candidate_verdicts": [
+        {
+          "label": "A",
+          "guard_nonviolating": false,
+          "goal_complete": true,
+          "jointly_satisfying": false,
+          "progress_m": 100.0
+        },
+        {
+          "label": "B",
+          "guard_nonviolating": true,
+          "goal_complete": true,
+          "jointly_satisfying": true,
+          "progress_m": 85.0
+        },
+        {
+          "label": "C",
+          "guard_nonviolating": true,
+          "goal_complete": false,
+          "jointly_satisfying": false,
+          "progress_m": 0.0
+        },
+        {
+          "label": "D",
+          "guard_nonviolating": false,
+          "goal_complete": true,
+          "jointly_satisfying": false,
+          "progress_m": 110.0
+        }
+      ],
+      "image_size": [
+        224,
+        224
+      ],
+      "image_rgb_sha256": "3d2b3fc46ee8adbf8e317b20918063d4fc844ab31cbd45e103fe36e6846be930",
+      "joint_goal_guard_target": "B"
+    }
+  ]
+}

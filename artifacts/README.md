@@ -1,9 +1,15 @@
 # Generated artifacts
 
-- `intermediate/`: regenerable compiler exports, generated models, temporary indexes, and dry-run products
-- `results/public/`: publishable synthetic and baseline run results
-- `results/restricted/`: access-controlled model/data-derived run results
+New output is owner-scoped:
 
-Experiment source code must not be added here. Every final run is stored under
-`results/<class>/<experiment-id>/<run-id>/` and must include a manifest. Existing result
-directories are immutable; use a new run ID for reruns.
+```text
+projects/<project-id>/<public|restricted|intermediate>/<experiment-id>/<run-id>/
+platforms/<platform-id>/<public|restricted|intermediate>/<experiment-id>/<run-id>/
+```
+
+Maintained source code never belongs here. Final runs are immutable and must include their run
+manifest and result record; reruns use a new run ID.
+
+`results/` and `intermediate/` are immutable pre-v3 history. They remain in place because moving
+them would invalidate manifests and embedded reproduction paths. Their current owner mapping is
+recorded in [`LEGACY_OWNERSHIP.json`](LEGACY_OWNERSHIP.json); no new run may be written there.

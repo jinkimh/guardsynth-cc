@@ -1,0 +1,22 @@
+{
+  "project_id": "safety-constrained-coc",
+  "pdf_build": "passed",
+  "scope_check": "8 text edits; original tables, numerical results, figures and bibliography preserved",
+  "pdf_validation": "no missing glyphs, unresolved references, overfull boxes or text beyond page bounds",
+  "visual_review": "manuscript revision page and all response pages inspected",
+  "revision_color": "only current revision blue; first-round revision macros and direct color settings render black",
+  "font_note": "existing manuscript math-size and italic substitutions retained",
+  "file_naming": "repository-wide check reports 5 pre-existing violations; no task-path violation",
+  "deliverables": {
+    "main": {
+      "pages": 16,
+      "sha256": "35ab01607e078b3025dd85faf8032a26ea67f4c401d9f976690e7d917115edff",
+      "bytes": 801839
+    },
+    "response-to-reviewer-1": {
+      "pages": 4,
+      "sha256": "d96ef9a163b30c9661886cfd7b0cdbe15ce235b0bcd67efc7c7fd7c39d6f89f5",
+      "bytes": 122951
+    }
+  }
+}

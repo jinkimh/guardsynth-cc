@@ -1,0 +1,6 @@
+{
+  "status": "PROTOCOL_FROZEN_BEFORE_TRAINING",
+  "planned_fits": 18,
+  "planned_predictions": 17280,
+  "optimizer_updates": 0
+}

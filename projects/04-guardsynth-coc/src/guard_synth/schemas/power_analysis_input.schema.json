@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GuardSynth main-study power planning record v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "planning_version", "paired_effect_estimate", "paired_effect_variance",
+    "cluster_size", "intraclass_correlation", "effect_source_ref",
+    "variance_source_ref", "design_effect", "alpha", "power", "required_scene_count",
+    "method", "claim_scope"
+  ],
+  "properties": {
+    "planning_version": {"const": "guardsynth-power-planning-v0.1"},
+    "paired_effect_estimate": {"type": "number"},
+    "paired_effect_variance": {"type": "number", "minimum": 0},
+    "cluster_size": {"type": "integer", "minimum": 1},
+    "intraclass_correlation": {"type": "number", "minimum": 0},
+    "effect_source_ref": {"type": "string", "minLength": 1},
+    "variance_source_ref": {"type": "string", "minLength": 1},
+    "design_effect": {"type": "number", "minimum": 1},
+    "alpha": {"const": 0.05},
+    "power": {"const": 0.8},
+    "required_scene_count": {"type": "integer", "minimum": 2},
+    "method": {"const": "PAIRED_NORMAL_APPROXIMATION_WITH_CLUSTER_DESIGN_EFFECT"},
+    "claim_scope": {"type": "string", "minLength": 1}
+  }
+}

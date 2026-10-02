@@ -1,0 +1,44 @@
+\section{관련 연구}
+\label{sec:related}
+
+\subsection{CoC 충실도와 행동 인과성}
+추론 보강형 자율주행 연구는 판단 근거와 행동 출력을 함께 생성함으로써 모델의 의사결정을 검토 가능한 형태로 제시한다. DriveLM은 인지, 예측, 계획에 걸친 그래프형 질의응답을 구성하고, DriveVLM과 Alpamayo-R1은 언어 추론을 계획 또는 궤적 예측과 연결한다 \cite{sima2024drivelm,tian2024drivevlm,wang2025alpamayo}. 이 계열에서 최근의 핵심 질문은 생성된 설명이 장면 및 행동과 실제로 정합적인지, 그리고 설명과 행동 사이의 관계가 입력 개입에도 유지되는지이다.
+
+`Is VLA Reasoning Faithful?'은 Alpamayo-R1의 장면별 추론에서 개체 및 행동 충실도와 추론--행동 일관성을 평가한다 \cite{mayumu2026faithfulness}. VLADriveBench는 언급, 환각, 모순, 행동 정렬의 관찰 지표와 CoT 개입 프로토콜을 결합하여 CoT--행동 관계를 비교한다 \cite{nguyen2026vladrivebench}. `Lost in Fog'는 센서 교란 전후의 CoC와 궤적 변화를 반복 추론으로 비교하고, CVAA/Counter-nuScenes는 전방 영상에서 개별 객체를 제거한 반사실 입력에 대한 궤적 반응과 중간 표현을 분석한다 \cite{priyadershi2026lostinfog,panda2026cvaa}. 이 연구들의 보고된 주된 평가 단위는 장면별 추론ㆍ궤적의 정합성 또는 입력 개입에 따른 모델 반응이다.
+
+본 논문의 질문은 이러한 충실도 및 인과성 평가를 대체하지 않는다. 모델을 다시 추론하거나 입력 객체를 개입하는 대신, 이미 저장된 시점별 CoC 주석을 시간순으로 읽어 이전 사건의 지속 의무와 해제 조건을 추적한다. 차량 움직임에서 확인한 반응, 잠정 제한 시간과 장면 출처는 이 텍스트 계약과 구분한 보조 분석 층에서 다룬다. 따라서 장면 단위 충실도와 입력 개입 결과는 본 논문의 연속 주석 검증에 상보적인 증거이다.
+
+\subsection{추론 기반 행동 교정과 학습}
+반사실 추론은 설명 평가뿐 아니라 계획 행동의 교정과 학습에도 사용된다. Counterfactual VLA는 시간 구간별 메타 행동을 생성한 뒤 시각 맥락과 메타 행동에 조건화된 반사실 추론으로 행동을 수정하고 최종 궤적 생성을 유도한다 \cite{peng2025counterfactualvla}. C-CoT는 장면 기술, 핵심 객체 식별, 위험 예측, 반사실 위험 추론 및 최종 행동 계획의 단계와 메타 행동 평가 트리를 구성한다 \cite{tian2026ccot}. WorkDrive는 도로 공사 장면 사실을 CoC 주석 파이프라인에 주입하고, 생성된 추론 레이블의 지도학습과 횡방향 메타 행동--궤적 일관성 보상을 결합한다 \cite{jiang2026workdrive}. 이들의 보고된 주된 개입 단위는 계획 전 메타 행동 교정, 구조화된 반사실 추론, 또는 추론 레이블과 궤적의 학습 정렬이다.
+
+반례 기반 합성과 폐루프 적대적 학습도 위반 궤적을 모델 또는 정책 개선에 사용한다 \cite{ghosh2020counterexample,zhang2023cat}. 본 논문은 교정 행동이나 새 학습 레이블을 합성하지 않으며, 계약을 통과하지 못한 항목을 곧바로 위험 레이블로 해석하지 않는다. 대신 동일한 저장 사건열에 반복 의미론, 잠정 제한 시간 및 응답 탐지기 설정을 적용했을 때 판정이 어떻게 달라지는지를 기록하여, 계약 통과 항목과 정책ㆍ민감도 의존 검토 후보를 구분한다.
+
+\subsection{실행 안전 계층과 정형 보증}
+실행 단계의 안전 보강은 모델 출력과 시스템 동역학에 직접 개입한다. VLSA의 AEGIS는 제어 장벽 함수로 구성한 플러그인 안전 제약 계층을 기존 VLA 출력에 결합한다 \cite{hu2025vlsa}. 이 연구의 대상은 자율주행이 아니라 SafeLIBERO에서 평가한 \emph{로봇 조작}이며, 주된 개입 단위는 물리적 상호작용 중 안전 제약을 적용한 로봇 행동이다. 그러므로 AEGIS의 실행 출력 제약과 본 논문의 저장된 자율주행 주석 검증은 적용 영역과 증거 단위가 다르다.
+
+시간 오토마타와 \uppaal은 제한 시간 응답, 상태 동기화 및 사건 순서를 표현하고 \cite{behrmann2004uppaal}, Scenic과 VerifAI는 환경 시나리오를 생성하여 시뮬레이션 또는 시험에서 속성 위반을 탐색한다 \cite{fremont2019scenic,dreossi2019verifai,fremont2020formal}. STL 반례 탐색, 신경망 검증, 하이브리드 도달 가능성 및 RSS는 각각 신호 속성, 신경망 제약, 플랜트 동역학, 응답 시간과 제동 가정이 제공되는 범위에서 안전 관련 주장을 구성한다 \cite{donze2010robustness,katz2019marabou,ivanov2019verisig,shalev2017rss}. 이 계열에는 상태와 시간의 명시적 모델이 포함되지만, 보고된 주된 속성 단위는 외부 시나리오의 실행 결과 또는 동역학ㆍ제어 가정 아래의 안전 속성이다. 본 논문은 이 형식 도구를 물리 안전 증명이 아니라 저장 주석과 차량 반응의 프로토콜 수준 관찰자로 사용한다.
+
+\subsection{본 연구의 위치}
+표~\ref{tab:related-position}은 각 연구군을 우열이 아니라 보고된 주된 평가ㆍ개입 단위와 주장 범위로 비교한다. CoC 충실도ㆍ행동 인과성 연구는 모델 재추론 또는 입력 개입을 통해 장면별 설명과 행동의 관계를 평가하고, 행동 교정ㆍ학습 연구는 반사실 메타 행동이나 추론 레이블을 계획 및 학습에 개입시킨다. 실행 안전 및 정형 보증 연구는 출력 제약, 시뮬레이션 결과 또는 명시적 시스템 속성을 다룬다. 각 연구가 부가적으로 시간 정보나 데이터 구성을 사용할 수 있으므로, 표의 `주된 평가/개입 단위'는 해당 논문이 보고한 중심 단위를 뜻하며 다른 관심사의 부재를 뜻하지 않는다.
+
+본 논문의 단위는 모델 출력의 재평가가 아니라 \emph{저장된 연속 주석의 상태 검증}이다. 중심 텍스트 계약은 시점이 있는 CoC 사건이 만든 지속 의무, 해제 조건과 필수 행동 순서를 다음 사건까지 보존한다. 별도의 보조 반응 계약은 반복 정책에 따른 시계 유지ㆍ재시작, 차량 움직임 반응의 제한 시간 내 연결과 장면 경계 출처를 검사한다. 두 층은 각각 텍스트 내부 양립 가능성과 기록 행동의 조건부 정렬을 다루며, 한 층의 통과로 다른 층의 통과를 추론하지 않는다. 결과의 주장 범위는 선언한 의미론의 판정과 추적성에 한정하며, CoC의 일반적 충실도, 자연 오류 검출 성능, 폐루프 성능 또는 물리적 안전성의 우월성을 주장하지 않는다.
+
+\begin{table*}[t]
+\centering
+\bitablecaption{최근 VLA 연구군과 본 연구의 보고된 주된 평가ㆍ개입 단위 비교.}{Comparison of the primary evaluation and intervention units in recent VLA studies and this work.}
+\label{tab:related-position}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\textwidth}{L{0.135\textwidth}L{0.185\textwidth}L{0.145\textwidth}L{0.145\textwidth}L{0.12\textwidth}Y}
+\toprule
+Research family & Primary evaluation/intervention unit & Model re-inference or input intervention & Sequential-event state/time contract & Scene-provenance check & Claim scope \\
+\midrule
+CoC faithfulness and action causality \cite{mayumu2026faithfulness,nguyen2026vladrivebench,priyadershi2026lostinfog,panda2026cvaa} & Scene-level reasoning--action alignment; model response after corruption or object removal & Performed & Not a reported primary contract & Not a reported primary check & Model-reasoning faithfulness and causal-response evaluation \\
+Reasoning-based action correction and learning \cite{peng2025counterfactualvla,tian2026ccot,jiang2026workdrive} & Counterfactual meta-action correction; reasoning-label--trajectory training alignment & Intervention during generation or training & Not a reported primary contract & Depends on data configuration & Planning correction and learning-performance evaluation \\
+Runtime safety layers and formal assurance \cite{hu2025vlsa,behrmann2004uppaal,donze2010robustness,shalev2017rss} & Runtime output constraints or specified system properties & Intervention on output, environment, or property & Specified according to the property & Depends on scenario configuration & Runtime or formal assurance within stated assumptions and domain \\
+This work & Stateful verification of stored annotations: persistent obligations, release, and CoC--vehicle-response linkage & Not performed & Sequential obligation state as primary; response deadline as auxiliary & Scene boundaries and linkage & Execution and traceability of declared contracts; not natural-error performance or physical safety \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+이 위치 설정은 중심 연구 질문을 뒷받침하는 보조 증거의 범위와 대응한다. 변환 가능성, 반복ㆍ기한ㆍ탐지기 민감도, 출처가 제한하는 장기 에피소드, 그리고 결정적 스크립트 대비 정형 관찰자의 명세ㆍ추적 부가가치를 평가하되, 기존의 모델 충실도 시험, 행동 교정 또는 폐루프 안전 평가를 대신하는 결론으로 확대하지 않는다.

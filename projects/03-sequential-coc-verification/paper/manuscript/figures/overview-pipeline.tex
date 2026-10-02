@@ -1,0 +1,44 @@
+\resizebox{0.95\textwidth}{!}{%
+\begin{tikzpicture}[
+  main/.style={draw, rounded corners=2pt, align=center, minimum height=12mm,
+    text width=3.05cm, font=\footnotesize},
+  stage/.style={draw, rounded corners=2pt, align=center, minimum height=8mm,
+    text width=3.45cm, font=\scriptsize, fill=black!3},
+  data/.style={main, fill=observed!10},
+  reason/.style={main, fill=derived!10},
+  contract/.style={main, fill=assumed!12},
+  route/.style={main, fill=neutral!8},
+  flow/.style={-{Latex[length=2mm]}, thick, draw=black!80},
+  guide/.style={-{Latex[length=1.5mm]}, thin, dashed, draw=black!45}
+]
+
+% Main narrative.
+\node[data] (log) at (0,0) {Driving video\\ego trajectory};
+\node[reason] (llm) at (4.0,0) {VLM/LLM\\CoC reasoning};
+\node[contract] (obl) at (8.0,0) {Abstract intent\\timed obligation};
+\node[contract] (monitor) at (12.0,0) {UPPAAL\\episode observer};
+\node[route] (route) at (16.0,0) {감사 라우팅\\약한 유지 후보ㆍ검토 후보\\출처 불충분};
+
+\draw[flow] (log) -- coordinate[midway] (m1) (llm);
+\draw[flow] (llm) -- coordinate[midway] (m2) (obl);
+\draw[flow] (obl) -- coordinate[midway] (m3) (monitor);
+\draw[flow] (monitor) -- coordinate[midway] (m4) (route);
+
+% Process interpretation row.
+\node[stage] (s1) at (2.0,-1.55) {Auto-labeling from\\recorded trajectory};
+\node[stage] (s2) at (6.0,-1.55) {Intent/hazard parsing\\quality gate};
+\node[stage] (s3) at (10.0,-1.55) {Deadline/repeat semantics\\response evidence};
+\node[stage] (s4) at (14.0,-1.55) {Verdict report\\with counterexample provenance};
+
+\draw[guide] (m1) -- (s1.north);
+\draw[guide] (m2) -- (s2.north);
+\draw[guide] (m3) -- (s3.north);
+\draw[guide] (m4) -- (s4.north);
+
+% Takeaway.
+\node[draw=assumed, rounded corners=2pt, align=center, font=\footnotesize,
+  fill=assumed!8, text width=14.0cm] (key) at (8.0,-3.0)
+  {Key point: reasoning is a learnable semantic signal, but trigger, repeat, deadline, and response matching must be defined before it becomes a verifiable timed contract.};
+
+\end{tikzpicture}%
+}

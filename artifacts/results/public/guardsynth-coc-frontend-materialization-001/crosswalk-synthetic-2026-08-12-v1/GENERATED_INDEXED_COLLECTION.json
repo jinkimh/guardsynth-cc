@@ -1,0 +1,68 @@
+{
+  "action_domain": [
+    "STOP",
+    "CREEP",
+    "PROCEED"
+  ],
+  "claim_scope": "COC_CONDITIONED_LEGAL_PROPOSAL_WITH_SEPARATE_SIMULATION_POLICY_NOT_LEGAL_DECISION_OR_REAL_VEHICLE_SAFETY",
+  "collection_id": "synthetic_crosswalk_frontend_v0_1__materialized__indexed_collection",
+  "collection_version": "eblc-indexed-collection-v0.1",
+  "composition_evidence_refs": [
+    "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+  ],
+  "frames": 8,
+  "instances": [
+    {
+      "allowed_actions": [
+        "STOP"
+      ],
+      "association": {
+        "candidate_target_entity_ids": [
+          "pedestrian-1"
+        ],
+        "candidate_zone_ids": [
+          "crosswalk-1"
+        ],
+        "coordinate_transform_ref": "PUBLIC-SYNTHETIC-RIG-TRANSFORM-v0.1",
+        "evidence_refs": [
+          "PUBLIC-SYNTHETIC-PED-CROSSWALK-ASSOCIATION-v0.1",
+          "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1",
+          "PUBLIC-SYNTHETIC-RIG-TRANSFORM-v0.1"
+        ],
+        "reason_codes": [],
+        "status": "BOUND",
+        "target_entity_id": "pedestrian-1",
+        "zone_geometry_ref": "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1",
+        "zone_id": "crosswalk-1"
+      },
+      "contract_id": "C0",
+      "instance_id": "frontend_scene_0",
+      "overrides_contracts": [],
+      "priority_tier": "HARD",
+      "zone_entry": {
+        "evidence_refs": [
+          "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+        ],
+        "frame": "dataset_rig",
+        "unit": "m",
+        "value": 15.0
+      }
+    }
+  ],
+  "source_refs": [
+    "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+    "KR-RTA-2026-ART27",
+    "KR-RTA-27-1",
+    "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+    "P0B-SYNTHETIC-COMPOSITION-POLICY-v0",
+    "P0B-SYNTHETIC-PREDICATE-SPEC-v0",
+    "P0B-SYNTHETIC-SYSTEM-REQUIREMENT-PED-YIELD-v0",
+    "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1",
+    "PUBLIC-SYNTHETIC-PED-CROSSWALK-ASSOCIATION-v0.1",
+    "PUBLIC-SYNTHETIC-RIG-TRANSFORM-v0.1",
+    "PUBLIC-SYNTHETIC-SCENE-PED-CROSSING-v0.1",
+    "coc-sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d"
+  ],
+  "template_program_ref": "synthetic_crosswalk_frontend_v0_1__materialized__program_template"
+}

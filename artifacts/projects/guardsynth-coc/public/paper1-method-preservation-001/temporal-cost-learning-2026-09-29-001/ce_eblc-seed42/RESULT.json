@@ -1,0 +1,8 @@
+{
+  "status": "COMPLETE",
+  "arm": "CE_EBLC",
+  "seed": 42,
+  "elapsed_seconds": 197.4321200940758,
+  "predictions": 720,
+  "optimizer_updates": 60
+}

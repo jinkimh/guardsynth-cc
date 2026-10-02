@@ -1,0 +1,61 @@
+<style>
+#reviewForm{border:1px solid #9aabba;padding:18px;margin:20px 0;scroll-margin-top:12px}#reviewForm label{display:block;margin:12px 0}#reason{display:block;width:96%;min-height:100px;font:inherit;padding:10px}#reviewStatus{background:#fff1cf;padding:12px;white-space:pre-line}#complete{background:#164e72;color:white;border:0;border-radius:6px}#completion{font-weight:bold}input,select,textarea{max-width:98%}
+</style>
+<form id="reviewForm">
+<h2 id="answerTitle">이 장면의 답변</h2>
+<label>검토자 이름/ID <input id="reviewer_id" maxlength="8000" autocomplete="name"></label>
+<label>이번 16장면의 기존 CoC·관찰 답변·생성 제약·모델 결과를 미리 본 적이 있습니까?
+<select id="independence"><option value="">선택하세요</option><option value="INDEPENDENT">아니요 · 해당 자료를 보거나 작성에 참여한 적 없음</option><option value="EXPOSED_OR_INVOLVED">예 · 보았거나 작성에 참여함</option><option value="UNCERTAIN">확실하지 않음</option></select></label>
+<p>이 확인은 이번 16장면 전체에 적용됩니다. 이름과 이 선택을 바꾸면 완료 표시를 해제하며, 행동 답변과 이유는 보존합니다.</p>
+<label>지금 노란 영역으로 진입할 수 있습니까?
+<select id="action"><option value="">선택하세요</option><option value="ENTER_ZONE">진입 가능</option><option value="DEFER_ENTRY">진입 보류 필요</option><option value="UNJUDGEABLE">판단 불가</option></select></label>
+<label>판단 근거 <textarea id="reason" maxlength="8000" placeholder="영상에서 무엇을 보고 판단했는지 적어 주세요. 판단 불가라면 무엇이 불명확한지 적어 주세요."></textarea></label>
+<button id="complete" type="button">이 장면 답변 완료</button><span id="completion"></span>
+<p id="reviewStatus" role="status" aria-live="polite"></p>
+<button id="exportAll" type="button">전체 답변 JSON 저장</button><button id="exportDraft" type="button">미완성 초안 JSON 저장</button>
+<label>이어서 검토할 JSON 불러오기 <input id="importReview" type="file" accept="application/json,.json"></label>
+<p>입력은 이 브라우저에 자동 저장됩니다. 다른 기기로 이동하거나 검토를 마치면 JSON 파일도 저장하세요.
+파일 저장은 서버 제출이 아닙니다. 담당자에게 저장한 파일을 전달해 주세요. 16건의 행동 답변을 제출하기 전에는 CNL·원본 CoC·기존 답변을 보지 마세요.</p>
+</form>
+<script>
+'use strict';
+const bundleId=__BUNDLE_SHA256__,assignedReviewer=__ASSIGNED_REVIEWER__,batchVersion='paper1-action-batch-review-v0.1';
+const draftKey='guardsynth-action-batch:'+bundleId+':'+assignedReviewer;
+let reviewState={reviewer_id:assignedReviewer,independence:'',records:Object.fromEntries(P.map(p=>[p.packet_sha256,{action:'',reason:'',reviewed_at:null}]))};
+const actionChoices=['','ENTER_ZONE','DEFER_ENTRY','UNJUDGEABLE'],declarations=['','INDEPENDENT','EXPOSED_OR_INVOLVED','UNCERTAIN'];
+function reviewStatus(message){$('reviewStatus').textContent=message}
+function currentAnswer(){return reviewState.records[P[sceneIndex].packet_sha256]}
+function missing(r){const result=[];if(!reviewState.reviewer_id.trim())result.push('검토자 이름');if(!reviewState.independence)result.push('자료 노출 여부');if(!r.action)result.push('행동 선택');if(!r.reason.trim())result.push('판단 근거');return result}
+function isComplete(r){return Boolean(r.reviewed_at)&&missing(r).length===0}
+function progress(){const count=Object.values(reviewState.records).filter(isComplete).length;const label=`완료 ${count}/${P.length}`;$('completion').textContent=label;$('completionTop').textContent=label;P.forEach((p,i)=>{$('scene').children[i].textContent=`${i+1} · ${p.sample_id}${isComplete(reviewState.records[p.packet_sha256])?' ✓':''}`});return count}
+function fillAnswers(){const r=currentAnswer();$('reviewer_id').value=reviewState.reviewer_id;$('independence').value=reviewState.independence;$('action').value=r.action;$('reason').value=r.reason;$('answerTitle').textContent=`${sceneIndex+1}/16 · ${P[sceneIndex].sample_id} 답변`;progress()}
+function batch(kind){return {batch_version:batchVersion,bundle_sha256:bundleId,submission_kind:kind,saved_at:new Date().toISOString(),reviews:P.map(p=>{const r=reviewState.records[p.packet_sha256];return {review_version:p.review_version,packet_sha256:p.packet_sha256,kind:'ACTION',reviewer_id:reviewState.reviewer_id,reviewed_at:r.reviewed_at,independence:reviewState.independence,answers:{action:r.action},reason:r.reason}})}}
+function persist(message){try{localStorage.setItem(draftKey,JSON.stringify(batch('DRAFT')));reviewStatus(message+' · 브라우저에 자동 저장됨')}catch{reviewStatus(message+'\n브라우저 저장 실패: 지금 미완성 초안 JSON을 저장하세요.')}progress()}
+function validTime(value){return typeof value==='string'&&/(Z|[+-]\d\d:\d\d)$/.test(value)&&Number.isFinite(Date.parse(value))}
+function restoreBatch(b){
+ if(!b||b.batch_version!==batchVersion||b.bundle_sha256!==bundleId||!['DRAFT','FINAL'].includes(b.submission_kind)||!Array.isArray(b.reviews)||b.reviews.length!==P.length)throw Error('다른 검토 묶음이거나 올바르지 않은 파일입니다.');
+ const records={},ids=new Set(),expectedKeys='answers|independence|kind|packet_sha256|reason|review_version|reviewed_at|reviewer_id';let reviewer,independence;
+ for(const r of b.reviews){
+  if(!r||Object.keys(r).sort().join('|')!==expectedKeys)throw Error('답변 필드가 올바르지 않습니다.');
+  const p=P.find(p=>p.packet_sha256===r.packet_sha256);
+  if(!p||ids.has(r.packet_sha256)||r.review_version!==p.review_version||r.kind!=='ACTION')throw Error('장면이 누락·중복되었거나 다른 패킷입니다.');
+  ids.add(r.packet_sha256);
+  if(typeof r.reviewer_id!=='string'||r.reviewer_id.length>8000||typeof r.reason!=='string'||r.reason.length>8000||!declarations.includes(r.independence)||!r.answers||Object.keys(r.answers).join('|')!=='action'||!actionChoices.includes(r.answers.action))throw Error('답변 값이 올바르지 않습니다.');
+  if(r.reviewed_at!==null&&(!validTime(r.reviewed_at)||!r.reviewer_id.trim()||!r.reason.trim()||!r.answers.action||!r.independence))throw Error('완료 답변의 필수 항목 또는 시각이 올바르지 않습니다.');
+  if(b.submission_kind==='FINAL'&&r.reviewed_at===null)throw Error('전체 답변 파일에 미완료 항목이 있습니다.');
+  if(reviewer!==undefined&&(reviewer!==r.reviewer_id||independence!==r.independence))throw Error('서로 다른 검토자 또는 노출 선언이 섞여 있습니다.');
+  reviewer=r.reviewer_id;independence=r.independence;records[r.packet_sha256]={action:r.answers.action,reason:r.reason,reviewed_at:r.reviewed_at};
+ }
+ reviewState={reviewer_id:reviewer,independence,records};fillAnswers();
+}
+$('reviewForm').onsubmit=e=>e.preventDefault();
+for(const id of ['reviewer_id','independence'])$(id).addEventListener(id==='reviewer_id'?'input':'change',()=>{reviewState[id]=$(id).value;Object.values(reviewState.records).forEach(r=>r.reviewed_at=null);persist('검토자 정보 변경: 각 장면의 완료를 다시 확인해 주세요. 행동 답변은 보존했습니다.')});
+for(const id of ['action','reason'])$(id).addEventListener(id==='action'?'change':'input',()=>{const r=currentAnswer();r[id]=$(id).value;r.reviewed_at=null;persist('작성 중: 내용을 확인한 뒤 이 장면 답변 완료를 누르세요.')});
+$('complete').onclick=()=>{const r=currentAnswer(),needs=missing(r);if(needs.length){reviewStatus('아직 완료되지 않았습니다. 입력해 주세요: '+needs.join(', '));return}r.reviewed_at=new Date().toISOString();persist('이 장면의 답변이 완료되었습니다. 다음 장면으로 이동할 수 있습니다.')};
+function download(kind){if(kind==='FINAL'&&progress()!==P.length){const remaining=P.filter(p=>!isComplete(reviewState.records[p.packet_sha256])).map(p=>p.sample_id);reviewStatus('미완료 장면: '+remaining.join(', ')+'\n중간 저장은 미완성 초안 JSON 저장을 사용하세요.');return}const blob=new Blob([JSON.stringify(batch(kind),null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=kind==='FINAL'?'paper1_action_review.json':'paper1_action_review_draft.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);reviewStatus('JSON 파일을 저장했습니다. 서버 제출은 아니므로 담당자에게 전달해 주세요.')}
+$('exportAll').onclick=()=>download('FINAL');$('exportDraft').onclick=()=>download('DRAFT');
+$('importReview').onchange=async e=>{const file=e.target.files[0];if(!file)return;if(!confirm('현재 브라우저의 답변을 불러온 파일로 바꿀까요? 필요하면 먼저 초안 JSON을 저장하세요.')){e.target.value='';return}try{restoreBatch(JSON.parse(await file.text()));persist('파일을 불러왔습니다.')}catch(error){reviewStatus('불러오기 실패: '+error.message)}e.target.value=''};
+const renderViewer=render;render=function(){renderViewer();fillAnswers();reviewStatus(isComplete(currentAnswer())?'이 장면은 완료되었습니다. 수정하면 완료 표시가 해제됩니다.':'영상 확인 후 행동과 근거를 입력하고 완료를 눌러주세요.')};
+fillAnswers();
+try{const stored=localStorage.getItem(draftKey);if(stored){restoreBatch(JSON.parse(stored));reviewStatus('이 브라우저에 저장된 답변을 복원했습니다.')}else reviewStatus('영상 아래에서 행동과 판단 근거를 입력해 주세요.')}catch(error){reviewStatus('저장된 초안을 자동으로 불러오지 못했습니다. 보관한 JSON을 불러와 주세요. '+error.message)}
+</script>

@@ -1,0 +1,100 @@
+\begin{thebibliography}{10}
+
+\bibitem{hu2023uniad}
+Yihan Hu, Jiazhi Yang, Li~Chen, Keyu Li, Chonghao Sima, Xizhou Zhu, Siqi Chai,
+  Senyao Du, Tianwei Lin, Wenhai Wang, Lewei Lu, Xiaosong Jia, Qiang Liu,
+  Jifeng Dai, Yu~Qiao, and Hongyang Li.
+\newblock {Planning-Oriented Autonomous Driving}.
+\newblock In {\em Proc. IEEE/CVF Conf. Computer Vision and Pattern Recognition
+  (CVPR)}, pages 17853--17862, 2023.
+
+\bibitem{jiang2023vad}
+Bo~Jiang, Shaoyu Chen, Qing Xu, Bencheng Liao, Jiajie Chen, Helong Zhou, Qian
+  Zhang, Wenyu Liu, Chang Huang, and Xinggang Wang.
+\newblock {VAD}: Vectorized scene representation for efficient autonomous
+  driving.
+\newblock In {\em Proc. IEEE/CVF Int. Conf. Computer Vision (ICCV)}, pages
+  8340--8350, 2023.
+
+\bibitem{sima2024drivelm}
+Chonghao Sima, Katrin Renz, Kashyap Chitta, Li~Chen, Hanxue Zhang, Chengen Xie,
+  Jens Beisswenger, Ping Luo, Andreas Geiger, and Hongyang Li.
+\newblock {DriveLM}: Driving with graph visual question answering.
+\newblock {\em arXiv preprint arXiv:2312.14150}, 2023.
+
+\bibitem{tian2024drivevlm}
+Xiaoyu Tian, Junru Gu, Bailin Li, Yicheng Liu, Yang Wang, Zhiyong Zhao, Kun
+  Zhan, Peng Jia, Xianpeng Lang, and Hang Zhao.
+\newblock {DriveVLM}: The convergence of autonomous driving and large
+  vision-language models.
+\newblock In {\em Proc. 8th Conf. Robot Learning (CoRL)}, volume 270 of {\em
+  Proceedings of Machine Learning Research}, pages 4698--4726. PMLR, 2025.
+
+\bibitem{wang2025alpamayo}
+Yan Wang, Wenjie Luo, Junjie Bai, Yulong Cao, Tong Che, Ke~Chen, Yuxiao Chen,
+  Jenna Diamond, Yifan Ding, Wenhao Ding, et~al.
+\newblock {Alpamayo-R1}: Bridging reasoning and action prediction for
+  generalizable autonomous driving in the long tail.
+\newblock {\em arXiv preprint arXiv:2511.00088}, 2025.
+
+\bibitem{mayumu2026faithfulness}
+Nicanor Mayumu, Xiaoheng Deng, and Patrick Mukala.
+\newblock Is {VLA} reasoning faithful? probing safety of chain-of-causation in
+  autonomous driving models.
+\newblock {\em arXiv preprint arXiv:2605.17268}, 2026.
+
+\bibitem{nguyen2026vladrivebench}
+Thach Nguyen, Danhua Guo, Tom Lampo, Fei Wu, and Burhan Yaman.
+\newblock {VLADriveBench}: Evaluating {CoT}-action relationship in {VLA} for
+  autonomous driving.
+\newblock {\em arXiv preprint arXiv:2606.12706}, 2026.
+
+\bibitem{priyadershi2026lostinfog}
+Abhinaw Priyadershi and Jelena Frtunikj.
+\newblock Lost in fog: Sensor perturbations expose reasoning fragility in
+  driving {VLAs}.
+\newblock {\em arXiv preprint arXiv:2605.21446}, 2026.
+
+\bibitem{panda2026cvaa}
+Kalpana Panda, Wesley Maia, Vinti Agarwal, and Ross Greer.
+\newblock What do they see? interpreting complex road scenarios through the
+  eyes of vision-language-action models for safe and trustworthy autonomous
+  vehicle learning.
+\newblock {\em arXiv preprint arXiv:2607.16938}, 2026.
+
+\bibitem{behrmann2004uppaal}
+Gerd Behrmann, Alexandre David, and Kim~G. Larsen.
+\newblock A tutorial on {UPPAAL}.
+\newblock In {\em Formal Methods for the Design of Real-Time Systems}, volume
+  3185 of {\em Lecture Notes in Computer Science}, pages 200--236. Springer,
+  2004.
+
+\bibitem{fremont2019scenic}
+Daniel~J. Fremont, Tommaso Dreossi, Shromona Ghosh, Xiangyu Yue, Alberto~L.
+  Sangiovanni-Vincentelli, and Sanjit~A. Seshia.
+\newblock {Scenic}: A language for scenario specification and scene generation.
+\newblock In {\em Proc. ACM SIGPLAN Conf. Programming Language Design and
+  Implementation (PLDI)}, pages 63--78, 2019.
+
+\bibitem{dreossi2019verifai}
+Tommaso Dreossi, Daniel~J. Fremont, Shromona Ghosh, Edward Kim, Hadi
+  Ravanbakhsh, Marcell Vazquez-Chanlatte, and Sanjit~A. Seshia.
+\newblock {VerifAI}: A toolkit for the formal design and analysis of artificial
+  intelligence-based systems.
+\newblock In {\em Proc. Int. Conf. Computer Aided Verification (CAV)}, pages
+  432--442, 2019.
+
+\bibitem{caesar2020nuscenes}
+Holger Caesar, Varun Bankiti, Alex~H. Lang, Sourabh Vora, Venice~Erin Liong,
+  Qiang Xu, Anush Krishnan, Yu~Pan, Giancarlo Baldan, and Oscar Beijbom.
+\newblock {nuScenes}: A multimodal dataset for autonomous driving.
+\newblock In {\em Proc. IEEE/CVF Conf. Computer Vision and Pattern Recognition
+  (CVPR)}, pages 11621--11631, 2020.
+
+\bibitem{nvidia2026autolabeler}
+{NVIDIA Corporation}.
+\newblock {Chain-of-Causation (CoC) Autolabeling Pipeline}.
+\newblock GitHub repository, 2026.
+\newblock Accessed Aug. 1, 2026.
+
+\end{thebibliography}

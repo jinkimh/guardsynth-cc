@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>GuardSynth-CC 연구 운영 포털</title><link rel="stylesheet" href="portal.css"></head>
+<body data-page="overview">
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <header class="topbar"><nav class="nav" aria-label="주 메뉴">
+    <a class="brand" href="index.html"><span class="brand-mark">GS</span>Research Operations</a>
+    <span class="classification">LOCAL · RESTRICTED</span>
+    <div class="nav-links"><a href="projects.html">프로젝트</a><a href="platform.html">플랫폼</a><a href="evidence.html">근거</a><a href="reviews.html">검토</a><a href="papers.html">논문</a><a href="meetings.html">회의·결정</a></div>
+  </nav></header>
+  <main id="main" class="shell">
+    <section class="hero">
+      <p class="eyebrow">GuardSynth-CC research program · 연구영역별 독립 관리</p>
+      <h1>상황·규칙·provenance에서 적용 가능하고 검증 가능한 실행 제약을 합성할 수 있는가?</h1>
+      <p>CoC를 상황 단서로 사용하되 실제 장면의 시간 상태, 외부 authority, recorded-rig binding과 assurance를 분리해 추적하고, EBLC/BCV로 구조화·검증하는 연구 프로그램입니다.</p>
+      <div class="gate-strip"><span class="status partial">M16 PARTIAL</span><strong>eligible 1/60</strong><strong>human source review 0/60</strong><strong>empirical annotation 잠김</strong></div>
+      <div class="hero-actions"><a class="button secondary" href="projects.html">5개 연구 질문 보기</a><a class="button" href="reviews.html">외부검토 보기</a></div>
+    </section>
+
+    <section class="section" aria-labelledby="pipeline-title">
+      <div class="section-head"><div><p class="eyebrow">Research pipeline</p><h2 id="pipeline-title">근거에서 검증 가능한 제약까지</h2></div></div>
+      <div class="flow pipeline-flow">
+        <article class="flow-step"><strong>입력과 provenance</strong><small>CoC + 실제 장면·시간 상태 + 외부 규칙·시스템 근거 + recorded/simulated assurance 구분</small></article>
+        <article class="flow-step"><strong>GuardSynth 합성</strong><small>장면과 authority가 실제로 지지하는 적용 가능한 실행 제약 후보</small></article>
+        <article class="flow-step"><strong>EBLC 구조화</strong><small>lifecycle, provenance와 해제 조건을 추적 가능한 계약으로 표현</small></article>
+        <article class="flow-step"><strong>BCV / Core / SMT / runtime</strong><small>bounded verifier와 runtime monitor에서 구조·의미·lowering 검사</small></article>
+        <article class="flow-step"><strong>계획·monitor/shield 평가</strong><small>위반 감소, 과잉제약 억제, 진행성 유지와 전문가 효용을 분리 평가</small></article>
+      </div>
+    </section>
+
+    <section class="section grid two" aria-label="연구 주장 경계">
+      <article class="notice danger"><strong>근거 경계</strong><ul class="compact-list"><li>CoC는 법규 authority가 아닙니다.</li><li>이미지 관측은 source-complete evidence가 아닙니다.</li><li>recorded-rig binding과 simulated vehicle assurance는 다릅니다.</li></ul></article>
+      <article class="notice danger"><strong>검증 경계</strong><ul class="compact-list"><li>bounded verification은 실제 차량 안전성 증명이 아닙니다.</li><li>backend와 UI 준비는 M16 연구 완료가 아닙니다.</li><li>60/60 source-complete와 quota 충족 전 empirical annotation은 시작할 수 없습니다.</li></ul></article>
+    </section>
+
+    <section class="section"><div id="portfolio-metrics" class="grid metrics"></div></section>
+
+    <section class="section" aria-labelledby="importance-title">
+      <div class="section-head"><div><p class="eyebrow">Why this matters</p><h2 id="importance-title">관련 연구 근거의 현재 권위 상태</h2></div><p>새 문헌 조사가 아닌 canonical survey 기준</p></div>
+      <div class="grid three">
+        <article class="card"><h3>GuardSynth 맥락·근거 gap</h3><p>장면 문맥과 외부 source를 실행 제약으로 연결하는 연구 경계를 정리합니다.</p><p class="metric-note">CURRENT scoping survey · 조사 기준일 2026-08-08 · <a href="project_04.html">프로젝트 원문 색인</a></p></article>
+        <article class="card"><h3>연속 CoC 검증</h3><p>지속 의무, 해제 조건과 상태 전이 모순을 다루는 검증 필요성을 정리합니다.</p><p class="metric-note">CURRENT surveys · 2026-08-01 / 2026-08-02 · <a href="project_03.html">프로젝트 원문 색인</a></p></article>
+        <article class="card"><h3>미완료 prior-art 경계</h3><p>프로젝트 1·2의 canonical survey는 PLANNED, 프로젝트 5 prior-art 감사는 IN_PROGRESS입니다. 최신성·신규성을 주장하지 않습니다.</p><p class="metric-note"><a href="projects.html">프로젝트별 권위 상태 확인</a></p></article>
+      </div>
+    </section>
+
+    <section id="research-projects" class="section"><div class="section-head"><div><p class="eyebrow">Independent research owners</p><h2>5개 연구 프로젝트</h2><p>각 질문의 현재 gate와 단일 다음 작업을 자신의 canonical 문서에서 읽습니다.</p></div><a class="button ghost" href="projects.html">전체 프로젝트</a></div><div id="project-card-list" class="grid two"></div></section>
+    <section class="section"><div class="section-head"><div><p class="eyebrow">Reusable implementation</p><h2>공용 EBLC/BCV 플랫폼</h2></div><a class="button ghost" href="platform.html">플랫폼 경계 보기</a></div><div id="overview-platform-list" class="grid two"></div></section>
+    <section class="section grid two"><article class="card"><h2>결과와 근거</h2><p>owner, classification, hash에 결합된 실행만 표시하며 canonical server path는 브라우저에 보내지 않습니다.</p><a class="button" href="artifact.html">산출물 필터 열기</a></article><article class="card"><h2>현재 외부검토</h2><p>M16 source review UI는 준비됐지만 human review 0/60, eligible 1/60입니다.</p><a class="button" href="reviews.html">검토 라운드 열기</a></article></section>
+    <section class="section"><div class="notice info"><strong>자동 연동:</strong> server mode에서 page load마다 프로젝트·플랫폼·논문·산출물 registry를 검증해 다시 투영합니다. canonical Markdown은 read-only입니다.</div></section>
+  </main>
+  <footer class="footer">갱신 <span id="generated-date"></span> · owner-aware canonical projection</footer>
+  <script src="portal-data.js"></script><script src="portal.js"></script>
+</body>
+</html>

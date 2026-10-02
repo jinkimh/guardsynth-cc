@@ -1,0 +1,16 @@
+{
+  "actual_vehicle_validated": false,
+  "bounded_smt_query_count": 1,
+  "bounded_smt_statuses": {
+    "composed_model_satisfiable": "SAT"
+  },
+  "claim_scope": "COC_CONDITIONED_LEGAL_PROPOSAL_WITH_SEPARATE_SIMULATION_POLICY_NOT_LEGAL_DECISION_OR_REAL_VEHICLE_SAFETY",
+  "coc_text_in_output": false,
+  "contract_count": 1,
+  "core_model_id": "synthetic_crosswalk_frontend_v0_1__materialized__indexed_collection__bundle_core",
+  "frontend_status": "PROPOSED",
+  "generation_verdict": "VALIDATED",
+  "indexed_expansion_verdict": "VALIDATED",
+  "source_separation_gate": true,
+  "status": "EXECUTED"
+}

@@ -1,0 +1,45 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\setmainfont[Path=fonts/,Extension=.otf,UprightFont=*-Regular,BoldFont=*-Bold]{NotoSerifCJKkr}
+\definecolor{reviewercolor}{RGB}{38,82,126}
+\definecolor{responsecolor}{RGB}{36,113,78}
+\definecolor{revisioncolor}{RGB}{145,82,24}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlength{\fboxsep}{7pt}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\familydefault}{\rmdefault}
+\newcommand{\fieldheading}[2]{\par\medskip\noindent{\color{#1}\rule{3pt}{1.25em}}\hspace{0.55em}\textbf{#2}\par\smallskip}
+\newenvironment{reviewitem}[1]{\subsection*{#1}}{\par\medskip\hrule\bigskip}
+\newenvironment{reviewercomment}{\fieldheading{reviewercolor}{1. 리뷰어 코멘트}\begin{quote}}{\end{quote}}
+\newenvironment{authorresponse}{\fieldheading{responsecolor}{2. 저자 답변}}{\par}
+\newenvironment{manuscriptrevision}[1]{\fieldheading{revisioncolor}{3. 논문 반영 결과}\textbf{수정 위치:} #1\par\smallskip}{\par}
+\newcommand{\manuscripttitle}{연속 인과관계(CoC) 주석의 시간·조건 일관성 검사 프레임워크: 적용 가능성과 근거 추적}
+\newcommand{\manuscriptid}{확인 필요 (제공 기록에서 확인되지 않음)}
+\newcommand{\revisionround}{확인 필요 (개정 소스 버전: revision-v01)}
+\newcommand{\responsedate}{2026년 10월 1일}
+\input{manuscript-locations}
+\newcommand{\mloc}[1]{\csname mloc@#1\endcsname}
+\newcommand{\responsefront}[2]{%
+\begin{center}{\LARGE\bfseries 심사 의견 답변서\par}\vspace{1em}{\large\bfseries\manuscripttitle\par}\end{center}
+\vspace{0.8em}
+\begin{tabular}{@{}ll@{}}논문 접수번호: & \manuscriptid \\ 수정 차수: & \revisionround \\ 답변일: & \responsedate\end{tabular}
+\section*{답변에 앞서}
+편집위원장님과 심사위원님께,
+
+연속 CoC의 검사 범위, 의미 변환과 평가 근거를 구체화할 수 있도록 의견을 주셔서 감사합니다.
+이번 개정은 자연 오류 성능 대신 시간·조건 관계의 검사 적용 가능성과 근거 추적으로 주장을 제한했습니다.
+이미 수행한 재분석과 통제 시나리오의 최초 결과, 보완 후 동일 사례 재시험을 구분하여 반영했습니다.
+사람 재평가나 개발 미사용 독립 시험을 수행했다고 주장하지 않습니다.
+개정 원고의 파란색은 원 저장소의 최초 제출본 대비 이번에 추가·수정한 내용을 나타냅니다.
+검정색 clean 원고는 동일 내용입니다. 아래 절·쪽·표 번호는 이번 개정 원고를 기준으로 합니다.
+접수번호와 실제 심사 수정 차수는 기록이 없어 확인 필요로 남겼습니다.
+
+\section*{심사위원 #1}
+\textbf{총평(요지)}\par
+\begin{quote}#2\end{quote}}

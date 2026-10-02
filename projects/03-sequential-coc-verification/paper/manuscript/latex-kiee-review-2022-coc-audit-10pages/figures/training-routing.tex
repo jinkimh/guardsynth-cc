@@ -1,0 +1,24 @@
+\begin{tikzpicture}[
+  node distance=5mm,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=8mm,
+    text width=0.42\columnwidth, font=\scriptsize},
+  decision/.style={draw, diamond, aspect=2.8, align=center, fill=neutral!8,
+    inner sep=2pt, font=\footnotesize},
+  keep/.style={box, fill=observed!10},
+  review/.style={box, fill=assumed!10},
+  provenance/.style={box, fill=derived!8},
+  synthetic/.style={box, fill=neutral!8},
+  flow/.style={-{Latex[length=2mm]}, thick}
+]
+\node[decision] (route) {Group by checking evidence};
+\node[keep] (a) at (-0.235\columnwidth,-1.6) {Response observed under\\selected settings\\review retention after\\evidence check};
+\node[review] (b) at (0.235\columnwidth,-1.6) {Changes with the repeat rule,\\test deadline, or\\response setting\\human review required};
+\node[provenance] (c) at (-0.235\columnwidth,-3.0) {Insufficient CoC--response\\link or scene-source evidence\\do not join\\into a long sequence};
+\node[synthetic] (d) at (0.235\columnwidth,-3.0) {Known modified synthetic case\\use only to test the checker};
+\draw[flow] (route.south) -- (a.north);
+\draw[flow] (route.south) -- (b.north);
+% Route the lower branches around the upper boxes so that their arrows do
+% not pass through the text boxes for (a) and (b).
+\draw[flow] (route.west) -- (-0.48\columnwidth,0) |- (c.west);
+\draw[flow] (route.east) -- (0.48\columnwidth,0) |- (d.east);
+\end{tikzpicture}

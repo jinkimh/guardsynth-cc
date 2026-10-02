@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GuardSynth blinded expert assignment manifest v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "assignment_version", "randomization_seed", "scene_count", "reviewer_count",
+    "reviews_per_scene", "interface_mode_counts", "assignments", "adjudicator_pseudonym",
+    "model_identity_exposed", "raw_scene_identifier_exposed"
+  ],
+  "properties": {
+    "assignment_version": {"const": "guardsynth-expert-assignment-v0.1"},
+    "randomization_seed": {"type": "integer", "minimum": 0},
+    "scene_count": {"type": "integer", "minimum": 1},
+    "reviewer_count": {"type": "integer", "minimum": 2},
+    "reviews_per_scene": {"const": 2},
+    "interface_mode_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["MINIMAL_CONFIRMATION", "COMPLETE_AUTHORING"],
+      "properties": {
+        "MINIMAL_CONFIRMATION": {"type": "integer", "minimum": 1},
+        "COMPLETE_AUTHORING": {"type": "integer", "minimum": 1}
+      }
+    },
+    "adjudicator_pseudonym": {"type": "string", "minLength": 1},
+    "model_identity_exposed": {"const": false},
+    "raw_scene_identifier_exposed": {"const": false},
+    "assignments": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "assignment_id", "scene_ref_hash", "reviewer_pseudonym", "interface_mode",
+          "presentation_order", "calibration", "method_identity"
+        ],
+        "properties": {
+          "assignment_id": {"type": "string", "minLength": 1},
+          "scene_ref_hash": {"type": "string", "minLength": 1},
+          "reviewer_pseudonym": {"type": "string", "minLength": 1},
+          "interface_mode": {"enum": ["MINIMAL_CONFIRMATION", "COMPLETE_AUTHORING"]},
+          "presentation_order": {"type": "integer", "minimum": 1},
+          "calibration": {"type": "boolean"},
+          "method_identity": {"const": "BLINDED"}
+        }
+      }
+    }
+  }
+}

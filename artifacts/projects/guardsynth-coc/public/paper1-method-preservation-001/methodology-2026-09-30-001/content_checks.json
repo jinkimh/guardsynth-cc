@@ -1,0 +1,24 @@
+{
+  "ko": {
+    "pages": 6,
+    "text_units_checked": 178,
+    "source_sha256": "031f70aa572572af1f053a18b85f6cab9ea5e64280de640c35c3b0699966e53c",
+    "pdf_sha256": "b42770ac3d6675008a3e37c7635b5b0b4b5f53eceaa1b371979909b607c431bb",
+    "printed_json_and_cnl_match_execution": true,
+    "printed_smt_results": [
+      "UNSAT",
+      "SAT"
+    ]
+  },
+  "en": {
+    "pages": 7,
+    "text_units_checked": 178,
+    "source_sha256": "ffd4f801698c16f36c6b20d334c5a1f061741a740feb05df4aa62a245c5dfa5e",
+    "pdf_sha256": "eb11fb3d4a991dcad92346b7aa4c5a048d27943df3515a3176066dcd54e3318f",
+    "printed_json_and_cnl_match_execution": true,
+    "printed_smt_results": [
+      "UNSAT",
+      "SAT"
+    ]
+  }
+}

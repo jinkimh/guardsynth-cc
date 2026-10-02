@@ -1,0 +1,18 @@
+% Same typesetting in marked and clean copies; only the revision color differs.
+\ifdefined\CleanCopy
+  \definecolor{revisionblue}{RGB}{0,0,0}
+\else
+  \definecolor{revisionblue}{RGB}{0,70,180}
+\fi
+\newenvironment{revision}{\par\begingroup\color{revisionblue}}{\par\endgroup}
+\newcommand{\rev}[1]{{\color{revisionblue}#1}}
+\setlength{\emergencystretch}{2em}
+\captionsetup{font={footnotesize,color=revisionblue},labelfont={bf,color=revisionblue}}
+% Mark added references while preserving unchanged submitted bibliography text.
+\makeatletter
+\g@addto@macro\UrlBreaks{\do\-}
+\@for\bibkey:=leucker2009runtime,bauer2011runtime,uppaalofficial,uppaalname,uppaalqueries\do{%
+  \expandafter\gdef\csname changedbib@\bibkey\endcsname{1}}
+\let\originalbibitem\@bibitem
+\def\@bibitem#1{\ifcsname changedbib@#1\endcsname\color{revisionblue}\else\color{black}\fi\originalbibitem{#1}}
+\makeatother

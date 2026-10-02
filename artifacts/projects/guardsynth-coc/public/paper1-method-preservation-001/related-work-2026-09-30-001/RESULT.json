@@ -1,0 +1,43 @@
+{
+  "project_id": "guardsynth-coc",
+  "status": "DRAFT_COMPILED_AND_CHECKED",
+  "artifacts": [
+    {
+      "language": "ko",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_RELATED_WORK_V01_KO.md",
+      "pdf": "ieee-access-related-work-v01-ko.pdf",
+      "pages": 2,
+      "verified_text_units": 56,
+      "source_sha256": "f16f54cb31f85fa21a300667ed0a2e39a000cc01df644d46563f44b98bcc3c82",
+      "pdf_sha256": "5bc44cd2e3913ac8ac3bc1c6a3641969511bdd4a018291b0a1f59dfdfea8d25c"
+    },
+    {
+      "language": "en",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_RELATED_WORK_V01_EN.md",
+      "pdf": "ieee-access-related-work-v01-en.pdf",
+      "pages": 3,
+      "verified_text_units": 56,
+      "source_sha256": "a20d5554667c99362c32daa069830938f2f7e760c75b4d830faaf0848b0d7ef2",
+      "pdf_sha256": "33b8c2685b2ec59eda0e7a99a6735bf9e38d4ac9237c9b7a584510e1a8551753"
+    }
+  ],
+  "primary_sources": [
+    "https://aclanthology.org/2023.emnlp-main.985/",
+    "https://arxiv.org/abs/2007.00330",
+    "https://arxiv.org/abs/2303.04864",
+    "https://arxiv.org/abs/2312.14150",
+    "https://arxiv.org/abs/2402.12289",
+    "https://arxiv.org/abs/2511.00088",
+    "https://attempto.ifi.uzh.ch/site/pubs/papers/FLAIRS0601FuchsN.pdf",
+    "https://ojs.aaai.org/index.php/AAAI/article/view/37602",
+    "https://ojs.aaai.org/index.php/AAAI/article/view/41168"
+  ],
+  "checks": {
+    "body_and_table_text": "PASS after removing PDF running heads, footers and normalizing typography",
+    "bilingual_reference_urls": "PASS: 9 matched sources",
+    "missing_glyphs_and_overfull_lines": "NONE",
+    "visual_review": "English and Korean comparison table/reference pages inspected",
+    "file_naming": "Existing 5 violations only"
+  },
+  "scope": "Standalone author-review drafts; historical main.tex unchanged; reference and table numbers are section-local."
+}

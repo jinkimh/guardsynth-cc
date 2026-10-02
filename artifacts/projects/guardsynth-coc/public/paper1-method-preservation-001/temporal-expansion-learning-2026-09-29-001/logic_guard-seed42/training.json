@@ -1,0 +1,23 @@
+{
+  "arm": "LOGIC_GUARD",
+  "seed": 42,
+  "history": [
+    {
+      "epoch": 1,
+      "mean_loss": 0.48298486303538085,
+      "optimizer_steps": 60
+    },
+    {
+      "epoch": 2,
+      "mean_loss": 0.22987388065357522,
+      "optimizer_steps": 60
+    },
+    {
+      "epoch": 3,
+      "mean_loss": 0.014729864828503499,
+      "optimizer_steps": 60
+    }
+  ],
+  "optimizer_updates": 180,
+  "nonzero_lora_B_tensors": 112
+}

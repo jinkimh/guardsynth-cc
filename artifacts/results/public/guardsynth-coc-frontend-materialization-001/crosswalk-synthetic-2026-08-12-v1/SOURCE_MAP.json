@@ -1,0 +1,3467 @@
+{
+  "assertions": [
+    {
+      "assertion_id": "domain__c0__state__0",
+      "base_time": 0,
+      "clause_id": "c0__state",
+      "index": 0,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__state__1",
+      "base_time": 1,
+      "clause_id": "c0__state",
+      "index": 1,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__state__2",
+      "base_time": 2,
+      "clause_id": "c0__state",
+      "index": 2,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__state__3",
+      "base_time": 3,
+      "clause_id": "c0__state",
+      "index": 3,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__state__4",
+      "base_time": 4,
+      "clause_id": "c0__state",
+      "index": 4,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__state__5",
+      "base_time": 5,
+      "clause_id": "c0__state",
+      "index": 5,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__state__6",
+      "base_time": 6,
+      "clause_id": "c0__state",
+      "index": 6,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__state__7",
+      "base_time": 7,
+      "clause_id": "c0__state",
+      "index": 7,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__state__8",
+      "base_time": 8,
+      "clause_id": "c0__state",
+      "index": 8,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__0",
+      "base_time": 0,
+      "clause_id": "c0__raw_truth",
+      "index": 9,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__1",
+      "base_time": 1,
+      "clause_id": "c0__raw_truth",
+      "index": 10,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__2",
+      "base_time": 2,
+      "clause_id": "c0__raw_truth",
+      "index": 11,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__3",
+      "base_time": 3,
+      "clause_id": "c0__raw_truth",
+      "index": 12,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__4",
+      "base_time": 4,
+      "clause_id": "c0__raw_truth",
+      "index": 13,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__5",
+      "base_time": 5,
+      "clause_id": "c0__raw_truth",
+      "index": 14,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__6",
+      "base_time": 6,
+      "clause_id": "c0__raw_truth",
+      "index": 15,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__7",
+      "base_time": 7,
+      "clause_id": "c0__raw_truth",
+      "index": 16,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__raw_truth__8",
+      "base_time": 8,
+      "clause_id": "c0__raw_truth",
+      "index": 17,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__0",
+      "base_time": 0,
+      "clause_id": "c0__epistemic",
+      "index": 18,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__1",
+      "base_time": 1,
+      "clause_id": "c0__epistemic",
+      "index": 19,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__2",
+      "base_time": 2,
+      "clause_id": "c0__epistemic",
+      "index": 20,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__3",
+      "base_time": 3,
+      "clause_id": "c0__epistemic",
+      "index": 21,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__4",
+      "base_time": 4,
+      "clause_id": "c0__epistemic",
+      "index": 22,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__5",
+      "base_time": 5,
+      "clause_id": "c0__epistemic",
+      "index": 23,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__6",
+      "base_time": 6,
+      "clause_id": "c0__epistemic",
+      "index": 24,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__7",
+      "base_time": 7,
+      "clause_id": "c0__epistemic",
+      "index": 25,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__epistemic__8",
+      "base_time": 8,
+      "clause_id": "c0__epistemic",
+      "index": 26,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__0",
+      "base_time": 0,
+      "clause_id": "c0__effective_truth",
+      "index": 27,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__1",
+      "base_time": 1,
+      "clause_id": "c0__effective_truth",
+      "index": 28,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__2",
+      "base_time": 2,
+      "clause_id": "c0__effective_truth",
+      "index": 29,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__3",
+      "base_time": 3,
+      "clause_id": "c0__effective_truth",
+      "index": 30,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__4",
+      "base_time": 4,
+      "clause_id": "c0__effective_truth",
+      "index": 31,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__5",
+      "base_time": 5,
+      "clause_id": "c0__effective_truth",
+      "index": 32,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__6",
+      "base_time": 6,
+      "clause_id": "c0__effective_truth",
+      "index": 33,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__7",
+      "base_time": 7,
+      "clause_id": "c0__effective_truth",
+      "index": 34,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__effective_truth__8",
+      "base_time": 8,
+      "clause_id": "c0__effective_truth",
+      "index": 35,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__0",
+      "base_time": 0,
+      "clause_id": "c0__verdict",
+      "index": 36,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__1",
+      "base_time": 1,
+      "clause_id": "c0__verdict",
+      "index": 37,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__2",
+      "base_time": 2,
+      "clause_id": "c0__verdict",
+      "index": 38,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__3",
+      "base_time": 3,
+      "clause_id": "c0__verdict",
+      "index": 39,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__4",
+      "base_time": 4,
+      "clause_id": "c0__verdict",
+      "index": 40,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__5",
+      "base_time": 5,
+      "clause_id": "c0__verdict",
+      "index": 41,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__6",
+      "base_time": 6,
+      "clause_id": "c0__verdict",
+      "index": 42,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__7",
+      "base_time": 7,
+      "clause_id": "c0__verdict",
+      "index": 43,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__c0__verdict__8",
+      "base_time": 8,
+      "clause_id": "c0__verdict",
+      "index": 44,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__0",
+      "base_time": 0,
+      "clause_id": "composition_verdict",
+      "index": 45,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__1",
+      "base_time": 1,
+      "clause_id": "composition_verdict",
+      "index": 46,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__2",
+      "base_time": 2,
+      "clause_id": "composition_verdict",
+      "index": 47,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__3",
+      "base_time": 3,
+      "clause_id": "composition_verdict",
+      "index": 48,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__4",
+      "base_time": 4,
+      "clause_id": "composition_verdict",
+      "index": 49,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__5",
+      "base_time": 5,
+      "clause_id": "composition_verdict",
+      "index": 50,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__6",
+      "base_time": 6,
+      "clause_id": "composition_verdict",
+      "index": 51,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__7",
+      "base_time": 7,
+      "clause_id": "composition_verdict",
+      "index": 52,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "domain__composition_verdict__8",
+      "base_time": 8,
+      "clause_id": "composition_verdict",
+      "index": 53,
+      "role": "ENUM_DOMAIN",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__initial_state__t0",
+      "base_time": 0,
+      "clause_id": "c0__initial_state",
+      "index": 54,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__initial_clear_count__t0",
+      "base_time": 0,
+      "clause_id": "c0__initial_clear_count",
+      "index": 55,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__bind_position_uncertainty__t0",
+      "base_time": 0,
+      "clause_id": "c0__bind_position_uncertainty",
+      "index": 56,
+      "role": "FORMULA",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__bind_response_time__t0",
+      "base_time": 0,
+      "clause_id": "c0__bind_response_time",
+      "index": 57,
+      "role": "FORMULA",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__bind_deceleration__t0",
+      "base_time": 0,
+      "clause_id": "c0__bind_deceleration",
+      "index": 58,
+      "role": "FORMULA",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__bind_position_epsilon__t0",
+      "base_time": 0,
+      "clause_id": "c0__bind_position_epsilon",
+      "index": 59,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__bind_speed_epsilon__t0",
+      "base_time": 0,
+      "clause_id": "c0__bind_speed_epsilon",
+      "index": 60,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__bind_time_epsilon__t0",
+      "base_time": 0,
+      "clause_id": "c0__bind_time_epsilon",
+      "index": 61,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__bind_predicate_maximum_age__t0",
+      "base_time": 0,
+      "clause_id": "c0__bind_predicate_maximum_age",
+      "index": 62,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__bind_release_threshold__t0",
+      "base_time": 0,
+      "clause_id": "c0__bind_release_threshold",
+      "index": 63,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t0",
+      "base_time": 0,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 64,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t1",
+      "base_time": 1,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 65,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t2",
+      "base_time": 2,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 66,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t3",
+      "base_time": 3,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 67,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t4",
+      "base_time": 4,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 68,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t5",
+      "base_time": 5,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 69,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t6",
+      "base_time": 6,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 70,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t7",
+      "base_time": 7,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 71,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_timestamp_nonnegative__t8",
+      "base_time": 8,
+      "clause_id": "c0__input_timestamp_nonnegative",
+      "index": 72,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t0",
+      "base_time": 0,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 73,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t1",
+      "base_time": 1,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 74,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t2",
+      "base_time": 2,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 75,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t3",
+      "base_time": 3,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 76,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t4",
+      "base_time": 4,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 77,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t5",
+      "base_time": 5,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 78,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t6",
+      "base_time": 6,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 79,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t7",
+      "base_time": 7,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 80,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_timestamp_nonnegative__t8",
+      "base_time": 8,
+      "clause_id": "c0__input_fact_timestamp_nonnegative",
+      "index": 81,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t0",
+      "base_time": 0,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 82,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t1",
+      "base_time": 1,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 83,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t2",
+      "base_time": 2,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 84,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t3",
+      "base_time": 3,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 85,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t4",
+      "base_time": 4,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 86,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t5",
+      "base_time": 5,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 87,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t6",
+      "base_time": 6,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 88,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t7",
+      "base_time": 7,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 89,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_fact_age_nonnegative__t8",
+      "base_time": 8,
+      "clause_id": "c0__input_fact_age_nonnegative",
+      "index": 90,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t0",
+      "base_time": 0,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 91,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t1",
+      "base_time": 1,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 92,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t2",
+      "base_time": 2,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 93,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t3",
+      "base_time": 3,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 94,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t4",
+      "base_time": 4,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 95,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t5",
+      "base_time": 5,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 96,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t6",
+      "base_time": 6,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 97,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t7",
+      "base_time": 7,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 98,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__input_speed_nonnegative__t8",
+      "base_time": 8,
+      "clause_id": "c0__input_speed_nonnegative",
+      "index": 99,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t0",
+      "base_time": 0,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 100,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t1",
+      "base_time": 1,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 101,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t2",
+      "base_time": 2,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 102,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t3",
+      "base_time": 3,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 103,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t4",
+      "base_time": 4,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 104,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t5",
+      "base_time": 5,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 105,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t6",
+      "base_time": 6,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 106,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t7",
+      "base_time": 7,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 107,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__effective_truth_from_freshness_and_epistemic__t8",
+      "base_time": 8,
+      "clause_id": "c0__effective_truth_from_freshness_and_epistemic",
+      "index": 108,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_lifecycle_transition__t0",
+      "base_time": 0,
+      "clause_id": "c0__generated_lifecycle_transition",
+      "index": 109,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_lifecycle_transition__t1",
+      "base_time": 1,
+      "clause_id": "c0__generated_lifecycle_transition",
+      "index": 110,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_lifecycle_transition__t2",
+      "base_time": 2,
+      "clause_id": "c0__generated_lifecycle_transition",
+      "index": 111,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_lifecycle_transition__t3",
+      "base_time": 3,
+      "clause_id": "c0__generated_lifecycle_transition",
+      "index": 112,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_lifecycle_transition__t4",
+      "base_time": 4,
+      "clause_id": "c0__generated_lifecycle_transition",
+      "index": 113,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_lifecycle_transition__t5",
+      "base_time": 5,
+      "clause_id": "c0__generated_lifecycle_transition",
+      "index": 114,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_lifecycle_transition__t6",
+      "base_time": 6,
+      "clause_id": "c0__generated_lifecycle_transition",
+      "index": 115,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_lifecycle_transition__t7",
+      "base_time": 7,
+      "clause_id": "c0__generated_lifecycle_transition",
+      "index": 116,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_clear_counter_transition__t0",
+      "base_time": 0,
+      "clause_id": "c0__generated_clear_counter_transition",
+      "index": 117,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_clear_counter_transition__t1",
+      "base_time": 1,
+      "clause_id": "c0__generated_clear_counter_transition",
+      "index": 118,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_clear_counter_transition__t2",
+      "base_time": 2,
+      "clause_id": "c0__generated_clear_counter_transition",
+      "index": 119,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_clear_counter_transition__t3",
+      "base_time": 3,
+      "clause_id": "c0__generated_clear_counter_transition",
+      "index": 120,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_clear_counter_transition__t4",
+      "base_time": 4,
+      "clause_id": "c0__generated_clear_counter_transition",
+      "index": 121,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_clear_counter_transition__t5",
+      "base_time": 5,
+      "clause_id": "c0__generated_clear_counter_transition",
+      "index": 122,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_clear_counter_transition__t6",
+      "base_time": 6,
+      "clause_id": "c0__generated_clear_counter_transition",
+      "index": 123,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_clear_counter_transition__t7",
+      "base_time": 7,
+      "clause_id": "c0__generated_clear_counter_transition",
+      "index": 124,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_verdict__t0",
+      "base_time": 0,
+      "clause_id": "c0__generated_verdict",
+      "index": 125,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_verdict__t1",
+      "base_time": 1,
+      "clause_id": "c0__generated_verdict",
+      "index": 126,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_verdict__t2",
+      "base_time": 2,
+      "clause_id": "c0__generated_verdict",
+      "index": 127,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_verdict__t3",
+      "base_time": 3,
+      "clause_id": "c0__generated_verdict",
+      "index": 128,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_verdict__t4",
+      "base_time": 4,
+      "clause_id": "c0__generated_verdict",
+      "index": 129,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_verdict__t5",
+      "base_time": 5,
+      "clause_id": "c0__generated_verdict",
+      "index": 130,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_verdict__t6",
+      "base_time": 6,
+      "clause_id": "c0__generated_verdict",
+      "index": 131,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_verdict__t7",
+      "base_time": 7,
+      "clause_id": "c0__generated_verdict",
+      "index": 132,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_entry_violation__t0",
+      "base_time": 0,
+      "clause_id": "c0__generated_entry_violation",
+      "index": 133,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_entry_violation__t1",
+      "base_time": 1,
+      "clause_id": "c0__generated_entry_violation",
+      "index": 134,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_entry_violation__t2",
+      "base_time": 2,
+      "clause_id": "c0__generated_entry_violation",
+      "index": 135,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_entry_violation__t3",
+      "base_time": 3,
+      "clause_id": "c0__generated_entry_violation",
+      "index": 136,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_entry_violation__t4",
+      "base_time": 4,
+      "clause_id": "c0__generated_entry_violation",
+      "index": 137,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_entry_violation__t5",
+      "base_time": 5,
+      "clause_id": "c0__generated_entry_violation",
+      "index": 138,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_entry_violation__t6",
+      "base_time": 6,
+      "clause_id": "c0__generated_entry_violation",
+      "index": 139,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_entry_violation__t7",
+      "base_time": 7,
+      "clause_id": "c0__generated_entry_violation",
+      "index": 140,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_speed_violation__t0",
+      "base_time": 0,
+      "clause_id": "c0__generated_speed_violation",
+      "index": 141,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_speed_violation__t1",
+      "base_time": 1,
+      "clause_id": "c0__generated_speed_violation",
+      "index": 142,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_speed_violation__t2",
+      "base_time": 2,
+      "clause_id": "c0__generated_speed_violation",
+      "index": 143,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_speed_violation__t3",
+      "base_time": 3,
+      "clause_id": "c0__generated_speed_violation",
+      "index": 144,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_speed_violation__t4",
+      "base_time": 4,
+      "clause_id": "c0__generated_speed_violation",
+      "index": 145,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_speed_violation__t5",
+      "base_time": 5,
+      "clause_id": "c0__generated_speed_violation",
+      "index": 146,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_speed_violation__t6",
+      "base_time": 6,
+      "clause_id": "c0__generated_speed_violation",
+      "index": 147,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_speed_violation__t7",
+      "base_time": 7,
+      "clause_id": "c0__generated_speed_violation",
+      "index": 148,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_deadlock_violation__t0",
+      "base_time": 0,
+      "clause_id": "c0__generated_deadlock_violation",
+      "index": 149,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_deadlock_violation__t1",
+      "base_time": 1,
+      "clause_id": "c0__generated_deadlock_violation",
+      "index": 150,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_deadlock_violation__t2",
+      "base_time": 2,
+      "clause_id": "c0__generated_deadlock_violation",
+      "index": 151,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_deadlock_violation__t3",
+      "base_time": 3,
+      "clause_id": "c0__generated_deadlock_violation",
+      "index": 152,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_deadlock_violation__t4",
+      "base_time": 4,
+      "clause_id": "c0__generated_deadlock_violation",
+      "index": 153,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_deadlock_violation__t5",
+      "base_time": 5,
+      "clause_id": "c0__generated_deadlock_violation",
+      "index": 154,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_deadlock_violation__t6",
+      "base_time": 6,
+      "clause_id": "c0__generated_deadlock_violation",
+      "index": 155,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_deadlock_violation__t7",
+      "base_time": 7,
+      "clause_id": "c0__generated_deadlock_violation",
+      "index": 156,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_progress_permission__t0",
+      "base_time": 0,
+      "clause_id": "c0__generated_progress_permission",
+      "index": 157,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_progress_permission__t1",
+      "base_time": 1,
+      "clause_id": "c0__generated_progress_permission",
+      "index": 158,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_progress_permission__t2",
+      "base_time": 2,
+      "clause_id": "c0__generated_progress_permission",
+      "index": 159,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_progress_permission__t3",
+      "base_time": 3,
+      "clause_id": "c0__generated_progress_permission",
+      "index": 160,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_progress_permission__t4",
+      "base_time": 4,
+      "clause_id": "c0__generated_progress_permission",
+      "index": 161,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_progress_permission__t5",
+      "base_time": 5,
+      "clause_id": "c0__generated_progress_permission",
+      "index": 162,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_progress_permission__t6",
+      "base_time": 6,
+      "clause_id": "c0__generated_progress_permission",
+      "index": 163,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__generated_progress_permission__t7",
+      "base_time": 7,
+      "clause_id": "c0__generated_progress_permission",
+      "index": 164,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__bind__zone_entry_x__t0",
+      "base_time": 0,
+      "clause_id": "c0__derive__bind__zone_entry_x",
+      "index": 165,
+      "role": "FORMULA",
+      "source_refs": [
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__bind__stop_margin__t0",
+      "base_time": 0,
+      "clause_id": "c0__derive__bind__stop_margin",
+      "index": 166,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__bind__factor_two__t0",
+      "base_time": 0,
+      "clause_id": "c0__derive__bind__factor_two",
+      "index": 167,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__bind__zero_speed__t0",
+      "base_time": 0,
+      "clause_id": "c0__derive__bind__zero_speed",
+      "index": 168,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stop_position__t0",
+      "base_time": 0,
+      "clause_id": "c0__derive__output__stop_position",
+      "index": 169,
+      "role": "FORMULA",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1",
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t0",
+      "base_time": 0,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 170,
+      "role": "FORMULA",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t0__0",
+      "base_time": 0,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 171,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t1",
+      "base_time": 1,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 172,
+      "role": "FORMULA",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t1__0",
+      "base_time": 1,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 173,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t2",
+      "base_time": 2,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 174,
+      "role": "FORMULA",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t2__0",
+      "base_time": 2,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 175,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t3",
+      "base_time": 3,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 176,
+      "role": "FORMULA",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t3__0",
+      "base_time": 3,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 177,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t4",
+      "base_time": 4,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 178,
+      "role": "FORMULA",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t4__0",
+      "base_time": 4,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 179,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t5",
+      "base_time": 5,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 180,
+      "role": "FORMULA",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t5__0",
+      "base_time": 5,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 181,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t6",
+      "base_time": 6,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 182,
+      "role": "FORMULA",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t6__0",
+      "base_time": 6,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 183,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t7",
+      "base_time": 7,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 184,
+      "role": "FORMULA",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t7__0",
+      "base_time": 7,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 185,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__c0__derive__output__stopping_distance__t8",
+      "base_time": 8,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 186,
+      "role": "FORMULA",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "side__c0__derive__output__stopping_distance__t8__0",
+      "base_time": 8,
+      "clause_id": "c0__derive__output__stopping_distance",
+      "index": 187,
+      "role": "DEFINEDNESS",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C0__t0",
+      "base_time": 0,
+      "clause_id": "compose_select__C0",
+      "index": 188,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C0__t1",
+      "base_time": 1,
+      "clause_id": "compose_select__C0",
+      "index": 189,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C0__t2",
+      "base_time": 2,
+      "clause_id": "compose_select__C0",
+      "index": 190,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C0__t3",
+      "base_time": 3,
+      "clause_id": "compose_select__C0",
+      "index": 191,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C0__t4",
+      "base_time": 4,
+      "clause_id": "compose_select__C0",
+      "index": 192,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C0__t5",
+      "base_time": 5,
+      "clause_id": "compose_select__C0",
+      "index": 193,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C0__t6",
+      "base_time": 6,
+      "clause_id": "compose_select__C0",
+      "index": 194,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_select__C0__t7",
+      "base_time": 7,
+      "clause_id": "compose_select__C0",
+      "index": 195,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__STOP__t0",
+      "base_time": 0,
+      "clause_id": "compose_action__STOP",
+      "index": 196,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__STOP__t1",
+      "base_time": 1,
+      "clause_id": "compose_action__STOP",
+      "index": 197,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__STOP__t2",
+      "base_time": 2,
+      "clause_id": "compose_action__STOP",
+      "index": 198,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__STOP__t3",
+      "base_time": 3,
+      "clause_id": "compose_action__STOP",
+      "index": 199,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__STOP__t4",
+      "base_time": 4,
+      "clause_id": "compose_action__STOP",
+      "index": 200,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__STOP__t5",
+      "base_time": 5,
+      "clause_id": "compose_action__STOP",
+      "index": 201,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__STOP__t6",
+      "base_time": 6,
+      "clause_id": "compose_action__STOP",
+      "index": 202,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__STOP__t7",
+      "base_time": 7,
+      "clause_id": "compose_action__STOP",
+      "index": 203,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__CREEP__t0",
+      "base_time": 0,
+      "clause_id": "compose_action__CREEP",
+      "index": 204,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__CREEP__t1",
+      "base_time": 1,
+      "clause_id": "compose_action__CREEP",
+      "index": 205,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__CREEP__t2",
+      "base_time": 2,
+      "clause_id": "compose_action__CREEP",
+      "index": 206,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__CREEP__t3",
+      "base_time": 3,
+      "clause_id": "compose_action__CREEP",
+      "index": 207,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__CREEP__t4",
+      "base_time": 4,
+      "clause_id": "compose_action__CREEP",
+      "index": 208,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__CREEP__t5",
+      "base_time": 5,
+      "clause_id": "compose_action__CREEP",
+      "index": 209,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__CREEP__t6",
+      "base_time": 6,
+      "clause_id": "compose_action__CREEP",
+      "index": 210,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__CREEP__t7",
+      "base_time": 7,
+      "clause_id": "compose_action__CREEP",
+      "index": 211,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__PROCEED__t0",
+      "base_time": 0,
+      "clause_id": "compose_action__PROCEED",
+      "index": 212,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__PROCEED__t1",
+      "base_time": 1,
+      "clause_id": "compose_action__PROCEED",
+      "index": 213,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__PROCEED__t2",
+      "base_time": 2,
+      "clause_id": "compose_action__PROCEED",
+      "index": 214,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__PROCEED__t3",
+      "base_time": 3,
+      "clause_id": "compose_action__PROCEED",
+      "index": 215,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__PROCEED__t4",
+      "base_time": 4,
+      "clause_id": "compose_action__PROCEED",
+      "index": 216,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__PROCEED__t5",
+      "base_time": 5,
+      "clause_id": "compose_action__PROCEED",
+      "index": 217,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__PROCEED__t6",
+      "base_time": 6,
+      "clause_id": "compose_action__PROCEED",
+      "index": 218,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_action__PROCEED__t7",
+      "base_time": 7,
+      "clause_id": "compose_action__PROCEED",
+      "index": 219,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_hard_conflict__t0",
+      "base_time": 0,
+      "clause_id": "compose_hard_conflict",
+      "index": 220,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_hard_conflict__t1",
+      "base_time": 1,
+      "clause_id": "compose_hard_conflict",
+      "index": 221,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_hard_conflict__t2",
+      "base_time": 2,
+      "clause_id": "compose_hard_conflict",
+      "index": 222,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_hard_conflict__t3",
+      "base_time": 3,
+      "clause_id": "compose_hard_conflict",
+      "index": 223,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_hard_conflict__t4",
+      "base_time": 4,
+      "clause_id": "compose_hard_conflict",
+      "index": 224,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_hard_conflict__t5",
+      "base_time": 5,
+      "clause_id": "compose_hard_conflict",
+      "index": 225,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_hard_conflict__t6",
+      "base_time": 6,
+      "clause_id": "compose_hard_conflict",
+      "index": 226,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_hard_conflict__t7",
+      "base_time": 7,
+      "clause_id": "compose_hard_conflict",
+      "index": 227,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_review_required__t0",
+      "base_time": 0,
+      "clause_id": "compose_review_required",
+      "index": 228,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_review_required__t1",
+      "base_time": 1,
+      "clause_id": "compose_review_required",
+      "index": 229,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_review_required__t2",
+      "base_time": 2,
+      "clause_id": "compose_review_required",
+      "index": 230,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_review_required__t3",
+      "base_time": 3,
+      "clause_id": "compose_review_required",
+      "index": 231,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_review_required__t4",
+      "base_time": 4,
+      "clause_id": "compose_review_required",
+      "index": 232,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_review_required__t5",
+      "base_time": 5,
+      "clause_id": "compose_review_required",
+      "index": 233,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_review_required__t6",
+      "base_time": 6,
+      "clause_id": "compose_review_required",
+      "index": 234,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_review_required__t7",
+      "base_time": 7,
+      "clause_id": "compose_review_required",
+      "index": 235,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_false_deadlock__t0",
+      "base_time": 0,
+      "clause_id": "compose_false_deadlock",
+      "index": 236,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_false_deadlock__t1",
+      "base_time": 1,
+      "clause_id": "compose_false_deadlock",
+      "index": 237,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_false_deadlock__t2",
+      "base_time": 2,
+      "clause_id": "compose_false_deadlock",
+      "index": 238,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_false_deadlock__t3",
+      "base_time": 3,
+      "clause_id": "compose_false_deadlock",
+      "index": 239,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_false_deadlock__t4",
+      "base_time": 4,
+      "clause_id": "compose_false_deadlock",
+      "index": 240,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_false_deadlock__t5",
+      "base_time": 5,
+      "clause_id": "compose_false_deadlock",
+      "index": 241,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_false_deadlock__t6",
+      "base_time": 6,
+      "clause_id": "compose_false_deadlock",
+      "index": 242,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_false_deadlock__t7",
+      "base_time": 7,
+      "clause_id": "compose_false_deadlock",
+      "index": 243,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_verdict__t0",
+      "base_time": 0,
+      "clause_id": "compose_verdict",
+      "index": 244,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_verdict__t1",
+      "base_time": 1,
+      "clause_id": "compose_verdict",
+      "index": 245,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_verdict__t2",
+      "base_time": 2,
+      "clause_id": "compose_verdict",
+      "index": 246,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_verdict__t3",
+      "base_time": 3,
+      "clause_id": "compose_verdict",
+      "index": 247,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_verdict__t4",
+      "base_time": 4,
+      "clause_id": "compose_verdict",
+      "index": 248,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_verdict__t5",
+      "base_time": 5,
+      "clause_id": "compose_verdict",
+      "index": 249,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_verdict__t6",
+      "base_time": 6,
+      "clause_id": "compose_verdict",
+      "index": 250,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    {
+      "assertion_id": "clause__compose_verdict__t7",
+      "base_time": 7,
+      "clause_id": "compose_verdict",
+      "index": 251,
+      "role": "FORMULA",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    }
+  ],
+  "clauses": {
+    "c0__bind_deceleration": {
+      "assertion_ids": [
+        "clause__c0__bind_deceleration__t0"
+      ],
+      "assertion_indices": [
+        58
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: deceleration.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d"
+      ]
+    },
+    "c0__bind_position_epsilon": {
+      "assertion_ids": [
+        "clause__c0__bind_position_epsilon__t0"
+      ],
+      "assertion_indices": [
+        59
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: position_epsilon.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c0__bind_position_uncertainty": {
+      "assertion_ids": [
+        "clause__c0__bind_position_uncertainty__t0"
+      ],
+      "assertion_indices": [
+        56
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: position_uncertainty.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d"
+      ]
+    },
+    "c0__bind_predicate_maximum_age": {
+      "assertion_ids": [
+        "clause__c0__bind_predicate_maximum_age__t0"
+      ],
+      "assertion_indices": [
+        62
+      ],
+      "compiled": true,
+      "description": "Predicate freshness contract.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    "c0__bind_release_threshold": {
+      "assertion_ids": [
+        "clause__c0__bind_release_threshold__t0"
+      ],
+      "assertion_indices": [
+        63
+      ],
+      "compiled": true,
+      "description": "Consecutive clear frames required for release.",
+      "enforcement": "INITIAL",
+      "kind": "RELEASE",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    "c0__bind_response_time": {
+      "assertion_ids": [
+        "clause__c0__bind_response_time__t0"
+      ],
+      "assertion_indices": [
+        57
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: response_time.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d"
+      ]
+    },
+    "c0__bind_speed_epsilon": {
+      "assertion_ids": [
+        "clause__c0__bind_speed_epsilon__t0"
+      ],
+      "assertion_indices": [
+        60
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: speed_epsilon.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c0__bind_time_epsilon": {
+      "assertion_ids": [
+        "clause__c0__bind_time_epsilon__t0"
+      ],
+      "assertion_indices": [
+        61
+      ],
+      "compiled": true,
+      "description": "Evidence-bound high-level quantity: time_epsilon.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c0__derive__bind__factor_two": {
+      "assertion_ids": [
+        "clause__c0__derive__bind__factor_two__t0"
+      ],
+      "assertion_indices": [
+        167
+      ],
+      "compiled": true,
+      "description": "Bind sourced derivation input factor_two.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c0__derive__bind__stop_margin": {
+      "assertion_ids": [
+        "clause__c0__derive__bind__stop_margin__t0"
+      ],
+      "assertion_indices": [
+        166
+      ],
+      "compiled": true,
+      "description": "Bind sourced derivation input stop_margin.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    "c0__derive__bind__zero_speed": {
+      "assertion_ids": [
+        "clause__c0__derive__bind__zero_speed__t0"
+      ],
+      "assertion_indices": [
+        168
+      ],
+      "compiled": true,
+      "description": "Bind sourced derivation input zero_speed.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c0__derive__bind__zone_entry_x": {
+      "assertion_ids": [
+        "clause__c0__derive__bind__zone_entry_x__t0"
+      ],
+      "assertion_indices": [
+        165
+      ],
+      "compiled": true,
+      "description": "Bind sourced derivation input zone_entry_x.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    "c0__derive__output__stop_position": {
+      "assertion_ids": [
+        "clause__c0__derive__output__stop_position__t0"
+      ],
+      "assertion_indices": [
+        169
+      ],
+      "compiled": true,
+      "description": "Symbolically replay typed derivation output stop_position.",
+      "enforcement": "INITIAL",
+      "kind": "BOUND",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1",
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d"
+      ]
+    },
+    "c0__derive__output__stopping_distance": {
+      "assertion_ids": [
+        "clause__c0__derive__output__stopping_distance__t0",
+        "side__c0__derive__output__stopping_distance__t0__0",
+        "clause__c0__derive__output__stopping_distance__t1",
+        "side__c0__derive__output__stopping_distance__t1__0",
+        "clause__c0__derive__output__stopping_distance__t2",
+        "side__c0__derive__output__stopping_distance__t2__0",
+        "clause__c0__derive__output__stopping_distance__t3",
+        "side__c0__derive__output__stopping_distance__t3__0",
+        "clause__c0__derive__output__stopping_distance__t4",
+        "side__c0__derive__output__stopping_distance__t4__0",
+        "clause__c0__derive__output__stopping_distance__t5",
+        "side__c0__derive__output__stopping_distance__t5__0",
+        "clause__c0__derive__output__stopping_distance__t6",
+        "side__c0__derive__output__stopping_distance__t6__0",
+        "clause__c0__derive__output__stopping_distance__t7",
+        "side__c0__derive__output__stopping_distance__t7__0",
+        "clause__c0__derive__output__stopping_distance__t8",
+        "side__c0__derive__output__stopping_distance__t8__0"
+      ],
+      "assertion_indices": [
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187
+      ],
+      "compiled": true,
+      "description": "Symbolically replay typed derivation output stopping_distance.",
+      "enforcement": "EACH_FRAME",
+      "kind": "BOUND",
+      "source_refs": [
+        "simulated-model-sha256:b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0",
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1",
+        "PUBLIC-SYNTHETIC-CROSSWALK-GEOMETRY-v0.1"
+      ]
+    },
+    "c0__effective_truth_from_freshness_and_epistemic": {
+      "assertion_ids": [
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t0",
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t1",
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t2",
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t3",
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t4",
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t5",
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t6",
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t7",
+        "clause__c0__effective_truth_from_freshness_and_epistemic__t8"
+      ],
+      "assertion_indices": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108
+      ],
+      "compiled": true,
+      "description": "Future, stale, or policy-disallowed epistemic evidence fails to UNKNOWN; otherwise raw truth is preserved.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ACTIVATION",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    "c0__generated_clear_counter_transition": {
+      "assertion_ids": [
+        "clause__c0__generated_clear_counter_transition__t0",
+        "clause__c0__generated_clear_counter_transition__t1",
+        "clause__c0__generated_clear_counter_transition__t2",
+        "clause__c0__generated_clear_counter_transition__t3",
+        "clause__c0__generated_clear_counter_transition__t4",
+        "clause__c0__generated_clear_counter_transition__t5",
+        "clause__c0__generated_clear_counter_transition__t6",
+        "clause__c0__generated_clear_counter_transition__t7"
+      ],
+      "assertion_indices": [
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124
+      ],
+      "compiled": true,
+      "description": "Generated consecutive-clear counter transition.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "RELEASE",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    "c0__generated_deadlock_violation": {
+      "assertion_ids": [
+        "clause__c0__generated_deadlock_violation__t0",
+        "clause__c0__generated_deadlock_violation__t1",
+        "clause__c0__generated_deadlock_violation__t2",
+        "clause__c0__generated_deadlock_violation__t3",
+        "clause__c0__generated_deadlock_violation__t4",
+        "clause__c0__generated_deadlock_violation__t5",
+        "clause__c0__generated_deadlock_violation__t6",
+        "clause__c0__generated_deadlock_violation__t7"
+      ],
+      "assertion_indices": [
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156
+      ],
+      "compiled": true,
+      "description": "Generated false-deadlock violation predicate.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "PROGRESS",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    "c0__generated_entry_violation": {
+      "assertion_ids": [
+        "clause__c0__generated_entry_violation__t0",
+        "clause__c0__generated_entry_violation__t1",
+        "clause__c0__generated_entry_violation__t2",
+        "clause__c0__generated_entry_violation__t3",
+        "clause__c0__generated_entry_violation__t4",
+        "clause__c0__generated_entry_violation__t5",
+        "clause__c0__generated_entry_violation__t6",
+        "clause__c0__generated_entry_violation__t7"
+      ],
+      "assertion_indices": [
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140
+      ],
+      "compiled": true,
+      "description": "Generated stop-position violation predicate.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "INVARIANT",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    "c0__generated_lifecycle_transition": {
+      "assertion_ids": [
+        "clause__c0__generated_lifecycle_transition__t0",
+        "clause__c0__generated_lifecycle_transition__t1",
+        "clause__c0__generated_lifecycle_transition__t2",
+        "clause__c0__generated_lifecycle_transition__t3",
+        "clause__c0__generated_lifecycle_transition__t4",
+        "clause__c0__generated_lifecycle_transition__t5",
+        "clause__c0__generated_lifecycle_transition__t6",
+        "clause__c0__generated_lifecycle_transition__t7"
+      ],
+      "assertion_indices": [
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116
+      ],
+      "compiled": true,
+      "description": "Generated activation, maintenance, release, reactivation, expiry, and fallback transition.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    "c0__generated_progress_permission": {
+      "assertion_ids": [
+        "clause__c0__generated_progress_permission__t0",
+        "clause__c0__generated_progress_permission__t1",
+        "clause__c0__generated_progress_permission__t2",
+        "clause__c0__generated_progress_permission__t3",
+        "clause__c0__generated_progress_permission__t4",
+        "clause__c0__generated_progress_permission__t5",
+        "clause__c0__generated_progress_permission__t6",
+        "clause__c0__generated_progress_permission__t7"
+      ],
+      "assertion_indices": [
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164
+      ],
+      "compiled": true,
+      "description": "Generated progress permission from post-step lifecycle.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "PROGRESS",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    "c0__generated_speed_violation": {
+      "assertion_ids": [
+        "clause__c0__generated_speed_violation__t0",
+        "clause__c0__generated_speed_violation__t1",
+        "clause__c0__generated_speed_violation__t2",
+        "clause__c0__generated_speed_violation__t3",
+        "clause__c0__generated_speed_violation__t4",
+        "clause__c0__generated_speed_violation__t5",
+        "clause__c0__generated_speed_violation__t6",
+        "clause__c0__generated_speed_violation__t7"
+      ],
+      "assertion_indices": [
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148
+      ],
+      "compiled": true,
+      "description": "Generated dynamic stopping-bound violation predicate.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "BOUND",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    "c0__generated_verdict": {
+      "assertion_ids": [
+        "clause__c0__generated_verdict__t0",
+        "clause__c0__generated_verdict__t1",
+        "clause__c0__generated_verdict__t2",
+        "clause__c0__generated_verdict__t3",
+        "clause__c0__generated_verdict__t4",
+        "clause__c0__generated_verdict__t5",
+        "clause__c0__generated_verdict__t6",
+        "clause__c0__generated_verdict__t7"
+      ],
+      "assertion_indices": [
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132
+      ],
+      "compiled": true,
+      "description": "Generated fail-closed per-frame verdict with conflict and review precedence.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    "c0__initial_clear_count": {
+      "assertion_ids": [
+        "clause__c0__initial_clear_count__t0"
+      ],
+      "assertion_indices": [
+        55
+      ],
+      "compiled": true,
+      "description": "Initial consecutive-clear counter.",
+      "enforcement": "INITIAL",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    "c0__initial_state": {
+      "assertion_ids": [
+        "clause__c0__initial_state__t0"
+      ],
+      "assertion_indices": [
+        54
+      ],
+      "compiled": true,
+      "description": "Initial lifecycle state from the high-level policy.",
+      "enforcement": "INITIAL",
+      "kind": "LIFECYCLE",
+      "source_refs": [
+        "GUARDSYNTH-SIM-CORRIDOR-SYSTEM-REQUIREMENT-v0.1"
+      ]
+    },
+    "c0__input_fact_age_nonnegative": {
+      "assertion_ids": [
+        "clause__c0__input_fact_age_nonnegative__t0",
+        "clause__c0__input_fact_age_nonnegative__t1",
+        "clause__c0__input_fact_age_nonnegative__t2",
+        "clause__c0__input_fact_age_nonnegative__t3",
+        "clause__c0__input_fact_age_nonnegative__t4",
+        "clause__c0__input_fact_age_nonnegative__t5",
+        "clause__c0__input_fact_age_nonnegative__t6",
+        "clause__c0__input_fact_age_nonnegative__t7",
+        "clause__c0__input_fact_age_nonnegative__t8"
+      ],
+      "assertion_indices": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90
+      ],
+      "compiled": true,
+      "description": "Finite-trace conformance input domain.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ASSUMPTION",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c0__input_fact_timestamp_nonnegative": {
+      "assertion_ids": [
+        "clause__c0__input_fact_timestamp_nonnegative__t0",
+        "clause__c0__input_fact_timestamp_nonnegative__t1",
+        "clause__c0__input_fact_timestamp_nonnegative__t2",
+        "clause__c0__input_fact_timestamp_nonnegative__t3",
+        "clause__c0__input_fact_timestamp_nonnegative__t4",
+        "clause__c0__input_fact_timestamp_nonnegative__t5",
+        "clause__c0__input_fact_timestamp_nonnegative__t6",
+        "clause__c0__input_fact_timestamp_nonnegative__t7",
+        "clause__c0__input_fact_timestamp_nonnegative__t8"
+      ],
+      "assertion_indices": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+      ],
+      "compiled": true,
+      "description": "Finite-trace conformance input domain.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ASSUMPTION",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c0__input_speed_nonnegative": {
+      "assertion_ids": [
+        "clause__c0__input_speed_nonnegative__t0",
+        "clause__c0__input_speed_nonnegative__t1",
+        "clause__c0__input_speed_nonnegative__t2",
+        "clause__c0__input_speed_nonnegative__t3",
+        "clause__c0__input_speed_nonnegative__t4",
+        "clause__c0__input_speed_nonnegative__t5",
+        "clause__c0__input_speed_nonnegative__t6",
+        "clause__c0__input_speed_nonnegative__t7",
+        "clause__c0__input_speed_nonnegative__t8"
+      ],
+      "assertion_indices": [
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99
+      ],
+      "compiled": true,
+      "description": "Finite-trace conformance input domain.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ASSUMPTION",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "c0__input_timestamp_nonnegative": {
+      "assertion_ids": [
+        "clause__c0__input_timestamp_nonnegative__t0",
+        "clause__c0__input_timestamp_nonnegative__t1",
+        "clause__c0__input_timestamp_nonnegative__t2",
+        "clause__c0__input_timestamp_nonnegative__t3",
+        "clause__c0__input_timestamp_nonnegative__t4",
+        "clause__c0__input_timestamp_nonnegative__t5",
+        "clause__c0__input_timestamp_nonnegative__t6",
+        "clause__c0__input_timestamp_nonnegative__t7",
+        "clause__c0__input_timestamp_nonnegative__t8"
+      ],
+      "assertion_indices": [
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72
+      ],
+      "compiled": true,
+      "description": "Finite-trace conformance input domain.",
+      "enforcement": "EACH_FRAME",
+      "kind": "ASSUMPTION",
+      "source_refs": [
+        "P0B-CONTROLLED-CONFORMANCE-ORACLE-v0"
+      ]
+    },
+    "compose_action__CREEP": {
+      "assertion_ids": [
+        "clause__compose_action__CREEP__t0",
+        "clause__compose_action__CREEP__t1",
+        "clause__compose_action__CREEP__t2",
+        "clause__compose_action__CREEP__t3",
+        "clause__compose_action__CREEP__t4",
+        "clause__compose_action__CREEP__t5",
+        "clause__compose_action__CREEP__t6",
+        "clause__compose_action__CREEP__t7"
+      ],
+      "assertion_indices": [
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211
+      ],
+      "compiled": true,
+      "description": "An action is admissible exactly when every selected contract permits it.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    "compose_action__PROCEED": {
+      "assertion_ids": [
+        "clause__compose_action__PROCEED__t0",
+        "clause__compose_action__PROCEED__t1",
+        "clause__compose_action__PROCEED__t2",
+        "clause__compose_action__PROCEED__t3",
+        "clause__compose_action__PROCEED__t4",
+        "clause__compose_action__PROCEED__t5",
+        "clause__compose_action__PROCEED__t6",
+        "clause__compose_action__PROCEED__t7"
+      ],
+      "assertion_indices": [
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219
+      ],
+      "compiled": true,
+      "description": "An action is admissible exactly when every selected contract permits it.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    "compose_action__STOP": {
+      "assertion_ids": [
+        "clause__compose_action__STOP__t0",
+        "clause__compose_action__STOP__t1",
+        "clause__compose_action__STOP__t2",
+        "clause__compose_action__STOP__t3",
+        "clause__compose_action__STOP__t4",
+        "clause__compose_action__STOP__t5",
+        "clause__compose_action__STOP__t6",
+        "clause__compose_action__STOP__t7"
+      ],
+      "assertion_indices": [
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203
+      ],
+      "compiled": true,
+      "description": "An action is admissible exactly when every selected contract permits it.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    "compose_false_deadlock": {
+      "assertion_ids": [
+        "clause__compose_false_deadlock__t0",
+        "clause__compose_false_deadlock__t1",
+        "clause__compose_false_deadlock__t2",
+        "clause__compose_false_deadlock__t3",
+        "clause__compose_false_deadlock__t4",
+        "clause__compose_false_deadlock__t5",
+        "clause__compose_false_deadlock__t6",
+        "clause__compose_false_deadlock__t7"
+      ],
+      "assertion_indices": [
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243
+      ],
+      "compiled": true,
+      "description": "Flag an empty admissible set when an independently supplied safe-progress action exists.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "PROGRESS",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    "compose_hard_conflict": {
+      "assertion_ids": [
+        "clause__compose_hard_conflict__t0",
+        "clause__compose_hard_conflict__t1",
+        "clause__compose_hard_conflict__t2",
+        "clause__compose_hard_conflict__t3",
+        "clause__compose_hard_conflict__t4",
+        "clause__compose_hard_conflict__t5",
+        "clause__compose_hard_conflict__t6",
+        "clause__compose_hard_conflict__t7"
+      ],
+      "assertion_indices": [
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227
+      ],
+      "compiled": true,
+      "description": "Empty action intersection from at least two selected hard contracts is a conflict.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    "compose_review_required": {
+      "assertion_ids": [
+        "clause__compose_review_required__t0",
+        "clause__compose_review_required__t1",
+        "clause__compose_review_required__t2",
+        "clause__compose_review_required__t3",
+        "clause__compose_review_required__t4",
+        "clause__compose_review_required__t5",
+        "clause__compose_review_required__t6",
+        "clause__compose_review_required__t7"
+      ],
+      "assertion_indices": [
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235
+      ],
+      "compiled": true,
+      "description": "Other empty action intersections require review and are not silently scalarized.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    "compose_select__C0": {
+      "assertion_ids": [
+        "clause__compose_select__C0__t0",
+        "clause__compose_select__C0__t1",
+        "clause__compose_select__C0__t2",
+        "clause__compose_select__C0__t3",
+        "clause__compose_select__C0__t4",
+        "clause__compose_select__C0__t5",
+        "clause__compose_select__C0__t6",
+        "clause__compose_select__C0__t7"
+      ],
+      "assertion_indices": [
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195
+      ],
+      "compiled": true,
+      "description": "Select a live contract only when no live higher/explicit dominator exists.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    },
+    "compose_verdict": {
+      "assertion_ids": [
+        "clause__compose_verdict__t0",
+        "clause__compose_verdict__t1",
+        "clause__compose_verdict__t2",
+        "clause__compose_verdict__t3",
+        "clause__compose_verdict__t4",
+        "clause__compose_verdict__t5",
+        "clause__compose_verdict__t6",
+        "clause__compose_verdict__t7"
+      ],
+      "assertion_indices": [
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251
+      ],
+      "compiled": true,
+      "description": "Conflict, unsupported, review, then validated precedence across selected-action and child verdicts.",
+      "enforcement": "EACH_TRANSITION",
+      "kind": "FALLBACK",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    }
+  },
+  "compiler_version": "eblc-core-smt-compiler-v0.1",
+  "grammar_version": "eblc-core-v0.1",
+  "model_id": "synthetic_crosswalk_frontend_v0_1__materialized__indexed_collection__bundle_core",
+  "queries": {
+    "composed_model_satisfiable": {
+      "base_assertion_count": 252,
+      "classification": "CONSISTENCY",
+      "description": "The high-level bundle, generated Core, and composition constraints admit a bounded execution.",
+      "smt_file": "QUERY_composed_model_satisfiable.smt2",
+      "source_refs": [
+        "P0B-SYNTHETIC-COMPOSITION-POLICY-v0"
+      ]
+    }
+  }
+}

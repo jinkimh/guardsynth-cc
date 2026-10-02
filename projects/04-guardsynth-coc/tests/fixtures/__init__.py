@@ -1,0 +1,1 @@
+"""Shared GuardSynth test fixtures."""

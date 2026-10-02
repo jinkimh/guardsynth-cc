@@ -1,0 +1,23 @@
+{
+  "association_review_status_counts": {
+    "INSUFFICIENT_SOURCE_GEOMETRY_FOR_ASSOCIATION": 15,
+    "REVIEWABLE_ACTOR_ASSOCIATION_LANE_MISSING": 10,
+    "REVIEWABLE_ACTOR_ASSOCIATION_ZONE_MISSING": 7,
+    "REVIEWABLE_CONTROL_ASSOCIATION_LANE_MISSING": 7
+  },
+  "audit_version": "guardsynth-m16-attrition-reserve-event-audit-v0.1",
+  "audited_reserve_event_count": 39,
+  "calibration_5_of_5_event_count": 39,
+  "claim_scope": "ATTRITION_RESERVE_EVENT_EVIDENCE_NOT_SCENE_ELIGIBILITY_OR_SAFETY",
+  "final_outcome_assigned_count": 0,
+  "newly_eligible_scene_count": 0,
+  "recorded_rig_binding_available_event_count": 39,
+  "reserve_tier_counts": {
+    "MATERIALIZED_CLIP_SECONDARY_EVENT": 10,
+    "NEW_CLIP_PRIMARY": 22,
+    "NEW_CLIP_SECONDARY_EVENT": 7
+  },
+  "source_complete_8_of_8_event_count": 0,
+  "temporal_closure_event_count": 39,
+  "verified_coordinate_transform_event_count": 0
+}

@@ -1,0 +1,36 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "discussion-section-2026-09-30-001",
+  "documents": [
+    {
+      "language": "ko",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_DISCUSSION_V01_KO.md",
+      "source_sha256": "eab9889e7691fda6b4c3065a3cbcb9557801304bab55f6bf480c3ed584f8b5da",
+      "pdf": "ieee-access-discussion-v01-ko.pdf",
+      "figures": 0,
+      "code_boxes": 0,
+      "tables": 0,
+      "links": []
+    },
+    {
+      "language": "en",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_DISCUSSION_V01_EN.md",
+      "source_sha256": "fbfcc25f0565026d2d74a3a36f437c838289db9989ed8e1698161e133157e33c",
+      "pdf": "ieee-access-discussion-v01-en.pdf",
+      "figures": 0,
+      "code_boxes": 0,
+      "tables": 0,
+      "links": []
+    }
+  ],
+  "purpose": "Approved four-part Discussion; no added experiment or performance claim",
+  "source_sha256": {
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/paper/render_experiments.py": "7f2ec3a4f292008f195551c67334cc1d9538d4bea81f543f8783d0cd33512d7c",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/discussion-section-2026-09-30-001/build_snapshot.py": "8004cf266e5128b8574cceabab4aad269ac041a57fa1914d48f620f711421165",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/paper/IEEE_ACCESS_EXPERIMENTS_V01_KO.md": "67553daf344460dca64afd2f8e382d3f06305518a521e103658d2f48b57fa45b",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/paper/IEEE_ACCESS_EXPERIMENTS_SUPPLEMENT_V01_KO.md": "2cfbc279bd3a7e54a8d5a2236976ab5c347787f6cb170f0f366520491b4db281",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/projects/04-guardsynth-coc/paper/IEEE_ACCESS_METHODOLOGY_V01_KO.md": "70f50d64f0179d34c5be1b9a652311a56201edf59bf062e5b171c2891d8dc033"
+  },
+  "reproduce": "Run build_snapshot.py with Python before finalizing RESULT.json; each generated TeX independently compiles twice with XeLaTeX.",
+  "scope": "Standalone Korean and English Discussion; main.tex and frozen experiments unchanged"
+}

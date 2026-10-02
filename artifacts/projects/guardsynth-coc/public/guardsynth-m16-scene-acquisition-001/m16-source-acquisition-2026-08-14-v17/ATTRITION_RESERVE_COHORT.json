@@ -1,0 +1,23 @@
+{
+  "claim_scope": "ATTRITION_RESERVE_CANDIDATES_NOT_SCENE_ELIGIBILITY_OR_SAFETY",
+  "classified_event_count": 98,
+  "classified_unique_clip_count": 81,
+  "estimated_additional_sensor_package_count": 88,
+  "final_outcome_assigned_count": 0,
+  "new_clip_event_count": 29,
+  "new_clip_materialization_count": 22,
+  "new_clip_secondary_event_count": 7,
+  "new_clip_unique_chunk_count": 22,
+  "outcome_status": "REVIEW_REQUIRED_SENSOR_VALIDATION",
+  "primary_shortlist_event_count": 59,
+  "primary_shortlist_unique_clip_count": 59,
+  "reserve_event_count": 39,
+  "reserve_event_unique_clip_count": 32,
+  "reserve_slice_routing_counts": {
+    "FOLLOWING_CUT_IN": 13,
+    "PEDESTRIAN_CYCLIST_YIELD": 13,
+    "STOP_SIGNALS": 13
+  },
+  "reused_materialized_clip_event_count": 10,
+  "selection_version": "guardsynth-m16-attrition-reserve-v0.1"
+}

@@ -1,0 +1,21 @@
+{
+  "project_id": "guardsynth-coc",
+  "status": "VERIFIED_DRAFT_FOR_AUTHOR_REVIEW",
+  "checks": [
+    {
+      "language": "ko",
+      "pages": 1,
+      "full_source_text_preserved": true,
+      "metric_values_checked": 6,
+      "pdf_sha256": "e2d34ce848300f64d23119d9731240f537309de34eb3d459116d494374afdf0d"
+    },
+    {
+      "language": "en",
+      "pages": 1,
+      "full_source_text_preserved": true,
+      "metric_values_checked": 6,
+      "pdf_sha256": "3af609fb80f0e7825f7be1cd12b7f8afbd967cc3c0135195375c129190e70243"
+    }
+  ],
+  "visual_review": "Both single-page PDFs inspected; legible text, no clipping."
+}

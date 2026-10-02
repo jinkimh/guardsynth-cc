@@ -1,0 +1,18 @@
+[2K
+Verifying formula 1 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-held_memory_conflict-gap2/terminal.q:1
+[2K -- Formula is satisfied.
+[2K
+Verifying formula 2 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-held_memory_conflict-gap2/terminal.q:2
+[2K -- Formula is NOT satisfied.
+[2K
+Verifying formula 3 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-held_memory_conflict-gap2/terminal.q:3
+[2K -- Formula is NOT satisfied.
+[2K
+Verifying formula 4 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-held_memory_conflict-gap2/terminal.q:4
+[2K -- Formula is NOT satisfied.
+[2K
+Verifying formula 5 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-held_memory_conflict-gap2/terminal.q:5
+[2K -- Formula is NOT satisfied.
+[2K
+Verifying formula 6 at /home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-held_memory_conflict-gap2/terminal.q:6
+[2K -- Formula is NOT satisfied.

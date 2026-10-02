@@ -11,15 +11,34 @@ _LINK = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 
 
 def documentation_files(root: Path) -> tuple[Path, ...]:
-    files = [root / "README.md", root / "PROJECT_STRUCTURE.md"]
-    for base in ("docs", "src", "cli", "experiments", "artifacts"):
-        for path in (root / base).rglob("*.md"):
-            relative = path.relative_to(root).as_posix()
-            if "docs/internal" in relative or "docs/notes" in relative:
-                continue
-            if base in {"src", "cli", "experiments", "artifacts"} and path.name != "README.md":
-                continue
-            files.append(path)
+    files = [
+        root / "README.md",
+        root / "PROJECT_STRUCTURE.md",
+        root / "PROJECTS.md",
+        root / "AGENTS.md",
+    ]
+    files.extend((root / "docs/architecture").glob("*.md"))
+    files.extend((root / "governance").glob("*/README.md"))
+    files.extend((root / "projects").glob("*/README.md"))
+    files.extend((root / "projects").glob("*/STATUS.md"))
+    files.extend((root / "projects").glob("*/results/RESULT_INDEX.md"))
+    files.extend((root / "platforms").glob("*/README.md"))
+    files.extend((root / "platforms").glob("*/STATUS.md"))
+    files.extend((root / "platforms").glob("*/results/RESULT_INDEX.md"))
+    for relative in (
+        "apps/research_portal/README.md",
+        "archive/README.md",
+        "cli/README.md",
+        "data/README.md",
+        "experiments/README.md",
+        "platforms/README.md",
+        "projects/README.md",
+        "runtime/README.md",
+        "src/README.md",
+        "tests/README.md",
+        "third_party/README.md",
+    ):
+        files.append(root / relative)
     return tuple(sorted(set(path for path in files if path.is_file())))
 
 

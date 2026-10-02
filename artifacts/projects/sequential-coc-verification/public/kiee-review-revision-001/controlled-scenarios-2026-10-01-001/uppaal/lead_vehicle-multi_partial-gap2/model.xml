@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE nta PUBLIC "-//Uppaal Team//DTD Flat System 1.1//EN" "http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd">
+
+<nta><declaration>// transition_contract_version=sequential-coc-transition-v2
+// transition_contract_sha256=e3f5e437dab029813dd4d5e515426e1079e29ce385108aea60665d87d130c4f8
+// UNKNOWN evidence is represented only by known=false,value=false.
+const int STOP_OR_HOLD = 0;
+const int YIELD_OR_DECELERATE = 1;
+const int ACCELERATE_OR_PROCEED = 2;
+const int MAINTAIN_SPEED = 3;
+const int INACTIVE = 0;
+const int ACTIVE = 1;
+const int SATISFIED_WAIT_RELEASE = 2;
+const int RELEASED = 3;
+const int VIOLATED = 4;
+const int UNKNOWN = 5;
+const int EVENT_COUNT = 5;
+const int event_action[5] = {0, 0, 3, 3, 2};
+const int event_target[5] = {1, 2, 1, 1, 1};
+const bool satisfaction_known[5] = {true, false, false, false, false};
+const bool satisfaction_value[5] = {true, false, false, false, false};
+const bool release_known[5] = {false, false, false, false, true};
+const bool release_value[5] = {false, false, false, false, true};
+const bool parse_unknown[5] = {false, false, false, false, false};
+int[0,5] idx = 0;
+int[-1,5] first_violation_idx = -1;
+int[0,5] observer_state = INACTIVE;
+bool active = false;
+int[0,3] active_action = MAINTAIN_SPEED;
+int[0,2] active_target = 0;
+bool active_satisfaction_known = false;
+bool active_satisfaction_value = false;
+bool active_release_known = false;
+bool active_release_value = false;
+bool sticky_hold_go_conflict = false;
+bool sticky_premature_release = false;
+bool sticky_order_violation = false;
+bool sticky_stale_obligation = false;
+bool sticky_unknown = false;
+bool sticky_parse_status_unknown = false;
+bool sticky_overlapping_obligation = false;
+bool sticky_stale_release_unknown = false;
+bool sticky_active_release_unknown = false;
+bool sticky_active_satisfaction_unknown = false;
+
+void remember_first_violation() {
+  if (first_violation_idx == -1)
+    first_violation_idx = idx;
+}
+
+void step() {
+  bool event_violation = false;
+  bool same_obligation = false;
+  int action = event_action[idx];
+
+  if (parse_unknown[idx]) {
+    sticky_unknown = true;
+    sticky_parse_status_unknown = true;
+    observer_state = UNKNOWN;
+  }
+
+  if (action == STOP_OR_HOLD || action == YIELD_OR_DECELERATE) {
+    if (!active) {
+      if (release_known[idx] &amp;&amp; release_value[idx]) {
+        observer_state = RELEASED;
+      } else {
+        active = true;
+        active_action = action;
+        active_target = event_target[idx];
+        active_satisfaction_known = satisfaction_known[idx];
+        active_satisfaction_value = satisfaction_value[idx];
+        active_release_known = release_known[idx];
+        active_release_value = release_value[idx];
+        if (active_satisfaction_known &amp;&amp; active_satisfaction_value)
+          observer_state = SATISFIED_WAIT_RELEASE;
+        else
+          observer_state = ACTIVE;
+      }
+    } else {
+      same_obligation = active_action == action &amp;&amp; active_target == event_target[idx];
+      if (!same_obligation) {
+        sticky_unknown = true;
+        sticky_overlapping_obligation = true;
+        observer_state = UNKNOWN;
+      } else {
+        if (satisfaction_known[idx]) {
+          active_satisfaction_known = true;
+          active_satisfaction_value = satisfaction_value[idx];
+        }
+        if (release_known[idx]) {
+          active_release_known = true;
+          active_release_value = release_value[idx];
+        }
+        if (active_release_known &amp;&amp; active_release_value) {
+          sticky_stale_obligation = true;
+          event_violation = true;
+          observer_state = VIOLATED;
+        } else if (!active_release_known) {
+          sticky_unknown = true;
+          sticky_stale_release_unknown = true;
+          observer_state = UNKNOWN;
+        } else if (active_satisfaction_known &amp;&amp; active_satisfaction_value) {
+          observer_state = SATISFIED_WAIT_RELEASE;
+        } else {
+          observer_state = ACTIVE;
+        }
+      }
+    }
+  } else if (action == ACCELERATE_OR_PROCEED) {
+    if (!active) {
+      if (release_known[idx] &amp;&amp; !release_value[idx]) {
+        sticky_premature_release = true;
+        event_violation = true;
+      }
+      if (satisfaction_known[idx] &amp;&amp; !satisfaction_value[idx]) {
+        sticky_order_violation = true;
+        event_violation = true;
+      }
+      if (event_violation)
+        observer_state = VIOLATED;
+      else
+        observer_state = INACTIVE;
+    } else {
+      if (satisfaction_known[idx]) {
+        active_satisfaction_known = true;
+        active_satisfaction_value = satisfaction_value[idx];
+      }
+      if (release_known[idx]) {
+        active_release_known = true;
+        active_release_value = release_value[idx];
+      }
+      if (release_known[idx] &amp;&amp; !release_value[idx]) {
+        sticky_premature_release = true;
+        event_violation = true;
+      } else if (active_release_known &amp;&amp; !active_release_value) {
+        sticky_hold_go_conflict = true;
+        event_violation = true;
+      }
+      if (active_satisfaction_known &amp;&amp; !active_satisfaction_value) {
+        sticky_order_violation = true;
+        event_violation = true;
+      }
+      if (event_violation) {
+        observer_state = VIOLATED;
+      } else if (!active_release_known || !active_satisfaction_known) {
+        sticky_unknown = true;
+        if (!active_release_known)
+          sticky_active_release_unknown = true;
+        if (!active_satisfaction_known)
+          sticky_active_satisfaction_unknown = true;
+        observer_state = UNKNOWN;
+      } else {
+        active = false;
+        observer_state = RELEASED;
+      }
+    }
+  } else {
+    if (!active) {
+      observer_state = INACTIVE;
+    } else {
+      if (satisfaction_known[idx]) {
+        active_satisfaction_known = true;
+        active_satisfaction_value = satisfaction_value[idx];
+      }
+      if (release_known[idx]) {
+        active_release_known = true;
+        active_release_value = release_value[idx];
+      }
+      if (active_release_known &amp;&amp; active_release_value) {
+        active = false;
+        observer_state = RELEASED;
+      } else if (!active_release_known) {
+        sticky_unknown = true;
+        sticky_active_release_unknown = true;
+        observer_state = UNKNOWN;
+      } else if (active_satisfaction_known &amp;&amp; active_satisfaction_value) {
+        observer_state = SATISFIED_WAIT_RELEASE;
+      } else {
+        observer_state = ACTIVE;
+      }
+    }
+  }
+
+  if (event_violation)
+    remember_first_violation();
+  if (sticky_hold_go_conflict || sticky_premature_release ||
+      sticky_order_violation || sticky_stale_obligation)
+    observer_state = VIOLATED;
+  else if (parse_unknown[idx])
+    observer_state = UNKNOWN;
+}</declaration><template><name>ObserverTemplate</name><location id="run" x="0" y="0"><name x="0" y="-30">Run</name><label kind="comments" x="0" y="30">event[0]=lead_vehicle-multi_partial-gap2:e0</label><label kind="comments" x="0" y="45">event[1]=lead_vehicle-multi_partial-gap2:e1</label><label kind="comments" x="0" y="60">event[2]=lead_vehicle-multi_partial-gap2:e2</label><label kind="comments" x="0" y="75">event[3]=lead_vehicle-multi_partial-gap2:e3</label><label kind="comments" x="0" y="90">event[4]=lead_vehicle-multi_partial-gap2:e4</label><committed /></location><location id="done" x="240" y="0"><name x="240" y="-30">Done</name></location><init ref="run" /><transition><source ref="run" /><target ref="run" /><label kind="guard" x="40" y="30">idx &lt; EVENT_COUNT</label><label kind="assignment" x="40" y="50">step(), idx++</label></transition><transition><source ref="run" /><target ref="done" /><label kind="guard" x="100" y="-20">idx == EVENT_COUNT</label></transition></template><system>Observer = ObserverTemplate();
+system Observer;</system></nta>

@@ -1,0 +1,13 @@
+{
+  "audited_semantics": [
+    "because_of",
+    "action_target",
+    "containment",
+    "optional_environment_and_containment_layers"
+  ],
+  "claim_scope": "M16_CASCADE_STRUCTURED_LINK_SOURCE_AUDIT_NOT_UNANNOTATED_GEOMETRY_EXPERT_EFFECT_OR_VEHICLE_SAFETY",
+  "interpretation": "Structured links are source evidence only where present and temporally active; optional missing layers are not inferred.",
+  "readme_sha256": "e047272e5532258a7a88b74bc12e62cbfc093efc29e96e5a0722295f22c0e3dd",
+  "schema_version": "2.0.0",
+  "source": "NVIDIA-CASCADE-local-licensed-snapshot"
+}

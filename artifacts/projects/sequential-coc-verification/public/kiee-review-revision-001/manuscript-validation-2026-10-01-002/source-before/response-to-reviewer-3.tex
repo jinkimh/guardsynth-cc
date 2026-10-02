@@ -1,0 +1,363 @@
+\input{response-style}
+
+\begin{document}
+
+\responsefront{3}{연속 CoC의 상태 검사 접근은 의미가 있으나 사전 확인한 합성자료, 낮은 자연 검토 일치도와 자연 모순 부재가 실증을 제한한다. 의미 추출과 구현 설명, 관련 연구, 독립 시험과 평가 근거를 보완할 필요가 있다.}
+
+\clearpage
+
+\begin{reviewitem}{R3-1. 시간 논리와 실행 중 검증 연구}
+
+\begin{reviewercomment}
+
+2장 관련 연구: 시간 논리 기반 모니터링, runtime verification 및 기존 자율주행 설명 검증 연구를 보완하고, 제안 방법과 기존 연구의 기술적 차이를 구체적으로 제시해 주십시오.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+시간 논리·실행 중 검증 문헌과 자율주행 설명·계획 연구를 1차 자료로 확인하고 비교표를 추가했습니다. 설명 충실성 연구(Is VLA Reasoning Faithful?)와 VLADriveBench의 관측·개입 검증도 저장 주석의 조건 연결 검사와 비교했습니다. 관측 경로 검사, LTL/TLTL 유한 접두 경로 판정, UPPAAL 상태 질의와 본 논문의 조건별 CoC 근거 추적을 입력·표현·출력으로 비교했습니다. 상태 기억·세 값·최초 위반은 기존 기술임을 인정했습니다.
+
+본 논문의 미상은 해제 증거 부족이며 LTL의 미래 연장에 대한 미결정과 같다고 하지 않습니다. 도구 사용과 응용 대상의 차이를 설명하고, 직접 비교하지 않은 연구에 대한 우월성이나 최초 주장은 제거했습니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:related}; \mloc{tab:related-position}; \mloc{sec:discussion}; 아래 발췌: 2쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+본 논문의 미상은 명시된 해제 증거의 부족을 뜻하며, 미래 연장 전체에 대한 LTL 세 값 의미론을 구현했다는 뜻은 아니다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R3-2. 자료 버전·생성과 선정 절차}
+
+\begin{reviewercomment}
+
+3장 데이터와 증거 범위: CoC-Nusc 자료의 버전, CoC 생성 모델과 프롬프트, 품질 점수 산정 방법 및 403개 사건 중 290개와 134개를 선정한 기준을 명시해 제시. 또한 자연 검토 대상 27개 장면의 선정 절차를 구체적으로 설명.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+상류 모델 계열 Qwen/Qwen3.5-35B-A3B와 실행별 checkpoint revision/prompt/config 미복원을 분리했습니다. 품질 점수 산정·상류 임계값은 미복원이며 하류는 저장된 quality\_pass를 사용합니다. 403→290은 품질 통과, 290→134는 방향이 불명확하거나 복합인 156건 제외입니다. 134=130탐지 대상+4이미 만족과 기본 판정125+4+5를 함께 설명했습니다.
+
+자연 후보는 stop/yield→accelerate/proceed 23쌍·15장면에서 가장 이른 창을 선택하고, 후보와 겹치지 않는 12비교장면을 대응 선정했습니다. 비무작위 선정과 미복원 원 생성 정보 때문에 완전 재현·대표성은 주장하지 않습니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:provenance}; \mloc{tab:provenance}; \mloc{sec:selection}; \mloc{sec:threats}; 아래 발췌: 2쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+원 생성 prompt/config와 품질 점수 계산ㆍ상류 임계값도 미복원이다. 하류의 저장된 quality\_pass 불리언을 사용하는 선정 절차는 복원했다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R3-3. P4 검사기 처리 오류 분리}
+
+\begin{reviewercomment}
+
+4장 문제 정의의 P1–P4: P1–P3은 주석 내용의 불일치인 반면, P4는 검사기의 상태 갱신 오류에 해당됨. P4를 주석의 일관성 오류와 분리하여 별도의 ‘검사기 처리 오류’로 정의하고 관련 수식과 설명을 수정.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+지적을 수용했습니다. P1–P3은 입력 행동·요구 문제, P4는 해제 확인 뒤 의무를 상태에 남기는 처리 오류 F4로 구분했습니다. 기존 40쌍도 P1–P3 30쌍과 P4 10처리 시험으로 분리했습니다. 기존 전체 이력의 40/40을 단일한 자연 주석 오류 검출 정확도로 쓰지 않습니다.
+
+기존 구현에서 P4를 일으키는 같은 대상 정지·양보 반복과 release=true 입력도 설명했습니다. 조건별 보완 모델의 144건에는 P4 고장 주입이 없으므로 그 성공을 모든 P1–P4 지원 성능으로 소급하지 않습니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:error-types}; \mloc{tab:regression}; \mloc{sec:regression-results}; \mloc{sec:conclusion}; 아래 발췌: 3쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+P1--P3은 입력의 행동ㆍ요구 관계에 관한 문제이고 P4는 검사기의 상태 처리 문제다. P5는 별도의 속도 반응 시간 검사다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R3-4. 미상·장면 종료·복수 의무}
+
+\begin{reviewercomment}
+
+4장 및 5장의 Unknown 처리: 종료 조건이 Unknown일 때 요구가 언제까지 유지되는지, 장면 종료 시 어떻게 처리되는지, 복수 요구가 동시에 활성화된 경우 어떤 순서로 판정하는지를 상태전이표나 의사코드로 제시.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+조건별 갱신식, 전이표와 의사코드를 추가했습니다. 미상 입력은 이전의 알려진 증거를 덮지 않고 의무를 유지하며, 참 해제 증거가 해당 의무만 지웁니다. 같은 대상·조건과 증거 유효 구간 유지라는 가정을 명시했습니다. 대기 중 미상 자체는 문제로 누적하지 않지만 해제 미상 상태에서 GO하면 근거 부족입니다. 이전 단일 의무 모델의 미상 누적 정책과는 구분했습니다.
+
+선행조건 위반을 먼저, 의무 등록 순서대로 검사합니다. 모순과 근거 부족을 각각 기록하되 최종 모순을 우선하고 대표 최초 의무는 한 개를 반환합니다. 장면 끝에서 미래 해제를 못 봤다는 이유만으로 모순을 추가하지 않고 연결 근거 없는 다음 장면은 초기화합니다. 객체 추적·증거 만료와 임의의 다중 선행조건은 미지원입니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:semantics}; \mloc{sec:models}; \mloc{tab:transition}; \mloc{lst:condition-step}; \mloc{sec:threats}; 아래 발췌: 3쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+장면 끝에서 미래의 해제를 보지 못했다는 사실만으로 모순을 추가하지 않는다. 미상 상태에서 진행하지 않은 대기열은 현재 검사 범위에서 문제 없음으로 끝날 수 있다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R3-5. 추출 주체와 전체 변환 사례}
+
+\begin{reviewercomment}
+
+5장 제안 방법: CoC 문장에서 행동, 지속 요구, 종료 조건, 선행조건 및 True/False/Unknown 증거를 추출하는 주체와 방법이 불분명. 수작업, 규칙 기반 또는 LLM 기반 여부와 세부 알고리즘을 명시하고, 실제 CoC 문장이 검사 입력으로 변환되는 전체 사례를 추가.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+기존 자동 경로는 제한된 영어 정규식 파서이며 LLM 기반이 아님을 명시했습니다. 동의 행동 표현·명령 문맥·조건 구절·단계 연결·대상 누락·모호 처리와 자동 증거 미상 정책을 기술했습니다. 새 통제 자료의 원문과 프레임은 설계자가 동시에 작성한 것으로 별도 경로입니다.
+
+저장된 보행자 원문 세 변형을 사건→원문 구절/위치→조건별 프레임→활성 의무→모순/근거 부족/양립까지 연결했습니다. 이는 실제 보존 파일의 작성 문장이며 자연 자료에서 발견한 모순은 아닙니다. 자동 텍스트 경로 전144건 미상을 그대로 보고하고, 보완 프레임 모델을 자동 NLP로 설명하지 않았습니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:extraction}; \mloc{tab:worked-example}; \mloc{sec:first-results}; \mloc{sec:threats}; 아래 발췌: 4쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+자동 파서에 같은 문장을 넣는 경로는 증거를 확정하지 않으므로 작성 프레임의 성공과 혼합하지 않는다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R3-6. Python–UPPAAL 상태·속성과 일치성}
+
+\begin{reviewercomment}
+
+5장 Python–UPPAAL 구현: Python 검사기와 UPPAAL 모델의 상태, 전이 조건, 검증 속성 및 질의식을 구체적으로 제시. 두 구현의 결과 비교가 규칙의 타당성 검증이 아니라 구현 일치성 확인이라는 점도 더욱 명확히 기술.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+기존 단일 의무 상태/누적 정책과 보완 active[K], known[K], 선행조건·인덱스·bad/missing·최초 위치/의무를 분리했습니다. committed Run의 자기 전이와 Done 종료 조건, 실제 다섯 queries.q를 제시했습니다. 기록된 XML·질의·stdout/stderr·해시를 연결했습니다.
+
+기존 Python–UPPAAL의 판정·오류 종류·최초 위치는 144/144 일치하지만 미상 사유는 최초 반례에서24차이가 있었습니다. 종료 질의로 뒤의 누적 사유까지 읽으면144/144 일치함을 진단했고 원 파서는 변경하지 않았습니다. 이 비교는 같은 규칙의 구현 일치성이며 규칙·자연어 해석 자체의 독립 타당성 증명은 아닙니다. 정량 시간 시계가 없는 중심 모델도 명시했습니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:models}; \mloc{sec:queries}; \mloc{lst:queries}; \mloc{sec:agreement-results}; \mloc{tab:implementation}; 아래 발췌: 6쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+원 파서와 최초 로그는 보존했다. 이 출력 범위 진단을 48개 의미 불일치의 해결과 혼합하지 않는다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R3-7. 순환 검증과 독립 시험 요구}
+
+\begin{reviewercomment}
+
+6장 합성 시험 설계: 기대한 판정이 나오는 사례만 사전에 선별한 현재 절차는 순환적 검증의 가능성이 있음. 합성 자료 생성과 검사기 개발을 분리하고, 개발에 사용하지 않은 독립 시험 자료를 이용한 평가를 추가.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+기존40쌍의 선별 한계를 인정했습니다. 새144개는 기대 판정을 첫 실행 전에 고정하고 모든 조합을 실행하여 최초 실패48개를 보존했습니다. 결과에 맞는 사례만 선택하는 절차는 사용하지 않았습니다.
+
+다만 작성자와 구현 담당자의 역할은 분리되지 않았고, 보완 모델은 실패를 본 뒤 같은 사례로 개발·재시험했습니다. 따라서 개발 미사용 독립 시험 요구를 이번 결과로 충족했다고 답할 수 없습니다. 144/144는 개발 후 동일 사례 재시험이라고 표 제목부터 명시하고 적용 가능성 실증으로 주장을 제한했습니다. 외부 사람 gold나 독립 일반화 검증은 남은 한계입니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:legacy-test}; \mloc{sec:scenario-design}; \mloc{sec:retest-design}; \mloc{sec:retest-results}; \mloc{tab:failures}; \mloc{tab:retest}; \mloc{sec:threats}; 아래 발췌: 5쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+따라서 독립 일반화 성능이 아니며 R3의 개발 미사용 시험 요구를 충족한 결과로 제시하지 않는다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R3-8. 이력을 보는 비교기}
+
+\begin{reviewercomment}
+
+6장 비교 실험: 현재 사건만 보는 검사기는 정의상 사건 간 오류를 검출할 수 없음. 단순 history-aware rule checker, 유한상태기계 또는 temporal logic 기반 검사 등 보다 의미 있는 비교 방법을 추가할 필요가 있음(옵션).
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+완료된 이전1/3/5개 창과 별도 FSM 비교를 반영했습니다. 최초144건에서 일치는 현재 사건72, 이전 창84/90/90, 기존 전체 이력96, FSM144개이며 최초 위반과 간격0/2/6 결과도 함께 표시했습니다.
+
+현재 사건은 기억 제거 ablation입니다. 이전 창은 같은 기존 알고리즘의 창 변형이고 FSM은 조건별 프레임을 받습니다. 단일 의무 투영과 미상 정책의 차이도 결과 원인이므로 단순한 알고리즘 우위로 해석하지 않았습니다. UPPAAL도 FSM보다 정확하다고 주장하지 않습니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:scenario-design}; \mloc{tab:first-results}; \mloc{sec:first-results}; \mloc{sec:discussion}; 아래 발췌: 4쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+따라서 그 차이에는 기억 길이뿐 아니라 의무 표현 용량과 미상 누적 정책도 포함된다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R3-9. 선정·교육·합의와 낮은 κ}
+
+\begin{reviewercomment}
+
+6장 표10 및 7.3절 자연 표본 검토: 자동 후보15장면과 비교 장면12개를 선정한 기준, 검토자 자격과 교육, 판정 지침 및 합의 절차를 제시. 특히 Fleiss' κ가0.027로 낮게 나타난 원인을 분석하고, 항목별 판정 분포와 주요 불일치 사례를 함께 제시.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+후보/비교 선정 알고리즘과 재현된27개 ID 대응을 기술했습니다. 지침의 시간 요구·행동열·텍스트 범주와 외부 근거 미상 처리를 설명하고, 원CSV의 κ·항목별 일치율/불일치 수·검토자별 텍스트 분포를 추가했습니다. 텍스트는23/27 불일치, 모순10/0/1/1·해당 없음3/5/11/1건으로 라벨 적용 차이가 큽니다.
+
+원 메모에서 확인되는 시간 요구·조건/순서·선행 관계 정보 부족 등의 의견은 개별 해석으로 제시했습니다. 그러나 낮은 κ의 원인을 전문성·교육 탓으로 확정하거나 원인별 건수를 새로 만들지 않았습니다. 자격·교육·중재 이력과 합의 절차가 충분히 남아 있지 않고 합의 사유메모는0/27입니다. 재평가는 미실시이며 이 요구가 통제시험으로 해결됐다고 하지 않습니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:selection}; \mloc{sec:human-results}; \mloc{tab:agreement}; \mloc{tab:reviewer-distribution}; \mloc{sec:threats}; 아래 발췌: 6쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+이는 저장된 개별 의견이지 합의 원인의 전수 분석이 아니다. 현재 재분석으로 불일치의 질적 원인별 건수나 합의 형성 절차를 새로 확정하지 않았다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R3-10. 40/40 결과와 자연 성능 지표}
+
+\begin{reviewercomment}
+
+7.1절 및 표13: 40/40과20/40 결과는 일반적인 오류 검출 정확도가 아니라 사전에 정의한 규칙의 실행 결과임. 표 제목과 본문에서 이를 ‘검출 성능’으로 오해하지 않도록 표현을 수정하고, 가능하면 실제 모순·비모순 사례를 이용한 precision, recall 및 F1-score를 추가.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+기존표를 ``규칙 실행 회귀시험''으로 바꾸고 P1–P3 주석/구조화 규칙30쌍과 P4 처리10쌍으로 분리했습니다. 새144개의 최초 시험과 보완 재시험도 다른 표로 제시했습니다. 기존96/144에서 기대 모순72 중18미상, 기대 양립36 중30미상, 기대 근거 부족36 중36미상이라는 혼동 분포를 보고했습니다. 정상 오탐0/36만으로 성공을 강조하지 않았습니다.
+
+독립적인 실제 모순·비모순 정답은 확보하지 못했으므로 자연 precision, recall, F1은 미산출입니다. 작성 조합 시험의 분류 일치나 최초 위치 일치를 자연 성능으로 바꾸지 않고 모집단 신뢰구간도 만들지 않았습니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:aux-design}; \mloc{tab:regression}; \mloc{tab:first-results}; \mloc{sec:first-results}; \mloc{tab:retest}; \mloc{sec:threats}; 아래 발췌: 5쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+따라서 정상 오탐 0/36만 보고하면 정상 대부분을 판정하지 못한 사실을 숨긴다. 기존 자동 텍스트 경로는 모든 144건을 미상으로 판정했다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R3-11. 궤적 일치2·불일치7·미상18}
+
+\begin{reviewercomment}
+
+표15의 궤적 불일치 결과: 27개 장면 중 일치2건, 불일치7건, 미상18건으로 나타난 원인을 사례별로 분석. 미상 비율이 높으므로 현재 자료에서 시간적 일관성을 판단할 수 있는 범위도 명확히 기술.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+저장된 사건별 사유와 장면 판정을 재분석한 결과2/7/18이 재현됐고 장면별 이전 판정과의 차이는0이었습니다. 27장면 각각에 대해 행동 일치, 종방향 불일치, 문장 해석 미상, 지원 행동 부재, 관측 미상, 단계 시점/해제 근거 부족의 사건 건수를 익명 순번 표로 추가했습니다. 한 장면에 여러 사유가 겹치며 일부 행동 일치가 있어도 부족한 사건이 남으면 미상임을 설명했습니다.
+
+조건 해제나 단계 시점의 객체 증거를 속도 변화만으로 확정하지 않았습니다. 7불일치는 문장 간 모순이나 물리 안전의 독립 정답이 아닙니다. 새조건별 모델의 작성 증거가 이러한 자연 객체정보 부족을 해결했다는 주장도 하지 않습니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:trajectory-results}; \mloc{tab:trajectory-cases}; \mloc{sec:threats}; 아래 발췌: 6쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+종방향 행동 불일치가 있는 7건은 문장 사이의 모순이나 위험 주행의 독립 정답이 아니다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\section*{맺음말}
+
+심사 의견에 따라 의미 변환과 상태·질의 설명, 최초 실패와 재시험, 자료 출처 및 주장 범위를 구체화했습니다. 자연 오류 정확도와 독립 시험, 사람 신뢰도 개선이 미완료라는 한계는 유지했습니다. 이 답변서는 실제 개정 내용과 보존 근거에 대응하며 모든 요구를 독립 성능 검증으로 해결했다고 주장하지 않습니다.
+
+\end{document}

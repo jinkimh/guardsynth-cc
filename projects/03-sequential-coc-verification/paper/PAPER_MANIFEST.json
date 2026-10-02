@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "project_id": "sequential-coc-verification",
+  "papers": [
+    {
+      "paper_id": "paper-03-sequential-coc-verification",
+      "title": "Sequential CoC Verification with Lifecycle-Aware Contracts",
+      "status": "MANUSCRIPT_READY",
+      "media_type": "application/pdf",
+      "source_path": "paper/manuscript/latex-kiee-review-2022-coc-audit-10pages/main.pdf"
+    }
+  ]
+}

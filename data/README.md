@@ -1,5 +1,7 @@
 # Data
 
+Research consumers and license classes are recorded in [`OWNERSHIP.json`](OWNERSHIP.json).
+
 - `baseline/`: CPU baseline 재현용 CoC-NuScenes reasoning과 egomotion
 - `restricted/`: NVIDIA PhysicalAI AV 및 CASCADE 공식 자료, 라이선스와 내부 파생물
 

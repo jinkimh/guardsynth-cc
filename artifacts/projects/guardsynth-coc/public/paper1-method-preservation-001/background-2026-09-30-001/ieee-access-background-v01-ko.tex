@@ -1,0 +1,70 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=20mm,headheight=16pt]{geometry}
+\usepackage{fontspec,kotex,amsmath,booktabs,longtable,array,xcolor,hyperref,fancyhdr}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\setmainhangulfont{Noto Sans CJK KR}
+\setmonohangulfont{Noto Sans CJK KR}
+\definecolor{navy}{HTML}{173E59}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,pdftitle={GuardSynth: Background}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\emergencystretch}{4em}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small GuardSynth}
+\fancyhead[R]{\small Background · v0.1 · 2026-09-30}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\clubpenalty=10000\widowpenalty=10000
+\raggedbottom
+\begin{document}
+\section*{III. 배경}
+
+
+본 절에서는 시각적 행동 추론과 논리 명세를 이해하는 데 필요한 기존 개념을 정리한다. 시각언어모델과 Chain of Causation, 만족 가능성 기반 검증, 통제 자연어, 저랭크 적응 학습을 차례로 설명한다.\par
+
+\phantomsection\section*{A. 시각언어모델과 Chain of Causation}\addcontentsline{toc}{section}{A. 시각언어모델과 Chain of Causation}
+
+시각언어모델(Vision–Language Model, VLM)은 시각 정보와 텍스트를 함께 처리하여 장면에 관한 설명이나 응답을 생성한다. 시각·언어·행동 모델(Vision–Language–Action Model, VLA)은 이러한 처리를 행동 예측과 연결한다. Alpamayo-R1은 시각언어 기반 추론과 궤적 생성을 결합한 주행 모델이다. \href{\detokenize{https://arxiv.org/abs/2511.00088}}{[1]}\par
+
+Chain of Causation(CoC)은 행동 결정과 관련된 관찰, 판단 근거 및 행동을 인과적으로 연결하여 표현한다. Alpamayo-R1에서는 이러한 설명을 주행 행동에 대응시킨다. \href{\detokenize{https://arxiv.org/abs/2511.00088}}{[1]} 설명 구조를 예시하면 “전방 차량이 감속한다 \ensuremath{\rightarrow} 차량 간 간격이 줄어들 수 있다 \ensuremath{\rightarrow} 간격 확보를 위해 감속한다”와 같다. 이 예시는 행동의 이유를 서술하는 방식이며, 관찰 자료로부터 인과관계를 통계적으로 식별했다는 의미와는 구분된다.\par
+
+\phantomsection\section*{B. 논리 명세와 만족 가능성 기반 검증}\addcontentsline{toc}{section}{B. 논리 명세와 만족 가능성 기반 검증}
+
+논리 명세는 상태와 요구 조건을 변수, 술어 및 논리식으로 표현한다. 명제 만족 가능성 문제(SAT)는 논리식을 참으로 만드는 명제 변수의 값 할당이 존재하는지 묻는다. 이론 모듈로 만족 가능성 문제(SMT)는 산술 등의 배경 이론을 고려하여 논리식의 만족 가능성을 판단한다. \href{\detokenize{https://theory.stanford.edu/~barrett/pubs/BT18.pdf}}{[2]} Z3는 산술, 비트벡터, 배열, 미해석 함수 등의 이론을 지원하는 SMT 솔버이다. \href{\detokenize{https://doi.org/10.1007/978-3-540-78800-3_24}}{[3]}\par
+
+명세와 가정을 결합한 식을 \ensuremath{\Phi}, 확인하려는 속성을 P라고 하자. \ensuremath{\Phi}의 만족 가능성은 조건을 동시에 만족하는 모델의 존재를 뜻한다. 속성 검증은 반례를 나타내는 다음 식의 만족 가능성을 확인하는 방식으로 표현할 수 있다.\par
+
+\[\Phi \land \neg P\]
+
+이 식이 만족 가능하면 속성을 위반하는 모델이 존재한다. 만족 불가능하면 \ensuremath{\Phi}가 P를 함의한다. 다만 \ensuremath{\Phi} 자체가 모순이면 이러한 함의가 공허하게 성립하므로, 명세의 만족 가능성을 별도로 확인해야 한다. 시간에 따른 상태를 유한한 시점별 변수로 표현했다면 검증 결과도 해당 범위와 가정에 적용된다. 논리적 결론의 범위는 명세에 포함된 사실과 관계에 의해 정해진다. \href{\detokenize{https://theory.stanford.edu/~barrett/pubs/BT18.pdf}}{[2]}\par
+
+\phantomsection\section*{C. 통제 자연어}\addcontentsline{toc}{section}{C. 통제 자연어}
+
+통제 자연어(Controlled Natural Language, CNL)는 자연어를 기반으로 어휘, 문법 또는 의미 해석을 의도적으로 제한한 언어이다. 자연어의 가독성을 유지하면서 표현의 정밀성과 일관성을 높이는 데 사용된다. 문서 이해를 돕는 CNL과 형식적 표현에 대응하도록 설계된 CNL은 목적과 엄밀성 수준이 다르다. \href{\detokenize{https://aclanthology.org/J14-1005/}}{[4]}\par
+
+형식적 표현과 연결되는 CNL에서는 조건, 부정의 범위 및 논리적 관계에 대한 해석 규칙이 중요하다. 의미의 정밀성은 문장의 자연스러움만으로 결정되지 않으며, 허용된 표현과 그 해석을 얼마나 명확히 정의했는지에 달려 있다. 따라서 CNL의 성질을 설명할 때는 그 언어가 사용하는 문법과 의미 규칙을 함께 고려해야 한다. \href{\detokenize{https://aclanthology.org/J14-1005/}}{[4]}\par
+
+\newpage
+\phantomsection\section*{D. 저랭크 적응 학습}\addcontentsline{toc}{section}{D. 저랭크 적응 학습}
+
+LoRA(Low-Rank Adaptation)는 사전학습 가중치를 고정하고 저랭크 행렬로 표현한 변화량을 학습하는 미세조정 방법이다. 원래 가중치를 W\ensuremath{{}_0}라고 하면 다음과 같이 표현할 수 있다. \href{\detokenize{https://arxiv.org/abs/2106.09685}}{[5]}\par
+
+\[W = W_0 + \frac{\alpha}{r}BA\]
+
+W\ensuremath{{}_0}의 크기가 d × k일 때 학습 가능한 행렬 A와 B의 크기는 각각 r × k와 d × r이다. r은 저랭크 차원이고 \ensuremath{\alpha}는 크기 조절 계수이다. r이 충분히 작으면 각 대상 행렬의 학습 파라미터 수는 dk보다 작은 r(d + k)가 된다. LoRA는 이러한 분해를 통해 전체 가중치를 갱신하는 대신 적은 수의 파라미터로 사전학습 모델을 과제에 적응시킨다. \href{\detokenize{https://arxiv.org/abs/2106.09685}}{[5]}\par
+
+\phantomsection\section*{참고문헌}\addcontentsline{toc}{section}{참고문헌}
+
+[1] NVIDIA et al., “Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail,” arXiv:2511.00088, 2025, revised 2026. \href{\detokenize{https://arxiv.org/abs/2511.00088}}{원문}\par
+
+[2] C. Barrett and C. Tinelli, “Satisfiability Modulo Theories,” Handbook of Model Checking, pp. 305–343, 2018. \href{\detokenize{https://theory.stanford.edu/~barrett/pubs/BT18.pdf}}{원문}\par
+
+[3] L. de Moura and N. Bjørner, “Z3: An Efficient SMT Solver,” TACAS, pp. 337–340, 2008. \href{\detokenize{https://doi.org/10.1007/978-3-540-78800-3_24}}{원문}\par
+
+[4] T. Kuhn, “A Survey and Classification of Controlled Natural Languages,” Computational Linguistics, vol. 40, no. 1, pp. 121–170, 2014. \href{\detokenize{https://aclanthology.org/J14-1005/}}{원문}\par
+
+[5] E. J. Hu et al., “LoRA: Low-Rank Adaptation of Large Language Models,” arXiv:2106.09685, 2021. \href{\detokenize{https://arxiv.org/abs/2106.09685}}{원문}\par
+\end{document}

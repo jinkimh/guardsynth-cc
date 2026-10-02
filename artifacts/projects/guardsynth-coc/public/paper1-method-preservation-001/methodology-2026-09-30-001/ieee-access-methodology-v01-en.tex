@@ -1,0 +1,253 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=20mm,headheight=16pt]{geometry}
+\usepackage{fontspec,kotex,amsmath,booktabs,longtable,array,xcolor,hyperref,fancyhdr}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\setmainhangulfont{Noto Sans CJK KR}
+\setmonohangulfont{Noto Sans CJK KR}
+\definecolor{navy}{HTML}{173E59}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,pdftitle={GuardSynth: Proposed Method}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\emergencystretch}{4em}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small GuardSynth}
+\fancyhead[R]{\small Proposed Method · v0.1 · 2026-09-30}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\clubpenalty=10000\widowpenalty=10000
+\raggedbottom
+\begin{document}
+\section*{IV. Proposed Method}
+
+
+\phantomsection\section*{A. Overview and Inputs and Outputs}\addcontentsline{toc}{section}{A. Overview and Inputs and Outputs}
+
+GuardSynth preserves the action explanation in CoC while making conditions that restrict action selection explicit in a separate specification, then returning those conditions to a natural-language representation. Inputs comprise original CoC, scene observations available for the decision, and applicable rules with their evidence. Outputs comprise structured behavioral constraints, logical verification results under a restricted model, controlled natural language (CNL) generated from the specification, and an augmented learning input. The formal representation specifies condition semantics and verification scope; the language representation conveys those conditions to learning.\par
+
+The process first selects candidate constraints and checks their evidence, then specifies accepted constraints in EBLC. Structural and semantic checks precede conversion to a verification-oriented intermediate representation and SMT queries. CNL corresponding to the specification is subsequently generated and combined with original CoC.\par
+
+\begingroup\small\ttfamily\setlength{\parskip}{1pt}
+\noindent\hspace*{0.0em}CoC + scene observations + rule evidence\par
+\noindent\hspace*{1.0em}\ensuremath{\rightarrow} derive candidates and establish applicability conditions\par
+\noindent\hspace*{1.0em}\ensuremath{\rightarrow} EBLC specification \ensuremath{\rightarrow} Core lowering \ensuremath{\rightarrow} SMT verification\par
+\noindent\hspace*{1.0em}\ensuremath{\rightarrow} specification-based CNL generation \ensuremath{\rightarrow} CoC augmentation\par\endgroup\par
+
+Observations, rules, and assumptions have distinct roles. Observations describe entities and events; rules determine restricted actions; assumptions delimit modeled situations. For example, zone clearance time is environmental information, the required subsequent waiting duration is rule information, and the absence of reoccupation is a modeling assumption. Different rules can therefore yield different admissible actions for the same observation.\par
+
+Two executable profiles instantiate this approach. The primary learning experiment constructs numerical temporal contracts from supplied synthetic rules. A separate qualitative profile connects entities, zones, and events through observations and human review of real scenes. Both link specifications to evidence, but their inputs and semantics differ. We use the temporal contract as the running example and the qualitative profile to describe evidence uncertainty and constraint lifecycles. Implementation evidence is linked in \href{\detokenize{../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py}}{S1} and \href{\detokenize{../../../../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py}}{S2}.\par
+
+\phantomsection\section*{B. Formal Specification with EBLC}\addcontentsline{toc}{section}{B. Formal Specification with EBLC}
+
+\subsection*{1. Scope and Elements}
+
+A behavioral constraint restricts available actions in a situation. It differs from an observation, an action rationale, and an objective that ranks admissible actions. Satisfying an entry-permission condition does not force entry; selecting among permitted actions requires a separate objective.\par
+
+Evidence-Bound Lifecycle Contracts (EBLC) represent constraints with their targets, conditions, action restrictions, persistence and release, and evidence. Evidence-Bound denotes explicit links to the inputs on which conditions and rules depend. Lifecycle denotes activation, persistence, release, and, where required, reactivation. This paper uses these organizing principles and implemented restricted profiles, rather than assuming a language covering every traffic situation.\par
+
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-4.000pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3300\linewidth-5.280pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.4200\linewidth-6.720pt\relax}@{}}
+\toprule
+\textbf{Element} & \textbf{Specification role} & \textbf{Temporal instantiation} \\
+\midrule\endfirsthead
+\toprule
+\textbf{Element} & \textbf{Specification role} & \textbf{Temporal instantiation} \\
+\midrule\endhead
+\bottomrule\endfoot
+Subject and target & Whose action is restricted, and with respect to what? & Ego and pedestrian conflict zone \\
+Scope & Situation and model of interpretation & Single clearance transition without reoccupation \\
+Action restriction & What is disallowed? & Entry before release conditions hold \\
+Persistence and release & When does the restriction persist or end? & Required duration following clearance \\
+Time and units & Instants, durations, and boundaries & Integer milliseconds; inclusive threshold \\
+Evidence and version & Rule sources and interpretation & Rule references and profile version \\
+\end{longtable}
+\endgroup
+
+The qualitative profile additionally represents event truth, evidence validity, initial activation, and a policy for combining obligations. These elements address uncertain scene evidence; they are not all evaluated in the primary temporal learning experiment. The proposed modeling scope and experimentally evaluated scope are distinguished.\par
+
+\subsection*{2. Temporal Syntax and Semantics}
+
+The temporal profile accepts a structured JSON contract. The following is actual generator output for a 0.5-second waiting rule. Source references provide traceability and contain no target action label.\par
+
+\begingroup\small\ttfamily\setlength{\parskip}{1pt}
+\noindent\hspace*{0.0em}\{\par
+\noindent\hspace*{1.0em}"version": "supplied-temporal-eblc-profile-v0.1",\par
+\noindent\hspace*{1.0em}"subject": "ego",\par
+\noindent\hspace*{1.0em}"target": "pedestrian\_\allowbreak{}conflict\_\allowbreak{}zone",\par
+\noindent\hspace*{1.0em}"hold": "NO\_\allowbreak{}ENTRY\_\allowbreak{}WHILE\_\allowbreak{}OCCUPIED",\par
+\noindent\hspace*{1.0em}"release\_\allowbreak{}clear\_\allowbreak{}ms": 500,\par
+\noindent\hspace*{1.0em}"time\_\allowbreak{}unit": "ms",\par
+\noindent\hspace*{1.0em}"source\_\allowbreak{}kind": "SUPPLIED\_\allowbreak{}SYNTHETIC\_\allowbreak{}RULE",\par
+\noindent\hspace*{1.0em}"assumption": "SINGLE\_\allowbreak{}CLEAR\_\allowbreak{}TRANSITION\_\allowbreak{}NO\_\allowbreak{}REOCCUPATION",\par
+\noindent\hspace*{1.0em}"source\_\allowbreak{}refs": [\par
+\noindent\hspace*{2.0em}"Project01/temporal\_\allowbreak{}guard\_\allowbreak{}world.py::\_\allowbreak{}guard",\par
+\noindent\hspace*{2.0em}"paper1-method-preservation-v0.1"\par
+\noindent\hspace*{1.0em}]\par
+\noindent\hspace*{0.0em}\}\par\endgroup\par
+
+The {\ttfamily\small subject} and {\ttfamily\small target} identify the actor and restricted zone. The {\ttfamily\small hold} field specifies no entry during occupancy; {\ttfamily\small release\_\allowbreak{}clear\_\allowbreak{}ms} specifies waiting after clearance. The {\ttfamily\small assumption} field specifies one occupied-to-clear transition without subsequent reoccupation. This permits continuous clearance to be represented by one clearance time and an elapsed duration.\par
+
+Evaluation separately binds environmental clearance time {\ttfamily\small clear\_\allowbreak{}ms}, candidate entry time {\ttfamily\small entry\_\allowbreak{}ms}, and Boolean entry indicator {\ttfamily\small enters}. Both times use integer milliseconds. The restriction is:\par
+
+{\ttfamily\small enters \ensuremath{\rightarrow} entry\_\allowbreak{}ms ≥ clear\_\allowbreak{}ms + release\_\allowbreak{}clear\_\allowbreak{}ms}\par
+
+For {\ttfamily\small clear\_\allowbreak{}ms = 11000} and {\ttfamily\small release\_\allowbreak{}clear\_\allowbreak{}ms = 500}, an entering candidate is compatible only at or after 11500ms. The inclusive comparison admits 11500ms but excludes 11499ms. A non-entering candidate has {\ttfamily\small enters = false} and does not violate this entry restriction; its progress is assessed separately.\par
+
+The validator checks the supported version and fixed field combinations. Supported durations are 500, 1500, 800, and 1800ms; the primary expanded learning dataset uses 500 and 1500ms. The implementation accepts a restricted profile with defined interpretation, not arbitrary JSON as a general contract. \href{\detokenize{../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py}}{S1}, \href{\detokenize{../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_training_data.py}}{S3}\par
+
+\subsection*{3. Qualitative Lifecycle Semantics}
+
+The real-scene profile uses {\ttfamily\small truth[j,t]}, {\ttfamily\small valid[j,t]}, and {\ttfamily\small active[j,t]} for obligation j at decision step t. Truth values are TRUE, FALSE, UNKNOWN, and CONFLICT. FALSE denotes confirmed resolution of the restricting condition, not mere absence of an observation. Validity denotes admissibility of the evidence. Activation records whether the obligation is active; its value before the first decision is a separate input.\par
+
+\begingroup\small\ttfamily\setlength{\parskip}{1pt}
+\noindent\hspace*{0.0em}on[j,t] = valid[j,t] AND (truth[j,t] = TRUE)\par
+\noindent\hspace*{0.0em}clear[j,t] = valid[j,t] AND (truth[j,t] = FALSE)\par
+\noindent\hspace*{0.0em}active[j,t] = TRUE,             if on[j,t]\par
+\noindent\hspace*{7.0em}FALSE,           else if clear[j,t]\par
+\noindent\hspace*{7.0em}previous\_\allowbreak{}active, otherwise\par\endgroup\par
+
+Evidence is read and activation updated before constraining the action. Valid activation evidence activates an obligation, valid clearance evidence releases it, and otherwise its previous state persists. The same rule reactivates it when the activation condition is confirmed again. Explicit ordering and initialization fix the interpretation at each step.\par
+
+The current policy permits entry only when clearance of every declared obligation is confirmed. Previous inactivity alone does not permit entry if current clearance is unconfirmed. When all obligations are clear, both entry and deferral are allowed. Permission is not a liveness guarantee requiring progress. UNKNOWN and CONFLICT are evidence states, distinct from an SMT solver returning UNKNOWN when it cannot decide a query. \href{\detokenize{../../../../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py}}{S2}\par
+
+\phantomsection\section*{C. Defining and Deriving Behavioral Constraints}\addcontentsline{toc}{section}{C. Defining and Deriving Behavioral Constraints}
+
+\subsection*{1. Separating Candidate Constraints from Evidence}
+
+Not every CoC sentence becomes a constraint. “A pedestrian is crossing” is an observational claim; “yield to protect the pedestrian” is an action rationale. “Do not enter while the zone is occupied” contains a condition and restriction, making it a constraint candidate. “Choose the admissible candidate with greatest progress” is a selection objective. This distinction avoids inventing thresholds or release conditions absent from the explanation and its evidence.\par
+
+Inputs serve three evidence roles. CoC identifies potentially relevant actions and obligations. Scene observations bind entities, zones, events, and times. Supplied rules or separately established normative evidence determine applicability and restriction content. A sentence appearing in CoC does not itself confirm applicability to the current scene.\par
+
+\subsection*{2. Specification Procedure and Automation Scope}
+
+The procedure identifies action-relevant entities, situations, and rationales in CoC, then binds entities and zones to observations and identifies the decision time. Rule evidence determines the restricted action and applicability conditions; persistence, release, timing, and assumptions are subsequently specified. Unconfirmed information remains unresolved rather than becoming an observed fact. Accepted content is mapped to supported fields with evidence references and version information.\par
+
+In the primary synthetic experiment, the environment generator and supplied rule provide these inputs. Environmental clearance and rule duration determine the contract and verification representation. Automation structures and transforms given conditions; it does not discover traffic law or waiting durations from video alone. The real-scene path involves human confirmation of entities, zones, events, and applicability, and the implemented adapter is limited to a particular review task. \href{\detokenize{../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_training_data.py}}{S3}, \href{\detokenize{../../../../../../projects/04-guardsynth-coc/src/guard_synth/qualitative_scene_contract.py}}{S4}\par
+
+Constraints and learning references are managed separately. Defining admissibility does not automatically establish a real-scene ground-truth action. For the synthetic task, separate integer arithmetic uses known environmental states and rules to identify admissible candidates, then selects the one with greatest progress. This calculation does not copy its answer from CNL or an SMT verdict, but shares the environmental and rule assumptions.\par
+
+\subsection*{3. Running Temporal Example}
+
+Original CoC reads “Yield to the crossing pedestrian, then proceed through the intersection.” The environment supplies clearance at 11.0 seconds; a separate rule requires a minimum wait of 0.5 or 1.5 seconds. The duration is an explicit experimental condition, not a value inferred from CoC or a universal traffic-law requirement.\par
+
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.1500\linewidth-4.800pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.1800\linewidth-5.760pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.1900\linewidth-6.080pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2400\linewidth-7.680pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2400\linewidth-7.680pt\relax}@{}}
+\toprule
+\textbf{Candidate} & \textbf{Entry time} & \textbf{Progress score} & \textbf{0.5-second wait} & \textbf{1.5-second wait} \\
+\midrule\endfirsthead
+\toprule
+\textbf{Candidate} & \textbf{Entry time} & \textbf{Progress score} & \textbf{0.5-second wait} & \textbf{1.5-second wait} \\
+\midrule\endhead
+\bottomrule\endfoot
+A & 10.5s & 110 & Violates & Violates \\
+B & 11.5s & 100 & Admissible; reference & Violates \\
+C & 12.5s & 85 & Admissible & Admissible; reference \\
+D & No entry & 0 & Admissible & Admissible \\
+\end{longtable}
+\endgroup
+
+Progress is a synthetic utility, not measured distance or speed. B maximizes admissible progress under the 0.5-second contract and C under the 1.5-second contract. D violates neither but does not complete the progress objective. The table is a generated data instance, not evidence of actual model predictions. Candidate labels rotate during dataset construction to avoid linking the answer to a fixed letter.\par
+
+\phantomsection\section*{D. Verifying EBLC Specifications Linked to CoC}\addcontentsline{toc}{section}{D. Verifying EBLC Specifications Linked to CoC}
+
+\subsection*{1. Binding Checks and Core Lowering}
+
+Verification requires semantic input binding and logical queries. Subject, zone, event time, and duration must refer to the same case, and specifications must satisfy supported version, field, and unit requirements. Evidence identifiers support traceability rather than proving factual truth. Unbound fields are distinguished from completed scene bindings; passing syntax checks does not turn a conditional specification into reviewed learning data.\par
+
+Temporal contracts lower to Core declarations of Boolean {\ttfamily\small enters} and integer {\ttfamily\small clear\_\allowbreak{}ms} and {\ttfamily\small entry\_\allowbreak{}ms}; {\ttfamily\small release\_\allowbreak{}clear\_\allowbreak{}ms} becomes an integer constant. Core is an intermediate representation of declarations and logical clauses, type-checked before SMT compilation. Time uses integer millisecond ticks with Core unit marker {\ttfamily\small 1}, not seconds. Variables in this profile are time-invariant and the clause is enforced initially. The configured {\ttfamily\small horizon = 2} is a model bound, not verification of a two-second driving trajectory. \href{\detokenize{../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py}}{S1}\par
+
+\subsection*{2. Properties and Queries}
+
+We distinguish consistency, restriction enforcement, release boundaries, and permissibility. Base SAT establishes a satisfying model, but non-entry alone can satisfy the specification. We therefore separately check that an entering model exists after release. This avoids specifications that exclude all entry without substituting for measurement of actual model progress.\par
+
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2200\linewidth-5.280pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2000\linewidth-4.800pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3000\linewidth-7.200pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2800\linewidth-6.720pt\relax}@{}}
+\toprule
+\textbf{Property} & \textbf{Query} & \textbf{Expected} & \textbf{Interpretation} \\
+\midrule\endfirsthead
+\toprule
+\textbf{Property} & \textbf{Query} & \textbf{Expected} & \textbf{Interpretation} \\
+\midrule\endhead
+\bottomrule\endfoot
+Consistency & Base contract & SAT & A satisfying case exists \\
+Restriction & Entry earlier than release & UNSAT & Early entry and contract are incompatible \\
+Before boundary & Entry at 11.499s; wait 0.5s & UNSAT & Entry just before release is excluded \\
+At boundary & Entry at 11.500s; wait 0.5s & SAT & Equality is permitted \\
+After boundary & Entry at 11.501s; wait 0.5s & SAT & Entry after release is feasible \\
+Deferral & enters is false & SAT & Entry is not forced \\
+\end{longtable}
+\endgroup
+
+Concrete times assume clearance at 11.0 seconds. The restriction query searches for a counterexample with {\ttfamily\small enters} true and {\ttfamily\small entry\_\allowbreak{}ms < clear\_\allowbreak{}ms + release\_\allowbreak{}clear\_\allowbreak{}ms}. This is symbolic rather than fixing both time variables; boundary rows bind concrete values. Even the symbolic result concerns the encoded inequality and assumptions, not video interpretation or rule selection.\par
+
+The six manuscript queries were executed for both 500ms and 1500ms contracts, yielding 12 matching verdicts. The existing bridge's 100 queries were rerun separately. Neither set constitutes new learning-effect evidence. Records preserve each query, expected and observed verdicts, and actual SMT-LIB output. \href{\detokenize{manuscript_examples.json}}{S5}\par
+
+\subsection*{3. SMT Representation and Interpretation}
+
+The following readable SMT-LIB example expresses the core 0.5-second restriction. It is an explanatory representation, not the entire compiler output, which is retained in separate query files.\par
+
+\begingroup\small\ttfamily\setlength{\parskip}{1pt}
+\noindent\hspace*{0.0em}(declare-const enters Bool)\par
+\noindent\hspace*{0.0em}(declare-const entry\_\allowbreak{}ms Int)\par
+\noindent\hspace*{0.0em}(declare-const clear\_\allowbreak{}ms Int)\par
+\noindent\hspace*{0.0em}(assert (= clear\_\allowbreak{}ms 11000))\par
+\noindent\hspace*{0.0em}(assert (=> enters (>= entry\_\allowbreak{}ms (+ clear\_\allowbreak{}ms 500))))\par
+\noindent\hspace*{0.0em}(assert enters)\par
+\noindent\hspace*{0.0em}(push)\par
+\noindent\hspace*{0.0em}(assert (= entry\_\allowbreak{}ms 11499))\par
+\noindent\hspace*{0.0em}(check-sat) ; unsat\par
+\noindent\hspace*{0.0em}(pop)\par
+\noindent\hspace*{0.0em}(push)\par
+\noindent\hspace*{0.0em}(assert (= entry\_\allowbreak{}ms 11500))\par
+\noindent\hspace*{0.0em}(check-sat) ; sat\par
+\noindent\hspace*{0.0em}(pop)\par\endgroup\par
+
+The first UNSAT verdict indicates incompatibility of early entry with the specification, not a defective specification. The second SAT verdict indicates compatibility of the selected entry. Neither includes optimality or real-world safety. UNKNOWN or unexpected verdicts are not accepted as successful verification. Structural checks, scene binding, logical verification, and CNL correspondence serve different roles.\par
+
+\phantomsection\section*{E. CNL Generation and CoC Augmentation}\addcontentsline{toc}{section}{E. CNL Generation and CoC Augmentation}
+
+\subsection*{1. Generating Sentences from Verified Specifications}
+
+CNL is generated from checked fields through fixed sentence rules. The temporal renderer accepts structurally validated contracts and maps zone and duration to text. It does not itself invoke the solver; specification verification precedes rendering. Candidate labels, reference actions, and progress scores are not generator arguments. \href{\detokenize{../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py}}{S1}\par
+
+Actual output for the 0.5-second contract is:\par
+
+\begin{quote}Do not enter the pedestrian conflict zone while it is occupied. Enter only after the zone has remained clear for at least 0.5 s.\end{quote}
+
+The first sentence identifies the zone and occupancy restriction; the second expresses release and duration. “At least” corresponds to an inclusive boundary, and “only after” specifies a necessary condition rather than an instruction to enter. The conversion maps 500ms to 0.5s and, under the same rule, 1500ms to 1.5s. Correspondence is interpreted for supported durations and the single-clearance, no-reoccupation assumption.\par
+
+\subsection*{2. Scope of Semantic Correspondence}
+
+Generation preserves target, negation, conditional direction, value, and unit. Omitting “at least” or replacing “enter only after” with a requirement to enter after clearance would change admissibility. Fixed field mappings make these relationships explicit and inspectable.\par
+
+Not all metadata appears in model-facing sentences. Versions and source references remain traceability metadata; CNL conveys action-relevant conditions. Modeling assumptions are specified in the environment and task definition. The claim is correspondence of action restrictions within that context, not literal one-to-one rendering of every JSON field. Freely rewritten sentences or additional profiles require separate semantic review.\par
+
+\subsection*{3. Combining CNL with Learning Inputs}
+
+Original CoC provides an action rationale, and CNL supplies additional behavioral conditions. They are combined without replacing CoC with a specification. The augmented example reads:\par
+
+\begin{quote}Yield to the crossing pedestrian, then proceed through the intersection. Do not enter the pedestrian conflict zone while it is occupied. Enter only after the zone has remained clear for at least 0.5 s.\end{quote}
+
+The image and action candidates accompany this text, while a separate reference calculation supplies the target label. P0 receives original CoC, P1 receives CoC with the existing natural-language constraint, and P2 receives CoC with EBLC-derived CNL. P1 and P2 both add constraints; their primary comparator is CoC-only P0. Raw EBLC JSON and solver verdicts are not supplied as answer hints.\par
+
+P1 and P2 receive constraints during both training and evaluation. This evaluates selection using explicit rules, not directly whether identical behavior persists without evaluation-time constraints. P0 lacks the waiting duration, so its inputs can be identical for paired contracts requiring different reference actions. This information difference is disclosed as part of the comparison.\par
+
+Traceable records retain image references, CoC, contracts and evidence, CNL, candidates, reference actions, and splits, separating model-visible fields from answers and verification fields. This supports reconstruction of what was specified from which evidence, how it was expressed, and which action served as the learning target. Training budgets and metrics are presented in the experimental section.\par
+
+\phantomsection\section*{Implementation and Example Evidence}\addcontentsline{toc}{section}{Implementation and Example Evidence}
+
+These links provide reproducibility evidence for manuscript review, separate from external related-work citations. They will connect to code and data availability and supplementary material in the integrated manuscript.\par
+
+\begin{itemize}
+\item \href{\detokenize{../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py}}{S1 Temporal contracts, Core lowering, verification, and CNL generation}
+\item \href{\detokenize{../../../../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py}}{S2 Qualitative contract parsing and lifecycle semantics}
+\item \href{\detokenize{../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_training_data.py}}{S3 Learning inputs and independent reference calculation}
+\item \href{\detokenize{../../../../../../projects/04-guardsynth-coc/src/guard_synth/qualitative_scene_contract.py}}{S4 Restricted real-scene adapter}
+\item \href{\detokenize{manuscript_examples.json}}{S5 Executed manuscript queries and results}
+\item \href{\detokenize{learning_input_examples.json}}{Two example learning-input records}
+\end{itemize}
+\end{document}

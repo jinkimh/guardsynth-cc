@@ -1,0 +1,21 @@
+{
+  "claim_scope": "LOCKED_SYNTHETIC_FRONTEND_PROTOCOL_AND_SUPPORTED_COMPILER_PATH_NOT_NLP_ACCURACY_LEGAL_DECISION_OR_VEHICLE_SAFETY",
+  "code_hash": "763be0505a53868af126de335a5efdac66c5419976dcfa3fc9543efb922308d1",
+  "deterministic": true,
+  "experiment_id": "GUARDSYNTH-COC-FRONTEND-MATRIX-001",
+  "input_class": "PUBLIC_SYNTHETIC",
+  "input_hashes": {
+    "simulated_assurance_profile_v0_1.json": "b1526a18d677b392a20a06108476f67e7fc50c89e036f01df7b2ba9e15b46a1d",
+    "source_aware_generation_request_p0b_v0_1.json": "199b285f551f6cb0393390f6acff57bdb1c8dc6844ba055423875145070ba3fa",
+    "source_catalog_kr_v0_1.json": "a5c0116394be11e0a22230652822bdf0cb221267c34e730d3b96c987140dfbb2"
+  },
+  "run_date": "2026-08-12",
+  "run_id": "locked-synthetic-2026-08-12-v1",
+  "z3_runtime": {
+    "module_path": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages/z3/__init__.py",
+    "prefix": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36",
+    "python_site_packages": "runtime/solvers/z3-5.0.0-x86_64-glibc-2.36/lib/python3.11/site-packages",
+    "source": "PROJECT_LOCAL_ISOLATED_BUILD",
+    "version": "5.0.0"
+  }
+}

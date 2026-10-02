@@ -1,0 +1,1051 @@
+{
+  "protocol_id": "paper1-method-preservation-v0.1",
+  "results": {
+    "benchmark_regression": {
+      "unique_semantic_clusters": 12,
+      "arms": {
+        "P0": {
+          "guard_violation_rate": {
+            "estimate": 0.3194444444444444,
+            "template_cluster_bootstrap_95ci": [
+              0.19030589543937707,
+              0.44482822008113587
+            ],
+            "per_seed": [
+              0.375,
+              0.25,
+              0.3333333333333333
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "estimate": 0.6805555555555556,
+            "template_cluster_bootstrap_95ci": [
+              0.5551717799188641,
+              0.8096941045606229
+            ],
+            "per_seed": [
+              0.625,
+              0.75,
+              0.6666666666666666
+            ]
+          },
+          "deadlock_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "estimate": 0.5,
+            "template_cluster_bootstrap_95ci": [
+              0.5,
+              0.5
+            ],
+            "per_seed": [
+              0.5,
+              0.5,
+              0.5
+            ]
+          },
+          "coverage": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "P1": {
+          "guard_violation_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "deadlock_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "coverage": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "P2": {
+          "guard_violation_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "deadlock_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "coverage": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "paired_differences": {
+        "P2-P0": {
+          "guard_violation_rate": {
+            "estimate": -0.3194444444444444,
+            "template_cluster_bootstrap_95ci": [
+              -0.4448282200811359,
+              -0.19030589543937718
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "estimate": 0.3194444444444444,
+            "template_cluster_bootstrap_95ci": [
+              0.19030589543937707,
+              0.44482822008113587
+            ]
+          },
+          "deadlock_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "estimate": 0.5,
+            "template_cluster_bootstrap_95ci": [
+              0.5,
+              0.5
+            ]
+          },
+          "coverage": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "P2-P1": {
+          "guard_violation_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "deadlock_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    "new_seed_confirmation": {
+      "unique_semantic_clusters": 12,
+      "arms": {
+        "P0": {
+          "guard_violation_rate": {
+            "estimate": 0.3159722222222222,
+            "template_cluster_bootstrap_95ci": [
+              0.18321428571428572,
+              0.43478702721809825
+            ],
+            "per_seed": [
+              0.375,
+              0.28125,
+              0.2916666666666667
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "estimate": 0.6840277777777778,
+            "template_cluster_bootstrap_95ci": [
+              0.5652129727819017,
+              0.8167857142857137
+            ],
+            "per_seed": [
+              0.625,
+              0.71875,
+              0.7083333333333334
+            ]
+          },
+          "deadlock_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "estimate": 0.5,
+            "template_cluster_bootstrap_95ci": [
+              0.5,
+              0.5
+            ],
+            "per_seed": [
+              0.5,
+              0.5,
+              0.5
+            ]
+          },
+          "coverage": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "P1": {
+          "guard_violation_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "deadlock_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "coverage": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "P2": {
+          "guard_violation_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "deadlock_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "coverage": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "paired_differences": {
+        "P2-P0": {
+          "guard_violation_rate": {
+            "estimate": -0.3159722222222222,
+            "template_cluster_bootstrap_95ci": [
+              -0.43478702721809825,
+              -0.18321428571428636
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "estimate": 0.3159722222222222,
+            "template_cluster_bootstrap_95ci": [
+              0.18321428571428575,
+              0.4347870272180983
+            ]
+          },
+          "deadlock_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "estimate": 0.5,
+            "template_cluster_bootstrap_95ci": [
+              0.5,
+              0.5
+            ]
+          },
+          "coverage": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "P2-P1": {
+          "guard_violation_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "deadlock_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "coverage": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    "unseen_time": {
+      "unique_semantic_clusters": 12,
+      "arms": {
+        "P0": {
+          "guard_violation_rate": {
+            "estimate": 0.375,
+            "template_cluster_bootstrap_95ci": [
+              0.2888782051282051,
+              0.4537247474747474
+            ],
+            "per_seed": [
+              0.375,
+              0.375,
+              0.375
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "estimate": 0.625,
+            "template_cluster_bootstrap_95ci": [
+              0.5462752525252526,
+              0.7111217948717948
+            ],
+            "per_seed": [
+              0.625,
+              0.625,
+              0.625
+            ]
+          },
+          "deadlock_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "estimate": 0.5,
+            "template_cluster_bootstrap_95ci": [
+              0.5,
+              0.5
+            ],
+            "per_seed": [
+              0.5,
+              0.5,
+              0.5
+            ]
+          },
+          "coverage": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "P1": {
+          "guard_violation_rate": {
+            "estimate": 0.3611111111111111,
+            "template_cluster_bootstrap_95ci": [
+              0.21749293785310733,
+              0.48427672955974843
+            ],
+            "per_seed": [
+              0.375,
+              0.4166666666666667,
+              0.2916666666666667
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "estimate": 0.6388888888888888,
+            "template_cluster_bootstrap_95ci": [
+              0.5157232704402516,
+              0.7825070621468925
+            ],
+            "per_seed": [
+              0.625,
+              0.5833333333333334,
+              0.7083333333333334
+            ]
+          },
+          "deadlock_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "estimate": 0.625,
+            "template_cluster_bootstrap_95ci": [
+              0.5144334650856389,
+              0.7631578947368421
+            ],
+            "per_seed": [
+              0.625,
+              0.5833333333333334,
+              0.6666666666666666
+            ]
+          },
+          "coverage": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "estimate": 0.2777777777777778,
+            "template_cluster_bootstrap_95ci": [
+              0.07092198581560284,
+              0.5359548167092923
+            ],
+            "per_seed": [
+              0.25,
+              0.25,
+              0.3333333333333333
+            ]
+          }
+        },
+        "P2": {
+          "guard_violation_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "deadlock_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "estimate": 0.8993055555555556,
+            "template_cluster_bootstrap_95ci": [
+              0.8364765315630096,
+              0.961813446969697
+            ],
+            "per_seed": [
+              0.8645833333333334,
+              0.9583333333333334,
+              0.875
+            ]
+          },
+          "coverage": {
+            "estimate": 1.0,
+            "template_cluster_bootstrap_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "estimate": 0.7986111111111112,
+            "template_cluster_bootstrap_95ci": [
+              0.6729530631260191,
+              0.9236268939393939
+            ],
+            "per_seed": [
+              0.7291666666666666,
+              0.9166666666666666,
+              0.75
+            ]
+          }
+        }
+      },
+      "paired_differences": {
+        "P2-P0": {
+          "guard_violation_rate": {
+            "estimate": -0.375,
+            "template_cluster_bootstrap_95ci": [
+              -0.4537247474747475,
+              -0.28887820512820517
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "estimate": 0.375,
+            "template_cluster_bootstrap_95ci": [
+              0.2888782051282051,
+              0.4537247474747474
+            ]
+          },
+          "deadlock_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "estimate": 0.3993055555555556,
+            "template_cluster_bootstrap_95ci": [
+              0.3364765315630096,
+              0.46181344696969695
+            ]
+          },
+          "coverage": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "estimate": 0.7986111111111112,
+            "template_cluster_bootstrap_95ci": [
+              0.6729530631260191,
+              0.9236268939393939
+            ]
+          }
+        },
+        "P2-P1": {
+          "guard_violation_rate": {
+            "estimate": -0.3611111111111111,
+            "template_cluster_bootstrap_95ci": [
+              -0.48427672955974843,
+              -0.21749293785310744
+            ]
+          },
+          "safe_goal_completion_rate": {
+            "estimate": 0.36111111111111116,
+            "template_cluster_bootstrap_95ci": [
+              0.2174929378531074,
+              0.48427672955974843
+            ]
+          },
+          "deadlock_rate": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "accuracy": {
+            "estimate": 0.2743055555555556,
+            "template_cluster_bootstrap_95ci": [
+              0.09721590909090908,
+              0.42361111111111105
+            ]
+          },
+          "coverage": {
+            "estimate": 0.0,
+            "template_cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          "contract_swap_pair_accuracy": {
+            "estimate": 0.5208333333333334,
+            "template_cluster_bootstrap_95ci": [
+              0.18051321138211374,
+              0.8174948240165629
+            ]
+          }
+        }
+      }
+    }
+  },
+  "verdicts": {
+    "benchmark_regression": {
+      "checks": {
+        "P1_level": true,
+        "P2_level": true,
+        "P2_vs_P0": true,
+        "P2_vs_P1": true
+      },
+      "point_criteria": "SUPPORTED_ON_REUSED_TEMPLATES",
+      "formal_noninferiority": "NOT_CLAIMED",
+      "fresh_environment_confirmation": "NOT_ESTABLISHED"
+    },
+    "new_seed_confirmation": {
+      "checks": {
+        "P1_level": true,
+        "P2_level": true,
+        "P2_vs_P0": true,
+        "P2_vs_P1": true
+      },
+      "point_criteria": "SUPPORTED_ON_REUSED_TEMPLATES",
+      "formal_noninferiority": "NOT_CLAIMED",
+      "fresh_environment_confirmation": "NOT_ESTABLISHED"
+    }
+  },
+  "limits": [
+    "Six unique storyboard images across standard/unseen tasks.",
+    "New seeds reuse templates; uncertainty is conditional on those templates.",
+    "Unnecessary-stop proxy is deadlock; safe completion measures normal goal progress.",
+    "No actual-road or automatic source-extraction inference."
+  ],
+  "checkpoint_audit": [
+    {
+      "arm_seed": "p0-seed123",
+      "sha256": "1ea819c162dc6e2f13ff957e9a7d7ccb25cef2bf971d2a1cb512206724b4d224",
+      "tensor_count": 224,
+      "lora_B_count": 112,
+      "nonzero_lora_B_count": 112
+    },
+    {
+      "arm_seed": "p0-seed17",
+      "sha256": "e15cfe4abb4ca518d90eb82be5ee44010a4067a84851f75562f7cd23ea2e0ffa",
+      "tensor_count": 224,
+      "lora_B_count": 112,
+      "nonzero_lora_B_count": 112
+    },
+    {
+      "arm_seed": "p0-seed42",
+      "sha256": "9b300f285ddfaa56be4c929821f16bb6e329729ff03547fe4d2c020b103c111d",
+      "tensor_count": 224,
+      "lora_B_count": 112,
+      "nonzero_lora_B_count": 112
+    },
+    {
+      "arm_seed": "p1-seed123",
+      "sha256": "267d1ac64a8bc520c800f67615e47ce828b2bf38339a3d1bb5875965934e7419",
+      "tensor_count": 224,
+      "lora_B_count": 112,
+      "nonzero_lora_B_count": 112
+    },
+    {
+      "arm_seed": "p1-seed17",
+      "sha256": "681c906724f8c2df2f5cad4e766abc7531c9a6a8558c1fd202ae4a7fa1f1fd5d",
+      "tensor_count": 224,
+      "lora_B_count": 112,
+      "nonzero_lora_B_count": 112
+    },
+    {
+      "arm_seed": "p1-seed42",
+      "sha256": "0332e9d28b666520a83dfe3be0727ce30da004195105966bb90d5d4147b017a3",
+      "tensor_count": 224,
+      "lora_B_count": 112,
+      "nonzero_lora_B_count": 112
+    },
+    {
+      "arm_seed": "p2-seed123",
+      "sha256": "ea007de156863bceec7d2d4a6ebebf865455f0b4186eb6e31427dfa3df72cd39",
+      "tensor_count": 224,
+      "lora_B_count": 112,
+      "nonzero_lora_B_count": 112
+    },
+    {
+      "arm_seed": "p2-seed17",
+      "sha256": "cd27e7aa08c5d0197dfa99861ad01bb82d5bfe1dfbaa536b679389c07cfc4147",
+      "tensor_count": 224,
+      "lora_B_count": 112,
+      "nonzero_lora_B_count": 112
+    },
+    {
+      "arm_seed": "p2-seed42",
+      "sha256": "fe75b8f8a8ee47a7d6e6c466a02a97d0bc1764d059bef575634dc9d58a860d76",
+      "tensor_count": 224,
+      "lora_B_count": 112,
+      "nonzero_lora_B_count": 112
+    }
+  ]
+}

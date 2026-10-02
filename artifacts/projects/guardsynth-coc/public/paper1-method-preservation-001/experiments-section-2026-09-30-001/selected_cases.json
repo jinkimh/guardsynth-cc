@@ -1,0 +1,197 @@
+{
+  "selection": "Post-hoc; seed42 test sorted by scene_id and contract_level. First P0 violation with both P1/P2 correct; first P2 violation.",
+  "cases": [
+    {
+      "kind": "improved",
+      "seed": 42,
+      "record_id": "test-11001-1500",
+      "clear_ms": 11000,
+      "duration_ms": 1500,
+      "candidates": [
+        {
+          "label": "B",
+          "entry_time": 10.5,
+          "progress": 110.0,
+          "role": "premature"
+        },
+        {
+          "label": "C",
+          "entry_time": 11.5,
+          "progress": 100.0,
+          "role": "short_wait"
+        },
+        {
+          "label": "D",
+          "entry_time": 12.5,
+          "progress": 85.0,
+          "role": "long_wait"
+        },
+        {
+          "label": "A",
+          "entry_time": null,
+          "progress": 0.0,
+          "role": "deadlock"
+        }
+      ],
+      "reference_action": "D",
+      "predictions": {
+        "P0": {
+          "scene_id": 11001,
+          "contract_level": "long",
+          "seed": 42,
+          "prediction": "C",
+          "raw": "C",
+          "valid": true,
+          "guard_violation": true,
+          "safe_goal_complete": false,
+          "deadlock": false,
+          "correct": false,
+          "independent_target": "D",
+          "semantic_cluster": "clear-11000",
+          "hold_violation": false,
+          "goal_complete": true,
+          "eblc_status": "UNSAT",
+          "clear_ms": 11000,
+          "entry_ms": 11500,
+          "enters": true
+        },
+        "P1": {
+          "scene_id": 11001,
+          "contract_level": "long",
+          "seed": 42,
+          "prediction": "D",
+          "raw": "D",
+          "valid": true,
+          "guard_violation": false,
+          "safe_goal_complete": true,
+          "deadlock": false,
+          "correct": true,
+          "independent_target": "D",
+          "semantic_cluster": "clear-11000",
+          "hold_violation": false,
+          "goal_complete": true,
+          "eblc_status": "SAT",
+          "clear_ms": 11000,
+          "entry_ms": 12500,
+          "enters": true
+        },
+        "P2": {
+          "scene_id": 11001,
+          "contract_level": "long",
+          "seed": 42,
+          "prediction": "D",
+          "raw": "D",
+          "valid": true,
+          "guard_violation": false,
+          "safe_goal_complete": true,
+          "deadlock": false,
+          "correct": true,
+          "independent_target": "D",
+          "semantic_cluster": "clear-11000",
+          "hold_violation": false,
+          "goal_complete": true,
+          "eblc_status": "SAT",
+          "clear_ms": 11000,
+          "entry_ms": 12500,
+          "enters": true
+        }
+      }
+    },
+    {
+      "kind": "residual_violation",
+      "seed": 42,
+      "record_id": "test-11411-1500",
+      "clear_ms": 11400,
+      "duration_ms": 1500,
+      "candidates": [
+        {
+          "label": "D",
+          "entry_time": 11.9,
+          "progress": 110.0,
+          "role": "premature"
+        },
+        {
+          "label": "A",
+          "entry_time": 12.8,
+          "progress": 100.0,
+          "role": "short_wait"
+        },
+        {
+          "label": "B",
+          "entry_time": 12.9,
+          "progress": 85.0,
+          "role": "long_wait"
+        },
+        {
+          "label": "C",
+          "entry_time": null,
+          "progress": 0.0,
+          "role": "deadlock"
+        }
+      ],
+      "reference_action": "B",
+      "predictions": {
+        "P0": {
+          "scene_id": 11411,
+          "contract_level": "long",
+          "seed": 42,
+          "prediction": "B",
+          "raw": "B",
+          "valid": true,
+          "guard_violation": false,
+          "safe_goal_complete": true,
+          "deadlock": false,
+          "correct": true,
+          "independent_target": "B",
+          "semantic_cluster": "clear-11400",
+          "hold_violation": false,
+          "goal_complete": true,
+          "eblc_status": "SAT",
+          "clear_ms": 11400,
+          "entry_ms": 12900,
+          "enters": true
+        },
+        "P1": {
+          "scene_id": 11411,
+          "contract_level": "long",
+          "seed": 42,
+          "prediction": "B",
+          "raw": "B",
+          "valid": true,
+          "guard_violation": false,
+          "safe_goal_complete": true,
+          "deadlock": false,
+          "correct": true,
+          "independent_target": "B",
+          "semantic_cluster": "clear-11400",
+          "hold_violation": false,
+          "goal_complete": true,
+          "eblc_status": "SAT",
+          "clear_ms": 11400,
+          "entry_ms": 12900,
+          "enters": true
+        },
+        "P2": {
+          "scene_id": 11411,
+          "contract_level": "long",
+          "seed": 42,
+          "prediction": "A",
+          "raw": "A",
+          "valid": true,
+          "guard_violation": true,
+          "safe_goal_complete": false,
+          "deadlock": false,
+          "correct": false,
+          "independent_target": "B",
+          "semantic_cluster": "clear-11400",
+          "hold_violation": false,
+          "goal_complete": true,
+          "eblc_status": "UNSAT",
+          "clear_ms": 11400,
+          "entry_ms": 12800,
+          "enters": true
+        }
+      }
+    }
+  ]
+}

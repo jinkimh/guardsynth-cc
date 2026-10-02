@@ -1,0 +1,40 @@
+{
+  "project_id": "guardsynth-coc",
+  "status": "VERIFIED_CURRENT_AUTHORING_DRAFT",
+  "pdf_checks": [
+    {
+      "pdf": "ieee-access-title-abstract-v01-ko.pdf",
+      "pages": 1,
+      "text_units_checked": 3,
+      "missing_units": 0,
+      "layout_warnings": [],
+      "sha256": "8d2fa915b20f5984d47695c38434cd9ef236b12a7b4378ab1c9eda8fa1af582b"
+    },
+    {
+      "pdf": "ieee-access-title-abstract-v01-en.pdf",
+      "pages": 1,
+      "text_units_checked": 3,
+      "missing_units": 0,
+      "layout_warnings": [],
+      "sha256": "2c2c382e876afb0538b279413fd40e89fd21d04208024f2bafcd774e87bf6230"
+    },
+    {
+      "pdf": "ieee-access-title-abstract-introduction-v01-ko.pdf",
+      "pages": 3,
+      "text_units_checked": 22,
+      "missing_units": 0,
+      "layout_warnings": [],
+      "sha256": "522816f6adc1b296df0a17fb206e455e65529b4efdff63d7dba589057c0fae40"
+    },
+    {
+      "pdf": "ieee-access-title-abstract-introduction-v01-en.pdf",
+      "pages": 4,
+      "text_units_checked": 22,
+      "missing_units": 0,
+      "layout_warnings": [],
+      "sha256": "1e5f8a6d0a508d60bf47fcc086342ffefa013f8beaa311254383bd7ef6598a7b"
+    }
+  ],
+  "metric_values_checked": 24,
+  "visual_review": "Both language title/abstract pages and introduction/reference pages inspected; citations kept with preceding text."
+}

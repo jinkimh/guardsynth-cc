@@ -1,0 +1,98 @@
+{
+  "project_id": "guardsynth-coc",
+  "status": "COMPILED_PENDING_LAYOUT_CHECK",
+  "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_METHODOLOGY_V01_EN.md",
+  "source_sha256": "ffd4f801698c16f36c6b20d334c5a1f061741a740feb05df4aa62a245c5dfa5e",
+  "pdf": "ieee-access-methodology-v01-en.pdf",
+  "sections": [
+    "A. Overview and Inputs and Outputs",
+    "B. Formal Specification with EBLC",
+    "C. Defining and Deriving Behavioral Constraints",
+    "D. Verifying EBLC Specifications Linked to CoC",
+    "E. CNL Generation and CoC Augmentation",
+    "Implementation and Example Evidence"
+  ],
+  "table_count": 3,
+  "links": [
+    {
+      "label": "S1",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_preservation.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py"
+    },
+    {
+      "label": "S2",
+      "source_target": "../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py",
+      "pdf_target": "../../../../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py"
+    },
+    {
+      "label": "S1",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_preservation.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py"
+    },
+    {
+      "label": "S3",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_training_data.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_training_data.py"
+    },
+    {
+      "label": "S2",
+      "source_target": "../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py",
+      "pdf_target": "../../../../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py"
+    },
+    {
+      "label": "S3",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_training_data.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_training_data.py"
+    },
+    {
+      "label": "S4",
+      "source_target": "../src/guard_synth/qualitative_scene_contract.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/src/guard_synth/qualitative_scene_contract.py"
+    },
+    {
+      "label": "S1",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_preservation.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py"
+    },
+    {
+      "label": "S5",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/methodology-2026-09-30-001/manuscript_examples.json",
+      "pdf_target": "manuscript_examples.json"
+    },
+    {
+      "label": "S1",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_preservation.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py"
+    },
+    {
+      "label": "S1 Temporal contracts, Core lowering, verification, and CNL generation",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_preservation.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py"
+    },
+    {
+      "label": "S2 Qualitative contract parsing and lifecycle semantics",
+      "source_target": "../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py",
+      "pdf_target": "../../../../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py"
+    },
+    {
+      "label": "S3 Learning inputs and independent reference calculation",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_training_data.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_training_data.py"
+    },
+    {
+      "label": "S4 Restricted real-scene adapter",
+      "source_target": "../src/guard_synth/qualitative_scene_contract.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/src/guard_synth/qualitative_scene_contract.py"
+    },
+    {
+      "label": "S5 Executed manuscript queries and results",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/methodology-2026-09-30-001/manuscript_examples.json",
+      "pdf_target": "manuscript_examples.json"
+    },
+    {
+      "label": "Two example learning-input records",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/methodology-2026-09-30-001/learning_input_examples.json",
+      "pdf_target": "learning_input_examples.json"
+    }
+  ]
+}

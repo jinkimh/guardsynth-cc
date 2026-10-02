@@ -1,0 +1,99 @@
+{
+  "baselines": [
+    {
+      "adapter_class": "CONTROLLED_PRIOR",
+      "baseline_id": "B0",
+      "declared_channels": [
+        "SLICE",
+        "CATALOG"
+      ],
+      "version": "controlled-template-prior-v0.1"
+    },
+    {
+      "adapter_class": "EXTERNAL_MODEL_ADAPTER",
+      "baseline_id": "B1",
+      "declared_channels": [
+        "COC"
+      ],
+      "version": "coc-only-free-form-provider-v0.1"
+    },
+    {
+      "adapter_class": "EXTERNAL_MODEL_ADAPTER",
+      "baseline_id": "B2",
+      "declared_channels": [
+        "SCENE"
+      ],
+      "version": "scene-only-model-provider-v0.1"
+    },
+    {
+      "adapter_class": "GRAPH_RETRIEVAL",
+      "baseline_id": "B3",
+      "declared_channels": [
+        "SCENE",
+        "CATALOG"
+      ],
+      "version": "template-retrieval-only-v0.1"
+    },
+    {
+      "adapter_class": "M14_GRAPH_FRONTEND",
+      "baseline_id": "B4",
+      "declared_channels": [
+        "COC",
+        "SCENE",
+        "CATALOG"
+      ],
+      "version": "coc-scene-template-retrieval-v0.1"
+    },
+    {
+      "adapter_class": "STYLE_ADAPTER_NOT_REPRODUCTION",
+      "baseline_id": "B5",
+      "declared_channels": [
+        "COC",
+        "SCENE",
+        "CATALOG"
+      ],
+      "version": "drivereg-style-bm25-v0.1"
+    },
+    {
+      "adapter_class": "STYLE_ADAPTER_NOT_REPRODUCTION",
+      "baseline_id": "B6",
+      "declared_channels": [
+        "SCENE",
+        "CATALOG"
+      ],
+      "version": "rtcd-style-scene-filter-v0.1"
+    },
+    {
+      "adapter_class": "DETERMINISTIC_PHYSICS_BINDER",
+      "baseline_id": "B7",
+      "declared_channels": [
+        "PHYSICS",
+        "ASSURANCE"
+      ],
+      "version": "physics-only-envelope-v0.1"
+    },
+    {
+      "adapter_class": "STYLE_ADAPTER_NOT_REPRODUCTION",
+      "baseline_id": "B8",
+      "declared_channels": [
+        "RULE",
+        "REACHABILITY"
+      ],
+      "version": "sandra-like-action-filter-v0.1"
+    },
+    {
+      "adapter_class": "EXPLICIT_SERIAL_COMPOSITION",
+      "baseline_id": "B13",
+      "declared_channels": [
+        "COC",
+        "SCENE",
+        "CATALOG",
+        "REACHABILITY"
+      ],
+      "version": "naive-b5-b6-b8-v0.1"
+    }
+  ],
+  "locked_after_evaluation_start": true,
+  "oracle_independence": "BASELINES_DO_NOT_READ_LOCKED_EXPECTED_LABELS",
+  "protocol_version": "guardsynth-baseline-protocol-v0.1"
+}

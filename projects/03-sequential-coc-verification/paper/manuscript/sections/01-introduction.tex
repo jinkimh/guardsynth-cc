@@ -1,0 +1,60 @@
+\section{서론}
+\label{sec:intro}
+
+E2E 자율주행은 카메라, 자차 상태, 경로 조건 등으로부터 미래 궤적 또는 제어 의도를 직접 예측한다. 계획 중심 E2E 연구는 대규모 주행 로그에서 관측 입력과 행동 출력의 관계를 학습하며 \cite{hu2023uniad,jiang2023vad}, 최근의 추론 보강형 E2E/VLA 연구는 여기에 행동 이유를 설명하는 의미 감독을 결합한다. CoC(Chain-of-Causation) 주석은 ``전방 트럭 때문에 감속한다''와 같이 행동 의도와 근거를 함께 제공하므로, 단순 궤적 모방에서 드러나지 않는 학습 신호가 될 수 있다 \cite{sima2024drivelm,tian2024drivevlm,wang2025alpamayo}.
+
+이러한 의미 감독의 근거 정합성, 충실도, 개입과 교란에 대한 반응, 행동 교정은 최근 연구에서 서로 다른 평가 단위로 다루어지고 있다 \cite{xie2025drivebench,zhang2023cat,nvidia2026autolabeler}. 본 논문의 관심은 이 평가들을 대체하는 데 있지 않다. 저장된 시점별 CoC 주석과 자차 움직임을 하나의 학습 시퀀스로 조합할 때, 반복 주석, 후보 기한, 응답 계보, 장면 출처 정책을 어떻게 명시하고 감사할 것인가가 남는 문제이다. 즉, 본 논문은 추론 주석의 내용이 참인지 또는 차량 제어가 안전한지를 판단하지 않고, 선택된 정책 아래 주석과 자차 움직임 응답 증거가 시간·출처 계약을 이루는지를 다룬다.
+
+\begin{figure*}[t]
+\centering
+\input{figures/overview-pipeline}
+\caption{추론 보강형 E2E 주행 데이터를 시간·출처 계약 감사 대상으로 변환하는 절차. 영상과 자차 궤적에서 생성된 CoC 추론은 학습 가능한 의미 신호이지만, 시작 사건, 반복, 후보 기한, 응답 매칭과 출처 정책을 정의해야 감사 가능한 후보 시간 의무가 된다.}
+\label{fig:overview-pipeline}
+\end{figure*}
+
+그림~\ref{fig:overview-pipeline}은 이 감사의 흐름을 요약한다. 주행 영상과 자차 궤적은 관측 가능한 원천 증거이고, VLM/LLM 기반 CoC는 이 기록에 사후적으로 결합된 판단 이유와 행동 의도를 제공한다. 본 논문은 품질 관문을 통과한 CoC 주석 사건을 추상 의도와 후보 시간 의무로 변환하고, \uppaal 관찰자로 시작·반복 사건, 후보 기한, 자차 움직임 응답 증거와 출처 정책을 함께 검사한다. 산출물은 물리적 안전성의 판정이 아니라 계약 통과, 정책·민감도 의존 검토 후보, 출처 불충분 사례 및 검사기 시험용 합성 변이를 구분하는 감사 기록이다.
+
+동기 사례인 `CoC-Nusc'의 \texttt{scene-0001}에는 전방 트럭과 공사 구간을 이유로 한 감사 수용 \textsc{Decelerate} CoC 주석 사건이 2.5초에 발생하고, 유사한 감속 주석이 3.5초와 4.8초에 반복된다. 기본 탐지기가 자차 속도 궤적에서 찾은 지속적 속도 감소 시작은 4.6597초이다. \preserve 정책에서는 2.5초의 사건이 대기 중인 후보 시간 의무를 열고 반복 주석은 시계를 다시 시작하지 않으므로, 2초 후보 기한에서는 검토 후보가 되고 3초에서는 계약을 통과한다. 반대로 3.5초의 반복 주석에 \reset 정책을 적용하면 같은 자차 움직임 응답 증거가 1.1597초 뒤에 발생한 것으로 계산되어 2초 계약도 통과할 수 있다. 이 차이는 정책을 명시하지 않을 때 동일 기록의 감사 판정이 달라짐을 보이는 민감도 사례이지, 해당 장면을 안전하지 않은 사례로 분류하는 근거는 아니다.
+
+CoC 주석 사건은 액추에이터 명령이 아니다. CoC-Nusc의 CoC는 기록된 자차 궤적에서 메타 행동을 추출한 뒤 영상 및 궤적과 함께 생성된 trajectory-conditioned 회고적 주석이므로, 같은 궤적과의 일치는 독립적인 인과 검증이 아니다. 본 논문에서 각 주석 사건은 추상 제어 의도와 후보 시간 의무의 입력을 제공하며, 관측 가능한 반응은 자차 속도·궤적에서 도출한 자차 움직임 응답 증거이다. 따라서 이 감사는 CoC의 일반적 충실도나 차량 안전성을 증명하지 않고, 선택한 시간·출처 정책 아래 저장된 주석과 응답 증거의 조합이 일관적인지를 검사한다.
+
+이 사례로부터 본 논문은 다음 연구 질문을 다룬다.
+\begin{enumerate}
+    \item \textbf{RQ1 변환 타당성:} 시점이 있는 CoC 주석과 자차 움직임을 증거 수준이 명시된 시간 관찰자 네트워크로 변환할 수 있는가?
+    \item \textbf{RQ2 판정 민감도와 검토 후보:} 반복 의미론, 후보 기한과 응답 탐지기 설정이 동일 기록의 감사 판정과 검토 우선순위를 어떻게 바꾸는가?
+    \item \textbf{RQ3 출처와 장기 에피소드:} 장면 연속성 증거와 경계 정책은 어떤 주석을 장기 학습 시퀀스로 묶을 수 있는지 어떻게 제한하는가?
+    \item \textbf{RQ4 정형화의 부가가치:} 결정적 타임스탬프 스크립트와 비교할 때 UPPAAL 관찰자 네트워크는 어떤 명세, 조합과 반례 추적상의 부가가치를 제공하는가?
+\end{enumerate}
+
+각 연구 질문에 대한 증거 범위가 제한된 기여는 다음과 같다.
+\begin{enumerate}
+    \item \textbf{RQ1:} CoC 주석 사건, 자차 움직임 응답 증거 및 출처·계보를 시간 관찰자 네트워크로 컴파일하고, 알려진 합성 변이에 대한 기대 판정 일치로 입력 사건과 관찰자 질의의 표현 범위를 확인한다.
+    \item \textbf{RQ2:} 적용 가능 계약 집합에서 반복 정책, 후보 기한 및 응답 탐지기 설정에 따른 감사 판정의 변화를 유형화하여, 검토 후보가 정책과 민감도에 의존함을 기록한다.
+    \item \textbf{RQ3:} 장면별 시간·자세 초기화의 오류 차단 시험을 통해 출처 증거가 없는 장면 이월을 차단하고, 연결 적격성과 연결 후 계약 감사를 분리하는 정책을 제시한다. 별도 파서·탐지기의 체인 산출물은 구현 기본 동작 시험으로만 보고한다.
+    \item \textbf{RQ4:} 구현별 모델군에서 의무 생명주기, 반복·경계 정책, 변이 오라클 및 교착 질의를 검토 가능한 명세로 표현하는 역할을 명확히 한다. 보존된 집계 산출물의 13/13 일치는 독립 구현 재현성 주장이 아니라 기록된 일치값으로만 다룬다.
+\end{enumerate}
+
+본 논문의 주장 범위는 프로토콜 수준 시간·출처 계약 감사로 제한된다. 검사 대상은 CoC 주석 사건, 후보 기한, 자차 움직임 응답 증거 및 출처 정책의 정합성이다. 상대 객체 상태, 액추에이터 명령, 차량 동역학 및 폐루프 결과가 없으므로 충돌 회피, 안전거리 또는 배포 가능한 제어 안전성은 결론으로 판정하지 않는다. 이 감사는 더 강한 폐루프 및 물리 안전성 평가 이전에 학습 자료의 해석 계약을 분리해 점검하는 단계이다.
+
+\begin{table}[t]
+\centering
+\caption{본 논문에서 사용하는 주요 용어.}
+\label{tab:terminology}
+\footnotesize
+\begin{tabularx}{\columnwidth}{L{0.35\columnwidth}Y}
+\toprule
+Term & Meaning \\
+\midrule
+CoC annotation event & A timestamped retrospective CoC annotation, not an actuator command \\
+Audit-accepted event & An input accepted by machine quality gates, not a human-gold or causal-truth label \\
+Parsed intent & Abstract action category such as \textsc{Decelerate}, \textsc{Stop}, or \textsc{Yield} \\
+Candidate audit obligation & A researcher-specified, time-bounded annotation--response-evidence contract \\
+Ego-motion response evidence & Evidence derived from speed/trajectory, not an actuator command \\
+Episode & Ordered annotation and response-evidence sequence within one local clip or provenance-supported chain \\
+Scene boundary & Boundary that closes a pending obligation without inter-scene continuity evidence \\
+Mutation oracle & Synthetic condition used to check observer verdicts, not an estimate of real fault prevalence \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+표~\ref{tab:terminology}의 용어 구분은 본 논문의 주장 범위를 제한하기 위해 필요하다. 특히 CoC 주석 사건, 후보 시간 의무, 자차 움직임 응답 증거를 분리해야 CoC 문장을 직접 제어 명령으로 과해석하지 않을 수 있다. 이후 절에서 사용하는 계약 통과와 검토 후보는 모두 이 용어 체계 안에서 정의된 프로토콜 수준 판정이다.

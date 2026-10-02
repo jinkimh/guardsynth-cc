@@ -1,0 +1,28 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "manuscript-package-2026-09-29-001",
+  "completed_at_utc": "2026-09-30T04:05:54.917928+00:00",
+  "input_hashes": {
+    "projects/04-guardsynth-coc/paper/GUARDSYNTH_COC_METHODS_SETTINGS_PACKAGE_V01_KO.md": "e92d77a88089161bd4da467fcec41d5eb81683092cc54eded3e70c5823a43984"
+  },
+  "output_hashes": {
+    "REPORT_KO.md": "29039ab7af9f08e3f30423c7e66f8ba42c5623b6fea038fb613acf99f9342711",
+    "RESULT.json": "3c54a6032e192e31e27ff85ce921715ed4276aecf79f3d8f0cdbfb8f16cc4344",
+    "build-pass-1.log": "f44238097b3e33c12109a3767158591c5cd6d684fd645aa3322e76d38101b962",
+    "build-pass-2.log": "5953f385cbb2baaff42b636496f5828b77850862e18ee54b7668d8cc07032e44",
+    "guardsynth-coc-methods-settings-package-v01-ko.aux": "78c3b5ac1dbb8b2bad6fd265fe2c79cc8222d23e32d47c79e568d4145f090703",
+    "guardsynth-coc-methods-settings-package-v01-ko.log": "bab797dc85fa5ff3bfd14dedaa011fa2623e033bb924adf1415327929fa9cf12",
+    "guardsynth-coc-methods-settings-package-v01-ko.out": "ab2034a6d3d82b566d4a2fe02561fbbe3a9cef3706a9cfb597df208fabc47d63",
+    "guardsynth-coc-methods-settings-package-v01-ko.pdf": "6ac3ffadfc8c186937191b5ba78b7e81301d00ce95853080cc320fb475ab234a",
+    "guardsynth-coc-methods-settings-package-v01-ko.tex": "08050736b04893b6921e31179c227a541d71baa8cde58ec6a72c1a62321cb2e9",
+    "guardsynth-coc-methods-settings-package-v01-ko.toc": "693c14df83991506c5fd20054b509b1bfbf83d890331ee73d3501f483cf71bff",
+    "layout-pass-1.log": "5953f385cbb2baaff42b636496f5828b77850862e18ee54b7668d8cc07032e44",
+    "layout-pass-2.log": "5953f385cbb2baaff42b636496f5828b77850862e18ee54b7668d8cc07032e44"
+  },
+  "engine": "XeTeX 0.999994 / TeX Live 2022 Debian",
+  "scope": "Korean authoring PDF conversion; no experiment or manuscript submission",
+  "official_guidance": [
+    "https://ieeeaccess.ieee.org/authors/preparing-your-article/",
+    "https://ieeeaccess.ieee.org/authors/submission-guidelines/"
+  ]
+}

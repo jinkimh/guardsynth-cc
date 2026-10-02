@@ -1,0 +1,164 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\setmainfont[
+  Path=../latex-kiee-review-2022/fonts/,
+  Extension=.otf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold
+]{NotoSerifCJKkr}
+
+\definecolor{reviewercolor}{RGB}{38,82,126}
+\definecolor{responsecolor}{RGB}{36,113,78}
+\definecolor{revisioncolor}{RGB}{145,82,24}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlength{\fboxsep}{7pt}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\familydefault}{\rmdefault}
+
+\newcommand{\fieldheading}[2]{%
+  \par\medskip\noindent
+  {\color{#1}\rule{3pt}{1.25em}}\hspace{0.55em}\textbf{#2}\par\smallskip}
+
+\newenvironment{reviewitem}[1]
+  {\subsection*{#1}}
+  {\par\medskip\hrule\bigskip}
+\newenvironment{reviewercomment}
+  {\fieldheading{reviewercolor}{1. 리뷰어 코멘트}%
+   \begin{quote}}
+  {\end{quote}}
+\newenvironment{authorresponse}
+  {\fieldheading{responsecolor}{2. 저자 답변}}
+  {\par}
+\newenvironment{manuscriptrevision}[1]
+  {\fieldheading{revisioncolor}{3. 논문 반영 결과}%
+   \textbf{수정 위치:} #1\par\smallskip}
+  {\par}
+
+\newcommand{\manuscripttitle}{비전-언어 자율주행 모델의 실행 가드 기반 궤적 후보 선택: 안전 제약 인과 연쇄}
+\newcommand{\manuscriptid}{2026-D-D04-0036}
+\newcommand{\revisionround}{2차 수정 (추가 확인 사항)}
+\newcommand{\responsedate}{2026년 9월 30일}
+
+\begin{document}
+\begin{center}
+  {\LARGE\bfseries 심사 의견 답변서\par}
+  \vspace{1em}
+  {\large\bfseries \manuscripttitle\par}
+\end{center}
+\vspace{0.8em}
+\begin{tabular}{@{}ll@{}}
+논문 접수번호: & \manuscriptid \\
+수정 차수: & \revisionround \\
+답변일: & \responsedate
+\end{tabular}
+
+\section*{답변에 앞서}
+편집위원장님과 리뷰어님께,
+
+1차 수정 내용을 검토하고 추가 확인 사항을 제시해 주셔서 감사합니다.
+이번 개정은 표준편차 산정 방식, 복합 표현 변화의 해석 범위,
+표준 평가의 난이도와 hard-case 결과에 관한 세 사항에 한정하였습니다.
+기존 실험과 수치는 유지하고 설명을 보완하였습니다.
+개정 원고의 파란색은 이번에 추가ㆍ수정한 부분만 나타내며,
+1차 수정 내용은 검정색으로 표시하였습니다.
+아래 쪽 번호는 이번 개정 원고를 기준으로 합니다.
+
+\section*{리뷰어 1}
+\textbf{총평}\par
+\begin{quote}
+1차 심사 의견에 대해 전반적으로 충실하게 수정되었으며, 주요 지적사항도 적절히 보완된 것으로 판단됩니다. 다만 논문의 명확성을 위해 아래 사항을 추가로 확인해 주시기 바랍니다.
+\end{quote}
+
+\clearpage
+\begin{reviewitem}{R1-1. 표준편차 산정 방식의 설명}
+\begin{reviewercomment}
+실험별로 표준편차 산정 방식이 다르게 적용되어 있습니다. 결과의 일관성을 위해 가능하면 동일한 방식으로 통일하거나, 현재와 같이 적용한 이유를 간략히 설명해 주시기 바랍니다.
+\end{reviewercomment}
+\begin{authorresponse}
+지적에 감사드립니다. 기존 집계 코드에서 시간 과제는 모집단 표준편차,
+정지ㆍ차선 변경 과제는 표본 표준편차를 사용했음을 확인하였습니다.
+이는 과제 특성에 따른 필수적인 구분이 아니라 집계 구현의 차이입니다.
+이번 개정에서는 기존 집계 결과 및 그림과의 대응을 유지하기 위해 수치를
+재산정하지 않고, 요청하신 대안에 따라 현재 방식을 유지한 이유를 설명했습니다.
+두 정의의 분모, 세 반복에서의 환산 관계, 과제 간 산포를 직접 비교하지 않는다는
+해석 원칙을 함께 명시했습니다. 표준편차를 표준오차나 신뢰구간으로 해석하지
+않도록 설명도 덧붙였습니다.
+\end{authorresponse}
+\begin{manuscriptrevision}{5장 도입부 「평가 이름을 읽는 법」(7쪽); 6.6절 「결과를 해석할 때의 실험적 한계」(14쪽)}
+5장에 다음 문단을 추가하고, 6.6절에도 동일한 해석 원칙을 반영했습니다.
+\begin{quote}
+기존 집계 결과 및 그림과의 대응을 유지하기 위해, 시간 과제는 모집단 표준편차($N$으로 나눔), 정지ㆍ차선 변경 과제는 표본 표준편차($N-1$로 나눔)를 사용한 원래 집계 방식을 유지하였다. 이는 과제의 성질에 따라 서로 다른 정의가 필요해서가 아니라 집계 구현의 차이에서 비롯된 것이다. 두 과제 모두 $N=3$이며, 같은 세 값에 대해 표본 표준편차는 모집단 표준편차의 $\sqrt{3/2}$배다. 따라서 과제 간 표준편차의 크기를 직접 비교하지 않고, 각 과제 안에서 동일한 정의를 적용한 조건 간 비교로 해석한다. 이 값은 세 반복의 산포를 나타내며 표준오차나 신뢰구간이 아니다.
+\end{quote}
+\end{manuscriptrevision}
+\end{reviewitem}
+
+\clearpage
+\begin{reviewitem}{R1-2. 복합 표현 변화의 요인별 해석 제한}
+\begin{reviewercomment}
+복합 표현 변화 실험에서는 단위 변환, 부정 표현, 경계값 등의 조건이 함께 변경되어 있어 개별 요인의 영향을 구분하기 어렵습니다. 결과 해석 시 특정 요인이 성능 저하의 주된 원인으로 단정되지 않도록 관련 내용을 조금 더 명확히 기술해 주시기 바랍니다.
+\end{reviewercomment}
+\begin{authorresponse}
+동의합니다. 기존의 ``단위 변환이 유일한 원인이라고 확정할 수 없다''는 문장은
+단위 변환을 주된 원인으로 해석할 여지를 남길 수 있었습니다.
+이를 수정하여, 현재 설계에서는 개별 요인과 상호작용을 분리하지 못하므로
+어느 요인이 주된 원인인지 또는 각 요인의 기여가 얼마인지를 판정할 수 없다고
+명시했습니다.
+
+기존 단위 정규화 재평가는 나머지 입력을 고정한 상태에서 전처리의 효과를
+확인한 결과로 유지했습니다. 다만 세 건의 수치 안전 오류가 교정되었다는
+관찰을 전체 성능 저하의 원인 규명으로 확대하지 않도록 설명을 보완했습니다.
+남은 12건의 오류 역시 부정 표현, 절 순서, 경계 등호 중 특정 요인에 귀속하지
+않았습니다. 실험 결과, 논의 및 결론의 관련 표현을 같은 범위로 정리했습니다.
+\end{authorresponse}
+\begin{manuscriptrevision}{5.5절 「정지ㆍ차선 변경과 복합 표현 변화」(10쪽); 6.3절 「수치 조건은 모델 외부 검증기가 다시 확인해야 한다」(13쪽); 6.6절(14쪽); 7장 결론(15쪽)}
+복합 표현 변화의 결과 해석을 다음과 같이 수정했습니다.
+\begin{quote}
+그러나 이 평가는 개별 요인의 효과와 요인 간 상호작용을 분리하도록 설계되지 않았다. 따라서 오답이 cm 표현에 집중되었다는 관찰만으로 단위 변환, 부정 표현, 경계값 또는 절 순서 중 어느 요인이 성능 저하의 주된 원인인지, 각 요인의 기여가 얼마인지를 판정할 수 없다.
+\end{quote}
+단위 정규화 결과의 해석도 다음과 같이 한정했습니다.
+\begin{quote}
+따라서 이 재평가는 주어진 복합 표현 조건에서 단위 정규화 전처리가 세 건의 수치 안전 오류를 교정했음을 보여준다. 다만 나머지 요인을 각각 조작한 실험은 아니므로, 이 개선이나 남은 12건의 오류만으로 단위 변환 또는 다른 특정 표현 요인을 전체 성능 저하의 주된 원인으로 판정할 수는 없다.
+\end{quote}
+결론에서도 ``단위 변환을 포함한 특정 요인을 성능 저하의 주된 원인으로
+확정할 수 없다''고 명시했습니다.
+\end{manuscriptrevision}
+\end{reviewitem}
+
+\clearpage
+\begin{reviewitem}{R1-3. 표준 평가의 난이도와 hard-case 결과의 병행 해석}
+\begin{reviewercomment}
+일부 표준 평가에서 정확도가 1.0에 도달하고 있으므로 해당 평가의 난이도에 따른 영향도 있을 것으로 보입니다. Hard-case 결과와 함께 이를 간략히 언급하면 결과를 보다 객관적으로 해석하는 데 도움이 될 것으로 생각됩니다.
+\end{reviewercomment}
+\begin{authorresponse}
+지적에 동의합니다. 표준 평가는 학습과 같은 문장 틀ㆍ수치 범위에서 제한된
+후보를 선택하는 과제라는 점을 명시하고, 정확도 1.000에 평가 난이도와
+제한된 범위에 따른 천장 효과가 반영되었을 가능성을 설명했습니다.
+이는 해당 분포에서의 가드 조건화 학습을 보여주는 결과이며, 일반적인 수치
+추론이나 더 어려운 조건의 성능을 입증하는 결과로 해석하지 않았습니다.
+
+기존 hard-case의 계약 쌍 정확도(정지 0.958, 차선 변경 0.833)를 함께 제시하여
+표준 결과와 병행해서 해석하도록 보완했습니다. 또한 hard-case에도 여러 변화가
+함께 포함되어 있으므로, 그 하락을 특정 난이도 요인 하나의 효과로 단정하지
+않았습니다. 새로운 실험이나 수치를 추가하지 않고 기존 결과의 해석 범위를
+명확히 했습니다.
+\end{authorresponse}
+\begin{manuscriptrevision}{6.6절 「결과를 해석할 때의 실험적 한계」(15쪽); 기존 표 10의 hard-case 결과 참조}
+관련 문단을 다음과 같이 수정했습니다.
+\begin{quote}
+표준 평가는 학습과 같은 문장 틀ㆍ수치 범위에서 제한된 후보를 선택하는 과제이므로, 일부 정확도 1.000에는 이러한 난이도와 제한된 평가 범위에 따른 천장 효과(ceiling effect)가 반영되었을 가능성이 있다. 따라서 1.000은 해당 표준 분포에서의 가드 조건화 학습을 보여주지만, 일반적인 수치 추론 능력이나 더 어려운 조건에서의 성능을 입증하지 않는다. 표 10의 hard-case에서는 계약 쌍 정확도가 정지 0.958, 차선 변경 0.833으로 낮아졌다. 표준 결과는 이 hard-case 결과와 함께 해석해야 하며, hard-case에서도 동시 제약ㆍ경계 등호ㆍ표현 변화가 결합되어 있으므로 하락을 특정 난이도 요인 하나의 효과로 단정할 수 없다. 후속 평가에서는 가드 간 수치 간격과 활성 제약 수 등을 독립적으로 변화시켜 난이도의 영향을 분리할 필요가 있다.
+\end{quote}
+\end{manuscriptrevision}
+\end{reviewitem}
+
+\section*{맺음말}
+논문의 명확성과 결과 해석의 균형을 높일 수 있도록 의견을 주셔서 감사합니다.
+세 지적에 따라 통계 표기의 이유와 비교 범위, 복합 변화의 인과 해석 한계,
+표준ㆍhard-case 결과를 함께 읽어야 하는 이유를 보완하였습니다.
+\end{document}

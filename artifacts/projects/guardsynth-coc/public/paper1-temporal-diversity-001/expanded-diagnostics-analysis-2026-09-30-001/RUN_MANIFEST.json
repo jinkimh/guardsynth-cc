@@ -1,0 +1,49 @@
+{
+  "project_id": "guardsynth-coc",
+  "status": "COMPLETE",
+  "input_hashes": {
+    "artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/expanded-diagnostics-launch-2026-09-30-001/protocol.json": "08306178ba2805934b310ccba38c5ccc9905584fd31f36e81a96edd0717a2733",
+    "artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/expanded-diagnostics-inference-2026-09-30-001/RUN_MANIFEST.json": "c092c68d1ef4fe49a7a8949c1f9bbc1cdca1e13f4a6a63a2883ce7cc0b1691e2",
+    "artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/diversity-protocol-2026-09-29-001/RUN_MANIFEST.json": "2306d2caae5344151925ada4f3d1b06266cfcbfd4ee6575cec20819db83749c5"
+  },
+  "adapter_source_hashes": {
+    "artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/expanded-diagnostics-launch-2026-09-30-001/launch.py": "4b434f45e72be10d8b0f37ea55cd7f8f534c7506f94c891a7cad6b2f6f942fa0",
+    "artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/expanded-diagnostics-launch-2026-09-30-001/protocol.json": "08306178ba2805934b310ccba38c5ccc9905584fd31f36e81a96edd0717a2733",
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/run_temporal_diversity.py": "9dc131671447c5519a317ffdb1a5777c32895e335a960aa19d0d5c3fb9ed3ca1",
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/analyze_temporal_diversity.py": "29620325ef1d0e8684feddb4a04e5f1f2e045c274a3c0252bc712095f8f9fd35",
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_diversity.py": "a6125fb50583a6b250e34161825673709c3171590e23aa4c65acd666cfd7dc1a",
+    "artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/diversity-protocol-2026-09-29-001/RUN_MANIFEST.json": "2306d2caae5344151925ada4f3d1b06266cfcbfd4ee6575cec20819db83749c5",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/RUN_MANIFEST.json": "be0f71a01c106d6c8504dc798ae253f5d552e8cb1127bff25b004531967e03db",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p0-seed42/adapter/README.md": "cfb7ccf343a2b9cd6f189998a2a1e21a603844dd0cce39d61e1d77e3c6d2dcbb",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p0-seed42/adapter/adapter_model.safetensors": "0890b2738dcd3d06dd7d1942cb6e2ec9c60bd359d70c062d647fa5f78d1b8946",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p0-seed42/adapter/adapter_config.json": "c73bb3ca783da3495bad9a061d34d6c8c4e59eb644628e65326db12df7b70009",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p1-seed42/adapter/README.md": "cfb7ccf343a2b9cd6f189998a2a1e21a603844dd0cce39d61e1d77e3c6d2dcbb",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p1-seed42/adapter/adapter_model.safetensors": "06c0f9e3ad16f732ca1c77349b6504854aadb71c8df730309555cc08d08c74be",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p1-seed42/adapter/adapter_config.json": "c73bb3ca783da3495bad9a061d34d6c8c4e59eb644628e65326db12df7b70009",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p2-seed42/adapter/README.md": "cfb7ccf343a2b9cd6f189998a2a1e21a603844dd0cce39d61e1d77e3c6d2dcbb",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p2-seed42/adapter/adapter_model.safetensors": "7f2bc9e82c704f2ad54f53e61f2ab313819dda9274cab73387e48219ca571448",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p2-seed42/adapter/adapter_config.json": "c73bb3ca783da3495bad9a061d34d6c8c4e59eb644628e65326db12df7b70009",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p0-seed17/adapter/README.md": "cfb7ccf343a2b9cd6f189998a2a1e21a603844dd0cce39d61e1d77e3c6d2dcbb",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p0-seed17/adapter/adapter_model.safetensors": "7fa6acd065369ac969df544b4ee57722220dd9143eaa6b91b2e819fd5ad6a67a",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p0-seed17/adapter/adapter_config.json": "c73bb3ca783da3495bad9a061d34d6c8c4e59eb644628e65326db12df7b70009",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p1-seed17/adapter/README.md": "cfb7ccf343a2b9cd6f189998a2a1e21a603844dd0cce39d61e1d77e3c6d2dcbb",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p1-seed17/adapter/adapter_model.safetensors": "2414dfc6cd146ac7902beaed7f2f1f29b4ce71951badaf9a85e5bc573def7e53",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p1-seed17/adapter/adapter_config.json": "c73bb3ca783da3495bad9a061d34d6c8c4e59eb644628e65326db12df7b70009",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p2-seed17/adapter/README.md": "cfb7ccf343a2b9cd6f189998a2a1e21a603844dd0cce39d61e1d77e3c6d2dcbb",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p2-seed17/adapter/adapter_model.safetensors": "222f797dc52b2bfee616c487b6afa2c3021cfbf4882c19ae3a2e257b9d97826d",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p2-seed17/adapter/adapter_config.json": "c73bb3ca783da3495bad9a061d34d6c8c4e59eb644628e65326db12df7b70009",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p0-seed123/adapter/README.md": "cfb7ccf343a2b9cd6f189998a2a1e21a603844dd0cce39d61e1d77e3c6d2dcbb",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p0-seed123/adapter/adapter_model.safetensors": "8e3dc9e060587a63f5c0c48a1bd0377426810b99595e9750c3b7e5d4f41969c3",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p0-seed123/adapter/adapter_config.json": "c73bb3ca783da3495bad9a061d34d6c8c4e59eb644628e65326db12df7b70009",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p1-seed123/adapter/README.md": "cfb7ccf343a2b9cd6f189998a2a1e21a603844dd0cce39d61e1d77e3c6d2dcbb",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p1-seed123/adapter/adapter_model.safetensors": "d48b483c6efe46f70676314caf587f63a80dbaba863976f80f4e6adc33a12371",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p1-seed123/adapter/adapter_config.json": "c73bb3ca783da3495bad9a061d34d6c8c4e59eb644628e65326db12df7b70009",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p2-seed123/adapter/README.md": "cfb7ccf343a2b9cd6f189998a2a1e21a603844dd0cce39d61e1d77e3c6d2dcbb",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p2-seed123/adapter/adapter_model.safetensors": "6edb184852167696fcfbad61aa3cabcb6e58913f632ad28dfb6aa432eb1d666d",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/p2-seed123/adapter/adapter_config.json": "c73bb3ca783da3495bad9a061d34d6c8c4e59eb644628e65326db12df7b70009"
+  },
+  "output_hashes": {
+    "RESULT.json": "c397bb6749578beae6c753c503a90431ba313379bb7f0545bbce4ec2ba7082a6",
+    "REPORT_KO.md": "38b4910142987cc5452d3e033e04fd9cc0c87ff84b48692b1c16a56adb26b879"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "policy_version": "1.0",
+  "external_root": "../guardsynth-cc-worktrees",
+  "worktrees": [
+    {
+      "work_id": "guardsynth-additional-20260930",
+      "project_id": "guardsynth-coc",
+      "branch": "experiment/guardsynth-additional-20260930",
+      "path": "../guardsynth-cc-worktrees/guardsynth-additional-20260930",
+      "creator": "Codex",
+      "created": "2026-09-30",
+      "status": "ACTIVE",
+      "note": "User-approved isolated additional experiments; uncommitted dependencies copied, original inputs preserved."
+    },
+    {
+      "work_id": "sequential-coc-review-20260930",
+      "project_id": "sequential-coc-verification",
+      "branch": "review/sequential-coc-20260930",
+      "path": "../guardsynth-cc-worktrees/sequential-coc-review-20260930",
+      "creator": "Codex",
+      "created": "2026-09-30",
+      "status": "RETIRED",
+      "note": "User requested all worktree contents consolidated into main workspace and external worktree removed. Latest 11-page manuscript, responses, experiments, and scratch history retained; differing originals archived in restricted integration record.",
+      "retired_on": "2026-10-01",
+      "integrated_into": "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc",
+      "integration_record": "artifacts/projects/sequential-coc-verification/restricted/worktree-integration-001/integration-2026-10-01-001"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "catalog_version": "1.0",
+  "entries": [
+    {
+      "path": "baseline/coc_nusc",
+      "license_class": "PUBLIC_BASELINE",
+      "consumers": ["safety-constrained-coc", "sequential-coc-verification"]
+    },
+    {
+      "path": "restricted/nvidia_cascade",
+      "license_class": "LICENSE_RESTRICTED",
+      "consumers": ["guardsynth-coc", "sequential-coc-verification"]
+    },
+    {
+      "path": "restricted/nvidia_physicalai",
+      "license_class": "LICENSE_RESTRICTED",
+      "consumers": ["safety-constrained-coc", "sequential-coc-verification", "guardsynth-coc"]
+    }
+  ]
+}

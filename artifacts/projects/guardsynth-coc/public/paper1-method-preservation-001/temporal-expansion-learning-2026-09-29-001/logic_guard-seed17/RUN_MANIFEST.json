@@ -1,0 +1,13 @@
+{
+  "output_hashes": {
+    "training.json": "d34c53ad44519fd9cf1a4c65e1bd841f0a101d05f3887378595f6f2ae736a21b",
+    "validation.jsonl": "75620ae8a972563f63c28c2457166b0772cfd18a2084b724579ff22c7e29cbc8",
+    "test.jsonl": "f56d4dbabb9b6555d55966345d71c819d99678eb61926b73b539dc0841fb30f3",
+    "paraphrase.jsonl": "f56d4dbabb9b6555d55966345d71c819d99678eb61926b73b539dc0841fb30f3",
+    "unseen_duration.jsonl": "d0b8ce6b9ef9bdc86511bb554a6126bb873e1c116bf3828849f97397d55d3b76",
+    "RESULT.json": "708aac73f5eefd843b63ed1886bc7046996a14b68136f9bc24c63a7fcf7afeb0",
+    "adapter/README.md": "cfb7ccf343a2b9cd6f189998a2a1e21a603844dd0cce39d61e1d77e3c6d2dcbb",
+    "adapter/adapter_model.safetensors": "a0115d4cd918965285ed5a2be0713d6d8666afe6269c88c7e31b1eac2984b6e7",
+    "adapter/adapter_config.json": "c73bb3ca783da3495bad9a061d34d6c8c4e59eb644628e65326db12df7b70009"
+  }
+}

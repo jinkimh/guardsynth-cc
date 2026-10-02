@@ -1,0 +1,9 @@
+{
+  "status": "PRIMARY_AND_DIVERSITY_DRAFT_COMPILED",
+  "pages": 6,
+  "submitted": false,
+  "expanded_training_results_included": false,
+  "diversity_predictions": 2160,
+  "core_behavior_bindings": 2376,
+  "core_environment_disagreements": 0
+}

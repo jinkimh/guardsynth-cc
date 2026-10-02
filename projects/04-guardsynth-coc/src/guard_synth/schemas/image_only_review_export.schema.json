@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:guardsynth:image-only-review-export:v0.2",
+  "title": "GuardSynth image-only review export v0.2",
+  "type": "object",
+  "required": ["review_version", "exported_at", "input_class", "image_bytes_included", "records"],
+  "additionalProperties": false,
+  "properties": {
+    "review_version": {"const": "guardsynth-image-only-scene-review-v0.2"},
+    "exported_at": {"type": "string", "minLength": 1},
+    "input_class": {"const": "IMAGE_ONLY"},
+    "image_bytes_included": {"const": false},
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/record"}
+    }
+  },
+  "$defs": {
+    "record": {
+      "type": "object",
+      "required": [
+        "scene_tags", "scene_id", "image_filename", "slot_id", "image_usability",
+        "other_scene_description", "primary_situation", "visual_hazard",
+        "subject_description", "conflict_region", "subject_position", "occlusion",
+        "traffic_control", "ego_motion", "temporal_change", "human_disposition",
+        "review_confidence", "override_reason", "review_id", "recommended_disposition",
+        "reason_codes", "review_completed_at", "reviewer_id", "review_version",
+        "metadata_availability", "contract_readiness", "review_complete",
+        "image_bytes_included", "notes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "scene_tags": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "scene_id": {"type": "string", "minLength": 1},
+        "image_filename": {"type": "string", "minLength": 1},
+        "slot_id": {"type": "string"},
+        "image_usability": {"type": "string", "enum": ["USABLE", "PARTIAL", "UNUSABLE"]},
+        "other_scene_description": {"type": "string"},
+        "primary_situation": {"type": "string", "minLength": 1},
+        "visual_hazard": {"type": "string", "enum": ["TRUE", "FALSE", "UNKNOWN", "CONFLICT_ACROSS_FRAMES"]},
+        "subject_description": {"type": "string"},
+        "conflict_region": {"type": "string", "minLength": 1},
+        "subject_position": {"type": "string", "minLength": 1},
+        "occlusion": {"type": "string", "minLength": 1},
+        "traffic_control": {"type": "string", "minLength": 1},
+        "ego_motion": {"type": "string", "minLength": 1},
+        "temporal_change": {"type": "string", "minLength": 1},
+        "human_disposition": {"type": "string", "minLength": 1},
+        "review_confidence": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW"]},
+        "override_reason": {"type": "string"},
+        "review_id": {"type": "string", "minLength": 1},
+        "recommended_disposition": {"type": "string", "minLength": 1},
+        "reason_codes": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "review_completed_at": {"type": "string"},
+        "reviewer_id": {"type": "string", "minLength": 1},
+        "review_version": {"const": "guardsynth-image-only-scene-review-v0.2"},
+        "metadata_availability": {"const": "NOT_AVAILABLE_FROM_IMAGE"},
+        "contract_readiness": {"const": "REVIEW_REQUIRED"},
+        "review_complete": {"type": "boolean"},
+        "image_bytes_included": {"const": false},
+        "notes": {"type": "string"}
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "project_id": "sequential-coc-verification",
+  "run_id": "manuscript-build-2026-10-01-003",
+  "status": "SUPERSEDED_LAYOUT_WARNINGS",
+  "sealed_at_utc": "2026-10-01T18:00:05.277924+00:00",
+  "pdfs": {
+    "main": {
+      "path": "artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-003/main/main.pdf",
+      "pages": 11,
+      "sha256": "0083772888c41df0ddfdda825cc829727f7c56c85f63c62a8d4ecf2429836729"
+    },
+    "main-clean": {
+      "path": "artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-003/main-clean/main-clean.pdf",
+      "pages": 11,
+      "sha256": "256d8a43d48dc96e0c9962854813e83769e548405f4b9fe0605fec025c0d8484"
+    },
+    "response-to-reviewer-1": {
+      "path": "artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-003/response-to-reviewer-1/response-to-reviewer-1.pdf",
+      "pages": 10,
+      "sha256": "96a181ac98d19c70e5718d6ea07321d39805f5876969f5cb4c0c7d8d58ebae9b"
+    },
+    "response-to-reviewer-2": {
+      "path": "artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-003/response-to-reviewer-2/response-to-reviewer-2.pdf",
+      "pages": 9,
+      "sha256": "c07a127bd6266d7efa59b762feb2be1fbe3ed6c3a08a99c5879f4dffabc4543e"
+    },
+    "response-to-reviewer-3": {
+      "path": "artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-003/response-to-reviewer-3/response-to-reviewer-3.pdf",
+      "pages": 13,
+      "sha256": "4ce391fd5f7c108824a1d0a1b7dd388d080c5a4619d9ab2608bb774a71dc090d"
+    }
+  },
+  "artifact_hashes": {
+    "REPORT_KO.md": "092b1c4710ebe9a69e9a8650d2e73f32adbb2c3c59865e77abd22953400831b7",
+    "RESULT.json": "5c4a08b1b7dd8c0e9db74fadb9dec7ebe8496ee2a1f846d7e40df8e47214ad18",
+    "main/build-1.txt": "52389ae25bc31c0f3bf37563799f234c9dae0511c9fd49b76fa77985a4098174",
+    "main/build-2.txt": "91ac73e1d6e390981b31bee56568f8238d693bd173ab8430677bbf1734fcdb6f",
+    "main/build-3.txt": "4ff336604e707b3ab8bc32fbdf156f739c934a95985fd633513e6fb4777894e1",
+    "main/build-4.txt": "1012efd8bd6f4bf087b4ce78127e73b89cdfdfd1078cc0782d87ef691a32e3c9",
+    "main/main.aux": "5104908273f82492e4f4c760272e71e57d0fcf533a64d91f68f2a9d451d3de2b",
+    "main/main.bbl": "499ad02e82aab960db08c6cc39569ebdfecd1446e12cea136e30fb1243a65120",
+    "main/main.blg": "5fcd10db84fc58b16bc570a6bc925f76eb921427019cb354c3cb7148bacf757b",
+    "main/main.log": "994d77d81aa40efbaa15d4246558c4f7385dddb96419bd3a1ebf4f68652d87d6",
+    "main/main.out": "cb2da813a268b3ff1179a51222fb268503d9df459d871e9730cca18502566c28",
+    "main/main.pdf": "0083772888c41df0ddfdda825cc829727f7c56c85f63c62a8d4ecf2429836729",
+    "main-clean/build-1.txt": "d1ff68f34650642a48df8bb7b3e9e5556203212e8e9863fd07e6d1546ad62fef",
+    "main-clean/build-2.txt": "2f0e08c73879d8bcb3d90468bedfdf295d30616931a5e28dd0c760a0d2416b3d",
+    "main-clean/build-3.txt": "0edbfc6e40a4547b74b5ba6e597929cd68855cba1c363015a5a66b16e883d677",
+    "main-clean/build-4.txt": "843a099b59d5b3d782e34b8a713d612e68a0b2d97d3d6dbba049743139423c5d",
+    "main-clean/main-clean.aux": "5104908273f82492e4f4c760272e71e57d0fcf533a64d91f68f2a9d451d3de2b",
+    "main-clean/main-clean.bbl": "499ad02e82aab960db08c6cc39569ebdfecd1446e12cea136e30fb1243a65120",
+    "main-clean/main-clean.blg": "b42c3dbab4e7726c39dcf006f7ba5219e2abbdba95ba7d61ab90feaf9c989e3f",
+    "main-clean/main-clean.log": "a7690c688e7febb2da00c767c4e7ed9283c44151a15dc79e2402b3997999516d",
+    "main-clean/main-clean.out": "cb2da813a268b3ff1179a51222fb268503d9df459d871e9730cca18502566c28",
+    "main-clean/main-clean.pdf": "256d8a43d48dc96e0c9962854813e83769e548405f4b9fe0605fec025c0d8484",
+    "response-to-reviewer-1/build-1.txt": "d6d49155c28cbe1a98ea66032dce1b9cda3acc912d22b8a88e88385cc64cbe28",
+    "response-to-reviewer-1/build-2.txt": "e6294808c0ff5f3e25fac5d5b49a869e102bd581515ca5dd80f8309256e63f0f",
+    "response-to-reviewer-1/build-3.txt": "e6294808c0ff5f3e25fac5d5b49a869e102bd581515ca5dd80f8309256e63f0f",
+    "response-to-reviewer-1/response-to-reviewer-1.aux": "8d7a432c96fde60f17f25dba6448a20c0ea4707ae0dac7ac07cbeec1e3930532",
+    "response-to-reviewer-1/response-to-reviewer-1.log": "6b16d1c892c6bf2e1efb1463921f74775c8ed6a5935d2abd3ef31f191e280545",
+    "response-to-reviewer-1/response-to-reviewer-1.out": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "response-to-reviewer-1/response-to-reviewer-1.pdf": "96a181ac98d19c70e5718d6ea07321d39805f5876969f5cb4c0c7d8d58ebae9b",
+    "response-to-reviewer-2/build-1.txt": "08bf63425e4fc647108b5067a105cf0a5429590d0e8a231190670e56b0cc8708",
+    "response-to-reviewer-2/build-2.txt": "44a1373f4c6582c412fa53ac2afe99d97706d5b2756301d80f21f8f92cc756c4",
+    "response-to-reviewer-2/build-3.txt": "44a1373f4c6582c412fa53ac2afe99d97706d5b2756301d80f21f8f92cc756c4",
+    "response-to-reviewer-2/response-to-reviewer-2.aux": "61c6540cedb385d78d99bcf628fc89905c566dadf225321cd456f059d3fe78d7",
+    "response-to-reviewer-2/response-to-reviewer-2.log": "e162596a55b7846eb77d126a53984178827cdacf3632841842c88d783883e91d",
+    "response-to-reviewer-2/response-to-reviewer-2.out": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "response-to-reviewer-2/response-to-reviewer-2.pdf": "c07a127bd6266d7efa59b762feb2be1fbe3ed6c3a08a99c5879f4dffabc4543e",
+    "response-to-reviewer-3/build-1.txt": "f249366319195804c4f730898ea0352d999a9ec884a28851ec3d409dff5e25c5",
+    "response-to-reviewer-3/build-2.txt": "140fc15f2acdbeefed492b3f0143f3f8c0aa2ad531755c21781e888513d86e1f",
+    "response-to-reviewer-3/build-3.txt": "140fc15f2acdbeefed492b3f0143f3f8c0aa2ad531755c21781e888513d86e1f",
+    "response-to-reviewer-3/response-to-reviewer-3.aux": "dd2b1c49170e7cdd8902ee4aafe1289e2d3f3c1929d2197d7eabe4a5f8360388",
+    "response-to-reviewer-3/response-to-reviewer-3.log": "28b90f9bb9d3cfe93a5302df66f37ed28c490c56fb1d2412ce0d338559d9dc2a",
+    "response-to-reviewer-3/response-to-reviewer-3.out": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "response-to-reviewer-3/response-to-reviewer-3.pdf": "4ce391fd5f7c108824a1d0a1b7dd388d080c5a4619d9ab2608bb774a71dc090d"
+  },
+  "experiments_rerun": false
+}

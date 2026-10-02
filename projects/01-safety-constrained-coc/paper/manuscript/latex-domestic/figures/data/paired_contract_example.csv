@@ -1,0 +1,3 @@
+contract,min_gap_m,candidate_a_verdict,selected_candidate,reason
+완화 계약,5.5,허용,후보 A,현재 간격 7.2 m가 최소 간격 이상
+엄격 계약,9.0,위반,후보 B,현재 간격 7.2 m가 최소 간격 미만

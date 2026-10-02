@@ -1,0 +1,56 @@
+{
+  "project_id": "guardsynth-coc",
+  "status": "COMPILED_PENDING_LAYOUT_CHECK",
+  "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_EN.md",
+  "source_sha256": "99967c21c0cd8bde9c25de29b2ff81953e2c1416354687992afdb89c4c80ecf1",
+  "pdf": "ieee-access-manuscript-outline-v01-en.pdf",
+  "sections": [
+    "1 Central Message and Working Title",
+    "2 Narrative and Contributions",
+    "3 Proposed Eight-Section Manuscript",
+    "4 Abstract and Headline Evidence",
+    "5 Minimum Main-Paper Figures and Tables",
+    "6 Material Outside the Main Paper",
+    "7 Writing Sequence and Acceptance Checks",
+    "8 Checks Before Drafting",
+    "9 Evidence for Writing"
+  ],
+  "table_count": 4,
+  "links": [
+    {
+      "label": "detailed evidence package",
+      "source_target": "GUARDSYNTH_COC_METHODS_SETTINGS_PACKAGE_V01_KO.md",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/paper/GUARDSYNTH_COC_METHODS_SETTINGS_PACKAGE_V01_KO.md"
+    },
+    {
+      "label": "Korean version",
+      "source_target": "IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_KO.md",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/paper/IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_KO.md"
+    },
+    {
+      "label": "Detailed Korean package",
+      "source_target": "GUARDSYNTH_COC_METHODS_SETTINGS_PACKAGE_V01_KO.md",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/paper/GUARDSYNTH_COC_METHODS_SETTINGS_PACKAGE_V01_KO.md"
+    },
+    {
+      "label": "Experiment closure report",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-experiment-closure-2026-09-29-001/REPORT_KO.md",
+      "pdf_target": "../temporal-experiment-closure-2026-09-29-001/REPORT_KO.md"
+    },
+    {
+      "label": "Full metrics CSV",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv",
+      "pdf_target": "../temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv"
+    },
+    {
+      "label": "Temporal contract and verification code",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_preservation.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py"
+    },
+    {
+      "label": "IEEE Access preparation guidance",
+      "source_target": "https://ieeeaccess.ieee.org/authors/preparing-your-article/",
+      "pdf_target": "https://ieeeaccess.ieee.org/authors/preparing-your-article/"
+    }
+  ]
+}

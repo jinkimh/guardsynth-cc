@@ -1,0 +1,505 @@
+{
+  "case_count": 24,
+  "claim_promotions": 0,
+  "coc_text_outputs": 0,
+  "compiler_attempt_count": 2,
+  "compiler_success_count": 2,
+  "expected_verdict_matches": 24,
+  "matrix_version": "guardsynth-coc-frontend-matrix-v0.1",
+  "primary_rule_count": 3,
+  "records": [
+    {
+      "actual_primary_verdict": "PROPOSED",
+      "case_id": "pedestrian_cyclist_yield_00_valid",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": true,
+        "query_statuses": {
+          "composed_model_satisfiable": "SAT"
+        },
+        "reason_code": null,
+        "source_separation": true,
+        "status": "VALIDATED"
+      },
+      "expected_primary_verdict": "PROPOSED",
+      "matches": true,
+      "primary_rule_id": "KR-RTA-27-1-CROSSWALK-STOP",
+      "reason_codes": [],
+      "slice": "PEDESTRIAN_CYCLIST_YIELD",
+      "variant": "VALID"
+    },
+    {
+      "actual_primary_verdict": "PROPOSED",
+      "case_id": "pedestrian_cyclist_yield_01_paraphrase_shuffle",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": true,
+        "query_statuses": {
+          "composed_model_satisfiable": "SAT"
+        },
+        "reason_code": null,
+        "source_separation": true,
+        "status": "VALIDATED"
+      },
+      "expected_primary_verdict": "PROPOSED",
+      "matches": true,
+      "primary_rule_id": "KR-RTA-27-1-CROSSWALK-STOP",
+      "reason_codes": [],
+      "slice": "PEDESTRIAN_CYCLIST_YIELD",
+      "variant": "PARAPHRASE_SHUFFLE"
+    },
+    {
+      "actual_primary_verdict": "REVIEW_REQUIRED",
+      "case_id": "pedestrian_cyclist_yield_02_missing_predicate",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "REVIEW_REQUIRED",
+      "matches": true,
+      "primary_rule_id": "KR-RTA-27-1-CROSSWALK-STOP",
+      "reason_codes": [
+        "MISSING_REQUIRED_PREDICATE"
+      ],
+      "slice": "PEDESTRIAN_CYCLIST_YIELD",
+      "variant": "MISSING_PREDICATE"
+    },
+    {
+      "actual_primary_verdict": "REVIEW_REQUIRED",
+      "case_id": "pedestrian_cyclist_yield_03_unknown",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "REVIEW_REQUIRED",
+      "matches": true,
+      "primary_rule_id": "KR-RTA-27-1-CROSSWALK-STOP",
+      "reason_codes": [
+        "UNKNOWN_REQUIRED_PREDICATE"
+      ],
+      "slice": "PEDESTRIAN_CYCLIST_YIELD",
+      "variant": "UNKNOWN"
+    },
+    {
+      "actual_primary_verdict": "CONFLICT",
+      "case_id": "pedestrian_cyclist_yield_04_conflict",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "CONFLICT",
+      "matches": true,
+      "primary_rule_id": "KR-RTA-27-1-CROSSWALK-STOP",
+      "reason_codes": [
+        "CONFLICTING_SCENE_EVIDENCE"
+      ],
+      "slice": "PEDESTRIAN_CYCLIST_YIELD",
+      "variant": "CONFLICT"
+    },
+    {
+      "actual_primary_verdict": "NOT_APPLICABLE",
+      "case_id": "pedestrian_cyclist_yield_05_false",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "NOT_APPLICABLE",
+      "matches": true,
+      "primary_rule_id": "KR-RTA-27-1-CROSSWALK-STOP",
+      "reason_codes": [],
+      "slice": "PEDESTRIAN_CYCLIST_YIELD",
+      "variant": "FALSE"
+    },
+    {
+      "actual_primary_verdict": "REVIEW_REQUIRED",
+      "case_id": "pedestrian_cyclist_yield_06_claimed_only",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "REVIEW_REQUIRED",
+      "matches": true,
+      "primary_rule_id": "KR-RTA-27-1-CROSSWALK-STOP",
+      "reason_codes": [
+        "CLAIMED_FACT_NOT_PREDICATE_AUTHORITY"
+      ],
+      "slice": "PEDESTRIAN_CYCLIST_YIELD",
+      "variant": "CLAIMED_ONLY"
+    },
+    {
+      "actual_primary_verdict": "REVIEW_REQUIRED",
+      "case_id": "pedestrian_cyclist_yield_07_ambiguous_binding",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "REVIEW_REQUIRED",
+      "matches": true,
+      "primary_rule_id": "KR-RTA-27-1-CROSSWALK-STOP",
+      "reason_codes": [
+        "AMBIGUOUS_BINDING"
+      ],
+      "slice": "PEDESTRIAN_CYCLIST_YIELD",
+      "variant": "AMBIGUOUS_BINDING"
+    },
+    {
+      "actual_primary_verdict": "PROPOSED",
+      "case_id": "stop_signals_00_valid",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": "NO_OPERATIONAL_POLICY_BINDING_FOR_PROPOSAL",
+        "source_separation": null,
+        "status": "UNSUPPORTED"
+      },
+      "expected_primary_verdict": "PROPOSED",
+      "matches": true,
+      "primary_rule_id": "KR-RULES-A2-RED-STOP",
+      "reason_codes": [],
+      "slice": "STOP_SIGNALS",
+      "variant": "VALID"
+    },
+    {
+      "actual_primary_verdict": "PROPOSED",
+      "case_id": "stop_signals_01_paraphrase_shuffle",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": "NO_OPERATIONAL_POLICY_BINDING_FOR_PROPOSAL",
+        "source_separation": null,
+        "status": "UNSUPPORTED"
+      },
+      "expected_primary_verdict": "PROPOSED",
+      "matches": true,
+      "primary_rule_id": "KR-RULES-A2-RED-STOP",
+      "reason_codes": [],
+      "slice": "STOP_SIGNALS",
+      "variant": "PARAPHRASE_SHUFFLE"
+    },
+    {
+      "actual_primary_verdict": "REVIEW_REQUIRED",
+      "case_id": "stop_signals_02_missing_predicate",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "REVIEW_REQUIRED",
+      "matches": true,
+      "primary_rule_id": "KR-RULES-A2-RED-STOP",
+      "reason_codes": [
+        "MISSING_REQUIRED_PREDICATE"
+      ],
+      "slice": "STOP_SIGNALS",
+      "variant": "MISSING_PREDICATE"
+    },
+    {
+      "actual_primary_verdict": "REVIEW_REQUIRED",
+      "case_id": "stop_signals_03_unknown",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "REVIEW_REQUIRED",
+      "matches": true,
+      "primary_rule_id": "KR-RULES-A2-RED-STOP",
+      "reason_codes": [
+        "UNKNOWN_REQUIRED_PREDICATE"
+      ],
+      "slice": "STOP_SIGNALS",
+      "variant": "UNKNOWN"
+    },
+    {
+      "actual_primary_verdict": "CONFLICT",
+      "case_id": "stop_signals_04_conflict",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "CONFLICT",
+      "matches": true,
+      "primary_rule_id": "KR-RULES-A2-RED-STOP",
+      "reason_codes": [
+        "CONFLICTING_SCENE_EVIDENCE"
+      ],
+      "slice": "STOP_SIGNALS",
+      "variant": "CONFLICT"
+    },
+    {
+      "actual_primary_verdict": "NOT_APPLICABLE",
+      "case_id": "stop_signals_05_false",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "NOT_APPLICABLE",
+      "matches": true,
+      "primary_rule_id": "KR-RULES-A2-RED-STOP",
+      "reason_codes": [],
+      "slice": "STOP_SIGNALS",
+      "variant": "FALSE"
+    },
+    {
+      "actual_primary_verdict": "REVIEW_REQUIRED",
+      "case_id": "stop_signals_06_claimed_only",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "REVIEW_REQUIRED",
+      "matches": true,
+      "primary_rule_id": "KR-RULES-A2-RED-STOP",
+      "reason_codes": [
+        "CLAIMED_FACT_NOT_PREDICATE_AUTHORITY"
+      ],
+      "slice": "STOP_SIGNALS",
+      "variant": "CLAIMED_ONLY"
+    },
+    {
+      "actual_primary_verdict": "REVIEW_REQUIRED",
+      "case_id": "stop_signals_07_ambiguous_binding",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "REVIEW_REQUIRED",
+      "matches": true,
+      "primary_rule_id": "KR-RULES-A2-RED-STOP",
+      "reason_codes": [
+        "AMBIGUOUS_BINDING"
+      ],
+      "slice": "STOP_SIGNALS",
+      "variant": "AMBIGUOUS_BINDING"
+    },
+    {
+      "actual_primary_verdict": "PROPOSED",
+      "case_id": "following_cut_in_00_valid",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": "NO_OPERATIONAL_POLICY_BINDING_FOR_PROPOSAL",
+        "source_separation": null,
+        "status": "UNSUPPORTED"
+      },
+      "expected_primary_verdict": "PROPOSED",
+      "matches": true,
+      "primary_rule_id": "KR-RTA-19-3-NO-OBSTRUCTIVE-LANE-CHANGE",
+      "reason_codes": [],
+      "slice": "FOLLOWING_CUT_IN",
+      "variant": "VALID"
+    },
+    {
+      "actual_primary_verdict": "PROPOSED",
+      "case_id": "following_cut_in_01_paraphrase_shuffle",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": "NO_OPERATIONAL_POLICY_BINDING_FOR_PROPOSAL",
+        "source_separation": null,
+        "status": "UNSUPPORTED"
+      },
+      "expected_primary_verdict": "PROPOSED",
+      "matches": true,
+      "primary_rule_id": "KR-RTA-19-3-NO-OBSTRUCTIVE-LANE-CHANGE",
+      "reason_codes": [],
+      "slice": "FOLLOWING_CUT_IN",
+      "variant": "PARAPHRASE_SHUFFLE"
+    },
+    {
+      "actual_primary_verdict": "REVIEW_REQUIRED",
+      "case_id": "following_cut_in_02_missing_predicate",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "REVIEW_REQUIRED",
+      "matches": true,
+      "primary_rule_id": "KR-RTA-19-3-NO-OBSTRUCTIVE-LANE-CHANGE",
+      "reason_codes": [
+        "MISSING_REQUIRED_PREDICATE",
+        "MISSING_TARGET_OR_ZONE_BINDING"
+      ],
+      "slice": "FOLLOWING_CUT_IN",
+      "variant": "MISSING_PREDICATE"
+    },
+    {
+      "actual_primary_verdict": "REVIEW_REQUIRED",
+      "case_id": "following_cut_in_03_unknown",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "REVIEW_REQUIRED",
+      "matches": true,
+      "primary_rule_id": "KR-RTA-19-3-NO-OBSTRUCTIVE-LANE-CHANGE",
+      "reason_codes": [
+        "UNKNOWN_REQUIRED_PREDICATE"
+      ],
+      "slice": "FOLLOWING_CUT_IN",
+      "variant": "UNKNOWN"
+    },
+    {
+      "actual_primary_verdict": "CONFLICT",
+      "case_id": "following_cut_in_04_conflict",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "CONFLICT",
+      "matches": true,
+      "primary_rule_id": "KR-RTA-19-3-NO-OBSTRUCTIVE-LANE-CHANGE",
+      "reason_codes": [
+        "CONFLICTING_SCENE_EVIDENCE"
+      ],
+      "slice": "FOLLOWING_CUT_IN",
+      "variant": "CONFLICT"
+    },
+    {
+      "actual_primary_verdict": "NOT_APPLICABLE",
+      "case_id": "following_cut_in_05_false",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "NOT_APPLICABLE",
+      "matches": true,
+      "primary_rule_id": "KR-RTA-19-3-NO-OBSTRUCTIVE-LANE-CHANGE",
+      "reason_codes": [],
+      "slice": "FOLLOWING_CUT_IN",
+      "variant": "FALSE"
+    },
+    {
+      "actual_primary_verdict": "REVIEW_REQUIRED",
+      "case_id": "following_cut_in_06_claimed_only",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "REVIEW_REQUIRED",
+      "matches": true,
+      "primary_rule_id": "KR-RTA-19-3-NO-OBSTRUCTIVE-LANE-CHANGE",
+      "reason_codes": [
+        "CLAIMED_FACT_NOT_PREDICATE_AUTHORITY"
+      ],
+      "slice": "FOLLOWING_CUT_IN",
+      "variant": "CLAIMED_ONLY"
+    },
+    {
+      "actual_primary_verdict": "REVIEW_REQUIRED",
+      "case_id": "following_cut_in_07_ambiguous_binding",
+      "claim_promoted": false,
+      "coc_text_in_output": false,
+      "compiler": {
+        "attempted": false,
+        "query_statuses": {},
+        "reason_code": null,
+        "source_separation": null,
+        "status": "NOT_APPLICABLE_TO_CASE"
+      },
+      "expected_primary_verdict": "REVIEW_REQUIRED",
+      "matches": true,
+      "primary_rule_id": "KR-RTA-19-3-NO-OBSTRUCTIVE-LANE-CHANGE",
+      "reason_codes": [
+        "AMBIGUOUS_BINDING"
+      ],
+      "slice": "FOLLOWING_CUT_IN",
+      "variant": "AMBIGUOUS_BINDING"
+    }
+  ],
+  "schema_parse_count": 24,
+  "supported_operational_policy_rule_count": 1
+}

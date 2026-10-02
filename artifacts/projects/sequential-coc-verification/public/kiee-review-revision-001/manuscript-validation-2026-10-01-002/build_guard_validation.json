@@ -1,0 +1,7 @@
+{
+  "existing_final_run_refused": true,
+  "pdf_hashes_unchanged": true,
+  "reused_asset_hashes_match_initial_e6": true,
+  "exit_code": 1,
+  "message": "Build output already exists or is not a run directory; set COC_BUILD_DIR to a new owner-scoped run directory."
+}

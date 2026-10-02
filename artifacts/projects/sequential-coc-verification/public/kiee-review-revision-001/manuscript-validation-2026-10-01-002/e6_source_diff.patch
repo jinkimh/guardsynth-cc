@@ -1,0 +1,762 @@
+--- /dev/null
++++ follow-up/figures/annotation-flow.tex
+@@ -0,0 +1,10 @@
++\begin{tikzpicture}[
++ box/.style={draw=revisionblue,rounded corners,align=center,text width=.80\columnwidth,minimum height=7mm,font=\scriptsize,text=revisionblue},
++ flow/.style={-{Latex[length=1.7mm]},draw=revisionblue},node distance=4mm]
++\node[box] (raw) {기록 영상ㆍ자차 궤적};
++\node[box,below=of raw] (act) {궤적에서 행동 분류와 대표 시점 계산};
++\node[box,below=of act] (gen) {영상ㆍ행동 정보를 사용한 사후 CoC 생성};
++\node[box,below=of gen] (store) {저장된 문장ㆍ품질 표시ㆍ사건 시각};
++\node[box,below=of store] (check) {본 연구: 연속 문장 검사 / 별도 속도 반응 분석};
++\draw[flow] (raw)--(act);\draw[flow] (act)--(gen);\draw[flow] (gen)--(store);\draw[flow] (store)--(check);
++\end{tikzpicture}
+--- /dev/null
++++ follow-up/figures/condition-observer.tex
+@@ -0,0 +1,11 @@
++\begin{tikzpicture}[
++ loc/.style={draw=revisionblue,circle,minimum size=16mm,align=center,text=revisionblue,font=\footnotesize},
++ flow/.style={-{Latex[length=1.8mm]},draw=revisionblue,thick}]
++\node[loc] (run) at (0,0) {Run\\C};
++\node[loc] (done) at (4.2,0) {Done};
++\draw[flow] (-1.25,0)--(run.west);
++\draw[flow] (run) edge[loop above,looseness=7] node[above,align=center,font=\scriptsize,text=revisionblue] {idx < N\\step(), idx++} (run);
++\draw[flow] (run)--node[above,font=\scriptsize,text=revisionblue] {idx == N}(done);
++\node[below=4mm of run,align=center,font=\scriptsize,text=revisionblue] {committed / 초기 idx=0};
++\node[below=4mm of done,align=center,font=\scriptsize,text=revisionblue] {모든 사건 처리 완료};
++\end{tikzpicture}
+--- /dev/null
++++ follow-up/figures/method-pipeline.tex
+@@ -0,0 +1,13 @@
++\begin{tikzpicture}[
++ box/.style={draw=revisionblue,rounded corners,align=center,text width=3.35cm,minimum height=12mm,font=\footnotesize,text=revisionblue},
++ note/.style={box,text width=3.65cm,font=\scriptsize},
++ flow/.style={-{Latex[length=2mm]},draw=revisionblue,thick}]
++\node[box] (input) at (0,0) {1. 입력 정리\\장면ㆍ사건ㆍ단계 순서\\원문 / 출처 보존};
++\node[box] (frame) at (4.25,0) {2. 프레임 구성\\행동 / 의무 / 조건 ID\\증거 / 원문 구절};
++\node[box] (model) at (8.5,0) {3. 모델 실행\\의무별 배열과 갱신\\상태 속성 / 최초 기록};
++\node[box] (trace) at (12.75,0) {4. 근거 회수\\사건ㆍ의무 ID 복원\\관련 원문 / 사유};
++\node[note] (paths) at (4.25,-1.85) {자동 텍스트: 관측 근거 미확정\\작성 프레임: 명시된 조건 상태};
++\node[note] (reports) at (10.65,-1.85) {최초 통제 결과 / 동일 사례 재시험\\자연 검토 / 보조 반응은 별도 보고};
++\draw[flow] (input)--(frame);\draw[flow] (frame)--(model);\draw[flow] (model)--(trace);
++\draw[flow] (paths.north)--(frame.south);\draw[flow] (trace.south)|-(reports.east);
++\end{tikzpicture}
+--- baseline/manuscript-locations.tex
++++ follow-up/manuscript-locations.tex
+@@ -4,46 +4,54 @@
+ \expandafter\def\csname mloc@fig:overview-pipeline\endcsname{그림 1(2쪽)}
+ \expandafter\def\csname mloc@sec:data\endcsname{3절(2쪽)}
+ \expandafter\def\csname mloc@sec:provenance\endcsname{3.1절(2쪽)}
++\expandafter\def\csname mloc@fig:annotation-flow\endcsname{그림 2(2쪽)}
+ \expandafter\def\csname mloc@sec:selection\endcsname{3.2절(2쪽)}
+-\expandafter\def\csname mloc@sec:artifacts\endcsname{3.3절(2쪽)}
+-\expandafter\def\csname mloc@sec:problem\endcsname{4절(2쪽)}
+ \expandafter\def\csname mloc@tab:related-position\endcsname{표 1(3쪽)}
+ \expandafter\def\csname mloc@tab:provenance\endcsname{표 2(3쪽)}
++\expandafter\def\csname mloc@sec:artifacts\endcsname{3.3절(3쪽)}
++\expandafter\def\csname mloc@sec:problem\endcsname{4절(3쪽)}
+ \expandafter\def\csname mloc@sec:error-types\endcsname{4.1절(3쪽)}
+ \expandafter\def\csname mloc@eq:hold-conflict\endcsname{식 1(3쪽)}
+ \expandafter\def\csname mloc@eq:missing-evidence\endcsname{식 5(3쪽)}
+-\expandafter\def\csname mloc@sec:semantics\endcsname{4.2절(3쪽)}
+-\expandafter\def\csname mloc@eq:active-update\endcsname{식 7(3쪽)}
+-\expandafter\def\csname mloc@sec:method\endcsname{5절(3쪽)}
+-\expandafter\def\csname mloc@sec:extraction\endcsname{5.1절(3쪽)}
+-\expandafter\def\csname mloc@sec:models\endcsname{5.2절(4쪽)}
+-\expandafter\def\csname mloc@lst:condition-step\endcsname{목록 1(4쪽)}
+-\expandafter\def\csname mloc@sec:queries\endcsname{5.3절(4쪽)}
+-\expandafter\def\csname mloc@lst:queries\endcsname{목록 2(4쪽)}
+-\expandafter\def\csname mloc@sec:experiments\endcsname{6절(4쪽)}
+-\expandafter\def\csname mloc@sec:legacy-test\endcsname{6.1절(4쪽)}
+-\expandafter\def\csname mloc@sec:scenario-design\endcsname{6.2절(4쪽)}
++\expandafter\def\csname mloc@sec:semantics\endcsname{4.2절(4쪽)}
++\expandafter\def\csname mloc@eq:active-update\endcsname{식 7(4쪽)}
++\expandafter\def\csname mloc@sec:issue-definition\endcsname{4.3절(4쪽)}
++\expandafter\def\csname mloc@eq:response-contract\endcsname{식 9(4쪽)}
++\expandafter\def\csname mloc@sec:method\endcsname{5절(4쪽)}
++\expandafter\def\csname mloc@sec:workflow\endcsname{5.1절(4쪽)}
++\expandafter\def\csname mloc@sec:extraction\endcsname{5.2절(4쪽)}
++\expandafter\def\csname mloc@fig:method-pipeline\endcsname{그림 3(5쪽)}
+ \expandafter\def\csname mloc@tab:worked-example\endcsname{표 3(5쪽)}
++\expandafter\def\csname mloc@sec:models\endcsname{5.3절(5쪽)}
++\expandafter\def\csname mloc@lst:condition-step\endcsname{목록 1(5쪽)}
+ \expandafter\def\csname mloc@tab:transition\endcsname{표 4(5쪽)}
+-\expandafter\def\csname mloc@tab:scenario-variants\endcsname{표 5(5쪽)}
+-\expandafter\def\csname mloc@sec:retest-design\endcsname{6.3절(5쪽)}
+-\expandafter\def\csname mloc@sec:aux-design\endcsname{6.4절(5쪽)}
+-\expandafter\def\csname mloc@tab:regression\endcsname{표 6(5쪽)}
+-\expandafter\def\csname mloc@sec:results\endcsname{7절(5쪽)}
+-\expandafter\def\csname mloc@sec:regression-results\endcsname{7.1절(5쪽)}
+-\expandafter\def\csname mloc@sec:first-results\endcsname{7.2절(5쪽)}
+-\expandafter\def\csname mloc@sec:retest-results\endcsname{7.3절(5쪽)}
+-\expandafter\def\csname mloc@tab:first-results\endcsname{표 7(6쪽)}
+-\expandafter\def\csname mloc@tab:failures\endcsname{표 8(6쪽)}
+-\expandafter\def\csname mloc@tab:retest\endcsname{표 9(6쪽)}
+-\expandafter\def\csname mloc@tab:implementation\endcsname{표 10(6쪽)}
+-\expandafter\def\csname mloc@tab:agreement\endcsname{표 11(6쪽)}
+-\expandafter\def\csname mloc@sec:agreement-results\endcsname{7.4절(6쪽)}
+-\expandafter\def\csname mloc@sec:human-results\endcsname{7.5절(6쪽)}
+-\expandafter\def\csname mloc@tab:reviewer-distribution\endcsname{표 12(6쪽)}
+-\expandafter\def\csname mloc@sec:trajectory-results\endcsname{7.6절(6쪽)}
+-\expandafter\def\csname mloc@sec:discussion\endcsname{8절(6쪽)}
+-\expandafter\def\csname mloc@tab:disagreement-examples\endcsname{표 13(7쪽)}
+-\expandafter\def\csname mloc@tab:trajectory-cases\endcsname{표 14(7쪽)}
+-\expandafter\def\csname mloc@sec:threats\endcsname{9절(7쪽)}
+-\expandafter\def\csname mloc@sec:conclusion\endcsname{10절(8쪽)}
++\expandafter\def\csname mloc@sec:queries\endcsname{5.4절(5쪽)}
++\expandafter\def\csname mloc@fig:condition-observer\endcsname{그림 4(6쪽)}
++\expandafter\def\csname mloc@lst:queries\endcsname{목록 2(6쪽)}
++\expandafter\def\csname mloc@sec:trace\endcsname{5.5절(6쪽)}
++\expandafter\def\csname mloc@tab:scenario-variants\endcsname{표 5(6쪽)}
++\expandafter\def\csname mloc@sec:model-scope\endcsname{5.6절(6쪽)}
++\expandafter\def\csname mloc@sec:experiments\endcsname{6절(6쪽)}
++\expandafter\def\csname mloc@sec:legacy-test\endcsname{6.1절(6쪽)}
++\expandafter\def\csname mloc@sec:scenario-design\endcsname{6.2절(6쪽)}
++\expandafter\def\csname mloc@sec:retest-design\endcsname{6.3절(7쪽)}
++\expandafter\def\csname mloc@sec:aux-design\endcsname{6.4절(7쪽)}
++\expandafter\def\csname mloc@tab:regression\endcsname{표 6(7쪽)}
++\expandafter\def\csname mloc@sec:results\endcsname{7절(7쪽)}
++\expandafter\def\csname mloc@sec:regression-results\endcsname{7.1절(7쪽)}
++\expandafter\def\csname mloc@sec:first-results\endcsname{7.2절(7쪽)}
++\expandafter\def\csname mloc@tab:first-results\endcsname{표 7(8쪽)}
++\expandafter\def\csname mloc@tab:failures\endcsname{표 8(8쪽)}
++\expandafter\def\csname mloc@tab:retest\endcsname{표 9(8쪽)}
++\expandafter\def\csname mloc@sec:retest-results\endcsname{7.3절(8쪽)}
++\expandafter\def\csname mloc@tab:implementation\endcsname{표 10(8쪽)}
++\expandafter\def\csname mloc@tab:agreement\endcsname{표 11(8쪽)}
++\expandafter\def\csname mloc@tab:reviewer-distribution\endcsname{표 12(8쪽)}
++\expandafter\def\csname mloc@sec:agreement-results\endcsname{7.4절(8쪽)}
++\expandafter\def\csname mloc@sec:human-results\endcsname{7.5절(8쪽)}
++\expandafter\def\csname mloc@sec:trajectory-results\endcsname{7.6절(9쪽)}
++\expandafter\def\csname mloc@sec:discussion\endcsname{8절(9쪽)}
++\expandafter\def\csname mloc@sec:threats\endcsname{9절(9쪽)}
++\expandafter\def\csname mloc@tab:disagreement-examples\endcsname{표 13(10쪽)}
++\expandafter\def\csname mloc@tab:trajectory-cases\endcsname{표 14(10쪽)}
++\expandafter\def\csname mloc@sec:conclusion\endcsname{10절(10쪽)}
+--- baseline/response-style.tex
++++ follow-up/response-style.tex
+@@ -3,6 +3,7 @@
+ \usepackage{fontspec}
+ \usepackage{xcolor}
+ \usepackage{amsmath,amssymb}
++\usepackage{booktabs,longtable,array}
+ \usepackage[hidelinks]{hyperref}
+ \setmainfont[Path=fonts/,Extension=.otf,UprightFont=*-Regular,BoldFont=*-Bold]{NotoSerifCJKkr}
+ \definecolor{reviewercolor}{RGB}{38,82,126}
+--- baseline/response-to-reviewer-1.tex
++++ follow-up/response-to-reviewer-1.tex
+@@ -22,7 +22,7 @@
+ 
+ \end{authorresponse}
+ 
+-\begin{manuscriptrevision}{제목·영문 초록(1쪽); \mloc{sec:intro}; \mloc{sec:first-results}; \mloc{tab:first-results}; \mloc{sec:retest-results}; \mloc{tab:retest}; \mloc{sec:threats}; \mloc{sec:conclusion}; 아래 발췌: 8쪽}
++\begin{manuscriptrevision}{제목·영문 초록(1쪽); \mloc{sec:intro}; \mloc{sec:first-results}; \mloc{tab:first-results}; \mloc{sec:retest-results}; \mloc{tab:retest}; \mloc{sec:threats}; \mloc{sec:conclusion}; 아래 발췌: 10쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -52,9 +52,11 @@
+ 
+ 작성 경로는 설계자가 텍스트와 프레임을 동시에 작성했음을 분명히 했습니다. 보행자 예시에서 원문 구절·사건 ID·의무 A·조건 A/B·참/거짓/미상·모델 상태·판정을 연결했습니다. 원문만 넣는 자동 경로는 144건 전부 미상이라는 결과도 유지했습니다. 프레임의 참·거짓은 작성 자료의 명시 상태이지 독립 사람 정답이 아닙니다.
+ 
+-\end{authorresponse}
+-
+-\begin{manuscriptrevision}{\mloc{sec:extraction}; \mloc{tab:worked-example}; \mloc{sec:models}; \mloc{tab:transition}; \mloc{sec:first-results}; 아래 발췌: 4쪽}
++후속 보완에서 입력 정리→프레임/배열 구성→UPPAAL 전이와 질의→사건·의무 ID 및 원문 회수를 단계별로 서술했습니다. 실제 저장 XML의 N=2/K=1 배열, e0/e1 상태 변화와 세 변형의 질의 결과까지 연결하여 변환·판정·추적을 읽을 수 있게 했습니다.
++
++\end{authorresponse}
++
++\begin{manuscriptrevision}{\mloc{sec:workflow}; \mloc{fig:method-pipeline}; \mloc{sec:trace}; \mloc{sec:extraction}; \mloc{tab:worked-example}; \mloc{sec:models}; \mloc{tab:transition}; \mloc{sec:first-results}; 아래 발췌: 4쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -86,7 +88,7 @@
+ 
+ \end{authorresponse}
+ 
+-\begin{manuscriptrevision}{\mloc{sec:selection}; \mloc{sec:human-results}; \mloc{tab:agreement}; \mloc{tab:reviewer-distribution}; \mloc{sec:threats}; 아래 발췌: 2쪽}
++\begin{manuscriptrevision}{\mloc{sec:selection}; \mloc{sec:human-results}; \mloc{tab:agreement}; \mloc{tab:reviewer-distribution}; \mloc{sec:threats}; 아래 발췌: 3쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -118,7 +120,7 @@
+ 
+ \end{authorresponse}
+ 
+-\begin{manuscriptrevision}{\mloc{sec:scenario-design}; \mloc{tab:first-results}; \mloc{sec:first-results}; \mloc{sec:discussion}; 아래 발췌: 2, 4쪽}
++\begin{manuscriptrevision}{\mloc{sec:scenario-design}; \mloc{tab:first-results}; \mloc{sec:first-results}; \mloc{sec:discussion}; 아래 발췌: 2, 7쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -150,7 +152,7 @@
+ 
+ \end{authorresponse}
+ 
+-\begin{manuscriptrevision}{\mloc{sec:provenance}; \mloc{sec:aux-design}; \mloc{sec:trajectory-results}; \mloc{sec:threats}; 아래 발췌: 6쪽}
++\begin{manuscriptrevision}{\mloc{sec:provenance}; \mloc{sec:aux-design}; \mloc{sec:trajectory-results}; \mloc{sec:threats}; 아래 발췌: 9쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -182,7 +184,7 @@
+ 
+ \end{authorresponse}
+ 
+-\begin{manuscriptrevision}{\mloc{sec:provenance}; \mloc{tab:provenance}; \mloc{sec:artifacts}; \mloc{sec:queries}; \mloc{sec:threats}; 아래 발췌: 2쪽}
++\begin{manuscriptrevision}{\mloc{sec:provenance}; \mloc{tab:provenance}; \mloc{sec:artifacts}; \mloc{sec:queries}; \mloc{sec:threats}; 아래 발췌: 2, 3쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -214,7 +216,7 @@
+ 
+ \end{authorresponse}
+ 
+-\begin{manuscriptrevision}{\mloc{sec:selection}; \mloc{sec:human-results}; \mloc{sec:threats}; 아래 발췌: 2쪽}
++\begin{manuscriptrevision}{\mloc{sec:selection}; \mloc{sec:human-results}; \mloc{sec:threats}; 아래 발췌: 2, 3쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -274,7 +276,7 @@
+ 
+ \end{authorresponse}
+ 
+-\begin{manuscriptrevision}{\mloc{sec:conclusion}; 아래 발췌: 8쪽}
++\begin{manuscriptrevision}{\mloc{sec:conclusion}; 아래 발췌: 10쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+--- baseline/response-to-reviewer-2.tex
++++ follow-up/response-to-reviewer-2.tex
+@@ -82,7 +82,7 @@
+ 
+ \end{authorresponse}
+ 
+-\begin{manuscriptrevision}{\mloc{sec:data}; \mloc{sec:problem}; \mloc{sec:method}; \mloc{sec:results}; \mloc{sec:discussion}; \mloc{sec:threats}; \mloc{sec:conclusion}; 아래 발췌: 3쪽}
++\begin{manuscriptrevision}{\mloc{sec:data}; \mloc{sec:problem}; \mloc{sec:method}; \mloc{sec:results}; \mloc{sec:discussion}; \mloc{sec:threats}; \mloc{sec:conclusion}; 아래 발췌: 4쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -142,9 +142,11 @@
+ 
+ 질문에 대응하는 기여를 조건별 표현, 상태·속성 실행과 추적, 최초 결과/재시험/자연 한계의 분리로 정리했습니다. 저장된 144건에서 위치와 의무·사유를 대조한 결과가 이에 연결되며, 자연 오류 성능을 확인한 답은 아닙니다.
+ 
+-\end{authorresponse}
+-
+-\begin{manuscriptrevision}{\mloc{sec:intro}; \mloc{tab:worked-example}; \mloc{tab:retest}; \mloc{sec:conclusion}; 아래 발췌: 1쪽}
++후속 보완에서는 상세 방법과 결과 해석을 본문에 충분히 두었습니다. 원문에서 조건 표현, 상태·질의와 추적 기록으로 이어지는 실제 사례와 48개 실패의 보완 이유를 기여에 연결하고, 검토 기록을 문장 수정 또는 근거 보충에 활용하는 절차를 설명했습니다.
++
++\end{authorresponse}
++
++\begin{manuscriptrevision}{\mloc{sec:intro}; \mloc{sec:workflow}; \mloc{sec:trace}; \mloc{sec:discussion}; \mloc{tab:worked-example}; \mloc{tab:retest}; \mloc{sec:conclusion}; 아래 발췌: 1쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -174,9 +176,11 @@
+ 
+ 예시에서 A 미해제 확인은 모순, A 해제 미상은 근거 부족, A 해제 확인은 해당 의무와 양립이라는 구분을 먼저 설명합니다. 상세 알고리즘·입력 사례·질의는 방법 절에 배치했습니다.
+ 
+-\end{authorresponse}
+-
+-\begin{manuscriptrevision}{\mloc{sec:intro}; \mloc{fig:overview-pipeline}; \mloc{sec:method}; \mloc{tab:worked-example}; 아래 발췌: 1쪽}
++서론은 구조적 동기와 질문·기여를 유지하고, 단계별 상세 설명과 모델 도식은 방법 절에 보강했습니다. 반복되는 범위 제한은 한계 절에 모아 핵심 설명의 공간을 확보했습니다.
++
++\end{authorresponse}
++
++\begin{manuscriptrevision}{\mloc{sec:intro}; \mloc{fig:overview-pipeline}; \mloc{sec:workflow}; \mloc{fig:method-pipeline}; \mloc{sec:method}; \mloc{tab:worked-example}; 아래 발췌: 1쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -214,7 +218,7 @@
+ 
+ \begin{quote}
+ 
+-따라서 이전 상태의 기억, 세 값의 판정과 최초 위반 추적 자체는 기존 기술이다. 본 논문의 미상은 명시된 해제 증거의 부족을 뜻하며, 미래 연장 전체에 대한 LTL 세 값 의미론을 구현했다는 뜻은 아니다.
++본 논문의 미상은 명시된 해제 증거의 부족을 뜻하며, 미래 연장 전체에 대한 LTL 세 값 의미론을 구현했다는 뜻은 아니다. 명세로부터 범용 모니터를 자동 합성하는 것도 현재 범위에 없다.
+ 
+ \end{quote}
+ 
+--- baseline/response-to-reviewer-3.tex
++++ follow-up/response-to-reviewer-3.tex
+@@ -118,7 +118,7 @@
+ 
+ \end{authorresponse}
+ 
+-\begin{manuscriptrevision}{\mloc{sec:semantics}; \mloc{sec:models}; \mloc{tab:transition}; \mloc{lst:condition-step}; \mloc{sec:threats}; 아래 발췌: 3쪽}
++\begin{manuscriptrevision}{\mloc{sec:semantics}; \mloc{sec:models}; \mloc{tab:transition}; \mloc{lst:condition-step}; \mloc{sec:threats}; 아래 발췌: 4쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -148,9 +148,11 @@
+ 
+ 저장된 보행자 원문 세 변형을 사건→원문 구절/위치→조건별 프레임→활성 의무→모순/근거 부족/양립까지 연결했습니다. 이는 실제 보존 파일의 작성 문장이며 자연 자료에서 발견한 모순은 아닙니다. 자동 텍스트 경로 전144건 미상을 그대로 보고하고, 보완 프레임 모델을 자동 NLP로 설명하지 않았습니다.
+ 
+-\end{authorresponse}
+-
+-\begin{manuscriptrevision}{\mloc{sec:extraction}; \mloc{tab:worked-example}; \mloc{sec:first-results}; \mloc{sec:threats}; 아래 발췌: 4쪽}
++원문 구절을 역할별로 나누고 A와 B를 서로 다른 조건으로 연결하는 단계를 보강했습니다. 실제 N=2/K=1의 actions/creates/preconditions/observations, 사건별 active/known와 질의 판정, 문제 위치에서 원 의무·원문 구절을 회수하는 과정을 이어 설명했습니다.
++
++\end{authorresponse}
++
++\begin{manuscriptrevision}{\mloc{sec:workflow}; \mloc{sec:trace}; \mloc{sec:extraction}; \mloc{tab:worked-example}; \mloc{sec:first-results}; \mloc{sec:threats}; 아래 발췌: 4쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -180,9 +182,11 @@
+ 
+ 기존 Python–UPPAAL의 판정·오류 종류·최초 위치는 144/144 일치하지만 미상 사유는 최초 반례에서24차이가 있었습니다. 종료 질의로 뒤의 누적 사유까지 읽으면144/144 일치함을 진단했고 원 파서는 변경하지 않았습니다. 이 비교는 같은 규칙의 구현 일치성이며 규칙·자연어 해석 자체의 독립 타당성 증명은 아닙니다. 정량 시간 시계가 없는 중심 모델도 명시했습니다.
+ 
+-\end{authorresponse}
+-
+-\begin{manuscriptrevision}{\mloc{sec:models}; \mloc{sec:queries}; \mloc{lst:queries}; \mloc{sec:agreement-results}; \mloc{tab:implementation}; 아래 발췌: 6쪽}
++후속 보완은 실제 템플릿 ScenarioObserver의 Run/Done 도식을 추가하고, 기존6상태와 보완2위치를 구분했습니다. step()은 현재 사건을 처리하며 idx++는 Run 자기 전이에서 한 번 수행합니다. 의무 상태와 bad/missing은 위치가 아닌 변수이고, 중심 모델의 시간성은 사건 순서와 조건 유지/해제입니다. 최초 반례와 종료 누적 사유를 읽는 역할도 구분했습니다.
++
++\end{authorresponse}
++
++\begin{manuscriptrevision}{\mloc{fig:condition-observer}; \mloc{sec:trace}; \mloc{sec:models}; \mloc{sec:queries}; \mloc{lst:queries}; \mloc{sec:agreement-results}; \mloc{tab:implementation}; 아래 발췌: 8쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -214,7 +218,7 @@
+ 
+ \end{authorresponse}
+ 
+-\begin{manuscriptrevision}{\mloc{sec:legacy-test}; \mloc{sec:scenario-design}; \mloc{sec:retest-design}; \mloc{sec:retest-results}; \mloc{tab:failures}; \mloc{tab:retest}; \mloc{sec:threats}; 아래 발췌: 5쪽}
++\begin{manuscriptrevision}{\mloc{sec:legacy-test}; \mloc{sec:scenario-design}; \mloc{sec:retest-design}; \mloc{sec:retest-results}; \mloc{tab:failures}; \mloc{tab:retest}; \mloc{sec:threats}; 아래 발췌: 8쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -246,7 +250,7 @@
+ 
+ \end{authorresponse}
+ 
+-\begin{manuscriptrevision}{\mloc{sec:scenario-design}; \mloc{tab:first-results}; \mloc{sec:first-results}; \mloc{sec:discussion}; 아래 발췌: 4쪽}
++\begin{manuscriptrevision}{\mloc{sec:scenario-design}; \mloc{tab:first-results}; \mloc{sec:first-results}; \mloc{sec:discussion}; 아래 발췌: 7쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -278,7 +282,7 @@
+ 
+ \end{authorresponse}
+ 
+-\begin{manuscriptrevision}{\mloc{sec:selection}; \mloc{sec:human-results}; \mloc{tab:agreement}; \mloc{tab:reviewer-distribution}; \mloc{sec:threats}; 아래 발췌: 6쪽}
++\begin{manuscriptrevision}{\mloc{sec:selection}; \mloc{sec:human-results}; \mloc{tab:agreement}; \mloc{tab:reviewer-distribution}; \mloc{sec:threats}; 아래 발췌: 9쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -310,7 +314,7 @@
+ 
+ \end{authorresponse}
+ 
+-\begin{manuscriptrevision}{\mloc{sec:aux-design}; \mloc{tab:regression}; \mloc{tab:first-results}; \mloc{sec:first-results}; \mloc{tab:retest}; \mloc{sec:threats}; 아래 발췌: 5쪽}
++\begin{manuscriptrevision}{\mloc{sec:aux-design}; \mloc{tab:regression}; \mloc{tab:first-results}; \mloc{sec:first-results}; \mloc{tab:retest}; \mloc{sec:threats}; 아래 발췌: 7쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -336,13 +340,13 @@
+ 
+ \begin{authorresponse}
+ 
+-저장된 사건별 사유와 장면 판정을 재분석한 결과2/7/18이 재현됐고 장면별 이전 판정과의 차이는0이었습니다. 27장면 각각에 대해 행동 일치, 종방향 불일치, 문장 해석 미상, 지원 행동 부재, 관측 미상, 단계 시점/해제 근거 부족의 사건 건수를 익명 순번 표로 추가했습니다. 한 장면에 여러 사유가 겹치며 일부 행동 일치가 있어도 부족한 사건이 남으면 미상임을 설명했습니다.
++저장된 사건별 사유와 장면 판정을 재분석한 결과2/7/18이 재현됐고 장면별 이전 판정과의 차이는0이었습니다. 본문 \mloc{tab:trajectory-cases}는 일치2/불일치7/미상18의3행 요약으로 정리하고, 27장면 각각의 행동 일치, 종방향 불일치, 문장 해석 미상, 지원 행동 부재, 관측 미상, 단계 시점/해제 근거 부족 사건 건수는 이 답변의 사례표에 보존했습니다. 본문과 이 답변서의 상세 위치를 서로 명시했습니다. 한 장면에 여러 사유가 겹치며 일부 행동 일치가 있어도 부족한 사건이 남으면 미상임을 설명했습니다.
+ 
+ 조건 해제나 단계 시점의 객체 증거를 속도 변화만으로 확정하지 않았습니다. 7불일치는 문장 간 모순이나 물리 안전의 독립 정답이 아닙니다. 새조건별 모델의 작성 증거가 이러한 자연 객체정보 부족을 해결했다는 주장도 하지 않습니다.
+ 
+ \end{authorresponse}
+ 
+-\begin{manuscriptrevision}{\mloc{sec:trajectory-results}; \mloc{tab:trajectory-cases}; \mloc{sec:threats}; 아래 발췌: 6쪽}
++\begin{manuscriptrevision}{\mloc{sec:trajectory-results}; \mloc{tab:trajectory-cases}; \mloc{sec:threats}; 아래 발췌: 9쪽}
+ 
+ 본문에 다음 내용을 반영했습니다.
+ 
+@@ -354,6 +358,15 @@
+ 
+ \end{manuscriptrevision}
+ 
++\clearpage
++\textbf{R3-11 상세 사례표 (기존 본문 표14의 27행 보존)}
++
++익명 G01--G27은 보존 재분석의 행 순서를 따른다. 각 사유는 사건 건수이며 한 장면의 여러 사유 열에 중복될 수 있다. 행동 일치 사건이 있어도 해제나 단계 시점의 증거 부족 사건이 남으면 장면 판정은 미상일 수 있다. 이 표의 합은 독립 장면 수나 오류율이 아니다. 본문 \mloc{sec:trajectory-results}와 \mloc{tab:trajectory-cases}의 2/7/18 요약에 대응한다.
++
++\input{response-trajectory-details}
++
++일치 G16/G18은 지원 행동과 기록 궤적이 맞는 사례다. 불일치 G03, G05, G10, G13, G23, G24, G25에는 종방향 행동 불일치가 있다. 나머지18장면은 위 표의 해석ㆍ지원 행동ㆍ관측ㆍ시점/해제 근거가 충분하지 않다. 예를 들어 G06은 행동 일치2건이 있어도 시점/해제 부족2건 때문에 미상이고, G01은 행동 미지원4건과 관측 미상2건이 남는다. 속도 정보만으로 객체의 해제 상태를 채우지 않았으며 불일치를 문장 모순이나 안전 위반 정답으로 사용하지 않는다.
++
+ \end{reviewitem}
+ 
+ \section*{맺음말}
+--- /dev/null
++++ follow-up/response-trajectory-details.tex
+@@ -0,0 +1,45 @@
++\begingroup
++\fontsize{8.5pt}{11.5pt}\selectfont
++\setlength{\tabcolsep}{4pt}
++\begin{longtable}{llrrrrrr}
++\caption{R3-11: 27장면별 보존 궤적 판정과 사건 사유}\label{tab:response-trajectory-details}\\
++\toprule
++장면 & 판정 & \shortstack{행동\\일치} & \shortstack{종방향\\불일치} & \shortstack{해석\\미상} & \shortstack{행동\\미지원} & \shortstack{관측\\미상} & \shortstack{시점/해제\\부족} \\
++\midrule
++\endfirsthead
++\multicolumn{8}{l}{R3-11 사례별 사유 (계속)}\\
++\toprule
++장면 & 판정 & \shortstack{행동\\일치} & \shortstack{종방향\\불일치} & \shortstack{해석\\미상} & \shortstack{행동\\미지원} & \shortstack{관측\\미상} & \shortstack{시점/해제\\부족} \\
++\midrule
++\endhead
++\bottomrule
++\endfoot
++G01 & 미상 & 0 & 0 & 0 & 4 & 2 & 0 \\
++G02 & 미상 & 0 & 0 & 2 & 1 & 0 & 0 \\
++G03 & 불일치 & 1 & 1 & 2 & 0 & 0 & 1 \\
++G04 & 미상 & 1 & 0 & 1 & 1 & 0 & 1 \\
++G05 & 불일치 & 0 & 1 & 1 & 4 & 0 & 0 \\
++G06 & 미상 & 2 & 0 & 0 & 0 & 0 & 2 \\
++G07 & 미상 & 3 & 0 & 1 & 0 & 0 & 0 \\
++G08 & 미상 & 4 & 0 & 0 & 3 & 0 & 2 \\
++G09 & 미상 & 3 & 0 & 0 & 1 & 0 & 2 \\
++G10 & 불일치 & 0 & 1 & 0 & 1 & 0 & 0 \\
++G11 & 미상 & 3 & 0 & 1 & 1 & 0 & 0 \\
++G12 & 미상 & 3 & 0 & 1 & 0 & 0 & 2 \\
++G13 & 불일치 & 1 & 1 & 1 & 0 & 0 & 1 \\
++G14 & 미상 & 1 & 0 & 0 & 0 & 0 & 2 \\
++G15 & 미상 & 0 & 0 & 0 & 4 & 0 & 1 \\
++G16 & 일치 & 3 & 0 & 0 & 0 & 0 & 0 \\
++G17 & 미상 & 0 & 0 & 0 & 2 & 0 & 1 \\
++G18 & 일치 & 3 & 0 & 0 & 0 & 0 & 0 \\
++G19 & 미상 & 0 & 0 & 0 & 2 & 0 & 1 \\
++G20 & 미상 & 0 & 0 & 4 & 3 & 0 & 0 \\
++G21 & 미상 & 0 & 0 & 0 & 2 & 0 & 0 \\
++G22 & 미상 & 1 & 0 & 0 & 3 & 0 & 0 \\
++G23 & 불일치 & 4 & 1 & 0 & 0 & 0 & 0 \\
++G24 & 불일치 & 2 & 3 & 0 & 0 & 0 & 0 \\
++G25 & 불일치 & 0 & 1 & 1 & 1 & 0 & 1 \\
++G26 & 미상 & 0 & 0 & 0 & 6 & 0 & 0 \\
++G27 & 미상 & 2 & 0 & 0 & 2 & 0 & 0 \\
++\end{longtable}
++\endgroup
+--- baseline/sections/01-introduction.tex
++++ follow-up/sections/01-introduction.tex
+@@ -21,5 +21,5 @@
+ 
+ 기여는 세 가지다. 첫째, 원문 구절--의무 ID--해제 조건--후속 증거--행동을 연결하고 모순과 근거 부족을 구분하는 표현을 제시한다. 둘째, 조건별 상태와 속성을 UPPAAL로 실행하고 최초 문제 위치와 사유를 추적하는 절차를 구체화한다. 셋째, 최초 통제 시험, 실패 분석, 동일 사례 재시험과 자연 자료의 해석 한계를 구분하여 적용 가능성을 보고한다. 단순 FSM도 같은 사례를 모두 판정했으므로 UPPAAL의 정확도 우월성을 주장하지 않는다.
+ 
+-중심 검사는 고정된 사건 순서와 조건을 다룬다. 보조 반응 시간 분석은 CoC의 행동 요구와 기록된 자차 속도 변화의 관계를 따로 살핀다. 정량적 제한 시간, 차량 동역학과 폐루프 제어는 중심 조건별 모델에 없다. 검증 범위는 명시된 의무와 증거에 한정하며, 언급되지 않은 위험의 완전성, 자연 오류 정확도, 실제 안전 또는 학습 성능 향상을 입증하지 않는다.
++이하에서는 자료와 조건 표현을 정의한 뒤, 원문에서 프레임ㆍ모델ㆍ검토 기록으로 이어지는 절차를 설명한다. 최초 시험과 실패 분석 후 재시험을 구분하여 결과를 제시하고, 주석 검토에서의 활용과 남은 검증 범위를 논의한다.
+ \end{revision}
+--- baseline/sections/02-related-work.tex
++++ follow-up/sections/02-related-work.tex
+@@ -35,4 +35,6 @@
+ \end{table*}
+ 
+ 기술적 초점은 원문 구절과 의무ㆍ해제 조건ㆍ증거ㆍ문제 기록을 이어 검토 가능하게 만드는 데 있다. 기존 형식 검증 기술을 새로 발명했다고 주장하지 않으며, 다른 방법이 이러한 연결을 할 수 없다고 단정하지 않는다. 단순 FSM의 성공은 이 범위의 규칙을 간단한 상태 기계로도 실행할 수 있음을 보여 준다. UPPAAL은 표현한 모델의 상태 속성을 질의하고 진단 경로를 보존하는 역할을 맡는다.
++
++본 방법에서 이러한 선행 기술을 사용하는 구체적인 접점은 조건의 대응 관계다. 한 사건에 행동을 정당화하는 B와 의무를 해제하는 A가 함께 언급되면, 구절을 역할별로 분리해 같은 조건 ID의 증거만 해당 의무에 적용한다. 모델 질의의 결과는 그 대응을 전제로 한 실행 결과다. 이 구조는 단순한 ``앞뒤 행동이 다르다''는 표시 대신 이전 요구가 아직 남았는지와 어떤 근거가 빠졌는지를 다시 읽게 한다. 다른 형식 검증이나 규칙 검사에서도 같은 표현을 구현할 수 있으며, 본 실험은 그중 UPPAAL을 이용한 실행과 추적의 사례를 제시한다.
+ \end{revision}
+--- baseline/sections/03-data.tex
++++ follow-up/sections/03-data.tex
+@@ -6,6 +6,18 @@
+ \subsection{자료 출처와 복원 범위}
+ \label{sec:provenance}
+ 자연 자료는 nuScenes 기록에서 변환한 영상ㆍ자차 움직임과 사후 자동 생성한 CoC-Nusc 주석이다 \cite{caesar2020nuscenes,nvidia2026autolabeler}. 생성 과정은 기록 궤적에서 행동 종류를 계산하고 영상ㆍ행동 정보를 이용해 설명을 만든다. 따라서 CoC와 궤적의 일치는 독립적인 원인 정답이 아니다. 보관 목록에는 743장면ㆍ3,218사건ㆍ2,475인접쌍이 있으나 본문의 궤적 연결 분석은 94장면ㆍ403사건을 사용한다. 그중 CoC가 둘 이상인 90장면에서 309인접쌍을 구성했다. 사람 검토는 이 전체와 별도로 선정한 27장면 묶음이다.
++
++자료를 읽을 때는 기록값, 계산값과 검사 규칙을 구분한다. 영상ㆍ자차 상태는 주행 기록이고, 행동 분류ㆍ속도 반응 시점은 그 기록에서 계산한 값이다. CoC와 품질 표시는 자동 생성한 주석이며, 의무의 해제 규칙과 반응 탐지 설정은 검사에 사용하는 정의다. ``보관된 문장이 있다''는 사실과 ``문장이 묘사한 객체 상태가 참이다''라는 판단은 다르다. 이러한 구분은 조건 증거를 어디에서 채울 수 있고 무엇을 미상으로 남겨야 하는지 결정한다.
++
++\begin{figure}[t]
++\centering
++\color{revisionblue}
++\input{figures/annotation-flow}
++\bifigcaption{자연 CoC의 사후 생성과 본 연구의 입력. 궤적에서 계산한 행동 정보가 주석 생성에 사용되므로 주석--궤적 일치는 독립 정답이 아니다.}{Post-drive annotation provenance and checking inputs.}
++\label{fig:annotation-flow}
++\end{figure}
++
++그림~\ref{fig:annotation-flow}에서 생성기는 행동 변화 부근의 대표 프레임과 기록 궤적의 행동 정보를 사용한다. 본 연구는 이미 저장된 설명을 입력으로 받으며 생성 모델을 다시 실행하지 않는다. 문장 순서 검사는 원문ㆍ조건 프레임을, 보조 반응 검사는 사건 시각ㆍ기록 속도ㆍ선택한 탐지 규칙을 사용한다. 입력의 출처를 보존해야 두 검사의 결과를 같은 원인 증거로 혼동하지 않을 수 있다.
+ 
+ CoC-Nusc의 배포 버전과 원 생성 실행별 checkpoint revision은 복원되지 않았다. 상류 README에는 모델 계열 Qwen/Qwen3.5-35B-A3B가 명시되어 있으나 개별 입력이 그 정확한 모델 revision으로 생성되었는지는 확인할 수 없다. 원 생성 prompt/config와 품질 점수 계산ㆍ상류 임계값도 미복원이다. 하류의 저장된 \texttt{quality\_pass} 불리언을 사용하는 선정 절차는 복원했다. 이번 보존 파일의 해시는 현재 입력 스냅샷을 식별하며 원 생성 이력을 새로 확정하지 않는다.
+ 
+@@ -35,6 +47,8 @@
+ \label{sec:selection}
+ 후보 선택기는 이웃한 첫 문장에 \texttt{stop/yield} 계열, 둘째 문장에 \texttt{accelerate/proceed} 계열이 있는 쌍을 찾는다. 23쌍ㆍ15장면에서 장면별 가장 이른 창 하나를 선정했다. 비교군은 후보 장면을 제외하고, 첫 문장에 정지ㆍ양보 표현이 있으나 둘째 문장에는 가속ㆍ진행 표현이 없는 창이다. 장면당 가장 이른 창을 남기고, 후보와의 사건 수 차이, 정지/양보 종류 차이, 원 사건 위치 차이 순으로 대응시켰다. 동률은 seed 20260806과 창 ID의 해시로 결정했다. 비교 창을 중복 사용하지 않아 12장면이 선택되었다. 이 방식은 비무작위이며 특정 행동 전환을 더 많이 포함한다. 재분석에서 기존 27개 검토 ID와의 대응을 확인했다.
+ 
++분석 단위도 구분한다. 309는 시간상 이웃한 문장 쌍의 수이고, 27은 검토한 장면 묶음의 수다. 여러 사건이 한 장면에 속하고 반복 CoC가 같은 속도 반응을 가리킬 수 있으므로 사건ㆍ쌍ㆍ장면을 독립적인 시행으로 합산하지 않는다. 보조 분석의 134건 또한 134개의 서로 독립된 주행 상황을 뜻하지 않는다.
++
+ 네 검토자의 원 CSV, 지침과 최종 합의 CSV를 사용했다. 지침은 시간 요구의 명시성, 요구 행동열과 문장 일관성을 구분하고, 외부 객체 상태가 필요하면 미상으로 남기도록 한다. 검토자의 전문성ㆍ교육 이력과 독립 중재자 참여는 충분한 기록이 없어 확인할 수 없다. 합의 CSV에는 27장면 모두 텍스트 모순 없음으로 저장되어 있지만 사유 메모는 0/27이다. 당시 논의 절차와 판단 변경의 원인을 재현 가능한 수준으로 복원하지 못했으며, 이번 작업에서 사람 재평가를 실시하지 않았다.
+ 
+ \subsection{작성 시나리오와 재현 자료}
+--- baseline/sections/04-problem.tex
++++ follow-up/sections/04-problem.tex
+@@ -4,6 +4,8 @@
+ \begin{revision}
+ 
+ 장면의 사건을 $E_s=(e_0,\ldots,e_{n-1})$로 두고 자료상 연속성이 확인된 구간에서만 의무를 이어받는다. 사건은 행동, 새 의무, 조건별 증거와 원문 구절을 가진다. 의무 $o$는 ID, 대상과 해제 조건 ID $c(o)$에 연결된다. 조건 증거 $q_i(c)\in\{\mathsf{T},\mathsf{F},?\}$에서 참은 해당 조건 충족, 거짓은 미충족 확인, $?$는 알 수 없음을 뜻한다. 새 행동 근거 B는 ID가 다른 A의 해제 증거가 아니다.
++예를 들어 의무 A의 시작 사건은 정지 행동과 ``보행자가 통과할 때까지''라는 해제 조건을 함께 갖는다. 이후 사건의 녹색 신호 B는 진행 근거로 기록할 수 있지만, 보행자 조건 A의 증거를 채우려면 같은 조건에 대응하는 구절이 있어야 한다. 사건 간 거리가 길어져도 A와 B를 바꿔 연결하지 않으며, 중간 사건에 A의 증거가 없다는 이유만으로 A를 지우지 않는다. 이처럼 검사 단위는 행동 단어 한 개가 아니라 의무의 시작--조건 유지--해제 증거--후속 행동의 연결이다.
++
+ 
+ \subsection{주석 문제와 검사기 처리 오류의 분리}
+ \label{sec:error-types}
+@@ -35,5 +37,21 @@
+ 
+ 정지나 대기 중 해제 여부가 미상이라는 이유만으로 문제를 기록하지 않는다. 진행할 때 남은 의무가 거짓이면 모순, 미상이면 근거 부족이다. 복수 의무는 각각의 조건을 확인하며 하나의 해제가 다른 의무를 지우지 않는다. 같은 사건에 모순과 근거 부족이 함께 있으면 모순을 최종 판정으로 우선하되 각각의 기록을 보존한다. 전체 판정은 누적 모순이 있으면 모순, 그렇지 않고 진행 중 근거 부족이 있었으면 미상, 둘 다 없으면 표현한 의무와 양립이다. 마지막 판정은 모든 위험이 없다는 뜻이 아니다.
+ 
+-장면 끝에서 미래의 해제를 보지 못했다는 사실만으로 모순을 추가하지 않는다. 미상 상태에서 진행하지 않은 대기열은 현재 검사 범위에서 문제 없음으로 끝날 수 있다. 근거 없이 다음 장면과 연결하지 않으며 다음 장면은 초기화한다. 임의의 미래 완료 의무나 제한 시간을 추가한 liveness 명세는 이번 중심 검사에 없다.
++장면 끝에서 미래의 해제를 보지 못했다는 사실만으로 모순을 추가하지 않는다. 미상 상태에서 진행하지 않은 대기열은 현재 검사 범위에서 문제 없음으로 끝날 수 있다. 근거 없이 다음 장면과 연결하지 않으며 다음 장면은 초기화한다. 임의의 미래 완료 의무나 제한 시간을 추가한 liveness 명세는 이번 중심 검사에 없다.\subsection{최초 문제 위치와 별도 반응 질문}
++\label{sec:issue-definition}
++조건별 중심 모델에서 확정 모순의 최초 사건과 근거 부족의 최초 사건은 따로 기록한다.
++\begin{equation}
++i_{\mathrm{bad}}=\min\{i:C_1(i)\lor C_3(i)\},\quad
++i_{\mathrm{miss}}=\min\{i:M(i)\}.
++\end{equation}
++해당 집합이 비면 그 최초 위치는 없다. 최종 모순 판정에는 $i_{\mathrm{bad}}$를, 모순 없이 근거 부족만 있으면 $i_{\mathrm{miss}}$를 대표 문제 위치로 사용한다. 뒤의 정상 해제가 앞서 근거 없이 진행한 사건을 없애지는 않는다. 이는 현재 순간의 활성 의무와 전체 경로의 문제 기록을 구분하는 이유다. P2/P4 출력은 앞서 설명한 기존 회귀 경로에서만 별도 다룬다.
++
++보조 질문 P5는 사건 시각 $\tau_i$, 요구 행동 $a_i$, 선택한 제한 시간 $D$와 속도 반응 조건 $R_{a_i}$에 대해
++\begin{equation}
++\exists t_r\in[\tau_i,\tau_i+D):R_{a_i}(t_r)
++\label{eq:response-contract}
++\end{equation}
++를 확인한다. 기록 속도에서 찾은 $t_r$은 A의 객체 해제를 직접 확인하는 증거가 아니다. 따라서 P5는 조건별 중심 모델의 정량 시계 속성이 아니라 기록 반응에 대한 별도 분석이다. 문장열이 명시된 의무와 양립하는지와 자차 반응이 선택한 시간 설정에 맞는지는 서로 다른 질문이다.
++
++
+ \end{revision}
+--- baseline/sections/05-method.tex
++++ follow-up/sections/05-method.tex
+@@ -2,6 +2,20 @@
+ \label{sec:method}
+ 
+ \begin{revision}
++
++\subsection{단계별 처리와 입력 정리}
++\label{sec:workflow}
++제안 절차는 입력 정리, 프레임 구성, 모델 실행과 근거 회수의 네 단계다. 그림~\ref{fig:method-pipeline}은 자료에서 판정 기록까지의 연결을 보여 준다. 입력 정리 단계에서는 같은 장면 안의 사건 순서를 고정하고 원 사건 IDㆍ원문ㆍ자료 출처를 보존한다. 기존 구조화 경로는 시각과 단계 인덱스가 역전된 입력을 거부하고, 작성 경로는 저장된 사건 배열 순서를 그대로 사용한다. 한 문장에 명시적으로 ``정지한 뒤 진행''이 있으면 두 단계가 같은 원문을 가리킬 수 있으므로 사건 위치와 단계 위치를 함께 보존한다.
++
++\begin{figure*}[t]
++\centering
++\color{revisionblue}
++\input{figures/method-pipeline}
++\bifigcaption{입력 정리--프레임/배열 구성--검사--원문 회수의 단계별 흐름. 자동 문구 추출과 설계자 작성 입력을 구분하고 최초 결과와 보완 재시험을 별도 보고한다.}{Step-by-step checking and source recovery, separating input paths and evaluation stages.}
++\label{fig:method-pipeline}
++\end{figure*}
++
++둘째 단계는 행동뿐 아니라 의무ㆍ해제 조건ㆍ선행조건과 그 근거 구절을 프레임에 담는다. 자동 파서가 찾은 조건 문구와 작성 프레임의 명시적 참ㆍ거짓 증거를 혼합하지 않는다. 셋째 단계에서는 각 사건을 읽으며 해당 의무만 생성ㆍ유지ㆍ해제하고 진행 순간의 위반을 기록한다. 기존 단일 의무 경로, 조건별 FSM과 보완 UPPAAL은 어떤 표현과 정책을 실행하는지 구분한다. 넷째 단계에서는 최종 판정뿐 아니라 최초 사건ㆍ의무ㆍ사유를 원문으로 돌려주고, 최초 시험ㆍ동일 사례 재시험ㆍ자연 검토ㆍ보조 반응 결과를 각각 보고한다. 이 분리는 수치의 분모뿐 아니라 판정이 답하는 질문을 보존한다.
+ 
+ \subsection{자동 텍스트 변환과 작성 프레임}
+ \label{sec:extraction}
+@@ -31,11 +45,19 @@
+ 
+ 표~\ref{tab:worked-example}의 원문은 저장된 작성 사례에서 가져왔다. 미해제 e1의 \texttt{Proceed}는 문자 위치 [63,70), A 증거는 [0,33), B 증거는 [34,62)에 연결된다. 사건 ID는 \texttt{pedestrian-held\_local\_conflict-gap0:e1}이다. 누락ㆍ정상 변형도 각각의 case ID에 e1을 연결한다. 실제 입력은 UTF-8 구절의 문자열 인덱스이며 이 예의 원문은 ASCII다. 자동 파서에 같은 문장을 넣는 경로는 증거를 확정하지 않으므로 작성 프레임의 성공과 혼합하지 않는다.
+ 
++작성 사례에는 원문 구절의 \texttt{start/end} 위치와 구절의 역할이 저장되어 있다. 같은 e1에 진행 행동 구절, A의 상태 구절, B의 신호 구절이 있더라도 각각 다른 역할과 조건 ID로 연결된다. 표현 단계에서 A의 근거가 비어 있으면 추측으로 B를 A에 할당하지 않는다. 따라서 표~\ref{tab:worked-example}의 세 변형은 동일한 GO와 B=T를 유지하면서 A=F/미상/T만 바꾼 비교가 된다. 판정 차이가 새 출발 근거의 유무가 아니라 이전 의무의 해제 근거에서 비롯됨을 직접 읽을 수 있다.
++
+ \subsection{기존 검사기와 보완 모델의 차이}
+ \label{sec:models}
+ 기존 Python은 활성 의무 한 개, 행동 4종, 상태 6종과 누적 오류ㆍ미상 사유를 관리한다. 단계마다 해석 미상, 알려진 증거 갱신, 오류 규칙, 상태 전이, 누적 출력 순으로 처리한다. 복수 의무는 \texttt{OVERLAPPING\_OBLIGATION}, 대기 중 해제 미상도 누적 미상으로 남을 수 있다. 기존 UPPAAL은 같은 전이 규약과 해시를 사용한다. 이 두 경로는 동결하여 최초 실패를 보존했다.
+ 
++여기서 6개 상태는 \texttt{INACTIVE}, \texttt{ACTIVE}, \texttt{SATISFIED\_WAIT\_RELEASE}, \texttt{RELEASED}, \texttt{VIOLATED}, \texttt{UNKNOWN}이다. 요구 행동을 이미 만족한 상태와 의무의 해제는 같지 않다. 예를 들어 이미 정지했다는 정보가 있어도 보행자 통과 여부가 미상이면 정지 의무의 종료 근거는 남는다. 또한 최종 판정은 마지막 보이는 상태만 읽지 않고 누적 오류와 미상 사유를 읽는다. 이 정책 때문에 대기에서 추가된 미상이 나중의 해제로 지워지지 않는 최초 실패가 생겼다. 이 설명은 동결된 기존 모델의 동작이며 보완 모델의 상태 위치 이름으로 사용하지 않는다.
++
+ 보완 모델은 실패 분석 뒤 별도 개발했다. 각 의무의 \texttt{active[K]}, 조건별 \texttt{known[K]}(-1/0/1), 선행조건, 사건 인덱스, \texttt{bad/missing} 누적 플래그와 최초 위치ㆍ의무를 둔다. 입력의 의무 등록 순서가 배열 순서이며 선행조건 위반을 먼저, 의무를 등록 순서대로 판정한다. 같은 사건의 여러 위반을 개별 사유로 누적하되 최초 의무 출력은 이 우선순위로 하나를 선택한다. 모든 문제의 전체 순위나 모든 관련 의무 목록을 반환하는 기능은 아니다.
++
++보완 인코더는 한 사례의 사건 수를 N, 의무 수를 K로 두고 의무 ID의 최초 등록 순서를 배열 인덱스 j로 고정한다. \texttt{actions[N]}는 STOP=0, WAIT=1, GO=2, \texttt{creates[N]}는 새 의무의 인덱스 또는 -1이다. \texttt{preconditions[N]}와 평탄화한 \texttt{observations[N*K]}는 미상=-1, 거짓=0, 참=1을 담는다. 각 \texttt{observations[i*K+j]}는 j번째 의무에 연결된 조건 ID와 일치하는 증거만 읽는다. 관련 의무가 없는 B/OTHER의 참 증거는 A의 채널로 들어가지 않는다.
++
++\texttt{active[j]}는 남아 있는 의무, \texttt{known[j]}는 그 의무의 최근 알려진 해제 상태다. 둘은 다른 역할이다. 알려진 참으로 active를 해제한 뒤에도 known은 기록으로 남고, 뒤의 미상 관측은 이를 덮지 않는다. \texttt{bad/missing}은 전체 경로의 문제 플래그이고 \texttt{bad\_hold/bad\_pre}는 모순 사유다. 최초 사건/의무 변수는 -1로 시작하고 첫 해당 문제에서만 채운다. 선행조건 위반의 의무 인덱스 -2는 \texttt{PRECONDITION}으로 되돌린다. 따라서 실행 변수의 배열 순서와 사람이 읽는 원 의무 ID 사이의 매핑도 결과의 일부다.
+ 
+ \begin{table}[t]
+ \centering
+@@ -68,8 +90,10 @@
+     for j in obligation_registration_order:
+         record_bad_if(active[j] and known[j] == 0, j)
+         record_missing_if(active[j] and known[j] == -1, j)
+-idx = idx + 1
++// idx++ is on the Run self-loop edge, outside step().
+ \end{lstlisting}
++
++표~\ref{tab:transition}와 목록~\ref{lst:condition-step}에서 증거 갱신과 해제가 행동 검사보다 먼저다. 같은 사건에 A의 참 증거와 GO가 있으면 A를 해제한 뒤 진행을 검사한다. A=T이고 C=F이면 A만 지워지고 C가 남아 모순을 기록한다. 미상인 채 WAIT한 단계에서는 문제가 추가되지 않지만, 그 상태에서 GO하면 근거 부족을 기록한다. 현재 구현의 선행조건은 하나의 알려진 값을 보존하며 거짓인 경우에만 \texttt{bad\_pre}를 세운다. 선행조건 미상 자체를 별도의 \texttt{missing} 사유로 판정하는 범용 모니터는 아니다.
+ 
+ WAIT는 작성 자료에서 유지ㆍ대기 단계를 나타내는 기호다. 실제 속도나 이동을 적분하지 않으므로 \texttt{Maintain speed}라는 문구를 물리적으로 안전한 정지라고 보장하지 않는다. 이 단계는 명시된 GO 전환 위반을 검사하기 위한 중간 사건이다.
+ 
+@@ -77,6 +101,7 @@
+ \label{sec:queries}
+ 보완 모델은 committed 위치 Run에서 \texttt{idx<N}일 때 \texttt{step(),idx++}로 자기 전이하고, \texttt{idx==N}이면 Done으로 이동한다. committed 처리로 한 사건의 갱신을 끝내고 다음 사건을 읽는다. 정량 시간 시계는 없다. 다음 다섯 질의를 실제 verifyta 5.0.0에 실행했다. 경로ㆍ상태 양화사의 의미는 공식 문서에 따른다 \cite{uppaalqueries}.
+ 
++\noindent\begin{minipage}{\columnwidth}
+ \begin{lstlisting}[caption={보완 모델의 실제 queries.q.},label={lst:queries}]
+ A[] not bad
+ A[] not missing
+@@ -84,8 +109,32 @@
+ E<> Observer.Done && bad_hold
+ E<> Observer.Done && bad_pre
+ \end{lstlisting}
++\end{minipage}
++
++\begin{figure}[t]
++\centering
++\color{revisionblue}
++\input{figures/condition-observer}
++\bifigcaption{실제 보완 XML의 두 위치와 전이. 의무 상태와 bad/missing은 위치가 아닌 변수이며 시계ㆍ환경 프로세스는 없다.}{The two locations and transitions of the actual condition-indexed XML.}
++\label{fig:condition-observer}
++\end{figure}
++
++그림~\ref{fig:condition-observer}의 템플릿은 \texttt{ScenarioObserver} 하나이고 시스템 인스턴스 이름은 \texttt{Observer}다. 초기 위치는 Run이며 N개의 사건을 모두 읽은 뒤 Done으로 간다. 자기 전이의 \texttt{step()}이 현재 idx의 등록ㆍ증거ㆍ판정을 처리하고, 같은 전이의 \texttt{idx++}가 다음 사건으로 옮긴다. \texttt{step()} 안에서 인덱스를 다시 증가시키지 않는다. committed 위치에서 임의의 시간 지연 없이 이 갱신을 실행한다. 여기서 시간성은 사건 순서와 조건 유지/해제이며, 초 단위 경과 시간을 검증한 것이 아니다.
++
++\texttt{A[] not bad}는 모든 도달 상태에서 bad가 거짓인지, \texttt{A[] not missing}은 근거 없는 진행 기록이 없는지를 묻는다. \texttt{A<> Observer.Done}은 모든 실행이 입력 처리를 끝내는지를 확인한다. 마지막 두 \texttt{E<>} 질의는 완료 경로에서 어떤 모순 사유가 누적되었는지 찾는다. 앞의 안전 속성에서 얻는 최초 반례와 끝까지 처리한 누적 사유는 서로 다른 범위의 출력이므로 함께 읽는다.
+ 
+ 첫 질의의 실패는 모순, 둘째 질의만 실패하면 근거 부족이다. 셋째는 전체 배열의 처리 완료를 확인하고 넷째ㆍ다섯째는 종료 상태에서 미해제 의무 및 선행조건 위반 사유를 확인한다. 진단 경로의 \texttt{first\_bad\_idx/first\_missing\_idx}, 관련 의무 인덱스를 원 사건/의무 ID로 되돌린다. 조건 B는 A에 대응하는 관측 배열에 들어가지 않는다.
++
++\subsection{원문에서 판정 기록까지의 실제 연결 사례}
++\label{sec:trace}
++표~\ref{tab:worked-example}의 미해제 사례는 저장 XML에서 N=2, K=1이고, \texttt{actions=\{0,2\}}, \texttt{creates=\{0,-1\}}, \texttt{preconditions=\{1,-1\}}, \texttt{observations=\{-1,0\}}으로 인코딩된다. e0 뒤에는 active[0]=true, known[0]=-1, idx=1이며 bad와 missing은 거짓이다. e1에서 A=F를 읽은 뒤 GO를 검사하면 active[0]이 남고 bad 및 bad\_hold가 참이 된다. \texttt{first\_bad\_idx=1}, \texttt{first\_bad\_obligation=0}을 기록하고 idx=2에서 Done으로 간다.
++
++저장 질의 결과는 순서대로 거짓/참/참/참/거짓이다. 이를 원 사건 ID \texttt{pedestrian-held\_local\_conflict-gap0:e1}, 의무 A, 사유 \texttt{UNRELEASED\_OBLIGATION}으로 되돌린다. 원문 회수는 새 자연어 설명을 생성하는 과정이 아니다. 사건 ID를 사례 입력의 \texttt{source\_spans}와 연결하면 e1의 ``Proceed''와 ``The pedestrian is still crossing''을, 의무 ID로 e0의 ``Stop until the pedestrian has passed''를 찾아 함께 제시할 수 있다. B의 녹색 신호 구절은 별도 근거로 남는다. verifyta 출력 파서는 사건ㆍ의무ㆍ사유를 반환하며, 원문 구절은 보존 입력의 이 매핑으로 회수한다.
++
++증거 누락 변형은 \texttt{observations=\{-1,-1\}}이고 GO 뒤 missing이 참, bad는 거짓이다. 질의 결과는 참/거짓/참/거짓/거짓이고 최초 근거 부족 사건은 e1, 의무는 A다. 정상 해제 변형은 \texttt{observations=\{-1,1\}}로 e1의 행동 검사 전에 active[0]을 지우며 참/참/참/거짓/거짓이다. 세 결과는 동일한 사건 흐름에서 해제 증거의 차이를 구분한다. 이 기록을 읽으면 위반 문구를 다시 보아야 하는지, A의 관측을 보충해야 하는지, 명시된 의무에 대해서는 양립하는지를 구분할 수 있다.
++
++\subsection{고정 기존 모델과 보조 모델의 위치}
++\label{sec:model-scope}
+ 
+ 기존 모델은 P1--P4 플래그별 \texttt{A[] not flag}, \texttt{A[] not sticky\_unknown}, \texttt{A<> Observer.Done}을 사용했다. 최초 반례 접두 경로가 뒤에 생긴 미상 사유를 담지 못한 24건은 종료 상태 추가 질의로 진단했다. 원 파서는 변경하지 않았다. 두 기존 구현의 일치는 고정 규칙의 구현 일치성이지 그 규칙의 독립 타당성이나 자연어 해석의 정답성이 아니다.
+ 
+--- baseline/sections/06-experiments.tex
++++ follow-up/sections/06-experiments.tex
+@@ -37,7 +37,11 @@
+ 
+ 비교 경로는 동결된 기존 Python 전체 이력 검사, 현재 사건 검사, 이전 1/3/5개 사건 창, 별도 FSM, 기존 UPPAAL, 기존 자동 텍스트 경로다. 창 비교는 기존 검사기에 잘린 이력을 제공한 ablation이며 독립 경쟁 알고리즘은 아니다. 구조화 기존 경로에는 단일 의무 투영, FSM에는 조건별 프레임을 제공한다. 따라서 그 차이에는 기억 길이뿐 아니라 의무 표현 용량과 미상 누적 정책도 포함된다. 단일 의무를 지원하는 경로의 복수 의무 도전 사례도 분모에서 제외하지 않는다.
+ 
++이 설계에서 간격은 초 단위 시간이 아니라 사이에 끼운 사건의 수다. 현재 미해제 변형은 진행 사건에 A=F가 다시 명시되지만, 이전 미해제 변형은 앞서 확인된 A=F를 중간 사건 뒤까지 보존해야 한다. 따라서 같은 GO라도 현재 정보로 충분한 사례와 이전 증거가 필요한 사례를 나눠 볼 수 있다. ``다른 대상 해제''는 다른 조건의 참 증거가 A를 대신 해제하지 않는지, 복수 일부/모두 해제는 하나의 참 증거가 다른 의무를 지우거나 남기지 않는지 확인한다. 정상ㆍ근거 부족 변형도 함께 두어 확정 모순만 찾는 시험으로 축소하지 않았다.
++
+ FSM은 active 의무 집합과 조건별 알려진 증거를 갱신하는 별도 단순 구현이다. 작성된 조건 상태를 입력받으므로 자연어 의미를 독립 판정하는 oracle이 아니다. 기존 자동 경로에는 원문만 제공하고 증거 정답을 넣지 않았다. 세 분류 일치와 모순 72건을 분모로 한 최초 위반 위치 일치를 보고하며, 모순 사례를 미상으로 남긴 것도 실패 분모에 포함한다.
++
++세 분류 일치는 기대 판정과 최종 판정이 같은 사례 수다. 최초 위반은 기대 모순72건에서 정확한 사건 ID를 돌려준 수이므로 분류를 맞혔더라도 위치가 다르면 일치로 세지 않는다. 문제 위치108건은 모순72와 근거 부족36을 합친 별도 추적 대상이다. 관련 의무와 사유도 각각 대조하며, 자연 자료의 라벨과 이 작성 기대 기록을 교환하지 않는다. 이 구분은 어떤 경로가 문제를 판정하는지와 수정에 필요한 위치 정보를 실제로 돌려주는지를 나눠 확인하게 한다.
+ 
+ \subsection{동일 사례 재시험과 구현 일치성}
+ \label{sec:retest-design}
+--- baseline/sections/07-results.tex
++++ follow-up/sections/07-results.tex
+@@ -6,6 +6,8 @@
+ \subsection{기존 40쌍의 규칙 실행 결과}
+ \label{sec:regression-results}
+ 표~\ref{tab:regression}은 자연 오류 성능이 아닌 회귀 결과다. 기존 전체 이력 검사는 P1--P3 30/30과 P4 처리 시험 10/10, 현재 사건 검사는 각각 20/30과 0/10이었다. 기준 사례의 확정 모순 표시는 양쪽 모두 0/40이다. 합계 40/40과 20/40을 일반 오류 검출 정확도로 해석하지 않는다.
++
++여기서 전체 이력과 현재 사건의 차이는 P1과 P4에서 각각10건이다. P1은 앞선 정지 요구가 남았는지 알아야 현재 진행과 충돌하는지 판단할 수 있다. P4는 이미 끝난 요구를 잘못 남긴 상태를 확인하는 처리 시험이다. 반면 P2의 거짓 해제와 P3의 거짓 선행조건은 현재 구조화 사건에 판정 근거가 주어져 두 경로가 모두 실행했다. 따라서 기존40쌍은 기억의 역할을 분리하는 회귀 근거로 유지하며, 복수 의무ㆍ장거리 사건ㆍ자동 원문을 추가한144건의 결과로 대체하거나 합산하지 않는다.
+ 
+ \begin{table}[t]
+ \centering
+@@ -36,9 +38,17 @@
+ 
+ 변형별로 기존 경로는 현재 미해제ㆍ이전 미해제ㆍ증거 누락ㆍ다른 대상 해제ㆍ행동 순서 위반에서 각각 18/18이었다. 정상 해제는 6/18이고 복수 일부 해제와 모두 해제는 각각 0/18이다. 간격별 일치 건수와 최초 위반 위치는 표~\ref{tab:first-results}에 함께 제시했다. 창을 늘려도 단일 의무 표현과 누적 미상 처리의 한계는 남는다.
+ 
++표~\ref{tab:first-results}에서 간격0의 이전1개 경로는36/48이지만 간격2/6은 각각24/48이다. 이전3/5개는 간격2에서30/48을 회복해도 간격6에서는24/48에 머문다. 전체 이력은 긴 간격에서30/48을 유지한다. 이 비교는 이력이 잘린 일부 사례에서 이전 증거를 잃는 효과를 보여 준다. 그러나 전체 이력도96/144이므로 단순히 더 긴 문맥을 넣는 것만으로 복수 의무와 미상 정책의 문제를 해결하지 못한다.
++
++특히 GO와 정지ㆍ양보의 단어만 비교하면 어떤 조건이 여전히 남는지 설명할 수 없다. 작성 기대 기록과 기존 출력의 차이를 읽으면, 모순18건을 미상으로 남긴 것은 복수 일부 해제, 양립30건을 미상으로 남긴 것은 복수 모두 해제18건과 중간 대기 후 정상 해제12건에 대응한다. 이 분포는 틀린 판정의 유형을 보완 모델의 표현 설계와 연결한다. 자동 원문144건의 전부 미상 결과는 다른 층의 문제로, 작성된 조건 정보의 성공으로 가릴 수 없다.
++
+ \subsection{실패 분석과 개발 후 동일 사례 재시험}
+ \label{sec:retest-results}
+ 최초 불일치 48건은 복수 일부 해제 18, 복수 모두 해제 18, 중간 대기 후 정상 해제 12다. 복수 사례에서는 단일 의무 투영과 중첩 처리로 별도 조건을 표현하지 못했다. 정상 해제 사례에서는 대기 중 미상이 누적되어 이후 명시적인 정상 해제로도 최종 미상이 남았다. 이 실패는 자연 오류가 아니라 작성 의미와 기존 표현/정책의 불일치다.
++
++복수 일부 해제에서 A=T, C=F인 진행은 C를 남겨야 한다. 기존 형식의 A 단일 채널에 C의 해제를 투영할 수 없고 중첩 의무를 미상으로 처리하면 모순 근거가 C에 있다는 것을 반환하지 못한다. 모두 해제에서는 A와 C를 각각 지워야 양립을 판정한다. 두 경우는 단일 플래그의 값을 바꾸는 것으로 구분할 수 없어서 의무별 active와 연결 조건별 known으로 표현을 나눴다.
++
++중간 대기 후 정상 해제는 다른 실패다. A의 해제 여부를 모른 채 기다렸다가 A=T가 나타난 뒤 진행했는데도, 기존의 대기 미상 기록이 최종 판정을 미상으로 남겼다. 보완 모델은 ``해제 정보를 기다리는 단계''와 ``해제 근거 없이 진행한 단계''를 나눠 후자에서만 missing을 세운다. 반대로 한 번 근거 없이 진행했다면 나중의 해제로 그 과거 문제 기록을 지우지 않는다. 이 갱신 순서가 표~\ref{tab:transition}의 행동 검사와 누적 기록에 반영된다.
+ 
+ \begin{table}[t]
+ \centering
+@@ -78,9 +88,13 @@
+ 
+ 보완 결과는 조건별 표현과 문제 추적을 실행할 수 있음을 보여 준다. 기대 판정을 바꾸지는 않았으나 모델 개발에 같은 실패 사례를 사용했다. 따라서 독립 일반화 성능이 아니며 R3의 개발 미사용 시험 요구를 충족한 결과로 제시하지 않는다. 새 프레임 모델이 자동 NLP 추출을 개선한 것도 아니다.
+ 
++재시험의144/144는 위 보완이 같은 입력의 의도한 조건 연결을 실행한 결과다. 72/72는 모순 분류뿐 아니라 최초 위반 위치를,108/108은 근거 부족을 포함한 대표 문제 위치ㆍ의무ㆍ사유를 찾아 원문 매핑에 사용할 수 있음을 보여 준다. 표~\ref{tab:worked-example}의 A=F/미상/T 변형이 그 해석의 가장 짧은 예다. 성공률만 제시하는 대신 표~\ref{tab:failures}의 어떤 표현ㆍ기록 정책이 바뀌었는지 함께 읽어야 한다.
++
+ \subsection{기존 Python--UPPAAL 출력 대조}
+ \label{sec:agreement-results}
+ 표~\ref{tab:implementation}에서 판정ㆍ오류 종류ㆍ최초 위치는 기존 두 구현의 144건 전체에서 일치했다. 미상 사유는 24건이 달랐다. 최초 위반 반례의 접두 경로가 뒤에 누적된 미상 사유를 담지 못한 경우였다. 종료 상태의 추가 질의로 뒤의 사유까지 확인하면 144/144가 일치했다. 원 파서와 최초 로그는 보존했다. 이 출력 범위 진단을 48개 의미 불일치의 해결과 혼합하지 않는다.
++
++최초 반례는 속성이 처음 깨지는 접두 경로를 제공한다. 같은 사건열의 뒤쪽에서 다른 미상 사유가 추가될 수 있으므로, 첫 경로에서 읽은 사유 집합은 전체 배열을 처리한 Python의 누적 사유 집합과 다를 수 있다. 종료 질의 진단은 그 나머지 경로를 확인한 것이며 모델의 단일 의무 용량을 늘린 작업이 아니다. 판정ㆍ최초 위치 일치, 누적 사유 일치, 작성 기대 의미와의 일치는 이렇게 서로 다른 비교 항목이다.
+ 
+ \begin{table}[t]
+ \centering
+@@ -104,6 +118,8 @@
+ \input{sections/human-tables}
+ 텍스트 $\kappa=0.027301$, 시간 요구 $\kappa=0.202892$, 행동열 $\kappa=0.291391$을 재현했다. 텍스트의 평균 쌍별 일치율은 0.407407이고 23/27장면에서 네 명의 판정이 달랐다. 표~\ref{tab:reviewer-distribution}에서 텍스트 모순 판정은 검토자별 10/0/1/1건, 해당 없음은 3/5/11/1건으로 크게 다르다. 이는 라벨 적용과 해석의 불안정성을 보여 주지만 원인을 전문성이나 교육 차이로 확정할 수는 없다.
+ 
++$\kappa$는 관측된 일치에서 범주 빈도에 따른 우연 일치를 보정한다. 텍스트 값이0에 가까운 것은 네 검토자가 해당 범주를 적용한 일치가 우연 일치 수준과 크게 다르지 않았음을 뜻한다. 평균 쌍별 일치율과 검토자별 분포를 함께 제시해야 단일 계수만으로 해석을 단순화하지 않는다. 분석 단위는 같은27장면에 대한 네 명의 원 판정이며, 이를108개의 독립 자연 정답으로 세지 않는다.
++
+ 원 메모에는 ``시간 요구가 없는 행동 조절'', ``해제 조건과 행동 순서의 구별'', ``선행 관계를 연결할 정보 부족'' 등의 해석이 남아 있다. 이는 저장된 개별 의견이지 합의 원인의 전수 분석이 아니다. 현재 재분석으로 불일치의 질적 원인별 건수나 합의 형성 절차를 새로 확정하지 않았다. 합의 CSV는 모순 0/27이나 사유 기록도 0/27이다. 이를 객관적인 자연 정답으로 쓰지 않고 재평가ㆍ독립 중재가 미실시임을 유지한다.
+ 
+ 
+@@ -126,7 +142,7 @@
+ 
+ \subsection{궤적과 보조 반응 결과}
+ \label{sec:trajectory-results}
+-27장면의 궤적 비교는 일치 2, 불일치 7, 미상 18이며 재실행 기록과 장면별 판정 차이는 0이었다. 표~\ref{tab:trajectory-cases}는 각 장면의 저장 사유를 익명 순번으로 제시한다. 행동 일치가 있더라도 해제나 단계 시점 증거가 부족한 사건이 있으면 미상이 될 수 있다. 종방향 행동 불일치가 있는 7건은 문장 사이의 모순이나 위험 주행의 독립 정답이 아니다.
++27장면의 궤적 비교는 일치 2, 불일치 7, 미상 18이며 재실행 기록과 장면별 판정 차이는 0이었다. 표~\ref{tab:trajectory-cases}는 세 분류를 요약하며 27장면별 G01--G27의 상세 사유는 심사위원3 답변서 R3-11의 사례표에 보존한다. 사유 열은 사건 건수여서 한 장면에서 여러 열에 중복될 수 있으며 장면 수와 합산하지 않는다. 행동 일치가 있더라도 해제나 단계 시점 증거가 부족한 사건이 있으면 미상이 될 수 있다. 종방향 행동 불일치가 있는 7건은 문장 사이의 모순이나 위험 주행의 독립 정답이 아니다.
+ 
+ \input{sections/trajectory-table}
+ 
+--- baseline/sections/08-discussion.tex
++++ follow-up/sections/08-discussion.tex
+@@ -11,5 +11,10 @@
+ \subsection{주석 검토에서 구분할 조치}
+ 확정 모순은 미해제가 확인된 의무와 행동을 함께 검토한다. 근거 부족은 A의 해제 여부를 B로 대신 채우지 않고 추가 주석/관측을 요청할 대상으로 둔다. 양립 판정도 명시된 의무에 대해서만 유효하다. P4는 주석을 수정할 근거가 아니라 검사 상태 처리의 고장을 점검할 근거다. 따라서 모든 경고를 자연 오류라고 하거나 자료를 자동 삭제하는 절차로 해석하지 않는다.
+ 
+-자연 자료의 낮은 일치도와 합의 사유 누락은 현재 기준을 실제 오류 정답으로 쓰기 어렵게 한다. 이번 작성 시나리오는 이 문제를 해결한 사람이 평가한 gold가 아니다. 자동 추출의 전 사례 미상 결과도 별도 한계로 남는다. 독립 자료와 실제 전문가 검토는 후속 검증이며, 현재의 적용 가능성 실증을 그런 성능으로 확대하지 않는다.
++\subsection{검토 기록의 활용과 보존}
++검토자는 먼저 문제 사건과 관련 의무를 원문에서 함께 읽는다. A=F의 모순이면 A의 미해제 구절과 GO 구절이 같은 조건ㆍ대상에 대응하는지 확인하고, 잘못 연결했다면 프레임 연결을 수정할 대상으로 둔다. A가 미상인 근거 부족이면 존재하지 않는 해제 사실을 정상으로 채우지 않고 필요한 객체 관측이나 주석을 구분한다. A=T의 양립이면 해당 의무를 왜 해제했는지와 출발 근거 B를 각각 보존한다. 이처럼 같은 ``검토 필요'' 표시도 문장 수정과 증거 보충이라는 다른 조치로 이어진다.
++
++이 과정에서 유지할 기록은 원문 구절ㆍ조건 IDㆍ사건 순서ㆍ모델/규칙 버전ㆍ질의ㆍ최초 위치ㆍ사유다. 규칙이나 속도 설정에 따라 결과가 달라지면 두 결과와 바뀐 설정을 함께 남긴다. 두 장면의 연결 근거가 없으면 판정의 범위를 장면 안으로 한정하고, 의도적으로 만든 변형 사례는 규칙 시험 자료로 구분한다. 이런 기록은 검토 순서를 정하고 수정 후 같은 입력을 다시 비교하는 데 사용할 수 있다. 실제 학습 자료의 채택ㆍ삭제나 학습 성능 개선을 측정한 절차는 아니다.
++
++결과의 활용 범위도 층별로 다르다.144개 작성 사례는 조건 연결과 상태 기록이 의도대로 실행되는지, 자연27장면은 원문 해석과 객체ㆍ시점 근거가 어느 곳에서 부족한지 보여 준다.2/7/18 궤적 요약은 문장 모순 판정과 기록 행동 정렬이 별개라는 점을 설명한다.134건 반응 분석과 설정 의존57건은 시간 기준ㆍ계산 증거ㆍ연결 근거를 보존해야 하는 이유를 보여 준다. 따라서 자료를 검토할 때 한 종류의 통과 결과로 다른 종류의 근거 부족을 대신 채우지 않는다.
+ \end{revision}
+--- baseline/sections/09-threats.tex
++++ follow-up/sections/09-threats.tex
+@@ -10,6 +10,8 @@
+ 조건별 모델은 자동 NLP가 아니다. 원문의 증거를 조건 ID로 올바르게 연결하는 단계가 작성 입력에 의존한다. 기존 파서는 제한된 영어 문구ㆍ명시적 연결사를 처리하고 관측 증거를 미상으로 둔다. 부정, 암시, 지시어, 복합행동, 복수 의무와 다른 언어에 대한 일반적 의미 추출은 검증하지 않았다. 단일 의무 투영 손실과 대기 중 누적 미상이 최초 결과를 낮췄다. 보완 모델은 모든 P1--P4 고장이나 임의의 다중 선행조건을 지원한 모델이 아니다.
+ 
+ \subsection{증거의 유효성과 모델 범위}
++모델은 입력된 연결을 실행하므로 프레임의 의무ㆍ조건 ID가 잘못되면 잘못된 명세를 정확히 실행할 수도 있다. 구절에서 조건의 지시 대상을 확정하는 의미 검토와 배열 상태의 속성 검사는 서로 다른 검증 단계다. 명시되지 않은 의무를 새로 발견하는 완전성은 평가하지 않았다.
++
+ 증거 보존은 같은 대상ㆍ조건과 명시한 구간이 유지된다는 가정을 쓴다. 객체 추적, 관측 노후화ㆍ만료, 해제 후 재등장과 시간에 따라 변하는 유효성은 포함하지 않았다. 복수 동시 문제의 사유 플래그를 보존하지만 대표 최초 의무는 정의한 우선순위로 하나를 선택한다. 이 출력이 모든 의무의 완전한 인과 설명은 아니다. 중심 모델은 이산 사건 순서이며 정량 시간 제한ㆍ브레이크/조향 명령ㆍ차량 동역학ㆍ폐루프 상호작용이 없다. 사건 끝에서 미래 해제를 못 봤다는 사실만으로 위반을 선언하지 않는다.
+ 
+ \subsection{자연 자료와 재현성}
+--- baseline/sections/trajectory-table.tex
++++ follow-up/sections/trajectory-table.tex
+@@ -1,40 +1,16 @@
+-\begin{table*}[t]
++\begin{table}[t]
+ \centering
+ \color{revisionblue}
+-\bitablecaption{27장면 궤적 판정의 사례별 사유. 익명 G01--G27은 보존 재분석 행 순서; 사유는 사건 건수이며 한 장면에 중복될 수 있다.}{Case-level reasons for trajectory comparison; anonymous IDs follow preserved reanalysis row order. Counts refer to events and can overlap within a scene.}
++\bitablecaption{27장면 궤적 비교 요약. 상세 사례는 심사위원3 답변서 R3-11에 보존한다.}{Summary of trajectory comparison; detailed reasons are retained in the Reviewer 3 response, R3-11.}
+ \label{tab:trajectory-cases}
+-\scriptsize
+-\begin{tabularx}{\textwidth}{lYrrrrrr}
++\footnotesize
++\begin{tabularx}{\columnwidth}{lcY}
+ \toprule
+-장면 & 장면 판정 & 행동 일치 & 종방향 불일치 & 해석 미상 & 행동 미지원 & 관측 미상 & 시점/해제 부족 \\
++장면 판정 & 장면 수 & 해석 \\
+ \midrule
+-G01 & 미상 & 0 & 0 & 0 & 4 & 2 & 0 \\
+-G02 & 미상 & 0 & 0 & 2 & 1 & 0 & 0 \\
+-G03 & 불일치 & 1 & 1 & 2 & 0 & 0 & 1 \\
+-G04 & 미상 & 1 & 0 & 1 & 1 & 0 & 1 \\
+-G05 & 불일치 & 0 & 1 & 1 & 4 & 0 & 0 \\
+-G06 & 미상 & 2 & 0 & 0 & 0 & 0 & 2 \\
+-G07 & 미상 & 3 & 0 & 1 & 0 & 0 & 0 \\
+-G08 & 미상 & 4 & 0 & 0 & 3 & 0 & 2 \\
+-G09 & 미상 & 3 & 0 & 0 & 1 & 0 & 2 \\
+-G10 & 불일치 & 0 & 1 & 0 & 1 & 0 & 0 \\
+-G11 & 미상 & 3 & 0 & 1 & 1 & 0 & 0 \\
+-G12 & 미상 & 3 & 0 & 1 & 0 & 0 & 2 \\
+-G13 & 불일치 & 1 & 1 & 1 & 0 & 0 & 1 \\
+-G14 & 미상 & 1 & 0 & 0 & 0 & 0 & 2 \\
+-G15 & 미상 & 0 & 0 & 0 & 4 & 0 & 1 \\
+-G16 & 일치 & 3 & 0 & 0 & 0 & 0 & 0 \\
+-G17 & 미상 & 0 & 0 & 0 & 2 & 0 & 1 \\
+-G18 & 일치 & 3 & 0 & 0 & 0 & 0 & 0 \\
+-G19 & 미상 & 0 & 0 & 0 & 2 & 0 & 1 \\
+-G20 & 미상 & 0 & 0 & 4 & 3 & 0 & 0 \\
+-G21 & 미상 & 0 & 0 & 0 & 2 & 0 & 0 \\
+-G22 & 미상 & 1 & 0 & 0 & 3 & 0 & 0 \\
+-G23 & 불일치 & 4 & 1 & 0 & 0 & 0 & 0 \\
+-G24 & 불일치 & 2 & 3 & 0 & 0 & 0 & 0 \\
+-G25 & 불일치 & 0 & 1 & 1 & 1 & 0 & 1 \\
+-G26 & 미상 & 0 & 0 & 0 & 6 & 0 & 0 \\
+-G27 & 미상 & 2 & 0 & 0 & 2 & 0 & 0 \\
++일치 & 2 & 표현한 행동과 기록된 종방향 움직임의 일치 \\
++불일치 & 7 & 종방향 행동 불일치; 문장 모순/안전 위반 정답 아님 \\
++미상 & 18 & 해석ㆍ지원 행동ㆍ관측ㆍ시점/해제 근거의 부족 \\
+ \bottomrule
+ \end{tabularx}
+-\end{table*}
++\end{table}

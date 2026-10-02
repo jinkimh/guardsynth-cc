@@ -1,0 +1,2173 @@
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian)  (format=lualatex 2026.7.22)  1 OCT 2026 13:45
+ restricted system commands enabled.
+ file:line:error style messages enabled.
+**main-clean.tex
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/main-clean.tex
+LaTeX2e <2022-11-01> patch level 1
+Lua module: luaotfload 2022-10-03 3.23 Lua based OpenType font support
+Lua module: lualibs 2022-10-04 2.75 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2022-10-04 2.75 ConTeXt Lua libraries -- extended c
+ollection.
+luaotfload | conf : Root cache directory is "/home/jinhyun/prj_ws/prj_jin/guards
+ynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-c
+oc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-003/
+.texlive-cache/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2022-10-03.lua" from kpse-res
+olved path "/home/jinhyun/texmf/tex/luatex/luaotfload/fontloader-2022-10-03.lua"
+.
+Lua-only attribute luaotfload@noligature = 1
+luaotfload | init : Context OpenType loader version 3.120
+Inserting `luaotfload.node_processor' in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 2
+luaotfload | conf : Root cache directory is "/home/jinhyun/prj_ws/prj_jin/guards
+ynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-c
+oc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-003/
+.texlive-cache/luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' in `find_truetype_file'.
+Removing  `luaotfload.glyph_stream' from `glyph_stream_provider'.
+Inserting `luaotfload.harf.glyphstream' in `glyph_stream_provider'.
+Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
+Inserting `luaotfload.harf.finalize_hlist' in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' in `glyph_info'.
+Lua-only attribute luaotfload.letterspace_done = 3
+Inserting `luaotfload.aux.set_sscale_dimens' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_font_index' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.patch_cambria_domh' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.fixup_fontdata' in `luaotfload.patch_font_unsafe'.
+Inserting `luaotfload.aux.set_capheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_xheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'. L3 programm
+ing layer <2023-01-16>
+Inserting `tracingstacklevels' in `input_level_string'.
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/main.tex
+(/usr/share/texlive/texmf-dist/tex/latex/extsizes/extarticle.cls
+Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/extsizes/size9.clo
+File: size9.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from /home/jinhyun/prj_ws/prj_jin/g
+uardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequent
+ial-coc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01
+-003/.texlive-cache/luatex-cache/generic/names/luaotfload-names.luc.gz)
+(/usr/share/texlive/texmf-dist/tex/latex/base/exscale.sty
+Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+\big@size=\dimen139
+)
+\c@part=\count183
+\c@section=\count184
+\c@subsection=\count185
+\c@subsubsection=\count186
+\c@paragraph=\count187
+\c@subparagraph=\count188
+\c@figure=\count189
+\c@table=\count190
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/kiee-review.sty
+Package: kiee-review 2026/08/05 KIEE 2022 anonymous review format
+
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-01-16 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
+File: l3backend-luatex.def 2023-01-16 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count191
+\l__pdf_internal_box=\box51
+))
+Package: xparse 2023-01-16 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+Lua module: fontspec 2022/01/15 2.8a Font selection for XeLaTeX and LuaLaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+Package: fontspec-luatex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaT
+eX
+\l__fontspec_script_int=\count192
+\l__fontspec_language_int=\count193
+\l__fontspec_strnum_int=\count194
+\l__fontspec_tmp_int=\count195
+\l__fontspec_tmpa_int=\count196
+\l__fontspec_tmpb_int=\count197
+\l__fontspec_tmpc_int=\count198
+\l__fontspec_em_int=\count199
+\l__fontspec_emdef_int=\count266
+\l__fontspec_strong_int=\count267
+\l__fontspec_strongdef_int=\count268
+\l__fontspec_tmpa_dim=\dimen141
+\l__fontspec_tmpb_dim=\dimen142
+\l__fontspec_tmpc_dim=\dimen143
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count269
+\Gm@cntv=\count270
+\c@Gm@tempcnt=\count271
+\Gm@bindingoffset=\dimen144
+\Gm@wd@mp=\dimen145
+\Gm@odd@mp=\dimen146
+\Gm@even@mp=\dimen147
+\Gm@layoutwidth=\dimen148
+\Gm@layoutheight=\dimen149
+\Gm@layouthoffset=\dimen150
+\Gm@layoutvoffset=\dimen151
+\Gm@dimlist=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen152
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen153
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count272
+LaTeX Info: Redefining \frac on input line 236.
+\uproot@=\count273
+\leftroot@=\count274
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count275
+\DOTSCASE@=\count276
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen154
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count277
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count278
+\dotsspace@=\muskip16
+\c@parentequation=\count279
+\dspbrk@lvl=\count280
+\tag@help=\toks19
+\row@=\count281
+\column@=\count282
+\maxfields@=\count283
+\andhelp@=\toks20
+\eqnshift@=\dimen155
+\alignsep@=\dimen156
+\tagshift@=\dimen157
+\tagwidth@=\dimen158
+\totwidth@=\dimen159
+\lineht@=\dimen160
+\@envbody=\toks21
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen161
+\lightrulewidth=\dimen162
+\cmidrulewidth=\dimen163
+\belowrulesep=\dimen164
+\belowbottomsep=\dimen165
+\aboverulesep=\dimen166
+\abovetopsep=\dimen167
+\cmidrulesep=\dimen168
+\cmidrulekern=\dimen169
+\defaultaddspace=\dimen170
+\@cmidla=\count284
+\@cmidlb=\count285
+\@aboverulesep=\dimen171
+\@belowrulesep=\dimen172
+\@thisruleclass=\count286
+\@lastruleclass=\count287
+\@thisrulewidth=\dimen173
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen174
+\ar@mcellbox=\box54
+\extrarowheight=\dimen175
+\NC@list=\toks23
+\extratabsurround=\skip53
+\backup@length=\skip54
+\ar@cellbox=\box55
+)
+\TX@col@width=\dimen176
+\TX@old@table=\dimen177
+\TX@old@col=\dimen178
+\TX@target=\dimen179
+\TX@delta=\dimen180
+\TX@cols=\count288
+\TX@ftn=\toks24
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2022/09/22 v1.2d Graphics/color driver for luatex
+))
+\Gin@req@height=\dimen181
+\Gin@req@width=\dimen182
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count289
+\float@exts=\toks25
+\float@box=\box56
+\@float@everytoks=\toks26
+\@floatcapt=\box57
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 227.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/latex/pgf/frontendlayer/tikz.s
+ty
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/latex/pgf/basiclayer/pgf.sty
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/latex/pgf/utilities/pgfrcs.sty
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/utilities/pgfutil-
+common.tex
+\pgfutil@everybye=\toks27
+\pgfutil@tempdima=\dimen183
+\pgfutil@tempdimb=\dimen184
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/utilities/pgfutil-
+latex.def
+\pgfutil@abb=\box58
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/utilities/pgfrcs.c
+ode.tex
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/latex/pgf/basiclayer/pgfcore.s
+ty
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/latex/pgf/systemlayer/pgfsys.s
+ty
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/systemlayer/pgfsys
+.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/utilities/pgfkeys.
+code.tex
+\pgfkeys@pathtoks=\toks28
+\pgfkeys@temptoks=\toks29
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/utilities/pgfkeysl
+ibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks30
+))
+\pgf@x=\dimen185
+\pgf@y=\dimen186
+\pgf@xa=\dimen187
+\pgf@ya=\dimen188
+\pgf@xb=\dimen189
+\pgf@yb=\dimen190
+\pgf@xc=\dimen191
+\pgf@yc=\dimen192
+\pgf@xd=\dimen193
+\pgf@yd=\dimen194
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count290
+\c@pgf@countb=\count291
+\c@pgf@countc=\count292
+\c@pgf@countd=\count293
+\t@pgf@toka=\toks31
+\t@pgf@tokb=\toks32
+\t@pgf@tokc=\toks33
+\pgf@sys@id@count=\count294
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/systemlayer/pgf.cf
+g
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-luatex.def
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/systemlayer/pgfsys
+-luatex.def
+File: pgfsys-luatex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/systemlayer/pgfsys
+-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/systemlayer/pgfsys
+softpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count295
+\pgfsyssoftpath@bigbuffer@items=\count296
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/systemlayer/pgfsys
+protocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/math/pgfmath.code.
+tex
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/math/pgfmathutil.c
+ode.tex)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/math/pgfmathparser
+.code.tex
+\pgfmath@dimen=\dimen195
+\pgfmath@count=\count297
+\pgfmath@box=\box59
+\pgfmath@toks=\toks34
+\pgfmath@stack@operand=\toks35
+\pgfmath@stack@operation=\toks36
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/math/pgfmathfuncti
+ons.code.tex)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/math/pgfmathfuncti
+ons.basic.code.tex)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/math/pgfmathfuncti
+ons.trigonometric.code.tex)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/math/pgfmathfuncti
+ons.random.code.tex)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/math/pgfmathfuncti
+ons.comparison.code.tex)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/math/pgfmathfuncti
+ons.base.code.tex)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/math/pgfmathfuncti
+ons.round.code.tex)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/math/pgfmathfuncti
+ons.misc.code.tex)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/math/pgfmathfuncti
+ons.integerarithmetics.code.tex)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/math/pgfmathcalc.c
+ode.tex)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/math/pgfmathfloat.
+code.tex
+\c@pgfmathroundto@lastzeros=\count298
+))
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/math/pgfint.code.t
+ex)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+points.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen196
+\pgf@picmaxx=\dimen197
+\pgf@picminy=\dimen198
+\pgf@picmaxy=\dimen199
+\pgf@pathminx=\dimen256
+\pgf@pathmaxx=\dimen257
+\pgf@pathminy=\dimen258
+\pgf@pathmaxy=\dimen259
+\pgf@xx=\dimen260
+\pgf@xy=\dimen261
+\pgf@yx=\dimen262
+\pgf@yy=\dimen263
+\pgf@zx=\dimen264
+\pgf@zy=\dimen265
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+pathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen266
+\pgf@path@lasty=\dimen267
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+pathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen268
+\pgf@shorten@start@additional=\dimen269
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+scopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box60
+\pgf@hbox=\box61
+\pgf@layerbox@main=\box62
+\pgf@picture@serial@count=\count299
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+graphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen270
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+transformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen271
+\pgf@pt@y=\dimen272
+\pgf@pt@temp=\dimen273
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+quick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+objects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+pathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+arrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen274
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+shade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen275
+\pgf@sys@shading@range@num=\count300
+\pgf@shadingcount=\count301
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+image.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+external.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box63
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+layers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+transparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+patterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/basiclayer/pgfcore
+rdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/modules/pgfmodules
+hapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box64
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/modules/pgfmodulep
+lot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/latex/pgf/compatibility/pgfcom
+p-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen276
+\pgf@nodesepend=\dimen277
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/latex/pgf/compatibility/pgfcom
+p-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/latex/pgf/utilities/pgffor.sty
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/latex/pgf/utilities/pgfkeys.st
+y
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/utilities/pgfkeys.
+code.tex))
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/latex/pgf/math/pgfmath.sty
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/math/pgfmath.code.
+tex))
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/utilities/pgffor.c
+ode.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen278
+\pgffor@skip=\dimen279
+\pgffor@stack=\toks37
+\pgffor@toks=\toks38
+))
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/frontendlayer/tikz
+/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/libraries/pgflibra
+ryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count302
+\pgfplotmarksize=\dimen280
+)
+\tikz@lastx=\dimen281
+\tikz@lasty=\dimen282
+\tikz@lastxsaved=\dimen283
+\tikz@lastysaved=\dimen284
+\tikz@lastmovetox=\dimen285
+\tikz@lastmovetoy=\dimen286
+\tikzleveldistance=\dimen287
+\tikzsiblingdistance=\dimen288
+\tikz@figbox=\box65
+\tikz@figbox@bg=\box66
+\tikz@tempbox=\box67
+\tikz@tempbox@bg=\box68
+\tikztreelevel=\count303
+\tikznumberofchildren=\count304
+\tikznumberofcurrentchild=\count305
+\tikz@fig@count=\count306
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/modules/pgfmodulem
+atrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count307
+\pgfmatrixcurrentcolumn=\count308
+\pgf@matrix@numberofcolumns=\count309
+)
+\tikz@expandcount=\count310
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/frontendlayer/tikz
+/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count311
+\lst@gtempboxa=\box69
+\lst@token=\toks39
+\lst@length=\count312
+\lst@currlwidth=\dimen289
+\lst@column=\count313
+\lst@pos=\count314
+\lst@lostspace=\dimen290
+\lst@width=\dimen291
+\lst@newlines=\count315
+\lst@lineno=\count316
+\lst@maxwidth=\dimen292
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count317
+\lst@skipnumbers=\count318
+\lst@framebox=\box70
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen293
+\captionmargin=\dimen294
+\caption@leftmargin=\dimen295
+\caption@rightmargin=\dimen296
+\caption@width=\dimen297
+\caption@indent=\dimen298
+\caption@parindent=\dimen299
+\caption@hangindent=\dimen300
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count319
+\c@continuedfloat=\count320
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2022-11-13 v7.00u Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks40
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count321
+)
+\@linkdim=\dimen301
+\Hy@linkcounter=\count322
+\Hy@pagecounter=\count323
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2022-11-13 v7.00u Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count324
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2022-11-13 v7.00u Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4162.
+Package hyperref Info: Link nesting OFF on input line 4167.
+Package hyperref Info: Hyper index ON on input line 4170.
+Package hyperref Info: Plain pages OFF on input line 4177.
+Package hyperref Info: Backreferencing OFF on input line 4182.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4410.
+\c@Hy@tempcnt=\count325
+LaTeX Info: Redefining \url on input line 4748.
+\XeTeXLinkMargin=\dimen302
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count326
+\Field@Width=\dimen303
+\Fld@charsize=\dimen304
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing OFF on input line 6042.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count327
+\c@Item=\count328
+\c@Hfootnote=\count329
+)
+Package hyperref Info: Driver (autodetected): hluatex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hluatex.def
+File: hluatex.def 2022-11-13 v7.00u Hyperref driver for luaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count330
+\c@bookmark@seq@number=\count331
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip55
+)
+luaotfload | aux : font no 19 (nil) does not define feature smcp for script latn
+ with language dflt
+luaotfload | aux : font no 20 (nil) does not define feature smcp for script latn
+ with language dflt
+
+Package fontspec Info: Font family 'NotoSerifCJKkr(0)' created for font
+(fontspec)             'NotoSerifCJKkr' with options
+(fontspec)             [Ligatures=TeX,Path=fonts/,Extension=.otf,UprightFont=*-
+Regular,BoldFont=*-Bold].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[fonts/NotoSerifCJKkr-Regular.otf]:mode=node;script=
+latn;language=dflt;+tlig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[fonts/NotoSerifCJKkr-Bold.otf]:mode=node;script=lat
+n;language=dflt;+tlig;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/libraries/pgflibra
+ryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen305
+\pgfarrowlength=\dimen306
+\pgfarrowwidth=\dimen307
+\pgfarrowlinewidth=\dimen308
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/frontendlayer/tikz
+/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/frontendlayer/tikz
+/libraries/tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/frontendlayer/tikz
+/libraries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/libraries/shapes/p
+gflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/.texlive-local/tex/generic/pgf/frontendlayer/tikz
+/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/revision-style.tex)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/artifacts/projects/sequential-coc-verification/public/kiee-review-revisio
+n-001/manuscript-build-2026-10-01-003/main-clean/main-clean.aux)
+\openout1 = main-clean.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 8
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 8.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 8.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 8.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 8.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 8.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 8.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 8.
+LaTeX Font Info:    Redeclaring math accent \check on input line 8.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 8.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 8.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 8.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 8.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 8.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 8.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 8.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 8.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 8.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 8.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 8.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 8.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 8.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 8.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 8.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 8.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 8.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/NotoSerifCJKkr(0)/m/n on input line 
+8.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 8.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/NotoSerifCJKkr(0)/m/n on input line
+ 8.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/NotoSerifCJKkr(0)/m/n --> TU/NotoSerifCJKkr(0)/m/n o
+n input line 8.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/NotoSerifCJKkr(0)/m/it on input lin
+e 8.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/NotoSerifCJKkr(0)/b/n on input line
+ 8.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/NotoSerifCJKkr(0)/m/n on input line
+ 8.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 8.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/NotoSerifCJKkr(0)/m/n --> TU/NotoSerifCJKkr(0)/b/n o
+n input line 8.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/NotoSerifCJKkr(0)/b/it on input li
+ne 8.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/NotoSerifCJKkr(0)/b/n on input lin
+e 8.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 8.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: luatex
+*geometry* verbose mode - [ preamble ] result:
+* driver: luatex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(51.2434pt, 495.02109pt, 51.2434pt)
+* v-part:(T,H,B)=(54.03178pt, 736.98328pt, 54.03178pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=495.02109pt
+* \textheight=736.98328pt
+* \oddsidemargin=-21.0266pt
+* \evensidemargin=-21.0266pt
+* \topmargin=-58.69095pt
+* \headheight=12.0pt
+* \headsep=28.45274pt
+* \topskip=9.0pt
+* \footskip=28.45274pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=22.76219pt
+* \skip\footins=8.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumntrue
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count332
+\scratchdimen=\dimen309
+\scratchbox=\box71
+\nofMPsegments=\count333
+\nofMParguments=\count334
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count335
+\MPscratchDim=\dimen310
+\MPnumerator=\count336
+\makeMPintoPDFobject=\count337
+\everyMPtoPDFconversion=\toks42
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count338
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring OFF on input line 8.
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/artifacts/projects/sequential-coc-verification/public/kiee-review-revisio
+n-001/manuscript-build-2026-10-01-003/main-clean/main-clean.out)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/artifacts/projects/sequential-coc-verification/public/kiee-review-revisio
+n-001/manuscript-build-2026-10-01-003/main-clean/main-clean.out)
+\@outlinefile=\write4
+
+\openout4 = main-clean.out
+LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/sections/01-introduction.tex
+Underfull \hbox (badness 1721) in paragraph at lines 8--9
+\TU/NotoSerifCJKkr(0)/m/n/8.5 보행자가 통과했다는 증거는 아니다. 
+보행자가 여전히 횡단
+ []
+
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/figures/overview-pipeline.tex)
+Underfull \hbox (badness 1895) in paragraph at lines 20--21
+\TU/NotoSerifCJKkr(0)/m/n/8.5 전환의 모순과 근거 부족을 구분하
+고, 최초 문제 사건ㆍ관련
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 1577) in paragraph at lines 22--23
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 기여는 세 가지다. 첫째, 원문 구절--
+의무 ID--해제 조건--
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 이하에서는 자료와 조건 표현을 정
+의한 뒤, 원문에서
+ []
+
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/sections/02-related-work.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 Driv-eLM은 지각ㆍ예측ㆍ계획의 질의
+응답을 그래프로
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+\TU/NotoSerifCJKkr(0)/m/n/8.5 연결하고, DriveVLM은 장면 설명ㆍ분석
+ㆍ계층적 계획을
+ []
+
+
+Underfull \hbox (badness 2469) in paragraph at lines 6--7
+\TU/NotoSerifCJKkr(0)/m/n/8.5 연결한다. 생성 모델의 계획 성능이
+나 설명의 실제 인과적
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 설명 검증에 가까운 최근 프리프린
+트는 언어 근거와
+ []
+
+
+Underfull \hbox (badness 3058) in paragraph at lines 8--9
+\TU/NotoSerifCJKkr(0)/m/n/8.5 장면ㆍ궤적의 충실성 및 시각 교란
+에 대한 반응을 평가한다
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+\TU/NotoSerifCJKkr(0)/m/n/8.5 유한 접두 경로에서 참ㆍ거짓ㆍ미결
+정을 구분하고 최초로
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 Scenic과 Ver-i-fAI는 자율 시스템 시험
+을 위한 상황
+ []
+
+
+Underfull \hbox (badness 1077) in paragraph at lines 14--15
+\TU/NotoSerifCJKkr(0)/m/n/8.5 기술ㆍ생성 및 분석 도구를 제공한
+다 [[], []]. 이들의 환경
+ []
+
+
+Underfull \hbox (badness 4378) in paragraph at lines 37--38
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 기술적 초점은 원문 구절과 의무ㆍ
+해제 조건ㆍ증거ㆍ문제
+ []
+
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/sections/03-data.tex
+Underfull \hbox (badness 1394) in paragraph at lines 8--9
+\TU/NotoSerifCJKkr(0)/m/n/8.5 아니다. 보관 목록에는 󴩋󴩈󴩇장
+면ㆍ󴩇,󴩆󴩅󴩌사건ㆍ󴩆,󴩈󴩋󴩉인접쌍이
+ []
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 10--11
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 자료를 읽을 때는 기록값, 계산값
+과 검사 규칙을 구분한다.
+ []
+
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/figures/annotation-flow.tex)
+Underfull \hbox (badness 2469) in paragraph at lines 22--23
+\TU/NotoSerifCJKkr(0)/m/n/8.5 vi-sion은 복원되지 않았다. 상류 READ-ME
+에는 모델 계열
+ []
+
+
+Underfull \hbox (badness 4181) in paragraph at lines 22--23
+\TU/NotoSerifCJKkr(0)/m/n/8.5 정확한 모델 re-vi-sion으로 생성되었
+는지는 확인할 수 없다.
+ []
+
+
+Underfull \hbox (badness 4995) in paragraph at lines 22--23
+\TU/NotoSerifCJKkr(0)/m/n/8.5 원 생성 promp-t/-con-fig와 품질 점수 계
+산ㆍ상류 임계값도
+ []
+
+
+Underfull \hbox (badness 1418) in paragraph at lines 22--23
+\TU/NotoSerifCJKkr(0)/m/n/8.5 선정 절차는 복원했다. 이번 보존 파
+일의 해시는 현재 입력
+ []
+
+LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 44.
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <8.5> not available
+(Font)              size <8> substituted on input line 44.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.25> not available
+(Font)              size <5> substituted on input line 44.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <8.5> not available
+(Font)              size <8> substituted on input line 44.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.25> not available
+(Font)              size <5> substituted on input line 44.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <8.5> not available
+(Font)              size <8> substituted on input line 44.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.25> not available
+(Font)              size <5> substituted on input line 44.
+
+
+Underfull \hbox (badness 3138) in paragraph at lines 48--49
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 후보 선택기는 이웃한 첫 문장에 \TU
+/lmtt/m/n/8.5 stop/yield \TU/NotoSerifCJKkr(0)/m/n/8.5 계열, 둘째
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+\TU/NotoSerifCJKkr(0)/m/n/8.5 문장에 \TU/lmtt/m/n/8.5 accelerate/proceed \TU
+/NotoSerifCJKkr(0)/m/n/8.5 계열이 있는 쌍을 찾는다.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+\TU/NotoSerifCJKkr(0)/m/n/8.5 󴩆󴩇쌍ㆍ󴩅󴩉장면에서 장면별 가
+장 이른 창 하나를 선정했다.
+ []
+
+
+Underfull \hbox (badness 1859) in paragraph at lines 48--49
+\TU/NotoSerifCJKkr(0)/m/n/8.5 차이, 원 사건 위치 차이 순으로 대
+응시켰다. 동률은 seed
+ []
+
+
+Underfull \vbox (badness 1418) has occurred while \output is active []
+
+ [2]
+Underfull \hbox (badness 1242) in paragraph at lines 52--53
+\TU/NotoSerifCJKkr(0)/m/n/8.5 시간 요구의 명시성, 요구 행동열과 
+문장 일관성을 구분하고,
+ []
+
+
+Underfull \hbox (badness 1360) in paragraph at lines 56--57
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 통제 자료는 보행자, 자전거, 선행 
+차량, 교차 교통, 버스,
+ []
+
+
+Underfull \hbox (badness 7151) in paragraph at lines 56--57
+\TU/NotoSerifCJKkr(0)/m/n/8.5 장애물의 󴩊상황과 󴩌변형, 중간 
+사건 󴩄/󴩆/󴩊개의 모든 조합
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+\TU/lmtt/m/n/8.5 terminal-evidence-2026-10-01-001\TU/NotoSerifCJKkr(0)/m/n/8.5 
+에는 종료 질의 진단,
+ []
+
+
+Underfull \hbox (badness 7256) in paragraph at lines 58--59
+\TU/lmtt/m/n/8.5 condition-model-2026-10-01-001\TU/NotoSerifCJKkr(0)/m/n/8.5 
+에는 동일 사례 재시험이
+ []
+
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/sections/04-problem.tex
+Underfull \hbox (badness 4316) in paragraph at lines 12--13
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 P󴩅--P󴩇은 입력의 행동ㆍ요구 관
+계에 관한 문제이고 P󴩈는
+ []
+
+
+Underfull \hbox (badness 1205) in paragraph at lines 22--23
+[]$\OML/cmm/m/it/8.5 A[]$\TU/NotoSerifCJKkr(0)/m/n/8.5 는 새 의무와 해
+제 증거를 반영한 뒤 현재 행동 직전의
+ []
+
+
+Underfull \hbox (badness 2469) in paragraph at lines 24--25
+\TU/NotoSerifCJKkr(0)/m/n/8.5 주어진 시험에서 발생한다. 이 구현
+상 표시는 실제 사람이
+ []
+
+
+Underfull \vbox (badness 5331) has occurred while \output is active []
+
+ [3])
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/sections/05-method.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 1.
+
+
+Underfull \hbox (badness 1895) in paragraph at lines 8--9
+\TU/NotoSerifCJKkr(0)/m/n/8.5 시각과 단계 인덱스가 역전된 입력
+을 거부하고, 작성 경로는
+ []
+
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/figures/method-pipeline.tex)
+Underfull \hbox (badness 3668) in paragraph at lines 18--19
+\TU/NotoSerifCJKkr(0)/m/n/8.5 보완 UP-PAAL은 어떤 표현과 정책을 실
+행하는지 구분한다.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+\TU/NotoSerifCJKkr(0)/m/n/8.5 원문으로 돌려주고, 최초 시험ㆍ동
+일 사례 재시험ㆍ자연
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 기존 자동 변환은 LLM 호출이나 수
+작업 정답
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+\TU/NotoSerifCJKkr(0)/m/n/8.5 입력을 쓰지 않는 정규식 기반 영어 
+파서다.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+\TU/lmtt/m/n/8.5 stop/halt/hold\TU/NotoSerifCJKkr(0)/m/n/8.5 , \TU/lmtt/m/n/8.5
+ yield/decelerate/slow down\TU/NotoSerifCJKkr(0)/m/n/8.5 ,
+ []
+
+
+Underfull \hbox (badness 1831) in paragraph at lines 22--23
+\TU/lmtt/m/n/8.5 accelerate/proceed/resume/move forward\TU/NotoSerifCJKkr(0)/m/
+n/8.5 , \TU/lmtt/m/n/8.5 maintain/keep
+ []
+
+
+Underfull \hbox (badness 1496) in paragraph at lines 22--23
+\TU/lmtt/m/n/8.5 speed\TU/NotoSerifCJKkr(0)/m/n/8.5 를 행동 종류로 묶
+는다. 명령형ㆍ조동사ㆍ주어 문맥을
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+\TU/NotoSerifCJKkr(0)/m/n/8.5 확인하여 단순 언급을 행동으로 해
+석하는 것을 제한한다.
+ []
+
+
+Underfull \hbox (badness 2478) in paragraph at lines 22--23
+\TU/lmtt/m/n/8.5 then/and then\TU/NotoSerifCJKkr(0)/m/n/8.5 으로 단계 순
+서를 나누되 \TU/lmtt/m/n/8.5 until then\TU/NotoSerifCJKkr(0)/m/n/8.5 은 
+단계
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 정지ㆍ양보 대상이 없으면 \TU/lmtt/m/
+n/8.5 UNKNOWN_MISSING_TARGET\TU/NotoSerifCJKkr(0)/m/n/8.5 ,
+ []
+
+
+Underfull \hbox (badness 3199) in paragraph at lines 24--25
+\TU/NotoSerifCJKkr(0)/m/n/8.5 둔다. 명시적 단계가 각각 단일 행동
+일 때만 다음 행동을
+ []
+
+
+Underfull \hbox (badness 2469) in paragraph at lines 24--25
+\TU/NotoSerifCJKkr(0)/m/n/8.5 연결한다. 부정 표현을 참ㆍ거짓 관
+측 증거로 읽거나 동의
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 작성 프레임은 설계자가 원문과 동
+시에 만든다.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+\TU/lmtt/m/n/8.5 action\TU/NotoSerifCJKkr(0)/m/n/8.5 , \TU/lmtt/m/n/8.5 obligati
+on{id,target,condition_id}\TU/NotoSerifCJKkr(0)/m/n/8.5 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+\TU/lmtt/m/n/8.5 evidence{condition_id,value}\TU/NotoSerifCJKkr(0)/m/n/8.5 , \T
+U/lmtt/m/n/8.5 precondition\TU/NotoSerifCJKkr(0)/m/n/8.5 과
+ []
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 26--27
+\TU/lmtt/m/n/8.5 source_spans\TU/NotoSerifCJKkr(0)/m/n/8.5 를 가진다. True/-
+False는 작성 문장이 명시한
+ []
+
+
+Underfull \hbox (badness 3250) in paragraph at lines 46--47
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 표 []󴩇[]의 원문은 저장된 작성 사
+례에서 가져왔다. 미해제
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+\TU/NotoSerifCJKkr(0)/m/n/8.5 e󴩅의 \TU/lmtt/m/n/8.5 Proceed\TU/NotoSerifCJK
+kr(0)/m/n/8.5 는 문자 위치 [󴩊󴩇,󴩋󴩄), A 증거는 [󴩄,󴩇
+󴩇),
+ []
+
+
+Underfull \hbox (badness 7667) in paragraph at lines 46--47
+\TU/NotoSerifCJKkr(0)/m/n/8.5 B 증거는 [󴩇󴩈,󴩊󴩆)에 연결된다. 
+사건 ID는 \TU/lmtt/m/n/8.5 pedestrian-
+ []
+
+
+Underfull \hbox (badness 1303) in paragraph at lines 52--53
+\TU/NotoSerifCJKkr(0)/m/n/8.5 의무는 \TU/lmtt/m/n/8.5 OVERLAPPING_OBLIGATION\TU/NotoSerifCJKkr(0)/m/n/8.5 , 
+대기 중 해제 미상도 누적
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 여기서 󴩊개 상태는 \TU/lmtt/m/n/8.5 INA
+CTIVE\TU/NotoSerifCJKkr(0)/m/n/8.5 , \TU/lmtt/m/n/8.5 ACTIVE\TU/NotoSerifCJKkr(
+0)/m/n/8.5 ,
+ []
+
+
+Underfull \hbox (badness 1895) in paragraph at lines 56--57
+\TU/NotoSerifCJKkr(0)/m/n/8.5 배열 순서이며 선행조건 위반을 먼
+저, 의무를 등록 순서대로
+ []
+
+
+Underfull \hbox (badness 1248) in paragraph at lines 60--61
+[]\TU/lmtt/m/n/8.5 active[j]\TU/NotoSerifCJKkr(0)/m/n/8.5 는 남아 있는 
+의무, \TU/lmtt/m/n/8.5 known[j]\TU/NotoSerifCJKkr(0)/m/n/8.5 는 그 의무
+의 최근
+ []
+
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 82.
+
+Underfull \hbox (badness 2119) in paragraph at lines 96--97
+\TU/NotoSerifCJKkr(0)/m/n/8.5 기록한다. 미상인 채 WAIT한 단계에서
+는 문제가 추가되지
+ []
+
+
+Underfull \hbox (badness 2460) in paragraph at lines 96--97
+\TU/NotoSerifCJKkr(0)/m/n/8.5 않지만, 그 상태에서 GO하면 근거 부
+족을 기록한다. 현재
+ []
+
+
+Underfull \hbox (badness 2080) in paragraph at lines 98--99
+\TU/NotoSerifCJKkr(0)/m/n/8.5 실제 속도나 이동을 적분하지 않으
+므로 \TU/lmtt/m/n/8.5 Maintain speed\TU/NotoSerifCJKkr(0)/m/n/8.5 라는
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 보완 모델은 com-mit-ted 위치 Run에서 \
+TU/lmtt/m/n/8.5 idx<N\TU/NotoSerifCJKkr(0)/m/n/8.5 일 때
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+\TU/lmtt/m/n/8.5 step(),idx++\TU/NotoSerifCJKkr(0)/m/n/8.5 로 자기 전이
+하고, \TU/lmtt/m/n/8.5 idx==N\TU/NotoSerifCJKkr(0)/m/n/8.5 이면 Done으로
+ []
+
+
+Overfull \hbox (9.0pt too wide) in paragraph at lines 104--113
+[]$[]$ 
+ []
+
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/figures/condition-observer.tex) [5]
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 그림 []󴩈[]의 템플릿은 \TU/lmtt/m/n/8.
+5 ScenarioObserver \TU/NotoSerifCJKkr(0)/m/n/8.5 하나이고 시스템
+ []
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 122--123
+\TU/NotoSerifCJKkr(0)/m/n/8.5 인스턴스 이름은 \TU/lmtt/m/n/8.5 Observer\
+TU/NotoSerifCJKkr(0)/m/n/8.5 다. 초기 위치는 Run이며 N개의
+ []
+
+
+Underfull \hbox (badness 1960) in paragraph at lines 124--125
+[]\TU/lmtt/m/n/8.5 A[] not bad\TU/NotoSerifCJKkr(0)/m/n/8.5 는 모든 도달 
+상태에서 bad가 거짓인지, \TU/lmtt/m/n/8.5 A[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+\TU/lmtt/m/n/8.5 not missing\TU/NotoSerifCJKkr(0)/m/n/8.5 은 근거 없는 
+진행 기록이 없는지를 묻는다.
+ []
+
+
+Underfull \hbox (badness 3623) in paragraph at lines 124--125
+\TU/lmtt/m/n/8.5 A<> Observer.Done\TU/NotoSerifCJKkr(0)/m/n/8.5 은 모든 실
+행이 입력 처리를 끝내는지를
+ []
+
+
+Underfull \hbox (badness 5667) in paragraph at lines 126--127
+\TU/NotoSerifCJKkr(0)/m/n/8.5 상태에서 미해제 의무 및 선행조건 
+위반 사유를 확인한다.
+ []
+
+
+Underfull \hbox (badness 1931) in paragraph at lines 126--127
+\TU/NotoSerifCJKkr(0)/m/n/8.5 진단 경로의 \TU/lmtt/m/n/8.5 first_bad_idx/fi
+rst_missing_idx\TU/NotoSerifCJKkr(0)/m/n/8.5 , 관련 의무
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 표 []󴩇[]의 미해제 사례는 저장 XM-L
+에서 N=󴩆, K=󴩅이고,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+\TU/lmtt/m/n/8.5 actions={0,2}\TU/NotoSerifCJKkr(0)/m/n/8.5 , \TU/lmtt/m/n/8.5 
+creates={0,-1}\TU/NotoSerifCJKkr(0)/m/n/8.5 , \TU/lmtt/m/n/8.5 preconditions={1,
+-
+ []
+
+
+Underfull \hbox (badness 2042) in paragraph at lines 130--131
+\TU/lmtt/m/n/8.5 1}\TU/NotoSerifCJKkr(0)/m/n/8.5 , \TU/lmtt/m/n/8.5 observations
+={-1,0}\TU/NotoSerifCJKkr(0)/m/n/8.5 으로 인코딩된다. e󴩄 뒤에는 ac-
+
+ []
+
+
+Underfull \hbox (badness 6348) in paragraph at lines 130--131
+\TU/NotoSerifCJKkr(0)/m/n/8.5 tive[󴩄]=true, known[󴩄]=-󴩅, idx=󴩅이
+며 bad와 miss-ing은
+ []
+
+
+Underfull \hbox (badness 3907) in paragraph at lines 130--131
+\TU/NotoSerifCJKkr(0)/m/n/8.5 남고 bad 및 bad_hold가 참이 된다. \TU/lmt
+t/m/n/8.5 first_bad_idx=1\TU/NotoSerifCJKkr(0)/m/n/8.5 ,
+ []
+
+
+Underfull \hbox (badness 6428) in paragraph at lines 130--131
+\TU/lmtt/m/n/8.5 first_bad_obligation=0\TU/NotoSerifCJKkr(0)/m/n/8.5 을 기
+록하고 idx=󴩆에서 Done으로
+ []
+
+
+Underfull \hbox (badness 3428) in paragraph at lines 132--133
+\TU/lmtt/m/n/8.5 source_spans\TU/NotoSerifCJKkr(0)/m/n/8.5 와 연결하면 e
+󴩅의 ``Pro-ceed''와 ``The pedes-
+ []
+
+
+Underfull \hbox (badness 3977) in paragraph at lines 132--133
+\TU/NotoSerifCJKkr(0)/m/n/8.5 사건ㆍ의무ㆍ사유를 반환하며, 원문 
+구절은 보존 입력의 이
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 증거 누락 변형은 \TU/lmtt/m/n/8.5 observa
+tions={-1,-1}\TU/NotoSerifCJKkr(0)/m/n/8.5 이고 GO
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+\TU/NotoSerifCJKkr(0)/m/n/8.5 뒤 miss-ing이 참, bad는 거짓이다. 질의 
+결과는
+ []
+
+
+Underfull \hbox (badness 1960) in paragraph at lines 134--135
+\TU/NotoSerifCJKkr(0)/m/n/8.5 참/거짓/참/거짓/거짓이고 최초 근거 
+부족 사건은 e󴩅, 의무는
+ []
+
+
+Underfull \hbox (badness 1546) in paragraph at lines 134--135
+\TU/NotoSerifCJKkr(0)/m/n/8.5 전에 ac-tive[󴩄]을 지우며 참/참/참/
+거짓/거짓이다. 세 결과는
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 기존 모델은 P󴩅--P󴩈 플래그별 \TU/
+lmtt/m/n/8.5 A[] not flag\TU/NotoSerifCJKkr(0)/m/n/8.5 , \TU/lmtt/m/n/8.5 A[] no
+t
+ []
+
+
+Underfull \hbox (badness 1377) in paragraph at lines 141--142
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 보조 반응 모델은 기록 사건과 자
+차 속도 반응을 재생하고
+ []
+
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/sections/06-experiments.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 1.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 자연 검토는 선정된 󴩆󴩋장면에
+서 네 검토자의 시간
+ []
+
+
+Underfull \hbox (badness 1009) in paragraph at lines 10--11
+\TU/NotoSerifCJKkr(0)/m/n/8.5 요구ㆍ행동열ㆍ텍스트 일관성 범주
+를 재집계한다. 원 라벨은
+ []
+
+[6]
+Underfull \hbox (badness 5288) in paragraph at lines 48--49
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 󴩈󴩌개 최초 불일치의 원인을 분
+석한 뒤 조건별 UP-PAAL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 기존 Python--UPPAAL 비교는 판정ㆍ오
+류 종류ㆍ최초
+ []
+
+
+Underfull \hbox (badness 1721) in paragraph at lines 50--51
+\TU/NotoSerifCJKkr(0)/m/n/8.5 위치ㆍ미상 사유를 항목별로 대조한
+다. 사유가 다른 사례는
+ []
+
+
+Underfull \hbox (badness 4060) in paragraph at lines 56--57
+\TU/NotoSerifCJKkr(0)/m/n/8.5 오류율과 󴩍󴩉% 신뢰구간을 산출하
+지 않는다. 자연 검토도
+ []
+
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/sections/07-results.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ifnextchar' on input line 1.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 여기서 전체 이력과 현재 사건의 
+차이는 P󴩅과 P󴩈에서
+ []
+
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/sections/result-tables.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 변형별로 기존 경로는 현재 미해제
+ㆍ이전 미해제ㆍ증거
+ []
+
+
+Underfull \hbox (badness 3792) in paragraph at lines 39--40
+\TU/NotoSerifCJKkr(0)/m/n/8.5 정상 해제는 󴩊/󴩅󴩌이고 복수 일
+부 해제와 모두 해제는 각각
+ []
+
+
+Underfull \hbox (badness 5260) in paragraph at lines 41--42
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 표 []󴩋[]에서 간격󴩄의 이전󴩅개 
+경로는󴩇󴩊/󴩈󴩌이지만 간격󴩆/󴩊은
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\TU/NotoSerifCJKkr(0)/m/n/8.5 각각󴩆󴩈/󴩈󴩌이다. 이전󴩇/󴩉
+개는 간격󴩆에서󴩇󴩄/󴩈󴩌을 회복해도
+ []
+
+
+Underfull \hbox (badness 6063) in paragraph at lines 43--44
+\TU/NotoSerifCJKkr(0)/m/n/8.5 남는지 설명할 수 없다. 작성 기대 
+기록과 기존 출력의
+ []
+
+
+Underfull \hbox (badness 1540) in paragraph at lines 47--48
+\TU/NotoSerifCJKkr(0)/m/n/8.5 대기 중 미상이 누적되어 이후 명시
+적인 정상 해제로도 최종
+ []
+
+
+Underfull \vbox (badness 1436) has occurred while \output is active []
+
+ [7]
+Underfull \hbox (badness 7081) in paragraph at lines 91--92
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 재시험의󴩅󴩈󴩈/󴩅󴩈󴩈는 위 
+보완이 같은 입력의 의도한 조건
+ []
+
+
+Underfull \hbox (badness 3312) in paragraph at lines 91--92
+\TU/NotoSerifCJKkr(0)/m/n/8.5 연결을 실행한 결과다. 󴩋󴩆/󴩋󴩆
+는 모순 분류뿐 아니라 최초
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+\TU/NotoSerifCJKkr(0)/m/n/8.5 위반 위치를,󴩅󴩄󴩌/󴩅󴩄󴩌은 
+근거 부족을 포함한 대표 문제
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 1019) in paragraph at lines 97--98
+\TU/NotoSerifCJKkr(0)/m/n/8.5 확인한 것이며 모델의 단일 의무 용
+량을 늘린 작업이 아니다.
+ []
+
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/sections/human-tables.tex)
+Underfull \hbox (badness 7256) in paragraph at lines 119--120
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 텍스트 $\OML/cmm/m/it/8.5  \OT1/cmr/m/n/8.5
+ = 0\OML/cmm/m/it/8.5 :\OT1/cmr/m/n/8.5 027301$\TU/NotoSerifCJKkr(0)/m/n/8.5 , 
+시간 요구 $\OML/cmm/m/it/8.5  \OT1/cmr/m/n/8.5 = 0\OML/cmm/m/it/8.5 :\OT1/
+cmr/m/n/8.5 202892$\TU/NotoSerifCJKkr(0)/m/n/8.5 ,
+ []
+
+
+Underfull \hbox (badness 3942) in paragraph at lines 119--120
+\TU/NotoSerifCJKkr(0)/m/n/8.5 행동열 $\OML/cmm/m/it/8.5  \OT1/cmr/m/n/8.5 = 0\OML/cmm/m/it/8.5 :\OT1/cmr/m/n/8.5 291391$\TU/NotoSerifCJKkr(0)/m/n/8.5 
+을 재현했다. 텍스트의 평균 쌍별
+ []
+
+[8]
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/sections/trajectory-table.tex))
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/sections/08-discussion.tex
+Underfull \hbox (badness 3590) in paragraph at lines 12--13
+\TU/NotoSerifCJKkr(0)/m/n/8.5 근거 부족은 A의 해제 여부를 B로 대
+신 채우지 않고 추가
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 15--16
+\TU/NotoSerifCJKkr(0)/m/n/8.5 대응하는지 확인하고, 잘못 연결했
+다면 프레임 연결을 수정할
+ []
+
+
+Underfull \hbox (badness 3058) in paragraph at lines 15--16
+\TU/NotoSerifCJKkr(0)/m/n/8.5 대상으로 둔다. A가 미상인 근거 부
+족이면 존재하지 않는
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 이 과정에서 유지할 기록은 원문 
+구절ㆍ조건 IDㆍ사건
+ []
+
+
+Underfull \hbox (badness 3514) in paragraph at lines 17--18
+\TU/NotoSerifCJKkr(0)/m/n/8.5 순서ㆍ모델/규칙 버전ㆍ질의ㆍ최초 
+위치ㆍ사유다. 규칙이나
+ []
+
+
+Underfull \hbox (badness 1418) in paragraph at lines 17--18
+\TU/NotoSerifCJKkr(0)/m/n/8.5 남긴다. 두 장면의 연결 근거가 없으
+면 판정의 범위를 장면
+ []
+
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/sections/09-threats.tex
+Underfull \hbox (badness 1577) in paragraph at lines 7--8
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 기존 󴩈󴩄쌍은 기대 결과를 확인
+해 남긴 규칙 회귀시험이다.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+\TU/NotoSerifCJKkr(0)/m/n/8.5 새 󴩅󴩈󴩈건은 최초 결과에 따라 
+선별하지 않았지만
+ []
+
+
+Underfull \hbox (badness 1783) in paragraph at lines 7--8
+\TU/NotoSerifCJKkr(0)/m/n/8.5 󴩈󴩌개 실패를 사용한 조건별 모델
+은 같은 사례로 재시험했다.
+ []
+
+
+Underfull \hbox (badness 2057) in paragraph at lines 10--11
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 조건별 모델은 자동 NLP가 아니다. 
+원문의 증거를 조건
+ []
+
+
+Underfull \hbox (badness 1762) in paragraph at lines 15--16
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 증거 보존은 같은 대상ㆍ조건과 명
+시한 구간이 유지된다는
+ []
+
+
+Underfull \hbox (badness 2469) in paragraph at lines 15--16
+\TU/NotoSerifCJKkr(0)/m/n/8.5 시간에 따라 변하는 유효성은 포함
+하지 않았다. 복수 동시
+ []
+
+
+Underfull \hbox (badness 3058) in paragraph at lines 15--16
+\TU/NotoSerifCJKkr(0)/m/n/8.5 문제의 사유 플래그를 보존하지만 
+대표 최초 의무는 정의한
+ []
+
+
+Underfull \hbox (badness 6493) in paragraph at lines 15--16
+\TU/NotoSerifCJKkr(0)/m/n/8.5 제한ㆍ브레이크/조향 명령ㆍ차량 동
+역학ㆍ폐루프 상호작용이
+ []
+
+[9]
+Underfull \hbox (badness 1320) in paragraph at lines 18--19
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 󴩆󴩋장면은 행동 표현으로 고른 
+비무작위 표본이다. 텍스트
+ []
+
+
+Underfull \hbox (badness 3514) in paragraph at lines 18--19
+\TU/NotoSerifCJKkr(0)/m/n/8.5 불일치 󴩆󴩇/󴩆󴩋과 합의 사유 메
+모 󴩄/󴩆󴩋이 남아 있고, 검토자
+ []
+
+
+Underfull \hbox (badness 1215) in paragraph at lines 18--19
+\TU/NotoSerifCJKkr(0)/m/n/8.5 전문성ㆍ교육ㆍ중재 및 논의 절차를 
+충분히 복원하지 못했다.
+ []
+
+
+Underfull \hbox (badness 1067) in paragraph at lines 18--19
+\TU/NotoSerifCJKkr(0)/m/n/8.5 사람 재평가를 실시하지 않았다. 원 
+생성 실행별 모델 re-vi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+\TU/NotoSerifCJKkr(0)/m/n/8.5 완전 재생성을 주장할 수 없다. 현재 
+입력ㆍ코드ㆍXM-
+ []
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 18--19
+\TU/NotoSerifCJKkr(0)/m/n/8.5 Lㆍ질의ㆍ로그ㆍ해시는 보존했지만 re
+-stricted 자료의 외부
+ []
+
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/sections/10-conclusion.tex
+Underfull \hbox (badness 3568) in paragraph at lines 6--7
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 본 논문은 연속 CoC의 의무와 해제 
+조건을 후속 증거에
+ []
+
+
+Underfull \hbox (badness 1895) in paragraph at lines 6--7
+\TU/NotoSerifCJKkr(0)/m/n/8.5 연결하고, 사건 순서에서 모순과 근
+거 부족을 구분하여 최초
+ []
+
+
+Underfull \hbox (badness 1389) in paragraph at lines 6--7
+\TU/NotoSerifCJKkr(0)/m/n/8.5 다루었다. 새 행동의 근거 B와 앞선 
+의무 A의 해제 증거를
+ []
+
+
+Underfull \hbox (badness 1152) in paragraph at lines 8--9
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 󴩅󴩈󴩈개 작성 시나리오의 최초 
+시험에서 기존 구조화 경로는
+ []
+
+
+Underfull \hbox (badness 7203) in paragraph at lines 10--11
+[]\TU/NotoSerifCJKkr(0)/m/n/8.5 기존 Python--UPPAAL의 판정ㆍ오류 종
+류ㆍ최초 위치는
+ []
+
+
+Underfull \hbox (badness 2469) in paragraph at lines 10--11
+\TU/NotoSerifCJKkr(0)/m/n/8.5 종료 질의로 진단했으며 원 파서는 
+변경하지 않았다. 자연
+ []
+
+)
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/artifacts/projects/sequential-coc-verification/public/kiee-review-revisio
+n-001/manuscript-build-2026-10-01-003/main-clean/main-clean.bbl
+
+LaTeX Font Warning: Font shape `TU/NotoSerifCJKkr(0)/m/it' undefined
+(Font)              using `TU/NotoSerifCJKkr(0)/m/n' instead on input line 7.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--29
+[]\TU/NotoSerifCJKkr(0)/m/it/8 CISS, Aal-borg Uni-ver-sity.  In-dus-trial and sc
+i-en-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--29
+\TU/NotoSerifCJKkr(0)/m/it/8 tific ev-er-green from dan-ish com-puter sci-en-tis
+t.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--29
+[]$\TU/lmtt/m/n/8 https://www.ciss.dk/industrial-and-scientific-
+ []
+
+
+Underfull \hbox (badness 4673) in paragraph at lines 24--29
+\TU/lmtt/m/n/8 evergreen-from-danish-computer-scientist/$[]\TU/NotoSerifCJKkr(0
+)/m/it/8 .  De-vel-
+ []
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 44--48
+\TU/NotoSerifCJKkr(0)/m/it/8 re-la-tion-ship in VLA for au-tonomous driv-ing.  
+arXiv
+ []
+
+[10]
+Underfull \hbox (badness 1292) in paragraph at lines 62--67
+[]\TU/NotoSerifCJKkr(0)/m/it/8 UP-PAAL Team.  Se-man-tics of the sym-bolic queri
+es.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--67
+[]$\TU/lmtt/m/n/8 https://docs.uppaal.org/language-reference/query-
+ []
+
+
+Underfull \hbox (badness 4492) in paragraph at lines 76--82
+\TU/NotoSerifCJKkr(0)/m/it/8 Ed-ward Kim, Hadi Ra-van-bakhsh, Mar-cell Vazquez-
+ []
+
+
+Underfull \hbox (badness 5036) in paragraph at lines 84--89
+\TU/NotoSerifCJKkr(0)/m/it/8 Vora, Venice Erin Li-ong, Qiang Xu, Anush Kr-ish-
+ []
+
+
+Underfull \hbox (badness 1137) in paragraph at lines 84--89
+\TU/NotoSerifCJKkr(0)/m/it/8 nan, Yu Pan, Gi-an-carlo Bal-dan, and Os-car Bei-jb
+om.
+ []
+
+) [11
+
+]
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/artifacts/projects/sequential-coc-verification/public/kiee-review-revisio
+n-001/manuscript-build-2026-10-01-003/main-clean/main-clean.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.75pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package rerunfilecheck Info: File `main-clean.out' has not changed.
+(rerunfilecheck)             Checksum: <no file>.
+))
+
+Here is how much of LuaTeX's memory you used:
+ 28121 strings out of 478382
+ 244186,1977958 words of node,token memory allocated
+ 585 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 20 attribute, 55 glue_spec
+, 20 attribute_list, 2 write, 3 pdf_action nodes
+   avail lists: 2:4083,3:1060,4:156,5:4698,6:182,7:13857,8:100,9:9307,10:32,11:6
+32
+ 46989 multiletter control sequences out of 65536+600000
+ 86 fonts using 205654047 bytes
+ 104i,11n,95p,1405b,1122s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf/fonts/opentype/public/lm/lmmono8-regular.otf></usr/share/texmf
+/fonts/opentype/public/lm/lmmono9-regular.otf><./fonts/NotoSerifCJKkr-Regular.ot
+f><./fonts/NotoSerifCJKkr-Bold.otf></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main-clean.pdf (11 pages, 316058 bytes).
+
+PDF statistics: 431 PDF objects out of 1000 (max. 8388607)
+ 375 compressed objects within 4 object streams
+ 113 named destinations out of 1000 (max. 131072)
+ 336 words of extra memory for PDF output out of 10000 (max. 100000000)
+

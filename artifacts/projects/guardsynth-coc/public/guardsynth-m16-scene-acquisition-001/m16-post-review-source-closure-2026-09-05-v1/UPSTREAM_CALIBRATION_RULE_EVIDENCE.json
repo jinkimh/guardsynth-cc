@@ -1,0 +1,18 @@
+{
+  "audit_version": "guardsynth-nvidia-ncore-offline-variant-rule-v0.1",
+  "authority": "NVIDIA",
+  "claim_scope": "OFFICIAL_VARIANT_SELECTION_RULE_NOT_PER_EVENT_TRANSFORM_OR_VEHICLE_SAFETY",
+  "commit_sha": "59c698d206da92b406a4f72619fce3b3a2c64bfd",
+  "coordinate_transform_verified": false,
+  "decision": "OFFLINE_VARIANT_RULE_SOURCE_LINKED",
+  "repository": "NVIDIA/ncore",
+  "required_offline_features": [
+    "egomotion",
+    "sensor_extrinsics",
+    "camera_intrinsics",
+    "lidar_intrinsics"
+  ],
+  "selected_variant": "offline",
+  "source_sha256": "268c2c20a9cb219e6b9b280c21ad22e2f09f33f6189f62a49cb90fbcd2d7fba0",
+  "source_url": "https://github.com/NVIDIA/ncore/blob/59c698d206da92b406a4f72619fce3b3a2c64bfd/tools/data_converter/pai/data_provider.py"
+}

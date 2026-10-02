@@ -1,0 +1,46 @@
+{
+  "actual_vehicle_validation_deferred_to_m21": true,
+  "annotation_start_allowed": false,
+  "annotation_started": false,
+  "claim_scope": "M16_MACHINE_GEOMETRY_CANDIDATES_FOR_CURATOR_REVIEW_NOT_MAP_GROUND_TRUTH_SOURCE_COMPLETE_EXPERT_EFFECT_OR_VEHICLE_SAFETY",
+  "classified_event_count": 98,
+  "code_revision": "3c1b633d11a9d50706f70b0f147686cf24e1815c",
+  "curator_pending_count": 98,
+  "curator_review_completed_count": 0,
+  "curator_review_screen_generated": true,
+  "eligible_scene_count": 1,
+  "experiment_id": "GUARDSYNTH-M16-SCENE-ACQUISITION-001",
+  "frame_candidate_count": 490,
+  "gpu_inference_performed": true,
+  "input_hashes": {
+    "model_source_license": "6f5d45253175ad2d856dc82acfed573cd86e64a4e4ef93a250e2f83357159946",
+    "model_weight": "5605d1a8ce762c1b6f7d23f4c2e7ec9384bfd6e6887b040b43e1f8902a817e22",
+    "primary_sensor_materialization": "e2bf55010814325632747f6112bd1a0766496f325e530f15330615e4b6013e14",
+    "prior_cascade_structured_link_audit": "b3676234a66a159acd78dc37fa95885412773782e658a0a9305e46a91d7de844",
+    "reserve_sensor_materialization": "942d3f0c29575772ae2754ffbd03bc6d18a9cf789ce68401babcf4e680ca7259"
+  },
+  "machine_candidate_promoted_to_ground_truth": false,
+  "model_source_revision": "90f1b8695ae311d5123b05f8534b2e11e42499d2",
+  "model_weight_sha256": "5605d1a8ce762c1b6f7d23f4c2e7ec9384bfd6e6887b040b43e1f8902a817e22",
+  "network_use_performed": true,
+  "new_eligible_count": 0,
+  "new_source_complete_count": 0,
+  "output_hashes": {
+    "geometry_candidate_manifest": "7c05c7396e2bf75d2b7552f37ff5b8ce8b5c32dd7314ad9888c3b46651f64ef5",
+    "geometry_candidate_workbench": "a3f9beca6fbb12f076bb8d839a6634fd30903af4d323c867486ee429e281b180"
+  },
+  "run_date": "2026-09-05",
+  "run_id": "m16-geometry-candidate-2026-09-05-v1",
+  "slice_candidate_counts": {
+    "FOLLOWING_CUT_IN": 33,
+    "PEDESTRIAN_CYCLIST_YIELD": 32,
+    "STOP_SIGNALS": 33
+  },
+  "source_bound_machine_candidate_count": 98,
+  "source_field_updates_before_curator_review": 0,
+  "status": "M16_SOURCE_GEOMETRY_CANDIDATES_GENERATED_CURATOR_REVIEW_REQUIRED",
+  "synthetic_required_field_fill_count": 0,
+  "target_scene_count": 60,
+  "unique_source_video_count": 81,
+  "workspace_state": "WORKSPACE_WITH_UNCOMMITTED_CHANGES"
+}

@@ -1,0 +1,38 @@
+\documentclass[9pt,twocolumn]{extarticle}
+\usepackage{kiee-review}
+\input{revision-style}
+
+\kieeenglishtitle{\rev{A Feasibility Framework for Temporal and Conditional Consistency Checking of Sequential Chain-of-Causation Annotations}}
+\kieekoreantitle{\rev{연속 인과관계(CoC) 주석의 시간·조건 일관성 검사 프레임워크: 적용 가능성과 근거 추적}}
+
+\begin{document}
+\makekieefrontmatter{%
+\begin{kieeabstract}
+\rev{Sequential Chain-of-Causation (CoC) annotations may omit release evidence or justify an action that conflicts with an earlier obligation. We link obligations to condition-specific evidence and use UPPAAL to distinguish confirmed conflicts from insufficient evidence and record the first issue event, obligation, and reason. This study evaluates feasibility and traceability under authored symbolic inputs. The natural-data inventory contains 309 adjacent pairs from 90 scenes; four reviewers assessed a selected subset of 27 scene groups, with textual-consistency Fleiss' kappa 0.027301 and no recorded consensus rationale. In 144 authored scenarios (72 contradictions, 36 consistent cases, and 36 insufficient-evidence cases), the frozen legacy structured path matched 96 decisions and a simple finite-state comparator matched all 144. The automatic text path returned UNKNOWN for every case. After analyzing 48 legacy mismatches, a separate condition-indexed UPPAAL model matched 144/144 decisions, 72/72 first violation events, and 108/108 issue locations, obligations, and reasons on the same cases. This is a post-development same-case retest, not independent validation. Python--UPPAAL agreement checks implementation consistency; neither natural-error accuracy, automated semantic extraction, accuracy superiority of UPPAAL, nor vehicle safety is established.}
+\end{kieeabstract}
+\kieekeywords{\rev{Chain-of-Causation, Temporal consistency, Condition-linked obligations, Model checking, Feasibility, Evidence traceability}}
+}
+
+\input{sections/01-introduction}
+\input{sections/02-related-work}
+\input{sections/03-data}
+\input{sections/04-problem}
+\input{sections/05-method}
+\input{sections/06-experiments}
+\input{sections/07-results}
+\input{sections/08-discussion}
+\input{sections/09-threats}
+\input{sections/10-conclusion}
+
+\section*{감사의 글}
+\begingroup
+\raggedright
+본 연구는 대한민국 정부(교육과학기술부)의 재원으로 한국연구재단(NRF)의 지원을 받아 수행되었으며(\nolinkurl{NRF-2023R1A2C1006639}), 대한민국 정부(과학기술정보통신부)의 재원으로 정보통신기획평가원(IITP)의 지역지능화혁신인재양성사업 지원을 받아 수행되었음(\nolinkurl{IITP-2026-RS-2024-00436773}).
+\par
+\endgroup
+\bibliographystyle{unsrt}
+\begingroup
+\fontsize{8pt}{12pt}\selectfont
+\bibliography{references}
+\endgroup
+\end{document}

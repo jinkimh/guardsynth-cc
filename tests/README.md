@@ -1,7 +1,8 @@
-# Tests
+# Repository policy tests
 
-- `guard_synth_eblc/`: maintained EBLC package unit, integration, translation, robustness, and regression tests
-- `structure/`: repository layout and path-policy enforcement
+This root contains repository-wide structure and governance tests only.
 
-Historical experiment-local tests may remain beside their experiment code when they depend on
-local fixtures or optional environments.
+- EBLC/BCV tests: `platforms/eblc-bcv/tests/`
+- GuardSynth-CoC tests: `projects/04-guardsynth-coc/tests/`
+- Research portal tests: `apps/research_portal/tests/`
+- Experiment-local tests remain beside the owning experiment.

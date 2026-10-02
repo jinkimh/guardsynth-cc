@@ -1,0 +1,245 @@
+{
+  "protocol_id": "paper1-temporal-diversity-v0.1",
+  "profile": "supplied-temporal-diversity-v0.2",
+  "generator_seed": 2026092903,
+  "seeds": [
+    42,
+    17,
+    123
+  ],
+  "arms": [
+    "P0",
+    "P1",
+    "P2"
+  ],
+  "rows_per_adapter": 240,
+  "predicted_rows_total": 2160,
+  "unique_inputs_per_arm": {
+    "P0": 60,
+    "P1": 216,
+    "P2": 216
+  },
+  "display_precision_s": 0.1,
+  "SMT_boundary_precision_ms": 100,
+  "max_new_tokens": 12,
+  "decoding": "GREEDY",
+  "training_updates": 0,
+  "model_revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "analysis": {
+    "bootstrap": 2000,
+    "seed": 2026092904,
+    "clusters": "semantic_group; labels and contract pairs stay together",
+    "seed_uncertainty": "resample paired model seeds; report individual seed estimates",
+    "metrics": [
+      "violation",
+      "safe_completion",
+      "deadlock",
+      "unnecessary_stop",
+      "correct",
+      "valid",
+      "pair_correct"
+    ],
+    "D2": "paired prediction changes from canonical; P0 duplicate inputs cached, not independent",
+    "D3": "paired prediction changes from original; score original source and swapped-image implied references separately",
+    "D4": "all192 candidates reused with/bypass verification; layer-specific counts, false rejection, misses, valid/overall coverage",
+    "claim": "POST_PRIMARY_EXPLORATORY_DIAGNOSTIC_NO_FORMAL_PRESERVATION_OR_WHOLE_COC_TRUTH"
+  },
+  "paraphrase_review": "FIXED_GRAMMAR_PROGRAM_FIELD_CORRESPONDENCE; NO_LLM; NOT_HUMAN_SEMANTIC_AUDIT",
+  "new_training_expansion_pixel_overlap": 0,
+  "reserved_training_clear_range_s": [
+    6.0,
+    9.9
+  ],
+  "reserved_validation_clear_range_s": [
+    10.0,
+    10.9
+  ],
+  "reserved_test_clear_range_s": [
+    11.0,
+    11.9
+  ],
+  "D4_types": [
+    "cnl_negation",
+    "cnl_threshold",
+    "delete_release",
+    "reverse_comparison",
+    "shared_source_error",
+    "threshold_change",
+    "unit_error",
+    "valid"
+  ],
+  "D4_count": 192,
+  "inventory": {
+    "D1/boundary": {
+      "rows": 24,
+      "unique_pixels": 3,
+      "pixels_overlapping_training": 0,
+      "unique_input_by_arm": {
+        "P0": 12,
+        "P1": 24,
+        "P2": 24
+      },
+      "semantic_groups": 3,
+      "reference_label_counts": {
+        "B": 6,
+        "D": 6,
+        "A": 6,
+        "C": 6
+      }
+    },
+    "D1/clear_only": {
+      "rows": 24,
+      "unique_pixels": 3,
+      "pixels_overlapping_training": 0,
+      "unique_input_by_arm": {
+        "P0": 12,
+        "P1": 24,
+        "P2": 24
+      },
+      "semantic_groups": 3,
+      "reference_label_counts": {
+        "C": 6,
+        "D": 6,
+        "B": 6,
+        "A": 6
+      }
+    },
+    "D1/duration_only": {
+      "rows": 24,
+      "unique_pixels": 3,
+      "pixels_overlapping_training": 3,
+      "unique_input_by_arm": {
+        "P0": 12,
+        "P1": 24,
+        "P2": 24
+      },
+      "semantic_groups": 3,
+      "reference_label_counts": {
+        "D": 6,
+        "B": 6,
+        "A": 6,
+        "C": 6
+      }
+    },
+    "D1/joint": {
+      "rows": 24,
+      "unique_pixels": 3,
+      "pixels_overlapping_training": 0,
+      "unique_input_by_arm": {
+        "P0": 12,
+        "P1": 24,
+        "P2": 24
+      },
+      "semantic_groups": 3,
+      "reference_label_counts": {
+        "D": 6,
+        "A": 6,
+        "C": 6,
+        "B": 6
+      }
+    },
+    "D2/canonical": {
+      "rows": 24,
+      "unique_pixels": 3,
+      "pixels_overlapping_training": 3,
+      "unique_input_by_arm": {
+        "P0": 12,
+        "P1": 24,
+        "P2": 24
+      },
+      "semantic_groups": 3,
+      "reference_label_counts": {
+        "B": 6,
+        "C": 6,
+        "A": 6,
+        "D": 6
+      }
+    },
+    "D2/paraphrase1": {
+      "rows": 24,
+      "unique_pixels": 3,
+      "pixels_overlapping_training": 3,
+      "unique_input_by_arm": {
+        "P0": 12,
+        "P1": 24,
+        "P2": 24
+      },
+      "semantic_groups": 3,
+      "reference_label_counts": {
+        "A": 6,
+        "C": 6,
+        "B": 6,
+        "D": 6
+      }
+    },
+    "D2/paraphrase2": {
+      "rows": 24,
+      "unique_pixels": 3,
+      "pixels_overlapping_training": 3,
+      "unique_input_by_arm": {
+        "P0": 12,
+        "P1": 24,
+        "P2": 24
+      },
+      "semantic_groups": 3,
+      "reference_label_counts": {
+        "B": 6,
+        "A": 6,
+        "D": 6,
+        "C": 6
+      }
+    },
+    "D3/blank": {
+      "rows": 24,
+      "unique_pixels": 1,
+      "pixels_overlapping_training": 0,
+      "unique_input_by_arm": {
+        "P0": 12,
+        "P1": 24,
+        "P2": 24
+      },
+      "semantic_groups": 3,
+      "reference_label_counts": {
+        "A": 6,
+        "B": 6,
+        "D": 6,
+        "C": 6
+      }
+    },
+    "D3/original": {
+      "rows": 24,
+      "unique_pixels": 3,
+      "pixels_overlapping_training": 0,
+      "unique_input_by_arm": {
+        "P0": 12,
+        "P1": 24,
+        "P2": 24
+      },
+      "semantic_groups": 3,
+      "reference_label_counts": {
+        "D": 6,
+        "A": 6,
+        "C": 6,
+        "B": 6
+      }
+    },
+    "D3/swapped": {
+      "rows": 24,
+      "unique_pixels": 3,
+      "pixels_overlapping_training": 0,
+      "unique_input_by_arm": {
+        "P0": 12,
+        "P1": 24,
+        "P2": 24
+      },
+      "semantic_groups": 3,
+      "reference_label_counts": {
+        "D": 6,
+        "A": 6,
+        "C": 6,
+        "B": 6
+      }
+    }
+  },
+  "old_unique_storyboards": 6
+}

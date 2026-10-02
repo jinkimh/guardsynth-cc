@@ -1,0 +1,102 @@
+{
+  "contract": {
+    "contract_version": "eblc-action-contract-v0.1",
+    "contract_id": "methodology_lifecycle",
+    "horizon": 4,
+    "claim_scope": "CONDITIONAL_ACTION_SELECTION_NOT_VEHICLE_SAFETY",
+    "subject_id": "illustrative_ego",
+    "zone_id": "illustrative_zone",
+    "policy": "CLEAR_REQUIRED_FOR_ENTRY",
+    "source_refs": [
+      "synthetic:illustration"
+    ],
+    "obligations": [
+      {
+        "obligation_id": "ped",
+        "predicate_id": "ped_hazard",
+        "target_entity_id": "illustrative_pedestrian",
+        "rule_ref": "synthetic:illustration",
+        "source_refs": [
+          "synthetic:illustration"
+        ]
+      }
+    ]
+  },
+  "checks": [
+    {
+      "id": "base_trace",
+      "expected": "SAT",
+      "actual": "SAT"
+    },
+    {
+      "id": "wrong_active_0",
+      "expected": "UNSAT",
+      "actual": "UNSAT"
+    },
+    {
+      "id": "enter_0",
+      "expected": "UNSAT",
+      "actual": "UNSAT"
+    },
+    {
+      "id": "defer_0",
+      "expected": "SAT",
+      "actual": "SAT"
+    },
+    {
+      "id": "wrong_active_1",
+      "expected": "UNSAT",
+      "actual": "UNSAT"
+    },
+    {
+      "id": "enter_1",
+      "expected": "UNSAT",
+      "actual": "UNSAT"
+    },
+    {
+      "id": "defer_1",
+      "expected": "SAT",
+      "actual": "SAT"
+    },
+    {
+      "id": "wrong_active_2",
+      "expected": "UNSAT",
+      "actual": "UNSAT"
+    },
+    {
+      "id": "enter_2",
+      "expected": "SAT",
+      "actual": "SAT"
+    },
+    {
+      "id": "defer_2",
+      "expected": "SAT",
+      "actual": "SAT"
+    },
+    {
+      "id": "wrong_active_3",
+      "expected": "UNSAT",
+      "actual": "UNSAT"
+    },
+    {
+      "id": "enter_3",
+      "expected": "UNSAT",
+      "actual": "UNSAT"
+    },
+    {
+      "id": "defer_3",
+      "expected": "SAT",
+      "actual": "SAT"
+    },
+    {
+      "id": "inactive_unknown_is_feasible",
+      "expected": "SAT",
+      "actual": "SAT"
+    },
+    {
+      "id": "inactive_unknown_does_not_permit_entry",
+      "expected": "UNSAT",
+      "actual": "UNSAT"
+    }
+  ]
+}

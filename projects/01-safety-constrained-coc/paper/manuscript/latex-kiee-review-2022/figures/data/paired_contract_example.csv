@@ -1,0 +1,3 @@
+contract,min_gap_m,candidate_a_verdict,selected_candidate,reason
+Permissive contract,5.5,admissible,Candidate A,current gap 7.2 m ≥ minimum gap
+Restrictive contract,9.0,violation,Candidate B,current gap 7.2 m < minimum gap

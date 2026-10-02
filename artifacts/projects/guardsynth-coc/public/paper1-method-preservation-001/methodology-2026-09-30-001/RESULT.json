@@ -1,0 +1,35 @@
+{
+  "project_id": "guardsynth-coc",
+  "status": "DRAFT_RENDERED_AND_EXAMPLES_VERIFIED",
+  "date": "2026-09-30",
+  "scope": "Standalone bilingual methodology draft; not integrated into historical main.tex",
+  "sources": [
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_METHODOLOGY_V01_KO.md",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_METHODOLOGY_V01_EN.md"
+  ],
+  "pdfs": [
+    {"file": "ieee-access-methodology-v01-ko.pdf", "pages": 6},
+    {"file": "ieee-access-methodology-v01-en.pdf", "pages": 7}
+  ],
+  "verification": {
+    "bridge_queries_matching_expected": 100,
+    "manuscript_queries_matching_expected": 12,
+    "printed_smt_results_each_language": ["UNSAT", "SAT"],
+    "source_text_units_found_in_pdf_each_language": 178,
+    "printed_contract_and_cnl_match_executed_examples": true,
+    "all_manuscript_local_links_exist": true,
+    "missing_glyph_warnings": 0,
+    "overfull_hbox_warnings": 0,
+    "visual_review": "All 13 pages inspected; no observed clipping. Korean candidate table continues with repeated header; English SMT example continues across pages.",
+    "details": ["content_checks.json", "evidence_manifest.json", "bridge_verification.json", "manuscript_examples.json", "learning_input_examples.json"]
+  },
+  "file_naming_check": {
+    "exit_code": 1,
+    "pre_existing_violations": 5,
+    "new_task_file_violations": 0,
+    "note": "Existing P003 directory, three historical submission filenames containing (1), and portal_exec.md were not modified."
+  },
+  "new_model_training_updates": 0,
+  "claim_boundary": "Executed examples support manuscript reproducibility, not new learning-performance evidence or scene-grounding correctness.",
+  "next_step": "Author review before full-manuscript integration."
+}

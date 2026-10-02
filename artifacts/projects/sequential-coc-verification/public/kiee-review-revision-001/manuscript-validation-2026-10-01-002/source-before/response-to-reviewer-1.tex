@@ -1,0 +1,295 @@
+\input{response-style}
+
+\begin{document}
+
+\responsefront{1}{연속 요구의 상태 관리와 최초 위반 추적이라는 연구 방향은 의미가 있으나, 기대 판정을 확인한 합성40쌍과 낮은 사람 일치도만으로 자연 오류 성능을 입증하기 어렵다. 독립 검증, 규칙 추출, 검토 신뢰도, 비교기와 재현성 보완이 필요하다.}
+
+\clearpage
+
+\begin{reviewitem}{R1 Major 1. 자연 오류 검증과 주장 범위}
+
+\begin{reviewercomment}
+
+현재 핵심 결과인 prior-requirement checker 40/40, current-event-only checker 20/40은 의미 있는 ablation이지만, 40개 모두 기대 결과가 나타나도록 구성된 합성 사례입니다. 따라서 실제 자연 데이터에서 제안 방법이 얼마나 잘 동작하는지 평가할 수 없기 때문에, 가능하다면 무작위 또는 사전에 정의한 sampling protocol을 사용하여 자연 발생 consistent/inconsistent CoC ground-truth set을 구축하고 TP, FP, TN, FN, sensitivity/recall, specificity, precision, F1-score 및 95\% confidence interval 등을 제시할 필요가 있습니다. 자연 오류 자료 구축이 현실적으로 어렵다면 제목, 초록, 결론의 claim을 ``rule execution/feasibility framework'' 수준으로 명확히 제한해야 합니다.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+지적을 수용하고 심사위원님이 제시한 feasibility 대안을 선택했습니다. 이번 작업에서 자연 오류 정답을 새로 수집하지 않았으므로 자연 sensitivity, specificity, precision/recall/F1과 신뢰구간을 만들지 않았습니다. 제목에 적용 가능성과 근거 추적을 명시하고 초록·서론·결론을 같은 범위로 수정했습니다.
+
+통제 자료는 설계자가 작성한 144개 조합입니다. 기존 모델의 최초 판정 일치는 96/144이고, 실패 48개를 보존했습니다. 실패 분석 후 조건별 UPPAAL의 144/144는 같은 사례에 대한 개발 후 재시험입니다. 독립 자연 오류 성능으로 제시하지 않습니다. 단순 FSM도 144/144이므로 UPPAAL 정확도 우위도 주장하지 않습니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{제목·영문 초록(1쪽); \mloc{sec:intro}; \mloc{sec:first-results}; \mloc{tab:first-results}; \mloc{sec:retest-results}; \mloc{tab:retest}; \mloc{sec:threats}; \mloc{sec:conclusion}; 아래 발췌: 8쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+현재 결과는 명시된 프레임의 시간ㆍ조건 관계를 실행하고 검토 근거를 추적하는 방법 실증이다. 자동 의미 추출, 개발 미사용 독립 시험, 사람 판정 신뢰도, 자연 오류 성능과 물리적 안전은 후속 검증으로 남는다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R1 Major 2. 원문에서 검사 입력으로의 변환}
+
+\begin{reviewercomment}
+
+프레임워크의 핵심은 자연어 CoC에서 action, continuing requirement, end condition, action order, True/False/Unknown evidence를 추출하는 과정인데, 이 변환이 자동인지 수동인지, rule-based parser인지 LLM 기반인지, 동의 표현과 부정문·조건문·복합행동·복수 requirement를 어떻게 처리하는지, end condition이 불명확할 때 Unknown으로 분류하는 기준이 무엇인지 충분히 설명되지 않고 있습니다. 실제 CoC 원문 → structured representation → checker input으로 이어지는 사례를 표 또는 pseudocode 형태로 제시하는 것이 필요합니다.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+기존 자동 경로를 정규식 기반의 제한된 영어 파서로 명시했습니다. 행동 동의어 묶음, 명령 문맥, then/and then 단계 분리, until 해제 조건, once/after 계기, 대상 누락과 순서 모호 처리 규칙을 기술했습니다. 관측된 조건 상태는 자동 확정하지 않으며 부정·복합행동·복수 의무의 범용 의미 추출을 지원한다고 주장하지 않습니다.
+
+작성 경로는 설계자가 텍스트와 프레임을 동시에 작성했음을 분명히 했습니다. 보행자 예시에서 원문 구절·사건 ID·의무 A·조건 A/B·참/거짓/미상·모델 상태·판정을 연결했습니다. 원문만 넣는 자동 경로는 144건 전부 미상이라는 결과도 유지했습니다. 프레임의 참·거짓은 작성 자료의 명시 상태이지 독립 사람 정답이 아닙니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:extraction}; \mloc{tab:worked-example}; \mloc{sec:models}; \mloc{tab:transition}; \mloc{sec:first-results}; 아래 발췌: 4쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+작성 프레임은 설계자가 원문과 동시에 만든다. True/False는 작성 문장이 명시한 조건 상태이며 사람의 독립 센서 정답이 아니다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R1 Major 3. 검토자 일치도와 합의 기록}
+
+\begin{reviewercomment}
+
+텍스트 일관성 Fleiss' kappa=0.027, temporal requirement kappa=0.203, required action sequence kappa=0.291은 평가 기준의 안정성과 재현성을 평가하는 데 적절한지 의문입니다. 검토자의 전문성, 사전 교육 여부, annotation guideline, reviewer별 판정 분포, disagreement 유형, consensus 형성 절차를 상세히 제시하는 것이 필요합니다. 또한, 가능하다면 guideline 수정 후 재평가하거나 독립 adjudicator를 활용하여 평가 기준의 명확성을 보강할 수 있습니다.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+낮은 일치도가 자연 오류 정답의 신뢰도를 제한한다는 지적에 동의합니다. 네 원 CSV를 다시 집계하여 텍스트 κ=0.027301, 시간 요구 κ=0.202892, 행동열 κ=0.291391과 항목별 쌍별 일치율·불일치 장면 수를 제시했습니다. 검토자별 텍스트 판정 분포도 추가했습니다. 텍스트 불일치는 23/27이고 모순 판정 수는 검토자별 10/0/1/1건입니다.
+
+지침과 원 메모에서 확인되는 판단 차이는 기술했으나 원인별 확정 건수는 만들지 않았습니다. 전문성·교육·독립 중재·당시 논의 절차는 충분히 복원되지 않았고 합의 CSV의 사유 메모는 0/27입니다. 새 사람 재평가나 중재를 수행하지 않았습니다. 합의 결과를 객관적 자연 정답으로 사용하지 않으며 신뢰도 개선 요구는 남은 한계로 인정합니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:selection}; \mloc{sec:human-results}; \mloc{tab:agreement}; \mloc{tab:reviewer-distribution}; \mloc{sec:threats}; 아래 발췌: 2쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+합의 CSV에는 27장면 모두 텍스트 모순 없음으로 저장되어 있지만 사유 메모는 0/27이다. 당시 논의 절차와 판단 변경의 원인을 재현 가능한 수준으로 복원하지 못했으며, 이번 작업에서 사람 재평가를 실시하지 않았다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R1 Major 4. 비교 방법의 확장}
+
+\begin{reviewercomment}
+
+현재 비교 대상인 current-event-only checker는 구조상 cross-event error를 검출할 수 없으므로 제안 방법의 필요성을 보여 주는 ablation으로는 적절하지만, 충분한 경쟁 baseline이라고 보기는 어렵습니다. fixed previous-N-event context, simple finite-state-machine, sequence-level rule-based checker, temporal logic/LTL 기반 방법 또는 full sequence를 입력받는 LLM consistency judge 등과의 비교를 고려할 필요가 있습니다.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+현재 사건 검사를 ablation으로 한정하고 이전 1/3/5개 사건 창과 별도 단순 FSM을 추가한 완료 실험을 반영했습니다. 144건의 최초 일치는 현재 사건 72, 이전 창 84/90/90, 기존 전체 이력 96, FSM 144개입니다. 간격별 결과와 최초 위반 위치도 제시했습니다.
+
+창 비교는 같은 기존 검사기에 잘린 이력을 제공한 것이고, FSM은 조건별 프레임을 입력받습니다. 기존 경로의 단일 의무 투영 손실과 미상 누적 정책이 달라 엄밀한 정확도 우위 비교로 쓰지 않았습니다. FSM도 전 사례에 성공했으므로 UPPAAL만이 필요한 방법이라고 하지 않습니다. 범용 LTL 비교나 전체열 LLM judge는 이번 실험에 포함하지 않았습니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:scenario-design}; \mloc{tab:first-results}; \mloc{sec:first-results}; \mloc{sec:discussion}; 아래 발췌: 2, 4쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+단일 의무를 지원하는 경로의 복수 의무 도전 사례도 분모에서 제외하지 않는다. 단순 FSM의 성공은 이 범위의 규칙을 간단한 상태 기계로도 실행할 수 있음을 보여 준다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R1 Major 5. 반응 시간 설정과 탐색 규칙}
+
+\begin{reviewercomment}
+
+반응시간 분석의 W=0.5 s, delta=0.1 m/s, rho=0.7, D=3 s 및 STOP/YIELD에서 v≤0.5 m/s 기준은 외부 안전 기준이나 법규에서 직접 도출된 값이 아닙니다. 특히, 일부 규칙은 초기 후보 사례 검토 이후 추가된 탐색 규칙이므로 exploratory analysis임을 명확히 해야 합니다. threshold 선택의 외부 근거 또는 별도의 sensitivity analysis를 보강하고, 130개 중 58개 사건이 27개 설정에 따라 결과가 달라졌다는 점을 명확히 기술해야 합니다.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+외부 안전 기준에서 도출한 설정이 아님을 수용했습니다. 속도 기반 반응 검사를 탐색적 보조 분석으로 명시하고 W, δ, ρ, D와 이미 정지 규칙의 적용 순서를 설명했습니다. 이미 정지 규칙은 초기 후보를 본 뒤 추가한 사실도 유지했습니다.
+
+기존 27설정 결과를 재분석하면 130건은 항상 검출 72, 설정 의존 57, 항상 미검출 1입니다. 따라서 심사 당시 원고의 58건 전체를 설정 의존이라고 쓴 표현을 정정했습니다. 기본 분모 134=125+4+5와 탐지 대상 130의 차이도 설명했습니다. 이 민감도 결과를 법규 근거나 물리적 안전 기준으로 해석하지 않습니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:provenance}; \mloc{sec:aux-design}; \mloc{sec:trajectory-results}; \mloc{sec:threats}; 아래 발췌: 6쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+탐지 대상 130건을 27설정에서 재집계하면 항상 검출 72, 설정 의존 57, 항상 미검출 1이다. 따라서 기본 설정의 미검출 등을 합친 58건 전체를 ``설정에 따라 바뀜''이라고 서술하지 않는다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R1 Major 6. 재현성과 자료 출처}
+
+\begin{reviewercomment}
+
+CoC 생성 모델/version, prompt 또는 configuration, quality-score threshold, 403→290 선별 기준, Python checker source code, UPPAAL XML, synthetic-case generator, 40 reference-modified pairs, annotation guideline 및 27개 human review raw label 등을 가능한 범위에서 공개할 필요가 있습니다. 특히 논문에서 일부 생성 모델과 자동 표시 도구의 정확한 버전이 남아 있지 않다고 기술한 점은 재현성 측면에서 매우 중요한 한계점입니다.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+복원 사실과 미기록을 분리했습니다. 상류 README의 Qwen/Qwen3.5-35B-A3B 계열은 확인되지만 실행별 checkpoint revision, 원 prompt/config 및 품질 점수 계산·상류 임계값은 복원되지 않았습니다. 403→290은 저장된 quality\_pass 불리언이며 290→134는 방향/복합 행동 제외 절차입니다. 현재 입력 해시가 원 생성 이력을 증명하지 않음을 명시했습니다.
+
+기존 코드와 사례, 새 작성 입력·생성기·조건별 모델, 실제 XML/query/stdout/stderr·환경·해시를 연결했습니다. 원 사람 CSV와 원문은 restricted 분류를 유지합니다. 공개 분류 산출물의 경로를 제공한 것과 외부 공개 완료는 구분하며 이번 작업은 외부 게시를 하지 않았습니다. 완전 재생성 가능하다는 주장은 남기지 않았습니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:provenance}; \mloc{tab:provenance}; \mloc{sec:artifacts}; \mloc{sec:queries}; \mloc{sec:threats}; 아래 발췌: 2쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+이번 보존 파일의 해시는 현재 입력 스냅샷을 식별하며 원 생성 이력을 새로 확정하지 않는다. 파일을 보존했다는 사실과 외부 공개를 완료했다는 사실은 구분한다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R1 Minor 1. 자연 후보 15장면의 선정}
+
+\begin{reviewercomment}
+
+27개 자연 검토 장면 중, 15개 automatically selected candidate scenes의 선정 기준을 명확히 기술해야 합니다. 비무작위 표본이라는 사실뿐 아니라 candidate selection algorithm 또는 조건 자체가 결과에 영향을 줄 수 있습니다.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+후보 선택 알고리즘을 추가했습니다. 첫 문장 stop/yield 계열과 둘째 문장 accelerate/proceed 계열의 이웃쌍 23개를 찾고 15장면에서 가장 이른 창 하나씩을 선택합니다. 비교군은 후보 장면을 제외한 정지/양보 후 비진행 창으로, 사건 수·정지/양보 종류·원 위치 차이와 고정 seed 해시의 동률 처리로 대응시켜 중복 없는 12장면을 선택했습니다.
+
+재분석에서 기존 27개 검토 ID의 대응을 확인했습니다. 이런 선정은 특정 전환을 더 포함하는 비무작위 절차이며 자연 모집단 오류율 추정에 쓸 수 없음을 명시했습니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:selection}; \mloc{sec:human-results}; \mloc{sec:threats}; 아래 발췌: 2쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+23쌍ㆍ15장면에서 장면별 가장 이른 창 하나를 선정했다. 이 방식은 비무작위이며 특정 행동 전환을 더 많이 포함한다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R1 Minor 2. 초록의 검토 분모}
+
+\begin{reviewercomment}
+
+초록의 ``309 adjacent pairs from 90 scenes, including 27 groups'' 표현은 309개 전체가 사람 검토된 것으로 오해될 수 있으므로, 수정이 필요합니다.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+309인접쌍 목록과 사람 검토 27장면을 초록의 별도 절로 분리했습니다. 94장면·403사건 중 문장이 둘 이상인 90장면에서 309인접쌍을 만들었고, 사람은 별도로 선정된 27장면 묶음을 검토했습니다. 309쌍 전체에 사람 정답이 있는 것처럼 읽히는 문장을 제거했습니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{영문 초록(1쪽); \mloc{sec:provenance}; \mloc{sec:selection}; 아래 발췌: 1쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+The natural-data inventory contains 309 adjacent pairs from 90 scenes; four reviewers assessed a selected subset of 27 scene groups, with textual-consistency Fleiss' kappa 0.027301 and no recorded consensus rationale.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\clearpage
+
+\begin{reviewitem}{R1 Minor 3. 결론의 필요성과 효과 표현}
+
+\begin{reviewercomment}
+
+결론의 이전 요구를 기억하는 검사가 필요하고 효과적이라는 표현은 현재 증거 수준보다 다소 넓게 읽힐 수 있으므로, 본 연구에서 정의한 cross-event synthetic error를 탐지하는 데 prior-requirement retention이 필요하였다 정도로 제한하는 것이 더 적절해 보입니다.
+
+\end{reviewercomment}
+
+\begin{authorresponse}
+
+지적을 수용하여 필요성 표현을 작성된 미해제 충돌 사례에 한정했습니다. 최초 기존 모델의 실패, 자동 경로의 미상과 FSM의 성공을 결론에도 포함했고, 조건별 UPPAAL은 동일 사례 재시험이라고 다시 명시했습니다. 모든 CoC에 대한 필요성·효과, 자연 오류 성능, 학습 개선 또는 UPPAAL 정확도 우위로 확대하지 않습니다.
+
+\end{authorresponse}
+
+\begin{manuscriptrevision}{\mloc{sec:conclusion}; 아래 발췌: 8쪽}
+
+본문에 다음 내용을 반영했습니다.
+
+\begin{quote}
+
+작성된 미해제 충돌 사례에서는 이전 의무의 보존이 해당 사건 관계를 판정하는 데 필요했다. 다만 이 관찰을 모든 CoC에 대한 필요성ㆍ효과나 UPPAAL의 정확도 우위로 일반화하지 않는다.
+
+\end{quote}
+
+\end{manuscriptrevision}
+
+\end{reviewitem}
+
+\section*{맺음말}
+
+심사 의견에 따라 의미 변환과 상태·질의 설명, 최초 실패와 재시험, 자료 출처 및 주장 범위를 구체화했습니다. 자연 오류 정확도와 독립 시험, 사람 신뢰도 개선이 미완료라는 한계는 유지했습니다. 이 답변서는 실제 개정 내용과 보존 근거에 대응하며 모든 요구를 독립 성능 검증으로 해결했다고 주장하지 않습니다.
+
+\end{document}

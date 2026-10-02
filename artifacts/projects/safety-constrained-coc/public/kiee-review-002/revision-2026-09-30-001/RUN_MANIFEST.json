@@ -1,0 +1,21 @@
+{
+  "project_id": "safety-constrained-coc",
+  "run_id": "revision-2026-09-30-001",
+  "purpose": "KIEE second-round clarification-only revision and reviewer response",
+  "baseline": "projects/01-safety-constrained-coc/paper/manuscript/latex-kiee-review-2022-revision-v01",
+  "source_directory": "projects/01-safety-constrained-coc/paper/manuscript/latex-kiee-review-2022-revision-v02",
+  "build_command": "make manuscript && make rebuttal",
+  "engine": "LuaLaTeX + BibTeX",
+  "deliverables": {
+    "main": {
+      "pages": 16,
+      "sha256": "35ab01607e078b3025dd85faf8032a26ea67f4c401d9f976690e7d917115edff",
+      "bytes": 801839
+    },
+    "response-to-reviewer-1": {
+      "pages": 4,
+      "sha256": "d96ef9a163b30c9661886cfd7b0cdbe15ce235b0bcd67efc7c7fd7c39d6f89f5",
+      "bytes": 122951
+    }
+  }
+}

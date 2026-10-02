@@ -1,0 +1,33 @@
+{
+  "project_id": "sequential-coc-verification",
+  "status": "COMPLETED",
+  "validation_run": "manuscript-validation-2026-10-01-002",
+  "document_validation": "PASS",
+  "outputs": {
+    "main": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/main.pdf",
+      "pages": 11,
+      "sha256": "dec6622b4718c9f96dc1b9eceb437856a7e7f8919c59e664915611b8ef7d74ae"
+    },
+    "main-clean": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/main-clean.pdf",
+      "pages": 11,
+      "sha256": "3fef0f47767af1e3b9f12bc2d7860f7db4c2699e59bf57b1237e4915f5562c7d"
+    },
+    "response-to-reviewer-1": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/response-to-reviewer-1.pdf",
+      "pages": 10,
+      "sha256": "75a26d25e06a97a7cae8ba640306fea6587f431ac2888df215dfab92ef059269"
+    },
+    "response-to-reviewer-2": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/response-to-reviewer-2.pdf",
+      "pages": 9,
+      "sha256": "5badaf87842849e4d6170caea7bbfb0289f286e6e5d2d9d40dff935392f27e03"
+    },
+    "response-to-reviewer-3": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/response-to-reviewer-3.pdf",
+      "pages": 13,
+      "sha256": "450e21f4e074b5ce5dd475fe81cb3c34945ec485ce38ea3adc6f6a2a0ab96972"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+challenge,examples,wrong,violations
+negative_reject_scope,72,0,0
+unit_conversion,72,15,3
+prohibition_and_reordered_clauses,72,0,0
+explicit_inequality_and_boundary,72,0,0

@@ -1,0 +1,8 @@
+{
+  "status": "COMPLETE",
+  "arm": "CE_ONLY",
+  "seed": 123,
+  "elapsed_seconds": 202.22160479426384,
+  "predictions": 720,
+  "optimizer_updates": 60
+}

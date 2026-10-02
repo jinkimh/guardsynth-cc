@@ -1,0 +1,58 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jonh · 속도 행동 검토</title>
+<style>body{font:17px sans-serif;max-width:1050px;margin:20px auto;padding:16px;line-height:1.5}img{max-width:100%;cursor:zoom-in}button,select,textarea{font:inherit;margin:6px;padding:10px}textarea{width:95%}.notice{background:#eef5ff;padding:16px}label{display:block;margin:12px 0}dialog{max-width:96vw;max-height:95vh;padding:12px}dialog img{max-height:80vh;cursor:default}#message{white-space:pre-wrap;color:#803000}button:disabled{opacity:.4}</style>
+<h1>Jonh · 속도 행동 검토</h1><p class="notice">개발용 행동 검토 · 19장면. 각 행동의 적절성과 영상에서 보이는 근거를 작성해 주세요. 여러 행동이 적절할 수 있고, 확인하기 어려우면 판단 불가를 선택합니다. 저장된 파일을 담당자에게 전달해야 접수됩니다.</p>
+<p id="question"></p><p id="instructions"></p><strong id="progress"></strong>
+<div><button id="previous">이전 장면</button><button id="next">다음 장면</button></div><h2 id="scene"></h2>
+<img id="frame" alt="선택한 과거 프레임"><button id="zoom">이미지 확대</button><p id="time"></p><div id="frames"></div>
+<dialog id="zoom_dialog"><button id="close_zoom">검토로 돌아가기</button><br><img id="zoom_image" alt="확대한 과거 프레임"></dialog>
+<div id="actions"></div><label>영상에서 보이는 판단 근거<textarea id="reason" rows="3"></textarea></label>
+<p id="scene_status" role="status" aria-live="polite"></p>
+<button id="save_scene">이 장면 임시 저장</button><button id="complete_scene">이 장면 완료 · 다음</button>
+<p id="message" role="status" aria-live="polite"></p>
+<button id="save">부분 초안 JSON 저장</button><label>저장한 초안/최종 파일 복원<input id="restore" type="file" accept="application/json"></label>
+<button id="final_save">최종 JSON 저장 (19장면 완료 후)</button>
+<p>브라우저에 자동 저장됩니다. 다른 브라우저·기기로 옮길 때는 JSON 저장/복원을 이용해 주세요. 최종 저장은 서버 접수가 아닙니다.</p>
+<script id="packet" type="application/json">__PACKET__</script>
+<script>
+'use strict';
+const packet=JSON.parse(document.getElementById('packet').textContent);
+const choices=new Set(Object.keys(packet.assessment_choices));
+const actions=Object.keys(packet.actions), el=id=>document.getElementById(id);
+function emptyDraft(){return {status:'DRAFT_NOT_SUBMITTED',packet_sha256:packet.packet_sha256,assignment_id:packet.assignment_id,reviewer_id:packet.reviewer_id,exported_at:null,records:packet.scenes.map(s=>({sample_id:s.sample_id,action_assessments:Object.fromEntries(actions.map(a=>[a,null])),reason:''}))};}
+function validateDraft(d){
+ if(!d||!['DRAFT_NOT_SUBMITTED','COMPLETED_NOT_RECEIVED'].includes(d.status)||d.packet_sha256!==packet.packet_sha256||d.assignment_id!==packet.assignment_id||d.reviewer_id!==packet.reviewer_id||!Array.isArray(d.records)||d.records.length!==packet.scenes.length)throw Error('배정·검토자·패킷이 다릅니다.');
+ d.records.forEach((r,i)=>{if(r.sample_id!==packet.scenes[i].sample_id||typeof r.reason!=='string'||!r.action_assessments||Object.keys(r.action_assessments).sort().join()!==actions.slice().sort().join()||Object.values(r.action_assessments).some(v=>v!==null&&!choices.has(v)))throw Error('장면 또는 응답 형식이 다릅니다.');});
+ // Restore only response fields; imported metadata cannot certify a submission or inject fields.
+ const clean=emptyDraft();clean.records=d.records.map(r=>({sample_id:r.sample_id,action_assessments:Object.fromEntries(actions.map(a=>[a,r.action_assessments[a]])),reason:r.reason}));return clean;
+}
+function missing(d){return d.records.flatMap((r,i)=>{const n=actions.filter(a=>!choices.has(r.action_assessments[a])).length;return n||!r.reason.trim()?[{index:i,text:`장면 ${i+1}: ${n?`행동 ${n}개 미응답`:''}${n&&!r.reason.trim()?', ':''}${!r.reason.trim()?'판단 근거 필요':''}`}]:[];});}
+function progress(){const pending=missing(draft);el('progress').textContent=`작성 완료 ${draft.records.length-pending.length}/${draft.records.length}`;el('scene_status').textContent=`현재 장면 ${index+1}: ${pending.some(p=>p.index===index)?'작성 중 — 네 행동 판단과 근거를 입력해 주세요.':'작성 완료 — 다시 수정할 수 있습니다.'}`;}
+let draft=emptyDraft(),index=0;const storageKey='speed-action-assigned-'+packet.assignment_id+'-'+packet.packet_sha256;
+function persist(){let saved=false;try{localStorage.setItem(storageKey,JSON.stringify(draft));el('message').textContent='이 브라우저에 초안 저장됨';saved=true;}catch(e){el('message').textContent='브라우저 저장 불가: 부분 초안 JSON을 저장해 주세요.';}progress();return saved;}
+function showFrame(i){const s=packet.scenes[index],f=s.frames[i];el('frame').src=f.data_url;el('time').textContent=`프레임 ${i+1}/${s.frames.length} · 판단 시점 대비 ${((f.timestamp_us-s.event_timestamp_us)/1000000).toFixed(3)}초`;}
+function render(){const s=packet.scenes[index],r=draft.records[index];el('scene').textContent=`장면 ${index+1}/${packet.scenes.length} · ${s.sample_id}`;
+ el('frames').replaceChildren();s.frames.forEach((f,i)=>{const b=document.createElement('button');b.textContent=String(i+1);b.onclick=()=>showFrame(i);el('frames').append(b);});showFrame(s.frames.length-1);
+ el('actions').replaceChildren();Object.entries(packet.actions).forEach(([a,text])=>{const label=document.createElement('label');label.textContent=text;const select=document.createElement('select');select.dataset.action=a;select.setAttribute('aria-label',text);select.add(new Option('미응답',''));Object.entries(packet.assessment_choices).forEach(([v,t])=>select.add(new Option(t,v)));select.value=r.action_assessments[a]||'';select.onchange=()=>{r.action_assessments[a]=select.value||null;persist();};label.append(select);el('actions').append(label);});
+ el('reason').value=r.reason;el('reason').oninput=()=>{r.reason=el('reason').value;persist();};el('previous').disabled=index===0;el('next').disabled=index===packet.scenes.length-1;el('complete_scene').textContent=index===packet.scenes.length-1?'이 장면 완료':'이 장면 완료 · 다음';progress();}
+el('question').textContent=packet.question_ko;el('instructions').textContent=packet.instructions_ko;
+try{const saved=localStorage.getItem(storageKey);if(saved)draft=validateDraft(JSON.parse(saved));}catch(e){el('message').textContent='이전 초안을 읽지 못했습니다. JSON 파일로 복원해 주세요.';}
+function zoom(){el('zoom_image').src=el('frame').src;el('zoom_dialog').showModal();}
+el('zoom').onclick=zoom;el('frame').onclick=zoom;el('close_zoom').onclick=()=>el('zoom_dialog').close();
+el('previous').onclick=()=>{index--;render();};el('next').onclick=()=>{index++;render();};
+el('save_scene').onclick=()=>{if(persist())el('message').textContent=`장면 ${index+1} 임시 저장 완료. 이 브라우저에 보관되며 서버 제출은 아닙니다.`;};
+el('complete_scene').onclick=()=>{
+ const pending=missing(draft).find(p=>p.index===index);
+ if(!persist())return;
+ if(pending){el('message').textContent='아직 완료할 수 없습니다.\n'+pending.text;return;}
+ const completedIndex=index+1;
+ if(index<packet.scenes.length-1){index++;render();}
+ const remaining=missing(draft).length;
+ el('message').textContent=`장면 ${completedIndex} 작성·브라우저 저장 완료. `+(remaining?`전체 ${draft.records.length-remaining}/${draft.records.length} 완료. 서버 제출은 아닙니다.`:'모든 장면 작성 완료. 최종 JSON 저장 후 담당자에게 전달해 주세요.');
+};
+function download(value,name){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+el('save').onclick=()=>download(draft,'jonh_speed_action_draft.json');
+el('restore').onchange=async e=>{try{draft=validateDraft(JSON.parse(await e.target.files[0].text()));persist();render();el('message').textContent='JSON 복원 완료';}catch(error){el('message').textContent='복원 거부: '+error.message;}finally{e.target.value='';}};
+el('final_save').onclick=()=>{const pending=missing(draft);if(pending.length){index=pending[0].index;render();el('message').textContent='아직 저장할 수 없습니다.\n'+pending.map(p=>p.text).join('\n');return;}
+ download({...draft,status:'COMPLETED_NOT_RECEIVED',exported_at:new Date().toISOString()},'jonh_speed_action_submission.json');el('message').textContent='최종 JSON을 저장했습니다. 담당자에게 파일을 전달해 주세요. 서버에는 아직 접수되지 않았습니다.';};
+render();
+</script></html>

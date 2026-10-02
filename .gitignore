@@ -3,9 +3,25 @@
 /.agents/
 /.codex/
 /.ruff_cache/
+/portal_exec.md
+/.worktrees/*
+!/.worktrees/README.md
+!/.worktrees/registry.json
 
-# Manuscripts and submission materials
+# Legacy manuscript root and generated paper build state
 /papers/
+projects/**/paper/**/.texlive-cache/
+projects/**/paper/**/.texlive-local/
+projects/**/paper/**/*.aux
+projects/**/paper/**/*.log
+projects/**/paper/**/*.out
+projects/**/paper/**/*.blg
+projects/**/paper/**/*.bbl
+projects/**/paper/**/*.fls
+projects/**/paper/**/*.fdb_latexmk
+projects/**/paper/**/*.synctex.gz
+artifacts/**/.texlive-cache/
+artifacts/**/texlive-cache/
 
 # Restricted data and local/external runtime trees
 /data/restricted/
@@ -15,6 +31,8 @@
 # Model-specific experiments
 /experiments/alpamayo/
 /experiments/vlm_guard_learning/
+/projects/01-safety-constrained-coc/experiments/alpamayo/
+/projects/01-safety-constrained-coc/experiments/vlm_guard_learning/
 
 # Model weights and checkpoints created under experiments
 /experiments/**/checkpoints/
@@ -48,6 +66,10 @@
 .venv*/
 artifacts/results/restricted/*
 !artifacts/results/restricted/.gitkeep
+/artifacts/projects/*/restricted/*
+!/artifacts/projects/*/restricted/.gitkeep
+/artifacts/platforms/*/restricted/*
+!/artifacts/platforms/*/restricted/.gitkeep
 runtime/alpamayo/ar1_venv/
 *.token
 __pycache__/

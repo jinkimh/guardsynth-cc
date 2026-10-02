@@ -1,0 +1,47 @@
+{
+  "project_id": "guardsynth-coc",
+  "status": "VERIFIED_OUTLINE_FOR_AUTHOR_REVIEW",
+  "scope": "Formal specification and verification, CNL, CoC augmentation, VLM training/evaluation; excludes testing functionality and injected-fault experiments.",
+  "documents": [
+    {
+      "language": "ko",
+      "pages": 7,
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_KO.md",
+      "source_sha256": "c6d0545d2bba3beab3e5bcd891869b3f697518a28cb86bd3055e1e5106a29408",
+      "pdf": "ieee-access-manuscript-outline-v01-ko.pdf",
+      "pdf_sha256": "af6ea91cd1d17a24cfb02e8cef790c2f90ac4800371612e09aedcab699c22a85",
+      "text_units_checked": 140,
+      "missing_units": 0,
+      "manuscript_sections": 8,
+      "outline_bookmarks": 9,
+      "links_checked": 7,
+      "overflow_or_missing_glyph_warnings": 0
+    },
+    {
+      "language": "en",
+      "pages": 8,
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_EN.md",
+      "source_sha256": "99967c21c0cd8bde9c25de29b2ff81953e2c1416354687992afdb89c4c80ecf1",
+      "pdf": "ieee-access-manuscript-outline-v01-en.pdf",
+      "pdf_sha256": "202e3bd0e901000074aa9d888abb8532d70fdef91dd8e22118573ba705873063",
+      "text_units_checked": 140,
+      "missing_units": 0,
+      "manuscript_sections": 8,
+      "outline_bookmarks": 9,
+      "links_checked": 7,
+      "overflow_or_missing_glyph_warnings": 0
+    }
+  ],
+  "visual_review": {
+    "ko_physical_pages": [
+      3,
+      5
+    ],
+    "en_physical_pages": [
+      4,
+      6
+    ]
+  },
+  "submission_manuscript_complete": false,
+  "headline_metric_cells_checked_against_csv": 18
+}

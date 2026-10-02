@@ -1,0 +1,8 @@
+{
+  "status": "COMPLETE",
+  "arm": "PRE_ADAPTER",
+  "seed": 42,
+  "elapsed_seconds": 73.85153868794441,
+  "predictions": 720,
+  "optimizer_updates": 0
+}

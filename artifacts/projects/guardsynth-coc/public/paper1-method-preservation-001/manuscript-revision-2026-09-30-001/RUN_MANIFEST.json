@@ -1,0 +1,77 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "manuscript-revision-2026-09-30-001",
+  "documents": [
+    {
+      "language": "en",
+      "pdf": "ieee-access-manuscript-en.pdf",
+      "tex": "ieee-access-manuscript-en.tex",
+      "references": [
+        "https://arxiv.org/abs/2511.00088",
+        "https://arxiv.org/abs/2312.14150",
+        "https://arxiv.org/abs/2402.12289",
+        "prior-manuscript",
+        "https://ojs.aaai.org/index.php/AAAI/article/view/37602",
+        "https://arxiv.org/abs/2007.00330",
+        "https://ojs.aaai.org/index.php/AAAI/article/view/41168",
+        "https://aclanthology.org/2023.emnlp-main.985/",
+        "https://arxiv.org/abs/2303.04864",
+        "https://attempto.ifi.uzh.ch/site/pubs/papers/FLAIRS0601FuchsN.pdf",
+        "https://theory.stanford.edu/~barrett/pubs/BT18.pdf",
+        "https://doi.org/10.1007/978-3-540-78800-3_24",
+        "https://aclanthology.org/J14-1005/",
+        "https://arxiv.org/abs/2106.09685",
+        "https://openai.com/codex/"
+      ]
+    },
+    {
+      "language": "ko",
+      "pdf": "ieee-access-manuscript-ko.pdf",
+      "tex": "ieee-access-manuscript-ko.tex",
+      "references": [
+        "https://arxiv.org/abs/2511.00088",
+        "https://arxiv.org/abs/2312.14150",
+        "https://arxiv.org/abs/2402.12289",
+        "prior-manuscript",
+        "https://ojs.aaai.org/index.php/AAAI/article/view/37602",
+        "https://arxiv.org/abs/2007.00330",
+        "https://ojs.aaai.org/index.php/AAAI/article/view/41168",
+        "https://aclanthology.org/2023.emnlp-main.985/",
+        "https://arxiv.org/abs/2303.04864",
+        "https://attempto.ifi.uzh.ch/site/pubs/papers/FLAIRS0601FuchsN.pdf",
+        "https://theory.stanford.edu/~barrett/pubs/BT18.pdf",
+        "https://doi.org/10.1007/978-3-540-78800-3_24",
+        "https://aclanthology.org/J14-1005/",
+        "https://arxiv.org/abs/2106.09685",
+        "https://openai.com/codex/"
+      ]
+    }
+  ],
+  "source_sha256": {
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_KO.md": "2f95d59518acd92fa5a4979beab032989a6e5ee0aad739e1301d13e1aa41c833",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_EN.md": "eb25fbad3fb2f1c09ec4f487b6790ac478751411d2d75c20cc91b175121a7f52",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_TITLE_ABSTRACT_V01_KO.md": "dd85d8d52ef56131920646d34873c690e7a886c4a3e4efa8c5f15d58b229c61e",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_TITLE_ABSTRACT_V01_EN.md": "841efb81778591114ea89791ba214de879f8095201cb9e5190f4ed40f540fc0e",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_INTRODUCTION_V01_KO.md": "a1c13d99eb4f3989e54254d9e9ec266a088f30f77257df6b05145483a69c140e",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_INTRODUCTION_V01_EN.md": "b5c5ba0ec31e9cf889be9eed9106f050b10b7fc6c77b499a0155741b7a0725a0",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_RELATED_WORK_V01_KO.md": "d2d5c9f81db4983a1ddbd35beae7dd4f90e77bca8f5772dc24f5476bb411708c",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_RELATED_WORK_V01_EN.md": "b80050974683ac411526377a82de210aa3c4ac8a53a833e5fd41fa6de9c6c7f4",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_BACKGROUND_V01_KO.md": "ed6899beaa9cecc1868777c679ae8785e399af9716283ba6600d146b2a9d61c1",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_BACKGROUND_V01_EN.md": "e816828d67ab747fe70e8008d85d14f6e59c894d86d8b60f0c7fe98cf3fb5bf5",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_METHODOLOGY_V01_KO.md": "2f8cf335c278cc4a9c4ed9aaf671b52f40d22777268e904532890b2a940e84ea",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_METHODOLOGY_V01_EN.md": "f76c03d4a3023f3ea47f56bf22e55e468a80eedadaf767236d2be61eaa0a7759",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_EXPERIMENTS_V01_EN.md": "76fb04e2921f07d72d803451860bc31c015c608858024d28d4c1ecf37c158769",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_EXPERIMENTS_SUPPLEMENT_V01_KO.md": "2cfbc279bd3a7e54a8d5a2236976ab5c347787f6cb170f0f366520491b4db281",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_EXPERIMENTS_V01_KO.md": "f7f90ed01c51e2dac56edad1ec6bbb20ba8581d53ff89a875a96e3089792d59c",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_DISCUSSION_V01_KO.md": "771b32355128939adf0048c0965f4203f868c09464c33ad1cc7e048d54c6df7b",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_DISCUSSION_V01_EN.md": "7f163937b6e660920a6b0fa4b5be20964b4195fe969a732db827bb4e6d23f6e2",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_CONCLUSION_V01_EN.md": "a248aaaea293b535b49a305e992197062391d95874bf5b5455045a64387e451b",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_CONCLUSION_V01_KO.md": "9bec72cef3b50ec792661ef8c181e2fb1361836faeaf899eed029cb35e08a1e7",
+    "projects/04-guardsynth-coc/paper/IEEE_ACCESS_EXPERIMENTS_SUPPLEMENT_V01_EN.md": "520fef5483bf9f2c63e14d3517b9612e9ee5d4b04bf59692f8b027add741cf52"
+  },
+  "purpose": "Integrated manuscript revision; no new experiments",
+  "prior_manuscript": "projects/01-safety-constrained-coc/paper/manuscript/latex-kiee-review-2022-revision-v01",
+  "template_url": "https://ieeeaccess.ieee.org/wp-content/uploads/2026/05/ACCESS_latex_template_20260513-1-1.zip",
+  "template_sha256": "60c7efc9db8ac9e8bdb31c550ad4e03cb6f258a878ececc0bc690b6203e45a67",
+  "experiment_results_modified": false
+}

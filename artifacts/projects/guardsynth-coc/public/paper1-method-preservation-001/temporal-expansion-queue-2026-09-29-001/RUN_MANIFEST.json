@@ -1,0 +1,16 @@
+{
+  "project_id": "guardsynth-coc",
+  "pid": 967281,
+  "started_at_utc": "2026-09-29T18:46:35.292594+00:00",
+  "candidate_gpus": [
+    2,
+    4
+  ],
+  "input_hashes": {
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/run_temporal_expansion_queue.py": "16499a465a5f41564c6935f7d21bde42fcb87e97b5ba8d072a263350fc98af7b",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-protocol-2026-09-29-001/RUN_MANIFEST.json": "4de5975cc5d27e4dba3c66170cd688a639d10106961a72c9ea7fd08d0ba3f6b1"
+  },
+  "output_hashes": {
+    "RESULT.json": "d87572b3510b92cb0de19c62170b494b7897d3efc0bf973ff7375631cffd284d"
+  }
+}

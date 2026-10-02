@@ -1,0 +1,11 @@
+\begin{tikzpicture}[
+ loc/.style={draw=revisionblue,circle,minimum size=16mm,align=center,text=revisionblue,font=\footnotesize},
+ flow/.style={-{Latex[length=1.8mm]},draw=revisionblue,thick}]
+\node[loc] (run) at (0,0) {Run\\C};
+\node[loc] (done) at (4.2,0) {Done};
+\draw[flow] (-1.25,0)--(run.west);
+\draw[flow] (run) edge[loop above,looseness=7] node[above,align=center,font=\scriptsize,text=revisionblue] {idx < N\\step(), idx++} (run);
+\draw[flow] (run)--node[above,font=\scriptsize,text=revisionblue] {idx == N}(done);
+\node[below=4mm of run,align=center,font=\scriptsize,text=revisionblue] {committed / 초기 idx=0};
+\node[below=4mm of done,align=center,font=\scriptsize,text=revisionblue] {모든 사건 처리 완료};
+\end{tikzpicture}

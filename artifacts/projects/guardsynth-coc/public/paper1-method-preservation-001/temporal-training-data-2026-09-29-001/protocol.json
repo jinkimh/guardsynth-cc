@@ -1,0 +1,56 @@
+{
+  "version": "temporal-training-expansion-v0.1",
+  "project_id": "guardsynth-coc",
+  "split_clear_tenths": {
+    "train": [
+      60,
+      100
+    ],
+    "validation": [
+      100,
+      110
+    ],
+    "test": [
+      110,
+      120
+    ]
+  },
+  "durations_ms": [
+    500,
+    1500
+  ],
+  "candidate_offsets_ms": [
+    [
+      -500,
+      500,
+      1500
+    ],
+    [
+      400,
+      600,
+      1600
+    ],
+    [
+      500,
+      1400,
+      1500
+    ]
+  ],
+  "label_rotations": 4,
+  "arms": [
+    "P0",
+    "P1",
+    "P2"
+  ],
+  "source": "DETERMINISTIC_SUPPLIED_SYNTHETIC_WORLD",
+  "evaluation_use": "FRESH_HELDOUT_FOR_NEW_TRAINING_NOT_PRIOR_CONFIRMATION",
+  "training_updates": 0,
+  "prior_exposed_evaluation_used_for_training": false,
+  "assumption": "SINGLE_CLEAR_TRANSITION_NO_REOCCUPATION",
+  "limitations": [
+    "Numeric/template diversity, not new physical environments.",
+    "P0 lacks duration input; paired contracts can have conflicting P0 targets.",
+    "Progress and candidate times may permit text shortcuts.",
+    "Reference and EBLC share supplied world assumptions, not implementation."
+  ]
+}

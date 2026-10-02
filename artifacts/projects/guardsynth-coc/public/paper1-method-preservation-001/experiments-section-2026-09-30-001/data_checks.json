@@ -1,0 +1,14 @@
+{
+  "predictions_reaggregated": 23760,
+  "csv_rows_checked": 273,
+  "all_seed_mean_sd_values_match": true,
+  "pair_group_size": 2,
+  "quality_cases": 192,
+  "quality_detected_errors": 144,
+  "quality_shared_errors_missed": 24,
+  "new_model_calls": 0,
+  "selection_record_ids": [
+    "test-11001-1500",
+    "test-11411-1500"
+  ]
+}

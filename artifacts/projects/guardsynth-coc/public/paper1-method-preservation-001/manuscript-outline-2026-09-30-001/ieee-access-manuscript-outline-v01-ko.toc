@@ -1,0 +1,9 @@
+\contentsline {section}{1 논문의 중심과 제안 제목}{2}{section*.4}%
+\contentsline {section}{2 논리 흐름과 기여}{2}{section*.6}%
+\contentsline {section}{3 제안하는 본문 8개 장}{3}{section*.8}%
+\contentsline {section}{4 초록과 핵심 결과의 배치}{4}{section*.18}%
+\contentsline {section}{5 본문 그림과 표의 최소 구성}{5}{section*.20}%
+\contentsline {section}{6 본문 밖으로 옮길 내용}{5}{section*.22}%
+\contentsline {section}{7 작성 순서와 완료 기준}{5}{section*.24}%
+\contentsline {section}{8 집필 전 확인할 사항}{6}{section*.26}%
+\contentsline {section}{9 집필 근거}{6}{section*.28}%

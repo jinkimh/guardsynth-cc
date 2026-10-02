@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>검토 작업공간 · GuardSynth-CC</title>
+  <link rel="stylesheet" href="portal.css">
+</head>
+<body data-page="review-round">
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="index.html"><span class="brand-mark">GS</span>Research Operations</a>
+      <div class="nav-links">
+        <a href="reviews.html">검토 라운드</a>
+        <a href="review_sample.html">샘플</a>
+        <a href="review_adjudication.html">판정</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main" class="shell">
+    <section class="section section-first">
+      <p class="eyebrow">Authenticated workspace</p>
+      <h1>내 검토 라운드</h1>
+      <div id="round-message" aria-live="polite"></div>
+    </section>
+    <section id="round-list" class="grid two section"></section>
+    <section id="lead-operations" class="section" hidden>
+      <div class="section-head">
+        <div><p class="eyebrow">Research lead only</p><h2>검토 회차 운영</h2></div>
+        <p>canonical 연구 문서는 수정하지 않습니다.</p>
+      </div>
+      <div id="lead-message" aria-live="polite"></div>
+      <div class="grid two">
+        <form id="round-create-form" class="card operation-form">
+          <h3>새 회차 생성</h3>
+          <label>회차 ID<input id="new-round-id" required pattern="[a-z0-9]+(?:-[a-z0-9]+)*"></label>
+          <label>검토 유형<select id="new-round-type">
+            <option>M16_SOURCE_REVIEW</option><option>M16_EXPERT_PILOT</option>
+            <option>IMAGE_ONLY_SCENE_REVIEW</option><option>ASSOCIATION_LIFECYCLE_REVIEW</option>
+            <option>SPECIFICATION_INTERFACE_REVIEW</option><option>EBLC_LANGUAGE_EVALUATION</option>
+            <option>PAPER_INTERNAL_CLAIM_REVIEW</option>
+          </select></label>
+          <label>목적<textarea id="new-round-purpose" required maxlength="2000"></textarea></label>
+          <button class="button" type="submit">회차 생성</button>
+        </form>
+        <form id="round-membership-form" class="card operation-form">
+          <h3>회차별 권한</h3>
+          <label>회차 ID<input class="lead-round-id" required></label>
+          <label>사용자 ID<input id="member-actor-id" required></label>
+          <label>권한<select id="member-capability"><option>REVIEW</option><option>ADJUDICATE</option><option>LEAD</option></select></label>
+          <button class="button" type="submit">권한 추가</button>
+        </form>
+        <form id="manifest-form" class="card operation-form">
+          <h3>Sample manifest freeze</h3>
+          <label>회차 ID<input class="lead-round-id" required></label>
+          <label>Manifest JSON<textarea id="manifest-json" required spellcheck="false"></textarea></label>
+          <button class="button" type="submit">검증 후 freeze</button>
+        </form>
+        <form id="assignment-form" class="card operation-form">
+          <h3>독립 배정 생성</h3>
+          <label>회차 ID<input class="lead-round-id" required></label>
+          <label>샘플당 검토자 수<input id="reviewers-per-sample" type="number" min="2" value="2" required></label>
+          <label>비공개 seed<input id="assignment-seed" type="password" minlength="32" maxlength="256" required></label>
+          <button class="button" type="submit">배정 생성</button>
+        </form>
+        <form id="guideline-form" class="card operation-form">
+          <h3>가이드라인 revision</h3>
+          <label>회차 ID<input class="lead-round-id" required></label>
+          <label>내용 SHA-256<input id="guideline-hash" pattern="[a-f0-9]{64}" required></label>
+          <button class="button" type="submit">revision 추가</button>
+        </form>
+        <div class="card operation-form">
+          <h3>Gate와 종료</h3>
+          <label>회차 ID<input id="gate-round-id" class="lead-round-id" required></label>
+          <label>Public export run ID<input id="public-export-run-id" placeholder="review-export-run-001"></label>
+          <label>주장 제한 (한 줄에 하나)<textarea id="public-export-limitations">비식별 검토 집계이며 원 판정이나 실제 차량 안전성 증거가 아님</textarea></label>
+          <div class="operation-actions">
+            <button id="calibration-start" class="button ghost" type="button">Calibration gate 계산</button>
+            <button id="calibration-complete" class="button ghost" type="button">Calibration 완료 증거</button>
+            <button id="empirical-start" class="button ghost" type="button">Empirical 시작</button>
+            <button id="round-metrics" class="button ghost" type="button">Metric 조회</button>
+            <button id="round-public-export" class="button ghost" type="button">Public 집계 export</button>
+            <button id="round-finalize" class="button" type="button">완료 종료</button>
+            <button id="round-shortfall" class="button danger-button" type="button">Terminal shortfall 종료</button>
+          </div>
+          <pre id="lead-output" class="operation-output" aria-live="polite"></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="portal-data.js"></script><script src="portal.js"></script>
+</body>
+</html>

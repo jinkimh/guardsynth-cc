@@ -1,0 +1,10 @@
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+COMPLETE P0 seed=42: rows=240, unique model calls=60
+COMPLETE P1 seed=42: rows=240, unique model calls=216
+COMPLETE P2 seed=42: rows=240, unique model calls=216
+COMPLETE P0 seed=17: rows=240, unique model calls=60
+COMPLETE P1 seed=17: rows=240, unique model calls=216
+COMPLETE P2 seed=17: rows=240, unique model calls=216
+COMPLETE P0 seed=123: rows=240, unique model calls=60
+COMPLETE P1 seed=123: rows=240, unique model calls=216
+COMPLETE P2 seed=123: rows=240, unique model calls=216

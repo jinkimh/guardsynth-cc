@@ -1,0 +1,369 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=20mm,headheight=16pt]{geometry}
+\usepackage{fontspec,kotex,amsmath,booktabs,longtable,array,xcolor,hyperref,fancyhdr,graphicx}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\setmainhangulfont{Noto Sans CJK KR}
+\setmonohangulfont{Noto Sans CJK KR}
+\definecolor{navy}{HTML}{173E59}
+\definecolor{codebg}{HTML}{F3F6F8}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,pdftitle={GuardSynth Experimental Evaluation}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\emergencystretch}{4em}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small GuardSynth}
+\fancyhead[R]{\small Experimental Evaluation}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\clubpenalty=10000\widowpenalty=10000
+\raggedbottom
+\begin{document}
+
+\section*{실험 부가자료}
+
+본 부가자료는 본문에서 분리한 시간 과제 상세 결과와 새 정적·기동 실험의 전체 조건을 보존한다. 아래 S1–S7은 기존 시간 과제 결과이며, S8 이후는 추가 실험이다. 좋은 결과와 낮은 결과 모두 동일한 기준으로 보고한다.\par
+
+\section*{S1. 평가 목적과 실험 설정}
+
+본 실험은 두 질문을 구분한다. 첫째, EBLC 명세와 생성 CNL의 대응 관계를 검사하여 지원된 오류를 식별할 수 있는가? 둘째, 이러한 CNL을 CoC와 함께 제공하면 CoC만 제공할 때보다 제약을 준수하면서 적절한 행동을 선택하는가? 첫 질문은 명세 처리 경로의 검사 가능성을, 둘째는 명시적 제약을 활용한 행동 선택을 평가한다. 검증 알고리즘 자체의 인과적 학습 효과와는 구분한다.\par
+
+주 비교 조건은 원 CoC만 제공하는 P0, 원 CoC에 기존 자연어 제약을 추가하는 P1, 원 CoC에 EBLC에서 생성한 CNL을 추가하는 P2이다. P1과 P2는 모두 우리의 제약 강화 접근이며, 각각을 P0와 비교한다. P1–P2 차이는 정형화 경로에서도 높은 행동 선택 성능이 관찰되는지 설명하는 보조 비교로 해석한다. 세 조건은 같은 영상, 행동 후보, 참조 정답 및 데이터 분할을 사용한다.\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\textbf{표 E1. 주 비교 조건의 정의}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2300\linewidth-3.680pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3800\linewidth-6.080pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3900\linewidth-6.240pt\relax}@{}}
+\toprule
+\textbf{조건과 이름} & \textbf{원 CoC에 추가되는 내용} & \textbf{비교 목적} \\
+\midrule
+P0 — CoC 단독 & 추가 제약 없음. 상황과 행동 이유를 담은 원 CoC만 제공 & 명시적 행동 제약을 제공하지 않는 기준 조건 \\
+P1 — CoC + 기존 자연어 제약 & 합성 환경 규칙을 기존 자연어 문구로 직접 제공. EBLC\ensuremath{\rightarrow}CNL 변환을 거치지 않음 & 기존 제약 강화 접근과 P0의 차이 \\
+P2 — CoC + EBLC 생성 CNL & 같은 규칙을 EBLC로 명세·검증한 뒤 생성한 자연어 제약을 제공 & 정형화 경로를 거친 제약 강화 접근과 P0의 차이 \\
+\bottomrule\end{tabular}\end{minipage}\par\medskip
+\end{minipage}\par\medskip
+
+세 조건 모두 동일한 시간순 이미지와 행동 후보를 받는다. 표의 차이는 CoC에 결합하는 제약 문장이며, P1·P2 모두 학습과 평가에서 이를 제공한다. P2의 모델 입력은 EBLC 코드나 SAT/UNSAT 판정이 아니라 생성된 CNL이다. 예를 들어 P0의 “횡단하는 보행자에게 양보한 뒤 교차로를 통과한다”에, P1은 “영역이 비워진 뒤 최소 0.5초 정지한 후 진입한다”는 기존 문구를, P2는 “영역이 최소 0.5초 동안 비어 있었을 때만 진입한다”는 CNL을 추가한다. 이는 핵심 시간 조건의 설명용 발췌이며 P1·P2의 전체 문장에는 점유 중 진입 금지도 포함된다. 따라서 P1은 외부 경쟁 기법이 아니라 기존 자연어 제약 방식이고, P2는 본 논문의 EBLC 생성 경로이다.\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\textbf{표 E2. 데이터와 학습 설정}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2300\linewidth-3.680pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3800\linewidth-6.080pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3900\linewidth-6.240pt\relax}@{}}
+\toprule
+\textbf{구분} & \textbf{설정} & \textbf{비교와 해석의 범위} \\
+\midrule
+학습 분할 & 합성 이미지 40개, 조건별 960행 & 영역 해소 시점 6.0–9.9초 \\
+검증 / 시험 분할 & 각각 이미지 10개, 조건별 240행 & 각각 10.0–10.9초 / 11.0–11.9초 \\
+파생 레코드 & 이미지당 후보 패턴 3 × 라벨 회전 4 × 계약 2 & 같은 이미지의 24행은 독립 장면이 아님 \\
+규칙 & 학습 대기 0.5 / 1.5초 & 미학습 시간 평가는 0.8 / 1.8초 \\
+모델 & Qwen3-VL-2B-Instruct & 같은 pretrained base에서 조건별 초기화 \\
+LoRA & rank 8, alpha 16, dropout 0.05 & 언어 attention의 q/k/v/o projection \\
+최적화 & AdamW, 학습률 0.0002, weight decay 0.01 & bfloat16, SDPA; 정답 토큰에만 loss \\
+학습 예산 & batch 2 × 누적 8, 3 epochs, 180 updates & 조건·시드당 동일 예제 수와 updates \\
+반복과 모델 선택 & 시드 42, 17, 123; 최종 체크포인트 & 검증·시험 성능에 따른 체크포인트 선택 없음 \\
+\bottomrule\end{tabular}\end{minipage}\par\medskip
+\end{minipage}\par\medskip
+
+분할 간 이미지는 겹치지 않는다. 표현 변경과 미학습 시간 평가는 시험 이미지를 재사용하며, 미학습 시간 조건에서는 후보 진입 시각도 0.3초 이동한다. 따라서 조건 변화를 새로운 독립 도로 장면의 추가로 세지 않는다. 주 과제는 단일 해소 이후 재점유가 없는 합성 환경이며 대기기간은 공급된 실험 규칙이다. 후보의 진행 점수는 추상적인 효용값으로 실제 이동 거리나 차량 제어 성능을 뜻하지 않는다.\par
+
+각 입력은 시간순 영상 표현, CoC, 행동 후보를 포함하며 P1과 P2에는 학습과 평가 모두 제약 문장을 제공한다. 독립 환경 규칙은 허용 후보 중 최대 진행 후보를 참조 정답으로 계산한다. 모델이 선택한 행동은 EBLC 판정과도 대조하되, 솔버 결과나 정답 라벨을 입력 힌트로 제공하지 않는다. P0에는 대기기간이 없으므로 같은 입력에 서로 다른 계약의 정답이 연결될 수 있다. 이 정보 비대칭은 명시적 제약 제공 실험의 일부이며, 동일 정보 조건에서 검증의 효과만 분리한 설계는 아니다. 입력 길이가 달라 토큰 수와 FLOPs까지 같지는 않다.\par
+
+표현과 연결의 역할을 살펴보기 위해 별도 자연어 표현 NATURAL\_GUARD, 학습 시 제약과 사례의 대응을 섞은 SHUFFLED\_GUARD, 논리식 형태의 텍스트 LOGIC\_GUARD를 추가했다. LOGIC\_GUARD는 모델에 입력하는 표현이며 내부 솔버가 아니다. 총 여섯 조건과 세 시드에서 18회 학습, 3,240 updates를 수행했다. 네 평가 묶음의 17,280개 예측에는 검증 분할도 포함된다. 전체 조건 수치는 보충 결과에 제시한다.\par
+
+\section*{S2. 평가 지표와 통계 단위}
+
+평가 항목은 검사 가능성, 행동 선택, 정상 진행, 조건 변화로 구분한다. 검사 가능성은 오류 유형별 탐지·미탐과 정상 입력의 오탐을 측정한다. 행동 선택의 중심 지표는 최적 허용 행동 정확도, 제약 위반율, 계약쌍 정확도이다.\par
+
+정확도는 전체 평가 레코드 중 독립 참조 정답과 일치한 비율이다. 위반율은 전체 레코드 중 진입을 선택하면서 \(t_{entry}<t_{clear}+\Delta\)인 비율이며, 실제 충돌률이 아니다. 계약쌍 정확도는 같은 장면·후보의 두 계약 모두에서 정답을 선택한 쌍의 비율이다. 한 조건·시드의 240행은 120쌍에 해당한다. 허용되지만 진행 점수가 낮은 선택은 위반이 아니어도 정확도에서는 실패로 구분한다.\par
+
+보조 지표는 유효 라벨 출력률, 목표 완료율, 준수·목표 완료율, 불필요 대기율이다. 목표 완료는 진입 후보 선택이고, 준수·목표 완료는 제약을 위반하지 않는 진입이다. 불필요 대기는 진행 가능한 후보가 있는데도 정지 후보를 선택한 비율이다. 전체 확장 평가에서 유효 출력과 목표 완료는 100\%, 불필요 대기는 0\%였다. 이 조건에서 준수·목표 완료율은 위반율의 보수이므로 독립적인 추가 성능 증거로 세지 않는다.\par
+
+진행 손실과 조기 진입 시간은 결과 열람 후 정의한 탐색적 보조 분석이다. 준수 선택 내 진행 손실은 최적 허용 후보의 점수에서 선택 점수를 뺀 값으로, 준수 선택만 분모로 한다. 조기 진입 시간은 위반 사례에서 허용 시점까지 부족한 시간이며, 위반이 없으면 0이 아니라 해당 없음으로 표시한다. 두 지표 모두 실제 거리나 충돌 위험의 크기를 추정하지 않는다.\par
+
+주 표와 그래프는 세 시드 평균과 모집단 표준편차(ddof=0)를 사용한다. 보충자료의 조건부 95\% 신뢰구간은 기존 프로토콜대로 해소 시점 cluster를 2,000회 재표집하며 후보 패턴·라벨 회전·계약쌍을 같은 묶음에 유지한다. 세 시드와 시험 cluster 10개에 조건부인 구간이며, 전체 도로 환경이나 모델 모집단에 대한 불확실성을 나타내지는 않는다. 시드 표준편차와 cluster 신뢰구간은 서로 다른 변동을 나타내므로 혼용하지 않는다.\par
+
+\section*{S3. 명세와 CNL의 검사 결과}
+
+\subsection*{1. 정상 계약의 SAT 및 UNSAT 결과}
+
+SMT 결과는 질의의 목적과 함께 해석한다. 기본 계약의 SAT는 만족 가능한 경우가 존재함을 뜻한다. 반면 계약에 금지 행동을 함께 넣은 질의의 UNSAT는 그 행동과 계약이 양립할 수 없음을 뜻하며, 명세 오류가 아니라 기대한 위반 배제 결과이다.\par
+
+저장된 SMT 질의를 재실행한 결과, 네 대기기간의 경계 검증 100개는 SAT 76개와 UNSAT 24개였고, 방법론의 예제 질의 12개는 SAT 8개와 UNSAT 4개였다. 두 묶음 모두 예상과 다른 판정이나 솔버 UNKNOWN은 없었다. 확장 데이터의 후보 바인딩 검사 5,760건은 SAT 3,840건과 UNSAT 1,920건이었다. 반복을 제거한 고유 SMT 할당은 960개이며 SAT 540개와 UNSAT 420개이다. 따라서 UNSAT 1,920건을 서로 다른 잘못된 명세의 수로 해석하지 않는다. 후보 검사에는 학습·검증·시험 분할을 포함하며 모델의 예측 위반 건수와는 다르다.\par
+
+반복을 포함한 UNSAT 1,920건 중 480건은 영역 해소 전 진입이고, 1,440건은 해소 후 요구 대기기간이 끝나기 전 진입이다. 모든 후보 판정은 별도 정수 환경 규칙과 일치했다. 전체 1,440개 데이터 행에는 허용되는 진입 후보가 최소 하나씩 존재했고 참조 정답도 모두 SAT였다. 이는 모든 진입을 차단하여 위반 배제만 성립하는 경우와 구별하기 위한 확인이다. 지정한 계약과 환경 규칙의 대응을 지지하지만, 시각적 해석이나 외부 근거의 사실성까지 검증하지는 않는다.\par
+
+\subsection*{2. 오류 주입과 검사 층별 결과}
+
+별도의 균형 오류 주입 자료 192건에서 명세·CNL 처리 경로가 어떤 오류를 구별하는지 확인했다. 표 E3은 검사 층을 함께 나타내어, 전체 탐지를 SAT만의 성과로 해석하지 않도록 한다. 정상 계약은 오류 탐지율의 분모에서 제외한다.\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\textbf{표 E3. 오류 주입 유형별 결과와 해당 검사 층}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2800\linewidth-6.720pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2400\linewidth-5.760pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2400\linewidth-5.760pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2400\linewidth-5.760pt\relax}@{}}
+\toprule
+\textbf{입력 유형} & \textbf{건수} & \textbf{탐지 / 미탐} & \textbf{탐지 층 또는 정상 판정} \\
+\midrule
+CNL 부정 의미 변경 & 24 & 24 / 0 & CNL 대응 검사 \\
+CNL 임계값 변경 & 24 & 24 / 0 & CNL 대응 검사 \\
+해제 조건 삭제 & 24 & 24 / 0 & Core–환경 판정 대조 \\
+비교 연산 반전 & 24 & 24 / 0 & Core–환경 판정 대조 \\
+명세 임계값 변경 & 24 & 24 / 0 & 근거 대응 및 Core 대조 \\
+단위 오류 & 24 & 24 / 0 & 스키마 검사 \\
+근거와 명세의 공유 오류 & 24 & 0 / 24 & 신뢰한 근거까지 함께 바뀌어 미탐 \\
+정상 계약 & 24 & 해당 없음 & 24 수용, 오탐 0 \\
+\bottomrule\end{tabular}\end{minipage}\par\medskip
+\end{minipage}\par\medskip
+
+검사를 생략하면 동일한 192건을 모두 수용하지만, 검사를 적용하면 정상 24건과 공유 오류 24건을 포함한 48건을 수용한다. 지원 오류 여섯 종류 144건은 모두 탐지되었으나, 공유 오류까지 포함한 전체 오류 168건의 탐지율은 85.71\%이다. 많은 잘못된 계약도 내부적으로 SAT일 수 있으므로 만족 가능성과 근거·문장 대응의 정확성은 구분해야 한다. 이 자료는 제한된 오류 주입 평가이며 자연 오류율이나 자유 자연어 전체의 의미 등가성을 추정하지 않는다.\par
+
+\subsection*{3. UNSAT 사례의 해석과 처리}
+
+표 E4는 정상적인 행동 배제와 수정이 필요한 판정 불일치를 구별한다. 오류 주입 행의 건수는 질의 수이며 표 E3의 오류 계약 수와 같은 단위가 아니다. 예를 들어 비교 연산 반전 계약 24개에서는 계약당 두 경계 질의가 불일치하여 총 48개 불일치가 발생했다. 이 오류들은 검출된 인위적 변형이며, 현재 정상 데이터에 남아 있는 미해결 오류가 아니다.\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\textbf{표 E4. SMT 판정 사례와 해석에 따른 처리}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2800\linewidth-6.720pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2400\linewidth-5.760pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2400\linewidth-5.760pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2400\linewidth-5.760pt\relax}@{}}
+\toprule
+\textbf{질의 또는 변형} & \textbf{관측 판정} & \textbf{해석} & \textbf{처리} \\
+\midrule
+11.000초 해소, 0.500초 대기, 11.499초 진입 & UNSAT & 정상 계약에서 1ms 이른 진입 배제 & 후보를 허용하지 않음; 이 결과 때문에 계약을 완화하지 않음 \\
+같은 계약에서 11.500초 또는 11.501초 진입 & SAT & 경계 및 경계 이후 진입 가능 & 해제 후 허용의 근거로 함께 보존 \\
+요구 대기를 원 근거보다 100ms 증가 & 기대 SAT \ensuremath{\rightarrow} UNSAT 24개 & 허용 행동을 과도하게 제한 & 원 근거와 임계값을 대조하여 수정 후 재검증 \\
+허용 비교 연산자 반전 & 기대 SAT \ensuremath{\rightarrow} UNSAT 24개; 기대 UNSAT \ensuremath{\rightarrow} SAT 24개 & 허용·금지 경계 방향 오류 & Core 변환과 비교 연산을 수정하고 양쪽 경계를 재검증 \\
+해제 제약 삭제 & 기대 UNSAT \ensuremath{\rightarrow} SAT 24개 & 금지해야 할 조기 진입 허용 & 누락 조항을 복원하고 위반 배제·해제 후 허용을 재검증 \\
+\bottomrule\end{tabular}\end{minipage}\par\medskip
+\end{minipage}\par\medskip
+
+첫 사례의 충돌은 네 조건으로 설명된다. 즉, 진입한다면 해소 시각에 500ms를 더한 시각 이후여야 한다는 조항, 해소 시각 11000ms, 진입 시각 11499ms, 그리고 실제로 진입한다는 조건이다. 대표 질의를 추적 조항으로 다시 실행하자 이 네 조건이 UNSAT core를 이루었으며, 어느 하나를 제거하면 SAT가 되었다. 이는 이 예제에서 삭제 관점으로 최소인 충돌 집합이다. 모든 질의에서 최소 충돌 집합이 자동 생성되었다는 뜻은 아니며, 현재 공통 실행기는 판정과 SMT 표현을 기록하지만 UNSAT core를 기본 저장하지 않는다.\par
+
+검토 원칙은 다음과 같다. 기대 UNSAT과 관측 UNSAT이 일치하면 해당 금지 행동의 배제 근거로 보존한다. 기대 SAT인데 UNSAT이면 정상적인 허용이 막혔는지 확인하고, 기본 계약 자체가 UNSAT이면 근거 연결·상충 조항·변환을 우선 점검한다. 기대 UNSAT인데 SAT이면 제한 누락이나 방향 오류를 조사한다. 솔버 UNKNOWN은 어느 쪽의 증거도 아니므로 통과로 처리하지 않는다. 판정 불일치가 있으면 해당 계약의 승인·내보내기를 보류하고 원인 수정 후 일관성, 위반 배제, 해제 후 허용을 함께 재검증하는 것이 적절하다. 이는 결과에 따른 처리 원칙이며 자동 수정 기능을 구현했다는 주장은 아니다.\par
+
+사람의 판단은 로그만으로 해결할 수 없는 근거 선택, 대기기간의 정당성, 대상·영역 연결에 집중한다. 예상대로 나온 UNSAT만으로 기존 장면 검토를 반복할 필요는 없다. 반대로 근거와 명세가 함께 틀린 공유 오류는 SAT와 경계 일치를 모두 보일 수 있으므로, 솔버 판정과 별도의 근거 검토를 유지한다.\par
+
+\section*{S4. CoC 단독 대비 행동 선택 성능}
+
+\par\medskip\noindent\begin{minipage}{\linewidth}
+\textbf{표 E5. 기본 시험에서의 행동 성능. 단위 \%, 세 시드 평균 ± 표준편차}\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.1800\linewidth-5.760pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2350\linewidth-7.520pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.1950\linewidth-6.240pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.1950\linewidth-6.240pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.1950\linewidth-6.240pt\relax}@{}}
+\toprule
+\textbf{조건} & \textbf{정확도} & \textbf{위반율} & \textbf{준수·목표 완료} & \textbf{계약쌍 정확도} \\
+\midrule
+P0 & 49.861 ± 0.196 & 19.167 ± 5.803 & 80.833 ± 5.803 & 0.000 ± 0.000 \\
+P1 & 96.806 ± 1.712 & 1.389 ± 1.678 & 98.611 ± 1.678 & 93.611 ± 3.425 \\
+P2 & 98.056 ± 1.534 & 0.833 ± 0.680 & 99.167 ± 0.680 & 96.111 ± 3.068 \\
+\bottomrule\end{tabular}\end{minipage}\par\medskip
+\end{minipage}\par\medskip
+
+P0 대비 P1의 정확도는 46.944\%p, P2는 48.194\%p 높았다. 위반율은 각각 17.778\%p와 18.333\%p 낮았다. 두 제약 강화 조건 모두 명시된 규칙에 맞는 행동 선택을 지원했으며, EBLC에서 생성한 CNL을 제공한 P2에서도 높은 성능이 관찰되었다. 이 차이는 규칙 정보를 제공하는 효과를 포함하므로 검증 단계만의 인과적 향상으로 해석하지 않는다.\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\centering
+\includegraphics[width=\linewidth,height=.39\textheight,keepaspectratio]{../experiments-section-2026-09-30-002/figures/primary-metrics-ko.pdf}
+\par\small\raggedright 그림 6. 세 패널은 정확도, 위반율, 계약쌍 정확도를 나타낸다. 작은 점의 모양은 시드, 큰 다이아몬드는 평균, 세로선은 ±1 표준편차이다. 정확도와 계약쌍 정확도는 높을수록, 위반율은 낮을수록 좋다. 위반율 패널은 작은 차이도 읽을 수 있도록 별도의 축 범위를 사용한다. 신뢰구간이나 유의성 표시가 아니다.
+\end{minipage}\par\medskip
+
+P0의 계약쌍 정확도 0\%는 동일 입력에서 두 계약의 서로 다른 정답을 모두 맞출 수 없는 과제 구성과 연결된다. 따라서 이를 모델의 일반적인 추론 능력 부재로 해석하지 않는다. P2의 평균 성능은 P1보다 높지만 모든 시드에서 우수한 것은 아니다. 예를 들어 시드 42에서는 P1 위반율이 0\%, P2는 0.833\%이다. 비교의 중심은 P1과 P2가 P0에 비해 제공하는 이점이며, 두 제약 표현 사이의 일관된 우월성이나 정형적 비열등성은 주장하지 않는다.\par
+
+정상 진행의 감소로 위반을 피했는지도 확인했다. 시험에서 세 조건 모두 불필요 대기는 없었다. 세 시드 합계에서 준수 선택 수는 P0 582건, P1 710건, P2 714건이며, 그 선택들 내 평균 진행 손실은 각각 7.096, 0.331, 0.231 점수 단위였다. 위반 사례 수는 138, 10, 6건이고, 위반당 평균 조기 진입 시간은 0.960, 0.910, 0.700초였다. 조건별 분모가 다르며, 후자의 작은 표본 평균만으로 위험 감소의 크기를 추정하지 않는다.\par
+
+\section*{S5. 조건 변화와 실제 선택 사례}
+
+표현 변경에서는 학습에 쓰지 않은 제약 문구를 제공했다. P1과 P2의 이 평가 문구는 같으므로 차이는 서로 다른 학습 이력 아래 동일 문구를 처리한 결과이다. P0와 LOGIC\_GUARD는 해당 묶음에서 입력이 바뀌지 않아, 반복 결과를 추가적인 표현 강건성 증거로 세지 않는다.\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\centering
+\includegraphics[width=\linewidth,height=.39\textheight,keepaspectratio]{../experiments-section-2026-09-30-002/figures/condition-shifts-ko.pdf}
+\par\small\raggedright 그림 7. 기본 시험, 표현 변경, 미학습 시간 조건의 정확도와 위반율을 비교한다. 점은 세 시드 평균이고 세로선은 표준편차이다. 조건별 점을 이은 선은 비교를 돕기 위한 것으로 연속적인 시간 추세가 아니다. 같은 시험 이미지가 재사용된다.
+\end{minipage}\par\medskip
+
+표현 변경에서 P1의 정확도·위반율은 90.556\%·5.000\%, P2는 96.944\%·1.250\%였다. 미학습 시간에서 정확도는 두 조건 모두 96.667\%, 위반율은 각각 2.222\%와 1.528\%였다. 공급된 규칙의 표현과 수치를 바꾸어도 P0 대비 개선은 유지되었으나, 이를 다양한 도로 상황에 대한 일반화로 확대하지 않는다. 재점유, 가림, UNKNOWN 관측은 주 학습 과제의 평가 범위에 포함되지 않았다.\par
+
+그림 8은 저장된 시험 예측에서 고른 두 사례이다. 선택 기준은 시드 42의 레코드를 장면 ID와 계약 수준으로 정렬한 뒤, (a) P0가 위반하고 P1·P2가 모두 정답인 첫 사례, (b) P2가 위반한 첫 사례이다. 결과를 본 뒤 선택한 설명 사례이며, 빈도나 대표성을 추정하기 위한 표본은 아니다.\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\centering
+\includegraphics[width=\linewidth,height=.39\textheight,keepaspectratio]{../experiments-section-2026-09-30-002/figures/action-cases-ko.pdf}
+\par\small\raggedright 그림 8. 저장된 실제 예측을 진입 시각에 배치했다. 붉은 구간은 계약상 진입 불가, 녹색 구간은 시간 조건 충족이며, 세로 경계는 해소 시점과 1.5초 대기를 합한 값이다. 마커 옆은 선택 라벨과 시각이다. 이는 원 영상이 아닌 예측의 시간축 도식이다.
+\end{minipage}\par\medskip
+
+사례 (a)의 해소 시각은 11.0초, 허용 경계는 12.5초이다. P0는 C 후보의 11.5초 진입을, P1과 P2는 정답 D 후보의 12.5초 진입을 선택했다. 사례 (b)의 해소 시각은 11.4초, 허용 경계는 12.9초이다. P0와 P1은 정답 B를 선택했지만 P2는 A 후보의 12.8초 진입을 선택해 0.1초 이른 진입을 보였다. 후보 라벨은 회전되므로 D가 항상 대기를 뜻하지 않는다. 명세의 정확한 경계를 제공하더라도 학습 모델이 모든 선택에서 이를 지킨다는 보장은 없음을 보여 준다.\par
+
+\section*{S6. 보조 비교와 명세 기반 비용 학습}
+
+여섯 조건 비교에서 SHUFFLED\_GUARD의 시험 정확도는 50.556\%, 위반율은 19.722\%로 P0와 비슷했다. 학습 시 올바른 제약·사례 연결의 중요성을 지지하는 대조이며, 시험에는 정상 연결의 guard를 제공했다. NATURAL\_GUARD는 일부 조건에서 P2보다 높은 성능을 보였다. LOGIC\_GUARD는 기본 시험 정확도 99.167\%였으나 미학습 시간에서는 81.250\%로 낮아졌다. 따라서 특정 표현의 보편적 우월성보다 제약 정보와 연결의 역할을 중심으로 해석한다.\par
+
+추가 실험은 같은 시드의 P2 adapter에서 CE\_ONLY와 CE\_EBLC를 각각 60 updates 학습했다. 데이터 순서·토큰 수·파라미터·updates를 맞추고, 후자는 교차엔트로피에 위반 비용과 불필요 대기 비용을 이용한 보조 loss를 추가했다. 이는 환경 상호작용이나 정책 경사 기반 강화학습이 아니다. 별도 합성 이미지 10개에서 기본 조건의 위반율은 0.556\%에서 0\%로 낮아졌지만 정확도도 99.167\%에서 98.333\%로 낮아졌다. 표현 변경에도 비슷한 절충이 있었고, 미학습 시간에서는 정확도와 위반율이 함께 개선되었다. 상세 표와 절충 관계는 보충 결과 S2에 제시한다.\par
+
+\section*{S7. 해석과 한계}
+
+본 결과는 CoC의 행동 이유에 명시적 제약을 더하면 제한된 합성 행동 선택에서 정확도와 준수가 개선되며, EBLC를 통해 그 제약을 검사 가능한 표현과 CNL로 연결할 수 있음을 보여 준다. 명세 품질과 행동 성능은 서로 다른 근거로 평가했으며, 전자의 개선이 후자를 자동으로 일으킨다는 주장은 하지 않는다.\par
+
+외적 타당성의 범위는 작다. 주 시험은 고유 합성 이미지 10개와 제한된 후보 패턴으로 이루어지고, 실제 도로의 연속 궤적·폐루프 제어·충돌률을 평가하지 않는다. 실제 장면의 근거 연결 사례와 개발용 학습 확인은 이 성능 표에 합산하지 않는다. 하나의 VLM과 제한된 LoRA 설정에 대한 결과이며, Alpamayo 학습이나 실차 안전성의 증거도 아니다.\par
+
+내적 타당성에서는 입력 정보량과 템플릿 재사용을 고려해야 한다. P1/P2는 평가 때에도 제약을 받고 P0는 대기기간을 받지 않는다. 따라서 제약 없이 규칙이 내재화되었는지, 시각 내용에 얼마나 인과적으로 의존하는지는 본 비교만으로 확정하지 않는다. 명세와 환경 참조를 별도 구현해도 공유 가정의 오류가 남을 수 있다. CNL 검사는 지원 문법·오류 범위에 한정되며 원 CoC의 사실성을 자동으로 보증하지 않는다.\par
+
+통계적 해석도 제한한다. 시드 세 개와 적은 cluster의 조건부 구간은 대규모 모집단 추론을 대신하지 않는다. 0건의 관측 위반은 실제 위반 확률 0을 뜻하지 않는다. 추가 지표와 사례 선택은 탐색적으로 표시했다. 사전 운영 기준과 그 판정은 보충 결과에 유지하면서, 개선 폭에 따라 결과를 선별하지 않고 효과 크기·변동·남은 오류를 함께 보고한다.\par
+
+\section*{시간 과제의 추가 분석}
+
+\subsection*{여섯 조건과 전체 수치}
+
+아래 값은 세 시드 평균(\%)이며 A는 정확도, V는 위반율이다. 전체 검증 분할, 계약쌍·완료율, 개별 시드·표준편차·조건부 신뢰구간은 연결된 CSV에 보존한다.\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-6.000pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-6.000pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-6.000pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-6.000pt\relax}@{}}
+\toprule
+\textbf{조건} & \textbf{기본 시험 A / V} & \textbf{표현 변경 A / V} & \textbf{미학습 시간 A / V} \\
+\midrule
+P0 & 49.861 / 19.167 & 49.861 / 19.167 & 49.861 / 18.472 \\
+P1 & 96.806 / 1.389 & 90.556 / 5.000 & 96.667 / 2.222 \\
+P2 & 98.056 / 0.833 & 96.944 / 1.250 & 96.667 / 1.528 \\
+NATURAL\_GUARD & 98.056 / 1.111 & 93.889 / 0.000 & 98.611 / 0.556 \\
+SHUFFLED\_GUARD & 50.556 / 19.722 & 51.250 / 19.028 & 50.972 / 18.889 \\
+LOGIC\_GUARD & 99.167 / 0.139 & 99.167 / 0.139 & 81.250 / 0.833 \\
+\bottomrule\end{tabular}\end{minipage}\par\medskip
+
+\subsection*{추가 비용 학습}
+
+보조 loss는 \(L=L_{CE}+\lambda\sum_a p(a)c(a)\)이다. 네 후보 토큰에서 정규화한 확률 p(a)를 사용하고, 비용은 제약 위반 1과 불필요 대기 0.25의 합이다. CE\_ONLY는 λ=0, CE\_EBLC는 λ=1이다. optimizer를 재설정하며 PRE\_ADAPTER는 추가 학습 전 모델이다. 아래 평가는 해소 시각 12.0–12.9초의 별도 이미지 10개를 사용한다. 6,480개 예측에는 PRE\_ADAPTER 평가도 포함된다.\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.1800\linewidth-5.760pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2350\linewidth-7.520pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.1950\linewidth-6.240pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.1950\linewidth-6.240pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.1950\linewidth-6.240pt\relax}@{}}
+\toprule
+\textbf{평가} & \textbf{조건} & \textbf{정확도} & \textbf{위반율} & \textbf{계약쌍 정확도} \\
+\midrule
+기본 & PRE\_ADAPTER & 99.028 & 0.417 & 98.056 \\
+기본 & CE\_ONLY & 99.167 & 0.556 & 98.333 \\
+기본 & CE\_EBLC & 98.333 & 0.000 & 96.667 \\
+표현 변경 & PRE\_ADAPTER & 95.972 & 1.944 & 91.944 \\
+표현 변경 & CE\_ONLY & 97.639 & 1.806 & 95.278 \\
+표현 변경 & CE\_EBLC & 96.250 & 0.139 & 92.500 \\
+미학습 시간 & PRE\_ADAPTER & 96.944 & 1.528 & 93.889 \\
+미학습 시간 & CE\_ONLY & 98.611 & 1.250 & 97.222 \\
+미학습 시간 & CE\_EBLC & 98.889 & 0.139 & 97.778 \\
+\bottomrule\end{tabular}\end{minipage}\par\medskip
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\centering
+\includegraphics[width=\linewidth,height=.39\textheight,keepaspectratio]{../experiments-section-2026-09-30-002/figures/cost-tradeoff-ko.pdf}
+\par\small\raggedright 그림 S1. 동일 평가 조건의 CE\_ONLY에서 CE\_EBLC로 향하는 화살표이다. 가로축 위반율은 낮을수록, 세로축 정확도는 높을수록 좋다. 점은 세 시드 평균이며 연결은 학습 궤적이 아니라 두 학습 조건의 비교이다. 작은 차이를 보이기 위해 두 축을 확대했다.
+\end{minipage}\par\medskip
+
+\subsection*{처리시간과 보고 기준}
+
+검증 경로의 CPU 시간은 고유 바인딩 48개를 경로별 세 번씩 측정했다. 구성·파싱·컴파일·풀이를 포함한 경로는 평균 3.462ms, 중앙값 3.524ms, p95 3.782ms였다. 컴파일 재사용 후 풀이 경로는 각각 2.322ms, 2.368ms, 2.621ms였다. 초기화·영상·모델·I/O를 제외한 국소 시간이며 전체 데이터 제작 처리량이나 차량 실시간 보장은 아니다.\par
+
+원 확장 프로토콜은 P2가 P0보다 모든 시드에서 위반율을 최소 20\%p 낮추고 준수·목표 완료율을 최소 20\%p 높일 것을 요구했으며, 해당 운영 기준의 판정은 NOT\_SUPPORTED였다. 비용 실험도 기본 조건에서 위반율 2\%p 감소를 요구했으나 기준 위반율이 이미 0.556\%여서 원판정은 INCONCLUSIVE였다. 이 기준과 판정은 변경하지 않았다. 결과 열람 후 본문은 모든 효과 크기를 보고하고 P0 대비 두 제약 방식의 효과 및 명세 검사 가능성에 초점을 맞추도록 구성했다. 이 보고 초점은 사전 가설 검정의 성공 선언과 구분한다.\par
+
+\begingroup\small\setlength{\parskip}{3pt}
+\subsection*{재현 근거}
+
+아래는 집필 근거와 원 수치를 확인하기 위한 링크이며, 원고 통합 시 데이터·코드 공개 정보에 연결한다. 실행된 과거 결과는 덮어쓰지 않는다.\par
+
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}\setlength{\topsep}{2pt}
+\item \href{\detokenize{../temporal-expansion-protocol-2026-09-29-001/protocol.json}}{동결된 확장 실험 설정}
+\item \href{\detokenize{../temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv}}{전체 주 지표와 시드별 수치}
+\item \href{\detokenize{../../paper1-temporal-diversity-001/diversity-analysis-2026-09-29-001/RESULT.json}}{오류 주입 D4 원자료}
+\item \href{\detokenize{../temporal-secondary-metrics-2026-09-29-001/RESULT.json}}{추가 행동 지표와 처리시간}
+\item \href{\detokenize{../experiments-section-2026-09-30-002/selected_cases.json}}{그림 8의 선택 기준과 실제 예측}
+\end{itemize}
+
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}\setlength{\topsep}{2pt}
+\item \href{\detokenize{../experiments-section-2026-09-30-002/unsat_review.json}}{SMT 재실행·UNSAT 사례 검토}
+\end{itemize}
+
+
+\endgroup
+\section*{S8. 추가 정적·기동 실험}
+
+후보 바인딩 5,088건은 SAT 3,432건·UNSAT 1,656건이었다. 정적은 2,016건 중 SAT 1,512건·UNSAT 504건, 기동은 3,072건 중 SAT 1,920건·UNSAT 1,152건이다. 모델 예측 9,792건의 SMT 판정과 별도 환경 규칙 사이에는 불일치가 없었다. 후보 바인딩과 모델 예측은 다른 집계 단위이며, UNSAT를 잘못된 계약 수로 해석하지 않는다.\par
+
+추가 실험은 P0·P1·P2·연결 교란의 네 조건과 세 시드에서 24회 학습, 2,160 optimizer updates, 9,792개 예측을 완료했다. Qwen3-VL-2B-Instruct의 같은 초기 모델, LoRA rank 8·alpha 16·dropout 0.05, AdamW 학습률 0.0002·weight decay 0.01, batch 2·누적 8, 3 epochs를 사용했다. 시드·조건당 정적 108회, 기동 72회 업데이트 뒤 최종 체크포인트를 평가했다. 데이터 시드는 20260930으로 고정하고 최적화 시드 42·17·123을 바꿨다.\par
+
+정적 학습은 576행·96 scene ID·고유 그림 18개, 기본 평가는 144행·24 scene ID·그림 13개이다. 시험 그림 13개는 학습 그림과 겹치지만 미학습 수치 평가의 그림 8개는 겹치지 않는다. 기동 학습은 384행·192 scene ID, 평가는 조건별 96행·48 scene ID이며 고유 도식 2개를 재사용한다. 후보 수치는 텍스트에도 제공한다. 따라서 scene ID나 예측 수를 독립 영상 수로 해석하지 않는다.\par
+
+아래 값은 정확도 / 위반율 / 제약 준수 완료 / 계약쌍 정확도(\%, 세 시드 평균)이다. 교란은 같은 유형 안에서 P2 학습 CNL의 대응을 섞은 조건이며 시험에는 올바른 연결을 제공한다. 모든 아래 조건의 유효 출력과 목표 완료는 100\%, deadlock은 0\%였다. 정확도와 준수 완료의 차이는 허용되지만 덜 진행한 선택이다.\par
+
+\subsection*{정적 제약 전체 조건}
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-6.000pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-6.000pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-6.000pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-6.000pt\relax}@{}}
+\toprule
+\textbf{조건} & \textbf{기본 평가} & \textbf{표현 변경} & \textbf{미학습 수치} \\
+\midrule
+P0 & 50.00 / 24.31 / 75.69 / 0.00 & 50.00 / 24.31 / 75.69 / 0.00 & 50.00 / 22.92 / 77.08 / 0.00 \\
+P1 & 100.00 / 0.00 / 100.00 / 100.00 & 93.29 / 0.00 / 100.00 / 86.57 & 99.54 / 0.00 / 100.00 / 99.07 \\
+P2 & 100.00 / 0.00 / 100.00 / 100.00 & 80.32 / 7.87 / 92.13 / 60.65 & 97.22 / 0.23 / 99.77 / 94.44 \\
+연결 교란 & 50.69 / 23.84 / 76.16 / 3.70 & 50.23 / 24.77 / 75.23 / 0.46 & 49.31 / 25.00 / 75.00 / 3.70 \\
+\bottomrule\end{tabular}\end{minipage}\par\medskip
+
+\subsection*{정지·차선 변경 전체 조건}
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-6.000pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-6.000pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-6.000pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-6.000pt\relax}@{}}
+\toprule
+\textbf{조건} & \textbf{기본 평가} & \textbf{표현 변경} & \textbf{미학습 수치} \\
+\midrule
+P0 & 50.00 / 30.90 / 69.10 / 0.00 & 50.00 / 30.90 / 69.10 / 0.00 & 50.00 / 30.90 / 69.10 / 0.00 \\
+P1 & 100.00 / 0.00 / 100.00 / 100.00 & 100.00 / 0.00 / 100.00 / 100.00 & 100.00 / 0.00 / 100.00 / 100.00 \\
+P2 & 98.96 / 0.00 / 100.00 / 97.92 & 97.92 / 2.08 / 97.92 / 95.83 & 98.96 / 0.00 / 100.00 / 97.92 \\
+연결 교란 & 49.65 / 30.56 / 69.44 / 2.08 & 52.43 / 26.74 / 73.26 / 5.56 & 49.65 / 30.90 / 69.10 / 2.78 \\
+\bottomrule\end{tabular}\end{minipage}\par\medskip
+
+\subsection*{기동 복합 조건}
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2300\linewidth-3.680pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3800\linewidth-6.080pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3900\linewidth-6.240pt\relax}@{}}
+\toprule
+\textbf{조건} & \textbf{정확도 / 위반율} & \textbf{준수 완료 / 계약쌍} \\
+\midrule
+P0 & 50.00 / 30.21 & 69.79 / 0.00 \\
+P1 & 94.10 / 0.69 & 99.31 / 88.19 \\
+P2 & 91.32 / 1.04 & 98.96 / 82.64 \\
+연결 교란 & 51.04 / 32.29 & 67.71 / 2.08 \\
+\bottomrule\end{tabular}\end{minipage}\par\medskip
+
+표현 변경은 같은 시험 사례의 문구를 바꾸는 평가이며 새로운 독립 장면이 아니다. 복합 조건은 부정·절 순서·등호 경계·m/cm 단위 표현을 함께 바꾼 것으로 요인별 인과 효과를 분리하지 않는다. 숫자 설정 cluster와 시드를 대응 재표집한 2,000회 bootstrap 구간은 원 RESULT.json에 보존한다.\par
+
+\section*{S9. 기존 확장 모델의 후속 진단}
+
+기존 P0·P1·P2 모델 아홉 개를 재사용한 탐색적 후속 평가로 2,160개 예측을 얻었으며 신규 학습은 없다. 아래는 정확도 / 위반율(\%)이다. 원 보고서의 네 자리 비율을 백분율로 옮겼으며 주 시험과 분포가 달라 합산하지 않는다.\par
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2800\linewidth-6.720pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2400\linewidth-5.760pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2400\linewidth-5.760pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2400\linewidth-5.760pt\relax}@{}}
+\toprule
+\textbf{진단 조건} & \textbf{P0} & \textbf{P1} & \textbf{P2} \\
+\midrule
+D1/boundary & 50.00 / 33.33 & 95.83 / 4.17 & 95.83 / 2.78 \\
+D1/clear\_only & 50.00 / 22.22 & 100.00 / 0.00 & 98.61 / 1.39 \\
+D1/duration\_only & 50.00 / 20.83 & 98.61 / 1.39 & 97.22 / 2.78 \\
+D1/joint & 50.00 / 22.22 & 100.00 / 0.00 & 98.61 / 1.39 \\
+D2/canonical & 50.00 / 20.83 & 100.00 / 0.00 & 95.83 / 2.78 \\
+D2/paraphrase1 & 50.00 / 20.83 & 98.61 / 0.00 & 97.22 / 2.78 \\
+D2/paraphrase2 & 50.00 / 20.83 & 76.39 / 15.28 & 77.78 / 9.72 \\
+D3/blank & 50.00 / 13.89 & 81.94 / 2.78 & 76.39 / 1.39 \\
+D3/original & 50.00 / 22.22 & 100.00 / 0.00 & 98.61 / 1.39 \\
+D3/swapped & 50.00 / 19.44 & 87.50 / 0.00 & 79.17 / 1.39 \\
+\bottomrule\end{tabular}\end{minipage}\par\medskip
+
+D1은 경계·해소 시각·대기기간·두 조건 결합, D2는 문구 변경, D3은 원본·빈·교환 이미지 입력이다. D3 교환은 시각적 전제를 바꾸므로 정상 입력의 정확도와 구분한다. P2 선택 변화율은 빈 이미지 25.00\%, 교환 19.44\%였다. 각 진단 묶음의 semantic parameter group은 세 개뿐이므로 실제 도로 일반화를 입증하지 않는다. D4 오류 주입은 S3의 기존 192건을 재사용한 것이며 신규 성과로 중복 합산하지 않는다.\par
+
+\section*{S10. 재현 범위와 원자료}
+
+선행 연구의 정적 세 유형·시간 대기·정지·차선 변경, 계약쌍, 연결 교란, 미학습 수치 및 표현 변화 과제를 재평가했다. 데이터·예산·시드 구성과 수치 문구 정밀도가 달라 이전 수치의 정확한 복제는 아니다. Alpamayo 예비 진단, 별도의 폐루프 제어 및 기동 이미지 개입은 이번에 새로 수행하지 않았다.\par
+
+시간 주 학습 18회, 비용 추가 학습 6회, 정적·기동 추가 학습 24회가 이번 묶음에 포함된다. 데이터 재사용·검증 분할·입력 변형·기존 adapter 평가를 독립 장면으로 합산하지 않는다. 원 실험 결과와 운영 기준은 수정하지 않았고, 원고의 본문/부가자료 배치는 결과 확인 후 연구 질문과의 관련성에 따라 정했다.\par
+
+\begin{itemize}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}\setlength{\topsep}{2pt}
+\item \href{\detokenize{../experiments-section-2026-09-30-003/multitask_metrics.csv}}{추가 실험 전체 지표}
+\item \href{\detokenize{../../../../../../../guardsynth-cc-worktrees/guardsynth-additional-20260930/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/multitask-contract-analysis-2026-09-30-001/REPORT_KO.md}}{추가 실험의 원 분석 보고서}
+\item \href{\detokenize{../../paper1-temporal-diversity-001/expanded-diagnostics-analysis-2026-09-30-001/RESULT.json}}{후속 이미지·문구 진단 원자료}
+\end{itemize}
+\end{document}

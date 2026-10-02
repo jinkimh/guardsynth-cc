@@ -1,0 +1,726 @@
+{
+  "pages": {
+    "main": 8,
+    "main-clean": 8,
+    "response-to-reviewer-1": 10,
+    "response-to-reviewer-2": 9,
+    "response-to-reviewer-3": 12
+  },
+  "marked_clean_identical_text": true,
+  "responses": {
+    "response-to-reviewer-1": {
+      "item_count": 9,
+      "block_counts": {
+        "reviewercomment": 9,
+        "authorresponse": 9,
+        "manuscriptrevision": 9
+      },
+      "location_references": 36,
+      "quotes": [
+        {
+          "quote": "현재 결과는 명시된 프레임의 시간ㆍ조건 관계를 실행하고 검토 근거를 추적하는 방법 실증이다. 자동 의미 추출, 개발 미사용 독립 시험, 사람 판정 신뢰도, 자연 오류 성능과 물리적 안전은 후속 검증으로 남는다.",
+          "sentence_pages": [
+            [
+              8
+            ],
+            [
+              8
+            ]
+          ],
+          "declared_excerpt_pages": [
+            8
+          ],
+          "location_labels": [
+            "sec:intro",
+            "sec:first-results",
+            "tab:first-results",
+            "sec:retest-results",
+            "tab:retest",
+            "sec:threats",
+            "sec:conclusion"
+          ]
+        },
+        {
+          "quote": "작성 프레임은 설계자가 원문과 동시에 만든다. True/False는 작성 문장이 명시한 조건 상태이며 사람의 독립 센서 정답이 아니다.",
+          "sentence_pages": [
+            [
+              4
+            ],
+            [
+              4
+            ]
+          ],
+          "declared_excerpt_pages": [
+            4
+          ],
+          "location_labels": [
+            "sec:extraction",
+            "tab:worked-example",
+            "sec:models",
+            "tab:transition",
+            "sec:first-results"
+          ]
+        },
+        {
+          "quote": "합의 CSV에는 27장면 모두 텍스트 모순 없음으로 저장되어 있지만 사유 메모는 0/27이다. 당시 논의 절차와 판단 변경의 원인을 재현 가능한 수준으로 복원하지 못했으며, 이번 작업에서 사람 재평가를 실시하지 않았다.",
+          "sentence_pages": [
+            [
+              2
+            ],
+            [
+              2
+            ]
+          ],
+          "declared_excerpt_pages": [
+            2
+          ],
+          "location_labels": [
+            "sec:selection",
+            "sec:human-results",
+            "tab:agreement",
+            "tab:reviewer-distribution",
+            "sec:threats"
+          ]
+        },
+        {
+          "quote": "단일 의무를 지원하는 경로의 복수 의무 도전 사례도 분모에서 제외하지 않는다. 단순 FSM의 성공은 이 범위의 규칙을 간단한 상태 기계로도 실행할 수 있음을 보여 준다.",
+          "sentence_pages": [
+            [
+              4
+            ],
+            [
+              2
+            ]
+          ],
+          "declared_excerpt_pages": [
+            2,
+            4
+          ],
+          "location_labels": [
+            "sec:scenario-design",
+            "tab:first-results",
+            "sec:first-results",
+            "sec:discussion"
+          ]
+        },
+        {
+          "quote": "탐지 대상 130건을 27설정에서 재집계하면 항상 검출 72, 설정 의존 57, 항상 미검출 1이다. 따라서 기본 설정의 미검출 등을 합친 58건 전체를 ``설정에 따라 바뀜''이라고 서술하지 않는다.",
+          "sentence_pages": [
+            [
+              6
+            ],
+            [
+              6
+            ]
+          ],
+          "declared_excerpt_pages": [
+            6
+          ],
+          "location_labels": [
+            "sec:provenance",
+            "sec:aux-design",
+            "sec:trajectory-results",
+            "sec:threats"
+          ]
+        },
+        {
+          "quote": "이번 보존 파일의 해시는 현재 입력 스냅샷을 식별하며 원 생성 이력을 새로 확정하지 않는다. 파일을 보존했다는 사실과 외부 공개를 완료했다는 사실은 구분한다.",
+          "sentence_pages": [
+            [
+              2
+            ],
+            [
+              2
+            ]
+          ],
+          "declared_excerpt_pages": [
+            2
+          ],
+          "location_labels": [
+            "sec:provenance",
+            "tab:provenance",
+            "sec:artifacts",
+            "sec:queries",
+            "sec:threats"
+          ]
+        },
+        {
+          "quote": "23쌍ㆍ15장면에서 장면별 가장 이른 창 하나를 선정했다. 이 방식은 비무작위이며 특정 행동 전환을 더 많이 포함한다.",
+          "sentence_pages": [
+            [
+              2
+            ],
+            [
+              2
+            ]
+          ],
+          "declared_excerpt_pages": [
+            2
+          ],
+          "location_labels": [
+            "sec:selection",
+            "sec:human-results",
+            "sec:threats"
+          ]
+        },
+        {
+          "quote": "The natural-data inventory contains 309 adjacent pairs from 90 scenes; four reviewers assessed a selected subset of 27 scene groups, with textual-consistency Fleiss' kappa 0.027301 and no recorded consensus rationale.",
+          "sentence_pages": [
+            [
+              1
+            ]
+          ],
+          "declared_excerpt_pages": [
+            1
+          ],
+          "location_labels": [
+            "sec:provenance",
+            "sec:selection"
+          ]
+        },
+        {
+          "quote": "작성된 미해제 충돌 사례에서는 이전 의무의 보존이 해당 사건 관계를 판정하는 데 필요했다. 다만 이 관찰을 모든 CoC에 대한 필요성ㆍ효과나 UPPAAL의 정확도 우위로 일반화하지 않는다.",
+          "sentence_pages": [
+            [
+              8
+            ],
+            [
+              8
+            ]
+          ],
+          "declared_excerpt_pages": [
+            8
+          ],
+          "location_labels": [
+            "sec:conclusion"
+          ]
+        }
+      ]
+    },
+    "response-to-reviewer-2": {
+      "item_count": 8,
+      "block_counts": {
+        "reviewercomment": 8,
+        "authorresponse": 8,
+        "manuscriptrevision": 8
+      },
+      "location_references": 29,
+      "quotes": [
+        {
+          "quote": "하지만 이 방식은 같은 장면의 CoC들이 개별적으로는 자연스러워도 시간순으로 함께 읽으면 양립하지 않을 수 있다는 문제점이 있다.",
+          "sentence_pages": [
+            [
+              1
+            ]
+          ],
+          "declared_excerpt_pages": [
+            1
+          ],
+          "location_labels": [
+            "sec:intro"
+          ]
+        },
+        {
+          "quote": "이러한 불일치 때문에 학습 자료의 행동 요구가 모호해지고, 같은 자료를 다시 검사했을 때 일관된 결과를 얻기 어렵다.",
+          "sentence_pages": [
+            [
+              1
+            ]
+          ],
+          "declared_excerpt_pages": [
+            1
+          ],
+          "location_labels": [
+            "sec:intro",
+            "sec:conclusion"
+          ]
+        },
+        {
+          "quote": "정지나 대기 중 해제 여부가 미상이라는 이유만으로 문제를 기록하지 않는다. 진행할 때 남은 의무가 거짓이면 모순, 미상이면 근거 부족이다.",
+          "sentence_pages": [
+            [
+              3
+            ],
+            [
+              3
+            ]
+          ],
+          "declared_excerpt_pages": [
+            3
+          ],
+          "location_labels": [
+            "sec:data",
+            "sec:problem",
+            "sec:method",
+            "sec:results",
+            "sec:discussion",
+            "sec:threats",
+            "sec:conclusion"
+          ]
+        },
+        {
+          "quote": "UPPAAL은 Uppsala 대학과 Aalborg 대학이 공동 개발한 시간 오토마타 기반 모델 검사 도구의 이름이며, 두 대학 이름을 연결한 명칭이다.",
+          "sentence_pages": [
+            [
+              1
+            ]
+          ],
+          "declared_excerpt_pages": [
+            1
+          ],
+          "location_labels": [
+            "sec:intro",
+            "sec:related",
+            "sec:queries"
+          ]
+        },
+        {
+          "quote": "첫째, 원문 구절--의무 ID--해제 조건--후속 증거--행동을 연결하고 모순과 근거 부족을 구분하는 표현을 제시한다. 둘째, 조건별 상태와 속성을 UPPAAL로 실행하고 최초 문제 위치와 사유를 추적하는 절차를 구체화한다.",
+          "sentence_pages": [
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ],
+          "declared_excerpt_pages": [
+            1
+          ],
+          "location_labels": [
+            "sec:intro",
+            "tab:worked-example",
+            "tab:retest",
+            "sec:conclusion"
+          ]
+        },
+        {
+          "quote": "녹색 신호는 출발의 새로운 근거이지만 보행자가 통과했다는 증거는 아니다. 통과 여부가 제시되지 않았다면 확정 모순이 아니라 정지 요구의 해제 근거가 부족한 경우이다.",
+          "sentence_pages": [
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ],
+          "declared_excerpt_pages": [
+            1
+          ],
+          "location_labels": [
+            "sec:intro",
+            "fig:overview-pipeline",
+            "sec:method",
+            "tab:worked-example"
+          ]
+        },
+        {
+          "quote": "따라서 이전 상태의 기억, 세 값의 판정과 최초 위반 추적 자체는 기존 기술이다. 본 논문의 미상은 명시된 해제 증거의 부족을 뜻하며, 미래 연장 전체에 대한 LTL 세 값 의미론을 구현했다는 뜻은 아니다.",
+          "sentence_pages": [
+            [
+              2
+            ],
+            [
+              2
+            ]
+          ],
+          "declared_excerpt_pages": [
+            2
+          ],
+          "location_labels": [
+            "sec:related",
+            "tab:related-position",
+            "sec:discussion"
+          ]
+        },
+        {
+          "quote": "기술적 초점은 원문 구절과 의무ㆍ해제 조건ㆍ증거ㆍ문제 기록을 이어 검토 가능하게 만드는 데 있다. 기존 형식 검증 기술을 새로 발명했다고 주장하지 않으며, 다른 방법이 이러한 연결을 할 수 없다고 단정하지 않는다.",
+          "sentence_pages": [
+            [
+              2
+            ],
+            [
+              2
+            ]
+          ],
+          "declared_excerpt_pages": [
+            2
+          ],
+          "location_labels": [
+            "sec:related",
+            "tab:related-position",
+            "tab:worked-example",
+            "sec:queries",
+            "sec:discussion"
+          ]
+        }
+      ]
+    },
+    "response-to-reviewer-3": {
+      "item_count": 11,
+      "block_counts": {
+        "reviewercomment": 11,
+        "authorresponse": 11,
+        "manuscriptrevision": 11
+      },
+      "location_references": 50,
+      "quotes": [
+        {
+          "quote": "본 논문의 미상은 명시된 해제 증거의 부족을 뜻하며, 미래 연장 전체에 대한 LTL 세 값 의미론을 구현했다는 뜻은 아니다.",
+          "sentence_pages": [
+            [
+              2
+            ]
+          ],
+          "declared_excerpt_pages": [
+            2
+          ],
+          "location_labels": [
+            "sec:related",
+            "tab:related-position",
+            "sec:discussion"
+          ]
+        },
+        {
+          "quote": "원 생성 prompt/config와 품질 점수 계산ㆍ상류 임계값도 미복원이다. 하류의 저장된 quality_pass 불리언을 사용하는 선정 절차는 복원했다.",
+          "sentence_pages": [
+            [
+              2
+            ],
+            [
+              2
+            ]
+          ],
+          "declared_excerpt_pages": [
+            2
+          ],
+          "location_labels": [
+            "sec:provenance",
+            "tab:provenance",
+            "sec:selection",
+            "sec:threats"
+          ]
+        },
+        {
+          "quote": "P1--P3은 입력의 행동ㆍ요구 관계에 관한 문제이고 P4는 검사기의 상태 처리 문제다. P5는 별도의 속도 반응 시간 검사다.",
+          "sentence_pages": [
+            [
+              3
+            ],
+            [
+              3
+            ]
+          ],
+          "declared_excerpt_pages": [
+            3
+          ],
+          "location_labels": [
+            "sec:error-types",
+            "tab:regression",
+            "sec:regression-results",
+            "sec:conclusion"
+          ]
+        },
+        {
+          "quote": "장면 끝에서 미래의 해제를 보지 못했다는 사실만으로 모순을 추가하지 않는다. 미상 상태에서 진행하지 않은 대기열은 현재 검사 범위에서 문제 없음으로 끝날 수 있다.",
+          "sentence_pages": [
+            [
+              3
+            ],
+            [
+              3
+            ]
+          ],
+          "declared_excerpt_pages": [
+            3
+          ],
+          "location_labels": [
+            "sec:semantics",
+            "sec:models",
+            "tab:transition",
+            "lst:condition-step",
+            "sec:threats"
+          ]
+        },
+        {
+          "quote": "자동 파서에 같은 문장을 넣는 경로는 증거를 확정하지 않으므로 작성 프레임의 성공과 혼합하지 않는다.",
+          "sentence_pages": [
+            [
+              4
+            ]
+          ],
+          "declared_excerpt_pages": [
+            4
+          ],
+          "location_labels": [
+            "sec:extraction",
+            "tab:worked-example",
+            "sec:first-results",
+            "sec:threats"
+          ]
+        },
+        {
+          "quote": "원 파서와 최초 로그는 보존했다. 이 출력 범위 진단을 48개 의미 불일치의 해결과 혼합하지 않는다.",
+          "sentence_pages": [
+            [
+              6
+            ],
+            [
+              6
+            ]
+          ],
+          "declared_excerpt_pages": [
+            6
+          ],
+          "location_labels": [
+            "sec:models",
+            "sec:queries",
+            "lst:queries",
+            "sec:agreement-results",
+            "tab:implementation"
+          ]
+        },
+        {
+          "quote": "따라서 독립 일반화 성능이 아니며 R3의 개발 미사용 시험 요구를 충족한 결과로 제시하지 않는다.",
+          "sentence_pages": [
+            [
+              5
+            ]
+          ],
+          "declared_excerpt_pages": [
+            5
+          ],
+          "location_labels": [
+            "sec:legacy-test",
+            "sec:scenario-design",
+            "sec:retest-design",
+            "sec:retest-results",
+            "tab:failures",
+            "tab:retest",
+            "sec:threats"
+          ]
+        },
+        {
+          "quote": "따라서 그 차이에는 기억 길이뿐 아니라 의무 표현 용량과 미상 누적 정책도 포함된다.",
+          "sentence_pages": [
+            [
+              4
+            ]
+          ],
+          "declared_excerpt_pages": [
+            4
+          ],
+          "location_labels": [
+            "sec:scenario-design",
+            "tab:first-results",
+            "sec:first-results",
+            "sec:discussion"
+          ]
+        },
+        {
+          "quote": "이는 저장된 개별 의견이지 합의 원인의 전수 분석이 아니다. 현재 재분석으로 불일치의 질적 원인별 건수나 합의 형성 절차를 새로 확정하지 않았다.",
+          "sentence_pages": [
+            [
+              6
+            ],
+            [
+              6
+            ]
+          ],
+          "declared_excerpt_pages": [
+            6
+          ],
+          "location_labels": [
+            "sec:selection",
+            "sec:human-results",
+            "tab:agreement",
+            "tab:reviewer-distribution",
+            "sec:threats"
+          ]
+        },
+        {
+          "quote": "따라서 정상 오탐 0/36만 보고하면 정상 대부분을 판정하지 못한 사실을 숨긴다. 기존 자동 텍스트 경로는 모든 144건을 미상으로 판정했다.",
+          "sentence_pages": [
+            [
+              5
+            ],
+            [
+              5
+            ]
+          ],
+          "declared_excerpt_pages": [
+            5
+          ],
+          "location_labels": [
+            "sec:aux-design",
+            "tab:regression",
+            "tab:first-results",
+            "sec:first-results",
+            "tab:retest",
+            "sec:threats"
+          ]
+        },
+        {
+          "quote": "종방향 행동 불일치가 있는 7건은 문장 사이의 모순이나 위험 주행의 독립 정답이 아니다.",
+          "sentence_pages": [
+            [
+              6
+            ]
+          ],
+          "declared_excerpt_pages": [
+            6
+          ],
+          "location_labels": [
+            "sec:trajectory-results",
+            "tab:trajectory-cases",
+            "sec:threats"
+          ]
+        }
+      ]
+    }
+  },
+  "location_macros_match_final_aux": true,
+  "build_warnings": {
+    "main": [],
+    "main-clean": [],
+    "response-to-reviewer-1": [],
+    "response-to-reviewer-2": [],
+    "response-to-reviewer-3": []
+  },
+  "expected_classes": {
+    "CONTRADICTION": 72,
+    "CONSISTENT": 36,
+    "UNKNOWN": 36
+  },
+  "first_results": {
+    "legacy_full": {
+      "correct": 96,
+      "first_violation": {
+        "correct": 54,
+        "denominator": 72
+      },
+      "gaps": {
+        "0": 36,
+        "2": 30,
+        "6": 30
+      }
+    },
+    "legacy_local": {
+      "correct": 72,
+      "first_violation": {
+        "correct": 36,
+        "denominator": 72
+      },
+      "gaps": {
+        "0": 24,
+        "2": 24,
+        "6": 24
+      }
+    },
+    "fsm": {
+      "correct": 144,
+      "first_violation": {
+        "correct": 72,
+        "denominator": 72
+      },
+      "gaps": {
+        "0": 48,
+        "2": 48,
+        "6": 48
+      }
+    },
+    "previous_1": {
+      "correct": 84,
+      "first_violation": {
+        "correct": 42,
+        "denominator": 72
+      },
+      "gaps": {
+        "0": 36,
+        "2": 24,
+        "6": 24
+      }
+    },
+    "previous_3": {
+      "correct": 90,
+      "first_violation": {
+        "correct": 48,
+        "denominator": 72
+      },
+      "gaps": {
+        "0": 36,
+        "2": 30,
+        "6": 24
+      }
+    },
+    "previous_5": {
+      "correct": 90,
+      "first_violation": {
+        "correct": 48,
+        "denominator": 72
+      },
+      "gaps": {
+        "0": 36,
+        "2": 30,
+        "6": 24
+      }
+    },
+    "legacy_auto_text": {
+      "correct": 36,
+      "first_violation": {
+        "correct": 0,
+        "denominator": 72
+      },
+      "gaps": {
+        "0": 12,
+        "2": 12,
+        "6": 12
+      }
+    },
+    "uppaal": {
+      "correct": 96,
+      "first_violation": {
+        "correct": 54,
+        "denominator": 72
+      },
+      "gaps": {
+        "0": 36,
+        "2": 30,
+        "6": 30
+      }
+    }
+  },
+  "retest": {
+    "status": "COMPLETED",
+    "case_count": 144,
+    "verdict_matches": 144,
+    "first_violation_matches": 72,
+    "positive_count": 72,
+    "issue_location_matches": 108,
+    "issue_obligation_matches": 108,
+    "issue_reason_matches": 108,
+    "issue_count": 108,
+    "evaluation_kind": "POST_BASELINE_DEVELOPMENT_SAME_CASE_RETEST",
+    "legacy_implementation_changed": false
+  },
+  "original_submission_unchanged": true,
+  "frozen_code_hashes_match": true,
+  "rgb_colors": {
+    "main": [
+      [
+        0.0,
+        0.27452,
+        0.70589
+      ]
+    ],
+    "main-clean": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  "errors": [],
+  "status": "PASS"
+}

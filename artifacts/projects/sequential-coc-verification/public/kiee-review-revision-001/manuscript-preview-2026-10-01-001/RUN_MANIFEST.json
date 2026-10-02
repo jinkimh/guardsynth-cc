@@ -1,0 +1,7 @@
+{
+  "project_id": "sequential-coc-verification",
+  "intro_sha256": "339e7d864b736781a85ddfbd53ca486279b49e1ee23d7b884f93b45c59ff35c5",
+  "pdf_sha256": "3c374eb6c71acc770b4167f42432189cc8b3184df46463b268fab36a1589d991",
+  "build": "lualatex; bibtex; lualatex; lualatex",
+  "source_intro": "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-10pages/sections/01-introduction.tex"
+}

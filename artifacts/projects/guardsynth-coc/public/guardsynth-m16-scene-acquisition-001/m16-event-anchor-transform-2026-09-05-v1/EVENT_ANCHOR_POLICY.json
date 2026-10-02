@@ -1,0 +1,18 @@
+{
+  "binding": "MODEL_T0_EQUALS_REVIEW_EVENT_TIMESTAMP",
+  "claim_scope": "M16_EVENT_ANCHOR_TRANSFORM_CLOSURE_NOT_GEOMETRIC_ASSOCIATION_EXPERT_EFFECT_OR_VEHICLE_SAFETY",
+  "does_not_close": [
+    "lane_or_zone_geometry",
+    "actor_or_control_association",
+    "jurisdiction_authority",
+    "outcome_lifecycle"
+  ],
+  "event_to_t0_expected_transform": "IDENTITY",
+  "offline_pose_interpolation_required": true,
+  "policy_version": "guardsynth-m16-review-event-anchor-v0.1",
+  "rationale": "Each M16 review item is an event-anchored curation scene; it is not a replay of an unrelated upstream Alpamayo inference manifest.",
+  "reuse_unrelated_inference_t0_prohibited": true,
+  "scope": "M16_60_SCENE_EXPERT_FORMAL_PILOT_SOURCE_CURATION",
+  "source_frame": "dataset_rig_at_event",
+  "target_frame": "ego_at_model_t0"
+}

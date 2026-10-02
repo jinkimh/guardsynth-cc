@@ -1,0 +1,22 @@
+\begin{tikzpicture}[
+  node distance=5mm,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=8mm,
+    text width=0.88\columnwidth, font=\footnotesize},
+  obs/.style={box, fill=observed!10},
+  der/.style={box, fill=derived!10},
+  ass/.style={box, fill=assumed!10},
+  input/.style={box, fill=black!3},
+  flow/.style={-{Latex[length=2mm]}, thick}
+]
+\node[obs] (a) {Driving video + recorded ego trajectory};
+\node[der, below=of a] (b) {Recorded-trajectory-conditioned meta-action extraction};
+\node[der, below=of b] (c) {Keyframe selection around action changes};
+\node[input, below=of c] (d) {VLM/LLM inputs: recorded video/trajectory + derived meta-action hints};
+\node[der, below=of d] (e) {Retrospective CoC reasoning sentence and quality score};
+\node[der, below=of e] (f) {This work: parsed intent, verification-input acceptance, ego-motion response evidence};
+\draw[flow] (a) -- (b);
+\draw[flow] (b) -- (c);
+\draw[flow] (c) -- (d);
+\draw[flow] (d) -- (e);
+\draw[flow] (e) -- (f);
+\end{tikzpicture}

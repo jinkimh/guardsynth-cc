@@ -1,0 +1,9 @@
+{
+  "claim_scope": "POST_REVIEW_SOURCE_CLOSURE_AUDIT_NOT_FINAL_ASSOCIATION_EXPERT_EFFECT_OR_VEHICLE_SAFETY",
+  "experiment_id": "GUARDSYNTH-M16-SCENE-ACQUISITION-001",
+  "input_class": "PUBLIC_DEIDENTIFIED_AGGREGATE",
+  "nvidia_ncore_commit_sha": "59c698d206da92b406a4f72619fce3b3a2c64bfd",
+  "restricted_identifier_leakage_count": 0,
+  "run_date": "2026-09-05",
+  "run_id": "m16-post-review-source-closure-2026-09-05-v1"
+}

@@ -1,0 +1,154 @@
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian) 
+ restricted system commands enabled.
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/response-to-reviewer-3.tex
+LaTeX2e <2022-11-01> patch level 1
+ L3 programming layer <2023-01-16>
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/response-style.tex
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-luatex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/luatex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hluatex.def
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/manuscript-locations.tex))
+No file response-to-reviewer-3.aux.
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: luatex
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd) [1{/var/lib/texmf/fo
+nts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 2772) in paragraph at lines 19--20
+[]\TU/NotoSerifCJKkr(0)/m/n/10.95 시간 논리·실행 중 검증 문헌과 
+자율주행 설명·계획 연구를 󴩅차 자료로 확인하고 비교표
+를
+[2]
+Underfull \hbox (badness 3260) in paragraph at lines 51--52
+[]\TU/NotoSerifCJKkr(0)/m/n/10.95 상류 모델 계열 Qwen/Qwen󴩇.󴩉-󴩇
+󴩉B-A󴩇B와 실행별 check-point re-vi-sion/prompt/con-fig
+[3] [4]
+Underfull \hbox (badness 2486) in paragraph at lines 109--110
+[]\TU/NotoSerifCJKkr(0)/m/n/10.95 󴩈장 및 󴩉장의 Un-known 처리: 종
+료 조건이 Un-known일 때 요구가 언제까지
+[5]
+Underfull \hbox (badness 1448) in paragraph at lines 149--150
+[]\TU/NotoSerifCJKkr(0)/m/n/10.95 저장된 보행자 원문 세 변형을 사
+건→원문 구절/위치→조건별 프레임→활성 의무→모순/근
+거
+[6]
+Underfull \hbox (badness 3735) in paragraph at lines 181--182
+[]\TU/NotoSerifCJKkr(0)/m/n/10.95 기존 단일 의무 상태/누적 정책과 
+보완 ac-tive[K], known[K], 선행조건·인덱스·bad/miss-
+
+Underfull \hbox (badness 3098) in paragraph at lines 185--186
+[]\TU/NotoSerifCJKkr(0)/m/n/10.95 후속 보완은 실제 템플릿 Sce-nar-i-o
+Ob-server의 Run/Done 도식을 추가하고, 기존󴩊상태와
+[7]
+Underfull \hbox (badness 1033) in paragraph at lines 227--228
+[]\TU/NotoSerifCJKkr(0)/m/n/10.95 따라서 독립 일반화 성능이 아니
+며 R󴩇의 개발 미사용 시험 요구를 충족한 결과로
+[8] [9]
+Underfull \hbox (badness 1527) in paragraph at lines 281--282
+[]\TU/NotoSerifCJKkr(0)/m/n/10.95 원 메모에서 확인되는 시간 요구
+·조건/순서·선행 관계 정보 부족 등의 의견은 개별 해석으
+로
+[10]
+Underfull \hbox (badness 7759) in paragraph at lines 313--314
+[]\TU/NotoSerifCJKkr(0)/m/n/10.95 독립적인 실제 모순·비모순 정답
+은 확보하지 못했으므로 자연 pre-ci-sion, re-call, F󴩅은
+[11]
+Underfull \hbox (badness 2582) in paragraph at lines 343--344
+[]\TU/NotoSerifCJKkr(0)/m/n/10.95 저장된 사건별 사유와 장면 판정
+을 재분석한 결과󴩆/󴩋/󴩅󴩌이 재현됐고 장면별 이전 판
+정과의
+[12]
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/response-trajectory-details.tex
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 1 on input line 44.
+
+)
+Underfull \hbox (badness 3209) in paragraph at lines 374--375
+\TU/NotoSerifCJKkr(0)/m/n/10.95 구체화했습니다. 자연 오류 정확도
+와 독립 시험, 사람 신뢰도 개선이 미완료라는 한계는
+
+Package longtable Warning: Table widths have changed. Rerun LaTeX.
+
+[13]
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/artifacts/projects/sequential-coc-verification/public/kiee-review-revisio
+n-001/manuscript-build-2026-10-01-004/response-to-reviewer-3/response-to-review
+er-3.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+)
+(see the transcript file for additional information)
+ 519 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 6 attribute, 59 glue_spec
+, 6 attribute_list, 1 write nodes
+   avail lists: 2:1140,3:84,4:28,5:168,6:27,7:4812,8:12,9:786,10:10,11:30
+<./fonts/NotoSerifCJKkr-Regular.otf><./fonts/NotoSerifCJKkr-Bold.otf>
+Output written on response-to-reviewer-3.pdf (13 pages, 136511 bytes).
+Transcript written on response-to-reviewer-3.log.

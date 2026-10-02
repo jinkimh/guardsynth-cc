@@ -1,0 +1,14 @@
+project_id: sequential-coc-verification
+project_order: 3
+title: Sequential CoC Verification
+research_question: Can persistent obligations, release conditions, and action-order contradictions be detected across sequential CoC annotations?
+status: manuscript_ready
+dependencies:
+  - uppaal-runtime
+artifact_root: artifacts/projects/sequential-coc-verification
+canonical_status: STATUS.md
+canonical_research_plan: docs/plans/01_RESEARCH_PLAN_V01.md
+canonical_milestones: docs/plans/02_PROJECT_MILESTONES.md
+canonical_execution_tracker: docs/plans/03_PROJECT_EXECUTION_TRACKER.md
+survey_index: docs/surveys/README.md
+paper_root: paper

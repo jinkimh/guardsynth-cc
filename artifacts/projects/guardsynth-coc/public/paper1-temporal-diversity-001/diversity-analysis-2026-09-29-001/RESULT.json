@@ -1,0 +1,4673 @@
+{
+  "protocol_id": "paper1-temporal-diversity-v0.1",
+  "results": {
+    "D1/boundary": {
+      "arms": {
+        "P0": {
+          "violation": {
+            "mean": 0.3611111111111111,
+            "paired_seed_group_95ci": [
+              0.3194444444444444,
+              0.375
+            ],
+            "per_seed": {
+              "42": 0.375,
+              "17": 0.3333333333333333,
+              "123": 0.375
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.6388888888888888,
+            "paired_seed_group_95ci": [
+              0.625,
+              0.6805555555555556
+            ],
+            "per_seed": {
+              "42": 0.625,
+              "17": 0.6666666666666666,
+              "123": 0.625
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.5,
+            "paired_seed_group_95ci": [
+              0.5,
+              0.5
+            ],
+            "per_seed": {
+              "42": 0.5,
+              "17": 0.5,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P1": {
+          "violation": {
+            "mean": 0.3888888888888889,
+            "paired_seed_group_95ci": [
+              0.2638888888888889,
+              0.5416666666666666
+            ],
+            "per_seed": {
+              "42": 0.375,
+              "17": 0.2916666666666667,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.6111111111111112,
+            "paired_seed_group_95ci": [
+              0.4583333333333333,
+              0.7361111111111112
+            ],
+            "per_seed": {
+              "42": 0.625,
+              "17": 0.7083333333333334,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.5972222222222222,
+            "paired_seed_group_95ci": [
+              0.4583333333333333,
+              0.7361111111111112
+            ],
+            "per_seed": {
+              "42": 0.625,
+              "17": 0.7083333333333334,
+              "123": 0.4583333333333333
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.3055555555555556,
+            "paired_seed_group_95ci": [
+              0.1388888888888889,
+              0.5277777777777778
+            ],
+            "per_seed": {
+              "42": 0.25,
+              "17": 0.4166666666666667,
+              "123": 0.25
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P2": {
+          "violation": {
+            "mean": 0.1527777777777778,
+            "paired_seed_group_95ci": [
+              0.013888888888888888,
+              0.3333333333333333
+            ],
+            "per_seed": {
+              "42": 0.125,
+              "17": 0.20833333333333334,
+              "123": 0.125
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.8472222222222222,
+            "paired_seed_group_95ci": [
+              0.6666666666666666,
+              0.9861111111111112
+            ],
+            "per_seed": {
+              "42": 0.875,
+              "17": 0.7916666666666666,
+              "123": 0.875
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.75,
+            "paired_seed_group_95ci": [
+              0.5416666666666666,
+              0.875
+            ],
+            "per_seed": {
+              "42": 0.75,
+              "17": 0.7916666666666666,
+              "123": 0.7083333333333334
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.5555555555555556,
+            "paired_seed_group_95ci": [
+              0.25,
+              0.75
+            ],
+            "per_seed": {
+              "42": 0.5,
+              "17": 0.6666666666666666,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          }
+        }
+      },
+      "P2_minus_P1": {
+        "violation": {
+          "mean": -0.2361111111111111,
+          "paired_seed_group_95ci": [
+            -0.4166666666666667,
+            -0.06944444444444445
+          ],
+          "per_seed": {
+            "42": -0.25,
+            "17": -0.08333333333333333,
+            "123": -0.375
+          },
+          "semantic_groups": 3
+        },
+        "safe_completion": {
+          "mean": 0.2361111111111111,
+          "paired_seed_group_95ci": [
+            0.06944444444444445,
+            0.4166666666666667
+          ],
+          "per_seed": {
+            "42": 0.25,
+            "17": 0.08333333333333333,
+            "123": 0.375
+          },
+          "semantic_groups": 3
+        },
+        "deadlock": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "unnecessary_stop": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "correct": {
+          "mean": 0.1527777777777778,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.3333333333333333
+          ],
+          "per_seed": {
+            "42": 0.125,
+            "17": 0.08333333333333333,
+            "123": 0.25
+          },
+          "semantic_groups": 3
+        },
+        "valid": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "pair_correct": {
+          "mean": 0.25,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.5
+          ],
+          "per_seed": {
+            "42": 0.25,
+            "17": 0.25,
+            "123": 0.25
+          },
+          "semantic_groups": 3
+        }
+      }
+    },
+    "D1/clear_only": {
+      "arms": {
+        "P0": {
+          "violation": {
+            "mean": 0.3333333333333333,
+            "paired_seed_group_95ci": [
+              0.25,
+              0.375
+            ],
+            "per_seed": {
+              "42": 0.3333333333333333,
+              "17": 0.3333333333333333,
+              "123": 0.3333333333333333
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.6666666666666666,
+            "paired_seed_group_95ci": [
+              0.625,
+              0.75
+            ],
+            "per_seed": {
+              "42": 0.6666666666666666,
+              "17": 0.6666666666666666,
+              "123": 0.6666666666666666
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.5,
+            "paired_seed_group_95ci": [
+              0.5,
+              0.5
+            ],
+            "per_seed": {
+              "42": 0.5,
+              "17": 0.5,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P1": {
+          "violation": {
+            "mean": 0.375,
+            "paired_seed_group_95ci": [
+              0.08333333333333333,
+              0.5833333333333334
+            ],
+            "per_seed": {
+              "42": 0.375,
+              "17": 0.4166666666666667,
+              "123": 0.3333333333333333
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.625,
+            "paired_seed_group_95ci": [
+              0.4166666666666667,
+              0.9166666666666666
+            ],
+            "per_seed": {
+              "42": 0.625,
+              "17": 0.5833333333333334,
+              "123": 0.6666666666666666
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.625,
+            "paired_seed_group_95ci": [
+              0.4166666666666667,
+              0.9166666666666666
+            ],
+            "per_seed": {
+              "42": 0.625,
+              "17": 0.5833333333333334,
+              "123": 0.6666666666666666
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.3888888888888889,
+            "paired_seed_group_95ci": [
+              0.08333333333333333,
+              0.8333333333333334
+            ],
+            "per_seed": {
+              "42": 0.25,
+              "17": 0.4166666666666667,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P2": {
+          "violation": {
+            "mean": 0.16666666666666666,
+            "paired_seed_group_95ci": [
+              0.09722222222222222,
+              0.25
+            ],
+            "per_seed": {
+              "42": 0.125,
+              "17": 0.20833333333333334,
+              "123": 0.16666666666666666
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.8194444444444444,
+            "paired_seed_group_95ci": [
+              0.75,
+              0.9027777777777778
+            ],
+            "per_seed": {
+              "42": 0.875,
+              "17": 0.75,
+              "123": 0.8333333333333334
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.013888888888888888,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.05555555555555555
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.041666666666666664,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.013888888888888888,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.05555555555555555
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.041666666666666664,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.7638888888888888,
+            "paired_seed_group_95ci": [
+              0.7079861111111112,
+              0.8333333333333334
+            ],
+            "per_seed": {
+              "42": 0.7916666666666666,
+              "17": 0.7083333333333334,
+              "123": 0.7916666666666666
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.5555555555555556,
+            "paired_seed_group_95ci": [
+              0.4166666666666667,
+              0.6666666666666666
+            ],
+            "per_seed": {
+              "42": 0.6666666666666666,
+              "17": 0.4166666666666667,
+              "123": 0.5833333333333334
+            },
+            "semantic_groups": 3
+          }
+        }
+      },
+      "P2_minus_P1": {
+        "violation": {
+          "mean": -0.20833333333333334,
+          "paired_seed_group_95ci": [
+            -0.375,
+            0.08333333333333333
+          ],
+          "per_seed": {
+            "42": -0.25,
+            "17": -0.20833333333333334,
+            "123": -0.16666666666666666
+          },
+          "semantic_groups": 3
+        },
+        "safe_completion": {
+          "mean": 0.19444444444444445,
+          "paired_seed_group_95ci": [
+            -0.08333333333333333,
+            0.375
+          ],
+          "per_seed": {
+            "42": 0.25,
+            "17": 0.16666666666666666,
+            "123": 0.16666666666666666
+          },
+          "semantic_groups": 3
+        },
+        "deadlock": {
+          "mean": 0.013888888888888888,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.05555555555555555
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.041666666666666664,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "unnecessary_stop": {
+          "mean": 0.013888888888888888,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.05555555555555555
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.041666666666666664,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "correct": {
+          "mean": 0.1388888888888889,
+          "paired_seed_group_95ci": [
+            -0.16666666666666666,
+            0.375
+          ],
+          "per_seed": {
+            "42": 0.16666666666666666,
+            "17": 0.125,
+            "123": 0.125
+          },
+          "semantic_groups": 3
+        },
+        "valid": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "pair_correct": {
+          "mean": 0.16666666666666666,
+          "paired_seed_group_95ci": [
+            -0.25,
+            0.5555555555555556
+          ],
+          "per_seed": {
+            "42": 0.4166666666666667,
+            "17": 0.0,
+            "123": 0.08333333333333333
+          },
+          "semantic_groups": 3
+        }
+      }
+    },
+    "D1/duration_only": {
+      "arms": {
+        "P0": {
+          "violation": {
+            "mean": 0.3194444444444444,
+            "paired_seed_group_95ci": [
+              0.25,
+              0.375
+            ],
+            "per_seed": {
+              "42": 0.375,
+              "17": 0.2916666666666667,
+              "123": 0.2916666666666667
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.6805555555555556,
+            "paired_seed_group_95ci": [
+              0.625,
+              0.75
+            ],
+            "per_seed": {
+              "42": 0.625,
+              "17": 0.7083333333333334,
+              "123": 0.7083333333333334
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.5,
+            "paired_seed_group_95ci": [
+              0.5,
+              0.5
+            ],
+            "per_seed": {
+              "42": 0.5,
+              "17": 0.5,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P1": {
+          "violation": {
+            "mean": 0.027777777777777776,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.08333333333333333
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.08333333333333333
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.9722222222222222,
+            "paired_seed_group_95ci": [
+              0.9166666666666666,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 0.9166666666666666
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.9722222222222222,
+            "paired_seed_group_95ci": [
+              0.9166666666666666,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 0.9166666666666666
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.9444444444444444,
+            "paired_seed_group_95ci": [
+              0.8333333333333334,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 0.8333333333333334
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P2": {
+          "violation": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          }
+        }
+      },
+      "P2_minus_P1": {
+        "violation": {
+          "mean": -0.027777777777777776,
+          "paired_seed_group_95ci": [
+            -0.08333333333333333,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": -0.08333333333333333
+          },
+          "semantic_groups": 3
+        },
+        "safe_completion": {
+          "mean": 0.027777777777777776,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.08333333333333333
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.08333333333333333
+          },
+          "semantic_groups": 3
+        },
+        "deadlock": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "unnecessary_stop": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "correct": {
+          "mean": 0.027777777777777776,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.08333333333333333
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.08333333333333333
+          },
+          "semantic_groups": 3
+        },
+        "valid": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "pair_correct": {
+          "mean": 0.05555555555555555,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.16666666666666666
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.16666666666666666
+          },
+          "semantic_groups": 3
+        }
+      }
+    },
+    "D1/joint": {
+      "arms": {
+        "P0": {
+          "violation": {
+            "mean": 0.3333333333333333,
+            "paired_seed_group_95ci": [
+              0.25,
+              0.375
+            ],
+            "per_seed": {
+              "42": 0.3333333333333333,
+              "17": 0.3333333333333333,
+              "123": 0.3333333333333333
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.6666666666666666,
+            "paired_seed_group_95ci": [
+              0.625,
+              0.75
+            ],
+            "per_seed": {
+              "42": 0.6666666666666666,
+              "17": 0.6666666666666666,
+              "123": 0.6666666666666666
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.5,
+            "paired_seed_group_95ci": [
+              0.5,
+              0.5
+            ],
+            "per_seed": {
+              "42": 0.5,
+              "17": 0.5,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P1": {
+          "violation": {
+            "mean": 0.4027777777777778,
+            "paired_seed_group_95ci": [
+              0.125,
+              0.5972222222222222
+            ],
+            "per_seed": {
+              "42": 0.375,
+              "17": 0.4583333333333333,
+              "123": 0.375
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.5972222222222222,
+            "paired_seed_group_95ci": [
+              0.4027777777777778,
+              0.875
+            ],
+            "per_seed": {
+              "42": 0.625,
+              "17": 0.5416666666666666,
+              "123": 0.625
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.5972222222222222,
+            "paired_seed_group_95ci": [
+              0.4027777777777778,
+              0.875
+            ],
+            "per_seed": {
+              "42": 0.625,
+              "17": 0.5416666666666666,
+              "123": 0.625
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.3611111111111111,
+            "paired_seed_group_95ci": [
+              0.08333333333333333,
+              0.75
+            ],
+            "per_seed": {
+              "42": 0.25,
+              "17": 0.4166666666666667,
+              "123": 0.4166666666666667
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P2": {
+          "violation": {
+            "mean": 0.25,
+            "paired_seed_group_95ci": [
+              0.08333333333333333,
+              0.5138888888888888
+            ],
+            "per_seed": {
+              "42": 0.125,
+              "17": 0.375,
+              "123": 0.25
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.7222222222222222,
+            "paired_seed_group_95ci": [
+              0.4722222222222222,
+              0.9166666666666666
+            ],
+            "per_seed": {
+              "42": 0.875,
+              "17": 0.5833333333333334,
+              "123": 0.7083333333333334
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.027777777777777776,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.08333333333333333
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.041666666666666664,
+              "123": 0.041666666666666664
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.027777777777777776,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.08333333333333333
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.041666666666666664,
+              "123": 0.041666666666666664
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.6805555555555556,
+            "paired_seed_group_95ci": [
+              0.4444444444444444,
+              0.8333333333333334
+            ],
+            "per_seed": {
+              "42": 0.8333333333333334,
+              "17": 0.5416666666666666,
+              "123": 0.6666666666666666
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.4722222222222222,
+            "paired_seed_group_95ci": [
+              0.2222222222222222,
+              0.6666666666666666
+            ],
+            "per_seed": {
+              "42": 0.6666666666666666,
+              "17": 0.25,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          }
+        }
+      },
+      "P2_minus_P1": {
+        "violation": {
+          "mean": -0.1527777777777778,
+          "paired_seed_group_95ci": [
+            -0.2916666666666667,
+            0.013888888888888888
+          ],
+          "per_seed": {
+            "42": -0.25,
+            "17": -0.08333333333333333,
+            "123": -0.125
+          },
+          "semantic_groups": 3
+        },
+        "safe_completion": {
+          "mean": 0.125,
+          "paired_seed_group_95ci": [
+            -0.09722222222222222,
+            0.2916666666666667
+          ],
+          "per_seed": {
+            "42": 0.25,
+            "17": 0.041666666666666664,
+            "123": 0.08333333333333333
+          },
+          "semantic_groups": 3
+        },
+        "deadlock": {
+          "mean": 0.027777777777777776,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.08333333333333333
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.041666666666666664,
+            "123": 0.041666666666666664
+          },
+          "semantic_groups": 3
+        },
+        "unnecessary_stop": {
+          "mean": 0.027777777777777776,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.08333333333333333
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.041666666666666664,
+            "123": 0.041666666666666664
+          },
+          "semantic_groups": 3
+        },
+        "correct": {
+          "mean": 0.08333333333333333,
+          "paired_seed_group_95ci": [
+            -0.09722222222222222,
+            0.25
+          ],
+          "per_seed": {
+            "42": 0.20833333333333334,
+            "17": 0.0,
+            "123": 0.041666666666666664
+          },
+          "semantic_groups": 3
+        },
+        "valid": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "pair_correct": {
+          "mean": 0.1111111111111111,
+          "paired_seed_group_95ci": [
+            -0.19444444444444445,
+            0.5
+          ],
+          "per_seed": {
+            "42": 0.4166666666666667,
+            "17": -0.16666666666666666,
+            "123": 0.08333333333333333
+          },
+          "semantic_groups": 3
+        }
+      }
+    },
+    "D2/canonical": {
+      "arms": {
+        "P0": {
+          "violation": {
+            "mean": 0.3194444444444444,
+            "paired_seed_group_95ci": [
+              0.25,
+              0.375
+            ],
+            "per_seed": {
+              "42": 0.375,
+              "17": 0.2916666666666667,
+              "123": 0.2916666666666667
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.6805555555555556,
+            "paired_seed_group_95ci": [
+              0.625,
+              0.75
+            ],
+            "per_seed": {
+              "42": 0.625,
+              "17": 0.7083333333333334,
+              "123": 0.7083333333333334
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.5,
+            "paired_seed_group_95ci": [
+              0.5,
+              0.5
+            ],
+            "per_seed": {
+              "42": 0.5,
+              "17": 0.5,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P1": {
+          "violation": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P2": {
+          "violation": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          }
+        }
+      },
+      "P2_minus_P1": {
+        "violation": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "safe_completion": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "deadlock": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "unnecessary_stop": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "correct": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "valid": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "pair_correct": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        }
+      }
+    },
+    "D2/paraphrase1": {
+      "arms": {
+        "P0": {
+          "violation": {
+            "mean": 0.3194444444444444,
+            "paired_seed_group_95ci": [
+              0.25,
+              0.375
+            ],
+            "per_seed": {
+              "42": 0.375,
+              "17": 0.2916666666666667,
+              "123": 0.2916666666666667
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.6805555555555556,
+            "paired_seed_group_95ci": [
+              0.625,
+              0.75
+            ],
+            "per_seed": {
+              "42": 0.625,
+              "17": 0.7083333333333334,
+              "123": 0.7083333333333334
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.5,
+            "paired_seed_group_95ci": [
+              0.5,
+              0.5
+            ],
+            "per_seed": {
+              "42": 0.5,
+              "17": 0.5,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P1": {
+          "violation": {
+            "mean": 0.05555555555555555,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.125
+            ],
+            "per_seed": {
+              "42": 0.041666666666666664,
+              "17": 0.0,
+              "123": 0.125
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.9444444444444444,
+            "paired_seed_group_95ci": [
+              0.875,
+              1.0
+            ],
+            "per_seed": {
+              "42": 0.9583333333333334,
+              "17": 1.0,
+              "123": 0.875
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.9444444444444444,
+            "paired_seed_group_95ci": [
+              0.875,
+              1.0
+            ],
+            "per_seed": {
+              "42": 0.9583333333333334,
+              "17": 1.0,
+              "123": 0.875
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.8888888888888888,
+            "paired_seed_group_95ci": [
+              0.75,
+              1.0
+            ],
+            "per_seed": {
+              "42": 0.9166666666666666,
+              "17": 1.0,
+              "123": 0.75
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.05555555555555555,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.125
+            ],
+            "per_seed": {
+              "42": 0.041666666666666664,
+              "17": 0.0,
+              "123": 0.125
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": -0.05555555555555555,
+            "paired_seed_group_95ci": [
+              -0.125,
+              0.0
+            ],
+            "per_seed": {
+              "42": -0.041666666666666664,
+              "17": 0.0,
+              "123": -0.125
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": -0.05555555555555555,
+            "paired_seed_group_95ci": [
+              -0.125,
+              0.0
+            ],
+            "per_seed": {
+              "42": -0.041666666666666664,
+              "17": 0.0,
+              "123": -0.125
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P2": {
+          "violation": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.9861111111111112,
+            "paired_seed_group_95ci": [
+              0.9444444444444444,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 0.9583333333333334
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.9722222222222222,
+            "paired_seed_group_95ci": [
+              0.8888888888888888,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 0.9166666666666666
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.013888888888888888,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.05555555555555555
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.041666666666666664
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": -0.013888888888888888,
+            "paired_seed_group_95ci": [
+              -0.05555555555555555,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": -0.041666666666666664
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          }
+        }
+      },
+      "P2_minus_P1": {
+        "violation": {
+          "mean": -0.05555555555555555,
+          "paired_seed_group_95ci": [
+            -0.125,
+            0.0
+          ],
+          "per_seed": {
+            "42": -0.041666666666666664,
+            "17": 0.0,
+            "123": -0.125
+          },
+          "semantic_groups": 3
+        },
+        "safe_completion": {
+          "mean": 0.05555555555555555,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.125
+          ],
+          "per_seed": {
+            "42": 0.041666666666666664,
+            "17": 0.0,
+            "123": 0.125
+          },
+          "semantic_groups": 3
+        },
+        "deadlock": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "unnecessary_stop": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "correct": {
+          "mean": 0.041666666666666664,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.11145833333333144
+          ],
+          "per_seed": {
+            "42": 0.041666666666666664,
+            "17": 0.0,
+            "123": 0.08333333333333333
+          },
+          "semantic_groups": 3
+        },
+        "valid": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "pair_correct": {
+          "mean": 0.08333333333333333,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.22291666666666288
+          ],
+          "per_seed": {
+            "42": 0.08333333333333333,
+            "17": 0.0,
+            "123": 0.16666666666666666
+          },
+          "semantic_groups": 3
+        }
+      }
+    },
+    "D2/paraphrase2": {
+      "arms": {
+        "P0": {
+          "violation": {
+            "mean": 0.3194444444444444,
+            "paired_seed_group_95ci": [
+              0.25,
+              0.375
+            ],
+            "per_seed": {
+              "42": 0.375,
+              "17": 0.2916666666666667,
+              "123": 0.2916666666666667
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.6805555555555556,
+            "paired_seed_group_95ci": [
+              0.625,
+              0.75
+            ],
+            "per_seed": {
+              "42": 0.625,
+              "17": 0.7083333333333334,
+              "123": 0.7083333333333334
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.5,
+            "paired_seed_group_95ci": [
+              0.5,
+              0.5
+            ],
+            "per_seed": {
+              "42": 0.5,
+              "17": 0.5,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P1": {
+          "violation": {
+            "mean": 0.125,
+            "paired_seed_group_95ci": [
+              0.041666666666666664,
+              0.20833333333333334
+            ],
+            "per_seed": {
+              "42": 0.08333333333333333,
+              "17": 0.16666666666666666,
+              "123": 0.125
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.875,
+            "paired_seed_group_95ci": [
+              0.7916666666666666,
+              0.9583333333333334
+            ],
+            "per_seed": {
+              "42": 0.9166666666666666,
+              "17": 0.8333333333333334,
+              "123": 0.875
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.8055555555555556,
+            "paired_seed_group_95ci": [
+              0.75,
+              0.8888888888888888
+            ],
+            "per_seed": {
+              "42": 0.7916666666666666,
+              "17": 0.8333333333333334,
+              "123": 0.7916666666666666
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.6111111111111112,
+            "paired_seed_group_95ci": [
+              0.5,
+              0.7777777777777778
+            ],
+            "per_seed": {
+              "42": 0.5833333333333334,
+              "17": 0.6666666666666666,
+              "123": 0.5833333333333334
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.19444444444444445,
+            "paired_seed_group_95ci": [
+              0.1111111111111111,
+              0.25
+            ],
+            "per_seed": {
+              "42": 0.20833333333333334,
+              "17": 0.16666666666666666,
+              "123": 0.20833333333333334
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": -0.19444444444444445,
+            "paired_seed_group_95ci": [
+              -0.25,
+              -0.1111111111111111
+            ],
+            "per_seed": {
+              "42": -0.20833333333333334,
+              "17": -0.16666666666666666,
+              "123": -0.20833333333333334
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": -0.125,
+            "paired_seed_group_95ci": [
+              -0.20833333333333334,
+              -0.041666666666666664
+            ],
+            "per_seed": {
+              "42": -0.08333333333333333,
+              "17": -0.16666666666666666,
+              "123": -0.125
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P2": {
+          "violation": {
+            "mean": 0.041666666666666664,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.1111111111111111
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.08333333333333333,
+              "123": 0.041666666666666664
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.9583333333333334,
+            "paired_seed_group_95ci": [
+              0.8888888888888888,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 0.9166666666666666,
+              "123": 0.9583333333333334
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.7916666666666666,
+            "paired_seed_group_95ci": [
+              0.6944444444444444,
+              0.9166666666666666
+            ],
+            "per_seed": {
+              "42": 0.7083333333333334,
+              "17": 0.875,
+              "123": 0.7916666666666666
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.5833333333333334,
+            "paired_seed_group_95ci": [
+              0.3888888888888889,
+              0.8333333333333334
+            ],
+            "per_seed": {
+              "42": 0.4166666666666667,
+              "17": 0.75,
+              "123": 0.5833333333333334
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.20833333333333334,
+            "paired_seed_group_95ci": [
+              0.08333333333333333,
+              0.3055555555555556
+            ],
+            "per_seed": {
+              "42": 0.2916666666666667,
+              "17": 0.125,
+              "123": 0.20833333333333334
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": -0.20833333333333334,
+            "paired_seed_group_95ci": [
+              -0.3055555555555556,
+              -0.08333333333333333
+            ],
+            "per_seed": {
+              "42": -0.2916666666666667,
+              "17": -0.125,
+              "123": -0.20833333333333334
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": -0.041666666666666664,
+            "paired_seed_group_95ci": [
+              -0.1111111111111111,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": -0.08333333333333333,
+              "123": -0.041666666666666664
+            },
+            "semantic_groups": 3
+          }
+        }
+      },
+      "P2_minus_P1": {
+        "violation": {
+          "mean": -0.08333333333333333,
+          "paired_seed_group_95ci": [
+            -0.125,
+            -0.041666666666666664
+          ],
+          "per_seed": {
+            "42": -0.08333333333333333,
+            "17": -0.08333333333333333,
+            "123": -0.08333333333333333
+          },
+          "semantic_groups": 3
+        },
+        "safe_completion": {
+          "mean": 0.08333333333333333,
+          "paired_seed_group_95ci": [
+            0.041666666666666664,
+            0.125
+          ],
+          "per_seed": {
+            "42": 0.08333333333333333,
+            "17": 0.08333333333333333,
+            "123": 0.08333333333333333
+          },
+          "semantic_groups": 3
+        },
+        "deadlock": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "unnecessary_stop": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "correct": {
+          "mean": -0.013888888888888888,
+          "paired_seed_group_95ci": [
+            -0.09722222222222222,
+            0.08333333333333333
+          ],
+          "per_seed": {
+            "42": -0.08333333333333333,
+            "17": 0.041666666666666664,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "valid": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "pair_correct": {
+          "mean": -0.027777777777777776,
+          "paired_seed_group_95ci": [
+            -0.19444444444444445,
+            0.16666666666666666
+          ],
+          "per_seed": {
+            "42": -0.16666666666666666,
+            "17": 0.08333333333333333,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        }
+      }
+    },
+    "D3/blank": {
+      "arms": {
+        "P0": {
+          "violation": {
+            "mean": 0.2361111111111111,
+            "paired_seed_group_95ci": [
+              0.1527777777777778,
+              0.3333333333333333
+            ],
+            "per_seed": {
+              "42": 0.25,
+              "17": 0.2916666666666667,
+              "123": 0.16666666666666666
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.7638888888888888,
+            "paired_seed_group_95ci": [
+              0.6666666666666666,
+              0.8472222222222222
+            ],
+            "per_seed": {
+              "42": 0.75,
+              "17": 0.7083333333333334,
+              "123": 0.8333333333333334
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.5,
+            "paired_seed_group_95ci": [
+              0.5,
+              0.5
+            ],
+            "per_seed": {
+              "42": 0.5,
+              "17": 0.5,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.19444444444444445,
+            "paired_seed_group_95ci": [
+              0.08333333333333333,
+              0.3333333333333333
+            ],
+            "per_seed": {
+              "42": 0.16666666666666666,
+              "17": 0.08333333333333333,
+              "123": 0.3333333333333333
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": 0.09722222222222222,
+            "paired_seed_group_95ci": [
+              0.041666666666666664,
+              0.16666666666666666
+            ],
+            "per_seed": {
+              "42": 0.08333333333333333,
+              "17": 0.041666666666666664,
+              "123": 0.16666666666666666
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P1": {
+          "violation": {
+            "mean": 0.4444444444444444,
+            "paired_seed_group_95ci": [
+              0.375,
+              0.5416666666666666
+            ],
+            "per_seed": {
+              "42": 0.375,
+              "17": 0.4166666666666667,
+              "123": 0.5416666666666666
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.5555555555555556,
+            "paired_seed_group_95ci": [
+              0.4583333333333333,
+              0.625
+            ],
+            "per_seed": {
+              "42": 0.625,
+              "17": 0.5833333333333334,
+              "123": 0.4583333333333333
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.5138888888888888,
+            "paired_seed_group_95ci": [
+              0.4444444444444444,
+              0.5833333333333334
+            ],
+            "per_seed": {
+              "42": 0.5,
+              "17": 0.5833333333333334,
+              "123": 0.4583333333333333
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.16666666666666666,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.25
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.25,
+              "123": 0.25
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.3611111111111111,
+            "paired_seed_group_95ci": [
+              0.16666666666666666,
+              0.5416666666666666
+            ],
+            "per_seed": {
+              "42": 0.2916666666666667,
+              "17": 0.5416666666666666,
+              "123": 0.25
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": -0.08333333333333333,
+            "paired_seed_group_95ci": [
+              -0.4166666666666667,
+              0.18055555555555555
+            ],
+            "per_seed": {
+              "42": -0.125,
+              "17": 0.041666666666666664,
+              "123": -0.16666666666666666
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": -0.041666666666666664,
+            "paired_seed_group_95ci": [
+              -0.375,
+              0.20833333333333334
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.041666666666666664,
+              "123": -0.16666666666666666
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P2": {
+          "violation": {
+            "mean": 0.25,
+            "paired_seed_group_95ci": [
+              0.125,
+              0.3611111111111111
+            ],
+            "per_seed": {
+              "42": 0.125,
+              "17": 0.2916666666666667,
+              "123": 0.3333333333333333
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.75,
+            "paired_seed_group_95ci": [
+              0.6388888888888888,
+              0.875
+            ],
+            "per_seed": {
+              "42": 0.875,
+              "17": 0.7083333333333334,
+              "123": 0.6666666666666666
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.625,
+            "paired_seed_group_95ci": [
+              0.4166666666666667,
+              0.7916666666666666
+            ],
+            "per_seed": {
+              "42": 0.7916666666666666,
+              "17": 0.6666666666666666,
+              "123": 0.4166666666666667
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.3333333333333333,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.6111111111111112
+            ],
+            "per_seed": {
+              "42": 0.5833333333333334,
+              "17": 0.4166666666666667,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.2638888888888889,
+            "paired_seed_group_95ci": [
+              0.125,
+              0.4027777777777778
+            ],
+            "per_seed": {
+              "42": 0.20833333333333334,
+              "17": 0.20833333333333334,
+              "123": 0.375
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": -0.05555555555555555,
+            "paired_seed_group_95ci": [
+              -0.2916666666666667,
+              0.16666666666666666
+            ],
+            "per_seed": {
+              "42": -0.041666666666666664,
+              "17": 0.125,
+              "123": -0.25
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": 0.027777777777777776,
+            "paired_seed_group_95ci": [
+              -0.125,
+              0.20833333333333334
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.125,
+              "123": -0.041666666666666664
+            },
+            "semantic_groups": 3
+          }
+        }
+      },
+      "P2_minus_P1": {
+        "violation": {
+          "mean": -0.19444444444444445,
+          "paired_seed_group_95ci": [
+            -0.2777777777777778,
+            -0.08333333333333333
+          ],
+          "per_seed": {
+            "42": -0.25,
+            "17": -0.125,
+            "123": -0.20833333333333334
+          },
+          "semantic_groups": 3
+        },
+        "safe_completion": {
+          "mean": 0.19444444444444445,
+          "paired_seed_group_95ci": [
+            0.08333333333333333,
+            0.2777777777777778
+          ],
+          "per_seed": {
+            "42": 0.25,
+            "17": 0.125,
+            "123": 0.20833333333333334
+          },
+          "semantic_groups": 3
+        },
+        "deadlock": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "unnecessary_stop": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "correct": {
+          "mean": 0.1111111111111111,
+          "paired_seed_group_95ci": [
+            -0.05555555555555555,
+            0.2916666666666667
+          ],
+          "per_seed": {
+            "42": 0.2916666666666667,
+            "17": 0.08333333333333333,
+            "123": -0.041666666666666664
+          },
+          "semantic_groups": 3
+        },
+        "valid": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "pair_correct": {
+          "mean": 0.16666666666666666,
+          "paired_seed_group_95ci": [
+            -0.25,
+            0.5833333333333334
+          ],
+          "per_seed": {
+            "42": 0.5833333333333334,
+            "17": 0.16666666666666666,
+            "123": -0.25
+          },
+          "semantic_groups": 3
+        }
+      }
+    },
+    "D3/original": {
+      "arms": {
+        "P0": {
+          "violation": {
+            "mean": 0.3333333333333333,
+            "paired_seed_group_95ci": [
+              0.25,
+              0.375
+            ],
+            "per_seed": {
+              "42": 0.3333333333333333,
+              "17": 0.3333333333333333,
+              "123": 0.3333333333333333
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.6666666666666666,
+            "paired_seed_group_95ci": [
+              0.625,
+              0.75
+            ],
+            "per_seed": {
+              "42": 0.6666666666666666,
+              "17": 0.6666666666666666,
+              "123": 0.6666666666666666
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.5,
+            "paired_seed_group_95ci": [
+              0.5,
+              0.5
+            ],
+            "per_seed": {
+              "42": 0.5,
+              "17": 0.5,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P1": {
+          "violation": {
+            "mean": 0.4027777777777778,
+            "paired_seed_group_95ci": [
+              0.125,
+              0.5972222222222222
+            ],
+            "per_seed": {
+              "42": 0.375,
+              "17": 0.4583333333333333,
+              "123": 0.375
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.5972222222222222,
+            "paired_seed_group_95ci": [
+              0.4027777777777778,
+              0.875
+            ],
+            "per_seed": {
+              "42": 0.625,
+              "17": 0.5416666666666666,
+              "123": 0.625
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.5972222222222222,
+            "paired_seed_group_95ci": [
+              0.4027777777777778,
+              0.875
+            ],
+            "per_seed": {
+              "42": 0.625,
+              "17": 0.5416666666666666,
+              "123": 0.625
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.3611111111111111,
+            "paired_seed_group_95ci": [
+              0.08333333333333333,
+              0.75
+            ],
+            "per_seed": {
+              "42": 0.25,
+              "17": 0.4166666666666667,
+              "123": 0.4166666666666667
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P2": {
+          "violation": {
+            "mean": 0.25,
+            "paired_seed_group_95ci": [
+              0.08333333333333333,
+              0.5138888888888888
+            ],
+            "per_seed": {
+              "42": 0.125,
+              "17": 0.375,
+              "123": 0.25
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.7222222222222222,
+            "paired_seed_group_95ci": [
+              0.4722222222222222,
+              0.9166666666666666
+            ],
+            "per_seed": {
+              "42": 0.875,
+              "17": 0.5833333333333334,
+              "123": 0.7083333333333334
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.027777777777777776,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.08333333333333333
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.041666666666666664,
+              "123": 0.041666666666666664
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.027777777777777776,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.08333333333333333
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.041666666666666664,
+              "123": 0.041666666666666664
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.6805555555555556,
+            "paired_seed_group_95ci": [
+              0.4444444444444444,
+              0.8333333333333334
+            ],
+            "per_seed": {
+              "42": 0.8333333333333334,
+              "17": 0.5416666666666666,
+              "123": 0.6666666666666666
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.4722222222222222,
+            "paired_seed_group_95ci": [
+              0.2222222222222222,
+              0.6666666666666666
+            ],
+            "per_seed": {
+              "42": 0.6666666666666666,
+              "17": 0.25,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          }
+        }
+      },
+      "P2_minus_P1": {
+        "violation": {
+          "mean": -0.1527777777777778,
+          "paired_seed_group_95ci": [
+            -0.2916666666666667,
+            0.013888888888888888
+          ],
+          "per_seed": {
+            "42": -0.25,
+            "17": -0.08333333333333333,
+            "123": -0.125
+          },
+          "semantic_groups": 3
+        },
+        "safe_completion": {
+          "mean": 0.125,
+          "paired_seed_group_95ci": [
+            -0.09722222222222222,
+            0.2916666666666667
+          ],
+          "per_seed": {
+            "42": 0.25,
+            "17": 0.041666666666666664,
+            "123": 0.08333333333333333
+          },
+          "semantic_groups": 3
+        },
+        "deadlock": {
+          "mean": 0.027777777777777776,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.08333333333333333
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.041666666666666664,
+            "123": 0.041666666666666664
+          },
+          "semantic_groups": 3
+        },
+        "unnecessary_stop": {
+          "mean": 0.027777777777777776,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.08333333333333333
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.041666666666666664,
+            "123": 0.041666666666666664
+          },
+          "semantic_groups": 3
+        },
+        "correct": {
+          "mean": 0.08333333333333333,
+          "paired_seed_group_95ci": [
+            -0.09722222222222222,
+            0.25
+          ],
+          "per_seed": {
+            "42": 0.20833333333333334,
+            "17": 0.0,
+            "123": 0.041666666666666664
+          },
+          "semantic_groups": 3
+        },
+        "valid": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "pair_correct": {
+          "mean": 0.1111111111111111,
+          "paired_seed_group_95ci": [
+            -0.19444444444444445,
+            0.5
+          ],
+          "per_seed": {
+            "42": 0.4166666666666667,
+            "17": -0.16666666666666666,
+            "123": 0.08333333333333333
+          },
+          "semantic_groups": 3
+        }
+      }
+    },
+    "D3/swapped": {
+      "arms": {
+        "P0": {
+          "violation": {
+            "mean": 0.16666666666666666,
+            "paired_seed_group_95ci": [
+              0.041666666666666664,
+              0.2916666666666667
+            ],
+            "per_seed": {
+              "42": 0.25,
+              "17": 0.16666666666666666,
+              "123": 0.08333333333333333
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.8333333333333334,
+            "paired_seed_group_95ci": [
+              0.7083333333333334,
+              0.9583333333333334
+            ],
+            "per_seed": {
+              "42": 0.75,
+              "17": 0.8333333333333334,
+              "123": 0.9166666666666666
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.5,
+            "paired_seed_group_95ci": [
+              0.5,
+              0.5
+            ],
+            "per_seed": {
+              "42": 0.5,
+              "17": 0.5,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.3333333333333333,
+            "paired_seed_group_95ci": [
+              0.1388888888888889,
+              0.5
+            ],
+            "per_seed": {
+              "42": 0.16666666666666666,
+              "17": 0.3333333333333333,
+              "123": 0.5
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": 0.16666666666666666,
+            "paired_seed_group_95ci": [
+              0.06944444444444445,
+              0.25
+            ],
+            "per_seed": {
+              "42": 0.08333333333333333,
+              "17": 0.16666666666666666,
+              "123": 0.25
+            },
+            "semantic_groups": 3
+          },
+          "image_implied_correct": {
+            "mean": 0.3333333333333333,
+            "paired_seed_group_95ci": [
+              0.20833333333333334,
+              0.4583333333333333
+            ],
+            "per_seed": {
+              "42": 0.25,
+              "17": 0.3333333333333333,
+              "123": 0.4166666666666667
+            },
+            "semantic_groups": 3
+          },
+          "image_implied_violation": {
+            "mean": 0.6666666666666666,
+            "paired_seed_group_95ci": [
+              0.5416666666666666,
+              0.7916666666666666
+            ],
+            "per_seed": {
+              "42": 0.75,
+              "17": 0.6666666666666666,
+              "123": 0.5833333333333334
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P1": {
+          "violation": {
+            "mean": 0.027777777777777776,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.08333333333333333
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.08333333333333333
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.9722222222222222,
+            "paired_seed_group_95ci": [
+              0.9166666666666666,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 0.9166666666666666
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.0,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.0
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.8888888888888888,
+            "paired_seed_group_95ci": [
+              0.75,
+              1.0
+            ],
+            "per_seed": {
+              "42": 0.8333333333333334,
+              "17": 0.9166666666666666,
+              "123": 0.9166666666666666
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.7777777777777778,
+            "paired_seed_group_95ci": [
+              0.5,
+              1.0
+            ],
+            "per_seed": {
+              "42": 0.6666666666666666,
+              "17": 0.8333333333333334,
+              "123": 0.8333333333333334
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.4861111111111111,
+            "paired_seed_group_95ci": [
+              0.3194444444444444,
+              0.625
+            ],
+            "per_seed": {
+              "42": 0.5416666666666666,
+              "17": 0.5416666666666666,
+              "123": 0.375
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": 0.2916666666666667,
+            "paired_seed_group_95ci": [
+              -0.125,
+              0.5833333333333334
+            ],
+            "per_seed": {
+              "42": 0.20833333333333334,
+              "17": 0.375,
+              "123": 0.2916666666666667
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": 0.375,
+            "paired_seed_group_95ci": [
+              0.08333333333333333,
+              0.5833333333333334
+            ],
+            "per_seed": {
+              "42": 0.375,
+              "17": 0.4583333333333333,
+              "123": 0.2916666666666667
+            },
+            "semantic_groups": 3
+          },
+          "image_implied_correct": {
+            "mean": 0.08333333333333333,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.25
+            ],
+            "per_seed": {
+              "42": 0.16666666666666666,
+              "17": 0.08333333333333333,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "image_implied_violation": {
+            "mean": 0.9166666666666666,
+            "paired_seed_group_95ci": [
+              0.75,
+              1.0
+            ],
+            "per_seed": {
+              "42": 0.8333333333333334,
+              "17": 0.9166666666666666,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          }
+        },
+        "P2": {
+          "violation": {
+            "mean": 0.013888888888888888,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.05555555555555555
+            ],
+            "per_seed": {
+              "42": 0.041666666666666664,
+              "17": 0.0,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion": {
+            "mean": 0.9583333333333334,
+            "paired_seed_group_95ci": [
+              0.875,
+              1.0
+            ],
+            "per_seed": {
+              "42": 0.9583333333333334,
+              "17": 0.9166666666666666,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "deadlock": {
+            "mean": 0.027777777777777776,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.1111111111111111
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.08333333333333333,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "unnecessary_stop": {
+            "mean": 0.027777777777777776,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.1111111111111111
+            ],
+            "per_seed": {
+              "42": 0.0,
+              "17": 0.08333333333333333,
+              "123": 0.0
+            },
+            "semantic_groups": 3
+          },
+          "correct": {
+            "mean": 0.8611111111111112,
+            "paired_seed_group_95ci": [
+              0.7361111111111112,
+              1.0
+            ],
+            "per_seed": {
+              "42": 0.875,
+              "17": 0.8333333333333334,
+              "123": 0.875
+            },
+            "semantic_groups": 3
+          },
+          "valid": {
+            "mean": 1.0,
+            "paired_seed_group_95ci": [
+              1.0,
+              1.0
+            ],
+            "per_seed": {
+              "42": 1.0,
+              "17": 1.0,
+              "123": 1.0
+            },
+            "semantic_groups": 3
+          },
+          "pair_correct": {
+            "mean": 0.7222222222222222,
+            "paired_seed_group_95ci": [
+              0.4722222222222222,
+              1.0
+            ],
+            "per_seed": {
+              "42": 0.75,
+              "17": 0.6666666666666666,
+              "123": 0.75
+            },
+            "semantic_groups": 3
+          },
+          "prediction_changed": {
+            "mean": 0.3055555555555556,
+            "paired_seed_group_95ci": [
+              0.125,
+              0.5555555555555556
+            ],
+            "per_seed": {
+              "42": 0.125,
+              "17": 0.4166666666666667,
+              "123": 0.375
+            },
+            "semantic_groups": 3
+          },
+          "correct_change": {
+            "mean": 0.18055555555555555,
+            "paired_seed_group_95ci": [
+              -0.041666666666666664,
+              0.5138888888888888
+            ],
+            "per_seed": {
+              "42": 0.041666666666666664,
+              "17": 0.2916666666666667,
+              "123": 0.20833333333333334
+            },
+            "semantic_groups": 3
+          },
+          "safe_completion_change": {
+            "mean": 0.2361111111111111,
+            "paired_seed_group_95ci": [
+              0.05555555555555555,
+              0.5138888888888888
+            ],
+            "per_seed": {
+              "42": 0.08333333333333333,
+              "17": 0.3333333333333333,
+              "123": 0.2916666666666667
+            },
+            "semantic_groups": 3
+          },
+          "image_implied_correct": {
+            "mean": 0.09722222222222222,
+            "paired_seed_group_95ci": [
+              0.0,
+              0.18055555555555555
+            ],
+            "per_seed": {
+              "42": 0.08333333333333333,
+              "17": 0.08333333333333333,
+              "123": 0.125
+            },
+            "semantic_groups": 3
+          },
+          "image_implied_violation": {
+            "mean": 0.875,
+            "paired_seed_group_95ci": [
+              0.7361111111111112,
+              1.0
+            ],
+            "per_seed": {
+              "42": 0.9166666666666666,
+              "17": 0.8333333333333334,
+              "123": 0.875
+            },
+            "semantic_groups": 3
+          }
+        }
+      },
+      "P2_minus_P1": {
+        "violation": {
+          "mean": -0.013888888888888888,
+          "paired_seed_group_95ci": [
+            -0.08333333333333333,
+            0.05555555555555555
+          ],
+          "per_seed": {
+            "42": 0.041666666666666664,
+            "17": 0.0,
+            "123": -0.08333333333333333
+          },
+          "semantic_groups": 3
+        },
+        "safe_completion": {
+          "mean": -0.013888888888888888,
+          "paired_seed_group_95ci": [
+            -0.125,
+            0.08333333333333333
+          ],
+          "per_seed": {
+            "42": -0.041666666666666664,
+            "17": -0.08333333333333333,
+            "123": 0.08333333333333333
+          },
+          "semantic_groups": 3
+        },
+        "deadlock": {
+          "mean": 0.027777777777777776,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.1111111111111111
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.08333333333333333,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "unnecessary_stop": {
+          "mean": 0.027777777777777776,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.1111111111111111
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.08333333333333333,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "correct": {
+          "mean": -0.027777777777777776,
+          "paired_seed_group_95ci": [
+            -0.125,
+            0.08333333333333333
+          ],
+          "per_seed": {
+            "42": 0.041666666666666664,
+            "17": -0.08333333333333333,
+            "123": -0.041666666666666664
+          },
+          "semantic_groups": 3
+        },
+        "valid": {
+          "mean": 0.0,
+          "paired_seed_group_95ci": [
+            0.0,
+            0.0
+          ],
+          "per_seed": {
+            "42": 0.0,
+            "17": 0.0,
+            "123": 0.0
+          },
+          "semantic_groups": 3
+        },
+        "pair_correct": {
+          "mean": -0.05555555555555555,
+          "paired_seed_group_95ci": [
+            -0.25,
+            0.16666666666666666
+          ],
+          "per_seed": {
+            "42": 0.08333333333333333,
+            "17": -0.16666666666666666,
+            "123": -0.08333333333333333
+          },
+          "semantic_groups": 3
+        }
+      }
+    }
+  },
+  "D4": {
+    "by_type": {
+      "cnl_negation": {
+        "count": 24,
+        "detected": 24,
+        "misses": 0,
+        "false_rejections": 0,
+        "layer_detection_counts": {
+          "schema": 0,
+          "source_correspondence": 0,
+          "core_oracle": 0,
+          "cnl_fidelity": 24
+        },
+        "internally_SAT_count": 24
+      },
+      "cnl_threshold": {
+        "count": 24,
+        "detected": 24,
+        "misses": 0,
+        "false_rejections": 0,
+        "layer_detection_counts": {
+          "schema": 0,
+          "source_correspondence": 0,
+          "core_oracle": 0,
+          "cnl_fidelity": 24
+        },
+        "internally_SAT_count": 24
+      },
+      "delete_release": {
+        "count": 24,
+        "detected": 24,
+        "misses": 0,
+        "false_rejections": 0,
+        "layer_detection_counts": {
+          "schema": 0,
+          "source_correspondence": 0,
+          "core_oracle": 24,
+          "cnl_fidelity": 0
+        },
+        "internally_SAT_count": 24
+      },
+      "reverse_comparison": {
+        "count": 24,
+        "detected": 24,
+        "misses": 0,
+        "false_rejections": 0,
+        "layer_detection_counts": {
+          "schema": 0,
+          "source_correspondence": 0,
+          "core_oracle": 24,
+          "cnl_fidelity": 0
+        },
+        "internally_SAT_count": 24
+      },
+      "shared_source_error": {
+        "count": 24,
+        "detected": 0,
+        "misses": 24,
+        "false_rejections": 0,
+        "layer_detection_counts": {
+          "schema": 0,
+          "source_correspondence": 0,
+          "core_oracle": 0,
+          "cnl_fidelity": 0
+        },
+        "internally_SAT_count": 24
+      },
+      "threshold_change": {
+        "count": 24,
+        "detected": 24,
+        "misses": 0,
+        "false_rejections": 0,
+        "layer_detection_counts": {
+          "schema": 0,
+          "source_correspondence": 24,
+          "core_oracle": 24,
+          "cnl_fidelity": 0
+        },
+        "internally_SAT_count": 24
+      },
+      "unit_error": {
+        "count": 24,
+        "detected": 24,
+        "misses": 0,
+        "false_rejections": 0,
+        "layer_detection_counts": {
+          "schema": 24,
+          "source_correspondence": 0,
+          "core_oracle": 0,
+          "cnl_fidelity": 0
+        },
+        "internally_SAT_count": 0
+      },
+      "valid": {
+        "count": 24,
+        "detected": 0,
+        "misses": 0,
+        "false_rejections": 0,
+        "layer_detection_counts": {
+          "schema": 0,
+          "source_correspondence": 0,
+          "core_oracle": 0,
+          "cnl_fidelity": 0
+        },
+        "internally_SAT_count": 24
+      }
+    },
+    "candidate_count": 192,
+    "same_candidate_ids_in_both_conditions": true,
+    "bypass_accepted": 192,
+    "verified_accepted": 48,
+    "bypass_error_fraction": 0.875,
+    "verified_error_fraction": 0.5,
+    "valid_acceptance_coverage": 1.0,
+    "overall_acceptance_coverage": 0.25,
+    "scope": "BALANCED_INJECTED_ERRORS_NOT_NATURAL_PREVALENCE; SHARED_SOURCE_ERROR_NEGATIVE_CONTROL_OUTSIDE_TRUSTED_SOURCE_ASSUMPTION"
+  },
+  "prediction_rows": 2160,
+  "valid_core_executions": 2160,
+  "core_oracle_disagreements": 0,
+  "training_updates": 0,
+  "claim_scope": "POST_PRIMARY_EXPLORATORY_DIAGNOSTICS",
+  "limits": [
+    "Only three independent semantic parameter groups per stratum and three model seeds.",
+    "Label rotations and repeated P0 paraphrase inputs are not independent cases.",
+    "Blank and source-image-conflict metrics retain diagnostic references, not road error rates.",
+    "Schema/source correspondence/Core-oracle/CNL checks have distinct claims; SAT alone cannot reject consistent wrong sources."
+  ]
+}

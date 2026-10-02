@@ -1,0 +1,25 @@
+{
+  "project_id": "sequential-coc-verification",
+  "status": "PASS",
+  "task_status": "E6_DOCUMENTS_COMPLETE",
+  "verification_fix": "Normalize Python tuples and JSON lists before comparing saved validation; no PDF changes",
+  "pages": {
+    "main": 8,
+    "main-clean": 8,
+    "response-to-reviewer-1": 10,
+    "response-to-reviewer-2": 9,
+    "response-to-reviewer-3": 12
+  },
+  "reviewer_item_count": 28,
+  "hash_checks": {
+    "sealed_build_artifact_hashes_match": true,
+    "revision_source_hashes_match": true,
+    "evidence_input_hashes_match": true,
+    "canonical_pdf_hashes_match": true,
+    "linked_asset_hashes_match": true
+  },
+  "new_scope_naming_violations": 0,
+  "pre_existing_sparse_naming_warnings": 12,
+  "experiments_or_pdf_build_rerun": false,
+  "errors": []
+}

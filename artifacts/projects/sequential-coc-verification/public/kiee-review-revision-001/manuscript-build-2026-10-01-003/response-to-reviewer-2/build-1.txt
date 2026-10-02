@@ -1,0 +1,112 @@
+This is LuaHBTeX, Version 1.15.0 (TeX Live 2022/Debian) 
+ restricted system commands enabled.
+
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/response-to-reviewer-2.tex
+LaTeX2e <2022-11-01> patch level 1
+ L3 programming layer <2023-01-16>
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/response-style.tex
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-luatex.def)))
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/luatex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hluatex.def
+(/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-revie
+w-2022-coc-audit-revision-v01/manuscript-locations.tex))
+No file response-to-reviewer-2.aux.
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: luatex
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd) [1{/var/lib/texmf/fo
+nts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5]
+Overfull \hbox (22.42976pt too wide) in paragraph at lines 145--146
+[]\TU/NotoSerifCJKkr(0)/m/n/10.95 후속 보완에서는 상세 방법과 결
+과 해석을 본문에 충분히 두었습니다. 원문→조건 표현→
+상태·질의→추적
+[6]
+Underfull \hbox (badness 4608) in paragraph at lines 175--176
+[]\TU/NotoSerifCJKkr(0)/m/n/10.95 서론을 작성 오류 가능성→보행
+자/녹색 신호 예시→조건별 구조화와 UP-PAAL 검사→연구
+
+Underfull \hbox (badness 3724) in paragraph at lines 179--180
+[]\TU/NotoSerifCJKkr(0)/m/n/10.95 서론은 구조적 동기와 질문·기여
+를 유지하고, 단계별 상세 설명과 모델 도식은 방법 절에
+[7] [8]
+Underfull \hbox (badness 2856) in paragraph at lines 243--244
+[]\TU/NotoSerifCJKkr(0)/m/n/10.95 단순 FSM도 성공한 사실을 유지하
+여 UP-PAAL 정확도 우위, 최초·최고 또는 기존 기술로
+
+Underfull \hbox (badness 3209) in paragraph at lines 263--264
+\TU/NotoSerifCJKkr(0)/m/n/10.95 구체화했습니다. 자연 오류 정확도
+와 독립 시험, 사람 신뢰도 개선이 미완료라는 한계는
+[9]
+(/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-202
+60930/artifacts/projects/sequential-coc-verification/public/kiee-review-revisio
+n-001/manuscript-build-2026-10-01-003/response-to-reviewer-2/response-to-review
+er-2.aux))
+(see the transcript file for additional information)
+ 519 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 6 attribute, 59 glue_spec
+, 6 attribute_list, 1 write nodes
+   avail lists: 2:170,3:84,4:28,5:126,6:27,7:2365,8:12,9:177,10:10,11:26
+<./fonts/NotoSerifCJKkr-Regular.otf><./fonts/NotoSerifCJKkr-Bold.otf>
+Output written on response-to-reviewer-2.pdf (9 pages, 111711 bytes).
+Transcript written on response-to-reviewer-2.log.

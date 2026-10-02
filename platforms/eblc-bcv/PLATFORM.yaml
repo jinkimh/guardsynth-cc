@@ -1,0 +1,9 @@
+platform_id: eblc-bcv
+title: EBLC and Bidirectional Contract Verification Platform
+status: v0_2_scoped_backend_complete
+artifact_root: artifacts/platforms/eblc-bcv
+canonical_status: STATUS.md
+consumers:
+  - guardsynth-coc
+  - specification-alignment
+  - eblc-language-verification

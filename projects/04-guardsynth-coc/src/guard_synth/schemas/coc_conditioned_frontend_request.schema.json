@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GuardSynth CoC-conditioned front-end request v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "frontend_version", "request_id", "jurisdiction", "catalog_id",
+    "catalog_version", "catalog_as_of_date", "odd_tags",
+    "slice_hint", "scene_tags", "coc", "scene_facts", "policy_evidence_ref"
+  ],
+  "properties": {
+    "frontend_version": {"const": "guardsynth-coc-conditioned-frontend-v0.1"},
+    "request_id": {"type": "string", "minLength": 1},
+    "jurisdiction": {"type": "string", "minLength": 1},
+    "catalog_id": {"type": "string", "minLength": 1},
+    "catalog_version": {"type": "string", "minLength": 1},
+    "catalog_as_of_date": {"type": "string", "minLength": 1},
+    "odd_tags": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "slice_hint": {
+      "enum": ["PEDESTRIAN_CYCLIST_YIELD", "STOP_SIGNALS", "FOLLOWING_CUT_IN"]
+    },
+    "scene_tags": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "policy_evidence_ref": {"type": "string", "minLength": 1},
+    "coc": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "language", "epistemic_kind", "evidence_ref"],
+      "properties": {
+        "text": {"type": "string", "minLength": 1},
+        "language": {"enum": ["ko", "en"]},
+        "epistemic_kind": {"enum": ["CLAIMED", "OBSERVED", "PREDICTED", "DERIVED"]},
+        "evidence_ref": {"type": "string", "minLength": 1}
+      }
+    },
+    "scene_facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "predicate_id", "truth", "epistemic_kind", "source_ref",
+          "freshness_status", "target_ids", "zone_ids"
+        ],
+        "properties": {
+          "predicate_id": {"type": "string", "minLength": 1},
+          "truth": {"enum": ["TRUE", "FALSE", "UNKNOWN", "CONFLICT"]},
+          "epistemic_kind": {"enum": ["OBSERVED", "PREDICTED", "DERIVED", "CLAIMED"]},
+          "source_ref": {"type": "string", "minLength": 1},
+          "freshness_status": {"enum": ["FRESH", "STALE", "UNKNOWN"]},
+          "target_ids": {"type": "array", "items": {"type": "string", "minLength": 1}},
+          "zone_ids": {"type": "array", "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    }
+  }
+}

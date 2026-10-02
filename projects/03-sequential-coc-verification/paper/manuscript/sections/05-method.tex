@@ -1,0 +1,165 @@
+\section{제안 방법}
+\label{sec:method}
+
+\subsection{전체 절차}
+본 논문은 CoC 추론 주석을 안전/위험 레이블이나 제어 명령으로 직접 사용하지 않는다. 방법은 문제 정의의 세 증거 층---주석에서 파싱한 행동 의도, 연구자가 선택한 후보 시간 계약, 자차 움직임에서 도출한 응답 증거---을 다음 네 구성요소로 연결한다. 각 구성요소는 어떤 입력이 관측값인지, 어떤 규칙이 연구자 선택인지, 어떤 출력이 검토 대상인지 분리한다.
+
+\begin{enumerate}
+\item \textbf{증거 수집기(evidence collector)}는 \texttt{clip\_id} 안에서 타임스탬프와 CoC 텍스트를 수집하고, \texttt{quality\_pass} 및 자차 움직임을 함께 보존한다. 이 구성요소는 텍스트의 정답성이나 물리 위험을 판정하지 않고, 관측된 입력과 그 출처만 고정한다.
+\item \textbf{계약 컴파일러(contract compiler)}는 수집된 텍스트에서 행동 의도와 원인 표현을 파싱하고, 후보 기한 $D_i$, 반복 정책(\preserve/\reset/\dedup), 그리고 의도별 응답 술어 $R_{a_i}$를 명시한다. 즉, 수락된 사건을 문제 정의의 $O_i=\langle\tau_i,a_i,h_i,D_i,R_{a_i},q_i,s_i\rangle$라는 후보 감사 계약으로 컴파일한다. $D_i$, 반복 정책, $R_{a_i}$는 데이터가 자동으로 발견한 안전 한계가 아니라 감사 전에 선택한 의미론이다.
+\item \textbf{상태 관찰자(state observer)}는 시간순 계약과 응답 사건을 소비하여 의무의 생성--대기--응답--실패 생명주기, 응답 매칭, 저품질 사건의 감사 수용 상태 덮어쓰기 금지, 그리고 장면 경계에서의 대기 의무 종료를 검사한다. 이 상태는 단일 레이블의 분류 결과가 아니라 에피소드 수준의 프로토콜 상태이다.
+\item \textbf{결과 라우터(result router)}는 검사 출력을 계약 통과, 의미론/임계값 의존 검토, 출처 부족, 합성 변이 결과로 구분한다. 계약 통과는 선택된 계약 아래 기록과 도출 응답이 일관적이라는 뜻이며, 검토 또는 출처 부족은 안전/위험 차량 레이블로 승격하지 않는다. 합성 변이 결과는 별도의 내부 타당성 확인 경로로만 보낸다.
+\end{enumerate}
+
+따라서 이 절차의 출력은 차량 제어가 아니라, CoC 주석 사건과 자차 움직임 증거가 지정된 후보 시간 계약을 만족하는지에 대한 정형 판정과 검토 경로이다.
+
+\begin{figure*}[t]
+\centering
+\input{figures/method-pipeline}
+\caption{증거 수집기, 계약 컴파일러, 상태 관찰자, 결과 라우터로 구성한 제안 방법. 사람 검토는 중립적 후속 경로이고, 합성 변이는 동일한 관찰자 의미론의 별도 실행 인스턴스를 거쳐 회귀 시험 전용 출구로 분리한다.}
+\label{fig:method-pipeline}
+\end{figure*}
+
+그림~\ref{fig:method-pipeline}에서 증거 수집기는 관측값을 보존하고, 계약 컴파일러는 그 값을 후보 시간 계약으로 변환하며, 상태 관찰자는 계약 상태를 검사하고, 결과 라우터는 판정의 사용 범위를 분리한다. 최종 검토 피드백은 원본 데이터를 바꾸지 않고 기한, 반복 의미론, 탐지기 임계값을 재검토하는 데만 사용한다.
+
+\subsection{UPPAAL 네트워크}
+\uppaal 모델은 단일 오토마타가 아니라 실험 목적마다 다른 템플릿 네트워크이다. \texttt{scene-0001} 모델에서는 증거 수집기가 고정한 타임스탬프, 텍스트, 품질, 자차 움직임과 계약 컴파일러가 만든 사건 배열을 사용한다. \texttt{CoCSource}는 감사 수용 시작, 반복, 감사 비수용 사건을 타임스탬프 순서로, \texttt{EgoTrace}는 자차 움직임에서 도출된 응답 증거를 그 순서대로 재생한다. 이 원천 오토마타는 \emph{결정적 기록 사건열}을 한 번 재생할 뿐, 차량 환경을 탐색하지 않으며 안전 제어를 생성하거나 제어 정책을 합성하지 않는다. \texttt{ObligationManager}, \texttt{ReactionObserver}, \texttt{DecisionValidator}는 같은 사건열에서 의무 생명주기, 응답 매칭, 반복 시계 정책과 저품질 덮어쓰기를 검사한다. 코호트와 체인 실험은 뒤의 표와 같이 별도 모델군이며, 하나의 통합 모델이 모든 실험에 실행된 것은 아니다.
+
+\begin{figure*}[t]
+\centering
+\input{figures/uppaal-network}
+\caption{\texttt{scene-0001-normal}에 대응하는 \uppaal 네트워크 개념도. 증거 수집기와 계약 컴파일러의 결정적 사건열을 상태 관찰자가 소비하고, 결과 라우터가 질의 판정을 분리한다.}
+\label{fig:uppaal-network}
+\end{figure*}
+
+그림~\ref{fig:uppaal-network}에서 위쪽 두 템플릿은 증거 수집기와 계약 컴파일러가 준비한 입력 흐름을 재생하는 원천이고, 아래쪽 세 템플릿은 상태 관찰자를 구성한다. 이 구분이 중요하다. \texttt{CoCSource}와 \texttt{EgoTrace}는 새로운 주행 행동을 탐색하지 않으며, 관찰자들은 이미 주어진 사건열 위에서 의무 생성, 응답 매칭, 기한 실패, 출처 덮어쓰기와 경계 정책을 검사한다. 질의 결과의 의미는 결과 라우터가 계약 통과, 의미론/임계값 의존 검토, 출처 부족, 합성 변이로 분리한다.
+
+그림~\ref{fig:uppaal-network}의 블록도는 표~\ref{tab:ta-skeleton}의 시간 오토마타 네트워크로 구현된다. 시간 단위는 XML 내부에서 밀리초 정수이며, 표에서는 \texttt{first}, \texttt{repeat}, \texttt{response}, \texttt{untrusted}를 각각 \texttt{first\_trigger}, \texttt{repeat\_trigger}, \texttt{response}, \texttt{untrusted\_event} 방송 채널의 약어로 사용한다. 원천 템플릿은 사건을 한 번 재생하고, 관찰자 템플릿들은 같은 방송 사건에 동기화되어 의무의 생성, 기한, 반복 의미론, 낮은 품질 사건의 덮어쓰기 금지를 독립적으로 검사한다.
+
+\begin{table}[!htbp]
+\centering
+\caption{그림~\ref{fig:uppaal-network}에 대응하는 시간 오토마타 골격.}
+\label{tab:ta-skeleton}
+\scriptsize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{0.90}
+\begin{tabularx}{\columnwidth}{L{0.26\columnwidth}L{0.21\columnwidth}Y}
+\toprule
+Template & Locations and clocks & Main transitions and meaning \\
+\midrule
+\texttt{CoCSource} &
+\texttt{C0--C4}, \texttt{episode} &
+$0$s \texttt{first!}; $1.0$s, $2.3$s \texttt{repeat!}; $6.8$s \texttt{untrusted!}. Replays CoC decision events in timestamp order. \\
+\midrule
+\texttt{EgoTrace} &
+\texttt{E0--E1}, \texttt{episode} &
+$2.16$s \texttt{response!}. Replays weak response evidence derived from ego speed. \\
+\midrule
+\texttt{ObligationManager} &
+\texttt{Idle}, \texttt{Active}, \texttt{Responded} &
+Opens an obligation on \texttt{first?}; closes it on \texttt{response?}. Deadline state is tracked separately. \\
+\midrule
+\texttt{ReactionObserver} &
+\texttt{Idle}, \texttt{Armed}, \texttt{Done}, \texttt{DeadlineMiss}; clock \texttt{reaction} &
+Sets \texttt{reaction=0} on \texttt{first?}; the contract requires response before \texttt{reaction}$=D$, where the miss transition becomes enabled. \preserve does not restart \texttt{reaction} on repeats. \\
+\midrule
+\texttt{DecisionValidator} &
+\texttt{Clean}; Boolean overwrite flag &
+Keeps one location and sets the Boolean on \texttt{untrusted?} when the mutation enables an overwrite. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+표~\ref{tab:ta-skeleton}에서는 그림~\ref{fig:uppaal-network}의 각 블록이 실제 모델에서 어떤 위치와 전환으로 구현되는지 정리한다. 예를 들어 \texttt{CoCSource}의 \texttt{first!} 전환은 의무 생성을 촉발하고, \texttt{EgoTrace}의 \texttt{response!} 전환은 자차 속도에서 도출한 응답 증거를 방송한다. \texttt{ReactionObserver}는 이 두 사건 사이의 지역 시계 \texttt{reaction}을 검사하며, \preserve 기준 모델에서는 반복 사건을 보더라도 \texttt{reaction}을 재시작하지 않는다. 저장 집계에는 구현 시계가 기한과 같은 \texttt{reaction}$=D$인 사례가 없으며, 등호 시점의 전환 우선순위를 직접 고정하는 검사기 회귀 시험은 후속 과제로 남긴다.
+
+\begin{table}[!htbp]
+\centering
+\caption{실험별 \uppaal 모델군.}
+\label{tab:model-families}
+\scriptsize
+\begin{tabularx}{\columnwidth}{L{0.25\columnwidth}L{0.30\columnwidth}Y}
+\toprule
+Experiment & Templates & Purpose \\
+\midrule
+\texttt{scene-0001} & \texttt{CoCSource}, \texttt{EgoTrace}, \texttt{ObligationManager}, \texttt{ReactionObserver}, \texttt{DecisionValidator} & Five-template timed lifecycle and mutation check \\
+\midrule
+94-scene cohort & \texttt{EpisodeSource}, \texttt{LineageMonitor} & Two-template flag/query serialization regression \\
+\midrule
+13-chain smoke artifact & \texttt{LoopSource}, \texttt{Monitor} & Two-template implementation pipeline smoke test with a distinct parser/detector \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+이 골격에서 \texttt{CoCSource}와 \texttt{EgoTrace}는 환경을 새로 생성하는 반응형 제어기가 아니라, 관측 및 도출 증거 흐름을 결정적으로 재생하는 원천 오토마타이다. 반대로 \texttt{ObligationManager}, \texttt{ReactionObserver}, \texttt{DecisionValidator}는 같은 사건 흐름을 서로 다른 관점에서 감시하는 상태 관찰자 오토마타이다. 따라서 시간 오토마타의 검증 대상은 ``차량이 안전하게 주행했는가''가 아니라 ``감사 입력으로 수용된 CoC 주석 사건이 후보 의무를 열었는가'', ``반복 사건이 시계를 부당하게 초기화하지 않았는가'', ``응답 증거가 후보 기한 안에 매칭되었는가'', ``저품질 사건이 수용된 상태를 덮어쓰지 않았는가'', ``연속성 증거가 없는 경계에서 대기 의무가 닫혔는가''이다.
+
+단일 결정적 재생만 실행한다면 동일한 기한 검사는 일반 스크립트로도 계산할 수 있다. 본 논문에서 모델 체킹을 사용하는 이유는 각 모델군의 상태 관찰자, 반복 의미론, 경계 정책 또는 변이 오라클을 선언하고, 위반 시 어떤 관찰자가 어떤 시각에 실패했는지 반례 궤적으로 얻기 위해서이다. 특히 \texttt{scene-0001} 모델은 같은 원천 사건을 의무 생명주기, 기한 관찰자와 출처 검증기가 동시에 소비하도록 만들기 때문에, 단순 수치 계산보다 ``어떤 정책 조합에서 어떤 프로토콜 속성이 깨졌는가''를 명세 수준에서 검토할 수 있다.
+
+\subsection{scene-0001의 의미론 변환}
+\texttt{scene-0001}의 원본 및 도출 정보는 표~\ref{tab:scene1-map}처럼 \uppaal 사건으로 변환된다. 표에서는 가독성을 위해 원본 타임스탬프를 장면 내부 초 단위로 표시하고, \uppaal 사건 시각은 최초 감사 수용 시작 사건을 기준으로 한 상대 초 단위로 표시한다. 실제 XML 생성 시에는 이 값을 밀리초 정수로 양자화한다.
+
+\begin{table}[!htbp]
+\centering
+\caption{\texttt{scene-0001} 증거를 \uppaal 사건으로 변환한 예. 시간 단위는 초이다.}
+\label{tab:scene1-map}
+\footnotesize
+\begin{tabularx}{\columnwidth}{L{0.30\columnwidth}L{0.25\columnwidth}Y}
+\toprule
+Source/derived evidence & \uppaal event & Meaning \\
+\midrule
+$t=2.500$s, audit-accepted \textsc{Decelerate} & \texttt{first!} at $0.000$s & Opens the first deceleration obligation \\
+$t=3.500$s, repeated \textsc{Decelerate} & \texttt{repeat!} at $1.000$s & Observes a repeat of the same obligation \\
+$t=4.660$s, speed-decrease onset & \texttt{response!} at $2.160$s & Weak response derived from ego trajectory \\
+$t=4.800$s, repeated \textsc{Decelerate} & \texttt{repeat!} at $2.300$s & Repeated label after response evidence \\
+$t=9.300$s, low-quality CoC & \texttt{untrusted!} at $6.800$s & Code-named event that must not overwrite audit-accepted state \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+표~\ref{tab:scene1-map}의 \texttt{first!}, \texttt{repeat!}, \texttt{untrusted!}는 각각 생성 XML의 \texttt{first\_trigger!}, \texttt{repeat\_trigger!}, \texttt{untrusted\_event!} 채널을 줄여 표기한 것이다.
+
+생성되는 대표 질의는 다음과 같다.
+
+\noindent\begin{minipage}{\columnwidth}
+\begin{lstlisting}[caption={대표 \uppaal 질의 집합.},label={lst:queries}]
+E<> Obligation.Active
+E<> Obligation.Responded
+A[] not Reaction.DeadlineMiss
+A[] not clock_reset_violation
+A[] not untrusted_overwrite
+A[] not orphan_response
+A[] not boundary_violation
+A[] not deadlock
+\end{lstlisting}
+\end{minipage}
+
+본 연구의 \uppaal 모델은 폐루프 반응형 제어기가 아니다. 기록된 CoC 사건 흐름과 자차 움직임 응답 흐름을 재생하고 관찰자 오토마타가 프로토콜 수준 속성을 검사한다. 따라서 \uppaal은 환경을 탐색하거나 안전 제어를 생성하지 않는다. 단일 결정적 재생 하나의 PASS만으로는 모델 체킹 의미가 크지 않다. 본 논문에서 \uppaal의 가치는 여러 관찰자, 반복 의미론, 변이 오라클, 다중 장면 경계 정책을 같은 정형 프레임워크 안에서 선언적으로 결합하고 반례 궤적을 얻는 데 있다.
+
+\subsection{합성 변이 오라클}
+합성 변이 오라클은 결과 라우터가 정상 계약 통과와 알려진 프로토콜 결함을 구분하는지 확인하는 \emph{검사기 내부 타당성} 장치이다. 기준 모델의 PASS가 질의 비활성화나 모델 구성 오류로 생긴 결과가 아님을 점검하기 위해, 정상 궤적과 함께 의도적으로 결함을 삽입한 변이 모델을 만들고 각 변이의 기대 실패 질의와 비교한다. 이 검사는 실제 오류 검출률, 실제 주행 결함의 발생 빈도 또는 미관측 배치 행동을 추정하지 않는다.
+
+\begin{table}[!htbp]
+\centering
+\caption{변이 오라클과 기대 실패 속성.}
+\label{tab:mutation-oracle}
+\footnotesize
+\begin{tabularx}{\columnwidth}{L{0.28\columnwidth}YY}
+\toprule
+Mutation & Injected fault & Expected failure \\
+\midrule
+\texttt{deadline\_2s} & Shrink deadline while keeping response & Deadline query \\
+\texttt{no\_response} & Remove ego response & Response reachability, deadline \\
+\texttt{clock\_reset} & Restart clock on repeat & Clock-reset query \\
+\texttt{untrusted\_ovr.} & Low-quality event overwrites audit-accepted state & Provenance query \\
+\texttt{orphan\_response} & Remove obligation trigger but keep response & Orphan-response query \\
+\texttt{late\_stop} & Delay stop/hold stage & Stage deadline \\
+\texttt{premature\_rec.} & Recover before hazard clearance & Clearance precondition \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+표~\ref{tab:mutation-oracle}의 \texttt{untrusted\_ovr.}와 \texttt{premature\_rec.}는 각각 \texttt{untrusted\_overwrite}와 \texttt{premature\_recovery} 변이를 축약한 것이다. 변이는 실제 데이터 결함이라고 주장하기 위한 것이 아니다. 검사기와 질의 집합이 알려진 프로토콜 결함을 구분할 수 있는지 확인하기 위한 합성 시험이며, 정상 궤적 지도 신호나 실제 오류 검출률의 근거로 사용해서는 안 된다.
+
+\subsection{다중 장면 확장}
+로컬 CoC-Nusc 단독 데이터에는 장면 간 전역 타임스탬프, 로그 식별자, 이전/다음 관계, 전역 자차 자세가 부족하다. 따라서 기본 정책은 모든 장면을 독립 에피소드로 닫고 장면 경계를 넘어 대기 의무를 이월하지 않는 것이다. 이 정책은 오류 차단 시험으로 사용된다. 연속성 증거가 없는 경계에서 의무가 다음 장면까지 살아 있으면 변환 절차의 오류로 판정한다.
+
+연속성이 입증된 경우에는 여러 장면을 하나의 장기 에피소드로 연결할 수 있다. 예비 실험에서는 nuScenes 호환 메타데이터 미러를 사용해 같은 로그의 인접 장면 쌍을 찾고, 간격이 1초 이하이며 로컬 추론/자차 움직임이 있는 장면들을 체인으로 묶었다. 이후 각 장면 내부 사건 타임스탬프에 전역 장면 오프셋을 더해 하나의 시간선을 만들고, 루프 인덱스 방식의 \uppaal 모델로 검증했다. 루프 인덱스 모델은 사건마다 전환을 모두 쓰는 대신 \texttt{idx}, \texttt{event\_time[]}, \texttt{event\_kind[]}, \texttt{event\_gap[]} 배열을 사용하므로, 장면 수가 늘어나도 오토마타 구조는 유지되고 데이터 배열만 커진다.

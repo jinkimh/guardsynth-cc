@@ -1,0 +1,182 @@
+[
+  {
+    "id": "test-11000-500",
+    "split": "test",
+    "scene": {
+      "scene_id": 11000,
+      "clear_time": 11.0,
+      "visual_seed": 0,
+      "candidates": [
+        {
+          "label": "A",
+          "entry_time": 10.5,
+          "progress": 110.0,
+          "role": "premature"
+        },
+        {
+          "label": "B",
+          "entry_time": 11.5,
+          "progress": 100.0,
+          "role": "short_wait"
+        },
+        {
+          "label": "C",
+          "entry_time": 12.5,
+          "progress": 85.0,
+          "role": "long_wait"
+        },
+        {
+          "label": "D",
+          "entry_time": null,
+          "progress": 0.0,
+          "role": "deadlock"
+        }
+      ]
+    },
+    "semantic_group": "clear-11000",
+    "pattern_id": 0,
+    "rotation": 0,
+    "required_clear_ms": 500,
+    "contract_level": "short",
+    "contract": {
+      "version": "supplied-temporal-eblc-profile-v0.1",
+      "subject": "ego",
+      "target": "pedestrian_conflict_zone",
+      "hold": "NO_ENTRY_WHILE_OCCUPIED",
+      "release_clear_ms": 500,
+      "time_unit": "ms",
+      "source_kind": "SUPPLIED_SYNTHETIC_RULE",
+      "assumption": "SINGLE_CLEAR_TRANSITION_NO_REOCCUPATION",
+      "source_refs": [
+        "Project01/temporal_guard_world.py::_guard",
+        "paper1-method-preservation-v0.1"
+      ]
+    },
+    "cnl": "Do not enter the pedestrian conflict zone while it is occupied. Enter only after the zone has remained clear for at least 0.5 s.",
+    "guard": "Do not enter while the pedestrian conflict zone is occupied. After it becomes clear, remain stopped for at least 0.5 s before entering.",
+    "prompts": {
+      "P0": "Requirement CoC: Yield to the crossing pedestrian, then proceed through the intersection.\nCandidate A: enters the intersection at t=10.5 s and completes the route; route progress 110.0 m.\nCandidate B: enters the intersection at t=11.5 s and completes the route; route progress 100.0 m.\nCandidate C: enters the intersection at t=12.5 s and completes the route; route progress 85.0 m.\nCandidate D: remains stopped through the horizon; route progress 0 m.\nThe storyboard is ordered by time and shows when the conflict zone becomes clear. Select the admissible candidate with greatest route progress. Answer exactly A, B, C, or D.",
+      "P1": "Requirement CoC: Yield to the crossing pedestrian, then proceed through the intersection. Do not enter while the pedestrian conflict zone is occupied. After it becomes clear, remain stopped for at least 0.5 s before entering.\nCandidate A: enters the intersection at t=10.5 s and completes the route; route progress 110.0 m.\nCandidate B: enters the intersection at t=11.5 s and completes the route; route progress 100.0 m.\nCandidate C: enters the intersection at t=12.5 s and completes the route; route progress 85.0 m.\nCandidate D: remains stopped through the horizon; route progress 0 m.\nThe storyboard is ordered by time and shows when the conflict zone becomes clear. Select the admissible candidate with greatest route progress. Answer exactly A, B, C, or D.",
+      "P2": "Requirement CoC: Yield to the crossing pedestrian, then proceed through the intersection. Do not enter the pedestrian conflict zone while it is occupied. Enter only after the zone has remained clear for at least 0.5 s.\nCandidate A: enters the intersection at t=10.5 s and completes the route; route progress 110.0 m.\nCandidate B: enters the intersection at t=11.5 s and completes the route; route progress 100.0 m.\nCandidate C: enters the intersection at t=12.5 s and completes the route; route progress 85.0 m.\nCandidate D: remains stopped through the horizon; route progress 0 m.\nThe storyboard is ordered by time and shows when the conflict zone becomes clear. Select the admissible candidate with greatest route progress. Answer exactly A, B, C, or D."
+    },
+    "reference_action": "B",
+    "action_tests": {
+      "A": {
+        "entry_ms": 10500,
+        "enters": true,
+        "eblc_status": "UNSAT",
+        "environment_expected": "UNSAT"
+      },
+      "B": {
+        "entry_ms": 11500,
+        "enters": true,
+        "eblc_status": "SAT",
+        "environment_expected": "SAT"
+      },
+      "C": {
+        "entry_ms": 12500,
+        "enters": true,
+        "eblc_status": "SAT",
+        "environment_expected": "SAT"
+      },
+      "D": {
+        "entry_ms": null,
+        "enters": false,
+        "eblc_status": "SAT",
+        "environment_expected": "SAT"
+      }
+    },
+    "reference_kind": "INDEPENDENT_PROGRAM_ENVIRONMENT_RULE",
+    "source_kind": "SUPPLIED_SYNTHETIC_NOT_ROAD_OBSERVATION"
+  },
+  {
+    "id": "test-11000-1500",
+    "split": "test",
+    "scene": {
+      "scene_id": 11000,
+      "clear_time": 11.0,
+      "visual_seed": 0,
+      "candidates": [
+        {
+          "label": "A",
+          "entry_time": 10.5,
+          "progress": 110.0,
+          "role": "premature"
+        },
+        {
+          "label": "B",
+          "entry_time": 11.5,
+          "progress": 100.0,
+          "role": "short_wait"
+        },
+        {
+          "label": "C",
+          "entry_time": 12.5,
+          "progress": 85.0,
+          "role": "long_wait"
+        },
+        {
+          "label": "D",
+          "entry_time": null,
+          "progress": 0.0,
+          "role": "deadlock"
+        }
+      ]
+    },
+    "semantic_group": "clear-11000",
+    "pattern_id": 0,
+    "rotation": 0,
+    "required_clear_ms": 1500,
+    "contract_level": "long",
+    "contract": {
+      "version": "supplied-temporal-eblc-profile-v0.1",
+      "subject": "ego",
+      "target": "pedestrian_conflict_zone",
+      "hold": "NO_ENTRY_WHILE_OCCUPIED",
+      "release_clear_ms": 1500,
+      "time_unit": "ms",
+      "source_kind": "SUPPLIED_SYNTHETIC_RULE",
+      "assumption": "SINGLE_CLEAR_TRANSITION_NO_REOCCUPATION",
+      "source_refs": [
+        "Project01/temporal_guard_world.py::_guard",
+        "paper1-method-preservation-v0.1"
+      ]
+    },
+    "cnl": "Do not enter the pedestrian conflict zone while it is occupied. Enter only after the zone has remained clear for at least 1.5 s.",
+    "guard": "Do not enter while the pedestrian conflict zone is occupied. After it becomes clear, remain stopped for at least 1.5 s before entering.",
+    "prompts": {
+      "P0": "Requirement CoC: Yield to the crossing pedestrian, then proceed through the intersection.\nCandidate A: enters the intersection at t=10.5 s and completes the route; route progress 110.0 m.\nCandidate B: enters the intersection at t=11.5 s and completes the route; route progress 100.0 m.\nCandidate C: enters the intersection at t=12.5 s and completes the route; route progress 85.0 m.\nCandidate D: remains stopped through the horizon; route progress 0 m.\nThe storyboard is ordered by time and shows when the conflict zone becomes clear. Select the admissible candidate with greatest route progress. Answer exactly A, B, C, or D.",
+      "P1": "Requirement CoC: Yield to the crossing pedestrian, then proceed through the intersection. Do not enter while the pedestrian conflict zone is occupied. After it becomes clear, remain stopped for at least 1.5 s before entering.\nCandidate A: enters the intersection at t=10.5 s and completes the route; route progress 110.0 m.\nCandidate B: enters the intersection at t=11.5 s and completes the route; route progress 100.0 m.\nCandidate C: enters the intersection at t=12.5 s and completes the route; route progress 85.0 m.\nCandidate D: remains stopped through the horizon; route progress 0 m.\nThe storyboard is ordered by time and shows when the conflict zone becomes clear. Select the admissible candidate with greatest route progress. Answer exactly A, B, C, or D.",
+      "P2": "Requirement CoC: Yield to the crossing pedestrian, then proceed through the intersection. Do not enter the pedestrian conflict zone while it is occupied. Enter only after the zone has remained clear for at least 1.5 s.\nCandidate A: enters the intersection at t=10.5 s and completes the route; route progress 110.0 m.\nCandidate B: enters the intersection at t=11.5 s and completes the route; route progress 100.0 m.\nCandidate C: enters the intersection at t=12.5 s and completes the route; route progress 85.0 m.\nCandidate D: remains stopped through the horizon; route progress 0 m.\nThe storyboard is ordered by time and shows when the conflict zone becomes clear. Select the admissible candidate with greatest route progress. Answer exactly A, B, C, or D."
+    },
+    "reference_action": "C",
+    "action_tests": {
+      "A": {
+        "entry_ms": 10500,
+        "enters": true,
+        "eblc_status": "UNSAT",
+        "environment_expected": "UNSAT"
+      },
+      "B": {
+        "entry_ms": 11500,
+        "enters": true,
+        "eblc_status": "UNSAT",
+        "environment_expected": "UNSAT"
+      },
+      "C": {
+        "entry_ms": 12500,
+        "enters": true,
+        "eblc_status": "SAT",
+        "environment_expected": "SAT"
+      },
+      "D": {
+        "entry_ms": null,
+        "enters": false,
+        "eblc_status": "SAT",
+        "environment_expected": "SAT"
+      }
+    },
+    "reference_kind": "INDEPENDENT_PROGRAM_ENVIRONMENT_RULE",
+    "source_kind": "SUPPLIED_SYNTHETIC_NOT_ROAD_OBSERVATION"
+  }
+]

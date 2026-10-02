@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "review_round.schema.json",
+  "title": "Round-scoped review operations record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "owner_project_id", "review_round_id", "review_type", "purpose",
+    "classification", "round_state", "max_revisions", "manifest_frozen"
+  ],
+  "properties": {
+    "schema_version": {"const": 2},
+    "owner_project_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "review_round_id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "review_type": {"enum": ["M16_SOURCE_REVIEW", "M16_EXPERT_PILOT", "IMAGE_ONLY_SCENE_REVIEW", "ASSOCIATION_LIFECYCLE_REVIEW", "SPECIFICATION_INTERFACE_REVIEW", "EBLC_LANGUAGE_EVALUATION", "PAPER_INTERNAL_CLAIM_REVIEW"]},
+    "purpose": {"type": "string", "minLength": 1, "maxLength": 2000},
+    "classification": {"enum": ["RESTRICTED", "PUBLIC", "INTERMEDIATE"]},
+    "round_state": {"enum": ["DRAFT", "ELIGIBILITY_BLOCKED", "READY_CALIBRATION", "CALIBRATION_ACTIVE", "READY_EMPIRICAL", "EMPIRICAL_ACTIVE", "ADJUDICATION_ACTIVE", "COMPLETE", "TERMINAL_SHORTFALL"]},
+    "max_revisions": {"const": 2},
+    "manifest_frozen": {"type": "boolean"},
+    "sample_manifest_hash": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "assignment_hash": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "assignment_seed_hash": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "assignment_algorithm_version": {"type": ["string", "null"]},
+    "schema_ui_export_validated": {"type": "boolean"},
+    "calibration_complete": {"type": "boolean"},
+    "reviewer_training_complete": {"type": "boolean"},
+    "baseline_model_split_manifest_frozen": {"type": "boolean"},
+    "created_by": {"type": "string"},
+    "created_at": {"type": "string"},
+    "closed_at": {"type": ["string", "null"]}
+  }
+}

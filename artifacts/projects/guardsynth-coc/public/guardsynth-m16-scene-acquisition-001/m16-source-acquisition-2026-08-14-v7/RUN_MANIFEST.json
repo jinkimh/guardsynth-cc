@@ -1,0 +1,10 @@
+{
+  "annotation_started": false,
+  "claim_scope": "M16_SCENE_ELIGIBILITY_AND_ACQUISITION_NOT_EXPERT_EFFECT_OR_VEHICLE_SAFETY",
+  "experiment_id": "GUARDSYNTH-M16-SCENE-ACQUISITION-001",
+  "input_class": "PUBLIC_DEIDENTIFIED_AGGREGATE",
+  "restricted_identifier_leakage_count": 0,
+  "run_date": "2026-08-14",
+  "run_id": "m16-source-acquisition-2026-08-14-v7",
+  "source_run_hash": "1c0a060fb30ef474cada456127ac4527ab8d7b68f03967dd8ae5a3bf8f5e93a4"
+}

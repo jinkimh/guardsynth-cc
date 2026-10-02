@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:eblc:indexed-collection:v0.1",
+  "title": "Indexed actor-zone EBLC contract collection v0.1",
+  "type": "object",
+  "required": ["collection_version", "collection_id", "template_program_ref", "frames", "claim_scope", "source_refs", "action_domain", "instances", "composition_evidence_refs"],
+  "additionalProperties": false,
+  "properties": {
+    "collection_version": {"const": "eblc-indexed-collection-v0.1"},
+    "collection_id": {"type": "string", "minLength": 1},
+    "template_program_ref": {"type": "string", "minLength": 1},
+    "frames": {"type": "integer", "minimum": 1},
+    "claim_scope": {"type": "string", "minLength": 1},
+    "source_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "action_domain": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "composition_evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "instances": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["instance_id", "contract_id", "association", "zone_entry", "priority_tier", "allowed_actions", "overrides_contracts"],
+        "additionalProperties": false,
+        "properties": {
+          "instance_id": {"type": "string", "minLength": 1},
+          "contract_id": {"type": "string", "minLength": 1},
+          "priority_tier": {"type": "string", "enum": ["HARD", "SERVICE", "PREFERENCE"]},
+          "allowed_actions": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "overrides_contracts": {"type": "array", "items": {"type": "string", "minLength": 1}},
+          "zone_entry": {
+            "type": ["object", "null"],
+            "required": ["value", "unit", "frame", "evidence_refs"],
+            "additionalProperties": false,
+            "properties": {
+              "value": {"type": "number"},
+              "unit": {"type": "string", "minLength": 1},
+              "frame": {"type": "string", "minLength": 1},
+              "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+            }
+          },
+          "association": {
+            "type": "object",
+            "required": ["status", "target_entity_id", "zone_id", "zone_geometry_ref", "coordinate_transform_ref", "candidate_target_entity_ids", "candidate_zone_ids", "evidence_refs", "reason_codes"],
+            "additionalProperties": false,
+            "properties": {
+              "status": {"type": "string", "enum": ["BOUND", "AMBIGUOUS", "UNSUPPORTED", "CONFLICT"]},
+              "target_entity_id": {"type": ["string", "null"], "minLength": 1},
+              "zone_id": {"type": ["string", "null"], "minLength": 1},
+              "zone_geometry_ref": {"type": ["string", "null"], "minLength": 1},
+              "coordinate_transform_ref": {"type": ["string", "null"], "minLength": 1},
+              "candidate_target_entity_ids": {"type": "array", "items": {"type": "string", "minLength": 1}},
+              "candidate_zone_ids": {"type": "array", "items": {"type": "string", "minLength": 1}},
+              "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+              "reason_codes": {"type": "array", "items": {"type": "string", "minLength": 1}}
+            }
+          }
+        }
+      }
+    }
+  }
+}

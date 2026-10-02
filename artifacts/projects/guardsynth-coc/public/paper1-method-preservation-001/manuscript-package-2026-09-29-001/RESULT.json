@@ -1,0 +1,195 @@
+{
+  "project_id": "guardsynth-coc",
+  "status": "COMPLETE_AUTHORING_PACKAGE_NOT_SUBMISSION_MANUSCRIPT",
+  "pdf_pages": 28,
+  "bookmarks": 23,
+  "source_text_units_checked": 874,
+  "missing_source_text_units": 0,
+  "missing_glyphs": 0,
+  "overfull_boxes": 0,
+  "representative_pages_visually_checked": [1, 2, 10, 11, 16, 18, 19, 28],
+  "layout_adjustments": ["Keep section 7.3 with CNL text", "Keep section 11.3 model table together"],
+  "new_experiments": false,
+  "repository_naming_check": "Five pre-existing violations; none in this package",
+  "source": "projects/04-guardsynth-coc/paper/GUARDSYNTH_COC_METHODS_SETTINGS_PACKAGE_V01_KO.md",
+  "source_sha256": "e92d77a88089161bd4da467fcec41d5eb81683092cc54eded3e70c5823a43984",
+  "pdf": "guardsynth-coc-methods-settings-package-v01-ko.pdf",
+  "sections": [
+    "1 제목과 중심 주장",
+    "2 초록 초안",
+    "3 연구 질문과 근거",
+    "4 제약의 범위와 특성 및 요소",
+    "5 방법과 사람의 역할",
+    "6 두 실행 프로파일",
+    "7 끝까지 연결되는 예제",
+    "8 실제 장면 예제의 역할",
+    "9 검증과 테스트 근거",
+    "10 실험 구성과 표본 단위",
+    "11 확장 데이터와 학습 설정",
+    "12 지표와 통계",
+    "13 주 성능 비교",
+    "14 여섯 조건의 보충 수치",
+    "15 명세 기반 비용 학습",
+    "16 추가 행동 지표와 처리 시간",
+    "17 사전 판정과 보고 초점",
+    "18 주장과 근거의 경계",
+    "19 관련 연구의 연결 축",
+    "20 본문과 보충자료 구성",
+    "21 재현 자료 색인",
+    "22 투고 전 남은 집필 작업",
+    "23 IEEE Access 원고 준비"
+  ],
+  "table_count": 23,
+  "links": [
+    {
+      "label": "6쪽 원고",
+      "source_target": "main.tex",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/paper/main.tex"
+    },
+    {
+      "label": "설계",
+      "source_target": "../docs/designs/PAPER1_ACTION_CONTRACT_DESIGN_V01.md",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/docs/designs/PAPER1_ACTION_CONTRACT_DESIGN_V01.md"
+    },
+    {
+      "label": "장면 #18",
+      "source_target": "examples/SCENE18_PIPELINE_EXAMPLE_REPORT_V01.md",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/paper/examples/SCENE18_PIPELINE_EXAMPLE_REPORT_V01.md"
+    },
+    {
+      "label": "시간 계약 코드",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_preservation.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py"
+    },
+    {
+      "label": "확장 데이터 보고서",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-training-data-2026-09-29-001/REPORT_KO.md",
+      "pdf_target": "../temporal-training-data-2026-09-29-001/REPORT_KO.md"
+    },
+    {
+      "label": "원 보고서 D4",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/diversity-analysis-2026-09-29-001/REPORT_KO.md",
+      "pdf_target": "../../paper1-temporal-diversity-001/diversity-analysis-2026-09-29-001/REPORT_KO.md"
+    },
+    {
+      "label": "동결 설정",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-protocol-2026-09-29-001/protocol.json",
+      "pdf_target": "../temporal-expansion-protocol-2026-09-29-001/protocol.json"
+    },
+    {
+      "label": "학습 코드",
+      "source_target": "../experiments/paper1_cnl_learning/train_temporal_expansion.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/train_temporal_expansion.py"
+    },
+    {
+      "label": "마감 보고서",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-experiment-closure-2026-09-29-001/REPORT_KO.md",
+      "pdf_target": "../temporal-experiment-closure-2026-09-29-001/REPORT_KO.md"
+    },
+    {
+      "label": "전체 시드·SD·CI CSV",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv",
+      "pdf_target": "../temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv"
+    },
+    {
+      "label": "비용 프로토콜",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-cost-protocol-2026-09-29-001/protocol.json",
+      "pdf_target": "../temporal-cost-protocol-2026-09-29-001/protocol.json"
+    },
+    {
+      "label": "추가 지표 보고서",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-secondary-metrics-2026-09-29-001/REPORT_KO.md",
+      "pdf_target": "../temporal-secondary-metrics-2026-09-29-001/REPORT_KO.md"
+    },
+    {
+      "label": "기존 원고",
+      "source_target": "main.tex",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/paper/main.tex"
+    },
+    {
+      "label": "범위 결정",
+      "source_target": "../docs/decisions/PAPER1_METHOD_PRESERVATION_AND_LABELING_DECISION_V01.md",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/docs/decisions/PAPER1_METHOD_PRESERVATION_AND_LABELING_DECISION_V01.md"
+    },
+    {
+      "label": "정성적 설계",
+      "source_target": "../docs/designs/PAPER1_ACTION_CONTRACT_DESIGN_V01.md",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/docs/designs/PAPER1_ACTION_CONTRACT_DESIGN_V01.md"
+    },
+    {
+      "label": "시간 계약 코드",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_preservation.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py"
+    },
+    {
+      "label": "D4 원 보고서",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/diversity-analysis-2026-09-29-001/REPORT_KO.md",
+      "pdf_target": "../../paper1-temporal-diversity-001/diversity-analysis-2026-09-29-001/REPORT_KO.md"
+    },
+    {
+      "label": "데이터 설정",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-training-data-2026-09-29-001/protocol.json",
+      "pdf_target": "../temporal-training-data-2026-09-29-001/protocol.json"
+    },
+    {
+      "label": "확장 동결 설정",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-protocol-2026-09-29-001/protocol.json",
+      "pdf_target": "../temporal-expansion-protocol-2026-09-29-001/protocol.json"
+    },
+    {
+      "label": "확장 결과",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/RESULT.json",
+      "pdf_target": "../temporal-expansion-learning-2026-09-29-001/RESULT.json"
+    },
+    {
+      "label": "확장 manifest",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001/RUN_MANIFEST.json",
+      "pdf_target": "../temporal-expansion-learning-2026-09-29-001/RUN_MANIFEST.json"
+    },
+    {
+      "label": "비용 설정",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-cost-protocol-2026-09-29-001/protocol.json",
+      "pdf_target": "../temporal-cost-protocol-2026-09-29-001/protocol.json"
+    },
+    {
+      "label": "비용 결과",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-cost-learning-2026-09-29-001/REPORT_KO.md",
+      "pdf_target": "../temporal-cost-learning-2026-09-29-001/REPORT_KO.md"
+    },
+    {
+      "label": "추가 지표",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-secondary-metrics-2026-09-29-001/REPORT_KO.md",
+      "pdf_target": "../temporal-secondary-metrics-2026-09-29-001/REPORT_KO.md"
+    },
+    {
+      "label": "통합 CSV",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv",
+      "pdf_target": "../temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv"
+    },
+    {
+      "label": "마감 manifest",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-experiment-closure-2026-09-29-001/RUN_MANIFEST.json",
+      "pdf_target": "../temporal-experiment-closure-2026-09-29-001/RUN_MANIFEST.json"
+    },
+    {
+      "label": "실제 장면 예제",
+      "source_target": "examples/SCENE18_PIPELINE_EXAMPLE_REPORT_V01.md",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/paper/examples/SCENE18_PIPELINE_EXAMPLE_REPORT_V01.md"
+    },
+    {
+      "label": "공식 작성 안내",
+      "source_target": "https://ieeeaccess.ieee.org/authors/preparing-your-article/",
+      "pdf_target": "https://ieeeaccess.ieee.org/authors/preparing-your-article/"
+    },
+    {
+      "label": "제출 안내",
+      "source_target": "https://ieeeaccess.ieee.org/authors/submission-guidelines/",
+      "pdf_target": "https://ieeeaccess.ieee.org/authors/submission-guidelines/"
+    },
+    {
+      "label": "IEEE Access 지침",
+      "source_target": "https://ieeeaccess.ieee.org/authors/preparing-your-article/",
+      "pdf_target": "https://ieeeaccess.ieee.org/authors/preparing-your-article/"
+    }
+  ]
+}

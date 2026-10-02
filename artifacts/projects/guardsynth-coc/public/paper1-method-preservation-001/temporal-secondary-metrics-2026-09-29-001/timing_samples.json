@@ -1,0 +1,2594 @@
+[
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 4.018805
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11499,
+    "status": "UNSAT",
+    "elapsed_ms": 3.085487
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11500,
+    "status": "SAT",
+    "elapsed_ms": 3.783269
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11501,
+    "status": "SAT",
+    "elapsed_ms": 3.493127
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.434646
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 11999,
+    "status": "UNSAT",
+    "elapsed_ms": 3.049555
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 12000,
+    "status": "SAT",
+    "elapsed_ms": 3.744618
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 12001,
+    "status": "SAT",
+    "elapsed_ms": 3.469575
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.553343
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12399,
+    "status": "UNSAT",
+    "elapsed_ms": 2.988224
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12400,
+    "status": "SAT",
+    "elapsed_ms": 3.761636
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12401,
+    "status": "SAT",
+    "elapsed_ms": 3.426892
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.437819
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12499,
+    "status": "UNSAT",
+    "elapsed_ms": 3.013043
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12500,
+    "status": "SAT",
+    "elapsed_ms": 3.667407
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12501,
+    "status": "SAT",
+    "elapsed_ms": 3.587053
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.50949
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 12999,
+    "status": "UNSAT",
+    "elapsed_ms": 2.970141
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 13000,
+    "status": "SAT",
+    "elapsed_ms": 3.686919
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 13001,
+    "status": "SAT",
+    "elapsed_ms": 3.53364
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.531006
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13399,
+    "status": "UNSAT",
+    "elapsed_ms": 3.165861
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13400,
+    "status": "SAT",
+    "elapsed_ms": 3.809215
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13401,
+    "status": "SAT",
+    "elapsed_ms": 3.521619
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.535805
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11799,
+    "status": "UNSAT",
+    "elapsed_ms": 2.907888
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11800,
+    "status": "SAT",
+    "elapsed_ms": 3.674549
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11801,
+    "status": "SAT",
+    "elapsed_ms": 3.450418
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.495705
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12299,
+    "status": "UNSAT",
+    "elapsed_ms": 3.04066
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12300,
+    "status": "SAT",
+    "elapsed_ms": 3.760948
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12301,
+    "status": "SAT",
+    "elapsed_ms": 3.509603
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.517207
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12699,
+    "status": "UNSAT",
+    "elapsed_ms": 2.899782
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12700,
+    "status": "SAT",
+    "elapsed_ms": 3.653608
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12701,
+    "status": "SAT",
+    "elapsed_ms": 3.553936
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.509834
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12799,
+    "status": "UNSAT",
+    "elapsed_ms": 3.065234
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12800,
+    "status": "SAT",
+    "elapsed_ms": 3.764713
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12801,
+    "status": "SAT",
+    "elapsed_ms": 3.552136
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.402785
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13299,
+    "status": "UNSAT",
+    "elapsed_ms": 3.084487
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13300,
+    "status": "SAT",
+    "elapsed_ms": 3.780507
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13301,
+    "status": "SAT",
+    "elapsed_ms": 3.520309
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.538175
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13699,
+    "status": "UNSAT",
+    "elapsed_ms": 3.207069
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13700,
+    "status": "SAT",
+    "elapsed_ms": 3.762477
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13701,
+    "status": "SAT",
+    "elapsed_ms": 3.505767
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.440556
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11499,
+    "status": "UNSAT",
+    "elapsed_ms": 3.046806
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11500,
+    "status": "SAT",
+    "elapsed_ms": 3.750752
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11501,
+    "status": "SAT",
+    "elapsed_ms": 3.577675
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.553708
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 11999,
+    "status": "UNSAT",
+    "elapsed_ms": 3.033154
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 12000,
+    "status": "SAT",
+    "elapsed_ms": 3.752245
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 12001,
+    "status": "SAT",
+    "elapsed_ms": 3.40893
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.525382
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12399,
+    "status": "UNSAT",
+    "elapsed_ms": 2.966277
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12400,
+    "status": "SAT",
+    "elapsed_ms": 3.782606
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12401,
+    "status": "SAT",
+    "elapsed_ms": 3.515857
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.555676
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12499,
+    "status": "UNSAT",
+    "elapsed_ms": 2.986493
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12500,
+    "status": "SAT",
+    "elapsed_ms": 3.672034
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12501,
+    "status": "SAT",
+    "elapsed_ms": 3.535599
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.550204
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 12999,
+    "status": "UNSAT",
+    "elapsed_ms": 3.04534
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 13000,
+    "status": "SAT",
+    "elapsed_ms": 3.778049
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 13001,
+    "status": "SAT",
+    "elapsed_ms": 3.526785
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.527332
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13399,
+    "status": "UNSAT",
+    "elapsed_ms": 3.120346
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13400,
+    "status": "SAT",
+    "elapsed_ms": 3.777337
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13401,
+    "status": "SAT",
+    "elapsed_ms": 3.546689
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.54061
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11799,
+    "status": "UNSAT",
+    "elapsed_ms": 3.008224
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11800,
+    "status": "SAT",
+    "elapsed_ms": 3.775895
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11801,
+    "status": "SAT",
+    "elapsed_ms": 3.524546
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.524234
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12299,
+    "status": "UNSAT",
+    "elapsed_ms": 2.91767
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12300,
+    "status": "SAT",
+    "elapsed_ms": 3.757993
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12301,
+    "status": "SAT",
+    "elapsed_ms": 3.786928
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.518152
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12699,
+    "status": "UNSAT",
+    "elapsed_ms": 2.991627
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12700,
+    "status": "SAT",
+    "elapsed_ms": 3.776494
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12701,
+    "status": "SAT",
+    "elapsed_ms": 3.503536
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.53846
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12799,
+    "status": "UNSAT",
+    "elapsed_ms": 2.955309
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12800,
+    "status": "SAT",
+    "elapsed_ms": 3.754134
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12801,
+    "status": "SAT",
+    "elapsed_ms": 3.494111
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.541645
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13299,
+    "status": "UNSAT",
+    "elapsed_ms": 2.956037
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13300,
+    "status": "SAT",
+    "elapsed_ms": 3.689323
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13301,
+    "status": "SAT",
+    "elapsed_ms": 3.546359
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.442029
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13699,
+    "status": "UNSAT",
+    "elapsed_ms": 3.175139
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13700,
+    "status": "SAT",
+    "elapsed_ms": 3.804463
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13701,
+    "status": "SAT",
+    "elapsed_ms": 3.525464
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.54083
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11499,
+    "status": "UNSAT",
+    "elapsed_ms": 3.003572
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11500,
+    "status": "SAT",
+    "elapsed_ms": 3.765059
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11501,
+    "status": "SAT",
+    "elapsed_ms": 3.512654
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.450144
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 11999,
+    "status": "UNSAT",
+    "elapsed_ms": 3.010193
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 12000,
+    "status": "SAT",
+    "elapsed_ms": 3.758382
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 12001,
+    "status": "SAT",
+    "elapsed_ms": 3.502866
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.545045
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12399,
+    "status": "UNSAT",
+    "elapsed_ms": 3.029482
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12400,
+    "status": "SAT",
+    "elapsed_ms": 3.718864
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12401,
+    "status": "SAT",
+    "elapsed_ms": 3.45818
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.572348
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12499,
+    "status": "UNSAT",
+    "elapsed_ms": 2.994301
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12500,
+    "status": "SAT",
+    "elapsed_ms": 3.688784
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12501,
+    "status": "SAT",
+    "elapsed_ms": 3.537079
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.5137
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 12999,
+    "status": "UNSAT",
+    "elapsed_ms": 2.960446
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 13000,
+    "status": "SAT",
+    "elapsed_ms": 3.728746
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 13001,
+    "status": "SAT",
+    "elapsed_ms": 3.502808
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.461692
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13399,
+    "status": "UNSAT",
+    "elapsed_ms": 3.227387
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13400,
+    "status": "SAT",
+    "elapsed_ms": 3.763603
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13401,
+    "status": "SAT",
+    "elapsed_ms": 3.553648
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.515509
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11799,
+    "status": "UNSAT",
+    "elapsed_ms": 2.95345
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11800,
+    "status": "SAT",
+    "elapsed_ms": 3.75885
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11801,
+    "status": "SAT",
+    "elapsed_ms": 3.542444
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.521557
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12299,
+    "status": "UNSAT",
+    "elapsed_ms": 3.003342
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12300,
+    "status": "SAT",
+    "elapsed_ms": 3.72861
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12301,
+    "status": "SAT",
+    "elapsed_ms": 3.522392
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.517722
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12699,
+    "status": "UNSAT",
+    "elapsed_ms": 2.938334
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12700,
+    "status": "SAT",
+    "elapsed_ms": 3.734958
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12701,
+    "status": "SAT",
+    "elapsed_ms": 3.531838
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.50318
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12799,
+    "status": "UNSAT",
+    "elapsed_ms": 2.984586
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12800,
+    "status": "SAT",
+    "elapsed_ms": 3.754821
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12801,
+    "status": "SAT",
+    "elapsed_ms": 3.544626
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.439461
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13299,
+    "status": "UNSAT",
+    "elapsed_ms": 3.027277
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13300,
+    "status": "SAT",
+    "elapsed_ms": 3.741103
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13301,
+    "status": "SAT",
+    "elapsed_ms": 3.510052
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.554684
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13699,
+    "status": "UNSAT",
+    "elapsed_ms": 3.978249
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13700,
+    "status": "SAT",
+    "elapsed_ms": 3.810608
+  },
+  {
+    "mode": "compile_and_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13701,
+    "status": "SAT",
+    "elapsed_ms": 3.700233
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.390104
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11499,
+    "status": "UNSAT",
+    "elapsed_ms": 1.795626
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11500,
+    "status": "SAT",
+    "elapsed_ms": 2.587694
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11501,
+    "status": "SAT",
+    "elapsed_ms": 2.573479
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 3.779113
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 11999,
+    "status": "UNSAT",
+    "elapsed_ms": 3.03337
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 12000,
+    "status": "SAT",
+    "elapsed_ms": 4.202476
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 12001,
+    "status": "SAT",
+    "elapsed_ms": 3.653273
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.369495
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12399,
+    "status": "UNSAT",
+    "elapsed_ms": 1.803463
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12400,
+    "status": "SAT",
+    "elapsed_ms": 2.552616
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12401,
+    "status": "SAT",
+    "elapsed_ms": 2.319699
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.317079
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12499,
+    "status": "UNSAT",
+    "elapsed_ms": 1.820361
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12500,
+    "status": "SAT",
+    "elapsed_ms": 2.545811
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12501,
+    "status": "SAT",
+    "elapsed_ms": 2.293411
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.34416
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 12999,
+    "status": "UNSAT",
+    "elapsed_ms": 1.831122
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 13000,
+    "status": "SAT",
+    "elapsed_ms": 2.565437
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 13001,
+    "status": "SAT",
+    "elapsed_ms": 2.441992
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.285615
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13399,
+    "status": "UNSAT",
+    "elapsed_ms": 1.892774
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13400,
+    "status": "SAT",
+    "elapsed_ms": 2.528432
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13401,
+    "status": "SAT",
+    "elapsed_ms": 2.391305
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.436919
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11799,
+    "status": "UNSAT",
+    "elapsed_ms": 1.784906
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11800,
+    "status": "SAT",
+    "elapsed_ms": 2.590074
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11801,
+    "status": "SAT",
+    "elapsed_ms": 2.332444
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.327176
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12299,
+    "status": "UNSAT",
+    "elapsed_ms": 1.801531
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12300,
+    "status": "SAT",
+    "elapsed_ms": 2.59143
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12301,
+    "status": "SAT",
+    "elapsed_ms": 2.345155
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.366134
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12699,
+    "status": "UNSAT",
+    "elapsed_ms": 1.89739
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12700,
+    "status": "SAT",
+    "elapsed_ms": 2.534815
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12701,
+    "status": "SAT",
+    "elapsed_ms": 2.385282
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.289444
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12799,
+    "status": "UNSAT",
+    "elapsed_ms": 1.8859
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12800,
+    "status": "SAT",
+    "elapsed_ms": 2.612751
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12801,
+    "status": "SAT",
+    "elapsed_ms": 2.296549
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.353359
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13299,
+    "status": "UNSAT",
+    "elapsed_ms": 1.805133
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13300,
+    "status": "SAT",
+    "elapsed_ms": 2.62295
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13301,
+    "status": "SAT",
+    "elapsed_ms": 2.299694
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.382878
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13699,
+    "status": "UNSAT",
+    "elapsed_ms": 1.860956
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13700,
+    "status": "SAT",
+    "elapsed_ms": 2.535831
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 0,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13701,
+    "status": "SAT",
+    "elapsed_ms": 2.398819
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.336834
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11499,
+    "status": "UNSAT",
+    "elapsed_ms": 1.895383
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11500,
+    "status": "SAT",
+    "elapsed_ms": 2.543092
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11501,
+    "status": "SAT",
+    "elapsed_ms": 2.399924
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.375875
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 11999,
+    "status": "UNSAT",
+    "elapsed_ms": 1.872363
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 12000,
+    "status": "SAT",
+    "elapsed_ms": 2.58714
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 12001,
+    "status": "SAT",
+    "elapsed_ms": 2.332919
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.377876
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12399,
+    "status": "UNSAT",
+    "elapsed_ms": 1.775283
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12400,
+    "status": "SAT",
+    "elapsed_ms": 2.592997
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12401,
+    "status": "SAT",
+    "elapsed_ms": 2.393121
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.323324
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12499,
+    "status": "UNSAT",
+    "elapsed_ms": 1.868144
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12500,
+    "status": "SAT",
+    "elapsed_ms": 2.496248
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12501,
+    "status": "SAT",
+    "elapsed_ms": 2.426462
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.387154
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 12999,
+    "status": "UNSAT",
+    "elapsed_ms": 1.833759
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 13000,
+    "status": "SAT",
+    "elapsed_ms": 2.554757
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 13001,
+    "status": "SAT",
+    "elapsed_ms": 2.355352
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.418386
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13399,
+    "status": "UNSAT",
+    "elapsed_ms": 1.812459
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13400,
+    "status": "SAT",
+    "elapsed_ms": 2.626445
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13401,
+    "status": "SAT",
+    "elapsed_ms": 2.423752
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.341104
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11799,
+    "status": "UNSAT",
+    "elapsed_ms": 1.902898
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11800,
+    "status": "SAT",
+    "elapsed_ms": 2.501716
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11801,
+    "status": "SAT",
+    "elapsed_ms": 2.39548
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.323072
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12299,
+    "status": "UNSAT",
+    "elapsed_ms": 1.852543
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12300,
+    "status": "SAT",
+    "elapsed_ms": 2.599651
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12301,
+    "status": "SAT",
+    "elapsed_ms": 2.314858
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.345817
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12699,
+    "status": "UNSAT",
+    "elapsed_ms": 1.823681
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12700,
+    "status": "SAT",
+    "elapsed_ms": 2.601272
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12701,
+    "status": "SAT",
+    "elapsed_ms": 2.333989
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.378148
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12799,
+    "status": "UNSAT",
+    "elapsed_ms": 1.770684
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12800,
+    "status": "SAT",
+    "elapsed_ms": 2.571692
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12801,
+    "status": "SAT",
+    "elapsed_ms": 2.398757
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.341484
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13299,
+    "status": "UNSAT",
+    "elapsed_ms": 1.825451
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13300,
+    "status": "SAT",
+    "elapsed_ms": 2.537346
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13301,
+    "status": "SAT",
+    "elapsed_ms": 2.414852
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.359091
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13699,
+    "status": "UNSAT",
+    "elapsed_ms": 1.831314
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13700,
+    "status": "SAT",
+    "elapsed_ms": 2.583779
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 1,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13701,
+    "status": "SAT",
+    "elapsed_ms": 2.30666
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.448774
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11499,
+    "status": "UNSAT",
+    "elapsed_ms": 1.800503
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11500,
+    "status": "SAT",
+    "elapsed_ms": 2.591748
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11000,
+    "entry_ms": 11501,
+    "status": "SAT",
+    "elapsed_ms": 2.326734
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.295031
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 11999,
+    "status": "UNSAT",
+    "elapsed_ms": 1.893133
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 12000,
+    "status": "SAT",
+    "elapsed_ms": 2.549831
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11500,
+    "entry_ms": 12001,
+    "status": "SAT",
+    "elapsed_ms": 2.371079
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.285362
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12399,
+    "status": "UNSAT",
+    "elapsed_ms": 1.840381
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12400,
+    "status": "SAT",
+    "elapsed_ms": 2.545328
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 500,
+    "clear_ms": 11900,
+    "entry_ms": 12401,
+    "status": "SAT",
+    "elapsed_ms": 2.390381
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.399015
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12499,
+    "status": "UNSAT",
+    "elapsed_ms": 1.800273
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12500,
+    "status": "SAT",
+    "elapsed_ms": 2.561026
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11000,
+    "entry_ms": 12501,
+    "status": "SAT",
+    "elapsed_ms": 2.321637
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.405847
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 12999,
+    "status": "UNSAT",
+    "elapsed_ms": 1.819743
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 13000,
+    "status": "SAT",
+    "elapsed_ms": 2.638659
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11500,
+    "entry_ms": 13001,
+    "status": "SAT",
+    "elapsed_ms": 2.350392
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.342239
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13399,
+    "status": "UNSAT",
+    "elapsed_ms": 1.854611
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13400,
+    "status": "SAT",
+    "elapsed_ms": 2.510726
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1500,
+    "clear_ms": 11900,
+    "entry_ms": 13401,
+    "status": "SAT",
+    "elapsed_ms": 2.396898
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.42152
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11799,
+    "status": "UNSAT",
+    "elapsed_ms": 1.809441
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11800,
+    "status": "SAT",
+    "elapsed_ms": 2.551944
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11000,
+    "entry_ms": 11801,
+    "status": "SAT",
+    "elapsed_ms": 2.315625
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.420012
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12299,
+    "status": "UNSAT",
+    "elapsed_ms": 1.816515
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12300,
+    "status": "SAT",
+    "elapsed_ms": 2.585602
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11500,
+    "entry_ms": 12301,
+    "status": "SAT",
+    "elapsed_ms": 2.370379
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.339511
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12699,
+    "status": "UNSAT",
+    "elapsed_ms": 1.902231
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12700,
+    "status": "SAT",
+    "elapsed_ms": 2.526805
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 800,
+    "clear_ms": 11900,
+    "entry_ms": 12701,
+    "status": "SAT",
+    "elapsed_ms": 2.35764
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.328482
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12799,
+    "status": "UNSAT",
+    "elapsed_ms": 1.848534
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12800,
+    "status": "SAT",
+    "elapsed_ms": 2.548729
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11000,
+    "entry_ms": 12801,
+    "status": "SAT",
+    "elapsed_ms": 2.345899
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.394145
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13299,
+    "status": "UNSAT",
+    "elapsed_ms": 1.784174
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13300,
+    "status": "SAT",
+    "elapsed_ms": 2.626629
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11500,
+    "entry_ms": 13301,
+    "status": "SAT",
+    "elapsed_ms": 2.32501
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": null,
+    "status": "SAT",
+    "elapsed_ms": 2.406473
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13699,
+    "status": "UNSAT",
+    "elapsed_ms": 1.803886
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13700,
+    "status": "SAT",
+    "elapsed_ms": 2.589465
+  },
+  {
+    "mode": "reused_compilation_solve",
+    "repeat": 2,
+    "duration_ms": 1800,
+    "clear_ms": 11900,
+    "entry_ms": 13701,
+    "status": "SAT",
+    "elapsed_ms": 2.423224
+  }
+]

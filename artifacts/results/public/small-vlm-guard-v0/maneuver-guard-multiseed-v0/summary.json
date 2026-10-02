@@ -1185,5 +1185,117 @@
         "violations": 24
       }
     }
+  },
+  "unit_normalization": {
+    "scope": "same saved adapters and hard examples; only cm-valued guard text converted to equivalent m-valued text",
+    "per_seed": {
+      "42": {
+        "before": {
+          "accuracy": 0.875,
+          "guard_violation_rate": 0.0,
+          "safe_goal_completion_rate": 1.0,
+          "contract_swap_pair_accuracy": 0.75,
+          "deadlock_rate": 0.0
+        },
+        "after": {
+          "accuracy": 0.875,
+          "guard_violation_rate": 0.0,
+          "safe_goal_completion_rate": 1.0,
+          "contract_swap_pair_accuracy": 0.75,
+          "deadlock_rate": 0.0
+        },
+        "counts": {
+          "cm_examples": 24,
+          "correct_before": 12,
+          "correct_after": 12,
+          "recovered": 0,
+          "regressed": 0,
+          "non_cm_prediction_changes": 0
+        }
+      },
+      "17": {
+        "before": {
+          "accuracy": 0.9895833333333334,
+          "guard_violation_rate": 0.010416666666666666,
+          "safe_goal_completion_rate": 0.9895833333333334,
+          "contract_swap_pair_accuracy": 0.9791666666666666,
+          "deadlock_rate": 0.0
+        },
+        "after": {
+          "accuracy": 1.0,
+          "guard_violation_rate": 0.0,
+          "safe_goal_completion_rate": 1.0,
+          "contract_swap_pair_accuracy": 1.0,
+          "deadlock_rate": 0.0
+        },
+        "counts": {
+          "cm_examples": 24,
+          "correct_before": 23,
+          "correct_after": 24,
+          "recovered": 1,
+          "regressed": 0,
+          "non_cm_prediction_changes": 0
+        }
+      },
+      "123": {
+        "before": {
+          "accuracy": 0.9791666666666666,
+          "guard_violation_rate": 0.020833333333333332,
+          "safe_goal_completion_rate": 0.9791666666666666,
+          "contract_swap_pair_accuracy": 0.9583333333333334,
+          "deadlock_rate": 0.0
+        },
+        "after": {
+          "accuracy": 1.0,
+          "guard_violation_rate": 0.0,
+          "safe_goal_completion_rate": 1.0,
+          "contract_swap_pair_accuracy": 1.0,
+          "deadlock_rate": 0.0
+        },
+        "counts": {
+          "cm_examples": 24,
+          "correct_before": 22,
+          "correct_after": 24,
+          "recovered": 2,
+          "regressed": 0,
+          "non_cm_prediction_changes": 0
+        }
+      }
+    },
+    "aggregate": {
+      "accuracy": {
+        "before_mean": 0.9479166666666666,
+        "after_mean": 0.9583333333333334,
+        "after_sample_std": 0.07216878364870322
+      },
+      "guard_violation_rate": {
+        "before_mean": 0.010416666666666666,
+        "after_mean": 0.0,
+        "after_sample_std": 0.0
+      },
+      "safe_goal_completion_rate": {
+        "before_mean": 0.9895833333333334,
+        "after_mean": 1.0,
+        "after_sample_std": 0.0
+      },
+      "contract_swap_pair_accuracy": {
+        "before_mean": 0.8958333333333334,
+        "after_mean": 0.9166666666666666,
+        "after_sample_std": 0.14433756729740643
+      },
+      "deadlock_rate": {
+        "before_mean": 0.0,
+        "after_mean": 0.0,
+        "after_sample_std": 0.0
+      }
+    },
+    "pooled_counts": {
+      "cm_examples": 72,
+      "correct_before": 57,
+      "correct_after": 60,
+      "recovered": 3,
+      "regressed": 0,
+      "non_cm_prediction_changes": 0
+    }
   }
 }

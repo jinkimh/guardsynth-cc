@@ -1,0 +1,45 @@
+{
+  "annotation_start_allowed": false,
+  "association_observation_counts": {
+    "AMBIGUOUS_VISIBLE": 1,
+    "CLEAR_VISIBLE": 55,
+    "NOT_OBSERVABLE": 4
+  },
+  "audit_version": "guardsynth-m16-post-review-source-closure-v0.1",
+  "calibration_5_of_5_count": 98,
+  "calibration_variant_selection_closed_count": 98,
+  "claim_scope": "POST_REVIEW_SOURCE_CLOSURE_AUDIT_NOT_FINAL_ASSOCIATION_EXPERT_EFFECT_OR_VEHICLE_SAFETY",
+  "classified_event_count": 98,
+  "final_outcome_assigned_count": 0,
+  "human_observation_completed_count": 60,
+  "human_observation_deferred_source_first_count": 38,
+  "human_observation_integrity_verified": true,
+  "materialized_unique_clip_count": 81,
+  "newly_eligible_scene_count": 0,
+  "recorded_rig_binding_count": 98,
+  "remaining_field_event_counts": {
+    "applicable_rule_scope": 98,
+    "conflict_stop_or_following_geometry": 98,
+    "outcome_lifecycle_witness": 98,
+    "relevant_actor_or_control_state": 98,
+    "target_zone_or_lane_association": 98,
+    "verified_coordinate_transform": 98
+  },
+  "selected_calibration_variant": "offline",
+  "slice_candidate_counts": {
+    "FOLLOWING_CUT_IN": 33,
+    "PEDESTRIAN_CYCLIST_YIELD": 32,
+    "STOP_SIGNALS": 33
+  },
+  "source_complete_8_of_8_count": 0,
+  "status": "CURATOR_SOURCE_CLOSURE_AUDITED_REMAINING_EVIDENCE_REQUIRED",
+  "synthetic_required_field_fill_count": 0,
+  "temporal_closure_count": 98,
+  "temporal_observation_counts": {
+    "HAZARD_VISIBLE": 29,
+    "NOT_OBSERVABLE": 5,
+    "NO_HAZARD_VISIBLE": 24,
+    "STATE_TRANSITION_VISIBLE": 2
+  },
+  "verified_coordinate_transform_count": 0
+}

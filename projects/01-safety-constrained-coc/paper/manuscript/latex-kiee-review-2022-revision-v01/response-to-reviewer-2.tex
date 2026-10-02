@@ -1,0 +1,267 @@
+% Reviewer 2 standalone response; common front matter and R2 content from response-to-reviewers.tex.
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\setmainfont[
+  Path=../latex-kiee-review-2022/fonts/,
+  Extension=.otf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold
+]{NotoSerifCJKkr}
+
+\definecolor{reviewercolor}{RGB}{38,82,126}
+\definecolor{responsecolor}{RGB}{36,113,78}
+\definecolor{revisioncolor}{RGB}{145,82,24}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlength{\fboxsep}{7pt}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\familydefault}{\rmdefault}
+
+\newcommand{\fieldheading}[2]{%
+  \par\medskip\noindent
+  {\color{#1}\rule{3pt}{1.25em}}\hspace{0.55em}\textbf{#2}\par\smallskip}
+
+\newenvironment{reviewitem}[1]
+  {\subsection*{#1}}
+  {\par\medskip\hrule\bigskip}
+\newenvironment{reviewercomment}
+  {\fieldheading{reviewercolor}{1. 리뷰어 코멘트}%
+   \begin{quote}}
+  {\end{quote}}
+\newenvironment{authorresponse}
+  {\fieldheading{responsecolor}{2. 저자 답변}}
+  {\par}
+\newenvironment{manuscriptrevision}[1]
+  {\fieldheading{revisioncolor}{3. 논문 반영 결과}%
+   \textbf{수정 위치:} #1\par\smallskip}
+  {\par}
+
+\newcommand{\manuscripttitle}{비전-언어 자율주행 모델의 실행 가드 기반 궤적 후보 선택: 안전 제약 인과 연쇄}
+\newcommand{\manuscriptid}{2026-D-D04-0036}
+\newcommand{\revisionround}{1차 수정}
+\newcommand{\responsedate}{2026년 9월 4일}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries 심사 의견 답변서\par}
+  \vspace{1em}
+  {\large\bfseries \manuscripttitle\par}
+\end{center}
+
+\vspace{0.8em}
+\begin{tabular}{@{}ll@{}}
+논문 접수번호: & \manuscriptid \\
+수정 차수: & \revisionround \\
+답변일: & \responsedate
+\end{tabular}
+
+\section*{답변에 앞서}
+
+편집위원장님과 리뷰어 여러분께,
+
+원고를 세심하게 검토하고 건설적인 의견을 주셔서 감사합니다. 저자들은 모든 의견을
+검토하여 원고를 수정했습니다. 아래에는 각 리뷰어 코멘트, 이에 대한 저자 답변,
+그리고 원고에 실제로 반영한 내용과 수정 위치를 순서대로 제시합니다. 쪽 번호는
+개정 원고를 기준으로 합니다.
+
+이번 개정에서는 후보 정확도와 계약 쌍 정확도의 관계를 명확히 하고, 제약의 의미와
+입력 위치의 효과를 분리하여 설명했습니다. 또한 고난도 사례와 결정적 단위 정규화
+분석을 추가하고 실행 차단장치의 개입 비용을 보고했습니다. 기존 주행 비전-언어
+모델 및 실행시간 검증 연구와의 차이, 국문 요약과 영문 초록의 구체성, 원고의 논리적
+흐름, 학습된 가드 준수와 실제 실행 안전의 구분도 보강했습니다. 모델 외부 검증과
+평가 지표의 상호 보완적 역할도 명시했습니다. 리뷰어 1에 따른 수정은 파란색,
+리뷰어 2에 따른 수정은 보라색으로 표시했습니다.
+
+\section*{리뷰어 2}
+
+\begin{reviewitem}{R2-C1}
+  \begin{reviewercomment}
+    기존 비전-언어 자율주행 모델과 본 연구의 차별성 및 기존 연구의 문제점에 대한
+    설명이 부족하며 연구동기가 불분명함. 즉 본연구의 필요성 및 기존 연구의
+    문제점에 대한 설명이 부족하여 연구 동기가 불분명함.
+  \end{reviewercomment}
+
+  \begin{authorresponse}
+    지적에 감사드립니다. 개정 원고에서는 기존 연구를 두 흐름으로 나누어 연구
+    공백을 명확히 했습니다. Driving VLM/CoC는 장면의 원인, 행동 이유 및 목표를
+    설명하지만 동일 목표 후보의 허용 경계만 바꾸었을 때 선택이 전환되는지를
+    직접 평가하지 않습니다. 반면 형식 검증기와 runtime monitor는 주어진 수치
+    명세를 정확히 검사하지만 자연어 가드를 VLM의 학습 입력으로 사용하고 그
+    의미 반영 여부를 측정하지 않습니다. 본 연구는 기존 계획기나 검증기를
+    대체한다고 주장하지 않습니다. CoC에 자연어 실행 가드를 결합하고, 장면ㆍ목표ㆍ
+    후보를 고정한 paired-contract와 모델 외부 수치 검증을 연결하는 중간
+    인터페이스를 제안한다는 차별점을 명시했습니다.
+  \end{authorresponse}
+
+  \begin{manuscriptrevision}{제1절(1--2쪽), 제2.4절과 표 2(3--4쪽)}
+    서론에 두 연구 흐름 사이의 공백과 필요한 인터페이스를 설명하는 동기 문단을
+    추가했습니다. 관련 연구에는 driving VLM/CoC, formal monitor/shield 및 본
+    연구의 주요 역할, 실행 조건, 진단 평가와 증거 범위를 비교하는 표를
+    추가했습니다. 해당 개정은 보라색으로 표시했습니다.
+  \end{manuscriptrevision}
+\end{reviewitem}
+
+\begin{reviewitem}{R2-C2}
+  \begin{reviewercomment}
+    전체적인 구성에 있어 논리적 연결성이 미비함. 전체적으로 논리적인 흐름을
+    정리할 필요가 있음.
+  \end{reviewercomment}
+
+  \begin{authorresponse}
+    의견에 따라 원고의 논리적 연결을 ``연구 공백--문제 정의--입력 및 평가 방법--
+    단계별 실험--증거 범위''의 순서로 명시했습니다. 서론 말미에 절별 roadmap을
+    추가하고, 문제 정의에서는 행동 목표와 가드 만족을 분리한 이유를 먼저
+    설명했습니다. 방법 절은 입력, 대조군과 paired-contract, 모델 외부 판정의 세
+    질문으로 구성했으며, 실험 절은 사전 진단에서 정적ㆍ시간ㆍ다중 주행 및 별도
+    폐루프 분석으로 범위를 넓히는 순서를 명시했습니다. 각 실험은 확인 목적,
+    비교 방법, 결과 및 의미의 동일한 구조로 읽히도록 점검했습니다.
+  \end{authorresponse}
+
+  \begin{manuscriptrevision}{제1절(2쪽), 제3절(3쪽), 제4절(4쪽), 제5절(7쪽)}
+    절별 roadmap과 문제 정의ㆍ방법ㆍ실험 절의 전환 문단을 추가했습니다. 이
+    문단들은 앞 절의 질문이 다음 절의 수식, 평가 절차 및 실험 순서로 어떻게
+    이어지는지 명시합니다. 해당 개정은 보라색으로 표시했습니다.
+  \end{manuscriptrevision}
+\end{reviewitem}
+
+\begin{reviewitem}{R2-C3}
+  \begin{reviewercomment}
+    국영문 요약에 제안한 방법에 대한 구체적인 내용을 기술하시기 바랍니다.
+  \end{reviewercomment}
+
+  \begin{authorresponse}
+    국문 요약을 추가하고 영문 초록을 전면 보완했습니다. 두 요약 모두 (1) 기존
+    CoC에서 빠질 수 있는 실행 허용 범위, (2) 일곱 요소의 자연어 execution guard,
+    (3) 장면ㆍCoCㆍ가드ㆍ수치 후보를 입력받는 선택 절차, (4) 모델 외부 결정적
+    검증, (5) guard만 바꾸는 paired-contract 평가를 구체적으로 기술합니다.
+    핵심 결과로 표준 시간 평가의 위반률 0.319에서 0.000으로의 감소와 준수 목표
+    완료율/paired accuracy 1.000, 미관측 시간값의 후보 정확도 0.635, 위반률
+    0.351 및 paired accuracy 0.306을 함께 제시해 효과와 한계를 균형 있게
+    요약했습니다.
+  \end{authorresponse}
+
+  \begin{manuscriptrevision}{국문 요약 및 영문 초록(1쪽)}
+    국문 요약을 새로 추가하고 영문 초록을 동일한 구성으로 개정했습니다. 제안
+    방법의 입력, 후보 선택, 모델 외부 검증과 쌍대 계약 평가를 구체화했습니다.
+    핵심 수치와 ``실제 차량 안전 보장이 아님''이라는 주장 범위도 일관되게
+    기술했습니다. 해당 개정은 보라색으로 표시했습니다.
+  \end{manuscriptrevision}
+\end{reviewitem}
+
+\begin{reviewitem}{R2-C4}
+  \begin{reviewercomment}
+    학습된 가드 준수와 실제 실행안전의 구분을 한 이유가 무엇인지 구체적인 기술이
+    필요합니다.
+  \end{reviewercomment}
+
+  \begin{authorresponse}
+    두 개념을 구분한 이유는 평가 단위와 실패 원인이 다르기 때문입니다. 본 논문의
+    learned guard compliance는 유한한 합성 후보와 연구자가 제공한 부분 계약에서
+    목표와 가드를 만족하는 후보를 선택한 비율입니다. 실제 execution safety는
+    센서 오인식, 계약에서 빠진 위험, 연속 궤적과 차량 동역학의 오차, 다른 도로
+    사용자의 반응 및 지연된 상태 갱신까지 포함하는 폐루프 성질입니다. 따라서
+    후보 준수율이 1.000이어도 가드가 불완전하거나 관측이 틀리면 실제 차량은
+    위험할 수 있습니다. 이 구분은 합성 평가 점수를 안전 보장으로 확대하는 범주
+    오류를 방지하고, 최신 상태를 사용하는 외부 검증기와 실행 차단장치가 별도로
+    필요한 이유를 설명합니다.
+  \end{authorresponse}
+
+  \begin{manuscriptrevision}{제4.6절(7쪽), 제6.4절(13--14쪽)}
+    학습된 가드 준수와 실제 실행 안전의 평가 단위 및 포함 실패 원인을 명시하고,
+    두 개념을 구분해야 하는 이유를 추가했습니다. 폐루프 논의에서는 계약 상태의
+    가역성과 최신성, 실행 차단의 역할을 이 구분과 연결했습니다. 해당 개정은
+    보라색으로 표시했습니다.
+  \end{manuscriptrevision}
+\end{reviewitem}
+
+\begin{reviewitem}{R2-C5}
+  \begin{reviewercomment}
+    연구 내용에 정확한 정보 전달을 위해서 문장 구성에 대한 점검도 필요합니다.
+  \end{reviewercomment}
+
+  \begin{authorresponse}
+    원고 전체에서 용어와 문장 주체를 점검했습니다. ``기본 CoC'', ``제약 통합
+    CoC'', ``실행 가드'', ``모델 외부 결정적 검증기'', ``가드 준수'' 및 ``실제
+    실행 안전''을 일관되게 사용했습니다. 특히 연구 공백, 방법 입력ㆍ출력, 검증
+    주체 및 결과의 해석 범위를 한 문장에 혼합하지 않도록 나누었습니다. 또한 각
+    실험을 확인 목적, 비교 방법, 관찰 결과 및 의미로 분리하고, 서로 다른 모델의
+    결과가 직접 비교되지 않는다는 주어와 범위를 명시했습니다.
+  \end{authorresponse}
+
+  \begin{manuscriptrevision}{제1--5절(1--7쪽), 제6.1절(13쪽)}
+    대표적으로 서론의 연구 공백을 두 선행 연구 흐름과 본 연구의 역할로 분리하고,
+    방법 절을 ``입력--대조 평가--외부 판정''의 세 질문으로 다시 설명했습니다.
+    실험 절에는 증거의 순서를 안내하는 문단을 추가했으며, 논의에서는 관찰된
+    수치와 허용 가능한 해석을 별도 문장으로 구분했습니다. 주요 보완 문장은
+    보라색으로 표시했습니다.
+  \end{manuscriptrevision}
+\end{reviewitem}
+
+\begin{reviewitem}{R2-C6}
+  \begin{reviewercomment}
+    제안하는 방법에 대해 또한 어떠한 장점이 있는지를 기술한다면 보다 완성도가
+    높을 것 입니다.
+  \end{reviewercomment}
+
+  \begin{authorresponse}
+    제안 방법의 장점을 네 가지로 명시했습니다. 첫째, 기존 CoC의 설명 구조를
+    유지하면서 허용ㆍ금지ㆍ해제 조건을 자연어로 추가합니다. 둘째, paired-contract
+    평가로 장면 암기와 guard에 따른 선택 전환을 구분합니다. 셋째, violation뿐
+    아니라 goal completion, deadlock 및 excess conservatism을 함께 측정하여 항상
+    정지하는 해법을 성공으로 보지 않습니다. 넷째, 모델의 후보 선택과 결정적 수치
+    판정을 분리해 외부 verifier나 shield로 연결할 수 있습니다. 이러한 장점은
+    합성 후보 선택의 해석 가능성과 진단 가능성에 관한 것이며 실제 차량의 안전
+    보장으로 확대하지 않았습니다.
+  \end{authorresponse}
+
+  \begin{manuscriptrevision}{제1절(2쪽), 제6.1절(13쪽)}
+    서론에 네 가지 장점을 명시하고, 논의에서 이 장점이 범용 주행 모델의 우월성이
+    아니라 허용조건의 명시성, 반사실적 진단 및 독립 수치 판정에 있음을 기존
+    CoC-only 조건과 대비했습니다. 해당 개정은 보라색으로 표시했습니다.
+  \end{manuscriptrevision}
+\end{reviewitem}
+
+\begin{reviewitem}{R2-C7}
+  \begin{reviewercomment}
+    또한, 모델 외부 궤적 검증과 평가지표를 이용해서 제안하는 방법에 대한 성능이
+    우수하다는 부분을 부각시킬 필요가 있습니다.
+  \end{reviewercomment}
+
+  \begin{authorresponse}
+    외부 trajectory verifier는 모델의 자기 설명을 신뢰하지 않고 후보에 저장된
+    정지 위치, 속도, 감속도, 가가속도, 간격 및 진입 시각을 guard 경계와 직접
+    비교합니다. 이를 통해 candidate accuracy, violation, guard-compliant goal
+    completion, deadlock, excess conservatism 및 paired-contract accuracy를 상호
+    보완적으로 계산합니다. 표준 정적ㆍ시간ㆍ정지/차선 변경 평가에서 제약 통합
+    CoC의 violation rate는 모두 0.000, paired-contract accuracy는 모두 1.000이었고
+    목표 완료 관련 지표도 1.000이었습니다. 따라서 낮은 위반률이 동일 답 반복이나
+    목표 포기의 결과가 아님을 강조했습니다. 동시에 미관측 시간값에서 위반률
+    0.351, paired accuracy 0.306으로 악화된 결과를 함께 제시하여 우수성의 범위를
+    표준 합성 평가로 한정했습니다.
+  \end{authorresponse}
+
+  \begin{manuscriptrevision}{제4.5절(6--7쪽), 제6.1절(13쪽), 제7절(15쪽)}
+    방법 절에 외부 검증과 각 지표의 상호 보완적 진단 역할을 추가했습니다. 논의와
+    결론에서는 표준 평가의 violation/goal completion/paired accuracy를 함께
+    해석하여 제안 방법의 성능을 부각하고, 미관측 입력 결과를 근거로 적용 범위를
+    제한했습니다. 해당 개정은 보라색으로 표시했습니다.
+  \end{manuscriptrevision}
+\end{reviewitem}
+
+\section*{맺음말}
+
+원고의 명확성과 엄밀성을 높일 수 있도록 세심한 의견을 주신 리뷰어 여러분께 다시
+한번 감사드립니다. 개정 원고와 본 답변서가 제기된 모든 우려에 충실히 답하였기를
+바랍니다.
+
+감사합니다.\\
+저자 일동
+
+\end{document}

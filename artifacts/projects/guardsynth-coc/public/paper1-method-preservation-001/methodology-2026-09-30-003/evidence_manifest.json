@@ -1,0 +1,13 @@
+{
+  "project_id": "guardsynth-coc",
+  "bridge_queries": 100,
+  "manuscript_queries": 12,
+  "new_training_updates": 0,
+  "input_hashes": {
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py": "9882832b2a56468d5e156c1c98fac22eef0edb278347a01a0b3e2e85a621c763",
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_training_data.py": "2befe142846f90ffa3d8512942bd7bdf7b5779ba53686232aa4ec3cba03a3c37",
+    "platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py": "a81948b6fec2bb80221d602d0f73bc64d8ef220712738144c1ae39944be37b4b",
+    "platforms/eblc-bcv/src/guard_synth_eblc/smt_compiler.py": "a85b3d0a501fff26dbfaba320042a8eb5711067f8a20b480a8f133c6f4e98bb0"
+  },
+  "scope": "Manuscript example reproduction only; no new model-performance evidence"
+}

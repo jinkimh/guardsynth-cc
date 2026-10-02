@@ -1,0 +1,46 @@
+{
+  "status": "COMPLETE",
+  "evaluation": {
+    "validation": {
+      "accuracy": 1.0,
+      "guard_violation_rate": 0.0,
+      "hold_violation_rate": 0.0,
+      "deadlock_rate": 0.0,
+      "goal_completion_rate": 1.0,
+      "safe_goal_completion_rate": 1.0,
+      "coverage": 1.0,
+      "contract_swap_pair_accuracy": 1.0
+    },
+    "test": {
+      "accuracy": 1.0,
+      "guard_violation_rate": 0.0,
+      "hold_violation_rate": 0.0,
+      "deadlock_rate": 0.0,
+      "goal_completion_rate": 1.0,
+      "safe_goal_completion_rate": 1.0,
+      "coverage": 1.0,
+      "contract_swap_pair_accuracy": 1.0
+    },
+    "paraphrase": {
+      "accuracy": 0.9916666666666667,
+      "guard_violation_rate": 0.008333333333333333,
+      "hold_violation_rate": 0.004166666666666667,
+      "deadlock_rate": 0.0,
+      "goal_completion_rate": 1.0,
+      "safe_goal_completion_rate": 0.9916666666666667,
+      "coverage": 1.0,
+      "contract_swap_pair_accuracy": 0.9833333333333333
+    },
+    "unseen_duration": {
+      "accuracy": 0.9916666666666667,
+      "guard_violation_rate": 0.008333333333333333,
+      "hold_violation_rate": 0.008333333333333333,
+      "deadlock_rate": 0.0,
+      "goal_completion_rate": 1.0,
+      "safe_goal_completion_rate": 0.9916666666666667,
+      "coverage": 1.0,
+      "contract_swap_pair_accuracy": 0.9833333333333333
+    }
+  },
+  "elapsed_seconds": 484.5230194386095
+}

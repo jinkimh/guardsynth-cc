@@ -1,0 +1,76 @@
+{
+  "project_id": "sequential-coc-verification",
+  "run_id": "manuscript-validation-2026-10-01-001",
+  "status": "COMPLETED",
+  "sealed_at_utc": "2026-10-01T15:19:38.220356+00:00",
+  "task": "Final E6 document validation with corrected saved-result comparison",
+  "build_manifest": "artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-001/RUN_MANIFEST.json",
+  "build_manifest_sha256": "0158360f2c0a3d0cb0bfc061bc97eb334e97cb4c8855b359c9712ee1ffe7bc0f",
+  "outputs": {
+    "main": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/main.pdf",
+      "pages": 8,
+      "sha256": "8439f5b778f9caf55b633ef398d4fc420977d8573998fece87b3a1b59a3f53f0"
+    },
+    "main-clean": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/main-clean.pdf",
+      "pages": 8,
+      "sha256": "7c99b20b47f189a689a8a3f98680244a3b4bcc2dfbd6ecf0b7fb7d86b2f0895c"
+    },
+    "response-to-reviewer-1": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/response-to-reviewer-1.pdf",
+      "pages": 10,
+      "sha256": "5a68ee018a88a4ea7b933df0596e3b0aabc3be7f0cba1658d64443fee3cecd66"
+    },
+    "response-to-reviewer-2": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/response-to-reviewer-2.pdf",
+      "pages": 9,
+      "sha256": "07347a5acbbbcfd3aed7d7d511caa0e2808d8a761f00fb6d2de768634371d6a6"
+    },
+    "response-to-reviewer-3": {
+      "path": "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/response-to-reviewer-3.pdf",
+      "pages": 12,
+      "sha256": "b1cde3edb33d347ea2661f1d94b16a5533f619e8bedfb72bb541413c8bc63c2c"
+    }
+  },
+  "source_hashes": {
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/README.md": "6514d83ff63831c76b67d71c5e3dc10e8c54eca4dfe2015dbe661185ed69a2cb",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/build.py": "4009fb4dc31c7ac8652af761a4ef7c4cfdaaaa0170717222c3ba8c88c2da64b5",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/figures/overview-pipeline.tex": "4cc5d6d8b7380ff6f25e1a331906a2cd39b5a72b7e13544b6af935af1419acfb",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/kiee-review.sty": "9d092f761871a85aa7bd97904cf4781fe71cbef95a291df3feda9f72355500ff",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/main-clean.tex": "1d32b8a4a2633d9ee821b069bd3c6ccadf028c5f683e7a9baf96ab550397eb54",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/main.tex": "b07c9a45cbc86b5a71d975aa6d71de6bc017dc1324cf194caa9757c1997e58ba",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/manuscript-locations.tex": "5da9077f5c9ef26cb569f9704229ef01dfa6cc9f68377f722a0e564dc0bb0c0a",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/references.bib": "7707c6cc30410e9cdd9429cfcee5e9628f3a8adb372f31e1386a266470430441",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/response-style.tex": "26924a2698507e5d2ce5f65ac891ab0de8a33cc10d654dcf1ac6f1bced06dd76",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/response-to-reviewer-1.tex": "904420b54f3a4f699c96966e880da9f1d0d0f5c9fcc0907e9a7d9798a4cf29d1",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/response-to-reviewer-2.tex": "3978eba26ad7a7f0053c8689350c1ea9da50dac656d626d6cfa02855c46007da",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/response-to-reviewer-3.tex": "db6a8cac4ef8e499af4a388e5245e8602f8a636911c8edb282afea5000e9cecd",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/revision-style.tex": "e2e827259c4825c8ea5b4fe93d90c27828b11ea79192dbe9b772c022cb56862b",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/sections/01-introduction.tex": "04bfb534b4eea703bb259c547c95304a1fda89cbe0d0f7e7aad2b6cd322b1d32",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/sections/02-related-work.tex": "62f600bc27508cdf8404b91ac16d72c8a7bec6a411b82a6ac29a7ddec2d164a2",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/sections/03-data.tex": "2c9ae4bda5bc227897a61c8198700ee00535384ff15c087da551f6073fbbd385",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/sections/04-problem.tex": "420d8f820b0e91642a737befd3d682fbdb03e0f4046d376f475733aee37c2455",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/sections/05-method.tex": "0084694cd9f66b8099d693efb94a52d5055f1e3f82696e749d78fdb0037dfbbe",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/sections/06-experiments.tex": "ecae91a84e583351d8e58a24cb4be2c641cb364448436aa95b93dce63c245d92",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/sections/07-results.tex": "f1f4bfe39a872df6914eba3b96e79f26a68233cdded1213cfee89bb5bc166bba",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/sections/08-discussion.tex": "7d696c308e9ca8cbf7b5b0cba3c2cd40fc3e08dfef8a120e5f0e00f6343ab5ba",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/sections/09-threats.tex": "18b96cda8c946f7b19e072da2a8452253ed99e6c763a3dc2d20dff6417133579",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/sections/10-conclusion.tex": "4282473321f0113a3d9e289bbf59c4ec151f7af163a92548794bbf40c3aa4131",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/sections/human-tables.tex": "267350b28c5b8c9ee44141bbd3edb48ab881bba337019a84d2d8932efad49b7d",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/sections/result-tables.tex": "206fceb8ea1bf1e13cc26f3d94917c78cfe99d6eeb2d6410a2651ac841a136d3",
+    "projects/03-sequential-coc-verification/paper/manuscript/latex-kiee-review-2022-coc-audit-revision-v01/sections/trajectory-table.tex": "52e48104f7c1d78979629bf1be801940c10653069d37c968a39860e77d16e448"
+  },
+  "artifact_hashes": {
+    "REPORT_KO.md": "c211e4fa73372e68c6dc0e0c3a4207a27c66c447dc2aaa282cb1956dbc9a3c81",
+    "RESULT.json": "752bc7d92bc73f99d6c4d4f0171c7ae30a6f2816fa4b6b8c1cc9bd0781d598af",
+    "document_validation.json": "1d5bcb17ce1693442590404bbee161187bc1a292f4c408fa3c0003fb04619b27",
+    "hash_validation.json": "138f6591f360fe980737f5c46f7bd11ad30f51d72d6c884751ff082780bf1f47",
+    "naming_validation.json": "4509646b11eaef29514002c4b1f17854ff54b8505f12c2681927a6009c5c5f03",
+    "verify_documents.py": "305a254f8b8adb070b87e1b6fd5f9744a1dea396dac136c44b1d6af518474985"
+  },
+  "original_build_changed": false,
+  "experiments_rerun": false,
+  "pdf_build_rerun": false,
+  "external_actions": []
+}

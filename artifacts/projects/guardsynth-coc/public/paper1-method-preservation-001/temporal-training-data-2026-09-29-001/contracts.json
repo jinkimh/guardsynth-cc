@@ -1,0 +1,266 @@
+{
+  "500": {
+    "eblc": {
+      "version": "supplied-temporal-eblc-profile-v0.1",
+      "subject": "ego",
+      "target": "pedestrian_conflict_zone",
+      "hold": "NO_ENTRY_WHILE_OCCUPIED",
+      "release_clear_ms": 500,
+      "time_unit": "ms",
+      "source_kind": "SUPPLIED_SYNTHETIC_RULE",
+      "assumption": "SINGLE_CLEAR_TRANSITION_NO_REOCCUPATION",
+      "source_refs": [
+        "Project01/temporal_guard_world.py::_guard",
+        "paper1-method-preservation-v0.1"
+      ]
+    },
+    "core": {
+      "grammar_version": "eblc-core-v0.1",
+      "model_id": "supplied_temporal_release",
+      "horizon": 2,
+      "source_refs": [
+        "Project01/temporal_guard_world.py::_guard",
+        "paper1-method-preservation-v0.1"
+      ],
+      "claim_scope": "SYNTHETIC_SINGLE_CLEAR_TRANSITION_NOT_VEHICLE_SAFETY",
+      "declarations": [
+        {
+          "name": "entry_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ]
+        },
+        {
+          "name": "clear_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ]
+        },
+        {
+          "name": "enters",
+          "sort": "BOOL",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": null,
+          "frame": null,
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ]
+        }
+      ],
+      "clauses": [
+        {
+          "id": "entry_release_gate",
+          "kind": "INVARIANT",
+          "enforcement": "INITIAL",
+          "formula": {
+            "op": "implies",
+            "left": {
+              "op": "var",
+              "name": "enters",
+              "offset": 0
+            },
+            "right": {
+              "op": "ge",
+              "left": {
+                "op": "var",
+                "name": "entry_ms",
+                "offset": 0
+              },
+              "right": {
+                "op": "add",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 500,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              }
+            }
+          },
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Integer millisecond entry gate after single clear transition."
+        }
+      ],
+      "queries": [
+        {
+          "id": "nonvacuous",
+          "formula": {
+            "op": "literal",
+            "sort": "BOOL",
+            "value": true,
+            "enum_name": null,
+            "unit": null,
+            "frame": null
+          },
+          "expected": "SAT",
+          "classification": "CONSISTENCY",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Holding is feasible."
+        }
+      ]
+    },
+    "cnl": "Do not enter the pedestrian conflict zone while it is occupied. Enter only after the zone has remained clear for at least 0.5 s."
+  },
+  "1500": {
+    "eblc": {
+      "version": "supplied-temporal-eblc-profile-v0.1",
+      "subject": "ego",
+      "target": "pedestrian_conflict_zone",
+      "hold": "NO_ENTRY_WHILE_OCCUPIED",
+      "release_clear_ms": 1500,
+      "time_unit": "ms",
+      "source_kind": "SUPPLIED_SYNTHETIC_RULE",
+      "assumption": "SINGLE_CLEAR_TRANSITION_NO_REOCCUPATION",
+      "source_refs": [
+        "Project01/temporal_guard_world.py::_guard",
+        "paper1-method-preservation-v0.1"
+      ]
+    },
+    "core": {
+      "grammar_version": "eblc-core-v0.1",
+      "model_id": "supplied_temporal_release",
+      "horizon": 2,
+      "source_refs": [
+        "Project01/temporal_guard_world.py::_guard",
+        "paper1-method-preservation-v0.1"
+      ],
+      "claim_scope": "SYNTHETIC_SINGLE_CLEAR_TRANSITION_NOT_VEHICLE_SAFETY",
+      "declarations": [
+        {
+          "name": "entry_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ]
+        },
+        {
+          "name": "clear_ms",
+          "sort": "INT",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": "1",
+          "frame": null,
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ]
+        },
+        {
+          "name": "enters",
+          "sort": "BOOL",
+          "time_varying": false,
+          "enum_name": null,
+          "enum_values": [],
+          "unit": null,
+          "frame": null,
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ]
+        }
+      ],
+      "clauses": [
+        {
+          "id": "entry_release_gate",
+          "kind": "INVARIANT",
+          "enforcement": "INITIAL",
+          "formula": {
+            "op": "implies",
+            "left": {
+              "op": "var",
+              "name": "enters",
+              "offset": 0
+            },
+            "right": {
+              "op": "ge",
+              "left": {
+                "op": "var",
+                "name": "entry_ms",
+                "offset": 0
+              },
+              "right": {
+                "op": "add",
+                "left": {
+                  "op": "var",
+                  "name": "clear_ms",
+                  "offset": 0
+                },
+                "right": {
+                  "op": "literal",
+                  "sort": "INT",
+                  "value": 1500,
+                  "enum_name": null,
+                  "unit": "1",
+                  "frame": null
+                }
+              }
+            }
+          },
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Integer millisecond entry gate after single clear transition."
+        }
+      ],
+      "queries": [
+        {
+          "id": "nonvacuous",
+          "formula": {
+            "op": "literal",
+            "sort": "BOOL",
+            "value": true,
+            "enum_name": null,
+            "unit": null,
+            "frame": null
+          },
+          "expected": "SAT",
+          "classification": "CONSISTENCY",
+          "source_refs": [
+            "Project01/temporal_guard_world.py::_guard",
+            "paper1-method-preservation-v0.1"
+          ],
+          "description": "Holding is feasible."
+        }
+      ]
+    },
+    "cnl": "Do not enter the pedestrian conflict zone while it is occupied. Enter only after the zone has remained clear for at least 1.5 s."
+  }
+}

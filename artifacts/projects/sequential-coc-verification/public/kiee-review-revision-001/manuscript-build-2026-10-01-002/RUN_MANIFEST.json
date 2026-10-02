@@ -1,0 +1,43 @@
+{
+  "project_id": "sequential-coc-verification",
+  "run_id": "manuscript-build-2026-10-01-002",
+  "status": "PREVIEW_ONLY",
+  "sealed_at_utc": "2026-10-01T18:00:05.164660+00:00",
+  "pdfs": {
+    "main": {
+      "path": "artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-002/main/main.pdf",
+      "pages": 11,
+      "sha256": "1ac1339d229b78a062ef68b2d4a7d8878abd742cd78b97ff33b363b13007296a"
+    },
+    "main-clean": {
+      "path": "artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-002/main-clean/main-clean.pdf",
+      "pages": 11,
+      "sha256": "90e1bf79e6b4fa9e3cdaa6d8d037cec0e742ef177758c3fa6f880a9bccffa1cc"
+    }
+  },
+  "artifact_hashes": {
+    "REPORT_KO.md": "f414a505683f15d317d0d785820fe855c79d15bb36c5c91a0f165de3cab1cb10",
+    "RESULT.json": "2a29331438be3a58751ba99d6e482546d5d86650de188f0a0fec19e373b830fd",
+    "main/build-1.txt": "da55d2cff93f44be705f7aad152a517b8ec4cf6272911efd98f1b970338721a0",
+    "main/build-2.txt": "91ac73e1d6e390981b31bee56568f8238d693bd173ab8430677bbf1734fcdb6f",
+    "main/build-3.txt": "5faa3d64877726862f67e51410cbc2cf52a5c64e5021aeb4304976eccedb4ce7",
+    "main/build-4.txt": "047708c6d82bfc1600f68f99ac4ca7d096a384da6eede3141348af9c76ca8e42",
+    "main/main.aux": "9e4fc1501db85da36a5574275c63b3f9a17098ed0a177dc96c8d6b81f462e0b1",
+    "main/main.bbl": "499ad02e82aab960db08c6cc39569ebdfecd1446e12cea136e30fb1243a65120",
+    "main/main.blg": "5fcd10db84fc58b16bc570a6bc925f76eb921427019cb354c3cb7148bacf757b",
+    "main/main.log": "903a3765280ac69ce6bee4640b7103411276024cca2e0c45d44f01a748776a84",
+    "main/main.out": "cb2da813a268b3ff1179a51222fb268503d9df459d871e9730cca18502566c28",
+    "main/main.pdf": "1ac1339d229b78a062ef68b2d4a7d8878abd742cd78b97ff33b363b13007296a",
+    "main-clean/build-1.txt": "bed3719bd5202bcc2a456ae3edbeb97c6def75170ad94cf38133b3b5984f8807",
+    "main-clean/build-2.txt": "2f0e08c73879d8bcb3d90468bedfdf295d30616931a5e28dd0c760a0d2416b3d",
+    "main-clean/build-3.txt": "76648fe02cbc5d5cc31f8c0779153d0b588e38214e7695206f659da1b1c6bf98",
+    "main-clean/build-4.txt": "bc23a215430df214945a8bd67eaa483f49b0f7a2b825512c7e76cf1ce85f6177",
+    "main-clean/main-clean.aux": "9e4fc1501db85da36a5574275c63b3f9a17098ed0a177dc96c8d6b81f462e0b1",
+    "main-clean/main-clean.bbl": "499ad02e82aab960db08c6cc39569ebdfecd1446e12cea136e30fb1243a65120",
+    "main-clean/main-clean.blg": "b42c3dbab4e7726c39dcf006f7ba5219e2abbdba95ba7d61ab90feaf9c989e3f",
+    "main-clean/main-clean.log": "9cd9a5e85f93945a3ece88b95007cb134509abf09a84df05634761b006581c45",
+    "main-clean/main-clean.out": "cb2da813a268b3ff1179a51222fb268503d9df459d871e9730cca18502566c28",
+    "main-clean/main-clean.pdf": "90e1bf79e6b4fa9e3cdaa6d8d037cec0e742ef177758c3fa6f880a9bccffa1cc"
+  },
+  "experiments_rerun": false
+}

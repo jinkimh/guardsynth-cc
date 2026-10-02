@@ -1,0 +1,48 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm,headheight=16pt]{geometry}
+\usepackage{fontspec,kotex,xcolor,hyperref,fancyhdr}
+\setmainfont{DejaVu Serif}
+\setmainhangulfont{Noto Sans CJK KR}
+\definecolor{navy}{HTML}{173E59}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small GuardSynth CoC}
+\fancyhead[R]{\small Abstract and introduction · English}
+\fancyfoot[L]{\small v0.1 · 2026-09-30}
+\fancyfoot[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{3em}
+\linespread{1.15}\clubpenalty=10000\widowpenalty=10000
+\hypersetup{pdftitle={GuardSynth: Formal Specification and Verification of Behavioral Constraints for Enhanced CoC-Based VLM Learning},pdfsubject={Title and abstract for author review},pdfauthor={GuardSynth project}}
+\hypersetup{colorlinks=true,urlcolor=navy}\begin{document}
+\vspace*{8mm}
+{\Large\bfseries\color{navy}\raggedright GuardSynth: Formal Specification and Verification of Behavioral Constraints for Enhanced CoC-Based VLM Learning\par}
+\vspace{8mm}
+{\large\bfseries Abstract\par}
+\vspace{3mm}
+Reasoning-based autonomous driving models such as Alpamayo connect causal reasoning about scenes with action prediction through Chain of Causation (CoC). However, learning from CoC explanations alone has limitations in learning correct action selection and constraint compliance. To address these limitations, we present GuardSynth, a framework that systematically specifies and verifies behavioral constraints and incorporates them into CoC training data. We define the scope, properties, and constituent elements of behavioral constraints and specify applicability, prohibited actions, persistence and release conditions, timing, and evidence using Evidence-Bound Lifecycle Contracts (EBLC). We then verify consistency and designated properties within a restricted logical model and generate corresponding Controlled Natural Language (CNL) to augment CoC. We compare the vision-language model (VLM) Qwen3-VL-2B-Instruct under matched LoRA training budgets across three seeds on a controlled synthetic visual-temporal task, supplying constraints during both training and evaluation in the constraint-augmented conditions. Mean action-selection accuracy is 49.86\% with CoC alone, 96.81\% with our existing natural-language constraints, and 98.06\% with EBLC-derived CNL; corresponding constraint-violation rates are 19.17\%, 1.39\%, and 0.83\%. These results demonstrate a systematic framework linking formal specification and verification of behavioral constraints to CoC learning, alongside improved action selection with explicit constraints.
+\clearpage
+\section*{I. Introduction}
+Driving decisions require not only recognizing objects but also selecting appropriate actions from their relationships and changes in the scene. NVIDIA's Alpamayo-R1 addresses this problem with a vision-language-action (VLA) model that combines Chain of Causation (CoC) reasoning with trajectory prediction. It aligns causally connected explanations with driving behavior and uses supervised fine-tuning and reinforcement learning to improve reasoning quality and reasoning–action consistency. This approach illustrates learning from the reasoning that leads to an action as well as from the action itself.~\href{\detokenize{https://arxiv.org/abs/2511.00088}}{[1]}\par\vspace{5pt}
+Related studies connect visual information and language-based reasoning in complementary ways. DriveLM organizes perception, prediction, and planning questions and answers into a graph for multistep driving reasoning. DriveVLM combines scene description, scene analysis, and hierarchical planning to address complex driving situations. These studies provide a foundation for connecting scene interpretation to decisions and plans. Within this direction, we focus on the representation and verification of behavioral constraints supplied in learning data.~\href{\detokenize{https://arxiv.org/abs/2312.14150}}{[2]},~\href{\detokenize{https://arxiv.org/abs/2402.12289}}{[3]}\par\vspace{5pt}
+However, learning from CoC explanations alone has limitations in learning correct action selection and constraint compliance. Information explaining why an action is taken and information defining which actions are admissible play different roles. For example, “slow down to yield to the pedestrian” explains a reason, whereas “do not enter while the crossing zone is occupied” restricts the available actions. Different required waiting durations after clearance can change admissible entry times even for the same scene. We address the problem of augmenting explanation-based learning data with such explicit, situation-dependent constraints to improve action selection.\par\vspace{5pt}
+In our preceding natural-language constraint experiments, adding constraints to CoC-style explanations reduced premature entry and improved compliant goal completion on a controlled synthetic temporal task. That task includes different waiting requirements for the same scene, so supplying a constraint adds information needed for action selection. Building on this observation, the present study moves beyond adding constraint sentences to systematically representing their constituent elements and meaning.~\href{\detokenize{../../../../../../projects/01-safety-constrained-coc/docs/reports/TEMPORAL_GUARD_MULTISEED_EXPERIMENT_REPORT_V01.md}}{[4]}\par\vspace{5pt}
+This requires answering three questions. What scope and elements should behavioral constraints for CoC augmentation cover? Under what logical model should their conditions and action restrictions be checked for consistency? How should the checked specification be conveyed as natural language for learning? Free-form language is useful for human understanding, but making the semantics and assumptions required for automated verification explicit calls for additional structure. We therefore propose a framework connecting constraint explicitness, traceability, and logical consistency with natural-language learning inputs.\par\vspace{5pt}
+GuardSynth defines the scope, properties, and elements of behavioral constraints and specifies the subject and target, applicability, prohibited actions, persistence and release conditions, timing, and evidence using Evidence-Bound Lifecycle Contracts (EBLC). It lowers a selected profile to Core/SMT, verifies consistency and designated properties within a restricted model, and generates Controlled Natural Language (CNL) corresponding to specification fields for CoC augmentation. The formal specification serves as an intermediate representation for structuring and checking constraints, rather than replacing natural language as the final learning input. Specification verification and the behavioral effect of constraint augmentation are evaluated as logical and empirical evidence, respectively.\par\vspace{5pt}
+We evaluate behavioral effects by training Qwen3-VL-2B-Instruct on a controlled synthetic visual-temporal task with matched LoRA budgets and three seeds. We compare CoC alone (P0), our existing natural-language constraints (P1), and EBLC-derived CNL (P2), with constraints supplied during both training and evaluation in P1 and P2. Mean action-selection accuracy is 49.86\%, 96.81\%, and 98.06\%, respectively; constraint-violation rates are 19.17\%, 1.39\%, and 0.83\%. The primary comparison measures constraint augmentation relative to P0; P1 versus P2 is an internal comparison of our two constraint representations. Alpamayo motivates the research context, while our training and evaluation concern the Qwen-based controlled task.~\href{\detokenize{../temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv}}{[5]}\par\vspace{5pt}
+The paper makes three contributions:\par\vspace{5pt}
+\begin{enumerate}
+\item A constraint model defining the scope, properties, and constituent elements of CoC behavioral constraints.
+\item A method connecting EBLC specification, logical verification, CNL generation, and CoC augmentation.
+\item A matched-budget P0/P1/P2 evaluation of improvements in action-selection accuracy and constraint compliance from supplying explicit constraints.
+\end{enumerate}
+Section II reviews related work, Section III defines the behavioral constraint model, and Section IV presents GuardSynth's specification, verification, and CNL generation method. Sections V and VI describe the experimental setup and results. Sections VII and VIII discuss the interpretation and scope of the findings and conclude the paper.\par\vspace{5pt}
+\clearpage\section*{References and Writing Evidence}
+\begin{itemize}
+\item [1] NVIDIA, “Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail,” arXiv:2511.00088, 2025, v2 2026.
+\item [2] C. Sima et al., “DriveLM: Driving with Graph Visual Question Answering,” ECCV, 2024, arXiv:2312.14150.
+\item [3] X. Tian et al., “DriveVLM: The Convergence of Autonomous Driving and Large Vision-Language Models,” arXiv:2402.12289, 2024.
+\item [4] Research team's preceding experiment record: STOP–HOLD–RELEASE–GO Temporal Guard Multiseed Experiment Report v1, 2026-08-04. This internal report is not a substitute for the bibliographic record of a published paper.
+\item [5] Current expansion experiment data: temporal-experiment-closure-2026-09-29-001, all\_\allowbreak{}primary\_\allowbreak{}metrics.csv, expansion/test aggregates.
+\end{itemize}
+\end{document}

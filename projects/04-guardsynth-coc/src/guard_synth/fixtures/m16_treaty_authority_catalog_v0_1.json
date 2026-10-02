@@ -1,0 +1,140 @@
+{
+  "catalog_id": "un-road-traffic-common-core-v0.1",
+  "catalog_version": "guardsynth-m16-treaty-authority-v0.1",
+  "authority_class": "INTERNATIONAL_TREATY_NORMATIVE_BASELINE",
+  "status_checked_on": "2026-09-06",
+  "source_records": [
+    {
+      "source_id": "UNTC-1968-ROAD-TRAFFIC-STATUS",
+      "title": "Convention on Road Traffic, Vienna, 8 November 1968 - status",
+      "uri": "https://treaties.un.org/Pages/showDetails.aspx?clang=_en&objid=080000028003745e",
+      "official_host": "treaties.un.org",
+      "source_role": "PARTICIPANT_STATUS"
+    },
+    {
+      "source_id": "UNECE-1968-ROAD-TRAFFIC-TEXT",
+      "title": "Convention on Road Traffic of 1968 - consolidated text",
+      "uri": "https://unece.org/DAM/trans/conventn/Conv_road_traffic_EN.pdf",
+      "official_host": "unece.org",
+      "source_role": "NORMATIVE_TEXT"
+    },
+    {
+      "source_id": "UNTC-1968-ROAD-SIGNS-STATUS",
+      "title": "Convention on Road Signs and Signals, Vienna, 8 November 1968 - status",
+      "uri": "https://treaties.un.org/Pages/ViewDetailsIII.aspx?Temp=mtdsg3&chapter=11&lang=en&mtdsg_no=XI-B-20&src=TREATY",
+      "official_host": "treaties.un.org",
+      "source_role": "PARTICIPANT_STATUS"
+    },
+    {
+      "source_id": "UNECE-1968-ROAD-SIGNS-TEXT",
+      "title": "Convention on Road Signs and Signals of 1968 - consolidated text",
+      "uri": "https://unece.org/DAM/trans/conventn/Conv_road_signs_2006v_EN.pdf",
+      "official_host": "unece.org",
+      "source_role": "NORMATIVE_TEXT"
+    },
+    {
+      "source_id": "UNTC-1949-ROAD-TRAFFIC-STATUS",
+      "title": "Convention on Road Traffic, Geneva, 19 September 1949 - status",
+      "uri": "https://treaties.un.org/Pages/showDetails.aspx?objid=080000028005793f",
+      "official_host": "treaties.un.org",
+      "source_role": "PARTICIPANT_STATUS"
+    },
+    {
+      "source_id": "UNTS-1949-ROAD-TRAFFIC-TEXT",
+      "title": "United Nations Treaty Series volume 125 - 1949 Convention on Road Traffic",
+      "uri": "https://treaties.un.org/doc/Publication/UNTS/Volume%20125/v125.pdf",
+      "official_host": "treaties.un.org",
+      "source_role": "NORMATIVE_TEXT"
+    }
+  ],
+  "frameworks": [
+    {
+      "framework_id": "1968_VIENNA_COMMON_CORE",
+      "party_status_source_refs": [
+        "UNTC-1968-ROAD-TRAFFIC-STATUS",
+        "UNTC-1968-ROAD-SIGNS-STATUS"
+      ],
+      "normative_text_source_refs": [
+        "UNECE-1968-ROAD-TRAFFIC-TEXT",
+        "UNECE-1968-ROAD-SIGNS-TEXT"
+      ]
+    },
+    {
+      "framework_id": "1949_GENEVA_COMMON_CORE",
+      "party_status_source_refs": ["UNTC-1949-ROAD-TRAFFIC-STATUS"],
+      "normative_text_source_refs": ["UNTS-1949-ROAD-TRAFFIC-TEXT"]
+    }
+  ],
+  "country_bindings": [
+    {"country": "Austria", "country_code": "AT", "framework_ref": "1968_VIENNA_COMMON_CORE", "participant_status": "PARTY"},
+    {"country": "Belgium", "country_code": "BE", "framework_ref": "1968_VIENNA_COMMON_CORE", "participant_status": "PARTY"},
+    {"country": "Czechia", "country_code": "CZ", "framework_ref": "1968_VIENNA_COMMON_CORE", "participant_status": "PARTY"},
+    {"country": "Estonia", "country_code": "EE", "framework_ref": "1968_VIENNA_COMMON_CORE", "participant_status": "PARTY"},
+    {"country": "France", "country_code": "FR", "framework_ref": "1968_VIENNA_COMMON_CORE", "participant_status": "PARTY"},
+    {"country": "Germany", "country_code": "DE", "framework_ref": "1968_VIENNA_COMMON_CORE", "participant_status": "PARTY"},
+    {"country": "Italy", "country_code": "IT", "framework_ref": "1968_VIENNA_COMMON_CORE", "participant_status": "PARTY"},
+    {"country": "Latvia", "country_code": "LV", "framework_ref": "1968_VIENNA_COMMON_CORE", "participant_status": "PARTY"},
+    {"country": "Lithuania", "country_code": "LT", "framework_ref": "1968_VIENNA_COMMON_CORE", "participant_status": "PARTY"},
+    {"country": "Slovenia", "country_code": "SI", "framework_ref": "1968_VIENNA_COMMON_CORE", "participant_status": "PARTY"},
+    {"country": "Sweden", "country_code": "SE", "framework_ref": "1968_VIENNA_COMMON_CORE", "participant_status": "PARTY"},
+    {"country": "United States", "country_code": "US", "framework_ref": "1949_GENEVA_COMMON_CORE", "participant_status": "PARTY"}
+  ],
+  "slice_mappings": [
+    {
+      "framework_ref": "1968_VIENNA_COMMON_CORE",
+      "slice": "PEDESTRIAN_CYCLIST_YIELD",
+      "rule_strength": "DIRECT_TREATY_RULE",
+      "article_refs": ["1968-ROAD-TRAFFIC:21"],
+      "source_refs": ["UNECE-1968-ROAD-TRAFFIC-TEXT"],
+      "domestic_detail_required": false,
+      "rule_summary": "Avoid endangering pedestrians and comply with treaty crossing duties when the observed preconditions apply."
+    },
+    {
+      "framework_ref": "1968_VIENNA_COMMON_CORE",
+      "slice": "STOP_SIGNALS",
+      "rule_strength": "DIRECT_TREATY_RULE",
+      "article_refs": ["1968-ROAD-SIGNS:23"],
+      "source_refs": ["UNECE-1968-ROAD-SIGNS-TEXT"],
+      "domestic_detail_required": false,
+      "rule_summary": "Use the treaty meanings of red, amber and green only after the controlling signal and lane are source-bound."
+    },
+    {
+      "framework_ref": "1968_VIENNA_COMMON_CORE",
+      "slice": "FOLLOWING_CUT_IN",
+      "rule_strength": "DIRECT_TREATY_RULE",
+      "article_refs": ["1968-ROAD-TRAFFIC:13(5)"],
+      "source_refs": ["UNECE-1968-ROAD-TRAFFIC-TEXT"],
+      "domestic_detail_required": false,
+      "rule_summary": "A following driver keeps enough distance to avoid collision if the vehicle ahead slows or stops suddenly."
+    },
+    {
+      "framework_ref": "1949_GENEVA_COMMON_CORE",
+      "slice": "PEDESTRIAN_CYCLIST_YIELD",
+      "rule_strength": "GENERAL_DUE_CARE_FALLBACK",
+      "article_refs": ["1949-ROAD-TRAFFIC:8(5)", "1949-ROAD-TRAFFIC:10"],
+      "source_refs": ["UNTS-1949-ROAD-TRAFFIC-TEXT"],
+      "domestic_detail_required": true,
+      "rule_summary": "Use the treaty duties of vehicle control, reasonable prudence and precautions for other road users; detailed yield law is not asserted."
+    },
+    {
+      "framework_ref": "1949_GENEVA_COMMON_CORE",
+      "slice": "STOP_SIGNALS",
+      "rule_strength": "GENERAL_DUE_CARE_FALLBACK",
+      "article_refs": ["1949-ROAD-TRAFFIC:8(5)", "1949-ROAD-TRAFFIC:10"],
+      "source_refs": ["UNTS-1949-ROAD-TRAFFIC-TEXT"],
+      "domestic_detail_required": true,
+      "rule_summary": "Use the treaty duties of vehicle control and reasonable prudence; detailed signal meaning requires domestic authority."
+    },
+    {
+      "framework_ref": "1949_GENEVA_COMMON_CORE",
+      "slice": "FOLLOWING_CUT_IN",
+      "rule_strength": "GENERAL_DUE_CARE_FALLBACK",
+      "article_refs": ["1949-ROAD-TRAFFIC:8(5)", "1949-ROAD-TRAFFIC:10"],
+      "source_refs": ["UNTS-1949-ROAD-TRAFFIC-TEXT"],
+      "domestic_detail_required": true,
+      "rule_summary": "Use the treaty duties of vehicle control and speed under control; detailed following and lane-change law is not asserted."
+    }
+  ],
+  "legal_compliance_claim": "NOT_PERMITTED",
+  "claim_scope": "INTERNATIONAL_TREATY_RESEARCH_BASELINE_NOT_DOMESTIC_LEGAL_COMPLIANCE_LEGAL_ADVICE_OR_VEHICLE_SAFETY"
+}

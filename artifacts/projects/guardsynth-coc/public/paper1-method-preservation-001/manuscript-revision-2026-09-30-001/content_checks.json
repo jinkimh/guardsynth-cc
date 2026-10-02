@@ -1,0 +1,168 @@
+{
+  "project_id": "guardsynth-coc",
+  "candidate_and_temporal_queries": [
+    {
+      "task": "max_speed",
+      "id": [
+        20000,
+        "max_speed",
+        "restrictive"
+      ],
+      "candidate": "A",
+      "status": "UNSAT"
+    },
+    {
+      "task": "max_speed",
+      "id": [
+        20000,
+        "max_speed",
+        "restrictive"
+      ],
+      "candidate": "B",
+      "status": "SAT"
+    },
+    {
+      "task": "min_clearance",
+      "id": [
+        20000,
+        "min_clearance",
+        "restrictive"
+      ],
+      "candidate": "A",
+      "status": "UNSAT"
+    },
+    {
+      "task": "min_clearance",
+      "id": [
+        20000,
+        "min_clearance",
+        "restrictive"
+      ],
+      "candidate": "B",
+      "status": "SAT"
+    },
+    {
+      "task": "min_entry_delay",
+      "id": [
+        20000,
+        "min_entry_delay",
+        "restrictive"
+      ],
+      "candidate": "A",
+      "status": "UNSAT"
+    },
+    {
+      "task": "min_entry_delay",
+      "id": [
+        20000,
+        "min_entry_delay",
+        "restrictive"
+      ],
+      "candidate": "B",
+      "status": "SAT"
+    },
+    {
+      "task": "cruise_stop",
+      "id": [
+        20000,
+        "cruise_stop",
+        "permissive"
+      ],
+      "candidate": "C",
+      "status": "UNSAT"
+    },
+    {
+      "task": "cruise_stop",
+      "id": [
+        20000,
+        "cruise_stop",
+        "permissive"
+      ],
+      "candidate": "D",
+      "status": "SAT"
+    },
+    {
+      "task": "cruise_stop",
+      "id": [
+        20000,
+        "cruise_stop",
+        "permissive"
+      ],
+      "candidate": "A",
+      "status": "SAT"
+    },
+    {
+      "task": "cruise_stop",
+      "id": [
+        20000,
+        "cruise_stop",
+        "permissive"
+      ],
+      "candidate": "B",
+      "status": "SAT"
+    },
+    {
+      "task": "lane_change",
+      "id": [
+        20001,
+        "lane_change",
+        "permissive"
+      ],
+      "candidate": "D",
+      "status": "UNSAT"
+    },
+    {
+      "task": "lane_change",
+      "id": [
+        20001,
+        "lane_change",
+        "permissive"
+      ],
+      "candidate": "A",
+      "status": "SAT"
+    },
+    {
+      "task": "lane_change",
+      "id": [
+        20001,
+        "lane_change",
+        "permissive"
+      ],
+      "candidate": "B",
+      "status": "SAT"
+    },
+    {
+      "task": "lane_change",
+      "id": [
+        20001,
+        "lane_change",
+        "permissive"
+      ],
+      "candidate": "C",
+      "status": "SAT"
+    },
+    {
+      "task": "temporal",
+      "entry_ms": 11499,
+      "status": "UNSAT"
+    },
+    {
+      "task": "temporal",
+      "entry_ms": 11500,
+      "status": "SAT"
+    }
+  ],
+  "smt_checks": 16,
+  "bilingual_primary_unseen_rows": 9,
+  "bilingual_primary_unseen_numeric_cells": 54,
+  "bilingual_additional_supplement_rows": 22,
+  "exact_cnl_profile_kinds": 5,
+  "frozen_source_sha256": {
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/guardsynth-additional-20260930/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/static-contract-protocol-2026-09-30-003/test_contracts.jsonl": "0fcefda3b04669fc6ccb73a0520e5baf2dddcbe7a1c3c7ac6a1bef2cfe4f18ee",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/guardsynth-additional-20260930/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/static-contract-protocol-2026-09-30-003/test_p2.jsonl": "015c874ee443c4b7652dc871ee77f88e402b87bf2e449b74a946ff26a039df63",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/guardsynth-additional-20260930/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/maneuver-contract-protocol-2026-09-30-003/test_contracts.jsonl": "1698de7e5ac7f5737467085ec18addbc70f93c121bba6acc337ae8a2af6155fa",
+    "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/guardsynth-additional-20260930/artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/maneuver-contract-protocol-2026-09-30-003/test_p2.jsonl": "24756bd8883e4167cca83294285d3bedebc635e4888c7bf1d04de164662ba18d"
+  },
+  "terminology_check": "PASS",
+  "experiment_results_modified": false
+}

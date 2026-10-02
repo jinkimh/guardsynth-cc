@@ -1,0 +1,28 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "title-abstract-2026-09-30-001",
+  "artifact_class": "public",
+  "purpose": "Bilingual title and abstract drafts",
+  "documents": [
+    {
+      "language": "ko",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_TITLE_ABSTRACT_V01_KO.md",
+      "source_sha256": "0c58db3d91041306e5adb911640604cc03f5da3b5f9b753468da4450542630b9",
+      "pdf": "ieee-access-title-abstract-v01-ko.pdf",
+      "abstract_word_count_whitespace": 148
+    },
+    {
+      "language": "en",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_TITLE_ABSTRACT_V01_EN.md",
+      "source_sha256": "472597441cd73c1605168f2ab513eb2206714b542bf61eb922f0e392a9c3c2d6",
+      "pdf": "ieee-access-title-abstract-v01-en.pdf",
+      "abstract_word_count_whitespace": 190
+    }
+  ],
+  "basis": "IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_KO.md and expansion test metrics",
+  "scope_excludes": [
+    "EBLC testing functionality",
+    "runtime monitoring"
+  ],
+  "status": "VERIFIED_DRAFT_FOR_AUTHOR_REVIEW"
+}

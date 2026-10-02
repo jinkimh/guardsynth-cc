@@ -1,0 +1,17 @@
+{
+  "project_id": "guardsynth-coc",
+  "evaluation_kind": "EXPLORATORY_CURRENT_ADAPTER_REEVALUATION",
+  "adapter_run": "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001",
+  "evaluation_protocol": "diversity-protocol-2026-09-29-001",
+  "inference_run": "expanded-diagnostics-inference-2026-09-30-001",
+  "analysis_run": "expanded-diagnostics-analysis-2026-09-30-001",
+  "gpu": 2,
+  "arms": ["P0", "P1", "P2"],
+  "seeds": [42, 17, 123],
+  "expected_prediction_rows": 2160,
+  "optimizer_updates": 0,
+  "scope": "Reuse all ten frozen diagnostic strata with current expanded adapters, including paired original/blank/swapped-image interventions; distinct from the main test distribution.",
+  "selection_policy": "Report every stratum and seed, no performance-dependent filtering or tuning.",
+  "quality_injection_policy": "D4 records are reused for scorer compatibility, not new injection evidence.",
+  "manuscript_policy": "Report before deciding manuscript inclusion."
+}

@@ -1,0 +1,31 @@
+\section{관련 연구}
+\label{sec:related}
+
+DriveLM, DriveVLM과 Alpamayo-R1은 장면 이해와 행동ㆍ궤적 예측을 언어 추론에 연결한다 \cite{sima2024drivelm,tian2024drivevlm,wang2025alpamayo}. 최근 연구는 생성 설명이 장면과 행동에 충실한지, 센서 교란이나 객체 제거에도 추론--행동 관계가 유지되는지를 평가한다 \cite{mayumu2026faithfulness,nguyen2026vladrivebench,priyadershi2026lostinfog,panda2026cvaa}. 이들의 주된 단위는 한 장면의 추론ㆍ행동 정렬 또는 입력 개입에 대한 모델 반응이다.
+
+본 연구는 모델에 같은 질문을 다시 하거나 차량 행동을 교정하지 않는다. 이미 저장된 CoC를 시간순으로 읽어 이전 사건에서 시작된 요구, 그 요구가 끝나는 조건과 행동 순서를 검사한다. 따라서 한 장면의 설명이 맞는지 평가하는 연구를 대체하지 않고, 여러 주석을 이어 읽었을 때 서로 모순되지 않는지 확인하는 보완적 품질 점검에 해당한다.
+
+입력이나 가정을 일부 바꾸어 결과 변화를 보는 반사실 추론 연구는 행동 분류를 수정하거나 구조화된 설명 레이블을 학습에 넣어 계획을 교정한다. 위반 사례를 새로 만들어 모델을 개선하는 연구도 있다. 이와 달리 본 연구는 새 행동이나 학습 레이블을 생성하지 않으며, 검사 규칙을 통과하지 못한 항목을 곧바로 위험 자료로 바꾸지 않는다. 출력은 어떤 요구ㆍ처리 방식ㆍ증거 때문에 해당 판정이 나왔는지 함께 기록한 검토 후보이다.
+
+\uppaal{}은 시간에 따라 상태가 바뀌는 규칙을 자동으로 검사하는 도구이며, Scenic과 VerifAI는 자율 시스템의 시험 상황 생성과 위반 탐색을 지원한다 \cite{behrmann2004uppaal,fremont2019scenic,dreossi2019verifai}. 본 논문은 새로운 환경이나 제어 방법을 찾는 데 \uppaal{}을 쓰지 않고, 기록된 사건을 순서대로 재생하며 요구의 생성ㆍ유지ㆍ종료를 확인하는 데 사용한다. 따라서 기여는 차량과 환경의 반복 상호작용 전체에 대한 안전 보증이 아니라, 저장된 연속 주석을 자동 실행하고 위반 이유를 추적할 수 있는 검사 규칙으로 만든 데 있다.
+
+정리하면 기존 연구는 주로 한 장면의 설명이 행동과 맞는지, 입력을 바꾸면 행동도 달라지는지, 또는 실제 실행 시스템이 안전 조건을 지키는지를 묻는다. 본 연구는 같은 장면에 저장된 여러 CoC를 이어 읽으며 앞선 요구가 언제 시작되고 계속되며 끝나는지를 묻는다. 관련 연구는 이 질문의 차이를 설명하는 범위로 한정하고, 본 실험에서 직접 비교하지 않은 방법 간 우열은 논하지 않는다.
+
+\begin{table*}[t]
+\centering
+\bitablecaption{핵심 관련 연구군과 본 연구의 주된 평가 단위 및 주장 범위.}{Primary evaluation units and claim scopes of the closest research families and this work.}
+\label{tab:related-position}
+\scriptsize
+\begin{tabularx}{\textwidth}{L{0.19\textwidth}L{0.27\textwidth}L{0.23\textwidth}Y}
+\toprule
+Research area & Main item studied & Typical test or input & Relation to this work \\
+\midrule
+CoC explanation quality and action response \cite{mayumu2026faithfulness,nguyen2026vladrivebench,priyadershi2026lostinfog,panda2026cvaa} & Match between reasoning and action in one scene & Run the model again with changed input or a removed object & Shows whether an explanation matches the scene and action \\
+Reasoning-based model improvement & Alternative action or reasoning label & Change planning or training & Changes model behavior; this work only checks stored annotations \\
+Automatic autonomy-system testing \cite{behrmann2004uppaal,fremont2019scenic,dreossi2019verifai} & A driving situation or a stated system rule & Search environments, simulate, or check a rule & Provides checking tools; this work replays fixed annotation events \\
+This work & Requirements carried across stored CoCs & Build rules, retain prior requirements, and compare fixed cases & Checks annotation consistency and data sources, not physical safety \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+표~\ref{tab:related-position}은 어떤 방법이 더 우수한지를 비교하기보다 각 연구가 무엇을 근거로 어떤 질문에 답하는지를 구분한다. 장면별 설명 연구가 ``설명이 장면과 행동에 맞는가''를 묻는다면, 본 연구는 ``한 사건의 요구가 다음 사건까지 남을 때 두 주석이 함께 성립할 수 있는가''를 묻는다. 또한 실제 환경과 차량 제어를 함께 실행하여 시험하는 연구와 달리, 본 연구는 저장된 문장과 기록만 검사한다. 따라서 제어 결과가 다시 차량과 환경에 영향을 주는 전체 과정의 안전을 보장하지 않는다.

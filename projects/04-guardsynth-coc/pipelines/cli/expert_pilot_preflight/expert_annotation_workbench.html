@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GuardSynth M16 Expert Annotation Workbench</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; }
+    body { margin: 0; background: #f3f5f8; color: #172033; }
+    main { max-width: 1500px; margin: auto; padding: 24px; }
+    .warning { background: #fff2cc; border: 2px solid #b07a00; padding: 14px; font-weight: 700; }
+    .card { background: white; border: 1px solid #ccd3df; border-radius: 10px; padding: 20px; margin: 18px 0; }
+    .scene { width: 100%; height: auto; min-height: 360px; border: 1px solid #718096; background: #e8eef5; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 14px; }
+    label { display: block; font-weight: 650; }
+    input, select, textarea { box-sizing: border-box; width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #9aa6b5; border-radius: 6px; }
+    textarea { min-height: 80px; }
+    button { padding: 12px 18px; border: 0; border-radius: 6px; background: #174ea6; color: white; font-weight: 700; cursor: pointer; }
+    button.secondary { background: #4a5568; }
+    .proposal { border-left: 6px solid #2869c7; padding: 12px 16px; background: #eef5ff; }
+    .hidden { display: none; }
+    code { overflow-wrap: anywhere; }
+    #preview { white-space: pre-wrap; max-height: 500px; overflow: auto; background: #111827; color: #d1fae5; padding: 14px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>M16 Expert Annotation Workbench v0.1</h1>
+  <div class="warning">TRAINING ONLY — 현재 4/60 장면이므로 실제 expert pilot annotation을 시작하면 안 됩니다.</div>
+
+  <section class="card">
+    <h2>훈련 장면</h2>
+    <svg class="scene" viewBox="0 0 1400 520" role="img" aria-label="합성 횡단보도 훈련 장면">
+      <rect width="1400" height="520" fill="#708090"/>
+      <rect x="0" y="170" width="1400" height="180" fill="#3f4650"/>
+      <line x1="0" y1="260" x2="1400" y2="260" stroke="#f5d442" stroke-width="6" stroke-dasharray="45 25"/>
+      <g fill="#f3f4f6">
+        <rect x="900" y="170" width="30" height="180"/><rect x="950" y="170" width="30" height="180"/>
+        <rect x="1000" y="170" width="30" height="180"/><rect x="1050" y="170" width="30" height="180"/>
+      </g>
+      <rect x="390" y="215" width="250" height="100" rx="20" fill="#1d4ed8"/>
+      <circle cx="440" cy="325" r="24" fill="#111827"/><circle cx="590" cy="325" r="24" fill="#111827"/>
+      <text x="460" y="275" fill="white" font-size="30">EGO</text>
+      <circle cx="995" cy="115" r="25" fill="#f59e0b"/><line x1="995" y1="140" x2="995" y2="220" stroke="#f59e0b" stroke-width="16"/>
+      <line x1="995" y1="165" x2="955" y2="205" stroke="#f59e0b" stroke-width="12"/><line x1="995" y1="165" x2="1035" y2="205" stroke="#f59e0b" stroke-width="12"/>
+      <text x="850" y="50" fill="#111827" font-size="30">pedestrian-training-1</text>
+      <path d="M650,215 L880,215" stroke="#ef4444" stroke-width="10" marker-end="url(#arrow)"/>
+      <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#ef4444"/></marker></defs>
+      <text x="660" y="195" fill="#7f1d1d" font-size="25">potential path</text>
+      <rect x="880" y="155" width="220" height="210" fill="none" stroke="#dc2626" stroke-width="8"/>
+      <text x="870" y="405" fill="#7f1d1d" font-size="28">conflict zone</text>
+    </svg>
+    <p>질문: 보행자와 횡단보도의 association, zone geometry와 적용 근거가 충분한지 판단하고, 필요한 guard를 작성하세요. 그림만으로 수치나 source를 추정하면 안 됩니다.</p>
+  </section>
+
+  <section class="card">
+    <h2>Assignment</h2>
+    <div class="grid">
+      <label>Assignment ID<input id="assignment" value="TRAINING-A-001"></label>
+      <label>Reviewer pseudonym<input id="reviewer" value="TRAINING-REVIEWER"></label>
+      <label>Scene hash<input id="scene" value="sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"></label>
+      <label>Interface mode<select id="mode" onchange="toggleMode()"><option>MINIMAL_CONFIRMATION</option><option>COMPLETE_AUTHORING</option></select></label>
+    </div>
+  </section>
+
+  <section class="card proposal" id="proposalCard">
+    <h2>Blinded proposal A</h2>
+    <p>보행자 crossing evidence가 fresh TRUE이고 target/zone association과 geometry가 source-linked라면, ego front는 active 동안 sourced zone entry 이전의 system-requirement margin을 넘지 않는다.</p>
+    <p>법규/CoC가 감속도·응답시간·margin의 수치 source는 아닙니다.</p>
+  </section>
+
+  <section class="card">
+    <h2>판정</h2>
+    <div class="grid">
+      <label>Applicability<select id="applicability"><option>APPLICABLE</option><option>NOT_APPLICABLE</option><option>REVIEW_REQUIRED</option><option>UNSUPPORTED</option><option>CONFLICT</option></select></label>
+      <label>Source sufficiency<select id="sourceVerdict"><option>SUFFICIENT</option><option>INSUFFICIENT</option><option>CONFLICT</option></select></label>
+      <label>Confidence (0–1)<input id="confidence" type="number" min="0" max="1" step="0.05" value="0.9"></label>
+    </div>
+    <label>Source refs (한 줄에 하나)<textarea id="sourceRefs">TRAINING-SCENE-GEOMETRY-v0.1
+TRAINING-TARGET-ZONE-ASSOCIATION-v0.1
+TRAINING-SYSTEM-REQUIREMENT-v0.1</textarea></label>
+    <label>Reason codes (한 줄에 하나)<textarea id="reasons"></textarea></label>
+  </section>
+
+  <section class="card" id="authoring">
+    <h2>Complete authoring fields</h2>
+    <div class="grid">
+      <label>Guard type<input id="guardType" value="STOP_BEFORE_ZONE"></label>
+      <label>Target ID<input id="target" value="pedestrian-training-1"></label>
+      <label>Zone ID<input id="zone" value="crosswalk-training-1"></label>
+      <label>Operator<input id="operator" value="EGO_FRONT_LEQ_ZONE_ENTRY_MINUS_MARGIN"></label>
+      <label>Upper range<input id="upper" type="number" value="13.5"></label>
+      <label>Unit<input id="unit" value="m"></label>
+      <label>Coordinate frame<input id="frame" value="dataset_rig"></label>
+    </div>
+    <div class="grid">
+      <label>Activation<textarea id="activation">fresh pedestrian-crossing TRUE</textarea></label>
+      <label>Maintain<textarea id="maintain">while hazard is TRUE or approved UNKNOWN hold applies</textarea></label>
+      <label>Release<textarea id="release">two consecutive fresh FALSE observations</textarea></label>
+      <label>Reactivation<textarea id="reactivation">fresh TRUE after release</textarea></label>
+      <label>Expiry<textarea id="expiry">scene scope invalid</textarea></label>
+      <label>Fallback<textarea id="fallback">approved hold on fresh UNKNOWN</textarea></label>
+    </div>
+  </section>
+
+  <section class="card">
+    <label>Corrections (한 줄에 하나)<textarea id="corrections"></textarea></label>
+    <button onclick="previewRecord()">검증·미리보기</button>
+    <button class="secondary" onclick="downloadRecord()">JSON 저장</button>
+    <pre id="preview"></pre>
+  </section>
+</main>
+<script>
+const startedAt = new Date().toISOString();
+const lines = id => document.getElementById(id).value.split(/\n/).map(x=>x.trim()).filter(Boolean);
+const nullable = id => document.getElementById(id).value.trim() || null;
+function toggleMode() {
+  const complete = document.getElementById('mode').value === 'COMPLETE_AUTHORING';
+  document.getElementById('authoring').classList.toggle('hidden', !complete);
+  document.getElementById('proposalCard').classList.toggle('hidden', complete);
+}
+function buildRecord() {
+  const upper = nullable('upper');
+  const confidence = Number(document.getElementById('confidence').value);
+  if (!(confidence >= 0 && confidence <= 1)) throw new Error('confidence는 0–1이어야 합니다.');
+  return {
+    annotation_version: 'guardsynth-expert-annotation-v0.1',
+    assignment_id: nullable('assignment'), reviewer_pseudonym: nullable('reviewer'),
+    scene_ref_hash: nullable('scene'), interface_mode: document.getElementById('mode').value,
+    applicability: document.getElementById('applicability').value,
+    guard_fields: { guard_type: nullable('guardType'), target_id: nullable('target'), zone_id: nullable('zone'),
+      operator: nullable('operator'), range: upper === null ? null : {lower:null, upper:Number(upper)},
+      unit: nullable('unit'), coordinate_frame: nullable('frame') },
+    source_sufficiency: { verdict: document.getElementById('sourceVerdict').value,
+      source_refs: lines('sourceRefs'), reason_codes: lines('reasons') },
+    lifecycle: { activation: nullable('activation'), maintain: nullable('maintain'), release: nullable('release'),
+      reactivation: nullable('reactivation'), expiry: nullable('expiry'), fallback: nullable('fallback') },
+    confidence, corrections: lines('corrections'), started_at: startedAt, completed_at: new Date().toISOString()
+  };
+}
+function previewRecord() {
+  try { document.getElementById('preview').textContent = JSON.stringify(buildRecord(), null, 2); }
+  catch (error) { document.getElementById('preview').textContent = 'ERROR: ' + error.message; }
+}
+function downloadRecord() {
+  const record = buildRecord(); const blob = new Blob([JSON.stringify(record,null,2)+'\n'], {type:'application/json'});
+  const link = document.createElement('a'); link.href = URL.createObjectURL(blob);
+  link.download = record.assignment_id + '.json'; link.click(); URL.revokeObjectURL(link.href);
+}
+toggleMode(); previewRecord();
+</script>
+</body>
+</html>

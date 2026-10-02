@@ -1,0 +1,12 @@
+{
+  "output_hashes": {
+    "training.json": "38d9284c09d4befb7657cfe8b8039e368a784b3896e96ebeb44a431698950305",
+    "benchmark_regression.jsonl": "e32d5ef2a60e68af551f1d4785783528afb182826477e7d9163f9f59330f24e7",
+    "new_seed_confirmation.jsonl": "a637406eefa03c911d2126ba40ef1bdce2341ced19c7c9dc11eb9ef083bbfbab",
+    "unseen_time.jsonl": "4a47f26e42f0da2248c5739bc753d660933b35b50f4604554ee4ac16ee1988b0",
+    "RESULT.json": "4912046111ae0f02fdbd0c58efd44f4fde6b492ea373ad8a1884bb628b0acbc2",
+    "adapter/README.md": "cfb7ccf343a2b9cd6f189998a2a1e21a603844dd0cce39d61e1d77e3c6d2dcbb",
+    "adapter/adapter_model.safetensors": "fe75b8f8a8ee47a7d6e6c466a02a97d0bc1764d059bef575634dc9d58a860d76",
+    "adapter/adapter_config.json": "4c6367c7e30a22dd5a497037261ea5ed57b3476bb413cff95b4af7303d723a38"
+  }
+}

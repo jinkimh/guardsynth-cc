@@ -1,0 +1,40 @@
+\documentclass[9pt,twocolumn]{extarticle}
+\usepackage{kiee-review}
+
+\kieeenglishtitle{Guard-Aware Trajectory Candidate Selection for Vision-Language Autonomous Driving:\ Safety-Constrained Chain-of-Causation}
+\kieekoreantitle{비전-언어 자율주행 모델의 실행 가드 기반 궤적 후보 선택:\ Safety-Constrained Chain-of-Causation}
+
+\begin{document}
+
+\makekieefrontmatter{%
+\begin{kieeabstract}
+Driving VLMs use Chain-of-Causation (CoC) to link scene interpretation and trajectory prediction, but an action objective may omit execution limits. We propose Safety-Constrained CoC, which adds an execution guard, and a paired-contract benchmark that changes only the guard while keeping the scene, objective, and candidates fixed. With LoRA-tuned Qwen3-VL-2B-Instruct, standard three-seed temporal tests reduced guard violations from 31.9 percent without guard information to zero, with perfect guard-compliant completion and paired-contract accuracy. On unseen temporal values, candidate accuracy fell to 63.5 percent, violations rose to 35.1 percent, and paired-contract accuracy fell to 30.6 percent. Blank or conflicting images reduced standard temporal accuracy, while maneuver accuracy remained perfect. The results support guard-conditioned synthetic candidate selection, not general numerical extrapolation, continuous trajectory generation, real-road grounding, or vehicle safety.
+\end{kieeabstract}
+\kieekeywords{Autonomous driving, Vision-language model, Chain-of-Causation, Execution guard, Trajectory selection, Paired-contract benchmark}
+}
+
+\input{sections/01-introduction}
+\input{sections/02-related-work}
+\input{sections/03-problem}
+\raggedbottom
+\input{sections/04-method}
+\input{sections/05-experiments}
+\flushbottom
+\input{sections/07-discussion}
+\input{sections/08-conclusion}
+
+\noindent\begin{minipage}{\columnwidth}
+\section*{감사의 글}
+\begingroup
+\raggedright
+본 연구는 대한민국 정부(교육과학기술부)의 재원으로 한국연구재단(NRF)의 지원을 받아 수행되었으며(\nolinkurl{NRF-2023R1A2C1006639}), 대한민국 정부(과학기술정보통신부)의 재원으로 정보통신기획평가원(IITP)의 지역지능화혁신인재양성사업 지원을 받아 수행되었음(\nolinkurl{IITP-2026-RS-2024-00436773}).
+\par
+\endgroup
+\end{minipage}
+
+\bibliographystyle{unsrt}
+\begingroup
+\fontsize{8pt}{12pt}\selectfont
+\bibliography{references}
+\endgroup
+\end{document}

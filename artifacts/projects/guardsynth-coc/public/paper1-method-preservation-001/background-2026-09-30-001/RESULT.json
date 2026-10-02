@@ -1,0 +1,21 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "background-2026-09-30-001",
+  "status": "DRAFT_COMPILED_AND_CHECKED",
+  "scope": "Established foundations only; proposed constraint model and EBLC procedures reserved for Section IV",
+  "outputs": {
+    "ko": {"pdf": "ieee-access-background-v01-ko.pdf", "pages": 2, "text_units_checked": 21},
+    "en": {"pdf": "ieee-access-background-v01-en.pdf", "pages": 2, "text_units_checked": 21}
+  },
+  "checks": {
+    "xelatex_two_pass_build": "PASS",
+    "markdown_prose_preserved_in_pdf": "PASS",
+    "bilingual_primary_reference_urls": 5,
+    "missing_glyph_warnings": 0,
+    "overfull_hbox_warnings": 0,
+    "visual_review": "All four final pages inspected; equations and references readable",
+    "outline_and_introduction_roadmap": "III Background; IV proposed constraint model and GuardSynth method",
+    "file_naming": "Five pre-existing unrelated violations; no new-file violations"
+  },
+  "integration": "Standalone background draft. Historical main.tex and earlier PDF snapshots unchanged. Full manuscript integration and global reference numbering remain pending."
+}

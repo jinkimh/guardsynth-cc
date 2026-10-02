@@ -1,0 +1,121 @@
+{
+  "claim_scope": "REPOSITORY_LAYOUT_AND_SOFTWARE_REGRESSION_NOT_RESEARCH_OR_VEHICLE_SAFETY",
+  "code_hashes": {
+    "layout_spec": "480fe7e6fb0f004492360c7756eb45aae5b35c9acafe4b41ad17b2e713aeab5c",
+    "runner": "68a963438565b6b9ff208b46d5e27d1324c15c98ef86d7eac5fa6ca9bcf275d7",
+    "structure_test": "a01729ec751f7d620213b6d6fd883cb590648449a2b1f2c9bac3dab50141242f"
+  },
+  "deterministic": true,
+  "experiment_id": "PROJECT-LAYOUT-REFACTOR-001",
+  "input_class": "PUBLIC_REPOSITORY_METADATA",
+  "layout_spec": "docs/architecture/PROJECT_STRUCTURE_CODEX.md",
+  "migration_map": "docs/architecture/MIGRATION_MAP.json",
+  "network_access_performed": false,
+  "python_version": "3.11.2",
+  "run_date": "2026-08-12",
+  "run_id": "layout-v3-2026-08-12-v5",
+  "test_commands": [
+    {
+      "command": "/usr/bin/python3 -m unittest tests.structure.test_project_layout -v",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": 18
+    },
+    {
+      "command": "/usr/bin/python3 -m unittest discover -s platforms/eblc-bcv/tests -p test_*.py",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": 133
+    },
+    {
+      "command": "/usr/bin/python3 -m unittest projects/04-guardsynth-coc/tests/integration/test_baseline_protocol.py projects/04-guardsynth-coc/tests/integration/test_coc_conditioned_frontend.py projects/04-guardsynth-coc/tests/integration/test_expert_pilot_protocol.py projects/04-guardsynth-coc/tests/integration/test_real_scene_adapter.py projects/04-guardsynth-coc/tests/integration/test_scene_evidence_review_ui.py projects/04-guardsynth-coc/tests/integration/test_scene_source_closure.py projects/04-guardsynth-coc/tests/integration/test_simulated_scene_dry_run.py projects/04-guardsynth-coc/tests/integration/test_source_aware_generator.py projects/04-guardsynth-coc/tests/unit/test_actor_candidate_export.py projects/04-guardsynth-coc/tests/unit/test_dry_run_readiness.py projects/04-guardsynth-coc/tests/unit/test_geometric_association.py projects/04-guardsynth-coc/tests/unit/test_label_light_grounding.py projects/04-guardsynth-coc/tests/unit/test_rule_applicability.py projects/04-guardsynth-coc/tests/unit/test_source_authoring.py projects/04-guardsynth-coc/tests/unit/test_source_authoring_adversarial.py projects/04-guardsynth-coc/tests/unit/test_source_catalog.py projects/04-guardsynth-coc/tests/unit/test_vehicle_assurance_audit.py",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": 168
+    },
+    {
+      "command": "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/alpamayo/ar1_venv/bin/python -m unittest projects/04-guardsynth-coc/tests/integration/test_nvidia_source_bundle.py",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": 2
+    },
+    {
+      "command": "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/alpamayo/ar1_venv/bin/python -m unittest discover -s projects/01-safety-constrained-coc/experiments/contract_micro_world -p test_*.py",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": 11
+    },
+    {
+      "command": "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/alpamayo/ar1_venv/bin/python -m unittest discover -s projects/03-sequential-coc-verification/experiments/sequential_coc/tests -p test_*.py",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": 166
+    },
+    {
+      "command": "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/alpamayo/ar1_venv/bin/python -m unittest discover -s projects/03-sequential-coc-verification/experiments/logic -p test_*.py",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": 12
+    },
+    {
+      "command": "/usr/bin/python3 -m unittest discover -s platforms/eblc-bcv/experiments/eblc_pilot -p test_*.py",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": 7
+    },
+    {
+      "command": "/usr/bin/python3 -m unittest discover -s projects/03-sequential-coc-verification/experiments/uppaal -p test_*.py",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": 14
+    },
+    {
+      "command": "/usr/bin/python3 -m cli.pipelines.eblc.core_smt_compile.run --help",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": null
+    },
+    {
+      "command": "/usr/bin/python3 -m cli.pipelines.eblc.p0b_schema_bcv.run --help",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": null
+    },
+    {
+      "command": "/usr/bin/python3 -m cli.pipelines.eblc.program_conformance.run --help",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": null
+    },
+    {
+      "command": "/usr/bin/python3 -m cli.pipelines.eblc.restricted_scene_grounding.run --help",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": null
+    },
+    {
+      "command": "/usr/bin/python3 -m cli.pipelines.eblc.robustness_audit.run --help",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": null
+    },
+    {
+      "command": "/usr/bin/python3 -m cli.pipelines.eblc.scenario_validation.run --help",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": null
+    },
+    {
+      "command": "/usr/bin/python3 -m cli.pipelines.guardsynth.source_aware_generate.run --help",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": null
+    },
+    {
+      "command": "/usr/bin/python3 -m cli.pipelines.guardsynth.real_scene_readiness.run --help",
+      "exit_code": 0,
+      "passed": true,
+      "test_count": null
+    }
+  ]
+}

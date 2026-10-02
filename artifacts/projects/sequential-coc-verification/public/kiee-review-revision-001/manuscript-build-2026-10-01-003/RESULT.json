@@ -1,0 +1,48 @@
+{
+  "project_id": "sequential-coc-verification",
+  "status": "SUPERSEDED_LAYOUT_WARNINGS",
+  "note": "Five PDFs compiled; overfull query minipage indentation and two long response phrases corrected in run004.",
+  "pdfs": {
+    "main": {
+      "path": "artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-003/main/main.pdf",
+      "pages": 11,
+      "sha256": "0083772888c41df0ddfdda825cc829727f7c56c85f63c62a8d4ecf2429836729"
+    },
+    "main-clean": {
+      "path": "artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-003/main-clean/main-clean.pdf",
+      "pages": 11,
+      "sha256": "256d8a43d48dc96e0c9962854813e83769e548405f4b9fe0605fec025c0d8484"
+    },
+    "response-to-reviewer-1": {
+      "path": "artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-003/response-to-reviewer-1/response-to-reviewer-1.pdf",
+      "pages": 10,
+      "sha256": "96a181ac98d19c70e5718d6ea07321d39805f5876969f5cb4c0c7d8d58ebae9b"
+    },
+    "response-to-reviewer-2": {
+      "path": "artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-003/response-to-reviewer-2/response-to-reviewer-2.pdf",
+      "pages": 9,
+      "sha256": "c07a127bd6266d7efa59b762feb2be1fbe3ed6c3a08a99c5879f4dffabc4543e"
+    },
+    "response-to-reviewer-3": {
+      "path": "artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/manuscript-build-2026-10-01-003/response-to-reviewer-3/response-to-reviewer-3.pdf",
+      "pages": 13,
+      "sha256": "4ce391fd5f7c108824a1d0a1b7dd388d080c5a4619d9ab2608bb774a71dc090d"
+    }
+  },
+  "overfull_warnings": {
+    "main": [
+      "Overfull \\hbox (9.0pt too wide) in paragraph at lines 104--113"
+    ],
+    "main-clean": [
+      "Overfull \\hbox (9.0pt too wide) in paragraph at lines 104--113"
+    ],
+    "response-to-reviewer-1": [],
+    "response-to-reviewer-2": [
+      "Overfull \\hbox (22.42976pt too wide) in paragraph at lines 145--146"
+    ],
+    "response-to-reviewer-3": [
+      "Overfull \\hbox (12.7207pt too wide) in paragraph at lines 368--369"
+    ]
+  },
+  "accepted_final_build": false
+}

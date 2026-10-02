@@ -1,0 +1,44 @@
+{
+  "baseline_count": 10,
+  "case_count": 24,
+  "channel_firewall_violations": 0,
+  "claim_scope": "BASELINE_INTERFACE_AND_ABSTENTION_SMOKE_NOT_PERFORMANCE_RANKING_OR_VEHICLE_SAFETY",
+  "hidden_failures": 0,
+  "quality_scoring_enabled": false,
+  "record_count": 240,
+  "schema_valid_result_count": 240,
+  "software_protocol_gate_passed": true,
+  "status": "EXECUTED",
+  "status_counts_by_baseline": {
+    "B0": {
+      "EXECUTED": 24
+    },
+    "B1": {
+      "UNSUPPORTED": 24
+    },
+    "B13": {
+      "UNSUPPORTED": 24
+    },
+    "B2": {
+      "UNSUPPORTED": 24
+    },
+    "B3": {
+      "EXECUTED": 24
+    },
+    "B4": {
+      "EXECUTED": 24
+    },
+    "B5": {
+      "EXECUTED": 24
+    },
+    "B6": {
+      "EXECUTED": 24
+    },
+    "B7": {
+      "UNSUPPORTED": 24
+    },
+    "B8": {
+      "UNSUPPORTED": 24
+    }
+  }
+}

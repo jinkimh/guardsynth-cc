@@ -1,0 +1,23 @@
+\contentsline {section}{1 제목과 중심 주장}{3}{section*.4}%
+\contentsline {section}{2 초록 초안}{4}{section*.6}%
+\contentsline {section}{3 연구 질문과 근거}{5}{section*.8}%
+\contentsline {section}{4 제약의 범위와 특성 및 요소}{6}{section*.10}%
+\contentsline {section}{5 방법과 사람의 역할}{7}{section*.15}%
+\contentsline {section}{6 두 실행 프로파일}{8}{section*.17}%
+\contentsline {section}{7 끝까지 연결되는 예제}{9}{section*.21}%
+\contentsline {section}{8 실제 장면 예제의 역할}{11}{section*.26}%
+\contentsline {section}{9 검증과 테스트 근거}{12}{section*.28}%
+\contentsline {section}{10 실험 구성과 표본 단위}{13}{section*.31}%
+\contentsline {section}{11 확장 데이터와 학습 설정}{14}{section*.33}%
+\contentsline {section}{12 지표와 통계}{16}{section*.38}%
+\contentsline {section}{13 주 성능 비교}{17}{section*.40}%
+\contentsline {section}{14 여섯 조건의 보충 수치}{18}{section*.45}%
+\contentsline {section}{15 명세 기반 비용 학습}{19}{section*.47}%
+\contentsline {section}{16 추가 행동 지표와 처리 시간}{20}{section*.49}%
+\contentsline {section}{17 사전 판정과 보고 초점}{21}{section*.51}%
+\contentsline {section}{18 주장과 근거의 경계}{22}{section*.53}%
+\contentsline {section}{19 관련 연구의 연결 축}{23}{section*.55}%
+\contentsline {section}{20 본문과 보충자료 구성}{24}{section*.57}%
+\contentsline {section}{21 재현 자료 색인}{25}{section*.59}%
+\contentsline {section}{22 투고 전 남은 집필 작업}{26}{section*.61}%
+\contentsline {section}{23 IEEE Access 원고 준비}{27}{section*.63}%

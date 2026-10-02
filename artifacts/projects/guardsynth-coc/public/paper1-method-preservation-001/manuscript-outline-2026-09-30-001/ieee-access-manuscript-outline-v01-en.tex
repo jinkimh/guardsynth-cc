@@ -1,0 +1,254 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=20mm,headheight=16pt]{geometry}
+\usepackage{fontspec,kotex,booktabs,longtable,array,xcolor,hyperref,fancyhdr}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\setmainhangulfont{Noto Sans CJK KR}
+\setmonohangulfont{Noto Sans CJK KR}
+\definecolor{navy}{HTML}{173E59}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,
+pdftitle={IEEE Access Manuscript Outline and Writing Plan},
+pdfsubject={English manuscript outline for review},pdfauthor={GuardSynth project}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\emergencystretch}{4em}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\renewcommand{\contentsname}{Contents}
+\setcounter{tocdepth}{1}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small GuardSynth CoC}
+\fancyhead[R]{\small Manuscript outline · English}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\raggedbottom
+\begin{document}
+\begin{titlepage}
+\vspace*{20mm}
+{\color{navy}\Large GuardSynth CoC\par}
+\vspace{10mm}
+{\huge\bfseries IEEE Access\\[4mm]Manuscript Outline\par}
+\vspace{12mm}
+{\Large Content and Writing Plan\par}
+\vspace{6mm}
+Formal verification and CoC augmentation\par
+v0.1 · 2026-09-30\par
+\vspace{12mm}
+\textbf{Reading guide}\par
+Central message → Eight manuscript sections → Evidence →\par
+Figures and tables → Scope → Writing sequence\par
+\vfill
+This is an outline for review, not a submission manuscript.\par
+Testing functionality is excluded; VLM performance evaluation remains.\par
+Sections, numerical results, and scope match the Korean outline.\par
+\end{titlepage}
+\tableofcontents
+\clearpage
+\section*{About this outline}
+
+
+GuardSynth CoC · Outline for review v0.1 · 2026-09-30\par
+
+project\_\allowbreak{}id: {\ttfamily\small guardsynth-coc}\par
+
+This document condenses the \href{\detokenize{../../../../../../projects/04-guardsynth-coc/paper/GUARDSYNTH_COC_METHODS_SETTINGS_PACKAGE_V01_KO.md}}{detailed evidence package} into a manuscript narrative and writing plan. It is neither a manuscript draft nor a new experimental protocol. Its sections, numerical results, and claim boundaries match the \href{\detokenize{../../../../../../projects/04-guardsynth-coc/paper/IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_KO.md}}{Korean version}. The existing main.tex, completed experiments, and previous PDFs remain unchanged.\par
+
+Scope revision: the testing applications proposed in the earlier package are outside this paper. This outline focuses on EBLC formal specification and verification, followed by CNL-based CoC augmentation. Test generation, action-testing systems, and runtime monitoring are excluded. Performance evaluation of VLM learning remains in scope.\par
+
+\phantomsection\section*{1 Central Message and Working Title}\addcontentsline{toc}{section}{1 Central Message and Working Title}
+
+\textbf{The central question is: how can CoC behavioral constraints be formally specified and verified, converted to CNL, and then used in learning?}\par
+
+The working title is “Formalizing and Verifying CoC Behavioral Constraints with EBLC.” The Korean version uses its equivalent title. This is a proposed title, not a finalized submission title with confirmed authorship.\par
+
+The paper connects two distinct lines of evidence. First, constraints can be represented as explicit formulas and checked for consistency and specified properties within a restricted model. Second, providing CNL generated from those specifications alongside CoC improves action selection over CoC alone in a controlled task. The second result must not become a causal claim that solver verification itself makes the model more accurate.\par
+
+The recommended approach is a methods paper supported by behavioral experiments. A performance-only narrative would obscure the constraint-model contribution; a language-theory-only narrative would demand proofs beyond the restricted profiles evaluated here. Instead, connect constraint modeling, formal verification, CNL delivery, and behavioral evaluation in one argument.\par
+
+\phantomsection\section*{2 Narrative and Contributions}\addcontentsline{toc}{section}{2 Narrative and Contributions}
+
+\begingroup\small\ttfamily\setlength{\parskip}{1pt}
+\noindent\hspace*{0.0em}Why explanations alone are insufficient\par
+\noindent\hspace*{1.0em}→ Define constraint scope, properties, and elements\par
+\noindent\hspace*{1.0em}→ Bind applicable constraints to evidence and assumptions\par
+\noindent\hspace*{1.0em}→ Formally specify and verify constraints with EBLC\par
+\noindent\hspace*{1.0em}→ Generate CNL and augment CoC\par
+\noindent\hspace*{1.0em}→ Evaluate P0/P1/P2 under a matched training budget\par\endgroup\par
+
+Expand CoC as Chain of Cognition, EBLC as Evidence-Bound Lifecycle Contracts, and CNL as Controlled Natural Language at first use.\par
+
+Limit the contribution list to four items.\par
+
+\begin{enumerate}
+\item Propose elements for constraint scope, conditions, targets, actions, time, release, uncertainty, and evidence.
+\item Connect structured constraints to Core/SMT for restricted consistency and specified-property verification.
+\item Generate CNL from restricted specification fields and incorporate it into CoC inputs.
+\item Present the scope of formal verification separately from behavioral effects of constraint-augmented learning conditions.
+\end{enumerate}
+
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-4.000pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3300\linewidth-5.280pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.4200\linewidth-6.720pt\relax}@{}}
+\toprule
+\textbf{Research question} & \textbf{Answer in the paper} & \textbf{Evidence} \\
+\midrule\endfirsthead
+\toprule
+\textbf{Research question} & \textbf{Answer in the paper} & \textbf{Evidence} \\
+\midrule\endhead
+\bottomrule\endfoot
+RQ1 What is specified as a constraint? & Distinguish observations, explanations, constraints, and objectives; define elements and semantics & Element table, temporal example, implemented profiles \\
+RQ2 What is verified about the specification? & Finite-model consistency, specified properties, and CNL field correspondence & Core/SMT queries and results, specification-to-CNL example \\
+RQ3 Does augmentation help action selection? & P1/P2 versus P0, including current wording and timing variations & Matched-budget training and evaluation \\
+\end{longtable}
+\endgroup
+
+P0 is CoC only; P1 is our existing natural-language constraint condition; P2 is our EBLC-derived CNL condition. P1 and P2 are not unrelated external competitors. The primary comparison is P0 versus P1/P2. P2 versus P1 is an internal comparison of effect preservation and representation after formalization.\par
+
+\phantomsection\section*{3 Proposed Eight-Section Manuscript}\addcontentsline{toc}{section}{3 Proposed Eight-Section Manuscript}
+
+\subsection*{I Introduction}
+
+Begin with the difference between CoC that explains an action and explicit rules that restrict actions. Use “yield to the pedestrian, then proceed” to illustrate missing details: which zone must be avoided, for how long, and what releases the restriction?\par
+
+Explain that the method does not discard natural language: it passes constraints through an explicit representation and returns them to a language form usable for learning. End with the research questions, four contributions, and paper organization. Preview results in one or two sentences and reserve the numerical table for Results. Use package Sections 1–3.\par
+
+\subsection*{II Related Work}
+
+Organize a concise discussion around CoC/VLM action reasoning, natural-language rule-conditioned action selection, formal specification and logical verification, and constraint-based learning. Cite the connection to our prior natural-language constraint work and identify explicit constraint elements and the EBLC verification-to-CNL connection as the present contribution.\par
+
+Do not rank external methods using results from different datasets. Do not include unverified references, priority claims, or superiority claims. Package Section 19 supplies an organizing framework, not a completed literature review or bibliography.\par
+
+\subsection*{III CoC Behavioral Constraint Model}
+
+First distinguish observations, action rationales, behavioral constraints, and optimization objectives. Define targets and zones, activation, prohibited actions, persistence/release/reactivation, time and units, UNKNOWN and conflicting evidence, sources, and claim scope.\par
+
+Use a table to connect each element to the question it answers and the checks it enables. Show the broader modeling proposal alongside the restricted temporal profile actually executed. Do not expand this into a complete taxonomy of traffic rules or a correctness proof for the entire EBLC language. Use package Sections 4 and 6.\par
+
+\subsection*{IV GuardSynth Method}
+
+Explain inputs and evidence roles, applicability selection, EBLC, Core/SMT, CNL, and CoC augmentation in order. State that the current synthetic experiment uses supplied rules, whereas real-scene applicability requires evidence and human judgment. Do not present a completed automatic video-to-constraint extractor.\par
+
+Carry one temporal example through the entire method. With clearance at 11.0 seconds and a required wait of 0.5 or 1.5 seconds, show how entry at 11.5 seconds changes admissibility. Connect the contract, inequality, logical queries, CNL, and learning target. The rule is enters → entry\_\allowbreak{}ms ≥ clear\_\allowbreak{}ms + release\_\allowbreak{}clear\_\allowbreak{}ms. This illustrates specification semantics, not an action-testing system or an observed model prediction.\par
+
+Explain SAT as satisfiability under modeled conditions and UNSAT as the impossibility of jointly asserting a prohibited condition and entry. Briefly introduce qualitative multi-obligation contracts as a separate profile and move their details to the supplement. Use only the specification, verification, and CNL material from package Sections 5–9.\par
+
+\subsection*{V Experimental Setup}
+
+Distinguish specification-verification settings and query scope from behavioral-learning settings. The behavioral comparison uses Qwen3-VL-2B-Instruct, seeds 42, 17, and 123, and 180 updates per condition and seed. Distinguish 60 unique synthetic images, split 40/10/10 for train/validation/test, from 960/240/240 derived records.\par
+
+Disclose that P1/P2 receive constraints during both training and evaluation, while P0 lacks the contract duration. Define the independent environment reference, contract pairs, accuracy, violation rate, compliant goal completion, SD, and conditional cluster CIs. State the final-checkpoint policy and reuse of evaluation images. Use package Sections 10–12.\par
+
+\subsection*{VI Results}
+
+Separate specification-verification results answering RQ2 from behavioral performance answering RQ3. For verification, report the purpose, expected and observed result, and assumptions of the SAT/SMT queries actually executed. Do not add fault injection or action testing as separate contributions or result tables. For behavior, present the main P0/P1/P2 comparison before the current paraphrase and unseen\_\allowbreak{}duration evaluations.\par
+
+Interpret P2 versus P1 as an internal comparison. Report SD and CIs without claiming formal noninferiority or superiority in every condition. Mention cost-based follow-up briefly and put its detailed results and trade-offs in the supplement. Use the logical-verification material in package Section 9 and Sections 13–16.\par
+
+\subsection*{VII Discussion}
+
+First discuss how formalization makes semantics and checking paths explicit rather than replacing natural language. Second distinguish gains from providing rule information from a causal effect of verification itself. Third describe the synthetic task, small image pool, single-transition assumption, shared-source errors, and unestablished real-road generalization.\par
+
+Use real scene \#18 only as an application illustration. Transparently describe unmet prospective operational criteria and the subsequent reporting emphasis; do not add historical generalization-failure tables from a different experimental scope to the new paper. Use package Sections 8 and 17–18.\par
+
+\subsection*{VIII Conclusion}
+
+Conclude that constraints were formally specified and subjected to restricted logical verification, and that supplying CNL generated from those specifications produced better action selection than CoC alone in a controlled task. Mention large-scale automatic extraction, vehicle deployment, and trajectory validation only as future applications. Introduce neither new results nor stronger guarantees in the conclusion.\par
+
+\phantomsection\section*{4 Abstract and Headline Evidence}\addcontentsline{toc}{section}{4 Abstract and Headline Evidence}
+
+Structure the abstract as problem, approach, evaluation conditions, main results, and implications with scope. Polish it last, after the text, figures, and tables are fixed. Use the following test results rather than listing every experiment. Values are percentages averaged across three seeds.\par
+
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2200\linewidth-5.280pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2000\linewidth-4.800pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3000\linewidth-7.200pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2800\linewidth-6.720pt\relax}@{}}
+\toprule
+\textbf{Condition} & \textbf{Accuracy} & \textbf{Constraint violation} & \textbf{Compliant goal completion} \\
+\midrule\endfirsthead
+\toprule
+\textbf{Condition} & \textbf{Accuracy} & \textbf{Constraint violation} & \textbf{Compliant goal completion} \\
+\midrule\endhead
+\bottomrule\endfoot
+P0 & 49.861 & 19.167 & 80.833 \\
+P1 & 96.806 & 1.389 & 98.611 \\
+P2 & 98.056 & 0.833 & 99.167 \\
+\end{longtable}
+\endgroup
+
+Relative to P0, P2 gains 48.194 percentage points in accuracy and reduces violations by 18.333 percentage points. These compare information conditions in a synthetic task, not real-road performance. The manuscript table should additionally report SD and link the applicable CIs.\par
+
+Specification verification provides evidence about the logical properties checked under stated assumptions. Do not reinterpret successful verification as the cause of model gains or proof of source truth. Exclude testing functionality and injected-fault detection rates from this abstract.\par
+
+\phantomsection\section*{5 Minimum Main-Paper Figures and Tables}\addcontentsline{toc}{section}{5 Minimum Main-Paper Figures and Tables}
+
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-4.000pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3300\linewidth-5.280pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.4200\linewidth-6.720pt\relax}@{}}
+\toprule
+\textbf{Identifier} & \textbf{Content} & \textbf{Reader takeaway} \\
+\midrule\endfirsthead
+\toprule
+\textbf{Identifier} & \textbf{Content} & \textbf{Reader takeaway} \\
+\midrule\endhead
+\bottomrule\endfoot
+Figure 1 & End-to-end method with human and machine roles & Where constraints are selected and what is checked \\
+Figure 2 & Two contracts and boundaries in the temporal example & How a rule change alters admissible actions in the same situation \\
+Table I & Constraint elements, roles, and execution scope & Proposal versus implemented coverage \\
+Table II & Data, conditions, model, and budget & Matched comparison and input differences \\
+Table III & Main P0/P1/P2 results and SD & Effect of supplying constraints \\
+Table IV & Verification queries, expected/observed verdicts, and assumptions & What was established or checked, and what remains outside scope \\
+Table V & Current wording and timing variations & Robustness within the controlled task \\
+\end{longtable}
+\endgroup
+
+This is an asset and placement plan, not a claim that the figures are already complete. Avoid duplicating the same numbers in both tables and bar charts; add visualizations only when they improve understanding.\par
+
+\phantomsection\section*{6 Material Outside the Main Paper}\addcontentsline{toc}{section}{6 Material Outside the Main Paper}
+
+Place exact schema/Core/SMT/CNL mappings, all six conditions and three seeds with CIs, cost-learning results and accuracy trade-offs, additional progress metrics and timing, and the conditional evidence linkage for real scene \#18 in the supplement. Reduce implementation detail and numerical bulk without hiding material limitations from the main text.\par
+
+Exclude test generation, action-testing systems, runtime monitoring, and fault-injection experiments from the contributions of this paper and its supplement. Also exclude Studio product design, full Alpamayo training, jurisdiction-specific legal adjudication, trajectory generation, vehicle integration, and independent verification of the entire EBLC language. Do not add historical generalization-failure tables; retain their original records. Do not make new experiments or surveys prerequisites for starting the paper.\par
+
+\phantomsection\section*{7 Writing Sequence and Acceptance Checks}\addcontentsline{toc}{section}{7 Writing Sequence and Acceptance Checks}
+
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-4.000pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3300\linewidth-5.280pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.4200\linewidth-6.720pt\relax}@{}}
+\toprule
+\textbf{Step} & \textbf{Work} & \textbf{Output and check} \\
+\midrule\endfirsthead
+\toprule
+\textbf{Step} & \textbf{Work} & \textbf{Output and check} \\
+\midrule\endhead
+\bottomrule\endfoot
+A & Review this outline and central claims & Consistent P0/P1/P2 roles and main/supplement scope \\
+B & Draft Sections III–IV; create Figures 1–2 and Table I & One example connects specification, checks, and CNL \\
+C & Draft Sections V–VI and Tables II–V & Every value, denominator, seed, and setting matches source records \\
+D & Verify citations for II; draft I and VII–VIII & Separate prior work and new contributions; avoid claims beyond results \\
+E & Refine abstract, title, keywords, and supplement & Consistent numbers, terminology, and scope \\
+F & Typeset in the official IEEE Access template & Check bilingual correspondence, figures, tables, citations, and author details \\
+\end{longtable}
+\endgroup
+
+The reading order differs from the writing order. Fix Methods and Results first, then align the Introduction and Abstract. Adjust length so that the two central figures and five tables remain readable; do not invent a mandatory page count on behalf of the journal.\par
+
+The present deliverables are the Korean and English MD/PDF outlines for Step A. Steps B–F have not been executed, and the existing main.tex has not been replaced with a new manuscript.\par
+
+\phantomsection\section*{8 Checks Before Drafting}\addcontentsline{toc}{section}{8 Checks Before Drafting}
+
+\begin{itemize}
+\item Center the paper on the constraint model, formal verification, CNL augmentation, and controlled behavioral effects. Exclude testing functionality.
+\item Keep the numerical temporal profile distinct from the qualitative real-scene profile.
+\item Distinguish supplied rule information from independent action references.
+\item Preserve and explain the original verdict under the prospective 20-percentage-point criterion and the change in reporting emphasis.
+\item Confirm authors, affiliations, corresponding author, funding, permissions, and AI-use disclosure from facts rather than assumptions.
+\item Keep contributions, tables, numbers, and claim scope aligned across Korean and English.
+\end{itemize}
+
+\phantomsection\section*{9 Evidence for Writing}\addcontentsline{toc}{section}{9 Evidence for Writing}
+
+\begin{itemize}
+\item \href{\detokenize{../../../../../../projects/04-guardsynth-coc/paper/GUARDSYNTH_COC_METHODS_SETTINGS_PACKAGE_V01_KO.md}}{Detailed Korean package}: definitions, examples, settings, full results, and scope.
+\item \href{\detokenize{../temporal-experiment-closure-2026-09-29-001/REPORT_KO.md}}{Experiment closure report}: completed expansion and cost experiments.
+\item \href{\detokenize{../temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv}}{Full metrics CSV}: means, SDs, seeds, and CIs.
+\item \href{\detokenize{../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py}}{Temporal contract and verification code}: specification, Core/SMT, and CNL correspondence.
+\item \href{\detokenize{https://ieeeaccess.ieee.org/authors/preparing-your-article/}}{IEEE Access preparation guidance}: official source to recheck during submission preparation.
+\end{itemize}
+\end{document}

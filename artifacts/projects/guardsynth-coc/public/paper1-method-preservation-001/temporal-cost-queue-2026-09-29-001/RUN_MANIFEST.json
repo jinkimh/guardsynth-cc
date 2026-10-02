@@ -1,0 +1,15 @@
+{
+  "project_id": "guardsynth-coc",
+  "pid": 1147514,
+  "started_at_utc": "2026-09-29T19:24:14.908867+00:00",
+  "upstream_run": "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-learning-2026-09-29-001",
+  "input_hashes": {
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/run_temporal_cost_queue.py": "2bebe6166d4aeb06bc5937279339c73c116ef799ab99530bde5265ba63f8869e",
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/train_temporal_cost.py": "c5eb3eea2242f5d38eb5b6d1b352ebcb8d0839366af6c4365919b7b219015afd",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-cost-protocol-2026-09-29-001/RUN_MANIFEST.json": "b8aeaf6adde756cd1564d0735fde1245bbc424c81576c99e32309c8f5ff3ce28"
+  },
+  "output_hashes": {
+    "RESULT.json": "b38d20579d5d9909d481010fc6e865be105deaeb06db268bcf468c543eb15626",
+    "parent_binding.json": "5ec448145f21710111f0db3a08d503469789cec10d26b6c59a86837bfbf4ea1a"
+  }
+}

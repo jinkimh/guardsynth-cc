@@ -1,0 +1,67 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>#18 · 실제 장면의 행동 제약 문장 검토</title>
+<style>
+body{font:18px system-ui;line-height:1.7;color:#182b3e;max-width:1500px;margin:25px auto;padding:0 20px}h1{font-size:28px}h2{font-size:23px}h3{font-size:20px}.generated{white-space:pre-line;padding:22px;background:#eaf4ff;border-left:5px solid #2867a5}.note{background:#fff3d8;padding:12px}.viewer{position:relative;line-height:0}.viewer img{width:100%;display:block}.viewer svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}button,select,input,textarea{font:inherit;padding:8px;max-width:98%}button{cursor:pointer}label{display:block;margin:12px 0}textarea{width:95%;min-height:85px}fieldset,details{padding:15px;border:1px solid #bbc8d4;border-radius:7px;margin:18px 0}.basis{background:#f4f6f8;padding:14px}.sentence{font-size:20px;line-height:1.9}dialog{width:96vw;max-width:1900px;max-height:96vh}.scroll{overflow:auto;max-height:83vh}dialog img{width:100%}dialog img.native{width:auto;max-width:none}#status{min-height:30px;color:#245c29}pre{white-space:pre-wrap;overflow-wrap:anywhere}
+</style>
+<h1>#18 · 이 장면에서 생성된 행동 제약 문장</h1>
+<p>아래 문장은 <b>이 장면의 실제 검토값과 명세를 함께 입력해 생성한 결과</b>입니다. 이미 마친 행동 판단을 다시 묻지 않습니다. 기존 근거를 문장이 정확히 전달하는지 확인합니다.</p>
+<div id="generatedText" class="generated"></div>
+<p class="note">앞의 두 문장은 기존 검토 결과, 세 번째는 그 근거와 과제 규칙에서 도출한 현재 행동, 마지막은 이후 다시 판단할 조건입니다. 마지막 문장은 미래에 이미 위험이 사라졌다는 뜻이 아닙니다. 진입/보류만 다루며 제동 세기·정지거리·실차 안전을 보증하지 않습니다.</p>
+<h2>장면 확인</h2>
+<p>노란 선은 검토에서 지정한 진입 영역, 파란 점은 검토자가 표시한 대상 위치입니다. 표시는 판단 시점에만 나타납니다.</p>
+<div class="toolbar"><button id="prev">이전 프레임</button><input id="position" type="range" min="0" step="1" aria-label="과거 프레임 선택"><button id="next">다음 프레임</button><button id="atEvent">판단 시점</button><span id="clock"></span></div>
+<div class="viewer"><img id="frame" alt="장면 18 원본 영상 프레임"><svg id="zone" viewBox="0 0 1000 562.5"></svg></div>
+<button id="zoom">이미지 확대</button>
+<h2>생성 문장 4개 확인</h2>
+<p>각 문장 아래의 기존 근거와 대조하세요. 그대로 전달하면 <b>근거를 정확히 반영함</b>, 빠뜨리거나 과장·왜곡하면 <b>누락·과장·왜곡 있음</b>, 이해하거나 판단하기 어려우면 <b>판단 불가</b>를 선택합니다. 근거 내용에 동의하는지를 새로 묻는 질문이 아닙니다.</p>
+<div id="items"></div>
+<form id="reviewForm"><fieldset><legend>검토자</legend>
+<label>이름/ID (필수) <input id="reviewer_id"></label>
+<label>이 장면의 근거 작성·수용이나 문장 생성기 작성에 참여했나요? (필수)
+<select id="independence"><option value="">선택하세요</option><option value="INDEPENDENT">참여하지 않음</option><option value="EXPOSED_OR_INVOLVED">참여함</option><option value="UNCERTAIN">확실하지 않음</option></select></label>
+<p>참여자의 검토도 기록하지만 독립 검토와 구분합니다. 기존 행동 검토에 응답했다는 사실만으로 여기서 참여자로 분류하지는 않습니다.</p>
+</fieldset><label>판단 근거 (필수) · 문제가 없어도 판단 이유를 짧게 적어 주세요. 문제가 있다면 문장 번호와 이유를 적어 주세요. <textarea id="reason"></textarea></label>
+<button id="export" type="button">검토 답변 JSON 저장</button><button id="draft" type="button">미완성 초안 저장</button>
+<label>저장한 JSON 불러오기 <input id="import" type="file" accept=".json,application/json"></label></form>
+<p id="status" role="status" aria-live="polite"></p>
+<dialog id="zoomDialog"><button id="closeZoom">닫기 · 답변으로 돌아가기</button><button id="nativeZoom">원본 크기 / 화면 맞춤</button><div class="scroll"><img id="zoomImage" alt="장면 원본 확대"></div></dialog>
+<script id="packet" type="application/json">__SCENE_CNL_PACKET__</script>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),P=JSON.parse($('packet').textContent),key='guardsynth-scene-cnl:'+P.packet_sha256;
+let index=P.frames.length-1,state={reviewer_id:'',independence:'',reason:'',answers:Object.fromEntries(P.clause_ids.map(id=>[id,'']))};
+$('generatedText').textContent=P.generated_text_ko;
+function status(s){$('status').textContent=s}
+function record(){return {review_version:P.review_version,packet_sha256:P.packet_sha256,kind:P.kind,reviewed_at:new Date().toISOString(),...state}}
+function collect(){for(const id of ['reviewer_id','independence','reason'])state[id]=$(id).value;for(const id of P.clause_ids)state.answers[id]=$('answer_'+id).value}
+function missingFields(){return [['reviewer_id','검토자 이름/ID'],['independence','참여 여부'],...P.clause_ids.map((id,i)=>['answer_'+id,(i+1)+'번 문장 판단']),['reason','판단 근거']].filter(([id])=>{const missing=!$(id).value.trim();$(id).setAttribute('aria-invalid',String(missing));return missing})}
+function save(){try{localStorage.setItem(key,JSON.stringify(record()));status('초안 자동 저장됨. 완료 후 JSON을 저장해 주세요.')}catch{status('브라우저 저장 실패: 초안 JSON을 저장해 주세요.')}}
+function changed(){collect();save();missingFields()}
+function fill(){for(const id of ['reviewer_id','independence','reason'])$(id).value=state[id];for(const id of P.clause_ids)$('answer_'+id).value=state.answers[id]}
+function restore(r){
+ if(r.review_version!==P.review_version||r.kind!==P.kind||r.packet_sha256!==P.packet_sha256)throw Error('다른 버전이나 다른 검토의 답변입니다.');
+ if(!['reviewer_id','independence','reason'].every(k=>typeof r[k]==='string')||!r.answers||Object.keys(r.answers).sort().join('|')!==[...P.clause_ids].sort().join('|'))throw Error('답변 형식 오류');
+ if(!['','INDEPENDENT','EXPOSED_OR_INVOLVED','UNCERTAIN'].includes(r.independence)||Object.values(r.answers).some(v=>!['','SUPPORTED','UNSUPPORTED','UNJUDGEABLE'].includes(v)))throw Error('선택값 오류');
+ state={reviewer_id:r.reviewer_id,independence:r.independence,reason:r.reason,answers:{...r.answers}};fill();
+}
+for(const [i,c]of P.items.entries()){
+ const box=document.createElement('fieldset'),legend=document.createElement('legend'),text=document.createElement('p'),basis=document.createElement('div'),heading=document.createElement('h3'),list=document.createElement('ul'),question=document.createElement('p'),select=document.createElement('select');
+ legend.textContent=(i+1)+'. '+c.title;text.className='sentence';text.textContent=c.text;basis.className='basis';heading.textContent='이 문장의 근거';
+ for(const b of c.evidence){const li=document.createElement('li');li.textContent=b;list.appendChild(li)}basis.append(heading,list);question.textContent=c.question;
+ select.id='answer_'+c.id;select.setAttribute('aria-label',(i+1)+'번 문장의 근거 반영 여부');
+ for(const [v,t]of [['','선택하세요'],['SUPPORTED','근거를 정확히 반영함'],['UNSUPPORTED','누락·과장·왜곡 있음'],['UNJUDGEABLE','판단 불가']]){const o=document.createElement('option');o.value=v;o.textContent=t;select.appendChild(o)}
+ select.onchange=changed;box.append(legend,text,basis,question,select);$('items').appendChild(box);
+}
+function draw(){const f=P.frames[index];$('frame').src=P.images[index];$('position').value=index;$('clock').textContent=(f.timestamp_us/1e6).toFixed(6)+'초'+(f.is_t0?' · 판단 시점':' · 과거');$('zone').replaceChildren();
+ if(f.is_t0){const e=document.createElementNS('http://www.w3.org/2000/svg','polygon');e.setAttribute('points',P.zone_polygon.map(p=>[p[0]*1000,p[1]*562.5].join(',')).join(' '));e.setAttribute('fill','#ffcc001a');e.setAttribute('stroke','#ffcc00');e.setAttribute('stroke-width','2');$('zone').appendChild(e);
+ const dot=document.createElementNS('http://www.w3.org/2000/svg','circle');dot.setAttribute('cx',P.target_point[0]*1000);dot.setAttribute('cy',P.target_point[1]*562.5);dot.setAttribute('r','5');dot.setAttribute('fill','#29aaff');$('zone').appendChild(dot)}
+ $('prev').disabled=index===0;$('next').disabled=index===P.frames.length-1;
+}
+$('position').max=P.frames.length-1;$('position').oninput=e=>{index=Number(e.target.value);draw()};$('prev').onclick=()=>{index=Math.max(0,index-1);draw()};$('next').onclick=()=>{index=Math.min(P.frames.length-1,index+1);draw()};$('atEvent').onclick=()=>{index=P.frames.length-1;draw()};
+$('zoom').onclick=()=>{$('zoomImage').src=P.images[index];$('zoomDialog').showModal()};$('frame').onclick=$('zoom').onclick;$('closeZoom').onclick=()=>$('zoomDialog').close();$('nativeZoom').onclick=()=>$('zoomImage').classList.toggle('native');
+for(const id of ['reviewer_id','independence','reason']){$(id).oninput=changed;$(id).onchange=changed}$('reviewForm').onsubmit=e=>e.preventDefault();
+function download(draft){collect();save();const missing=missingFields();if(!draft&&missing.length){status('입력이 필요한 항목: '+missing.map(([,label])=>label).join(', ')+'. 해당 항목을 입력한 뒤 다시 저장해 주세요.');$(missing[0][0]).focus();return}
+ const u=URL.createObjectURL(new Blob([JSON.stringify(record(),null,2)],{type:'application/json'})),a=document.createElement('a');a.href=u;a.download=draft?'scene18_scene_cnl_draft.json':'scene18_scene_cnl_review.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);status('JSON 저장을 요청했습니다. 기존 제출 폴더에 놓아 주세요.');}
+$('export').onclick=()=>download(false);$('draft').onclick=()=>download(true);$('import').onchange=async e=>{try{if(!e.target.files[0])return;restore(JSON.parse(await e.target.files[0].text()));save()}catch(err){status(err.message)}};
+try{const s=localStorage.getItem(key);if(s){restore(JSON.parse(s));status('기존 초안을 복원했습니다.')}}catch{status('초안 복원 실패. 저장한 JSON을 불러올 수 있습니다.')}fill();draw();
+</script></html>

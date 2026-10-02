@@ -1,0 +1,23 @@
+{
+  "arm": "P0",
+  "seed": 42,
+  "history": [
+    {
+      "epoch": 1,
+      "mean_loss": 0.7067771497337768,
+      "optimizer_steps": 24
+    },
+    {
+      "epoch": 2,
+      "mean_loss": 0.26178446943716455,
+      "optimizer_steps": 24
+    },
+    {
+      "epoch": 3,
+      "mean_loss": 0.24206772124549994,
+      "optimizer_steps": 24
+    }
+  ],
+  "updates": 72,
+  "elapsed_seconds": 152.78065994009376
+}

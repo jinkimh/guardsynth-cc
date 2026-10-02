@@ -1,0 +1,10 @@
+\begin{tikzpicture}[
+ box/.style={draw=revisionblue,rounded corners,align=center,text width=.80\columnwidth,minimum height=7mm,font=\scriptsize,text=revisionblue},
+ flow/.style={-{Latex[length=1.7mm]},draw=revisionblue},node distance=4mm]
+\node[box] (raw) {기록 영상ㆍ자차 궤적};
+\node[box,below=of raw] (act) {궤적에서 행동 분류와 대표 시점 계산};
+\node[box,below=of act] (gen) {영상ㆍ행동 정보를 사용한 사후 CoC 생성};
+\node[box,below=of gen] (store) {저장된 문장ㆍ품질 표시ㆍ사건 시각};
+\node[box,below=of store] (check) {본 연구: 연속 문장 검사 / 별도 속도 반응 분석};
+\draw[flow] (raw)--(act);\draw[flow] (act)--(gen);\draw[flow] (gen)--(store);\draw[flow] (store)--(check);
+\end{tikzpicture}

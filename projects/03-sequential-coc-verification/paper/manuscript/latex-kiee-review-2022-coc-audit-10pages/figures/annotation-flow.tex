@@ -1,0 +1,22 @@
+\begin{tikzpicture}[
+  node distance=5mm,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=8mm,
+    text width=0.88\columnwidth, font=\footnotesize},
+  obs/.style={box, fill=observed!10},
+  der/.style={box, fill=derived!10},
+  ass/.style={box, fill=assumed!10},
+  input/.style={box, fill=black!3},
+  flow/.style={-{Latex[length=2mm]}, thick}
+]
+\node[obs] (a) {Driving video + recorded ego trajectory};
+\node[der, below=of a] (b) {Action type calculated from the recorded trajectory};
+\node[der, below=of b] (c) {Representative frames selected near action changes};
+\node[input, below=of c] (d) {VLM/LLM inputs: recorded video and trajectory + calculated action hints};
+\node[der, below=of d] (e) {CoC explanation generated after the drive + quality score};
+\node[der, below=of e] (f) {This work: extracted action, accepted checking input, response calculated from ego motion};
+\draw[flow] (a) -- (b);
+\draw[flow] (b) -- (c);
+\draw[flow] (c) -- (d);
+\draw[flow] (d) -- (e);
+\draw[flow] (e) -- (f);
+\end{tikzpicture}

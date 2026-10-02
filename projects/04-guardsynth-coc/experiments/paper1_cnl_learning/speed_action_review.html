@@ -1,0 +1,36 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>속도 행동 개발 검토 준비</title>
+<style>body{font:17px sans-serif;max-width:1050px;margin:24px auto;padding:16px}img{max-width:100%}button,select,textarea{font:inherit;margin:6px;padding:8px}textarea{width:95%}.notice{background:#fff0cc;padding:16px}label{display:block;margin:12px 0}</style>
+<h1>속도 행동 개발 검토 준비</h1><p class="notice">배정·배포 승인 전 미리보기입니다. 여기서 저장한 내용은 임시 초안이며 제출·검토 완료로 접수되지 않습니다.</p>
+<p id="question"></p><p id="instructions"></p><p id="progress"></p>
+<button id="previous">이전 장면</button><button id="next">다음 장면</button><h2 id="scene"></h2>
+<img id="frame" alt="현재 선택한 과거 프레임"><p id="time"></p><div id="frames"></div>
+<div id="actions"></div><label>영상에서 보이는 판단 근거<textarea id="reason" rows="3"></textarea></label>
+<p id="message" role="status"></p><button id="save">초안 JSON 저장</button><label>초안 복원<input id="restore" type="file" accept="application/json"></label>
+<script id="packet" type="application/json">__PACKET__</script>
+<script>
+'use strict';
+const packet=JSON.parse(document.getElementById('packet').textContent);
+const choices=new Set(Object.keys(packet.assessment_choices));
+function emptyDraft(){return {status:'DRAFT_NOT_SUBMITTED',packet_sha256:packet.packet_sha256,reviewer_id:null,reviewed_at:null,
+ records:packet.scenes.map(s=>({sample_id:s.sample_id,action_assessments:Object.fromEntries(Object.keys(packet.actions).map(a=>[a,null])),reason:''}))};}
+function validateDraft(d){
+ if(!d||d.status!=='DRAFT_NOT_SUBMITTED'||d.packet_sha256!==packet.packet_sha256||d.reviewer_id!==null||d.reviewed_at!==null||!Array.isArray(d.records)||d.records.length!==packet.scenes.length)throw Error('다른 패킷 또는 제출 형식입니다.');
+ d.records.forEach((r,i)=>{if(r.sample_id!==packet.scenes[i].sample_id||typeof r.reason!=='string'||!r.action_assessments||Object.keys(r.action_assessments).sort().join()!==Object.keys(packet.actions).sort().join()||Object.values(r.action_assessments).some(v=>v!==null&&!choices.has(v)))throw Error('장면 또는 응답 형식이 다릅니다.');});
+ return d;
+}
+function completed(d){return d.records.filter(r=>Object.values(r.action_assessments).every(v=>choices.has(v))&&r.reason.trim()).length;}
+let draft=emptyDraft(),index=0;const storageKey='speed-action-preview-'+packet.packet_sha256;
+const el=id=>document.getElementById(id);
+function persist(){try{localStorage.setItem(storageKey,JSON.stringify(draft));el('message').textContent='이 브라우저에 초안 저장됨';}catch(e){el('message').textContent='브라우저 저장 불가: JSON 저장을 이용하세요.';}el('progress').textContent=`작성된 초안 ${completed(draft)}/${draft.records.length} (접수 0)`;}
+function showFrame(i){const s=packet.scenes[index],f=s.frames[i];el('frame').src=f.data_url;el('time').textContent=`프레임 ${i+1}/${s.frames.length}, 판단 시점 대비 ${((f.timestamp_us-s.event_timestamp_us)/1000000).toFixed(3)}초`;}
+function render(){const s=packet.scenes[index],r=draft.records[index];el('scene').textContent=`장면 ${index+1}/${packet.scenes.length} · ${s.sample_id}`;
+ el('frames').replaceChildren();s.frames.forEach((f,i)=>{const b=document.createElement('button');b.textContent=String(i+1);b.onclick=()=>showFrame(i);el('frames').append(b);});showFrame(s.frames.length-1);
+ el('actions').replaceChildren();Object.entries(packet.actions).forEach(([a,text])=>{const label=document.createElement('label');label.textContent=text;const select=document.createElement('select');select.add(new Option('미응답',''));Object.entries(packet.assessment_choices).forEach(([v,t])=>select.add(new Option(t,v)));select.value=r.action_assessments[a]||'';select.onchange=()=>{r.action_assessments[a]=select.value||null;persist();};label.append(select);el('actions').append(label);});
+ el('reason').value=r.reason;el('reason').oninput=()=>{r.reason=el('reason').value;persist();};el('previous').disabled=index===0;el('next').disabled=index===packet.scenes.length-1;el('progress').textContent=`작성된 초안 ${completed(draft)}/${draft.records.length} (접수 0)`;}
+el('question').textContent=packet.question_ko;el('instructions').textContent=packet.instructions_ko;
+try{const saved=localStorage.getItem(storageKey);if(saved)draft=validateDraft(JSON.parse(saved));}catch(e){el('message').textContent='이전 저장 초안을 읽지 못했습니다. 새 빈 초안으로 시작합니다.';}
+el('previous').onclick=()=>{index--;render();};el('next').onclick=()=>{index++;render();};
+el('save').onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(draft,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='speed_action_draft.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+el('restore').onchange=async e=>{try{draft=validateDraft(JSON.parse(await e.target.files[0].text()));persist();render();}catch(error){el('message').textContent='복원 거부: '+error.message;}};
+render();
+</script></html>

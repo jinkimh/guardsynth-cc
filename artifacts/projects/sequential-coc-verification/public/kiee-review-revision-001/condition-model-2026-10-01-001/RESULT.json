@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETED",
+  "case_count": 144,
+  "verdict_matches": 144,
+  "first_violation_matches": 72,
+  "positive_count": 72,
+  "issue_location_matches": 108,
+  "issue_obligation_matches": 108,
+  "issue_reason_matches": 108,
+  "issue_count": 108,
+  "evaluation_kind": "POST_BASELINE_DEVELOPMENT_SAME_CASE_RETEST",
+  "legacy_implementation_changed": false
+}

@@ -1,0 +1,13 @@
+{
+  "all_27_rows_unchanged": true,
+  "scene_classes": {
+    "일치": 2,
+    "불일치": 7,
+    "미상": 18
+  },
+  "main_table_label": "tab:trajectory-cases",
+  "response_item": "R3-11",
+  "detail_source": "response-trajectory-details.tex",
+  "reason_counts_may_overlap": true,
+  "trajectory_not_natural_contradiction_or_safety_gold": true
+}

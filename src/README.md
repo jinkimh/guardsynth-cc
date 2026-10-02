@@ -1,10 +1,8 @@
-# Public source packages
+# Source compatibility namespace
 
-`src/` contains reusable, publishable library code. Experiment orchestration,
-result writing, and command-line argument parsing do not belong here.
+This root contains import shims only. Canonical implementation is owned by:
 
-- `guard_synth_eblc/`: schema-driven EBLC representations, binding,
-  operational semantics, runtime/bounded targets, BCV mutations, and adapters
+- `projects/04-guardsynth-coc/src/guard_synth/`
+- `platforms/eblc-bcv/src/guard_synth_eblc/`
 
-Run user-facing workflows through the purpose-named modules under
-`cli/pipelines/`.
+Do not add domain logic here. The shims preserve pre-v3 imports during migration.

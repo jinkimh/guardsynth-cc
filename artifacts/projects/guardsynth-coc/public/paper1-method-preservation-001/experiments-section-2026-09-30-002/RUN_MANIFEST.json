@@ -1,0 +1,84 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "experiments-section-2026-09-30-002",
+  "sources": [
+    {
+      "language": "ko",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_EXPERIMENTS_V01_KO.md",
+      "source_sha256": "4d7b3ba6c4da936bec811d338f0c90b97f60ab1f536c85330c2c9664766d2949",
+      "pdf": "ieee-access-experiments-v01-ko.pdf",
+      "figures": 4,
+      "code_boxes": 0,
+      "tables": 7,
+      "links": [
+        {
+          "label": "동결된 확장 실험 설정",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-protocol-2026-09-29-001/protocol.json"
+        },
+        {
+          "label": "전체 주 지표와 시드별 수치",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv"
+        },
+        {
+          "label": "오류 주입 D4 원자료",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/diversity-analysis-2026-09-29-001/RESULT.json"
+        },
+        {
+          "label": "추가 행동 지표와 처리시간",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-secondary-metrics-2026-09-29-001/RESULT.json"
+        },
+        {
+          "label": "그림 8의 선택 기준과 실제 예측",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/experiments-section-2026-09-30-002/selected_cases.json"
+        },
+        {
+          "label": "SMT 재실행·UNSAT 사례 검토",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/experiments-section-2026-09-30-002/unsat_review.json"
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_EXPERIMENTS_V01_EN.md",
+      "source_sha256": "f3b4c93938ae3fb59a53bdbdc7a1bdd7dd15fef90f25ab9e15bf9fe1c3d69b80",
+      "pdf": "ieee-access-experiments-v01-en.pdf",
+      "figures": 4,
+      "code_boxes": 0,
+      "tables": 7,
+      "links": [
+        {
+          "label": "Frozen expanded-experiment protocol",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-expansion-protocol-2026-09-29-001/protocol.json"
+        },
+        {
+          "label": "All primary metrics and individual seeds",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv"
+        },
+        {
+          "label": "Injected-error D4 records",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-temporal-diversity-001/diversity-analysis-2026-09-29-001/RESULT.json"
+        },
+        {
+          "label": "Additional behavioral metrics and timings",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-secondary-metrics-2026-09-29-001/RESULT.json"
+        },
+        {
+          "label": "Figure 8 selection rule and recorded predictions",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/experiments-section-2026-09-30-002/selected_cases.json"
+        },
+        {
+          "label": "SMT replay and UNSAT case audit",
+          "target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/experiments-section-2026-09-30-002/unsat_review.json"
+        }
+      ]
+    }
+  ],
+  "purpose": "Bilingual experimental evaluation with original-prediction figures; no new training",
+  "builders": {
+    "projects/04-guardsynth-coc/paper/render_experiments.py": "7f2ec3a4f292008f195551c67334cc1d9538d4bea81f543f8783d0cd33512d7c",
+    "projects/04-guardsynth-coc/paper/render_experiments_figures.py": "4d8e2369a738823b2e82cbba91b4dad1d4a7ea6835a5af11c5c4ac0d5ac446dd",
+    "projects/04-guardsynth-coc/paper/verify_experiments_unsat.py": "55b78ca3958c97c8228d57253071172ff7a2e9083b046d3bea739eb62a5d1c10"
+  },
+  "reproduce": "Run render_experiments_figures.py, verify_experiments_unsat.py, then render_experiments.py before RESULT.json is finalized; generated TeX also compiles twice with XeLaTeX.",
+  "prior_snapshot": "experiments-section-2026-09-30-001; UNSAT interpretation added without overwriting prior outputs"
+}

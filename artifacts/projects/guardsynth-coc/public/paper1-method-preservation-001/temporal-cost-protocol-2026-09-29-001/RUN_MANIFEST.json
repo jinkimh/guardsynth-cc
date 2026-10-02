@@ -1,0 +1,46 @@
+{
+  "project_id": "guardsynth-coc",
+  "input_hashes": {
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/train_temporal_cost.py": "c5eb3eea2242f5d38eb5b6d1b352ebcb8d0839366af6c4365919b7b219015afd",
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/train_temporal_expansion.py": "5fa91a1ab48042dd9a7fbf92c7d20957672bb1bb99cc8d16b2efd1854c48ce04",
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_training_data.py": "2befe142846f90ffa3d8512942bd7bdf7b5779ba53686232aa4ec3cba03a3c37",
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py": "9882832b2a56468d5e156c1c98fac22eef0edb278347a01a0b3e2e85a621c763",
+    "projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation_config.json": "44bd1db3726357523b5af8744bf8ba1e21b8f9bd89e481d99791de648567767f",
+    "artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/temporal-training-data-2026-09-29-001/RUN_MANIFEST.json": "3813e97d0dfa5312dbff03c2c4eec0e9f9715d563a80f74fcc85ff87dae88d58",
+    "projects/01-safety-constrained-coc/experiments/vlm_guard_learning/temporal_guard_world.py": "ff6aff71aeee645fd05fef6fda4972f7545288d5c264560507c79040c8efc16d",
+    "projects/01-safety-constrained-coc/experiments/vlm_guard_learning/train_qwen_temporal_guard_lora.py": "d8f30afb45c6caeb1f937a01e16ab8e32030ae72a89f97effebb2a94b400c207",
+    "projects/01-safety-constrained-coc/experiments/vlm_guard_learning/train_qwen_guard_lora.py": "be287ff6027292e0bd3a6bb6a43c50aa992d84fb1e23074184fb55bd4208d75e"
+  },
+  "model_hashes": {
+    "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+    "tokenizer_config.json": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "tokenizer.json": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7",
+    "video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+    "chat_template.json": "6f8a6a55027e3da5160105556cda5dd69f6423f1c32645f6730d32de7773d0c4",
+    "config.json": "bec4b3d446efa05807365c9e1cec03ac590836879d02f3a6da879971154bdd3b",
+    "README.md": "5fc5be1ca9a3910399bd6239ee5086ab5d82a2a59c5d2b00e887a8835cc110e4",
+    ".gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+    "generation_config.json": "1e241830b48b397cb0900101421df5450baddc7adf01e5fc86b5615865f3bae4",
+    "model.safetensors": "7de1838c87a5349b016c26a1c3f7d2bc400a3d485f95ef39a7059ffd734977a0"
+  },
+  "output_hashes": {
+    "protocol.json": "e88519700109376e000982ed4bd8819eb771e70ef90926da14ce7fe653e750c0",
+    "training.json": "f1f0a105abb5380d292b511d87a35ee2596afbf7a27ce0c6fb6da783c6f3a766",
+    "canonical.jsonl": "1035c8429992eb942da176bb3e1db9a295fdafa6d00ad603a966744296fa627a",
+    "paraphrase.jsonl": "11973e0234c3c4d72058226453fb316c58ff626191c3d6ae2b24f231c2a28461",
+    "unseen_duration.jsonl": "8c1a91dbdd820838c0dc28aa8a7aa039b2a5a41ae879e9893d6cbce77abc31b9",
+    "RESULT.json": "76e8618710e008fe45461698d8b665aab2bfaff484c3614bd125e9566c89050b",
+    "images/clear_12000.png": "7fa021bc441fb87d1e5aaecb3623f5dc1a2a5bd49fb8b11612fec92f5fd9ce85",
+    "images/clear_12100.png": "16d39666ebbadb3644bc181187d1c03f20c723014b9462eddced901fdb3f9201",
+    "images/clear_12200.png": "0b250495405590132b60558691367ec300011f6b697c1a92acf45834c889e799",
+    "images/clear_12300.png": "8070af91174bed0e59997c806e5c8f900b83900dcc00f1d362024cb040ac6668",
+    "images/clear_12400.png": "163a03995de58ed9a6b7f46a2c6d05560caca56a448f75ebb24c3c9d5f41b7a4",
+    "images/clear_12500.png": "b5511a7a74905e4fb7dc6b8771be8fa22173b09950b6df0dfd9e0c1ca57b5b75",
+    "images/clear_12600.png": "4535d22a3bbb39cafc664893e7dd910c01f8c9970129ea6add252ca8936bca7f",
+    "images/clear_12700.png": "32fc425eb7e05bda1982949c502207b41cfded3b2a5d1408244f2b1b8199acec",
+    "images/clear_12800.png": "13ce47b9d447ef242236fcdbc458f45713c63be8f1b3f536464d847d7abd70ee",
+    "images/clear_12900.png": "7eec354d5b2bbf7321e94bed90ea036d9739ba58edd3d9eb19e0215bc69771f2"
+  }
+}

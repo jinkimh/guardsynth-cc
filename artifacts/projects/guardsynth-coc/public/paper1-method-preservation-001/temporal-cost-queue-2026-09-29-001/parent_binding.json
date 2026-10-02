@@ -1,0 +1,17 @@
+{
+  "parent_manifest_sha256": "be0f71a01c106d6c8504dc798ae253f5d552e8cb1127bff25b004531967e03db",
+  "adapters": {
+    "42": {
+      "adapter_config.json": "c73bb3ca783da3495bad9a061d34d6c8c4e59eb644628e65326db12df7b70009",
+      "adapter_model.safetensors": "7f2bc9e82c704f2ad54f53e61f2ab313819dda9274cab73387e48219ca571448"
+    },
+    "17": {
+      "adapter_config.json": "c73bb3ca783da3495bad9a061d34d6c8c4e59eb644628e65326db12df7b70009",
+      "adapter_model.safetensors": "222f797dc52b2bfee616c487b6afa2c3021cfbf4882c19ae3a2e257b9d97826d"
+    },
+    "123": {
+      "adapter_config.json": "c73bb3ca783da3495bad9a061d34d6c8c4e59eb644628e65326db12df7b70009",
+      "adapter_model.safetensors": "6edb184852167696fcfbad61aa3cabcb6e58913f632ad28dfb6aa432eb1d666d"
+    }
+  }
+}

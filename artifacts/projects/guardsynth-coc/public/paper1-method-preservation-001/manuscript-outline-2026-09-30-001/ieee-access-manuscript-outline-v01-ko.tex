@@ -1,0 +1,254 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=20mm,headheight=16pt]{geometry}
+\usepackage{fontspec,kotex,booktabs,longtable,array,xcolor,hyperref,fancyhdr}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\setmainhangulfont{Noto Sans CJK KR}
+\setmonohangulfont{Noto Sans CJK KR}
+\definecolor{navy}{HTML}{173E59}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,
+pdftitle={IEEE Access 논문 구성안과 집필 계획},
+pdfsubject={한글 논문 개요와 집필 계획},pdfauthor={GuardSynth project}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\emergencystretch}{4em}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\renewcommand{\contentsname}{목차}
+\setcounter{tocdepth}{1}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small GuardSynth CoC}
+\fancyhead[R]{\small 논문 개요 · 한글}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\raggedbottom
+\begin{document}
+\begin{titlepage}
+\vspace*{20mm}
+{\color{navy}\Large GuardSynth CoC\par}
+\vspace{10mm}
+{\huge\bfseries IEEE Access\\[4mm]논문 구성안과 집필 계획\par}
+\vspace{12mm}
+{\Large 정형 명세·검증과 CoC 보강\par}
+\vspace{6mm}
+검토용 개요 · 한글판\par
+v0.1 · 2026-09-30\par
+\vspace{12mm}
+\textbf{읽는 순서}\par
+중심 주장 → 본문 8개 장 → 핵심 결과 →\par
+그림·표 구성 → 범위 구분 → 집필 순서\par
+\vfill
+이 문서는 본문 집필 전에 검토할 개략 구성안입니다.\par
+테스트 기능은 제외하며 VLM 학습·성능 평가는 유지합니다.\par
+영문 개요와 목차·수치·주장 범위를 맞췄습니다.\par
+\end{titlepage}
+\tableofcontents
+\clearpage
+\section*{개요 안내}
+
+
+GuardSynth CoC · 검토용 개요 v0.1 · 2026-09-30\par
+
+project\_\allowbreak{}id: {\ttfamily\small guardsynth-coc}\par
+
+이 문서는 \href{\detokenize{../../../../../../projects/04-guardsynth-coc/paper/GUARDSYNTH_COC_METHODS_SETTINGS_PACKAGE_V01_KO.md}}{상세 근거 패키지}를 논문의 이야기와 목차로 압축한 집필 구성안이다. 본문 초안이나 새로운 실험 계획이 아니다. \href{\detokenize{../../../../../../projects/04-guardsynth-coc/paper/IEEE_ACCESS_MANUSCRIPT_OUTLINE_V01_EN.md}}{영문판}과 장 구성·수치·주장 범위를 맞춘다. 기존 main.tex와 완료된 실험·PDF는 변경하지 않는다.\par
+
+범위 수정: 이전 패키지의 테스트 활용 구상은 이번 논문에서 제외한다. 이 개요는 EBLC 정형 명세·검증과 CNL 기반 CoC 보강에 집중한다. 테스트 생성·행동 테스트·실행 중 모니터링은 포함하지 않는다. VLM 학습 효과를 확인하는 성능 평가는 유지한다.\par
+
+\phantomsection\section*{1 논문의 중심과 제안 제목}\addcontentsline{toc}{section}{1 논문의 중심과 제안 제목}
+
+\textbf{중심 질문은 “CoC의 행동 제약을 어떻게 정형적으로 명세·검증하고, CNL로 바꾸어 학습에 활용할 것인가?”이다.}\par
+
+제안 제목은 “EBLC를 이용한 CoC 행동 제약의 정형 명세와 검증”이다. 영문은 “Formalizing and Verifying CoC Behavioral Constraints with EBLC”로 맞춘다. 이는 잠정 제목이며 저자와 투고 대상을 확정한 최종 제목은 아니다.\par
+
+논문은 서로 다른 두 종류의 근거를 연결한다. 첫째, 제약을 명시적인 논리식으로 표현하고 제한된 모델에서 일관성과 지정 속성을 검증할 수 있다. 둘째, 그 명세에서 생성한 CNL을 CoC에 추가한 조건은 통제 과제에서 CoC 단독 조건보다 행동 선택이 개선된다. 두 번째 결과를 “solver 검증 자체가 모델을 더 정확하게 만들었다”는 인과적 주장으로 바꾸지 않는다.\par
+
+권장 구성은 방법 중심 논문에 행동 실험을 결합하는 방식이다. 성능 수치만 중심에 놓으면 제약 모델의 기여가 흐려지고, 언어 이론만 중심에 놓으면 현재의 제한된 프로파일보다 넓은 증명이 필요해진다. 두 극단 대신 제약 모델→정형 검증→CNL 전달→효과 평가를 하나의 흐름으로 제시한다.\par
+
+\phantomsection\section*{2 논리 흐름과 기여}\addcontentsline{toc}{section}{2 논리 흐름과 기여}
+
+\begingroup\small\ttfamily\setlength{\parskip}{1pt}
+\noindent\hspace*{0.0em}왜 설명만으로 부족한가\par
+\noindent\hspace*{1.0em}→ 제약의 범위·특성·요소를 정의\par
+\noindent\hspace*{1.0em}→ 적용 제약과 근거·가정을 연결\par
+\noindent\hspace*{1.0em}→ EBLC 정형 명세와 검증\par
+\noindent\hspace*{1.0em}→ CNL 생성 및 CoC 보강\par
+\noindent\hspace*{1.0em}→ 동일 예산 P0/P1/P2 평가\par\endgroup\par
+
+CoC는 Chain of Cognition, EBLC는 Evidence-Bound Lifecycle Contracts, CNL은 Controlled Natural Language로 처음 등장할 때 풀어 쓴다.\par
+
+기여는 네 가지로 한정한다.\par
+
+\begin{enumerate}
+\item CoC 행동 제약의 적용 범위·조건·대상·행동·시간·해제·불확실성·근거 요소를 제안한다.
+\item 제약을 구조화하고 Core/SMT에 연결하여 제한된 일관성과 지정 속성을 검증한다.
+\item 제한된 명세 필드에서 CNL을 생성하여 CoC 입력에 연결한다.
+\item 정형 검증의 범위와 제약 강화 학습 조건의 행동 효과를 구분하여 제시한다.
+\end{enumerate}
+
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-4.000pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3300\linewidth-5.280pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.4200\linewidth-6.720pt\relax}@{}}
+\toprule
+\textbf{연구 질문} & \textbf{본문에서 답할 내용} & \textbf{사용할 근거} \\
+\midrule\endfirsthead
+\toprule
+\textbf{연구 질문} & \textbf{본문에서 답할 내용} & \textbf{사용할 근거} \\
+\midrule\endhead
+\bottomrule\endfoot
+RQ1 무엇을 제약으로 명세하는가 & 관측·설명·제약·목표의 구별, 요소와 의미 & 요소 표, 시간 예제, 구현된 프로파일 \\
+RQ2 명세의 무엇을 검증하는가 & 유한 모델의 일관성·지정 속성·CNL 필드 대응 & Core/SMT 질의와 결과, 명세·CNL 예제 \\
+RQ3 제약 보강은 행동 선택에 도움이 되는가 & P0 대비 P1/P2, 최신 표현·시간 변화 & 동일 예산 학습·시험 결과 \\
+\end{longtable}
+\endgroup
+
+P0는 CoC 단독, P1은 우리의 기존 자연어 제약, P2는 우리의 EBLC 기반 CNL이다. P1/P2를 서로 다른 외부 방법으로 소개하지 않는다. 주 비교는 P0 대 P1/P2이고, P2 대 P1은 정형화 이후 효과 유지와 표현 차이를 보는 내부 비교다.\par
+
+\phantomsection\section*{3 제안하는 본문 8개 장}\addcontentsline{toc}{section}{3 제안하는 본문 8개 장}
+
+\subsection*{I Introduction 서론}
+
+첫 문단은 행동 이유를 설명하는 CoC와 행동을 제한하는 명시적 규칙의 차이를 제시한다. “보행자에게 양보한 뒤 진행한다”는 말만으로는 어느 영역을 언제까지 피하고 무엇으로 해제할지 명확하지 않다는 예를 든다.\par
+
+이어서 자연어를 폐기하는 것이 아니라, 명시적 제약 구조를 거쳐 다시 학습에 사용할 자연어로 전달한다는 접근을 설명한다. 마지막에 연구 질문·네 기여·본문 구성을 적는다. 현재 비교 결과는 한두 문장으로만 예고하고 결과 표는 뒤에 둔다. 상세 패키지 1–3절을 사용한다.\par
+
+\subsection*{II Related Work 관련 연구}
+
+CoC·VLM 행동 판단, 자연어 규칙 기반 행동 선택, 정형 명세·논리 검증, 제약 기반 학습의 네 축을 간결하게 비교한다. 기존 자연어 제약 연구와 이번 연구의 연결을 인용하고, 새 기여가 제약 요소의 명시화와 EBLC 검증·CNL 연결이라는 점을 밝힌다.\par
+
+외부 방법의 성능을 다른 데이터셋 수치로 직접 순위화하지 않는다. 출처가 확인되지 않은 논문·최초성·우월성 주장은 넣지 않는다. 패키지 19절은 분류의 출발점이지 완성된 문헌 조사나 참고문헌 목록이 아니다.\par
+
+\subsection*{III CoC Behavioral Constraint Model 제약 모델}
+
+관측, 행동 이유, 행동 제약, 최적화 목표를 먼저 구분한다. 대상과 영역, 활성화, 금지 행동, 유지·해제·재적용, 시간·단위, UNKNOWN·근거 충돌, source와 주장 범위를 정의한다.\par
+
+각 요소가 어떤 질문에 답하고 어떤 검사를 가능하게 하는지 표로 연결한다. 전체 모델링 제안과 이번에 실행한 시간 프로파일의 범위를 나란히 표시한다. 모든 교통 규칙의 완전한 분류나 범용 EBLC 언어 전체의 정당성 증명으로 확대하지 않는다. 패키지 4·6절을 사용한다.\par
+
+\subsection*{IV GuardSynth Method 방법}
+
+입력과 근거 역할→적용 제약 선택→EBLC→Core/SMT→CNL→CoC 결합을 순서대로 설명한다. 현재 합성 실험은 공급된 규칙을 사용하고, 실제 장면의 제약 선택은 근거와 사람 판단을 필요로 한다는 점을 명시한다. 자동 영상 추출기를 완성한 것처럼 쓰지 않는다.\par
+
+하나의 시간 예제를 끝까지 유지한다. 영역이 11.0초에 비워지고 대기가 0.5초 또는 1.5초일 때, 11.5초 진입 조건의 허용 여부가 바뀌는 과정을 계약·부등식·논리 질의·CNL·학습 target으로 보여준다. 식은 enters → entry\_\allowbreak{}ms ≥ clear\_\allowbreak{}ms + release\_\allowbreak{}clear\_\allowbreak{}ms다. 이 예제는 명세 의미의 설명용이며 행동 테스트 시스템이나 실제 모델 예측 사례가 아니다.\par
+
+SAT는 제한된 조건의 만족 가능성, 금지 조건과 진입을 함께 요구한 질의의 UNSAT는 그 조합의 논리적 불가능성임을 설명한다. 정성적 다중 의무 계약은 별도 프로파일로 짧게 소개하고 세부는 보충자료에 둔다. 패키지 5–9절 중 명세·검증·CNL 부분만 사용한다.\par
+
+\subsection*{V Experimental Setup 실험 설정}
+
+명세 검증의 설정·질의 범위와 행동 선택 학습의 설정을 구별한다. 행동 실험은 Qwen3-VL-2B-Instruct, 시드 42·17·123, 조건·시드당 180 updates의 동일 예산 비교다. 고유 합성 이미지 60장을 train/validation/test 40/10/10장으로 나누고 파생 행 960/240/240개와 구분한다.\par
+
+P1/P2에는 학습·평가 모두 제약을 제공하며, P0에는 계약 시간을 주지 않는다는 입력 차이를 공개한다. 독립 환경 참조, 계약쌍, 정확도·위반율·준수하면서 목표 달성·SD·조건부 cluster CI를 정의한다. 최종 checkpoint 정책과 평가 데이터 재사용도 적는다. 패키지 10–12절을 사용한다.\par
+
+\subsection*{VI Results 결과}
+
+RQ2에 대한 명세 검증 결과와 RQ3에 대한 행동 성능을 별도 소절로 둔다. 명세 결과는 실제 실행한 SAT/SMT 질의의 목적·예상 결과·관측 결과·가정으로 제시한다. 오류 주입과 행동 테스트를 별도 기여나 결과표로 추가하지 않는다. 행동 성능은 P0/P1/P2 주 비교를 먼저, 최신 paraphrase·unseen\_\allowbreak{}duration을 다음으로 제시한다.\par
+
+P2의 P1 대비 차이는 내부 비교로 해석한다. SD와 CI를 사용하되 정형적 비열등성이나 모든 조건의 우월성을 주장하지 않는다. 비용 학습은 짧게 언급하고 상세 결과·절충은 보충자료로 보낸다. 패키지 9절의 논리 검증 부분과 13–16절을 사용한다.\par
+
+\subsection*{VII Discussion 논의}
+
+첫째, 형식화가 자유 자연어를 대체하기보다 그 의미와 검사 경로를 명시한다는 점을 논의한다. 둘째, P0 대비 효과에는 명시적 규칙 정보 제공이 포함되므로 검증 자체의 인과 효과와 구별한다. 셋째, 합성 과제·소수 이미지·단일 전환·공유 source 오류·실제 도로 일반화 미확인을 정리한다.\par
+
+실제 \#18은 적용 설명 사례로만 연결한다. 사전 운영 기준 미충족과 이후 보고 초점 변경을 투명하게 적고, 범위가 다른 과거 일반화 실패 표를 새 본문에 추가하지는 않는다. 패키지 8·17–18절을 사용한다.\par
+
+\subsection*{VIII Conclusion 결론}
+
+“제약을 정형적으로 명세하고 제한된 논리 검증을 수행했으며, 그 명세에서 생성한 CNL을 제공하는 조건은 통제 과제에서 CoC 단독보다 좋은 행동 선택을 보였다”로 끝맺는다. 대규모 자동 추출·실차·궤적 검증은 미래 적용으로만 언급한다. 새로운 결과나 더 강한 보장을 결론에서 추가하지 않는다.\par
+
+\phantomsection\section*{4 초록과 핵심 결과의 배치}\addcontentsline{toc}{section}{4 초록과 핵심 결과의 배치}
+
+초록은 문제→접근→평가 조건→주 결과→의미와 범위의 다섯 부분으로 쓴다. 본문·그림·표가 확정된 뒤 마지막에 다듬는다. 전체 결과를 나열하지 않고 다음 test 수치를 중심에 둔다. 단위는 \%, 세 시드 평균이다.\par
+
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2200\linewidth-5.280pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2000\linewidth-4.800pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3000\linewidth-7.200pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.2800\linewidth-6.720pt\relax}@{}}
+\toprule
+\textbf{조건} & \textbf{정확도} & \textbf{제약 위반율} & \textbf{준수·목표 달성} \\
+\midrule\endfirsthead
+\toprule
+\textbf{조건} & \textbf{정확도} & \textbf{제약 위반율} & \textbf{준수·목표 달성} \\
+\midrule\endhead
+\bottomrule\endfoot
+P0 & 49.861 & 19.167 & 80.833 \\
+P1 & 96.806 & 1.389 & 98.611 \\
+P2 & 98.056 & 0.833 & 99.167 \\
+\end{longtable}
+\endgroup
+
+P2의 P0 대비 정확도 차이는 +48.194\%p, 위반 감소는 18.333\%p다. 이는 합성 과제에서의 정보 조건 비교이며 실제 도로 성능 차이가 아니다. 최종 본문 표에는 SD와 해당 CI를 함께 연결한다.\par
+
+명세 검증은 어떤 논리 속성을 어떤 가정 아래 확인했는지 설명하는 근거다. 검증 성공을 모델 향상의 원인이나 source 사실성의 증명으로 바꾸지 않는다. 이번 초록에는 테스트 기능이나 오류 주입 탐지율을 넣지 않는다.\par
+
+\phantomsection\section*{5 본문 그림과 표의 최소 구성}\addcontentsline{toc}{section}{5 본문 그림과 표의 최소 구성}
+
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-4.000pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3300\linewidth-5.280pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.4200\linewidth-6.720pt\relax}@{}}
+\toprule
+\textbf{번호} & \textbf{담을 내용} & \textbf{독자가 확인할 점} \\
+\midrule\endfirsthead
+\toprule
+\textbf{번호} & \textbf{담을 내용} & \textbf{독자가 확인할 점} \\
+\midrule\endhead
+\bottomrule\endfoot
+Figure 1 & 전체 방법과 사람·기계 역할 & 어디서 제약을 정하고 무엇을 검사하는가 \\
+Figure 2 & 시간 예제의 두 계약과 경계 & 같은 상황의 규칙이 달라지면 허용 행동이 어떻게 바뀌는가 \\
+Table I & 제약 요소·역할·실행 범위 & 제안 모델과 구현 범위의 대응 \\
+Table II & 데이터·조건·모델·예산 & 공정한 비교와 입력 차이 \\
+Table III & P0/P1/P2 주 결과·SD & 제약 제공 효과 \\
+Table IV & 명세의 검증 질의·예상/관측 판정·가정 & 무엇을 증명하거나 확인했고 무엇은 남는가 \\
+Table V & 최신 표현·시간 변화 결과 & 해당 통제 과제 내 강건성 \\
+\end{longtable}
+\endgroup
+
+이는 제작·배치 계획이다. 그림이 이미 완성되었다고 간주하지 않는다. 같은 수치를 표와 막대그래프로 중복 제시하지 않고, 효과가 있을 때만 시각 자료를 늘린다.\par
+
+\phantomsection\section*{6 본문 밖으로 옮길 내용}\addcontentsline{toc}{section}{6 본문 밖으로 옮길 내용}
+
+보충자료에는 정확한 schema/Core/SMT/CNL 대응, 전체 여섯 조건·세 시드·CI, 비용 학습과 정확도 절충, 추가 진행 지표·처리 시간, 실제 \#18의 조건부 근거 연결을 둔다. 본문에서 중요한 한계를 숨기지 않으면서 상세 구현과 수치의 분량을 줄인다.\par
+
+테스트 생성·행동 테스트·실행 중 모니터링·오류 주입 실험은 이번 논문과 보충자료의 기여로 다루지 않는다. Studio 제품 설계, Alpamayo 전체 학습, 국가별 법규 판정, 궤적 생성, 실차 통합, EBLC 언어 전체의 독립 검증도 제외한다. 과거 일반화 실패 표는 추가하지 않되 기록은 보존한다. 새로운 실험·설문을 집필 시작 조건으로 만들지 않는다.\par
+
+\phantomsection\section*{7 작성 순서와 완료 기준}\addcontentsline{toc}{section}{7 작성 순서와 완료 기준}
+
+\begingroup\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{\dimexpr 0.2500\linewidth-4.000pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.3300\linewidth-5.280pt\relax}>{\raggedright\arraybackslash}p{\dimexpr 0.4200\linewidth-6.720pt\relax}@{}}
+\toprule
+\textbf{순서} & \textbf{작업} & \textbf{산출물과 확인 기준} \\
+\midrule\endfirsthead
+\toprule
+\textbf{순서} & \textbf{작업} & \textbf{산출물과 확인 기준} \\
+\midrule\endhead
+\bottomrule\endfoot
+A & 이 개요의 중심 주장·목차 검토 & P0/P1/P2 역할과 본문·보충 범위에 모순 없음 \\
+B & III–IV장 작성, Figure 1–2·Table I 제작 & 하나의 예제가 명세·검사·CNL까지 이어짐 \\
+C & V–VI장과 Table II–V 작성 & 모든 수치·분모·시드·설정이 원자료와 일치 \\
+D & II장 인용 확인, I·VII–VIII장 작성 & 선행 연구와 새 기여를 구분하고 결과를 넘는 주장 없음 \\
+E & 초록·제목·키워드·보충자료 정리 & 본문과 초록의 수치·용어·범위 일치 \\
+F & 공식 IEEE Access 템플릿에 조판 & 영문·한글 내용 대응, 표·그림·인용·저자 정보 점검 \\
+\end{longtable}
+\endgroup
+
+원고를 읽는 순서와 쓰는 순서는 다르다. 방법과 결과를 먼저 확정하고 서론·초록을 그에 맞춘다. 분량은 핵심 두 그림과 다섯 표가 읽히는 수준으로 조정하며 저널이 요구하지 않은 임의 페이지 수를 필수 조건으로 만들지 않는다.\par
+
+이번 산출물은 A단계 검토용 개요의 한글·영문 MD/PDF다. B–F를 실행하거나 기존 main.tex를 새 원고로 교체한 것은 아니다.\par
+
+\phantomsection\section*{8 집필 전 확인할 사항}\addcontentsline{toc}{section}{8 집필 전 확인할 사항}
+
+\begin{itemize}
+\item 이 논문의 주장은 제약 모델·정형 검증·CNL 보강과 통제 과제의 행동 효과에 둔다. 테스트 기능은 제외한다.
+\item 합성 실험의 수치 시간 프로파일과 실제 장면의 정성적 프로파일을 혼동하지 않는다.
+\item 결과에서 제공된 규칙 정보와 독립 행동 정답을 구별한다.
+\item 사전 20\%p 운영 기준의 원판정과 보고 초점 변경은 보존·설명한다.
+\item 저자·소속·교신저자·지원·공개권한·AI 사용 공개 문구는 사실 확인 뒤 확정한다.
+\item 한글·영문은 동일한 기여·표·수치를 가지며 번역 중 주장 범위를 넓히지 않는다.
+\end{itemize}
+
+\phantomsection\section*{9 집필 근거}\addcontentsline{toc}{section}{9 집필 근거}
+
+\begin{itemize}
+\item \href{\detokenize{../../../../../../projects/04-guardsynth-coc/paper/GUARDSYNTH_COC_METHODS_SETTINGS_PACKAGE_V01_KO.md}}{상세 한글 패키지}: 정의·예제·설정·전체 수치와 범위.
+\item \href{\detokenize{../temporal-experiment-closure-2026-09-29-001/REPORT_KO.md}}{실험 마감 보고서}: 완료된 확장·비용 실험.
+\item \href{\detokenize{../temporal-experiment-closure-2026-09-29-001/all_primary_metrics.csv}}{전체 수치 CSV}: 평균·SD·시드·CI.
+\item \href{\detokenize{../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py}}{시간 계약과 검증 코드}: 명세·Core/SMT·CNL 대응의 근거.
+\item \href{\detokenize{https://ieeeaccess.ieee.org/authors/preparing-your-article/}}{IEEE Access 작성 안내}: 투고 준비 시 재확인할 공식 출처.
+\end{itemize}
+\end{document}

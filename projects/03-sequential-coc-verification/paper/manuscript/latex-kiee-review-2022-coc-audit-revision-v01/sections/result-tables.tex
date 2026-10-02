@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\color{revisionblue}
+\bitablecaption{고정된 144개 작성 시나리오의 최초 결과. 간격별 분모는 각각 48; 조건별 보완 재시험은 이 표에 포함하지 않는다.}{First-run results on all 144 authored cases, with 48 cases per gap. The condition-indexed retest is excluded.}
+\label{tab:first-results}
+\scriptsize
+\begin{tabularx}{\textwidth}{Yccccc}
+\toprule
+경로 (입력) & 세 분류 일치 & 최초 위반 & 간격0 & 간격2 & 간격6 \\
+\midrule
+기존 전체 이력 (작성 프레임 투영) & 96/144 & 54/72 & 36/48 & 30/48 & 30/48 \\
+현재 사건 (투영) & 72/144 & 36/72 & 24/48 & 24/48 & 24/48 \\
+이전 1개 (투영) & 84/144 & 42/72 & 36/48 & 24/48 & 24/48 \\
+이전 3개 (투영) & 90/144 & 48/72 & 36/48 & 30/48 & 24/48 \\
+이전 5개 (투영) & 90/144 & 48/72 & 36/48 & 30/48 & 24/48 \\
+별도 FSM (조건별 프레임) & 144/144 & 72/72 & 48/48 & 48/48 & 48/48 \\
+기존 자동 텍스트 & 36/144 & 0/72 & 12/48 & 12/48 & 12/48 \\
+기존 UPPAAL (투영) & 96/144 & 54/72 & 36/48 & 30/48 & 30/48 \\
+\bottomrule
+\end{tabularx}
+\end{table*}

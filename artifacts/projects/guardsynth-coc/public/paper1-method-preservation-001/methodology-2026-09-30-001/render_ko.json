@@ -1,0 +1,98 @@
+{
+  "project_id": "guardsynth-coc",
+  "status": "COMPILED_PENDING_LAYOUT_CHECK",
+  "source": "projects/04-guardsynth-coc/paper/IEEE_ACCESS_METHODOLOGY_V01_KO.md",
+  "source_sha256": "031f70aa572572af1f053a18b85f6cab9ea5e64280de640c35c3b0699966e53c",
+  "pdf": "ieee-access-methodology-v01-ko.pdf",
+  "sections": [
+    "A. 전체 접근과 입출력",
+    "B. EBLC를 이용한 정형 명세",
+    "C. 행동 제약의 정의와 추출",
+    "D. CoC와 연결된 EBLC 명세의 검증",
+    "E. CNL 생성과 CoC 보강",
+    "구현 및 예제 근거"
+  ],
+  "table_count": 3,
+  "links": [
+    {
+      "label": "S1",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_preservation.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py"
+    },
+    {
+      "label": "S2",
+      "source_target": "../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py",
+      "pdf_target": "../../../../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py"
+    },
+    {
+      "label": "S1",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_preservation.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py"
+    },
+    {
+      "label": "S3",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_training_data.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_training_data.py"
+    },
+    {
+      "label": "S2",
+      "source_target": "../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py",
+      "pdf_target": "../../../../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py"
+    },
+    {
+      "label": "S3",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_training_data.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_training_data.py"
+    },
+    {
+      "label": "S4",
+      "source_target": "../src/guard_synth/qualitative_scene_contract.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/src/guard_synth/qualitative_scene_contract.py"
+    },
+    {
+      "label": "S1",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_preservation.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py"
+    },
+    {
+      "label": "S5",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/methodology-2026-09-30-001/manuscript_examples.json",
+      "pdf_target": "manuscript_examples.json"
+    },
+    {
+      "label": "S1",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_preservation.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py"
+    },
+    {
+      "label": "S1 시간 계약·Core 변환·검증·CNL 생성",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_preservation.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_preservation.py"
+    },
+    {
+      "label": "S2 정성적 계약의 파서와 수명주기 의미",
+      "source_target": "../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py",
+      "pdf_target": "../../../../../../platforms/eblc-bcv/src/guard_synth_eblc/action_contract.py"
+    },
+    {
+      "label": "S3 학습 입력과 독립 참조 계산",
+      "source_target": "../experiments/paper1_cnl_learning/temporal_training_data.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/experiments/paper1_cnl_learning/temporal_training_data.py"
+    },
+    {
+      "label": "S4 제한된 실제 장면 adapter",
+      "source_target": "../src/guard_synth/qualitative_scene_contract.py",
+      "pdf_target": "../../../../../../projects/04-guardsynth-coc/src/guard_synth/qualitative_scene_contract.py"
+    },
+    {
+      "label": "S5 원고 예제의 실행 질의와 결과",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/methodology-2026-09-30-001/manuscript_examples.json",
+      "pdf_target": "manuscript_examples.json"
+    },
+    {
+      "label": "원고 예제의 두 학습 입력 레코드",
+      "source_target": "../../../artifacts/projects/guardsynth-coc/public/paper1-method-preservation-001/methodology-2026-09-30-001/learning_input_examples.json",
+      "pdf_target": "learning_input_examples.json"
+    }
+  ]
+}

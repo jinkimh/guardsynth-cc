@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GuardSynth expert pilot metrics v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "metrics_version", "scene_count", "annotation_count", "applicability_alpha",
+    "field_exact_agreement", "source_sufficiency_agreement", "correction_rate",
+    "timing_by_interface_mode", "guideline_revision_count", "claim_scope"
+  ],
+  "properties": {
+    "metrics_version": {"const": "guardsynth-expert-pilot-metrics-v0.1"},
+    "scene_count": {"type": "integer", "minimum": 1},
+    "annotation_count": {"type": "integer", "minimum": 2},
+    "applicability_alpha": {"type": "number"},
+    "field_exact_agreement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "guard_type", "target_id", "zone_id", "operator", "range", "unit",
+        "coordinate_frame"
+      ],
+      "properties": {
+        "guard_type": {"type": "number", "minimum": 0},
+        "target_id": {"type": "number", "minimum": 0},
+        "zone_id": {"type": "number", "minimum": 0},
+        "operator": {"type": "number", "minimum": 0},
+        "range": {"type": "number", "minimum": 0},
+        "unit": {"type": "number", "minimum": 0},
+        "coordinate_frame": {"type": "number", "minimum": 0}
+      }
+    },
+    "source_sufficiency_agreement": {"type": "number", "minimum": 0},
+    "correction_rate": {"type": "number", "minimum": 0},
+    "timing_by_interface_mode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["MINIMAL_CONFIRMATION", "COMPLETE_AUTHORING"],
+      "properties": {
+        "MINIMAL_CONFIRMATION": {"$ref": "#/$defs/timing"},
+        "COMPLETE_AUTHORING": {"$ref": "#/$defs/timing"}
+      }
+    },
+    "guideline_revision_count": {"type": "integer", "minimum": 0},
+    "claim_scope": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "timing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["count", "mean_seconds", "median_seconds"],
+      "properties": {
+        "count": {"type": "integer", "minimum": 1},
+        "mean_seconds": {"type": "number", "minimum": 0},
+        "median_seconds": {"type": "number", "minimum": 0}
+      }
+    }
+  }
+}

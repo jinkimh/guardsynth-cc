@@ -1,0 +1,29 @@
+{
+  "annotation_start_allowed": false,
+  "claim_scope": "POST_REVIEW_SOURCE_CLOSURE_AUDIT_NOT_FINAL_ASSOCIATION_EXPERT_EFFECT_OR_VEHICLE_SAFETY",
+  "classified_event_count": 98,
+  "completed_work": {
+    "calibration_5_of_5": 98,
+    "calibration_variant_selection": 98,
+    "human_video_observation": 60,
+    "recorded_rig_binding": 98,
+    "temporal_closure": 98
+  },
+  "human_observation_is_not_source_substitute": true,
+  "next_execution_order": [
+    "BIND_MODEL_T0_AND_NUMERICALLY_VERIFY_OFFLINE_COORDINATE_TRANSFORM",
+    "ACQUIRE_SOURCE_LINKED_LANE_OR_ZONE_GEOMETRY_AND_ASSOCIATE_TRACKS",
+    "BIND_JURISDICTION_MATCHED_VERSIONED_AUTHORITY",
+    "BUILD_SOURCE_COMPLETE_LIFECYCLE_WITNESSES_AND_ASSIGN_OUTCOMES",
+    "RECOMPUTE_8_OF_8_ELIGIBILITY_AND_60_SLOT_QUOTAS"
+  ],
+  "remaining_work": {
+    "applicable_rule_scope": 98,
+    "conflict_stop_or_following_geometry": 98,
+    "outcome_lifecycle_witness": 98,
+    "relevant_actor_or_control_state": 98,
+    "target_zone_or_lane_association": 98,
+    "verified_coordinate_transform": 98
+  },
+  "work_order_version": "guardsynth-m16-curator-work-orders-v0.1"
+}

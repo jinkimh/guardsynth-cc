@@ -1,0 +1,97 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=20mm,headheight=16pt]{geometry}
+\usepackage{fontspec,kotex,amsmath,booktabs,longtable,array,xcolor,hyperref,fancyhdr}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\setmainhangulfont{Noto Sans CJK KR}
+\setmonohangulfont{Noto Sans CJK KR}
+\definecolor{navy}{HTML}{173E59}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,pdftitle={GuardSynth: Background}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\emergencystretch}{4em}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small GuardSynth}
+\fancyhead[R]{\small Background · v0.1 · 2026-09-30}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\clubpenalty=10000\widowpenalty=10000
+\raggedbottom
+\begin{document}
+\section*{III. 배경}
+
+
+본 절에서는 시각적 행동 추론과 논리 명세를 이해하는 데 필요한 기존 개념을 정리한다. 시각언어모델과 Chain of Causation, 만족 가능성 기반 검증, 통제 자연어, 저랭크 적응 학습을 차례로 설명한다.\par
+
+\phantomsection\section*{A. 시각언어모델과 Chain of Causation}\addcontentsline{toc}{section}{A. 시각언어모델과 Chain of Causation}
+
+시각언어모델(Vision–Language Model, VLM)은 시각 정보와 텍스트를 함께 처리하여 장면에 관한 설명이나 응답을 생성한다. 시각·언어·행동 모델(Vision–Language–Action Model, VLA)은 이러한 처리를 행동 예측과 연결한다. Alpamayo-R1은 시각언어 기반 추론과 궤적 생성을 결합한 주행 모델이다. \href{\detokenize{https://arxiv.org/abs/2511.00088}}{[1]}\par
+
+이때 시각 입력, 언어적 설명, 행동 출력은 구분할 필요가 있다. 시각 입력은 판단에 사용할 관측을 제공하고, 설명은 관측과 판단의 관계를 표현하며, 행동 출력은 선택한 행동을 나타낸다. 예를 들어 도로 영상에 대한 “무엇이 보이는가?”라는 응답과 “다음에 어떤 행동을 선택할 것인가?”라는 응답은 서로 다른 학습 대상이다. 후자의 출력도 ‘감속’과 같은 언어적 행동 범주일 수 있으며, 실제 궤적이나 조향·가속 명령과 동일한 표현은 아니다. 따라서 행동 예측을 설명할 때는 어떤 입력이 주어지고 어떤 형태의 출력을 학습하는지 명시해야 한다.\par
+
+Chain of Causation(CoC)은 행동 결정과 관련된 관찰, 판단 근거 및 행동을 인과적으로 연결하여 표현한다. Alpamayo-R1에서는 이러한 설명을 주행 행동에 대응시킨다. \href{\detokenize{https://arxiv.org/abs/2511.00088}}{[1]} 설명 구조를 예시하면 “전방 차량이 감속한다 \ensuremath{\rightarrow} 차량 간 간격이 줄어들 수 있다 \ensuremath{\rightarrow} 간격 확보를 위해 감속한다”와 같다. 이 예시는 행동의 이유를 서술하는 방식이며, 관찰 자료로부터 인과관계를 통계적으로 식별했다는 의미와는 구분된다.\par
+
+이 예시의 첫 부분은 관찰, 두 번째는 예상되는 영향, 마지막은 행동의 이유에 해당한다. 여기서 화살표는 설명의 흐름을 나타내며, 논리적 함의와 동일한 엄밀성을 부여한 기호가 아니다. 자연어 설명의 학습은 이러한 관계를 표현하도록 모델을 조정하는 과정이다. 설명에 등장한 모든 사실이 관측으로 확인되었는지와 설명을 사용한 모델이 적절한 행동을 선택하는지는 별도로 구분할 문제이다.\par
+
+\phantomsection\section*{B. 논리 명세와 만족 가능성 기반 검증}\addcontentsline{toc}{section}{B. 논리 명세와 만족 가능성 기반 검증}
+
+SAT는 명제 논리식의 만족 가능성을 판단하며, SMT는 산술 등의 배경 이론을 함께 고려한다. \href{\detokenize{https://theory.stanford.edu/~barrett/pubs/BT18.pdf}}{[2]} Z3는 이러한 SMT 질의를 처리하는 솔버이다. \href{\detokenize{https://doi.org/10.1007/978-3-540-78800-3_24}}{[3]}\par
+
+\subsection*{1. 만족 가능성과 반례}
+
+명세와 가정을 결합한 식을 \ensuremath{\Phi}, 확인하려는 속성을 P라고 하자. \ensuremath{\Phi}의 만족 가능성은 조건을 동시에 만족하는 모델의 존재를 뜻한다. 속성 검증은 반례를 나타내는 다음 식의 만족 가능성을 확인하는 방식으로 표현할 수 있다.\par
+
+\[\Phi \land \neg P\]
+
+이 식이 만족 가능하면 속성을 위반하는 모델이 존재한다. 만족 불가능하면 \ensuremath{\Phi}가 P를 함의한다. 다만 \ensuremath{\Phi} 자체가 모순이면 이러한 함의가 공허하게 성립하므로, 명세의 만족 가능성을 별도로 확인해야 한다. 시간에 따른 상태를 유한한 시점별 변수로 표현했다면 검증 결과도 해당 범위와 가정에 적용된다. 논리적 결론의 범위는 명세에 포함된 사실과 관계에 의해 정해진다. \href{\detokenize{https://theory.stanford.edu/~barrett/pubs/BT18.pdf}}{[2]}\par
+
+간단한 산술 예를 생각하자. x가 정수이고 \ensuremath{\Phi}가 ‘0 ≤ x ≤ 5’라면 x = 3은 이를 만족하는 값 할당이다. 여기서 모델은 학습된 신경망을 뜻하지 않고 논리식의 변수와 기호를 조건에 맞게 해석한 것을 뜻한다. 확인할 속성 P를 ‘x ≤ 10’으로 정하면 반례 질의는 ‘0 ≤ x ≤ 5이면서 x > 10인가?’가 된다. 그러한 정수는 없으므로 UNSAT이며 \ensuremath{\Phi} ⊨ P가 성립한다.\par
+
+반대로 P를 ‘x ≤ 2’로 정하면 x = 3은 \ensuremath{\Phi}를 만족하면서 P를 위반한다. 이 경우 반례 질의는 SAT이고, x = 3은 속성이 항상 성립하지 않음을 보여 주는 반례이다. 반례 질의의 SAT는 원래 명세가 모순이라는 뜻이 아니다. 명세에 허용된 경우 중 속성을 위반하는 경우가 존재한다는 뜻이다. 이처럼 SAT와 UNSAT의 의미는 무엇을 질의했는지에 따라 해석해야 한다.\par
+
+\subsection*{2. 유한 시간 범위와 가정}
+
+시간에 따른 변화를 표현할 때는 상태에 시점 인덱스를 붙이고 인접 상태 사이의 전이 관계를 명시할 수 있다. 예를 들어 s\ensuremath{{}_0}, s₁, s₂는 세 판단 시점의 상태이고, 이들 사이에는 두 번의 전이가 있다. 이러한 인덱스는 별도의 시간 간격을 정의하지 않는 한 초 단위의 물리적 시간을 뜻하지 않는다. 유한 범위의 검증에서는 초기 조건, 전이 관계 및 확인할 속성을 그 범위 안에서 함께 다룬다.\par
+
+이 구분은 결과의 해석에 중요하다. 세 상태를 대상으로 반례를 찾지 못했다는 결과를 모든 미래 시점의 성립으로 확대할 수는 없다. 또한 관찰된 사실을 가정으로 입력한 경우, 논리 검증은 그 가정에서 결론이 따르는지 다루며 관찰 자체의 정확성을 판정하는 절차와는 구별된다. 명세의 일관성, 속성의 성립, 입력 사실의 정확성은 서로 다른 확인 대상이다.\par
+
+\phantomsection\section*{C. 통제 자연어}\addcontentsline{toc}{section}{C. 통제 자연어}
+
+통제 자연어(Controlled Natural Language, CNL)는 자연어를 기반으로 어휘, 문법 또는 의미 해석을 의도적으로 제한한 언어이다. 자연어의 가독성을 유지하면서 표현의 정밀성과 일관성을 높이는 데 사용된다. 문서 이해를 돕는 CNL과 형식적 표현에 대응하도록 설계된 CNL은 목적과 엄밀성 수준이 다르다. \href{\detokenize{https://aclanthology.org/J14-1005/}}{[4]}\par
+
+형식적 표현과 연결되는 CNL에서는 조건, 부정의 범위 및 논리적 관계에 대한 해석 규칙이 중요하다. 의미의 정밀성은 문장의 자연스러움만으로 결정되지 않으며, 허용된 표현과 그 해석을 얼마나 명확히 정의했는지에 달려 있다. 따라서 CNL의 성질을 설명할 때는 그 언어가 사용하는 문법과 의미 규칙을 함께 고려해야 한다. \href{\detokenize{https://aclanthology.org/J14-1005/}}{[4]}\par
+
+이를 설명하기 위한 단순한 예로, p를 ‘장치가 잠겨 있다’, q를 ‘장치가 작동한다’라고 정의하자. “장치가 잠겨 있으면 작동하지 않는다”는 문장의 논리적 해석을 p \ensuremath{\rightarrow} ¬q로 정할 수 있다. 이 문장은 잠겨 있을 때의 작동을 제한하지만, 잠금이 해제되었다고 해서 반드시 작동한다고 말하지는 않는다. 이를 “잠금이 해제되면 작동한다”로 바꾸면 ¬p \ensuremath{\rightarrow} q라는 다른 조건이 된다. 두 문장의 자연스러운 표현 여부와 논리적 의미의 동일성은 별개의 문제다.\par
+
+이 예시에서 p와 q는 미리 정한 용어의 뜻을, ‘이면’은 조건 관계를, ‘않는다’는 부정의 적용 범위를 결정한다. 대응 규칙을 명시하면 문장에서 어떤 조건과 결론을 읽어야 하는지 분명해진다. 자연어와 정형식 사이의 의미 대응을 설명할 때에는 이러한 어휘·구문·논리적 범위를 유지하는지가 핵심이며, 단순히 비슷한 단어나 문장 길이를 사용하는지만으로 판단할 수 없다. 이 예시는 CNL의 기본 원리를 설명하기 위한 것으로 특정 도메인의 제약 언어를 정의한 것은 아니다.\par
+
+\phantomsection\section*{D. 저랭크 적응 학습}\addcontentsline{toc}{section}{D. 저랭크 적응 학습}
+
+지도 미세조정은 입력과 목표 출력의 예를 사용하여 사전학습 모델을 특정 과제에 적응시키는 과정이다. 언어 출력을 학습하는 경우에는 입력에 대해 목표 문장의 토큰을 생성하도록 조정할 수 있다. 전체 미세조정은 대상 모델의 모든 가중치를 갱신하는 반면, 파라미터 효율적 미세조정은 그 일부 또는 추가한 작은 파라미터 집합을 학습한다.\par
+
+LoRA(Low-Rank Adaptation)는 사전학습 가중치를 고정하고 저랭크 행렬로 표현한 변화량을 학습하는 미세조정 방법이다. 원래 가중치를 W\ensuremath{{}_0}라고 하면 다음과 같이 표현할 수 있다. \href{\detokenize{https://arxiv.org/abs/2106.09685}}{[5]}\par
+
+\[W = W_0 + \frac{\alpha}{r}BA\]
+
+여기서 W\ensuremath{{}_0}는 고정한 사전학습 가중치이고 W는 적응 후의 유효 가중치이다. 해당 선형 변환의 입력 차원을 k, 출력 차원을 d라고 하면 두 행렬의 크기는 d × k이다. 학습하는 행렬 A와 B는 각각 r × k와 d × r 크기를 가지며, r은 보통 d와 k보다 작은 양의 정수로 설정하는 저랭크 분해의 내부 차원이다. 따라서 BA는 W\ensuremath{{}_0}와 크기가 같아 더할 수 있고, 그 랭크는 r 이하이다. 스칼라 설정값 \ensuremath{\alpha}는 \ensuremath{\alpha}/r을 통해 변화량의 크기를 조절한다. \href{\detokenize{https://arxiv.org/abs/2106.09685}}{[5]}\par
+
+이 방식은 W\ensuremath{{}_0} 전체를 갱신하는 대신 A와 B만 학습한다. r이 충분히 작으면 해당 행렬의 학습 파라미터 수는 dk에서 r(d + k)로 줄어든다. r은 변화량을 표현할 수 있는 공간의 크기와 학습 파라미터 수를 함께 결정하므로, 단순한 크기 조절 계수와는 역할이 다르다.\par
+
+파라미터 수를 예시하면 d = k = 512, r = 8일 때 전체 행렬에는 262,144개의 값이 있고 A와 B에는 합계 8,192개의 학습 가능한 값이 있다. 이 예의 비율은 3.125\%이다. 이는 하나의 가중치 행렬에 대한 설명용 계산이며 전체 모델의 메모리 절감률이나 특정 실험의 설정을 뜻하지 않는다. LoRA의 역할은 모델의 적응 방식을 정하는 것이고, 학습한 행동의 정확성이나 제약 준수 여부는 별도의 평가 대상이다.\par
+
+\phantomsection\section*{참고문헌}\addcontentsline{toc}{section}{참고문헌}
+
+[1] NVIDIA et al., “Alpamayo-R1: Bridging Reasoning and Action Prediction for Generalizable Autonomous Driving in the Long Tail,” arXiv:2511.00088, 2025, revised 2026. \href{\detokenize{https://arxiv.org/abs/2511.00088}}{원문}\par
+
+[2] C. Barrett and C. Tinelli, “Satisfiability Modulo Theories,” Handbook of Model Checking, pp. 305–343, 2018. \href{\detokenize{https://theory.stanford.edu/~barrett/pubs/BT18.pdf}}{원문}\par
+
+[3] L. de Moura and N. Bjørner, “Z3: An Efficient SMT Solver,” TACAS, pp. 337–340, 2008. \href{\detokenize{https://doi.org/10.1007/978-3-540-78800-3_24}}{원문}\par
+
+[4] T. Kuhn, “A Survey and Classification of Controlled Natural Languages,” Computational Linguistics, vol. 40, no. 1, pp. 121–170, 2014. \href{\detokenize{https://aclanthology.org/J14-1005/}}{원문}\par
+
+[5] E. J. Hu et al., “LoRA: Low-Rank Adaptation of Large Language Models,” arXiv:2106.09685, 2021. \href{\detokenize{https://arxiv.org/abs/2106.09685}}{원문}\par
+\end{document}

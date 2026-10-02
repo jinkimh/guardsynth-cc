@@ -1,0 +1,21 @@
+{
+  "association_precheck_status_counts": {
+    "INSUFFICIENT_SOURCE_GEOMETRY_FOR_ASSOCIATION": 38,
+    "REVIEWABLE_ACTOR_ASSOCIATION_LANE_MISSING": 24,
+    "REVIEWABLE_ACTOR_ASSOCIATION_ZONE_MISSING": 19,
+    "REVIEWABLE_CONTROL_ASSOCIATION_LANE_MISSING": 17
+  },
+  "association_source_acquisition_required_count": 38,
+  "calibration_variant_decision": "NO_GENERAL_SELECTION_RULE_FAIL_CLOSED",
+  "claim_scope": "SOURCE_REVIEW_PRECHECK_NOT_FINAL_ASSOCIATION_OR_SAFETY",
+  "classified_event_count": 98,
+  "coordinate_transform_auto_closable_count": 0,
+  "final_outcome_assigned_count": 0,
+  "final_outcome_auto_closable_count": 0,
+  "geometry_source_required_count": 98,
+  "human_review_packet_count": 60,
+  "jurisdiction_authority_auto_closable_count": 0,
+  "newly_eligible_scene_count": 0,
+  "precheck_version": "guardsynth-m16-source-review-precheck-v0.1",
+  "source_complete_8_of_8_count": 0
+}

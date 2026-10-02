@@ -1,0 +1,22 @@
+{
+  "policy_version": "1.0",
+  "immutable": true,
+  "rules": [
+    {"class": "results/public", "pattern": "eblc-*", "owner": "eblc-bcv"},
+    {"class": "results/public", "pattern": "guardsynth-*", "owner": "guardsynth-coc"},
+    {"class": "results/public", "pattern": "project-layout-*", "owner": "guardsynth-coc"},
+    {"class": "results/public", "pattern": "chunk-*", "owner": "sequential-coc-verification"},
+    {"class": "results/public", "pattern": "cohort-*", "owner": "sequential-coc-verification"},
+    {"class": "results/public", "pattern": "multiscene-*", "owner": "sequential-coc-verification"},
+    {"class": "results/public", "pattern": "remaining-*", "owner": "sequential-coc-verification"},
+    {"class": "results/public", "pattern": "scene-*", "owner": "sequential-coc-verification"},
+    {"class": "results/public", "pattern": "contract-*", "owner": "safety-constrained-coc"},
+    {"class": "results/public", "pattern": "small-vlm-*", "owner": "safety-constrained-coc"},
+    {"class": "results/public", "pattern": "workshop-*", "owner": "safety-constrained-coc"},
+    {"class": "results/restricted", "pattern": "alp-exp-*", "owner": "safety-constrained-coc"},
+    {"class": "results/restricted", "pattern": "eblc-*", "owner": "eblc-bcv"},
+    {"class": "results/restricted", "pattern": "guardsynth-*", "owner": "guardsynth-coc"},
+    {"class": "results/restricted", "pattern": "sequential-*", "owner": "sequential-coc-verification"},
+    {"class": "intermediate", "pattern": "uppaal-*", "owner": "sequential-coc-verification"}
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "project_id": "guardsynth-coc",
+  "run_id": "background-2026-09-30-002",
+  "status": "EXPANDED_DRAFT_COMPILED_AND_CHECKED",
+  "scope": "Established foundations only; no proposed EBLC or GuardSynth procedures",
+  "previous_snapshot": "background-2026-09-30-001",
+  "additions": [
+    "Visual input, explanation, and action-output distinctions",
+    "Seven logical notation entries and implication interpretation",
+    "Worked integer SAT/UNSAT counterexample queries",
+    "Indexed decision states versus physical time",
+    "CNL conditional and negation meaning contrast",
+    "Eight LoRA notation entries, matrix dimensions, and parameter-count example"
+  ],
+  "outputs": {
+    "ko": {"pdf": "ieee-access-background-v01-ko.pdf", "pages": 4, "text_units_checked": 88, "tables": 2},
+    "en": {"pdf": "ieee-access-background-v01-en.pdf", "pages": 4, "text_units_checked": 88, "tables": 2}
+  },
+  "checks": {
+    "xelatex_two_pass_build": "PASS",
+    "markdown_prose_and_table_cells_preserved": "PASS",
+    "bilingual_reference_urls": 5,
+    "missing_glyph_warnings": 0,
+    "overfull_hbox_warnings": 0,
+    "logical_and_numerical_examples": "PASS: finite integer assignments, implication truth assignments, 8192/262144 = 3.125%",
+    "visual_review": "All eight final pages inspected; tables, symbols, equations, and references readable",
+    "file_naming": "Five pre-existing unrelated violations; no new-file violations"
+  },
+  "integration": "Standalone Section III; historical main.tex and previous PDF snapshots preserved"
+}

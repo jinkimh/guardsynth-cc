@@ -1,0 +1,15 @@
+{
+  "policy_version": "1.0",
+  "promotions": [
+    {
+      "work_id": "kiee-review-response-20260930",
+      "project_id": "sequential-coc-verification",
+      "document_class": "design",
+      "source": ".superpowers/sdd/kiee-review-response-20260930/KIEE_REVIEW_RESPONSE_REEXPERIMENT_PLAN_V01.md",
+      "target": "projects/03-sequential-coc-verification/docs/designs/KIEE_REVIEW_RESPONSE_REEXPERIMENT_DESIGN_V01.md",
+      "reviewed_by": "user",
+      "review_basis": "Reviewed plan, selected natural-CoC fault injection, and requested stepwise execution in this conversation",
+      "promoted_on": "2026-09-30"
+    }
+  ]
+}

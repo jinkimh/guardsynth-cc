@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<nta><declaration>// Authored condition-linked frame monitor; experimental revision 1.
+const int N = 4;
+const int K = 1;
+const int actions[N] = {0,1,1,2};
+const int creates[N] = {0,-1,-1,-1};
+const int preconditions[N] = {1,-1,-1,-1};
+const int observations[N*K] = {-1,-1,-1,0};
+bool active[K];
+int known[K] = {-1};
+int precondition = -1;
+int idx = 0;
+bool bad = false;
+bool missing = false;
+bool bad_hold = false;
+bool bad_pre = false;
+int first_bad_idx = -1;
+int first_missing_idx = -1;
+int first_bad_obligation = -1;
+int first_missing_obligation = -1;
+void step() {
+  int j;
+  if (creates[idx] &gt;= 0) active[creates[idx]] = true;
+  if (preconditions[idx] &gt;= 0) precondition = preconditions[idx];
+  for (j = 0; j &lt; K; j++) {
+    if (observations[idx*K+j] &gt;= 0) known[j] = observations[idx*K+j];
+    if (active[j] &amp;&amp; known[j] == 1) active[j] = false;
+  }
+  if (actions[idx] == 2) {
+    if (precondition == 0) {
+      bad = true; bad_pre = true;
+      if (first_bad_idx &lt; 0) { first_bad_idx = idx; first_bad_obligation = -2; }
+    }
+    for (j = 0; j &lt; K; j++) {
+      if (active[j] &amp;&amp; known[j] == 0) {
+        bad = true; bad_hold = true;
+        if (first_bad_idx &lt; 0) { first_bad_idx = idx; first_bad_obligation = j; }
+      }
+      if (active[j] &amp;&amp; known[j] == -1) {
+        missing = true;
+        if (first_missing_idx &lt; 0) { first_missing_idx = idx; first_missing_obligation = j; }
+      }
+    }
+  }
+}
+</declaration><template><name>ScenarioObserver</name><location id="run" x="0" y="0"><name>Run</name><committed /></location><location id="done" x="200" y="0"><name>Done</name></location><init ref="run" /><transition><source ref="run" /><target ref="run" /><label kind="guard">idx &lt; N</label><label kind="assignment">step(), idx++</label></transition><transition><source ref="run" /><target ref="done" /><label kind="guard">idx == N</label></transition></template><system>Observer = ScenarioObserver(); system Observer;</system></nta>

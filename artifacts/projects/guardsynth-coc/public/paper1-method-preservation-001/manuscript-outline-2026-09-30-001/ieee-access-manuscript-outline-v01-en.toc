@@ -1,0 +1,9 @@
+\contentsline {section}{1 Central Message and Working Title}{2}{section*.4}%
+\contentsline {section}{2 Narrative and Contributions}{2}{section*.6}%
+\contentsline {section}{3 Proposed Eight-Section Manuscript}{3}{section*.8}%
+\contentsline {section}{4 Abstract and Headline Evidence}{5}{section*.18}%
+\contentsline {section}{5 Minimum Main-Paper Figures and Tables}{5}{section*.20}%
+\contentsline {section}{6 Material Outside the Main Paper}{6}{section*.22}%
+\contentsline {section}{7 Writing Sequence and Acceptance Checks}{6}{section*.24}%
+\contentsline {section}{8 Checks Before Drafting}{7}{section*.26}%
+\contentsline {section}{9 Evidence for Writing}{7}{section*.28}%

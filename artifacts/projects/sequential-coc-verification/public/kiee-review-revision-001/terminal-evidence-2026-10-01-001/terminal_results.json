@@ -1,0 +1,2858 @@
+[
+  {
+    "case_id": "pedestrian-held_local_conflict-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-held_local_conflict-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-held_local_conflict-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "183e7a35500725c79e9309a20de3f65a7303adb76cea7b9f79e1e354cd5ec832"
+  },
+  {
+    "case_id": "pedestrian-held_local_conflict-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-held_local_conflict-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-held_local_conflict-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "ad25f93baab28298dcf1c2d2593bbf2bbdb53462405cd464209b16cf10652932"
+  },
+  {
+    "case_id": "pedestrian-held_local_conflict-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-held_local_conflict-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-held_local_conflict-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "856f145b382120a3001998c8095c694775d3726e6f2f3438ff996ab74bd8da2d"
+  },
+  {
+    "case_id": "pedestrian-held_memory_conflict-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-held_memory_conflict-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-held_memory_conflict-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "69858a6bc4aaf8e5b338398c6f8015a1e40e2b16889b81dd66c44b9fcb38b39c"
+  },
+  {
+    "case_id": "pedestrian-held_memory_conflict-gap2",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-held_memory_conflict-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-held_memory_conflict-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "dd51cdeab58e76a689f353fd51a7e2c79dc4a2c15c60b20e6c2f229062ad9502"
+  },
+  {
+    "case_id": "pedestrian-held_memory_conflict-gap6",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-held_memory_conflict-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-held_memory_conflict-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "73286aa1b0bce05e63724adc9645499c5eab1d915c409054f086b5a24d0e7485"
+  },
+  {
+    "case_id": "pedestrian-released_normal-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-released_normal-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-released_normal-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "171e439334dec0884f8f41151adaca2d114f5b7651b1a6e273d0e1d4a2a07a10"
+  },
+  {
+    "case_id": "pedestrian-released_normal-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-released_normal-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-released_normal-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "ffeb7d5d394e1e1c012e027893c8f4275188f2529daa8188892d230a06dad14f"
+  },
+  {
+    "case_id": "pedestrian-released_normal-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-released_normal-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-released_normal-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "3ed4fe5a3361c2a5a3a6c038cc4b46ed1120277e2a41d74f7dad095f4563f89e"
+  },
+  {
+    "case_id": "pedestrian-missing_release-gap0",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-missing_release-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-missing_release-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "1624864133a9b2ccc7a7255ec6ccd9afceba54050d147ab0a8610bdd126cad8a"
+  },
+  {
+    "case_id": "pedestrian-missing_release-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-missing_release-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-missing_release-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "9a268b6dcc6e2c826546ee6737a2c511839f1c1d56655b7daa1dcec525bad89f"
+  },
+  {
+    "case_id": "pedestrian-missing_release-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-missing_release-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-missing_release-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "ebdde01748e82ae5ece1dc00a110d417de518880becfcfff65d014b1224018fb"
+  },
+  {
+    "case_id": "pedestrian-wrong_release-gap0",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-wrong_release-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-wrong_release-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "ce6e1d315c4e0e3ef5fb5ed18b86f0673b983e7ae90c311fbed0d3c8a142df67"
+  },
+  {
+    "case_id": "pedestrian-wrong_release-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-wrong_release-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-wrong_release-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "3cb94b0ed7f5986487ac74d2e9c35d75218afd6104b303bdd1e3b6fa852b952a"
+  },
+  {
+    "case_id": "pedestrian-wrong_release-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-wrong_release-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-wrong_release-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "0f12ad76793ce516b5d537eca0c611f0d5bd84ac953c1af4e1fa14e81476828c"
+  },
+  {
+    "case_id": "pedestrian-order_violation-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-order_violation-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-order_violation-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "ac7fea32c639cd3ff971da3d470c9291636a40a04c541c52ce3d164eaec3b37f"
+  },
+  {
+    "case_id": "pedestrian-order_violation-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-order_violation-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-order_violation-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "af316410658ff1d69099bb3953381dabf52ad326d531d6157e6d307eb8d50fc5"
+  },
+  {
+    "case_id": "pedestrian-order_violation-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-order_violation-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-order_violation-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "8c457eedd32d346e62eb2077245ae8224d2bc00a185f1849bcd5edb9148e8d78"
+  },
+  {
+    "case_id": "pedestrian-multi_partial-gap0",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-multi_partial-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-multi_partial-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "37c57fb835435dc9d726541bb24371835e6f7eb9426f56352633fb4e282a90b1"
+  },
+  {
+    "case_id": "pedestrian-multi_partial-gap2",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-multi_partial-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-multi_partial-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "c11737d109c2dccc6656510613689cdd21ed0385c1837a9adfb23441bcf377d5"
+  },
+  {
+    "case_id": "pedestrian-multi_partial-gap6",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-multi_partial-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-multi_partial-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "6d983f7016e2c96e92b166462538a948e11207efead917566d1acb835a7b352b"
+  },
+  {
+    "case_id": "pedestrian-multi_all_released-gap0",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-multi_all_released-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-multi_all_released-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "662867fed4cd536f990c89b317c38210da891b58638e0d9aa4fa718f636ec2fe"
+  },
+  {
+    "case_id": "pedestrian-multi_all_released-gap2",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-multi_all_released-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-multi_all_released-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "e208d887bf9079a1da90083d20d1855fa27b57be93ed3c38983cfa7a2d2a571f"
+  },
+  {
+    "case_id": "pedestrian-multi_all_released-gap6",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/pedestrian-multi_all_released-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/pedestrian-multi_all_released-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "50ccf6ca89b09147f8607d1dec2b87f879591a683c2acea035d6f29f1e0a4f00"
+  },
+  {
+    "case_id": "cyclist-held_local_conflict-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-held_local_conflict-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-held_local_conflict-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "a477abca3f9d56109755fd957efecf9129f5c8aabe4473cb2a5fd137f23f6396"
+  },
+  {
+    "case_id": "cyclist-held_local_conflict-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-held_local_conflict-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-held_local_conflict-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "42d47bb56d13f38e89e433af0f91e48e6c59daf1f38e67ce3781160954fdca3f"
+  },
+  {
+    "case_id": "cyclist-held_local_conflict-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-held_local_conflict-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-held_local_conflict-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "41226a73709b9b19a763538878611b218cff4353f09b9a2eb1c26f8e61c672d8"
+  },
+  {
+    "case_id": "cyclist-held_memory_conflict-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-held_memory_conflict-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-held_memory_conflict-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "eb77d465d7fc2e77361dc485d0a65d851a5a86e19a975c387157651179cb7b86"
+  },
+  {
+    "case_id": "cyclist-held_memory_conflict-gap2",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-held_memory_conflict-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-held_memory_conflict-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "7f6de151f232cadeed8017de2e92080ee7691ad7ac70b475fe41c953f8187e92"
+  },
+  {
+    "case_id": "cyclist-held_memory_conflict-gap6",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-held_memory_conflict-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-held_memory_conflict-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "55db341fafb2d5f0aa472fb60f529f6aa8aac138376b53a12e77d3c910c9ff6b"
+  },
+  {
+    "case_id": "cyclist-released_normal-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-released_normal-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-released_normal-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "15710a9c2fa2c6d870fad48b807c3b558fa7514d97174606e7e6f46320ae2034"
+  },
+  {
+    "case_id": "cyclist-released_normal-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-released_normal-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-released_normal-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "8f7bd39655f7f4e6fdf1e50f795caa4674ed40e6c78269a752a1e74a6b4b3f66"
+  },
+  {
+    "case_id": "cyclist-released_normal-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-released_normal-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-released_normal-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "fcb88d28d5a8cbbe4bfa39718fdbc7c6faa418a29557c0b22f9d1df261ad62bd"
+  },
+  {
+    "case_id": "cyclist-missing_release-gap0",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-missing_release-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-missing_release-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "0c924df93a584c4bf5d04bf76cae453c5234d23883904022a025ad8b05aae269"
+  },
+  {
+    "case_id": "cyclist-missing_release-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-missing_release-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-missing_release-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "82c5fbb2ed3e7d2cf50d517c46d5293e06479409638d393b547ea4c92709eb3f"
+  },
+  {
+    "case_id": "cyclist-missing_release-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-missing_release-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-missing_release-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "d333382a5cf892181564fc6292161a7db149ebdd003e86a60c78d69202f884f1"
+  },
+  {
+    "case_id": "cyclist-wrong_release-gap0",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-wrong_release-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-wrong_release-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "6cd4f52f27c4760061b52153b260692343b9fda6154deebb8f17257157046803"
+  },
+  {
+    "case_id": "cyclist-wrong_release-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-wrong_release-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-wrong_release-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "a2a3c660aaa846db1ef31ef2231171f1cdd30a576ce83e5a8041a19ffcf45a49"
+  },
+  {
+    "case_id": "cyclist-wrong_release-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-wrong_release-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-wrong_release-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "e815fab16e212daeac628d118b46957374be6eb08d7ef66ae8505ac9f9f231ba"
+  },
+  {
+    "case_id": "cyclist-order_violation-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-order_violation-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-order_violation-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "e89f17fe3e38134526e6883f2cc946161c7963f55831ebc34967287220921c42"
+  },
+  {
+    "case_id": "cyclist-order_violation-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-order_violation-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-order_violation-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "c0921c4426660bacfa000a7514cbfe6a02bfbbf847b8942e5bab3e7b6d8a7f4a"
+  },
+  {
+    "case_id": "cyclist-order_violation-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-order_violation-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-order_violation-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "8053d06227360763f308ac46aa23852d6a37f9b76037c9a9ba7276f4436973d5"
+  },
+  {
+    "case_id": "cyclist-multi_partial-gap0",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-multi_partial-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-multi_partial-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "810110d9aab410bf105122df5f35a8ead9f56cb97c78492ccaa0e09c905859c7"
+  },
+  {
+    "case_id": "cyclist-multi_partial-gap2",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-multi_partial-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-multi_partial-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "b7271135d85e5e93a06332316dbc075f3a678914ed2e195545ac971aa03c83f6"
+  },
+  {
+    "case_id": "cyclist-multi_partial-gap6",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-multi_partial-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-multi_partial-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "5d3de89b3bfcba335d2ac3b4fe0d1a67a036052dc3fa38909fd0d269fb51e1b1"
+  },
+  {
+    "case_id": "cyclist-multi_all_released-gap0",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-multi_all_released-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-multi_all_released-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "99342bf7a662ceab4dfe37b7efd077d4cac2058a6ac9ad8b157663785ee65706"
+  },
+  {
+    "case_id": "cyclist-multi_all_released-gap2",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-multi_all_released-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-multi_all_released-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "51cef65e2802bfd0cf6c25a7d2eecaf6894355e2f6985a2411db2efa83fc9562"
+  },
+  {
+    "case_id": "cyclist-multi_all_released-gap6",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cyclist-multi_all_released-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cyclist-multi_all_released-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "36ab6a387a470600aa13093d238e440375fde1d88b05fa39d0353323cfbabf70"
+  },
+  {
+    "case_id": "lead_vehicle-held_local_conflict-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-held_local_conflict-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-held_local_conflict-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "ff6f51f32af2d4e47aa244d43454fbf20fb922a794751739f908bd132b3497ca"
+  },
+  {
+    "case_id": "lead_vehicle-held_local_conflict-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-held_local_conflict-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-held_local_conflict-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "22ae6147b8a0f9953fbbd8c685f8f9a289bdf6fe5e7bb8a046748829d29ea682"
+  },
+  {
+    "case_id": "lead_vehicle-held_local_conflict-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-held_local_conflict-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-held_local_conflict-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "36c11a856eb2ead3911a4291abaf7fe13798f7f39a0f255e69c091434acb1cac"
+  },
+  {
+    "case_id": "lead_vehicle-held_memory_conflict-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-held_memory_conflict-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-held_memory_conflict-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "9096fbcb80ee06b1d1be52e9bc6ff190aca62dd4d02b5af27f3279034971f3ca"
+  },
+  {
+    "case_id": "lead_vehicle-held_memory_conflict-gap2",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-held_memory_conflict-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-held_memory_conflict-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "7ff9b4ca578f708e2561b5bff97ffa1dda1a4dedd950b23a29c2dd8adba71b26"
+  },
+  {
+    "case_id": "lead_vehicle-held_memory_conflict-gap6",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-held_memory_conflict-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-held_memory_conflict-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "740110f8d5300887312349dba780a7d02e03a32da4dff3a319daa70d66ac7f11"
+  },
+  {
+    "case_id": "lead_vehicle-released_normal-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-released_normal-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-released_normal-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "6b923ce159f56106f041df427aadaaef73dc924693a7446e5edf9412e73ebbb7"
+  },
+  {
+    "case_id": "lead_vehicle-released_normal-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-released_normal-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-released_normal-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "2c0fa0a9f8965816877616964a395e5ba9eef6ade351af0de0448adc130ca0bb"
+  },
+  {
+    "case_id": "lead_vehicle-released_normal-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-released_normal-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-released_normal-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "4acfe4ab0dd3be34cf9ac60ca3f7d8973f5e78f9104d4296582b87d10bdc2081"
+  },
+  {
+    "case_id": "lead_vehicle-missing_release-gap0",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-missing_release-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-missing_release-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "5b6bcb875ccd03d744a391974dc04aef580e5da5dffc9bdbce40423660a9064d"
+  },
+  {
+    "case_id": "lead_vehicle-missing_release-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-missing_release-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-missing_release-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "1e47537ff4b2292040afafd50152b9f022cf1a0ef8c63e6839b3ce93a8cd08de"
+  },
+  {
+    "case_id": "lead_vehicle-missing_release-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-missing_release-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-missing_release-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "3c0951910d6920ddf9552ae2251670a1e172abc00e9f29dbeffa8803157387dd"
+  },
+  {
+    "case_id": "lead_vehicle-wrong_release-gap0",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-wrong_release-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-wrong_release-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "28e63b38efcd973a9a19ec34cf3d32ae0f6707aa9078d21527d0998df9f76880"
+  },
+  {
+    "case_id": "lead_vehicle-wrong_release-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-wrong_release-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-wrong_release-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "75341be6b16f99c6af0f2f32e1b4ab243c9884d6c846287c28d93563aa5264b6"
+  },
+  {
+    "case_id": "lead_vehicle-wrong_release-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-wrong_release-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-wrong_release-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "2849b6cd73941ef6880b832ba89cc4d9e8941aea919f15a8c4c0c94d8f363a49"
+  },
+  {
+    "case_id": "lead_vehicle-order_violation-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-order_violation-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-order_violation-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "d2a6c43b06a30b9e8cbf2896e6ea8adecbe9f4bd4c3edbd7dc8a4d97236ec00e"
+  },
+  {
+    "case_id": "lead_vehicle-order_violation-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-order_violation-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-order_violation-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "25c38de262cdf96c6d2184ae32a2c5a4f07f1e6206dd971f1c7b1903dc60d0fc"
+  },
+  {
+    "case_id": "lead_vehicle-order_violation-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-order_violation-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-order_violation-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "d3df024d18901635e2a72a6d4aaa7d42ed64d1898d16c7b1b5ce21bcc5f329ac"
+  },
+  {
+    "case_id": "lead_vehicle-multi_partial-gap0",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-multi_partial-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-multi_partial-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "a8af4b28ad414c44092602f4a9d633afc188d5a06a491d01ef8ea9650f3a1c8d"
+  },
+  {
+    "case_id": "lead_vehicle-multi_partial-gap2",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-multi_partial-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-multi_partial-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "d94c147bf17fec82b81760ee6622b295572e3cde87ee2010bc45c1c720f2cdca"
+  },
+  {
+    "case_id": "lead_vehicle-multi_partial-gap6",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-multi_partial-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-multi_partial-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "eff1b0f2ec9b618ad684fc5bee49c0e7b4f90d464f2192ee7226fcd8a85e4eb4"
+  },
+  {
+    "case_id": "lead_vehicle-multi_all_released-gap0",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-multi_all_released-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-multi_all_released-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "4e9b82ca9f83f60b4c13d8a2c7171a676348dfd9e4ad0e25f0abf8e262303bb1"
+  },
+  {
+    "case_id": "lead_vehicle-multi_all_released-gap2",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-multi_all_released-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-multi_all_released-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "5f78986d1f6b6eabcd3430c7393489b88e774f40b08a1ea51ce4e8eec5f002b6"
+  },
+  {
+    "case_id": "lead_vehicle-multi_all_released-gap6",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/lead_vehicle-multi_all_released-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/lead_vehicle-multi_all_released-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "c935a0d6512f7d1062c51b1077e305034487014e584123aa6739ad1bd483e26e"
+  },
+  {
+    "case_id": "cross_traffic-held_local_conflict-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-held_local_conflict-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-held_local_conflict-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "1424149744a2c96b6e51308ffa2b48d3ed62b6f01530f71f32f292e4221c0e20"
+  },
+  {
+    "case_id": "cross_traffic-held_local_conflict-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-held_local_conflict-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-held_local_conflict-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "1ba8aafa5ecbe3ee5f393d5efe85f45d6b169912372c20de418a72a10cddf925"
+  },
+  {
+    "case_id": "cross_traffic-held_local_conflict-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-held_local_conflict-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-held_local_conflict-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "424a4326ce0c4ebf49fe7d0b7cee85d273d0331124549976218b8e5ad8958a6f"
+  },
+  {
+    "case_id": "cross_traffic-held_memory_conflict-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-held_memory_conflict-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-held_memory_conflict-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "8634a40faff27178e8e74bc83447df971e3e14966089d3fec54b686ca5fb4812"
+  },
+  {
+    "case_id": "cross_traffic-held_memory_conflict-gap2",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-held_memory_conflict-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-held_memory_conflict-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "2a5f62663c53760a6ec49255259690720841a55c86f08ea2f568ad47a0ae7f0e"
+  },
+  {
+    "case_id": "cross_traffic-held_memory_conflict-gap6",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-held_memory_conflict-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-held_memory_conflict-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "26943d96a40896b8612bfb772c939f02f224d99b5d6359ba46aaa6d7f948473b"
+  },
+  {
+    "case_id": "cross_traffic-released_normal-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-released_normal-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-released_normal-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "6c68baa7b4159f2617cbab7eb10d44819b79b8ba3ff5780362fffddf29a41555"
+  },
+  {
+    "case_id": "cross_traffic-released_normal-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-released_normal-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-released_normal-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "4754c1c53bafc338adbc68da73d4b53951f5dba40d3d1fc790f1fe8a6ef8616a"
+  },
+  {
+    "case_id": "cross_traffic-released_normal-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-released_normal-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-released_normal-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "9f4e3386c616fe387d39b1904b20b9d938ce92f6d24d9a671a9dfe91c4871979"
+  },
+  {
+    "case_id": "cross_traffic-missing_release-gap0",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-missing_release-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-missing_release-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "6c3059a577d86b6593155aa989adf58225fbfd9b599ca20a2bc7121c3d90453c"
+  },
+  {
+    "case_id": "cross_traffic-missing_release-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-missing_release-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-missing_release-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "da6bf66c062b8acb025a8b40dc72a1c3ef5eb495b1541dc402b735aca42bcf4b"
+  },
+  {
+    "case_id": "cross_traffic-missing_release-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-missing_release-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-missing_release-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "0db9bb8720093caecd0754e668ba87870ce0b2a83979e96ea2f08167a6d5c829"
+  },
+  {
+    "case_id": "cross_traffic-wrong_release-gap0",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-wrong_release-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-wrong_release-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "a2111b13cdf3fdf63e53894624473987a460b9ef110065e2d25140b231b6f610"
+  },
+  {
+    "case_id": "cross_traffic-wrong_release-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-wrong_release-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-wrong_release-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "24a01bc6ffa66e4d067371504ae5a4c5e393f6971e9759bc75d3e09a5681f116"
+  },
+  {
+    "case_id": "cross_traffic-wrong_release-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-wrong_release-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-wrong_release-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "ffc0cea362656b390eb06a1d0cde4d5b8d4d267a79e8af3955f46aae086d1f58"
+  },
+  {
+    "case_id": "cross_traffic-order_violation-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-order_violation-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-order_violation-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "c21b869d72da25ae7f0890aa2ade818b41784bcae165791553f13459d46480e1"
+  },
+  {
+    "case_id": "cross_traffic-order_violation-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-order_violation-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-order_violation-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "527736fcc8fb3f1f2f6b11d5069295e179d20c9be763afeee359c152c2f81507"
+  },
+  {
+    "case_id": "cross_traffic-order_violation-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-order_violation-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-order_violation-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "6199cebe25899eb3ab6b8e4569e531575585d5fe05016e016352f4f0d8bda602"
+  },
+  {
+    "case_id": "cross_traffic-multi_partial-gap0",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-multi_partial-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-multi_partial-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "a64b647d79b454e87cb620c0b6cc7c36b3447e5f3bef60f34123323dde2cf9d5"
+  },
+  {
+    "case_id": "cross_traffic-multi_partial-gap2",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-multi_partial-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-multi_partial-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "e464548053586435e864b494741b84f426cc8398e1fc2d6a2b68b9a0a92f9860"
+  },
+  {
+    "case_id": "cross_traffic-multi_partial-gap6",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-multi_partial-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-multi_partial-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "bdb30162787c5c54692f2f2dc0a6b6344d840ac2b50599098a1c7ae7224d8bb8"
+  },
+  {
+    "case_id": "cross_traffic-multi_all_released-gap0",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-multi_all_released-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-multi_all_released-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "1e8dcab4c1b7f2e4222237b8a532125aee6cfaf2c76eaf81ce023a0d46b317df"
+  },
+  {
+    "case_id": "cross_traffic-multi_all_released-gap2",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-multi_all_released-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-multi_all_released-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "7b8560d97ee88d4fe3b3bb1badb4681ec17ba25db7288e838b176de0956c96c8"
+  },
+  {
+    "case_id": "cross_traffic-multi_all_released-gap6",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/cross_traffic-multi_all_released-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/cross_traffic-multi_all_released-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "b9cf69f5899124224f2fdaa1960cb5b7118f065202ba6e3d0adaeb70281551dd"
+  },
+  {
+    "case_id": "bus-held_local_conflict-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-held_local_conflict-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-held_local_conflict-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "2caee8f0e98363d56496506d9b3f1e8e3a8cd3cb99bc41e3066bab29acb1482a"
+  },
+  {
+    "case_id": "bus-held_local_conflict-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-held_local_conflict-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-held_local_conflict-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "8b232ef4bc363952c35a109c11a0926a7f1c9dfa391150d5f1221a7af95f3e0b"
+  },
+  {
+    "case_id": "bus-held_local_conflict-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-held_local_conflict-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-held_local_conflict-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "bd19647002b9c43007e72cff2f88604bb8642132e36f82bb453d402655f95196"
+  },
+  {
+    "case_id": "bus-held_memory_conflict-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-held_memory_conflict-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-held_memory_conflict-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "b9c4a44ef67b4fe44795cc90f944c8ddc5232c27053f152ac72bfd9d88bce861"
+  },
+  {
+    "case_id": "bus-held_memory_conflict-gap2",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-held_memory_conflict-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-held_memory_conflict-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "b7fe0ba197a3859c603c3f50483f226a995acf4e69323a2d9f553f9d1699f609"
+  },
+  {
+    "case_id": "bus-held_memory_conflict-gap6",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-held_memory_conflict-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-held_memory_conflict-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "b4e46fca4c3685b0673cf61944d81382c64b78fd21a4f4b7dd922d7a2162467f"
+  },
+  {
+    "case_id": "bus-released_normal-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-released_normal-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-released_normal-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "b6f79c440e7604517be53e336b2afc1d8d8f6e1f07308570c387aca770f44e0c"
+  },
+  {
+    "case_id": "bus-released_normal-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-released_normal-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-released_normal-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "54d429d90f83948eae048e20d12b1bda1f0a3ed63c76cd9df9783d591900eaed"
+  },
+  {
+    "case_id": "bus-released_normal-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-released_normal-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-released_normal-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "dbf818a7e4c7480c6eb224945be441d68caa065ec77761c9a17ca8843755f6c3"
+  },
+  {
+    "case_id": "bus-missing_release-gap0",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-missing_release-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-missing_release-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "4fef48e31280b6e3a9e00587be1d1d68468280b8cdc3121b822ddbda561d89fa"
+  },
+  {
+    "case_id": "bus-missing_release-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-missing_release-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-missing_release-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "400807ecf371f69b451ffe18edf9dbe270089f5b8ee38ce2090544dcecf35c24"
+  },
+  {
+    "case_id": "bus-missing_release-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-missing_release-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-missing_release-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "f3e1c294ffd036053fbf4f9f9e6543978d91373279ad2d193300fcca0f29bb0a"
+  },
+  {
+    "case_id": "bus-wrong_release-gap0",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-wrong_release-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-wrong_release-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "32377821b6e65cef815f549a398d5916aec6a7f3b4090e6046bfefd6949f11ea"
+  },
+  {
+    "case_id": "bus-wrong_release-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-wrong_release-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-wrong_release-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "9c8bd9363c69d545ca3269d642d580c193cc83aad91d7e02b6a94a9cda4c00f4"
+  },
+  {
+    "case_id": "bus-wrong_release-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-wrong_release-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-wrong_release-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "2b545cb3fc519cda6d86fd6ad2f404077e02375931119f6c85895eca73ae23bc"
+  },
+  {
+    "case_id": "bus-order_violation-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-order_violation-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-order_violation-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "6b7c3d897a176cab4c437d2780580a5236c55e10038fb52f8ef309a9783f468c"
+  },
+  {
+    "case_id": "bus-order_violation-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-order_violation-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-order_violation-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "09c2e89c6ba86ac02408a43b0cb5b035c1d39280858debd4d8787a3db093666c"
+  },
+  {
+    "case_id": "bus-order_violation-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-order_violation-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-order_violation-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "b3b560b94e027d5040f56c66dd779ecf2b3b6cb7150eb41b03f024ea4333b604"
+  },
+  {
+    "case_id": "bus-multi_partial-gap0",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-multi_partial-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-multi_partial-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "bc7ff14bea42db7cc9611a6c971b5a74ded9af44c6e32443edd1b4f437836daa"
+  },
+  {
+    "case_id": "bus-multi_partial-gap2",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-multi_partial-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-multi_partial-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "3f486942b4baad2dbf6ac8ed76976ca432d61770458aa220a595aa7c63652c00"
+  },
+  {
+    "case_id": "bus-multi_partial-gap6",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-multi_partial-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-multi_partial-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "d7b1ec477e8f82caa91050d9792c312a02cab63d6f54a814a1d1952032089456"
+  },
+  {
+    "case_id": "bus-multi_all_released-gap0",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-multi_all_released-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-multi_all_released-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "d0f241915d5ccab646010b1a49e47b9c6d3757f095ade542e59b4e8b9c09f5c4"
+  },
+  {
+    "case_id": "bus-multi_all_released-gap2",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-multi_all_released-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-multi_all_released-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "aed6a48520cb0be1d262e7141a84c7da23176f7707e85e6b8350b8a3dd278f95"
+  },
+  {
+    "case_id": "bus-multi_all_released-gap6",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/bus-multi_all_released-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/bus-multi_all_released-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "a94a587569af574747cce204eea7f9558be8e710a85aa7c8c88b390e7ec631a1"
+  },
+  {
+    "case_id": "obstacle-held_local_conflict-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-held_local_conflict-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-held_local_conflict-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "f8018315cb2dea08c6c02b6cbc4d4518f4247f295e62a7582f2dfbdbdbbd2c35"
+  },
+  {
+    "case_id": "obstacle-held_local_conflict-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-held_local_conflict-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-held_local_conflict-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "1f1b2d472aba7993729e578d2dfb6c48b895e84231ee81c021dcba8c66692672"
+  },
+  {
+    "case_id": "obstacle-held_local_conflict-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-held_local_conflict-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-held_local_conflict-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "ced205367abdd9a77feb30024ce8e73ed5029ccce3df1e329c0bb19e003278f9"
+  },
+  {
+    "case_id": "obstacle-held_memory_conflict-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-held_memory_conflict-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-held_memory_conflict-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "34f1991e398e45131026ad4916bb9a521a54c55fffc20b25ec08b2e149ddda3d"
+  },
+  {
+    "case_id": "obstacle-held_memory_conflict-gap2",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-held_memory_conflict-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-held_memory_conflict-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "50aab215ff34d912efc8a05fa9bb438bb163bbd87518733cff2de3a073cd0d60"
+  },
+  {
+    "case_id": "obstacle-held_memory_conflict-gap6",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-held_memory_conflict-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-held_memory_conflict-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "9ee6d1c012193c16a3db6fde2de2d99629df06cff282f2b71de3afbe16f05da3"
+  },
+  {
+    "case_id": "obstacle-released_normal-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-released_normal-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-released_normal-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "4dfd1b8d96391a6bf01b9cd32392e1d9d73ed709c0166624e00dd52176858e0f"
+  },
+  {
+    "case_id": "obstacle-released_normal-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-released_normal-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-released_normal-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "38e8fa29f1b1bdd2695f8cf6bb5050f2990309657105a85c5adce9063f97c724"
+  },
+  {
+    "case_id": "obstacle-released_normal-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-released_normal-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-released_normal-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "7c6600b4e00057b840c1422d937e22327f2e4a95d0f519fd066a9f2e7dcc3fc1"
+  },
+  {
+    "case_id": "obstacle-missing_release-gap0",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-missing_release-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-missing_release-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "f1de6d3c6a3c5da0d8f4087b13b9a4be327d6ceb5bae4148e357135e84c135f6"
+  },
+  {
+    "case_id": "obstacle-missing_release-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-missing_release-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-missing_release-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "c6cb53b33ad749645808e150b6ade274dcad8665edccf3ffd6987c2188261430"
+  },
+  {
+    "case_id": "obstacle-missing_release-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-missing_release-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-missing_release-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "6ad26b1160e05bd2db95e3c449ce64cde20dd50191fa664a0570955cef4adddb"
+  },
+  {
+    "case_id": "obstacle-wrong_release-gap0",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-wrong_release-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-wrong_release-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "d8f53a21d6cfb35adff14a6e4c190f020ca1bf6a699e1d2e3475db8f4524fcd3"
+  },
+  {
+    "case_id": "obstacle-wrong_release-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-wrong_release-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-wrong_release-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "cf899b4cb214202596243a00f2529d14cf50f86e1dfe706b984943836b759cea"
+  },
+  {
+    "case_id": "obstacle-wrong_release-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-wrong_release-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-wrong_release-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "03ce08de8b5f3b200946ca776e8faf4da14b51d04a517abc68740bdd3448094f"
+  },
+  {
+    "case_id": "obstacle-order_violation-gap0",
+    "python_reasons": [],
+    "original_counterexample_reasons": [],
+    "terminal_reasons": [],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-order_violation-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-order_violation-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "182310a437bb37975bb6d077ae32594ba5bbc6b14f244424b01dd52b0e36d693"
+  },
+  {
+    "case_id": "obstacle-order_violation-gap2",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-order_violation-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-order_violation-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "556911d9657d93f1accda478add8665284c66e7d4e6de68f6700964d6a4a0a2c"
+  },
+  {
+    "case_id": "obstacle-order_violation-gap6",
+    "python_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "terminal_reasons": [
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-order_violation-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-order_violation-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "bda4c8988b5241f9a38cc501ec6237ece1918c3a680483541d1916b21c4ce051"
+  },
+  {
+    "case_id": "obstacle-multi_partial-gap0",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-multi_partial-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-multi_partial-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "9fc98140062c19e2714a395ab6162b6410da24bff0e2f9a50dab61169485c08d"
+  },
+  {
+    "case_id": "obstacle-multi_partial-gap2",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-multi_partial-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-multi_partial-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "d599a35e02610445c5007a74132a567e8ae11666afb5a83af14f431d5e0cee01"
+  },
+  {
+    "case_id": "obstacle-multi_partial-gap6",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-multi_partial-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-multi_partial-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "aa805fef25902dd1f79d025b635303f06d06e7a216964329a4b679215e827a8a"
+  },
+  {
+    "case_id": "obstacle-multi_all_released-gap0",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-multi_all_released-gap0/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-multi_all_released-gap0/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "5f1c421d7c15c2bc99021bf19bb85d5c893c98341f6f09e2062e0a29fac8144a"
+  },
+  {
+    "case_id": "obstacle-multi_all_released-gap2",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-multi_all_released-gap2/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-multi_all_released-gap2/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "8245ae42f237a8afce5d896d156bb603742f0d6335d04f5efa86712e3fa9cac3"
+  },
+  {
+    "case_id": "obstacle-multi_all_released-gap6",
+    "python_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "original_counterexample_reasons": [
+      "OVERLAPPING_OBLIGATION"
+    ],
+    "terminal_reasons": [
+      "OVERLAPPING_OBLIGATION",
+      "ACTIVE_RELEASE_UNKNOWN"
+    ],
+    "matches_python": true,
+    "command": [
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc/runtime/solvers/uppaal-5.0.0-linux64/bin/verifyta",
+      "-q",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/controlled-scenarios-2026-10-01-001/uppaal/obstacle-multi_all_released-gap6/model.xml",
+      "/home/jinhyun/prj_ws/prj_jin/guardsynth-cc-worktrees/sequential-coc-review-20260930/artifacts/projects/sequential-coc-verification/public/kiee-review-revision-001/terminal-evidence-2026-10-01-001/obstacle-multi_all_released-gap6/terminal.q"
+    ],
+    "returncode": 0,
+    "source_model_sha256": "423ffb3733756b1bfa40254faa82f7bc8a4b224b2a7aa30ac5b2b9ab877d0eff"
+  }
+]

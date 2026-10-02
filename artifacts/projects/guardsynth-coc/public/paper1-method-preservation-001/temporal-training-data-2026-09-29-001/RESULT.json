@@ -1,0 +1,66 @@
+{
+  "status": "DATA_READY_NOT_TRAINED",
+  "version": "temporal-training-expansion-v0.1",
+  "splits": {
+    "train": {
+      "paired_rows": 960,
+      "rows_per_arm": 960,
+      "unique_images": 40,
+      "scene_candidate_sets": 480,
+      "label_counts": {
+        "B": 240,
+        "C": 240,
+        "D": 240,
+        "A": 240
+      },
+      "unique_model_inputs": {
+        "P0": 480,
+        "P1": 960,
+        "P2": 960
+      }
+    },
+    "validation": {
+      "paired_rows": 240,
+      "rows_per_arm": 240,
+      "unique_images": 10,
+      "scene_candidate_sets": 120,
+      "label_counts": {
+        "B": 60,
+        "C": 60,
+        "D": 60,
+        "A": 60
+      },
+      "unique_model_inputs": {
+        "P0": 120,
+        "P1": 240,
+        "P2": 240
+      }
+    },
+    "test": {
+      "paired_rows": 240,
+      "rows_per_arm": 240,
+      "unique_images": 10,
+      "scene_candidate_sets": 120,
+      "label_counts": {
+        "B": 60,
+        "C": 60,
+        "D": 60,
+        "A": 60
+      },
+      "unique_model_inputs": {
+        "P0": 120,
+        "P1": 240,
+        "P2": 240
+      }
+    }
+  },
+  "paired_rows": 1440,
+  "arm_rows": 4320,
+  "unique_storyboards": 60,
+  "prior_pixel_overlap": 0,
+  "cross_split_pixel_overlap": 0,
+  "action_bindings_checked": 5760,
+  "distinct_smt_assignments": 960,
+  "eblc_environment_disagreements": 0,
+  "optimizer_updates": 0
+}
