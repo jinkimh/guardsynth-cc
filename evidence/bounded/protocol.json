@@ -1,0 +1,47 @@
+{
+  "project_id": "sequential-coc-verification",
+  "test_kind": "BOUNDED_UNSELECTED_FORMULA_IMPLEMENTATION_CONFORMANCE",
+  "profiles": [
+    {
+      "name": "condition-k1-n3",
+      "first_alphabet": 72,
+      "next_alphabet": 72,
+      "maximum_length": 3,
+      "case_count": 378504
+    },
+    {
+      "name": "condition-k2-n3",
+      "first_alphabet": 324,
+      "next_alphabet": 324,
+      "maximum_length": 3,
+      "case_count": 34117524
+    },
+    {
+      "name": "boundary-k1-n3",
+      "first_alphabet": 24,
+      "next_alphabet": 120,
+      "maximum_length": 3,
+      "case_count": 348504
+    },
+    {
+      "name": "boundary-k2-n2",
+      "first_alphabet": 108,
+      "next_alphabet": 1836,
+      "maximum_length": 2,
+      "case_count": 198396
+    }
+  ],
+  "actions": "STOP, WAIT, GO, YIELD; YIELD maps to non-GO STOP in the frozen IR",
+  "alphabet": "creation=none/each obligation, evidence per condition=U/F/T; condition profile additionally precondition=U/F/T; boundary first event=no boundary, later=no boundary or all obligations assigned VERIFIED-point/VERIFIED-persistent/ENDED/UNCERTAIN",
+  "oracle": "Prefix quantification and backwards evidence/creation searches, in formula_oracle.hpp; no monitor step or state-update function is shared",
+  "comparison": "Final active/known/linked state, cumulative bad/missing and both first event/obligation records; every shorter prefix is itself included",
+  "scope": "Encoded deterministic step semantics, not XML frontend acceptance, automata search, natural extraction or physical validity; P2 has no explicit release-command input; P4 handled as separate sticky-release processing fault",
+  "independence": "Same research authorship; no independent semantic gold. Finite Cartesian product has no output-based filtering.",
+  "failure_policy": "Every disagreement is saved; no case removal or label correction",
+  "fault_control": {
+    "profile": "condition-k1",
+    "maximum_length": 2,
+    "cases": 5256,
+    "mutation": "only active[j]=false on known true is changed to active[j]=true"
+  }
+}

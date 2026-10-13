@@ -1,0 +1,1310 @@
+[
+  {
+    "case_id": "pedestrian-released_normal-gap2",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "pedestrian-released_normal-gap6",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "pedestrian-multi_partial-gap0",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "pedestrian-multi_partial-gap0:e2",
+      "issue_event_id": "pedestrian-multi_partial-gap0:e2"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION"
+      ]
+    }
+  },
+  {
+    "case_id": "pedestrian-multi_partial-gap2",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "pedestrian-multi_partial-gap2:e4",
+      "issue_event_id": "pedestrian-multi_partial-gap2:e4"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "pedestrian-multi_partial-gap6",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "pedestrian-multi_partial-gap6:e8",
+      "issue_event_id": "pedestrian-multi_partial-gap6:e8"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "pedestrian-multi_all_released-gap0",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION"
+      ]
+    }
+  },
+  {
+    "case_id": "pedestrian-multi_all_released-gap2",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "pedestrian-multi_all_released-gap6",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "cyclist-released_normal-gap2",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "cyclist-released_normal-gap6",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "cyclist-multi_partial-gap0",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "cyclist-multi_partial-gap0:e2",
+      "issue_event_id": "cyclist-multi_partial-gap0:e2"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION"
+      ]
+    }
+  },
+  {
+    "case_id": "cyclist-multi_partial-gap2",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "cyclist-multi_partial-gap2:e4",
+      "issue_event_id": "cyclist-multi_partial-gap2:e4"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "cyclist-multi_partial-gap6",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "cyclist-multi_partial-gap6:e8",
+      "issue_event_id": "cyclist-multi_partial-gap6:e8"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "cyclist-multi_all_released-gap0",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION"
+      ]
+    }
+  },
+  {
+    "case_id": "cyclist-multi_all_released-gap2",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "cyclist-multi_all_released-gap6",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "lead_vehicle-released_normal-gap2",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "lead_vehicle-released_normal-gap6",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "lead_vehicle-multi_partial-gap0",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "lead_vehicle-multi_partial-gap0:e2",
+      "issue_event_id": "lead_vehicle-multi_partial-gap0:e2"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION"
+      ]
+    }
+  },
+  {
+    "case_id": "lead_vehicle-multi_partial-gap2",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "lead_vehicle-multi_partial-gap2:e4",
+      "issue_event_id": "lead_vehicle-multi_partial-gap2:e4"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "lead_vehicle-multi_partial-gap6",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "lead_vehicle-multi_partial-gap6:e8",
+      "issue_event_id": "lead_vehicle-multi_partial-gap6:e8"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "lead_vehicle-multi_all_released-gap0",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION"
+      ]
+    }
+  },
+  {
+    "case_id": "lead_vehicle-multi_all_released-gap2",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "lead_vehicle-multi_all_released-gap6",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "cross_traffic-released_normal-gap2",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "cross_traffic-released_normal-gap6",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "cross_traffic-multi_partial-gap0",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "cross_traffic-multi_partial-gap0:e2",
+      "issue_event_id": "cross_traffic-multi_partial-gap0:e2"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION"
+      ]
+    }
+  },
+  {
+    "case_id": "cross_traffic-multi_partial-gap2",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "cross_traffic-multi_partial-gap2:e4",
+      "issue_event_id": "cross_traffic-multi_partial-gap2:e4"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "cross_traffic-multi_partial-gap6",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "cross_traffic-multi_partial-gap6:e8",
+      "issue_event_id": "cross_traffic-multi_partial-gap6:e8"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "cross_traffic-multi_all_released-gap0",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION"
+      ]
+    }
+  },
+  {
+    "case_id": "cross_traffic-multi_all_released-gap2",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "cross_traffic-multi_all_released-gap6",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "bus-released_normal-gap2",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "bus-released_normal-gap6",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "bus-multi_partial-gap0",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "bus-multi_partial-gap0:e2",
+      "issue_event_id": "bus-multi_partial-gap0:e2"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION"
+      ]
+    }
+  },
+  {
+    "case_id": "bus-multi_partial-gap2",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "bus-multi_partial-gap2:e4",
+      "issue_event_id": "bus-multi_partial-gap2:e4"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "bus-multi_partial-gap6",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "bus-multi_partial-gap6:e8",
+      "issue_event_id": "bus-multi_partial-gap6:e8"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "bus-multi_all_released-gap0",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION"
+      ]
+    }
+  },
+  {
+    "case_id": "bus-multi_all_released-gap2",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "bus-multi_all_released-gap6",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "obstacle-released_normal-gap2",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "obstacle-released_normal-gap6",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "obstacle-multi_partial-gap0",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "obstacle-multi_partial-gap0:e2",
+      "issue_event_id": "obstacle-multi_partial-gap0:e2"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION"
+      ]
+    }
+  },
+  {
+    "case_id": "obstacle-multi_partial-gap2",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "obstacle-multi_partial-gap2:e4",
+      "issue_event_id": "obstacle-multi_partial-gap2:e4"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "obstacle-multi_partial-gap6",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "reason": "UNRELEASED_OBLIGATION",
+      "obligation_id": "C",
+      "first_event_id": "obstacle-multi_partial-gap6:e8",
+      "issue_event_id": "obstacle-multi_partial-gap6:e8"
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "obstacle-multi_all_released-gap0",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION"
+      ]
+    }
+  },
+  {
+    "case_id": "obstacle-multi_all_released-gap2",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  },
+  {
+    "case_id": "obstacle-multi_all_released-gap6",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "reason": null,
+      "obligation_id": null,
+      "first_event_id": null,
+      "issue_event_id": null
+    },
+    "actual": {
+      "verdict": "UNKNOWN",
+      "contradiction_types": [],
+      "first_event_id": null,
+      "state_trace": [
+        "INACTIVE",
+        "SATISFIED_WAIT_RELEASE",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "UNKNOWN",
+        "RELEASED"
+      ],
+      "unknown_reasons": [
+        "OVERLAPPING_OBLIGATION",
+        "ACTIVE_RELEASE_UNKNOWN"
+      ]
+    }
+  }
+]

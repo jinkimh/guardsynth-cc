@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETED",
+  "case_count": 81,
+  "solver_model_runs": 162,
+  "expected_counts": {
+    "UNKNOWN": 29,
+    "CONTRADICTION": 44,
+    "CONSISTENT": 8
+  },
+  "carry_verdict_matches": 81,
+  "carry_issue_matches": 81,
+  "reset_verdict_matches": 14,
+  "reset_prediction_counts": {
+    "CONSISTENT": 75,
+    "CONTRADICTION": 3,
+    "UNKNOWN": 3
+  },
+  "natural_scene_semantic_cases_verified": 0,
+  "evidence_level": "AUTHORED_CROSS_SCENE_FEASIBILITY_NOT_INDEPENDENT_ACCURACY"
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "case_id": "pedestrian-multi_partial-gap2",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "pedestrian-multi_partial-gap6",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "pedestrian-multi_all_released-gap2",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "pedestrian-multi_all_released-gap6",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "cyclist-multi_partial-gap2",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "cyclist-multi_partial-gap6",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "cyclist-multi_all_released-gap2",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "cyclist-multi_all_released-gap6",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "lead_vehicle-multi_partial-gap2",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "lead_vehicle-multi_partial-gap6",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "lead_vehicle-multi_all_released-gap2",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "lead_vehicle-multi_all_released-gap6",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "cross_traffic-multi_partial-gap2",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "cross_traffic-multi_partial-gap6",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "cross_traffic-multi_all_released-gap2",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "cross_traffic-multi_all_released-gap6",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "bus-multi_partial-gap2",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "bus-multi_partial-gap6",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "bus-multi_all_released-gap2",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "bus-multi_all_released-gap6",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "obstacle-multi_partial-gap2",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "obstacle-multi_partial-gap6",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "obstacle-multi_all_released-gap2",
+    "fields": [
+      "unknown_reasons"
+    ]
+  },
+  {
+    "case_id": "obstacle-multi_all_released-gap6",
+    "fields": [
+      "unknown_reasons"
+    ]
+  }
+]

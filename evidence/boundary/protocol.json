@@ -1,0 +1,38 @@
+{
+  "project_id": "sequential-coc-verification",
+  "domains": [
+    "pedestrian",
+    "signal",
+    "obstacle"
+  ],
+  "case_count": 81,
+  "joint_vectors": 27,
+  "scene_counts": [
+    2,
+    3
+  ],
+  "lifecycle_variants": {
+    "held_across_boundary": "CONTRADICTION",
+    "released_next_scene": "CONSISTENT",
+    "missing_release": "UNKNOWN",
+    "wrong_entity_release": "UNKNOWN",
+    "identity_uncertain": "UNKNOWN",
+    "evidence_expired": "UNKNOWN",
+    "scope_ended": "CONSISTENT",
+    "reactivated_blocked": "CONTRADICTION",
+    "reactivated_unknown": "UNKNOWN"
+  },
+  "queries": [
+    "A[] not bad",
+    "A[] not missing",
+    "A<> Observer.Done",
+    "E<> Observer.Done && bad",
+    "E<> Observer.Done && missing"
+  ],
+  "expected_labels": "AUTHORED_BEFORE_SOLVER_NO_CASE_FILTERING",
+  "human_gold": false,
+  "independent_external_test": false,
+  "scope": "Supplied stop-until predicates and GO; not arbitrary joint constraint satisfiability or physical safety.",
+  "boundary_policy": "Carry only on supplied identity/applicability; uncertain links retain an unresolved obligation and reject guessed release evidence; ended scopes discard; point evidence expires.",
+  "baseline": "Same model and inputs, discard active obligations at every scene boundary."
+}

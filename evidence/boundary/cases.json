@@ -1,0 +1,5196 @@
+[
+  {
+    "case_id": "joint-2scenes-u-u-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-u-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-u-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-u-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-u-u-u:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-u-u-u:e3",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      -1,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-u-u-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-u-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-u-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-u-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-u-u-f:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-u-u-f:e3",
+      "obligation_id": "obstacle"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      -1,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-u-u-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-u-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-u-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-u-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-u-u-t:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-u-u-t:e3",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      -1,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-u-f-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-f-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-f-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-f-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "signal": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-u-f-u:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-u-f-u:e3",
+      "obligation_id": "signal"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      0,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-u-f-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-f-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-f-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-f-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "signal": 0,
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-u-f-f:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-u-f-f:e3",
+      "obligation_id": "signal"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      0,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-u-f-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-f-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-f-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-f-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "signal": 0,
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-u-f-t:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-u-f-t:e3",
+      "obligation_id": "signal"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      0,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-u-t-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-t-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-t-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-t-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "signal": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-u-t-u:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-u-t-u:e3",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      1,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-u-t-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-t-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-t-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-t-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "signal": 1,
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-u-t-f:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-u-t-f:e3",
+      "obligation_id": "obstacle"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      1,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-u-t-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-t-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-t-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-u-t-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "signal": 1,
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-u-t-t:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-u-t-t:e3",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      1,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-f-u-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-u-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-u-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-u-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-f-u-u:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-u-u:e3",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      -1,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-f-u-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-u-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-u-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-u-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0,
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-f-u-f:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-u-f:e3",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      -1,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-f-u-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-u-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-u-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-u-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0,
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-f-u-t:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-u-t:e3",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      -1,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-f-f-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-f-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-f-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-f-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0,
+          "signal": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-f-f-u:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-f-u:e3",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-f-f-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-f-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-f-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-f-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0,
+          "signal": 0,
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-f-f-f:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-f-f:e3",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-f-f-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-f-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-f-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-f-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0,
+          "signal": 0,
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-f-f-t:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-f-t:e3",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-f-t-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-t-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-t-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-t-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0,
+          "signal": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-f-t-u:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-t-u:e3",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      1,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-f-t-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-t-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-t-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-t-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0,
+          "signal": 1,
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-f-t-f:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-t-f:e3",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-f-t-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-t-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-t-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-f-t-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0,
+          "signal": 1,
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-f-t-t:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-t-t:e3",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-t-u-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-u-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-u-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-u-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-t-u-u:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-t-u-u:e3",
+      "obligation_id": "signal"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      -1,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-t-u-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-u-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-u-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-u-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1,
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-t-u-f:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-t-u-f:e3",
+      "obligation_id": "obstacle"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      -1,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-t-u-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-u-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-u-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-u-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1,
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-t-u-t:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-t-u-t:e3",
+      "obligation_id": "signal"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      -1,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-t-f-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-f-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-f-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-f-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1,
+          "signal": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-t-f-u:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-t-f-u:e3",
+      "obligation_id": "signal"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      0,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-t-f-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-f-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-f-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-f-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1,
+          "signal": 0,
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-t-f-f:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-t-f-f:e3",
+      "obligation_id": "signal"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-t-f-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-f-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-f-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-f-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1,
+          "signal": 0,
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-t-f-t:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-t-f-t:e3",
+      "obligation_id": "signal"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-t-t-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-t-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-t-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-t-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1,
+          "signal": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-t-t-u:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-t-t-u:e3",
+      "obligation_id": "obstacle"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      1,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-t-t-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-t-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-t-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-t-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1,
+          "signal": 1,
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-t-t-f:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-t-t-f:e3",
+      "obligation_id": "obstacle"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-2scenes-t-t-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-t-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-t-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-2scenes-t-t-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1,
+          "signal": 1,
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-2scenes-t-t-t:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-u-u-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-u-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-u-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-u-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-u-u:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-u-u:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-u-u-u:e4",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      -1,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-u-u-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-u-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-u-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-u-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-u-f:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-u-f:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-u-u-f:e4",
+      "obligation_id": "obstacle"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      -1,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-u-u-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-u-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-u-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-u-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-u-t:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-u-t:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-u-u-t:e4",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      -1,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-u-f-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-f-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-f-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-f-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-f-u:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "signal": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-f-u:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-u-f-u:e4",
+      "obligation_id": "signal"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      0,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-u-f-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-f-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-f-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-f-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-f-f:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "signal": 0,
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-f-f:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-u-f-f:e4",
+      "obligation_id": "signal"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      0,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-u-f-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-f-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-f-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-f-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-f-t:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "signal": 0,
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-f-t:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-u-f-t:e4",
+      "obligation_id": "signal"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      0,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-u-t-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-t-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-t-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-t-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-t-u:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "signal": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-t-u:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-u-t-u:e4",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      1,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-u-t-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-t-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-t-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-t-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-t-f:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "signal": 1,
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-t-f:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-u-t-f:e4",
+      "obligation_id": "obstacle"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      1,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-u-t-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-t-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-t-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-u-t-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-t-t:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "signal": 1,
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-u-t-t:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-u-t-t:e4",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      -1,
+      1,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-f-u-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-u-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-u-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-u-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-u-u:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-u-u:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-u-u:e4",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      -1,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-f-u-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-u-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-u-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-u-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-u-f:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0,
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-u-f:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-u-f:e4",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      -1,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-f-u-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-u-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-u-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-u-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-u-t:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0,
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-u-t:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-u-t:e4",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      -1,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-f-f-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-f-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-f-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-f-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-f-u:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0,
+          "signal": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-f-u:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-f-u:e4",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      0,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-f-f-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-f-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-f-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-f-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-f-f:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0,
+          "signal": 0,
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-f-f:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-f-f:e4",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-f-f-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-f-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-f-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-f-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-f-t:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0,
+          "signal": 0,
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-f-t:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-f-t:e4",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      0,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-f-t-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-t-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-t-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-t-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-t-u:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0,
+          "signal": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-t-u:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-t-u:e4",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      1,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-f-t-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-t-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-t-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-t-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-t-f:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0,
+          "signal": 1,
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-t-f:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-t-f:e4",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      1,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-f-t-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-t-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-t-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-f-t-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-t-t:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0,
+          "signal": 1,
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-f-t-t:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-t-t:e4",
+      "obligation_id": "pedestrian"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      0,
+      1,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-t-u-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-u-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-u-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-u-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-u-u:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-u-u:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-t-u-u:e4",
+      "obligation_id": "signal"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      -1,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-t-u-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-u-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-u-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-u-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-u-f:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1,
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-u-f:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-t-u-f:e4",
+      "obligation_id": "obstacle"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      -1,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-t-u-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-u-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-u-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-u-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-u-t:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1,
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-u-t:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-t-u-t:e4",
+      "obligation_id": "signal"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      -1,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-t-f-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-f-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-f-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-f-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-f-u:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1,
+          "signal": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-f-u:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-t-f-u:e4",
+      "obligation_id": "signal"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      0,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-t-f-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-f-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-f-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-f-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-f-f:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1,
+          "signal": 0,
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-f-f:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-t-f-f:e4",
+      "obligation_id": "signal"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-t-f-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-f-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-f-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-f-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-f-t:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1,
+          "signal": 0,
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-f-t:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-t-f-t:e4",
+      "obligation_id": "signal"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      0,
+      1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-t-t-u",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-t-u:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-t-u:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-t-u:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-t-u:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1,
+          "signal": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-t-u:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-t-t-u:e4",
+      "obligation_id": "obstacle"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      1,
+      -1
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-t-t-f",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-t-f:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-t-f:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-t-f:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-t-f:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1,
+          "signal": 1,
+          "obstacle": 0
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-t-f:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-t-t-f:e4",
+      "obligation_id": "obstacle"
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      1,
+      0
+    ]
+  },
+  {
+    "case_id": "joint-3scenes-t-t-t",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-t-t:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-t-t:e1"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "joint-3scenes-t-t-t:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-t-t:e3"
+      },
+      {
+        "scene_id": "authored-scene-c",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1,
+          "signal": 1,
+          "obstacle": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          },
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "joint-3scenes-t-t-t:e4"
+      }
+    ],
+    "expected": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null
+    },
+    "group": "joint_release_vectors",
+    "release_vector": [
+      1,
+      1,
+      1
+    ]
+  },
+  {
+    "case_id": "pedestrian-held-across-boundary",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {
+          "pedestrian": 0
+        },
+        "boundary": {},
+        "event_id": "pedestrian-held-across-boundary:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": true
+          }
+        },
+        "event_id": "pedestrian-held-across-boundary:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "pedestrian-held-across-boundary:e1",
+      "obligation_id": "pedestrian"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "pedestrian",
+    "variant": "held_across_boundary"
+  },
+  {
+    "case_id": "pedestrian-released-next-scene",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {
+          "pedestrian": 0
+        },
+        "boundary": {},
+        "event_id": "pedestrian-released-next-scene:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "pedestrian-released-next-scene:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null
+    },
+    "group": "boundary_lifecycle",
+    "domain": "pedestrian",
+    "variant": "released_next_scene"
+  },
+  {
+    "case_id": "pedestrian-missing-release",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "pedestrian-missing-release:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "pedestrian-missing-release:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "pedestrian-missing-release:e1",
+      "obligation_id": "pedestrian"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "pedestrian",
+    "variant": "missing_release"
+  },
+  {
+    "case_id": "pedestrian-wrong-entity-release",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "pedestrian-wrong-entity-release:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian:different-target": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "pedestrian-wrong-entity-release:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "pedestrian-wrong-entity-release:e1",
+      "obligation_id": "pedestrian"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "pedestrian",
+    "variant": "wrong_entity_release"
+  },
+  {
+    "case_id": "pedestrian-identity-uncertain",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {
+          "pedestrian": 0
+        },
+        "boundary": {},
+        "event_id": "pedestrian-identity-uncertain:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1
+        },
+        "boundary": {
+          "pedestrian": {
+            "status": "UNCERTAIN",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "pedestrian-identity-uncertain:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "pedestrian-identity-uncertain:e1",
+      "obligation_id": "pedestrian"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "pedestrian",
+    "variant": "identity_uncertain"
+  },
+  {
+    "case_id": "pedestrian-evidence-expired",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {
+          "pedestrian": 0
+        },
+        "boundary": {},
+        "event_id": "pedestrian-evidence-expired:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "pedestrian-evidence-expired:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "pedestrian-evidence-expired:e1",
+      "obligation_id": "pedestrian"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "pedestrian",
+    "variant": "evidence_expired"
+  },
+  {
+    "case_id": "pedestrian-scope-ended",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {
+          "pedestrian": 0
+        },
+        "boundary": {},
+        "event_id": "pedestrian-scope-ended:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "ENDED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "pedestrian-scope-ended:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null
+    },
+    "group": "boundary_lifecycle",
+    "domain": "pedestrian",
+    "variant": "scope_ended"
+  },
+  {
+    "case_id": "pedestrian-reactivated-blocked",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {
+          "pedestrian": 0
+        },
+        "boundary": {},
+        "event_id": "pedestrian-reactivated-blocked:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1
+        },
+        "boundary": {},
+        "event_id": "pedestrian-reactivated-blocked:e1"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "pedestrian-reactivated-blocked:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 0
+        },
+        "boundary": {},
+        "event_id": "pedestrian-reactivated-blocked:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "pedestrian-reactivated-blocked:e3",
+      "obligation_id": "pedestrian"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "pedestrian",
+    "variant": "reactivated_blocked"
+  },
+  {
+    "case_id": "pedestrian-reactivated-unknown",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {
+          "pedestrian": 0
+        },
+        "boundary": {},
+        "event_id": "pedestrian-reactivated-unknown:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {
+          "pedestrian": 1
+        },
+        "boundary": {},
+        "event_id": "pedestrian-reactivated-unknown:e1"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "STOP",
+        "creates": "pedestrian",
+        "evidence": {},
+        "boundary": {
+          "pedestrian": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "pedestrian-reactivated-unknown:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {},
+        "event_id": "pedestrian-reactivated-unknown:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "pedestrian-reactivated-unknown:e3",
+      "obligation_id": "pedestrian"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "pedestrian",
+    "variant": "reactivated_unknown"
+  },
+  {
+    "case_id": "signal-held-across-boundary",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {
+          "signal": 0
+        },
+        "boundary": {},
+        "event_id": "signal-held-across-boundary:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": true
+          }
+        },
+        "event_id": "signal-held-across-boundary:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "signal-held-across-boundary:e1",
+      "obligation_id": "signal"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "signal",
+    "variant": "held_across_boundary"
+  },
+  {
+    "case_id": "signal-released-next-scene",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {
+          "signal": 0
+        },
+        "boundary": {},
+        "event_id": "signal-released-next-scene:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "signal": 1
+        },
+        "boundary": {
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "signal-released-next-scene:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null
+    },
+    "group": "boundary_lifecycle",
+    "domain": "signal",
+    "variant": "released_next_scene"
+  },
+  {
+    "case_id": "signal-missing-release",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "signal-missing-release:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "signal-missing-release:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "signal-missing-release:e1",
+      "obligation_id": "signal"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "signal",
+    "variant": "missing_release"
+  },
+  {
+    "case_id": "signal-wrong-entity-release",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "signal-wrong-entity-release:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "signal:different-target": 1
+        },
+        "boundary": {
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "signal-wrong-entity-release:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "signal-wrong-entity-release:e1",
+      "obligation_id": "signal"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "signal",
+    "variant": "wrong_entity_release"
+  },
+  {
+    "case_id": "signal-identity-uncertain",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {
+          "signal": 0
+        },
+        "boundary": {},
+        "event_id": "signal-identity-uncertain:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "signal": 1
+        },
+        "boundary": {
+          "signal": {
+            "status": "UNCERTAIN",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "signal-identity-uncertain:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "signal-identity-uncertain:e1",
+      "obligation_id": "signal"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "signal",
+    "variant": "identity_uncertain"
+  },
+  {
+    "case_id": "signal-evidence-expired",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {
+          "signal": 0
+        },
+        "boundary": {},
+        "event_id": "signal-evidence-expired:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "signal-evidence-expired:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "signal-evidence-expired:e1",
+      "obligation_id": "signal"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "signal",
+    "variant": "evidence_expired"
+  },
+  {
+    "case_id": "signal-scope-ended",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {
+          "signal": 0
+        },
+        "boundary": {},
+        "event_id": "signal-scope-ended:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "signal": {
+            "status": "ENDED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "signal-scope-ended:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null
+    },
+    "group": "boundary_lifecycle",
+    "domain": "signal",
+    "variant": "scope_ended"
+  },
+  {
+    "case_id": "signal-reactivated-blocked",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {
+          "signal": 0
+        },
+        "boundary": {},
+        "event_id": "signal-reactivated-blocked:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {
+          "signal": 1
+        },
+        "boundary": {},
+        "event_id": "signal-reactivated-blocked:e1"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "signal-reactivated-blocked:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "signal": 0
+        },
+        "boundary": {},
+        "event_id": "signal-reactivated-blocked:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "signal-reactivated-blocked:e3",
+      "obligation_id": "signal"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "signal",
+    "variant": "reactivated_blocked"
+  },
+  {
+    "case_id": "signal-reactivated-unknown",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {
+          "signal": 0
+        },
+        "boundary": {},
+        "event_id": "signal-reactivated-unknown:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {
+          "signal": 1
+        },
+        "boundary": {},
+        "event_id": "signal-reactivated-unknown:e1"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "STOP",
+        "creates": "signal",
+        "evidence": {},
+        "boundary": {
+          "signal": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "signal-reactivated-unknown:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {},
+        "event_id": "signal-reactivated-unknown:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "signal-reactivated-unknown:e3",
+      "obligation_id": "signal"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "signal",
+    "variant": "reactivated_unknown"
+  },
+  {
+    "case_id": "obstacle-held-across-boundary",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {
+          "obstacle": 0
+        },
+        "boundary": {},
+        "event_id": "obstacle-held-across-boundary:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": true
+          }
+        },
+        "event_id": "obstacle-held-across-boundary:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "obstacle-held-across-boundary:e1",
+      "obligation_id": "obstacle"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "obstacle",
+    "variant": "held_across_boundary"
+  },
+  {
+    "case_id": "obstacle-released-next-scene",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {
+          "obstacle": 0
+        },
+        "boundary": {},
+        "event_id": "obstacle-released-next-scene:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "obstacle": 1
+        },
+        "boundary": {
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "obstacle-released-next-scene:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null
+    },
+    "group": "boundary_lifecycle",
+    "domain": "obstacle",
+    "variant": "released_next_scene"
+  },
+  {
+    "case_id": "obstacle-missing-release",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "obstacle-missing-release:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "obstacle-missing-release:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "obstacle-missing-release:e1",
+      "obligation_id": "obstacle"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "obstacle",
+    "variant": "missing_release"
+  },
+  {
+    "case_id": "obstacle-wrong-entity-release",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {},
+        "event_id": "obstacle-wrong-entity-release:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "obstacle:different-target": 1
+        },
+        "boundary": {
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "obstacle-wrong-entity-release:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "obstacle-wrong-entity-release:e1",
+      "obligation_id": "obstacle"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "obstacle",
+    "variant": "wrong_entity_release"
+  },
+  {
+    "case_id": "obstacle-identity-uncertain",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {
+          "obstacle": 0
+        },
+        "boundary": {},
+        "event_id": "obstacle-identity-uncertain:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "obstacle": 1
+        },
+        "boundary": {
+          "obstacle": {
+            "status": "UNCERTAIN",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "obstacle-identity-uncertain:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "obstacle-identity-uncertain:e1",
+      "obligation_id": "obstacle"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "obstacle",
+    "variant": "identity_uncertain"
+  },
+  {
+    "case_id": "obstacle-evidence-expired",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {
+          "obstacle": 0
+        },
+        "boundary": {},
+        "event_id": "obstacle-evidence-expired:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "obstacle-evidence-expired:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "obstacle-evidence-expired:e1",
+      "obligation_id": "obstacle"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "obstacle",
+    "variant": "evidence_expired"
+  },
+  {
+    "case_id": "obstacle-scope-ended",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {
+          "obstacle": 0
+        },
+        "boundary": {},
+        "event_id": "obstacle-scope-ended:e0"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {
+          "obstacle": {
+            "status": "ENDED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "obstacle-scope-ended:e1"
+      }
+    ],
+    "expected": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null
+    },
+    "group": "boundary_lifecycle",
+    "domain": "obstacle",
+    "variant": "scope_ended"
+  },
+  {
+    "case_id": "obstacle-reactivated-blocked",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {
+          "obstacle": 0
+        },
+        "boundary": {},
+        "event_id": "obstacle-reactivated-blocked:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {
+          "obstacle": 1
+        },
+        "boundary": {},
+        "event_id": "obstacle-reactivated-blocked:e1"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "obstacle-reactivated-blocked:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {
+          "obstacle": 0
+        },
+        "boundary": {},
+        "event_id": "obstacle-reactivated-blocked:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "obstacle-reactivated-blocked:e3",
+      "obligation_id": "obstacle"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "obstacle",
+    "variant": "reactivated_blocked"
+  },
+  {
+    "case_id": "obstacle-reactivated-unknown",
+    "source_kind": "AUTHORED_SYMBOLIC",
+    "events": [
+      {
+        "scene_id": "authored-scene-a",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {
+          "obstacle": 0
+        },
+        "boundary": {},
+        "event_id": "obstacle-reactivated-unknown:e0"
+      },
+      {
+        "scene_id": "authored-scene-a",
+        "action": "WAIT",
+        "creates": null,
+        "evidence": {
+          "obstacle": 1
+        },
+        "boundary": {},
+        "event_id": "obstacle-reactivated-unknown:e1"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "STOP",
+        "creates": "obstacle",
+        "evidence": {},
+        "boundary": {
+          "obstacle": {
+            "status": "VERIFIED",
+            "evidence_valid_across_boundary": false
+          }
+        },
+        "event_id": "obstacle-reactivated-unknown:e2"
+      },
+      {
+        "scene_id": "authored-scene-b",
+        "action": "GO",
+        "creates": null,
+        "evidence": {},
+        "boundary": {},
+        "event_id": "obstacle-reactivated-unknown:e3"
+      }
+    ],
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "obstacle-reactivated-unknown:e3",
+      "obligation_id": "obstacle"
+    },
+    "group": "boundary_lifecycle",
+    "domain": "obstacle",
+    "variant": "reactivated_unknown"
+  }
+]

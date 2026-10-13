@@ -1,0 +1,89 @@
+{
+  "status": "COMPLETED",
+  "profiles": [
+    {
+      "profile": "condition-k1-n3",
+      "obligations": 1,
+      "maximum_length": 3,
+      "alphabet_first": 72,
+      "alphabet_next": 72,
+      "cases": 378504,
+      "mismatches": 0,
+      "issue_mismatches": 0,
+      "state_mismatches": 0,
+      "expected_counts": [
+        137165,
+        11723,
+        229616
+      ]
+    },
+    {
+      "profile": "condition-k2-n3",
+      "obligations": 2,
+      "maximum_length": 3,
+      "alphabet_first": 324,
+      "alphabet_next": 324,
+      "cases": 34117524,
+      "mismatches": 0,
+      "issue_mismatches": 0,
+      "state_mismatches": 0,
+      "expected_counts": [
+        13450717,
+        1318580,
+        19348227
+      ]
+    },
+    {
+      "profile": "boundary-k1-n3",
+      "obligations": 1,
+      "maximum_length": 3,
+      "alphabet_first": 24,
+      "alphabet_next": 120,
+      "cases": 348504,
+      "mismatches": 0,
+      "issue_mismatches": 0,
+      "state_mismatches": 0,
+      "expected_counts": [
+        48651,
+        44657,
+        255196
+      ]
+    },
+    {
+      "profile": "boundary-k2-n2",
+      "obligations": 2,
+      "maximum_length": 2,
+      "alphabet_first": 108,
+      "alphabet_next": 1836,
+      "cases": 198396,
+      "mismatches": 0,
+      "issue_mismatches": 0,
+      "state_mismatches": 0,
+      "expected_counts": [
+        23766,
+        22182,
+        152448
+      ]
+    }
+  ],
+  "case_count": 35042928,
+  "mismatches": 0,
+  "fault_control": {
+    "profile": "p4-sticky-release-control",
+    "obligations": 1,
+    "maximum_length": 2,
+    "alphabet_first": 72,
+    "alphabet_next": 72,
+    "cases": 5256,
+    "mismatches": 1884,
+    "issue_mismatches": 19,
+    "state_mismatches": 1884,
+    "expected_counts": [
+      1269,
+      175,
+      3812
+    ]
+  },
+  "independent_semantic_gold": false,
+  "actual_uppaal_search_rerun": false
+}

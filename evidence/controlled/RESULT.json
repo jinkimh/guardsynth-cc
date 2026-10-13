@@ -1,0 +1,10 @@
+{
+  "status": "COMPLETED",
+  "case_count": 144,
+  "semantic_mismatch_count": 48,
+  "python_uppaal_mismatch_count": 24,
+  "solver_errors": [],
+  "elapsed_seconds": 13.379456281661987,
+  "natural_error_accuracy_established": false,
+  "automated_extraction_validated": false
+}

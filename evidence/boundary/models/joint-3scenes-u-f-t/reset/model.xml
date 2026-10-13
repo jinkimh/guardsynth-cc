@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<nta><declaration>const int N=5; const int K=3;
+const int actions[N]={0,0,0,1,2};
+const int creates[N]={0,1,2,-1,-1};
+const int carry[N*K]={2,2,2,2,2,2,2,2,2,0,0,0,0,0,0};
+const int persist[N*K]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+const int observations[N*K]={-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,1};
+bool active[K]; bool linked[K]; int known[K]={-1,-1,-1};
+int idx=0; bool bad=false; bool missing=false;
+int first_bad_idx=-1; int first_missing_idx=-1;
+int first_bad_obligation=-1; int first_missing_obligation=-1;
+void step() {
+  int j; int p;
+  for (j=0; j&lt;K; j++) {
+    p=idx*K+j;
+    if (carry[p] != 2) {
+      linked[j]=(carry[p] == 1);
+      if (carry[p] == 0) active[j]=false;
+      if (carry[p] != 1 || persist[p] == 0) known[j]=-1;
+    }
+  }
+  if (creates[idx] &gt;= 0) {
+    active[creates[idx]]=true;
+    linked[creates[idx]]=true;
+    known[creates[idx]]=-1;
+  }
+  for (j=0; j&lt;K; j++) {
+    p=idx*K+j;
+    if (linked[j] &amp;&amp; observations[p] &gt;= 0) known[j]=observations[p];
+    if (active[j] &amp;&amp; linked[j] &amp;&amp; known[j] == 1) active[j]=false;
+  }
+  if (actions[idx] == 2) {
+    for (j=0; j&lt;K; j++) {
+      if (active[j] &amp;&amp; linked[j] &amp;&amp; known[j] == 0) {
+        bad=true;
+        if (first_bad_idx &lt; 0) { first_bad_idx=idx; first_bad_obligation=j; }
+      }
+      if (active[j] &amp;&amp; (!linked[j] || known[j] == -1)) {
+        missing=true;
+        if (first_missing_idx &lt; 0) { first_missing_idx=idx; first_missing_obligation=j; }
+      }
+    }
+  }
+}</declaration><template><name>CrossSceneObserver</name><location id="run"><name>Run</name><committed /></location><location id="done"><name>Done</name></location><init ref="run" /><transition><source ref="run" /><target ref="run" /><label kind="guard">idx &lt; N</label><label kind="assignment">step(), idx++</label></transition><transition><source ref="run" /><target ref="done" /><label kind="guard">idx == N</label></transition></template><system>Observer=CrossSceneObserver(); system Observer;</system></nta>

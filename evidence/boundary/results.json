@@ -1,0 +1,3161 @@
+[
+  {
+    "case_id": "joint-2scenes-u-u-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-u-u-u:e3",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-u-u-u:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "b01877a491744f578615d48302a7d42e6f50c2a33f4f8ead2806959faae3b291",
+      "stdout_sha256": "394a0e04a900a52c66747b64d8b4c04ac61463b71f660df0e079b8e839b2d061",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "e8f21212e47e902a8821e925c96ca62753e23ad9b17461616299dd0a89da8cdd",
+      "stdout_sha256": "5727ef7bd156004a00fa113cceda024cf0dc942ef9a6c6d74f68987b11c950cc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-u-u-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-u-u-f:e3",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-u-u-f:e3",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "c51aeba0f68ba86724561bfd167693e8a2e7cb97d27d5476a1cca5cf9d7931f3",
+      "stdout_sha256": "66cb842841290ee17843f25b1f6655c4feb89d6f9ff71aebc6ab33fe31bdd1a6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "f1876bc82de0833755339b935dcbe8a4784de9cf478386cb26d30778b05345df",
+      "stdout_sha256": "28fe4cb034fe7ed373d8946c9813e35562ce9a709f49a0b6f22898dd64a8fd68",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-u-u-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-u-u-t:e3",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-u-u-t:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "84168c6771e650ecac3f3ea57ba01430b28d43287487bdd257d4c0b01eab56f8",
+      "stdout_sha256": "90b0b549a39b3542cf68ef658579024bff7102b9220f9de70d0ada00d41fc3fc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "3167930cbdbcbf31124c48f899a98d5c0057ec12ff5b8f71ab8466bd6772091f",
+      "stdout_sha256": "aec703cfb243853fec8e68cd28ba29113b1101fa1236b9e2b75719c2e04b44b3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-u-f-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-u-f-u:e3",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-u-f-u:e3",
+      "obligation_id": "signal",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "e7aef9c59f325813d9e13eddb09b1de9fe1311c35f3a0d4a07311fe854e628eb",
+      "stdout_sha256": "022ca460b684c83ec1a029dac0fcdfd0829a38fbd5f9ba40315486a04683880f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "97f2c7957235ae3e48a054a876ed9866be829f2cacceb36ac39dbd9c4ee6fbd2",
+      "stdout_sha256": "7ab1fe03716ce7c56ee2224f599b6ba2c7e1db4906d03dea2bbe58cbf713d743",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-u-f-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-u-f-f:e3",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-u-f-f:e3",
+      "obligation_id": "signal",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "6ea7e55fa009730f180c7f986c8d0d8cbbe8b7e9271141c165284726ef84c803",
+      "stdout_sha256": "5640f441d30d47ec51a01d8cc9dfa1697234f6bf7b07f571ba2dca5694ae0527",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "14ecfa9e7f769804744cf125f65adc35b157eeec3d3e38022f7f74d024fd087c",
+      "stdout_sha256": "c8242d2fccf52524b008e052b120d72ae28aabf0fd908f79c6be80b21a713600",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-u-f-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-u-f-t:e3",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-u-f-t:e3",
+      "obligation_id": "signal",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "796749f95f6f66cb69f4f8360f72d863ca661dbac9901320d5f029c98748828f",
+      "stdout_sha256": "24e9395b070059962a70d76d48387b0fe9a3cc7866815211d38f01dfbcc33379",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "f8022e10f1541e67df2cc936945009fb7443079d911e606403d668c489a450f3",
+      "stdout_sha256": "103a4384512d7d6a032af57c28cbe27cfd81607484c7570a5ef620eb664f85db",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-u-t-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-u-t-u:e3",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-u-t-u:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "8265c5740660587cae0a01c0f6f7066b38adcd1b960af53755b3bd59fb5b4a28",
+      "stdout_sha256": "c671e5beaf6be2e009e22ab77d9f5c3343efbb02ea224a4bd9e666ee6e2a40d4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "f747cf84e88e98db45e8551fe6fb355e20fbb21c88ba7c874ccb80474c54deab",
+      "stdout_sha256": "c0215a301ca8d91000fc37ace1d334ca42dd179c14d6dd200af9a3d42a148419",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-u-t-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-u-t-f:e3",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-u-t-f:e3",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "c3f5565b0d04fd72c08ed4fc7b5c9d9872a89e92f5656d6f540f70545ac1a046",
+      "stdout_sha256": "5198e2c5a2e80cba6b5b198d40fae0da0637b9d047a19eb8d5bb721652644c46",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "5d2d0de8ea1d764ba47e5c3fe1941de80a9f4d89d5cbf10774e42a929cf60e4d",
+      "stdout_sha256": "09f9016f224e0b72e946887ce6f16c83539c3d9092ea0542944a67fd5658837b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-u-t-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-u-t-t:e3",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-u-t-t:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "8782b1d61459d1c9b7cc3e21b4206f97655297ae27fa7b08d1d3d02c275ace65",
+      "stdout_sha256": "cc5def907bd40dbedac432370b97686df90c396bd3a1c1e957847845c6f9c46b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "e6fbc8fab74a803fa7042d23294d50bc729e49e99a6c9e43a677326f3bb4dda3",
+      "stdout_sha256": "165d8940a320861dc92beebb7aebb78e1eb22ce45036c34da99fce693d21515f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-f-u-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-u-u:e3",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-u-u:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "be4b69d65481651ea1ab034eb54c532f8e63956959ed7252b1c723ca73984ddc",
+      "stdout_sha256": "3f580ea008c044a48b8d9d67d23314263af06c1e4b3b7182ef3a71fb091b33aa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "ef20d2a8f400f1c844df1ca42c4fa3c996f4d519a874b2bbbd226eca7ad6a533",
+      "stdout_sha256": "af2a12902548db3bf148adc0c10aa9154b036204a3d31f980cfeb2299b5a59b5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-f-u-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-u-f:e3",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-u-f:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "eb7a6b671c8ec38207bcfce3ca2a1dd5d0336a31222b1c28b0e5f7e4e35dece3",
+      "stdout_sha256": "e9d52c47b0e2929802c197e1f7c945c5c5578be6d4ee027affcda623ab7ccefa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "b4b63545f9a143948fb92257fdda5efa74efa7ebcbf39ade061420a85190f228",
+      "stdout_sha256": "8752ffccc61601567ae1d811ba75429986c0765afcc028de0f873bb4d42e5309",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-f-u-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-u-t:e3",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-u-t:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "4cc1df23d8ce4085b8cad512e8420afb19b6759e84347fe213ab062af91056b8",
+      "stdout_sha256": "104ca1b324c7b7c9b561855a065788c55b18bed1eda4488749e6e545fda62727",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "9ff00fa742a79ec33b5fa9113c87e5b40eb6e54258c6c2717ca1814665ee1975",
+      "stdout_sha256": "b1d35fc5915d112819fc359713c0e23f09c78042740903ab082c2652946527c2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-f-f-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-f-u:e3",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-f-u:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "42731bab415cd41981a9013ee81d613319ffd3ba5521bc376c9893f0ac9d361f",
+      "stdout_sha256": "434c95fdacf70a506712511adbfe0affbf58842bc5d8130681e6c288b4592028",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "a17630819986942490cbbbcbe45e17e577eae8e195ddebf17eed156726b0c0ad",
+      "stdout_sha256": "503b956e569d4c31da7e3dc8b21b2ca5653758650d7f279deb9349898de7eab8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-f-f-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-f-f:e3",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-f-f:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "d1bd26415f12a593fed95f06c6544e57fa1991eba5dccdbe0b8347e24a01ea8d",
+      "stdout_sha256": "92a49817fcbd28789b3f9927fffcc97707fbf0e872692d05d045aafd656eee38",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "c017be264b22b4fe5a44a3761eb5c1f608cb86f50debf4efb38d30426405b7f7",
+      "stdout_sha256": "59f4b0c94ac243ac4c21d1de9e34f01b8869e9405e5f935a2f6c6af5de2eebc6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-f-f-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-f-t:e3",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-f-t:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "59061e03a03113010997e702f8a51d6ce129b047dd578213810fa38a414391bc",
+      "stdout_sha256": "be9fb2145f2614faa4b4d446b8fb42b0e487fa1b20f7c17306bd5c6512960696",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "79a4175959a08889cc933bfd6a13fa7c7af2e2225d90f2925b88ae7b89c1cb98",
+      "stdout_sha256": "9cb77f3d08f8eaf6cff9121bbff11ef658e4caef7a4aebdb02926264d1e89003",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-f-t-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-t-u:e3",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-t-u:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "d7d4e86cff1b2ab7bf12df9b9dc8c5d0e1a049ee439c8a9f8e7dbe89d40be2d8",
+      "stdout_sha256": "ca5b4841b3ac86a00bb1ba43d065eee0ac5c4abf550cb809c0d719d33805000f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "9d4e126935f04507bc3bd20d53874bce160e5bde6c70063169df6be9c17ffb05",
+      "stdout_sha256": "e5e0a9b55b1b374453909d8131ae9ff36e5b494361e2f0cecf918e9c5e7e68b5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-f-t-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-t-f:e3",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-t-f:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "c205f9b370f72c4584007b8a88862ffc459ae4480a2f1538860ad7641ba272b2",
+      "stdout_sha256": "1b2bcb17293a0141b93264c168dc0a991de3f349f2b3148287f792b96d514ac9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "21766122188d38e737c5873248142c996e52e29da41ac24d824b419934649625",
+      "stdout_sha256": "7ff8459c2460db5719f9ac4d503b6c7dab987daed0ef592b673b215262202530",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-f-t-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-t-t:e3",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-f-t-t:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "be071321edcd6a83989a92f973ccde7c82e94198986f467f630890c1d7105817",
+      "stdout_sha256": "479b8591780e8097bf600abf2c28650f493c352681dc26b14a90ef451676cf26",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "5e19fc04b2775bc99c295dff57f78f96bae76dc0d8f65864ecc930d12a7035a3",
+      "stdout_sha256": "50aac50212c38728240a11cd002b997cf76319565a0c4ccae42569032a4712e4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-t-u-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-t-u-u:e3",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-t-u-u:e3",
+      "obligation_id": "signal",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "f2edfe5fa405f897335e34b16f75e8cb865073de3d1f7408ca83101b234c35a7",
+      "stdout_sha256": "209b2c62120f0570619268b7c8951e6c1870f956c70816ed60ce4a00c5ca9d6b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "4a1cf8b96cd02616a748702419d956d9b34247b4ecc31c20b71185f3daaa65ab",
+      "stdout_sha256": "dc3992653acc89d673e5c3894ff644156e5d924b963d67d1e0747d5feed24507",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-t-u-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-t-u-f:e3",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-t-u-f:e3",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "e42c98c2c22b270876bb704b403fa4fb58affa8879e26735c9125abc5b1dc9de",
+      "stdout_sha256": "d98c9dc13ecccbae90aec919e9e7d70817442649b31c3066ff3ac2c4a3c7d9d1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "cb7ec9a50448ea716c5a11783f5309b5cc1705eb056e68bfee3de3b17ec2f6c0",
+      "stdout_sha256": "939ac4f96f35729b5b087ccf256212dbd47bd33c291fdd1b4651d0d0b222d7d6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-t-u-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-t-u-t:e3",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-t-u-t:e3",
+      "obligation_id": "signal",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "46d6f2774431d681583ae9e78bf1a0a845a7e47cb291b8afd5b96cd053a02437",
+      "stdout_sha256": "bd8081934bf75ab86f84ea22248571dedb7e40e062619f3ee3eeb951eb03dd0e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "67edca7b8ceabd7cbe9552e106e3f4114545cd3363dbd1c724b432e959d69ba4",
+      "stdout_sha256": "a5eef92b478146eca2938f2ce1b15eacfacee0ba72b35d49d9b59d7836b7b7d7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-t-f-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-t-f-u:e3",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-t-f-u:e3",
+      "obligation_id": "signal",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "42c392351efbe32a730f89b86f73211a42de3dcc175107d39dcb1005ce6d20b6",
+      "stdout_sha256": "9ccbe0287bb952594967a13b9052892461549264ab03a5ee51de949fd4b73015",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "081a2f64193228c410683fc8830d508934e47fdb2219978ce2f550338087fde6",
+      "stdout_sha256": "bdd85d4b4351f149f216c531cb8bfed35f784f8222bbf2d6d511bb4d545c33de",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-t-f-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-t-f-f:e3",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-t-f-f:e3",
+      "obligation_id": "signal",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "575f75d55a1fd51940e80d614e23b48501000b739519f611259429aea8e12b93",
+      "stdout_sha256": "a3316d82dd807332e777e7d87f3b70267da31ec99c6bf4f73d2c5142bd819e47",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "9d6a02d6105ef2ca7986a6d1ab983b819ea836dc499cdcd6b99ee511da6c8157",
+      "stdout_sha256": "64e593d5add3b08ac35b9d98ea946d77f70196030ddb8417fde9b5d2acb7ef48",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-t-f-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-t-f-t:e3",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-t-f-t:e3",
+      "obligation_id": "signal",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "0151dfcf233e4cb0202dfb3e1fb9b9dd29b5cdcbd3f0dceaed435a2a8590c9ba",
+      "stdout_sha256": "ec392573550944329e9c0f9bc82c155d1c67086810ace39c8ed3e90f8bd7ebdb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "83715b248ded970a190c4d9ffc6739f509ad913f420bdeb28967173338fa49b1",
+      "stdout_sha256": "5e6979023c0fd9f4e7eae0161dcff4245984cda7697499cb53747172a8976266",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-t-t-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-t-t-u:e3",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-2scenes-t-t-u:e3",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "2c791b63255d1d7761e8b3c54cd40a28ad7ead036a649b659baece1a1c410137",
+      "stdout_sha256": "4b5ca62f82f0d57509272c35c9422a680e7262a720a5968295c0f87020fc6e60",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "2d80c92021d19d5751b234bc1bac55c49de17f0eda3b036e9abdc35c561bbc2c",
+      "stdout_sha256": "a293f6ea5246663172fc51e5f72198ca02df860c2b0fabd827243b0a715b6df6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-t-t-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-t-t-f:e3",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-2scenes-t-t-f:e3",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "0dfab88e5c6ba66fd5dccbc48087467c27bfc941a1455c1a1f610155a889e151",
+      "stdout_sha256": "6a645d7904693a80e151cac1eb31c827c206e5ebd7bbefcf1abb27fcaa051568",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "25f37c862fc557cb526d18d6f81ab15228dede0b92c3ecf09773be3710ae2f91",
+      "stdout_sha256": "fcc3f7771c7e5d29dc6f4de135695db7794c8287ef820f1cf31a9e33c1b6db8c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-2scenes-t-t-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null
+    },
+    "carry": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "d86b60ba765a9148f691e06986d130294e496faf18c33d92773d03eb33f2e291",
+      "stdout_sha256": "6900a6a2a142ba23fafc76c804b5712a2fda63ebc1d2674aaa34fde6e31a78df",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "b83f9132a92dd07416a01bee06d3a3d8aa9edee855c7ef2555e2ee292fa3fe66",
+      "stdout_sha256": "8e741c65810a775f1ce3c8cee875db65ed022d1e64cb3e9f6a0b0448365456f5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-u-u-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-u-u-u:e4",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-u-u-u:e4",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "a7c4285b3a9be81e0bf661a52ecd1fdfdeb4d58df9ed6eeeda2363bb9c9831fb",
+      "stdout_sha256": "a5571ad89bed7a582a92af0ad985d3e34044d5af0f090f0db1d8a4085217997f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "13efddf82fc3bb3f9a80adc239ecbe13685e93d016c9cf41fd12a3d9aff9d048",
+      "stdout_sha256": "25b2831ab463e4b13ce097721e47bbaf36fca9dea8b03105b21ab338349c7ca3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-u-u-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-u-u-f:e4",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-u-u-f:e4",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "42f0ab9b49604b039370222071aed98c8a1b2f764c7d993cd277907de7570b9c",
+      "stdout_sha256": "1af7d85e3364f1194c49ec038c1b6cc05489e4aad04d2166dead39ee68d3212b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "8a8a026e65b7f52bbc36b333f4541acc44e64a2ac6ced9b103b33575c8aae544",
+      "stdout_sha256": "d6c5b6379d2b3d77b919a3373d5c99e3bf17db68dcc77f511dc37a935357a1ba",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-u-u-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-u-u-t:e4",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-u-u-t:e4",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "8e1bab6e0eaab521d59276545c3cf5317846b46aa2f4e315442f14da70589487",
+      "stdout_sha256": "a896efed0cb013996fc8a194d9dc71f0f8103833c72d71d474807932ef1be91e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "6cf82daa0960a185389fb6a5a05920d0c0b946646aa83dba38c8f4bde21da200",
+      "stdout_sha256": "98c899779d8e05b94625e55021f3317a2f1d4fca03ce1baa23bb77350c7cc717",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-u-f-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-u-f-u:e4",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-u-f-u:e4",
+      "obligation_id": "signal",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "f51fa64531b8c9fef7f369a54c983da7e5843bdecc219437c5d5c1866a6a939f",
+      "stdout_sha256": "c5e2d221cf269da73013dbb0fb31d498dd3513380f0d04420b83faeeef2e55fc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "ac8dc4d425fef34a683de9795b408294604d538b82b34a42a4eb20918bbd6932",
+      "stdout_sha256": "f764fec31ee47c18928d01584fb6e0c97ca8dabd851105e3a51c76c7eb7413cb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-u-f-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-u-f-f:e4",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-u-f-f:e4",
+      "obligation_id": "signal",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "3256ed037a0fc876d6ab329503bfc47a376ce6e5e006d2c4eba36b8a12a56be7",
+      "stdout_sha256": "60ecb1c57ac8f69885a63a04692cd62c2ec0a4b9c04f82398a549696e1753cb4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "43b6b91727e7166d31321921942ca506fdc79d40b9bc70cf9d798eec7d14add9",
+      "stdout_sha256": "c9d32d5d0612e6320dd23f1f7737147854113170d1702f53e0b062ecd2fae1a2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-u-f-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-u-f-t:e4",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-u-f-t:e4",
+      "obligation_id": "signal",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "f44049638c482e809e3019ec65ea890730d96322a88263452e6df57f31ce5797",
+      "stdout_sha256": "9ca7f0d62fee6186a148ce1f6750f678eccc54b1fb17a4f85938c17e86e50394",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "de40f88b2ce07822748a3c663f0090d702c024502440b5efaa73eb1d99e68165",
+      "stdout_sha256": "7662f69ed03f22e4c2d1b6a58a36b2ddcb0d3ec044cad6496376b0f0ee2963aa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-u-t-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-u-t-u:e4",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-u-t-u:e4",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "c9a25fdea9f3cb303df75868b6dff4a97a1256180a657b108318d2493afb8e0d",
+      "stdout_sha256": "40dc819e15f3c71e59745f661435fb45794a57d160b4ff58e22a40069d0e3b98",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "d0463437866c83eff036bbe25c6d895f0d296c240f35862ad88f9ea986f39282",
+      "stdout_sha256": "e4e0ea57ae01ca8fe6138288af19f81052ff8c728107fbe0eb67786dfba961e0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-u-t-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-u-t-f:e4",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-u-t-f:e4",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "fd9625e26e45b603ce926ab233aa7126d67e4647ad70d11ab1656c84c8f64cab",
+      "stdout_sha256": "292546077cd11b6ec364c406527e9eb2d4c23ba55f0f4453ccb8d35c29f66b23",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "87d639be06c004451997bbf1fbc79b6ec69c9be9ac45b4539bda679079179c67",
+      "stdout_sha256": "71dc898c0947ee23f8f5fbfe84841b0f06d654d59fc5516bf44484ad5aa2f8e3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-u-t-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-u-t-t:e4",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-u-t-t:e4",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "8c049a4ac920f96cfc93fef07138923532b03e341d636d5414ab349b2b216258",
+      "stdout_sha256": "fe202923fd8ea805af67f3e89ef40a8b7a109cdda98aced2bd45577fd48497fc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "8d92c478de89a09d8112f27708b9a7c38402bb04a711b7721fd9bf3a1df1168b",
+      "stdout_sha256": "033abfd62ff3f87136050bb5f748cf50b62a282ef4e6029d037bbc5a8971ccc2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-f-u-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-u-u:e4",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-u-u:e4",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "04dc2361c96e4150cc331baeffea9c1fba43d61918baeff03e3c2154441c3c08",
+      "stdout_sha256": "9f505d6ab91794ec45f083bf5a6bfcccfc06cae0bd1ca9f86c28a9e1cd54027e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "b9b19c7046fccc37c05a17df369f849f99169ae739d16b4ce8f8cac5eea8a7a5",
+      "stdout_sha256": "bda417459a96676f361d8fadc76c1263e93886f0daf1d89ceb30034161ea89df",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-f-u-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-u-f:e4",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-u-f:e4",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "ffa68c265fa266526c50dc1afadee5857c3bfd6920fbb5b094501357f18d962f",
+      "stdout_sha256": "3f79ada0a6479f3bd9b07b44b7cc22004c1dd1523422d86cf88e6f7890d8e2d4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "ef582cc097f52c27a88a8630dac4b8d495f149f1fa9f504a2d8f9744005b7966",
+      "stdout_sha256": "736882f332644290b305593e32f74770b84bb77fa6a78a27ab98d3108b0c52cc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-f-u-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-u-t:e4",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-u-t:e4",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "7311e87c234580a9f10288e9f48845675116eb5cdc00cb3361c4a539c959989c",
+      "stdout_sha256": "9e9826be214e0f87fad6879d3594058bdfb066e6c370f7b7ac608350a3bc80f0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "348fda00ae768d13b76ca133d348d8a704f3698816617084426761e1a321b8cc",
+      "stdout_sha256": "8fbf33f7955089e17889e31552c6ec975eec50555a142c80223480ab7a687e10",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-f-f-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-f-u:e4",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-f-u:e4",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "ec1db5d015e4bd7d8a257abd270f451e2a7a46ccb86215762189c08ee8c72b14",
+      "stdout_sha256": "8823ec4e9d038e9d5548681e391741fe72aedd5a7ce4618829cfd85ac151a825",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "c82d1ee6c54a0831716db26fb9c2609f825a5f03b732c48cf81220a6f58cf0cf",
+      "stdout_sha256": "9074682eafaf31b343355d6cc6439cd36760da386cd8bacfe3ce91b0769cbb3e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-f-f-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-f-f:e4",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-f-f:e4",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "27e3acb9ade6c88025d25e04a2db4e855de835a5834880d095735d54320c00ce",
+      "stdout_sha256": "f0f5e53726176658878003ed39bf81be6f49b87fffa2c0b73f39346b735db8da",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "9b80e24f78aecb8179f46b1c3a0ba89b1614810300a416557a3223e6e61c7eb0",
+      "stdout_sha256": "360d39d29f1f82b33bf814630494d4606618b4e2fee828d8c14f59164b8f4740",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-f-f-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-f-t:e4",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-f-t:e4",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "4ffe82c0093fc9ebc190670bc0f5cd65931ecfa9fd3102242f49eb59c867156c",
+      "stdout_sha256": "a783edd738bc20d074efdc0d3f1a13ad19c829614442c14d1cf6d9cac79dc8cd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "651534f22602492404bf18535592734b03b2f2d0a18e989a9e4c26170a080005",
+      "stdout_sha256": "671053aeed6eae6b8ed36bf9e8d5985a34100eff07618e0a0bf2c43fb571f18c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-f-t-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-t-u:e4",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-t-u:e4",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "707b88c2212344d6d7ed033d9f4d5ed0e190b4aeecc522a9642d9833643cc269",
+      "stdout_sha256": "6235b291dc7065bf24820a0ecc7784c545dcfb3e94b295d6676a17f88061f64c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "cc41bc8af71e4de708a5783fff60d8240231c866a4a853663028776adb2dcbeb",
+      "stdout_sha256": "ddbb8d0825952259460fc73a8736f2d397de89a140bdbb68d28700f52e88647f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-f-t-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-t-f:e4",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-t-f:e4",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "967d988b98f83adfd9c062b31222ab6849fec54d141478a505295fb3e8918b9f",
+      "stdout_sha256": "48d4ed38c08a9bd415c42fb2c0582306b7f9fd3fda4b5eff98678ccd673318de",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "833e361b1172004b446d3bd3c695918d6f7e1be1b39f6484e160c45b66f23c08",
+      "stdout_sha256": "7ea6e56eeaa6d5a9bea9e4cf1ca94c8f9d769ca84ec7b5cd4bcf62e022483760",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-f-t-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-t-t:e4",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-f-t-t:e4",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "cb28ddb61bfd3e51a1d329335511bc5787051d67e8ac56feca409425f180ef8d",
+      "stdout_sha256": "0831ed74c55559df762fabad6488d66947812ee89ca18ac812b666467b67fa80",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "afca050f55799658354aadd8b77668dc0975bded737d7a46bd043e6a4e340ea1",
+      "stdout_sha256": "abf811ed664aa536a07e97c459f577ad8cb9436cc9e7b7e8dd401e2178bbe93d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-t-u-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-t-u-u:e4",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-t-u-u:e4",
+      "obligation_id": "signal",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "332fe8d3d7da9a9367d473fa965736be8876dde03180201e3f27df77d4a04e9c",
+      "stdout_sha256": "4572d47fb28b75a033c67860b8fe6481ba1f1c85ce6eb150fe9887cbc3fbe0ed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "37752d192894fe3a51730365cc7a559122c4da857e1c8efdebb28eca41cb2f1a",
+      "stdout_sha256": "8db6da9f2790d38ee345bc3b01b03e7df94583ed355af950ec2562c3d72d6c73",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-t-u-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-t-u-f:e4",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-t-u-f:e4",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "f56f2950ebff389f63ce9600b2351c12fb5b03a06baca2d0c34c862545560357",
+      "stdout_sha256": "03fd39d4df1df0b1fed6a3e7ebc3f6d2ad48412acb7b9bb6b4db27c1f24752f9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "547d0779ada982ead426bb85d70e08547f8120eacd960db837acb7eb019c3641",
+      "stdout_sha256": "59b96e0e82293d26e7043e92f0d92c927c0ed35e580286a22fcc3b3dc00033f8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-t-u-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-t-u-t:e4",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-t-u-t:e4",
+      "obligation_id": "signal",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "7231a7f1db1c5e3372ee8b8b3e8933f2a3b38fa2e86e800b4adfe26dacfb90de",
+      "stdout_sha256": "45e1d5b3e4b84d20564c9cc402d72ba01e59393ebd8547eb7e5dfc82ff667381",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "6ebc9fd5e452e7af1643bcd2217842041066c8e9be3d9ad43168c6ba122154eb",
+      "stdout_sha256": "0cbfd0b5ecbb7f4641c42d1b22889854b456c6b4565a9bad88feb5361e5f1235",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-t-f-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-t-f-u:e4",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-t-f-u:e4",
+      "obligation_id": "signal",
+      "query_statuses": [
+        false,
+        false,
+        true,
+        true,
+        true
+      ],
+      "model_sha256": "95941e35ce1ac99080e38421e3c3b4616cd2c79fb89e9970d4a52efbbfe62ce6",
+      "stdout_sha256": "cce3242791baa0086f3c3fa1faf37b5614b1ebee14da9816b0b49ccda72a767f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "1cec8817c2fd472891c0f7e4678be35876a5202668405a2b345655f7744f623a",
+      "stdout_sha256": "b78e67da5e337c2b3032154135c55cc7b95c6be038dc7d0e2677289163978cf8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-t-f-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-t-f-f:e4",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-t-f-f:e4",
+      "obligation_id": "signal",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "8400c80b4a69c855ab31cc6ead27f9647417c585351c26ccd21615b7bce02aad",
+      "stdout_sha256": "a28d831acdbd19128169e16c3414544f71272729bc600993ed504d17b41d91eb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "00eaa4ebb600863bb45cb586f02e5637b19b8ffacc0cdae8e6f36d188e646bbd",
+      "stdout_sha256": "adba9a6254ee73d1221812ec55e3af97bf642179c43236c8e0f7856be5249006",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-t-f-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-t-f-t:e4",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-t-f-t:e4",
+      "obligation_id": "signal",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "fcb72732cfaa96ae6131b88f53e18ebf328ced7b8d0d5e1e034bb55308ac0477",
+      "stdout_sha256": "1aecd04778800840dcaf53381decf1d0d8be5103aab127060baf5dc862878126",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "7b4beba4cabf02a241899e07ec859cfe00b74f190f31a872774a5972fab94905",
+      "stdout_sha256": "679441be7142c1379ee9b3c8753bdc9cbb39923ea6de6c0d5f5954f609fefb65",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-t-t-u",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-t-t-u:e4",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "joint-3scenes-t-t-u:e4",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "a88149592f2e07f1a3f687a2947a826e195ccb570d2b42adf228031af5a81438",
+      "stdout_sha256": "8797253db4c7236711bb5e015a11ce09cd619679d4c073ee3103ea74847d8381",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "13bd956f77d18716de1a0a6f75e12ef6736a48e51fc8b7585605add47ba5be8e",
+      "stdout_sha256": "726d6664f07513e173568abe4ddf71921916fcca777ff9cef4f256d68056c57e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-t-t-f",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-t-t-f:e4",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "joint-3scenes-t-t-f:e4",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "de0fc04d0badc9d76f769fce98df99f617260e2aedfb842935bd198f02a9f354",
+      "stdout_sha256": "2922bf9e9d6299dd7b4bc16682ab54df3c3fb77142c1d400c77eace52703501e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "4383253b553b22ea778d8ba75ad779e6c6f358633ed60b337b55ffe06f75c522",
+      "stdout_sha256": "383915f8f97dc731eacfe91564d89a4520109f479d0342d8fa3b2c5b51afe05f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "joint-3scenes-t-t-t",
+    "group": "joint_release_vectors",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null
+    },
+    "carry": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "e4a23f3efea1f22b6eda10aaaaa7552c9fc1e7ca106ad48304904a5aa5159cdc",
+      "stdout_sha256": "a49991e595fe36faf669057bcb528778c8b238ec07331f95c43ca72dc3f80048",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "4bfc522b335685dcd00395ebf26ab9ed50905bc603beb2780e5b967d4a124b62",
+      "stdout_sha256": "e3c27c372cce143d4352dec6246c157d3fd8257a56364bf1943bf761889cdc01",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "pedestrian-held-across-boundary",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "pedestrian-held-across-boundary:e1",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "pedestrian-held-across-boundary:e1",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "39c95c7c387c1a506225d25a8476702aa1a1551e113ff789ac40a5f8152e84cf",
+      "stdout_sha256": "5a685b91691cf7e505068cc4928169c45c919cb70bf4d612deea0d925a943fdf",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "711ac8f0955ded91dd871b961c92314f8cadbe7698fb77383e871e5ce9f758f2",
+      "stdout_sha256": "194ae7bf1786cfa95fb4795eedab3a21e7bd0549e7c7f8e218ecd09fbd0f9241",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "pedestrian-released-next-scene",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null
+    },
+    "carry": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "b4d9883bcbae7b7f56ecae46bd8ddb2b01cdcc4f7c0ae6028fcf2f087a4241bb",
+      "stdout_sha256": "2826860417cfc987fbd20f17d24b7732e48dc5ce497dcb4766f4fe73871ce088",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "b801e18dd7aadf2168466e0ddc78bdf01f66954b76e30fb3d95b3740758b6296",
+      "stdout_sha256": "35ac9d2c2c3048e7866df1c9a284d91d0f278f89cfee9e5b4ef585a65523679c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "pedestrian-missing-release",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "pedestrian-missing-release:e1",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "pedestrian-missing-release:e1",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "072f1cc585e0226f0a7cc82603bb5e366a7865fa92a041aa2fb575964de771d1",
+      "stdout_sha256": "926f064c5a3768f9b2d1f4ddfb44beb488e997532099b02781b385f210cc254f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "2f97f354f1cfe8966f8923993afe872cb6ff4e2bf2047f3b279fe50566ed9669",
+      "stdout_sha256": "07f4d0e24fef67a50d30ca591b39cb993f6264919ab3c07e1dc1e41d42a87aeb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "pedestrian-wrong-entity-release",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "pedestrian-wrong-entity-release:e1",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "pedestrian-wrong-entity-release:e1",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "072f1cc585e0226f0a7cc82603bb5e366a7865fa92a041aa2fb575964de771d1",
+      "stdout_sha256": "e50354a9243de411922c50b34fc415d19ca1fb5ff4004b762a90c6a5339c75ff",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "2f97f354f1cfe8966f8923993afe872cb6ff4e2bf2047f3b279fe50566ed9669",
+      "stdout_sha256": "10425afba38dc356169caf6390a4a292f93c172beaf9fbd9356b49d5ff1ddc91",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "pedestrian-identity-uncertain",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "pedestrian-identity-uncertain:e1",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "pedestrian-identity-uncertain:e1",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "d43841a628427ac37e72e2296cf8ac1a9bf474264dad94592a4856c59053bfb3",
+      "stdout_sha256": "c598c40c59b5091470cd1785bb7f693a1b08fd930fddbbdf3a72ca7fedad848f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "b801e18dd7aadf2168466e0ddc78bdf01f66954b76e30fb3d95b3740758b6296",
+      "stdout_sha256": "fadeef456760bfb18dbaf51c77c6587292d2cf20b94d5a7106d999e5c5026a4b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "pedestrian-evidence-expired",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "pedestrian-evidence-expired:e1",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "pedestrian-evidence-expired:e1",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "f7fbe3ce5ebef935a991424229d548155294dfd9f2986140736a5bc4a1b69d42",
+      "stdout_sha256": "e20482b94ad92dd937f3cd23bd0e44b8448dbb2340af2b68625904f48c94797e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "178325d2ffc35175747824c7b7f765718027ffbc1737cb4bdab4d8b39b3f5639",
+      "stdout_sha256": "141cd4cf387a9d4bcab95dce353eefeedd1cfa9766174af4314407372a40b075",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "pedestrian-scope-ended",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null
+    },
+    "carry": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "178325d2ffc35175747824c7b7f765718027ffbc1737cb4bdab4d8b39b3f5639",
+      "stdout_sha256": "3e7e5bd35675767f088d7cb6bf838c89dd9cf5792c60edf3e72be44826bb05fe",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "178325d2ffc35175747824c7b7f765718027ffbc1737cb4bdab4d8b39b3f5639",
+      "stdout_sha256": "7335e1563cf6db03e6bc79698e207c13a15a15707d43d6cf66e751fea23f8a37",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "pedestrian-reactivated-blocked",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "pedestrian-reactivated-blocked:e3",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "pedestrian-reactivated-blocked:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "8f5060ac9ea243e8099fad90a98390f14e552cdb2350c1d79d16723c50091a00",
+      "stdout_sha256": "fcb9d5feb2bbd7be4d7ed167b59e5112bbbc03f7f31b06711e3899a8fb16a6e3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "pedestrian-reactivated-blocked:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "d6081933ea098d8168aae4276362b1ed2490de0487bbdd934b71cfbe196cb707",
+      "stdout_sha256": "3bfbf8b022fec8cf9e4ddc447ba738fec294f543b765e6f2acce4ea6a9c6f6c8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "pedestrian-reactivated-unknown",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "pedestrian-reactivated-unknown:e3",
+      "obligation_id": "pedestrian"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "pedestrian-reactivated-unknown:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "38ebc897c199f43ae76c71f09ddc3e9323c0abf6d23daa5ce05ab9322d0e8dee",
+      "stdout_sha256": "2ac3757cf60065e083bd58c5ea41bfcf1294cbe4b7ca51543e12039dd7444589",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "pedestrian-reactivated-unknown:e3",
+      "obligation_id": "pedestrian",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "23f42fdc1a912dea6fb5855f55d9b24f90ab6d5eb1d46dfc078617184f6d8fd9",
+      "stdout_sha256": "ca86f8506834de0c24a25ed781ff76ab850e56a062a871644ec9a80764e8753b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "signal-held-across-boundary",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "signal-held-across-boundary:e1",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "signal-held-across-boundary:e1",
+      "obligation_id": "signal",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "39c95c7c387c1a506225d25a8476702aa1a1551e113ff789ac40a5f8152e84cf",
+      "stdout_sha256": "809f66f29a3bc505d28186de6b2aec4e5f8fc604329ffd61a5bac8f5f34ba7ed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "711ac8f0955ded91dd871b961c92314f8cadbe7698fb77383e871e5ce9f758f2",
+      "stdout_sha256": "afec3b055ab610e7f3c828b6ea83b20bf50669404706d073a776b6d78426b1b6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "signal-released-next-scene",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null
+    },
+    "carry": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "b4d9883bcbae7b7f56ecae46bd8ddb2b01cdcc4f7c0ae6028fcf2f087a4241bb",
+      "stdout_sha256": "a42ce151a07dd64184484ecfa6e8bdaf928eecfeff52aee27166754993002230",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "b801e18dd7aadf2168466e0ddc78bdf01f66954b76e30fb3d95b3740758b6296",
+      "stdout_sha256": "807302b31aede703fb192e7b91b63743006cd781406cd2ac4b33b89f20a8c6ca",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "signal-missing-release",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "signal-missing-release:e1",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "signal-missing-release:e1",
+      "obligation_id": "signal",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "072f1cc585e0226f0a7cc82603bb5e366a7865fa92a041aa2fb575964de771d1",
+      "stdout_sha256": "4c8229a36e99278ba175ebae1264b9dde403888d68d9551facefe99b4db8e72b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "2f97f354f1cfe8966f8923993afe872cb6ff4e2bf2047f3b279fe50566ed9669",
+      "stdout_sha256": "5d598069501826be84ad902e21444f85b8c323b6733384a23187f1342160bc76",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "signal-wrong-entity-release",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "signal-wrong-entity-release:e1",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "signal-wrong-entity-release:e1",
+      "obligation_id": "signal",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "072f1cc585e0226f0a7cc82603bb5e366a7865fa92a041aa2fb575964de771d1",
+      "stdout_sha256": "bab99701b1c10a5c02f28878111d5ecdd17fe15d8d26c1f5a91d3f938224e515",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "2f97f354f1cfe8966f8923993afe872cb6ff4e2bf2047f3b279fe50566ed9669",
+      "stdout_sha256": "a11f83c1f4ad8b704b4885eba034a43c9cf60709e5395f2c733399791511eb24",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "signal-identity-uncertain",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "signal-identity-uncertain:e1",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "signal-identity-uncertain:e1",
+      "obligation_id": "signal",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "d43841a628427ac37e72e2296cf8ac1a9bf474264dad94592a4856c59053bfb3",
+      "stdout_sha256": "787a2f09ddf84a17541f88fcd2da0749d306dc64ae23de803cf048278485df90",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "b801e18dd7aadf2168466e0ddc78bdf01f66954b76e30fb3d95b3740758b6296",
+      "stdout_sha256": "8a08765a7c2084704a180fd688c6fc0db0b2ad8d1d628ff95a4c58762119dd27",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "signal-evidence-expired",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "signal-evidence-expired:e1",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "signal-evidence-expired:e1",
+      "obligation_id": "signal",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "f7fbe3ce5ebef935a991424229d548155294dfd9f2986140736a5bc4a1b69d42",
+      "stdout_sha256": "546b0bdeb3452d94d03851674eee6903f5a8e5b81aee0c8889a3e425db1ed9a3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "178325d2ffc35175747824c7b7f765718027ffbc1737cb4bdab4d8b39b3f5639",
+      "stdout_sha256": "ed6f83bfd6b37da6be6da2aa8fcd2bc2bd23adafb51e364c7ebdec63d598068c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "signal-scope-ended",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null
+    },
+    "carry": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "178325d2ffc35175747824c7b7f765718027ffbc1737cb4bdab4d8b39b3f5639",
+      "stdout_sha256": "61bff68427e9d49de5a45229f217ec54923c8839f47a746a0ddc151caa8d38a1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "178325d2ffc35175747824c7b7f765718027ffbc1737cb4bdab4d8b39b3f5639",
+      "stdout_sha256": "1e86599de56c6be798bb6ccc0f668146063aabddf828a2947738c26880dc3c91",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "signal-reactivated-blocked",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "signal-reactivated-blocked:e3",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "signal-reactivated-blocked:e3",
+      "obligation_id": "signal",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "8f5060ac9ea243e8099fad90a98390f14e552cdb2350c1d79d16723c50091a00",
+      "stdout_sha256": "1a7a4809c11127d15a29bd3c3b2ae0b1f9951d00a532c3a7bf5b21f9c649cee9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "signal-reactivated-blocked:e3",
+      "obligation_id": "signal",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "d6081933ea098d8168aae4276362b1ed2490de0487bbdd934b71cfbe196cb707",
+      "stdout_sha256": "520214e995c143e363d4e1566a44acf1164cc8ccd051fbe394847bd05aeceda7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "signal-reactivated-unknown",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "signal-reactivated-unknown:e3",
+      "obligation_id": "signal"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "signal-reactivated-unknown:e3",
+      "obligation_id": "signal",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "38ebc897c199f43ae76c71f09ddc3e9323c0abf6d23daa5ce05ab9322d0e8dee",
+      "stdout_sha256": "7cad0268a5de0d6a665043d1b0129abad70f6cc8765c5445a2d6436d80551182",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "signal-reactivated-unknown:e3",
+      "obligation_id": "signal",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "23f42fdc1a912dea6fb5855f55d9b24f90ab6d5eb1d46dfc078617184f6d8fd9",
+      "stdout_sha256": "9d1645613b73b5a567aa9b0c2a1531101046ba808430d8a813414778abefe56f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "obstacle-held-across-boundary",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "obstacle-held-across-boundary:e1",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "obstacle-held-across-boundary:e1",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "39c95c7c387c1a506225d25a8476702aa1a1551e113ff789ac40a5f8152e84cf",
+      "stdout_sha256": "5d4fa9327c6938efc2824aa06069ca4c310a460998439cd96413e04ca4b44eb4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "711ac8f0955ded91dd871b961c92314f8cadbe7698fb77383e871e5ce9f758f2",
+      "stdout_sha256": "7fa35e6627cd1fb853df2675777f637bf04029895d380c8100cc8cf9a184b9ba",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "obstacle-released-next-scene",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null
+    },
+    "carry": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "b4d9883bcbae7b7f56ecae46bd8ddb2b01cdcc4f7c0ae6028fcf2f087a4241bb",
+      "stdout_sha256": "a9dd5b3d631e92dac94b564818bfdd1c4a068d1f290a3bae72b63f3af9845dfe",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "b801e18dd7aadf2168466e0ddc78bdf01f66954b76e30fb3d95b3740758b6296",
+      "stdout_sha256": "42da452c4806ec6b9d0a46684ed23a55b68f2b9ea9266d1062bf787a38fa353d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "obstacle-missing-release",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "obstacle-missing-release:e1",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "obstacle-missing-release:e1",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "072f1cc585e0226f0a7cc82603bb5e366a7865fa92a041aa2fb575964de771d1",
+      "stdout_sha256": "fcebe13b95b24838f866690ec6583748adb6b96d1df591795f99aa00c915975e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "2f97f354f1cfe8966f8923993afe872cb6ff4e2bf2047f3b279fe50566ed9669",
+      "stdout_sha256": "02f7edbfd1cd5ee16e260612a5496c5d00a6a2234adfd3a9500e4fcfac3358f2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "obstacle-wrong-entity-release",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "obstacle-wrong-entity-release:e1",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "obstacle-wrong-entity-release:e1",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "072f1cc585e0226f0a7cc82603bb5e366a7865fa92a041aa2fb575964de771d1",
+      "stdout_sha256": "023137dd798e60783eec32f5ba20511ab6cb70f5b89721c116bc3d545130134c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "2f97f354f1cfe8966f8923993afe872cb6ff4e2bf2047f3b279fe50566ed9669",
+      "stdout_sha256": "2bee90526fce17f57b27240e905594d5b28069f3b386f074c3f353bb610ed74b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "obstacle-identity-uncertain",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "obstacle-identity-uncertain:e1",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "obstacle-identity-uncertain:e1",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "d43841a628427ac37e72e2296cf8ac1a9bf474264dad94592a4856c59053bfb3",
+      "stdout_sha256": "ee5e8d4f91c275a216a441f368382b4241c0275918ae739b8bee7972038b6aaf",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "b801e18dd7aadf2168466e0ddc78bdf01f66954b76e30fb3d95b3740758b6296",
+      "stdout_sha256": "6fe54f9c098062e894fdce6e434b7fb632a4853d20b99adf44961f107ba326de",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "obstacle-evidence-expired",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "obstacle-evidence-expired:e1",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "obstacle-evidence-expired:e1",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "f7fbe3ce5ebef935a991424229d548155294dfd9f2986140736a5bc4a1b69d42",
+      "stdout_sha256": "3d34f3a922cb68aa1c39e550622a7dfc53d4a11745cb9d31c320c3f8d1cdbf2e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "178325d2ffc35175747824c7b7f765718027ffbc1737cb4bdab4d8b39b3f5639",
+      "stdout_sha256": "684eeed82f9889c08c7318936d0b09a3a0f20c6e0ad839de6c33b1d96602fb68",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "obstacle-scope-ended",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null
+    },
+    "carry": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "178325d2ffc35175747824c7b7f765718027ffbc1737cb4bdab4d8b39b3f5639",
+      "stdout_sha256": "55d6ad4a3ed22927a352f30de43a205bee59138b21e44334935a8c4c1cea61de",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONSISTENT",
+      "issue_event_id": null,
+      "obligation_id": null,
+      "query_statuses": [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "model_sha256": "178325d2ffc35175747824c7b7f765718027ffbc1737cb4bdab4d8b39b3f5639",
+      "stdout_sha256": "14dc2e69adfc9b3b667d78751c57ff698a4a6ad146bdae68bdbd90026ed88263",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "obstacle-reactivated-blocked",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "obstacle-reactivated-blocked:e3",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "obstacle-reactivated-blocked:e3",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "8f5060ac9ea243e8099fad90a98390f14e552cdb2350c1d79d16723c50091a00",
+      "stdout_sha256": "a2bbc3f318c7ce7e22cfcd71e97f40153d27ca140afc74b9fefbae729b04a681",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "CONTRADICTION",
+      "issue_event_id": "obstacle-reactivated-blocked:e3",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "model_sha256": "d6081933ea098d8168aae4276362b1ed2490de0487bbdd934b71cfbe196cb707",
+      "stdout_sha256": "f3bc537c5bff9f302f9e3f50627b3cc9d834bd9187dcb21a0d752390632e5db3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "case_id": "obstacle-reactivated-unknown",
+    "group": "boundary_lifecycle",
+    "expected": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "obstacle-reactivated-unknown:e3",
+      "obligation_id": "obstacle"
+    },
+    "carry": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "obstacle-reactivated-unknown:e3",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "38ebc897c199f43ae76c71f09ddc3e9323c0abf6d23daa5ce05ab9322d0e8dee",
+      "stdout_sha256": "aeba74faa426e311add66e2c00e2c153b493c8fe140cd1ceb1a03d691d1f0642",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reset": {
+      "verdict": "UNKNOWN",
+      "issue_event_id": "obstacle-reactivated-unknown:e3",
+      "obligation_id": "obstacle",
+      "query_statuses": [
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "model_sha256": "23f42fdc1a912dea6fb5855f55d9b24f90ab6d5eb1d46dfc078617184f6d8fd9",
+      "stdout_sha256": "52b4e756c975284fc7c03d120f5696b2934f0e0c310723fae5dbaf977ea6933b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+]
