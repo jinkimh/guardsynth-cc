@@ -74,3 +74,11 @@ runtime/alpamayo/ar1_venv/
 *.token
 __pycache__/
 .pytest_cache/
+
+# Peer-review material: response letters and reviewer reports stay local only
+response-to-reviewer*
+response-to-reviewers*
+REVIEWER_*_REPORT.md
+reviewer-0*.pdf
+# Upstream CoC-Nusc data (nuScenes-derived): local only
+/data/baseline/coc_nusc/
