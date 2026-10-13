@@ -42,6 +42,37 @@ def verify_inventory():
     return len(expected) + 1
 
 
+def replay_added_evidence(output):
+    from experiments.sequential_coc.mutation_generator import generate_mutation_pairs, jsonl_bytes, read_mutation_pairs
+    from experiments.sequential_coc.stateful_checker import check_stateful
+    from experiments.sequential_coc.event_local_checker import check_event_local
+    path = ROOT / "evidence/regression/mutations.jsonl"
+    pairs = read_mutation_pairs(path)
+    assert len(pairs) == 40
+    assert jsonl_bytes(generate_mutation_pairs(pairs_per_type=10, seed=20260806)) == path.read_bytes()
+    counts = {}
+    for pair in pairs:
+        label = pair.oracle.value
+        record = counts.setdefault(label, {"pairs": 0, "stateful": 0, "event_local": 0})
+        record["pairs"] += 1
+        assert check_stateful(list(pair.original.events)).verdict == "CONSISTENT"
+        assert check_event_local(list(pair.original.events)).verdict == "CONSISTENT"
+        record["stateful"] += check_stateful(list(pair.mutated.events)).verdict == "CONTRADICTION"
+        record["event_local"] += check_event_local(list(pair.mutated.events)).verdict == "CONTRADICTION"
+    assert len(counts) == 4 and all(r["pairs"] == r["stateful"] == 10 for r in counts.values())
+    assert {k: r["event_local"] for k, r in counts.items()} == {
+        "HOLD_GO_CONFLICT": 0, "PREMATURE_RELEASE": 10, "ORDER_VIOLATION": 10, "STALE_OBLIGATION": 0}
+    regression = {"status": "PASS", "pairs": 40, "byte_identical_regeneration": True, "by_type": counts}
+    save(output / "regression_replay.json", regression)
+    replay = load("agreement_replay", "agreement_replay.py")
+    stats = load("agreement_coefficients", "agreement_coefficients.py")
+    agreement = replay.calculate(ROOT / "evidence/human/ratings.csv", stats.coefficients, stats.pairwise_exact_check)
+    assert agreement == read(ROOT / "evidence/human/agreement.json")
+    save(output / "agreement_replay.json", agreement)
+    print(json.dumps({"regression": regression, "anonymous_panel": {"subjects": 27, "raters": 4,
+                      "agreement_reproduced": True}}), flush=True)
+
+
 def replay_python(output):
     from experiments.kiee_review_revision import scenario_evaluation as scenario
     from experiments.kiee_review_revision import condition_model as condition
@@ -192,6 +223,7 @@ def main():
         parser.error("Write reproduction output outside this immutable artifact tree")
     file_count = verify_inventory()
     output.mkdir(parents=True, exist_ok=False)
+    replay_added_evidence(output)
     modules = replay_python(output)
     replay_bounded(output)
     if args.verifyta:
