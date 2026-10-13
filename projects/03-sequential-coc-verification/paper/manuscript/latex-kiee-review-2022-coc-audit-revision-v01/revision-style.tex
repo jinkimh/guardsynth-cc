@@ -11,7 +11,7 @@
 % Mark added references while preserving unchanged submitted bibliography text.
 \makeatletter
 \g@addto@macro\UrlBreaks{\do\-}
-\@for\bibkey:=leucker2009runtime,bauer2011runtime,uppaalofficial,uppaalname,uppaalqueries\do{%
+\@for\bibkey:=leucker2009runtime,bauer2011runtime,uppaalofficial,uppaalname,uppaalqueries,gwet2008agreement,turpin2023,lanham2023,yu2026drivethoughts,esterle2020,maierhofer2020,wan2024,chen2023nl2tl,cosler2023nl2spec\do{%
   \expandafter\gdef\csname changedbib@\bibkey\endcsname{1}}
 \let\originalbibitem\@bibitem
 \def\@bibitem#1{\ifcsname changedbib@#1\endcsname\color{revisionblue}\else\color{black}\fi\originalbibitem{#1}}

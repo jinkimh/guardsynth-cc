@@ -1,0 +1,170 @@
+{
+  "R1-m3": {
+    "source": "sections/10-conclusion.tex",
+    "label": "sec:conclusion",
+    "quote": "작성된 미해제 충돌 사례에서는 이전 의무의 보존이 해당 사건 관계를 판정하는 데 필요했다. 다만 이 관찰을 모든 CoC에 대한 필요성ㆍ효과나 UPPAAL의 정확도 우위로 일반화하지 않는다.",
+    "rendered_quote": "작성된 미해제 충돌 사례에서는 이전 의무의 보존이 해당 사건 관계를 판정하는 데 필요했다. 다만 이 관찰을 모든 CoC에 대한 필요성ㆍ효과나 UPPAAL의 정확도 우위로 일반화하지 않는다."
+  },
+  "R1-m2": {
+    "source": "sections/03-data.tex",
+    "label": "sec:provenance",
+    "quote": "309는 후보 선정에 사용한 인접 문장 쌍의 수이고, 27은 사람이 검토한 장면 묶음의 수다. 여러 사건이 한 장면에 속하므로 사건ㆍ쌍ㆍ장면을 독립 시행으로 합산하지 않는다.",
+    "rendered_quote": "309는 후보 선정에 사용한 인접 문장 쌍의 수이고, 27은 사람이 검토한 장면 묶음의 수다. 여러 사건이 한 장면에 속하므로 사건ㆍ쌍ㆍ장면을 독립 시행으로 합산하지 않는다."
+  },
+  "R1-m1": {
+    "source": "sections/03-data.tex",
+    "label": "sec:provenance",
+    "quote": "후보 선택기는 첫 문장에 정지ㆍ양보(\\texttt{stop/yield}), 둘째 문장에 가속ㆍ진행(\\texttt{accelerate/proceed}) 표현이 있는 쌍을 찾는다. 23쌍ㆍ15장면에서 장면별 가장 이른 창 하나를 선정했다.",
+    "rendered_quote": "후보 선택기는 첫 문장에 정지ㆍ양보(\\texttt{stop/yield}), 둘째 문장에 가속ㆍ진행(\\texttt{accelerate/proceed}) 표현이 있는 쌍을 찾는다. 23쌍ㆍ15장면에서 장면별 가장 이른 창 하나를 선정했다."
+  },
+  "R1-M6": {
+    "source": "sections/03-data.tex",
+    "label": "sec:provenance",
+    "quote": "CoC-Nusc의 배포 버전, 생성 실행별 모델 버전, 생성 지시문과 설정은 복원하지 못했다.",
+    "rendered_quote": "CoC-Nusc의 배포 버전, 생성 실행별 모델 버전, 생성 지시문과 설정은 복원하지 못했다."
+  },
+  "R1-M5": {
+    "source": "sections/07-results.tex",
+    "label": "sec:trajectory-results",
+    "quote": "탐지 대상 130건을 27설정에서 재집계하면 항상 검출 72, 설정 의존 57, 항상 미검출 1이다. 확인되지 않은 5건은 제한 시간을 4초 이상으로 늘리면 반응이 검출되는 조합이 크게 늘었으나(5사건$\\times$27설정 중 $D=3$초 18개, $D=4$초 80개, $D=5$초 103개), 한 장면은 5초에서도 기본 설정으로 검출되지 않았다.",
+    "rendered_quote": "탐지 대상 130건을 27설정에서 재집계하면 항상 검출 72, 설정 의존 57, 항상 미검출 1이다. 확인되지 않은 5건은 제한 시간을 4초 이상으로 늘리면 반응이 검출되는 조합이 크게 늘었으나(5사건$\\times$27설정 중 $D=3$초 18개, $D=4$초 80개, $D=5$초 103개), 한 장면은 5초에서도 기본 설정으로 검출되지 않았다."
+  },
+  "R1-M4": {
+    "source": "sections/07-results.tex",
+    "label": "sec:first-results",
+    "quote": "FSM은 144/144, 최초 위반 72/72였다. UPPAAL이 단순 비교기보다 정확하다는 근거는 없다.",
+    "rendered_quote": "FSM은 144/144, 최초 위반 72/72였다. UPPAAL이 단순 비교기보다 정확하다는 근거는 없다."
+  },
+  "R1-M3": {
+    "source": "sections/07-results.tex",
+    "label": "sec:human-results",
+    "quote": "AC1 추가 재분석은 세 항목 모두에서 Fleiss 계수보다 높았다. 범주 편중에 따른 보정 민감도이며 지침의 안정성이 개선됐다는 뜻이 아니다.",
+    "rendered_quote": "AC1 추가 재분석은 세 항목 모두에서 Fleiss 계수보다 높았다. 범주 편중에 따른 보정 민감도이며 지침의 안정성이 개선됐다는 뜻이 아니다."
+  },
+  "R1-M2": {
+    "source": "sections/05-method.tex",
+    "label": "sec:extraction",
+    "quote": "기존 자동 변환은 LLM 호출이나 수작업 정답 입력을 쓰지 않는 정규식 기반 영어 파서다. 이 파서를 거친 기존 자동 텍스트 경로는 144건 모두 미상 출력(\\texttt{UNKNOWN})을 반환했다(\\ref{sec:first-results}절).",
+    "rendered_quote": "기존 자동 변환은 LLM 호출이나 수작업 정답 입력을 쓰지 않는 정규식 기반 영어 파서다. 이 파서를 거친 기존 자동 텍스트 경로는 144건 모두 미상 출력(\\texttt{UNKNOWN})을 반환했다(7.2절)."
+  },
+  "R1-M1": {
+    "source": "sections/10-conclusion.tex",
+    "label": "sec:conclusion",
+    "quote": "현재 결과는 명시된 프레임의 시간ㆍ조건 관계를 실행하고 검토 근거를 추적하는 방법 실증이다.",
+    "rendered_quote": "현재 결과는 명시된 프레임의 시간ㆍ조건 관계를 실행하고 검토 근거를 추적하는 방법 실증이다."
+  },
+  "R2-7": {
+    "source": "sections/01-introduction.tex",
+    "label": "sec:intro",
+    "quote": "원문 구절, 의무, 해제 조건과 조건별 증거를 연결하는 중간표현을 제시한다 (RQ1).",
+    "rendered_quote": "원문 구절, 의무, 해제 조건과 조건별 증거를 연결하는 중간표현을 제시한다 (RQ1)."
+  },
+  "R2-6": {
+    "source": "sections/02-related-work.tex",
+    "label": "sec:related-position",
+    "quote": "기존 연구는 한 장면의 설명과 행동의 정렬, 사람이 정한 규칙의 형식화와 검증, 개별 요구 문장의 형식화, 그리고 형식 명세에 대한 경로 감시를 다룬다. 본 연구는 이들 사이에 남은 질문, 즉 자동 생성된 연속 주석에서 어떤 문장이 의무를 만들고 어떤 증거가 그것을 해제하는지를 연결하고 증거가 없는 경우를 모순과 구분하는 문제를 다룬다.",
+    "rendered_quote": "기존 연구는 한 장면의 설명과 행동의 정렬, 사람이 정한 규칙의 형식화와 검증, 개별 요구 문장의 형식화, 그리고 형식 명세에 대한 경로 감시를 다룬다. 본 연구는 이들 사이에 남은 질문, 즉 자동 생성된 연속 주석에서 어떤 문장이 의무를 만들고 어떤 증거가 그것을 해제하는지를 연결하고 증거가 없는 경우를 모순과 구분하는 문제를 다룬다."
+  },
+  "R2-5": {
+    "source": "sections/01-introduction.tex",
+    "label": "sec:intro",
+    "quote": "본 연구는 이를 위해 연속 CoC를 검사하는 프레임워크를 제안한다(그림~\\ref{fig:overview-pipeline}). 절차는 세 단계이다. 첫째, 같은 장면의 사건을 시간순으로 고정한다.",
+    "rendered_quote": "본 연구는 이를 위해 연속 CoC를 검사하는 프레임워크를 제안한다(그림~1). 절차는 세 단계이다. 첫째, 같은 장면의 사건을 시간순으로 고정한다."
+  },
+  "R2-4": {
+    "source": "sections/01-introduction.tex",
+    "label": "sec:intro",
+    "quote": "본 논문의 연구 질문은 다음 두 가지이다. \\textbf{RQ1:} 의무와 해제 근거를 연결하면 행동 전환에서 확정 모순과 근거 부족을 구분하고, 최초 문제 사건과 관련 의무를 추적할 수 있는가? \\textbf{RQ2:} 장면 경계에서 대상 동일성, 적용 범위와 증거 유효성이 주어졌을 때, 의무와 증거를 유지하는 정책과 경계에서 초기화하는 정책은 판정을 어떻게 다르게 만드는가?",
+    "rendered_quote": "본 논문의 연구 질문은 다음 두 가지이다. \\textbf{RQ1:} 의무와 해제 근거를 연결하면 행동 전환에서 확정 모순과 근거 부족을 구분하고, 최초 문제 사건과 관련 의무를 추적할 수 있는가? \\textbf{RQ2:} 장면 경계에서 대상 동일성, 적용 범위와 증거 유효성이 주어졌을 때, 의무와 증거를 유지하는 정책과 경계에서 초기화하는 정책은 판정을 어떻게 다르게 만드는가?"
+  },
+  "R2-3": {
+    "source": "sections/01-introduction.tex",
+    "label": "sec:intro",
+    "quote": "UPPAAL은 웁살라(Uppsala) 대학과 올보르(Aalborg) 대학이 공동 개발한 시간 오토마타 기반 모델 검사 도구이며, 이름은 두 대학명을 결합한 것이다~\\cite{uppaalofficial,uppaalname,behrmann2004uppaal}.",
+    "rendered_quote": "UPPAAL은 웁살라(Uppsala) 대학과 올보르(Aalborg) 대학이 공동 개발한 시간 오토마타 기반 모델 검사 도구이며, 이름은 두 대학명을 결합한 것이다~[17, 18, 19]."
+  },
+  "R2-2": {
+    "source": "sections/01-introduction.tex",
+    "label": "sec:intro",
+    "quote": "본 연구는 이를 위해 연속 CoC를 검사하는 프레임워크를 제안한다(그림~\\ref{fig:overview-pipeline}). 절차는 세 단계이다. 첫째, 같은 장면의 사건을 시간순으로 고정한다. 둘째, 각 사건에서 의무, 해제 조건, 조건별 증거와 후속 행동을 의미 프레임으로 구성하고, 각 항목이 원문의 어느 구절에서 왔는지 기록한다. 본 논문의 평가에서 이 프레임은 설계자가 직접 작성했다.",
+    "rendered_quote": "본 연구는 이를 위해 연속 CoC를 검사하는 프레임워크를 제안한다(그림~1). 절차는 세 단계이다. 첫째, 같은 장면의 사건을 시간순으로 고정한다. 둘째, 각 사건에서 의무, 해제 조건, 조건별 증거와 후속 행동을 의미 프레임으로 구성하고, 각 항목이 원문의 어느 구절에서 왔는지 기록한다. 본 논문의 평가에서 이 프레임은 설계자가 직접 작성했다."
+  },
+  "R2-1.2": {
+    "source": "sections/01-introduction.tex",
+    "label": "sec:intro",
+    "quote": "이러한 불일치 때문에 학습 자료의 행동 요구가 모호해지고, 같은 자료를 다시 검사할 때 어떤 조건과 근거를 적용해야 하는지도 불분명해진다.",
+    "rendered_quote": "이러한 불일치 때문에 학습 자료의 행동 요구가 모호해지고, 같은 자료를 다시 검사할 때 어떤 조건과 근거를 적용해야 하는지도 불분명해진다."
+  },
+  "R2-1.1": {
+    "source": "sections/01-introduction.tex",
+    "label": "sec:intro",
+    "quote": "두 문장은 각각 자연스럽지만 함께 읽으면 문제가 생긴다. 보행자가 아직 횡단 중이라면 두 문장은 양립하지 않는다.",
+    "rendered_quote": "두 문장은 각각 자연스럽지만 함께 읽으면 문제가 생긴다. 보행자가 아직 횡단 중이라면 두 문장은 양립하지 않는다."
+  },
+  "R3-11": {
+    "source": "sections/07-results.tex",
+    "label": "sec:trajectory-results",
+    "quote": "27장면의 궤적 비교는 일치 2, 불일치 7, 미상 18이며 보존된 결과를 다시 실행해도 장면별 판정은 같았다.",
+    "rendered_quote": "27장면의 궤적 비교는 일치 2, 불일치 7, 미상 18이며 보존된 결과를 다시 실행해도 장면별 판정은 같았다."
+  },
+  "R3-10": {
+    "source": "sections/07-results.tex",
+    "label": "sec:regression-results",
+    "quote": "합계 40/40과 20/40을 일반 오류 검출 정확도로 해석하지 않는다.",
+    "rendered_quote": "합계 40/40과 20/40을 일반 오류 검출 정확도로 해석하지 않는다."
+  },
+  "R3-9": {
+    "source": "sections/07-results.tex",
+    "label": "sec:human-results",
+    "quote": "범주 편중에 따른 보정 민감도이며 지침의 안정성이 개선됐다는 뜻이 아니다. 특히 시간 요구는 ``있음''에 판정이 몰려 있어 같은 쌍별 일치율에서도 두 계수의 우연 일치 기대값이 크게 달랐다.",
+    "rendered_quote": "범주 편중에 따른 보정 민감도이며 지침의 안정성이 개선됐다는 뜻이 아니다. 특히 시간 요구는 ``있음''에 판정이 몰려 있어 같은 쌍별 일치율에서도 두 계수의 우연 일치 기대값이 크게 달랐다."
+  },
+  "R3-8": {
+    "source": "sections/07-results.tex",
+    "label": "sec:first-results",
+    "quote": "FSM은 144/144, 최초 위반 72/72였다. UPPAAL이 단순 비교기보다 정확하다는 근거는 없다.",
+    "rendered_quote": "FSM은 144/144, 최초 위반 72/72였다. UPPAAL이 단순 비교기보다 정확하다는 근거는 없다."
+  },
+  "R3-7": {
+    "source": "sections/07-results.tex",
+    "label": "sec:bounded-results",
+    "quote": "이 시험은 기대 결과에 맞는 사례만 고르는 절차를 없애고 두 계산 경로를 비교한다. 그러나 수식과 구현이 공유하는 명세의 오류는 함께 남을 수 있다.",
+    "rendered_quote": "이 시험은 기대 결과에 맞는 사례만 고르는 절차를 없애고 두 계산 경로를 비교한다. 그러나 수식과 구현이 공유하는 명세의 오류는 함께 남을 수 있다."
+  },
+  "R3-6": {
+    "source": "sections/05-method.tex",
+    "label": "sec:queries",
+    "quote": "조건 연결 모델은 committed 위치 Run에서 \\texttt{idx<N}이면 \\texttt{step()}을 실행하고 인덱스를 늘리는 자기 전이를 하고, \\texttt{idx==N}이면 Done으로 이동한다(그림~\\ref{fig:condition-observer}).",
+    "rendered_quote": "조건 연결 모델은 committed 위치 Run에서 \\texttt{idx<N}이면 \\texttt{step()}을 실행하고 인덱스를 늘리는 자기 전이를 하고, \\texttt{idx==N}이면 Done으로 이동한다(그림~3)."
+  },
+  "R3-5": {
+    "source": "sections/05-method.tex",
+    "label": "sec:extraction",
+    "quote": "True/False는 작성 문장이 명시한 조건 상태이며 사람의 독립 센서 정답이 아니다.",
+    "rendered_quote": "True/False는 작성 문장이 명시한 조건 상태이며 사람의 독립 센서 정답이 아니다."
+  },
+  "R3-4": {
+    "source": "sections/04-problem.tex",
+    "label": "sec:boundary-semantics",
+    "quote": "갱신 순서는 경계 정책, 새 의무 활성화, 대응 증거 갱신과 해제, 진행 판정이다. 같은 사건의 새 의무는 새 적용 관계를 시작하며 이전 해제값을 재사용하지 않는다. 알려진 미해제 상태의 진행은 확정 모순, 연결 미확인 또는 해제 미상의 진행은 근거 부족이다.",
+    "rendered_quote": "갱신 순서는 경계 정책, 새 의무 활성화, 대응 증거 갱신과 해제, 진행 판정이다. 같은 사건의 새 의무는 새 적용 관계를 시작하며 이전 해제값을 재사용하지 않는다. 알려진 미해제 상태의 진행은 확정 모순, 연결 미확인 또는 해제 미상의 진행은 근거 부족이다."
+  },
+  "R3-3": {
+    "source": "sections/04-problem.tex",
+    "label": "sec:error-types",
+    "quote": "P1--P3은 입력의 행동ㆍ요구 관계에 관한 문제이고 P4는 검사기의 상태 처리 문제다. P5는 별도의 속도 반응 시간 검사다. 기존 40쌍을 이 구분으로 재집계한다.",
+    "rendered_quote": "P1--P3은 입력의 행동ㆍ요구 관계에 관한 문제이고 P4는 검사기의 상태 처리 문제다. P5는 별도의 속도 반응 시간 검사다. 기존 40쌍을 이 구분으로 재집계한다."
+  },
+  "R3-2": {
+    "source": "sections/03-data.tex",
+    "label": "sec:provenance",
+    "quote": "보조 반응 분석에서는 403사건 중 품질 표시를 통과한 290건을 먼저 남겼다. 이 중 복합 행동이나 방향이 불명확한 156건을 제외한 134건을 사용했다.",
+    "rendered_quote": "보조 반응 분석에서는 403사건 중 품질 표시를 통과한 290건을 먼저 남겼다. 이 중 복합 행동이나 방향이 불명확한 156건을 제외한 134건을 사용했다."
+  },
+  "R3-1": {
+    "source": "sections/02-related-work.tex",
+    "label": "sec:related-rv",
+    "quote": "실행 중 검증(runtime verification)은 관측된 실행 경로가 주어진 명세를 만족하는지 검사한다~\\cite{leucker2009runtime}. LTL/TLTL 모니터링은 유한 접두 경로에서 참ㆍ거짓ㆍ미결정을 구분하고 최초로 확정되는 시점을 다룬다~\\cite{bauer2011runtime}. 따라서 이전 상태의 기억, 세 값의 판정과 최초 위반 추적 자체는 기존 기술이다.",
+    "rendered_quote": "실행 중 검증(runtime verification)은 관측된 실행 경로가 주어진 명세를 만족하는지 검사한다~[15]. LTL/TLTL 모니터링은 유한 접두 경로에서 참ㆍ거짓ㆍ미결정을 구분하고 최초로 확정되는 시점을 다룬다~[16]. 따라서 이전 상태의 기억, 세 값의 판정과 최초 위반 추적 자체는 기존 기술이다."
+  }
+}

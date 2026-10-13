@@ -8,7 +8,8 @@
 \begin{document}
 \makekieefrontmatter{%
 \begin{kieeabstract}
-\rev{Sequential Chain-of-Causation (CoC) annotations may omit release evidence or justify an action that conflicts with an earlier obligation. We link obligations to condition-specific evidence and use UPPAAL to distinguish confirmed conflicts from insufficient evidence and record the first issue event, obligation, and reason. This study evaluates feasibility and traceability under authored symbolic inputs. The natural-data inventory contains 309 adjacent pairs from 90 scenes; four reviewers assessed a selected subset of 27 scene groups, with textual-consistency Fleiss' kappa 0.027301 and no recorded consensus rationale. In 144 authored scenarios (72 contradictions, 36 consistent cases, and 36 insufficient-evidence cases), the frozen legacy structured path matched 96 decisions and a simple finite-state comparator matched all 144. The automatic text path returned UNKNOWN for every case. After analyzing 48 legacy mismatches, a separate condition-indexed UPPAAL model matched 144/144 decisions, 72/72 first violation events, and 108/108 issue locations, obligations, and reasons on the same cases. This is a post-development same-case retest, not independent validation. Python--UPPAAL agreement checks implementation consistency; neither natural-error accuracy, automated semantic extraction, accuracy superiority of UPPAAL, nor vehicle safety is established.}
+% English abstract and Korean introduction updated from the supplied draft.
+\rev{Vision--language driving models explain their actions with Chain-of-Causation (CoC) text, but an explanation rarely states when the requirement it introduces ends. Read in order, an earlier obligation such as ``stop until the pedestrian has passed'' may still be active when a later CoC justifies proceeding by a different condition, such as a green light. We present a framework that links each obligation to its release conditions and condition-specific evidence, separates confirmed contradictions from insufficient release evidence, and reports the first issue event and the obligation involved. The checking rules are implemented as a UPPAAL observer model with explicit queries. Checker inputs are symbolic frames written by the authors; automatic extraction accuracy on natural CoC text is not evaluated. On 144 authored scenarios, an earlier single-obligation checker matched the expected decision in 96/144 cases; the condition-linked model developed from this failure analysis matched 144/144 on regression, as did a simple finite-state machine. On 81 two- and three-scene boundary cases with given object identity, scope, and evidence validity, the retaining model matched all expected decisions, whereas a model that resets state at scene boundaries judged 41 of 44 contradiction cases compatible with the encoded obligations. A hash-fixed, unselected enumeration of 35,042,928 event sequences found no mismatch between the model step and a separately written formula evaluator. Four reviewers of 27 natural CoC scenes agreed poorly on textual consistency (Fleiss' $\kappa$ = 0.027), so natural detection accuracy is not reported. The results show feasibility on authored symbolic inputs, not accuracy on natural annotations or vehicle safety.}
 \end{kieeabstract}
 \kieekeywords{\rev{Chain-of-Causation, Temporal consistency, Condition-linked obligations, Model checking, Feasibility, Evidence traceability}}
 }
@@ -21,8 +22,8 @@
 \input{sections/06-experiments}
 \input{sections/07-results}
 \input{sections/08-discussion}
-\input{sections/09-threats}
 \input{sections/10-conclusion}
+\input{sections/11-appendix}
 
 \section*{감사의 글}
 \begingroup
