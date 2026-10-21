@@ -1,0 +1,254 @@
+% !TeX root = ncaa-manuscript-en.tex
+\section{Discussion}\label{sec:discussion}
+
+The discussion follows the three problems in the Introduction: constructing
+and checking source-bound constraints, preserving their meaning in learning
+sentences, and using them in action selection. The distinction between
+constraint compliance and preferences among admissible candidates applies
+throughout; a high preferred-selection score concerns the supplied candidate
+set and objective.
+
+\subsection{Constraint Construction and Specification Checkability}\label{sec:discussion-checkability}
+
+Reinforcement learning can improve constraint compliance and action selection, but
+the rules and evaluation criteria used for learning require separate validation:
+a misspecified rule or reward can yield a policy that optimizes the supplied
+signal while departing from the intended requirements. In a traffic-merging
+simulation, Pan et al. report that an agent optimizing a proxy reward based on
+average vehicle speed learned to stop its vehicle instead of merging, increasing
+the proxy reward while also increasing mean commute time~\cite{Pan2022RewardMisspecification}.
+When several rules and modeling assumptions apply, their joint consistency and
+whether their combination permits necessary safety responses also require
+examination. This need to check the learning specification applies to both
+supervised and reinforcement learning.
+
+The EBLC path links each constraint field to its source, making mismatches
+traceable and available for review. A constraint can draw on an observed
+clearance time, a supplied waiting duration, and an assumption that the zone
+remains clear. A sentence alone may not identify which of these inputs is
+responsible for an error. EBLC separates them into source-linked fields that
+can be checked individually.
+
+The composition diagnostic adds a distinct question: can conditions from
+separate source records hold together? Its three-way braking conflicts show
+that individual consistency, and even consistency of every pair, can leave a
+joint incompatibility undetected (Section~\ref{sec:results-composition}).
+Identifying a subset-minimal source group makes the requirements needing
+review explicit. The source roles separate documented policy or guidance from authored
+observations, candidate requests, objectives, and modeling assumptions;
+their applicability is supplied rather than inferred. A SAT combination establishes compatibility under the specified
+context, while an UNSAT combination calls for reviewing requirements or
+assumptions rather than silently discarding one. Hold and non-crossing controls show why permission and progress obligations
+must be distinguished: waiting may satisfy restrictions even when a proposed
+movement is blocked. Comparing the faithful and omitted-exception Rule 129
+encodings further identifies a lost permission, rather than a conflict in the
+original regulation; detecting an omitted exception therefore requires a
+reference encoding that retains it.
+
+P1 is the natural-language guard path of our preceding work~\cite{r4}, and P2
+is the EBLC path introduced here. The comparison therefore concerns two
+development paths for the same constraints. Both achieve high primary-test
+preferred-selection scores, and neither dominates every condition
+(Sections~\ref{sec:results-six-tasks}--\ref{sec:results-robustness}). P2 is
+ahead in position-hold continuation with XY coordinates under the 2.0~s rule
+(97.92\% versus 91.15\% preferred-selection score; 4 versus 16 violations of 192) and on
+pedestrian-entry paraphrases (96.94\% versus 90.56\%), whereas P1 is ahead on
+static paraphrases and the combined maneuver set. Because the paths also differ
+in wording, these differences are not attributed to specification checking. The EBLC path
+thus retains the behavioral benefit of constraint training and adds the ability
+to check constraint construction and correspondence.
+
+Assurance in this process can be considered from three perspectives; the
+first two group the five checks in Section~\ref{sec:method-checks}:
+\begin{enumerate}
+\item \textbf{Specification structure and logical correspondence.} Does the
+specification express the intended restriction and release within the supported
+model, rules, and queries? Structural validation, satisfiability checks, and
+logic--rule comparisons assess this question.
+\item \textbf{Evidence and sentence correspondence.} Do specification fields
+match their source records, and does parsing the generated sentence with the
+fixed grammar recover those fields? Evidence and sentence correspondence
+checks assess these relationships.
+\item \textbf{Model behavior.} Does the model select an admissible candidate,
+and does it select the preferred candidate under the stated objective?
+Constraint violation rate and preferred-selection score measure these two
+questions separately.
+\end{enumerate}
+
+Fault injection shows complementary roles for the tested checks:
+specification-level checks detect faults in the specification and logical
+formula, whereas only sentence correspondence detects faults introduced in the
+generated CNL (Table~\ref{tab:results-faults}). Evidence and sentence
+correspondence checks, together with boundary probes for logic--rule comparison,
+were added for this evaluation after the reported training runs.
+
+Establishing the validity of a source record requires independent observations
+or rule evidence. All 48 controls in which the record and specification field
+are changed to the same wrong value remain internally consistent and escape
+every check. A possible division of work in practice would concentrate human
+review on the suitability of observations, rules, and assumptions, while
+automating structural, logical, and sentence-correspondence checks.
+
+\subsection{From Checked Meaning to Learned Interpretation}\label{sec:discussion-interpretation}
+
+Specification checking and behavioral evaluation answer different questions:
+what the constraint says and how the model uses it. Recovering
+specification fields from a generated sentence does not establish how the
+model interprets that sentence. The results illustrate this distinction:
+\begin{itemize}
+\item \textbf{Paraphrasing.} Changing wording while retaining the intended
+rule reduces static-task P2 preferred-selection score from 100\% to 80.32\%; P1 reaches
+93.29\% under the same condition (Table~\ref{tab:results-robustness}).
+\item \textbf{Logical text.} Primary preferred-selection score is 99.17\%, but on unseen waits
+it is 81.25\% despite only 0.83\% violations
+(Section~\ref{sec:results-robustness}).
+\item \textbf{Combined difficulty.} Combining negation, clause order,
+equality boundaries, and units reduces P2 rule-pair accuracy from 97.92\%
+to 82.64\% (Section~\ref{sec:results-robustness}).
+\item \textbf{Image dependence.} Although candidate values are supplied in
+text, a blank image reduces P2 preferred-selection score from 98.61\% to 76.39\%
+(Section~\ref{sec:results-visual}). These interventions measure input dependence; visual grounding and event
+interpretation require separate assessment.
+\end{itemize}
+
+Multiple fixed expressions designed to recover the same specification fields
+offer a starting point for combining checkability with expression diversity.
+A fixed grammar enables sentence-correspondence checks, but a restricted set
+of training formulations may encourage dependence on particular wording.
+Whether training jointly with these expressions reduces wording sensitivity
+remains to be evaluated. Such checks apply within the defined grammar; they
+do not determine semantic equivalence for arbitrary natural-language sentences.
+
+\subsection{Learning Constraint-Conditioned Candidate Selection}\label{sec:discussion-training}
+
+Under the evaluated supervised-learning conditions, with initialization and
+evaluation inputs held fixed, training with constraint
+sentences improves rule-dependent candidate selection. In the common-CNL
+evaluation (Table~\ref{tab:results-summary}), CE adapters trained with CNL
+reach 96.94\% pedestrian-entry rule-pair accuracy, compared with 1.94\% for
+CoC-only-trained adapters. This contrast concerns selecting both reference
+labels when the scene and candidates are identical but the rules differ:
+training with constraint text improves the use of a rule available at
+evaluation relative to adapters fine-tuned in a rule-free format.
+Position-hold results show the same pattern.
+
+Complementary evidence points in the same direction, although these
+evaluations do not isolate the training effect. Without task-specific training,
+the 8B model violates the supplied pedestrian-entry rule in 68.75\% of
+predictions (Table~\ref{tab:results-pretrained}). The preliminary Alpamayo-R1
+trajectory diagnostics likewise exceed supplied speed limits in 15 of 18
+outputs, with the same violation counts whether the rule is supplied through
+the user prompt or appended to CoC
+(Section~\ref{sec:introduction}; Supplementary Section S1). Together, these
+findings indicate that the presence of rule text at evaluation is insufficient
+for strong rule-dependent selection in the tested models, whereas training
+with constraint text in the evaluation format substantially improves that
+selection in the controlled study.
+This parallels instruction tuning, in which training with task instructions
+improves inference-time task performance~\cite{Wei2022}; here, the instruction
+is a case-specific constraint with numerical parameters, and its effect is
+tested by changing only the rule.
+
+Providing constraints through the input and through the loss has different
+effects. CE supervises the reference label of the preferred candidate, while the semantic term in
+Eq.~\ref{eq:setup-semantic-loss} increases the conditional probability mass
+assigned to admissible labels. Without rule text, the same scene and candidates
+can have different reference labels under two rules, leaving the inputs
+unable to distinguish the cases. Adding semantic loss nearly eliminates
+violations, but preferred-selection score remains near the rule-free ceilings of 50\% and
+75\% (Table~\ref{tab:results-semantic}). This is consistent with more
+conservative choices admissible under both rules. Loss-based constraint
+learning encourages satisfaction~\cite{Xu2018,Giunchiglia2022}, whereas the
+input rule identifies which constraint applies. Adding the tested semantic
+term when rule text is already supplied gives similar results overall.
+
+Reinforcement learning can also train a rule-conditioned policy when the
+applicable rule is available in its input. The present CE and semantic-loss
+comparisons establish the effect of constraint text within supervised
+fine-tuning; they do not establish superiority over reinforcement learning.
+Checking the supplied constraints remains a separate concern whichever
+optimizer is used, as discussed in Section~\ref{sec:discussion-checkability}.
+
+Our learning objective is to select actions conditional on the rule supplied
+for each example. Constraints such as waiting durations or distance limits
+may differ even for the same scene because of local regulations, temporary
+signs, or operating instructions. The intended behavior is to receive the
+applicable constraint and adjust the choice accordingly. Deliberative Alignment
+trains models to recall reusable safety policies and apply them in context;
+policy text is used for data generation and filtering, then removed from
+supervised fine-tuning inputs~\cite{Guan2024}. Here, example-specific constraints and their numerical
+parameters remain in both training and evaluation inputs, and the evaluation
+tests whether choices respond to changes in those constraints.
+
+\subsection{Limitations and Future Work}\label{sec:discussion-limitations}
+
+\noindent\textbf{Tasks and data.}
+The learning experiments select from finite candidate sets in synthetic tasks.
+Candidate values are supplied in text, and static and maneuver diagrams are
+reused across splits. The results provide controlled evidence about constraint
+training; extending them to real-road visual understanding, trajectory
+generation, or closed-loop safety requires separate evaluation. The Alpamayo-R1
+diagnostics motivate the problem and do not constitute results from training
+Alpamayo.
+
+\noindent\textbf{Constraint compliance near boundaries.}
+Selection improves on the new position-hold test, but the earlier XY regression
+diagnostic retains 106, 79, and 77 violations out of 192 predictions for P0,
+P1, and P2 under the 2~s rule after training
+(Section~\ref{sec:results-continuation}; Supplementary Section S11). This
+diagnostic includes prohibited candidates only 1~mm beyond the radius, compared
+with a minimum overshoot of 22~mm in the new test. The results therefore do
+not establish stable constraint compliance across conditions involving small overshoots.
+
+\noindent\textbf{Comparison design.}
+Fine-tuning uses one 2B model family and three optimization seeds. Continuation
+comparisons include differences in prior training history; the fresh-adapter
+study separately controls initialization. CoC-only fine-tuning uses a rule-free
+input format, whereas common-CNL evaluation adds text absent during that
+fine-tuning. The comparison therefore includes adaptation to the constraint
+input format; it does not isolate how much of the gap arises from learning
+rule-conditioned selection versus reduced use of additional text after
+rule-free fine-tuning. The tested semantic loss acts only
+on conditional A--D label probabilities at the first supervised answer token,
+uses a weight fixed at $\lambda=1$ before execution, and leaves alternative
+formulations to be compared. It provides a training penalty rather than a
+generation-time restriction or a vehicle-safety guarantee. The pretrained 8B
+evaluation includes task-format adaptation.
+No equivalence or noninferiority test between P1 and P2 was conducted. Their
+differences reflect wording and construction paths and do not isolate the
+causal effect of specification checking.
+
+\noindent\textbf{Checking.}
+Because evidence correspondence, sentence correspondence, and boundary probes
+for logic--rule comparison were added after training, their effects on training-data quality and model behavior remain to
+be measured. Detection results concern supported grammars and
+injected fault types; the prevalence of naturally occurring errors must be
+estimated from actual constraint-authoring data. Evidence binding separates
+observations, rules, and assumptions by design, but the injection study did
+not test incorrect scene observations or unsuitable modeling assumptions; its
+faults concern rule values, logical restrictions, units, and generated CNL.
+The composition diagnostic uses a fixed, manually constructed grid grounded
+in selected document clauses. Authored states, simplified braking and signal
+models, candidate obligations, and one restricted exception define its scope.
+It does not evaluate complete regulations, emergency-trigger eligibility,
+jerk-limited braking, learned reward models, or operational safety. Its
+natural-language statements explain the formalization, rather than testing
+automatic legal interpretation or composition of CNL training examples. The accident examples
+motivate those broader checks; they are not evidence that this implementation
+would have prevented the accidents.
+
+Future work should:
+\begin{enumerate}
+\item Evaluate how observations and rule applicability are assessed and bound
+in real scenes.
+\item Apply constraint-bearing training data to trajectory-generating VLA
+models and measure trajectory-level constraint compliance, including near boundaries.
+\item Evaluate deployment-time generation of constraint sentences from scene
+observations and applicable rules for provision to the model.
+\item Test whether training with multiple expressions that recover the same
+specification fields reduces wording sensitivity.
+\item Repeat the controlled fresh-adapter comparison with VLMs of other
+families and sizes.
+\item Measure human review time and error rates for constraint authoring in
+an actual workflow.
+\end{enumerate}

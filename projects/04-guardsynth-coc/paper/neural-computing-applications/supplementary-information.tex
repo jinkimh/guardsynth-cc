@@ -1,0 +1,877 @@
+\documentclass[10pt]{article}
+% Supplementary Information for the GuardSynth NCA manuscript (owner: guardsynth-coc).
+% Numerical tables are generated from archived RESULT.json and CSV records; see the README.
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage{amsmath,amssymb,array,booktabs,tabularx}
+\usepackage[hyphens]{url}
+\usepackage{xr-hyper}
+\usepackage[hidelinks]{hyperref}
+\externaldocument[M-]{ncaa-manuscript-en}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\setlength{\parskip}{3pt}
+\title{Supplementary Information\\[2pt]\large GuardSynth: Checkable Behavioral Constraints for CoC-Augmented Candidate Selection}
+\author{\normalsize Jin Hyun Kim\textsuperscript{1}, Yon Vanommeslaeghe\textsuperscript{2}, Rahul Mangharam\textsuperscript{2}\\
+\normalsize Seung Hyun Kong\textsuperscript{3,*}, Insup Lee\textsuperscript{4,*}\\[4pt]
+\small \textsuperscript{1}Department of AI and Information Engineering, Gyeongsang National University,\\
+\small 501 Jinjudae-ro, Jinju 52828, Republic of Korea\\
+\small \textsuperscript{2}Department of Electrical and Systems Engineering, University of Pennsylvania,\\
+\small 200 South 33rd Street, Philadelphia, PA 19104, USA\\
+\small \textsuperscript{3}Cho Chun Shik Graduate School of Mobility, KAIST,\\
+\small 193 Munji-ro, Yuseong-gu, Daejeon 34051, Republic of Korea\\
+\small \textsuperscript{4}Department of Computer and Information Science, University of Pennsylvania,\\
+\small 3330 Walnut Street, Philadelphia, PA 19104, USA\\[4pt]
+\small \textsuperscript{*}Corresponding authors: Seung Hyun Kong and Insup Lee\\
+\small \href{mailto:skong@kaist.ac.kr}{skong@kaist.ac.kr}; \href{mailto:lee@cis.upenn.edu}{lee@cis.upenn.edu}\\
+\small \href{mailto:jin.kim@gnu.ac.kr}{jin.kim@gnu.ac.kr}; \href{mailto:yonvanom@engineering.upenn.edu}{yonvanom@engineering.upenn.edu}; \href{mailto:rahulm@seas.upenn.edu}{rahulm@seas.upenn.edu}}
+\date{}
+\begin{document}
+\maketitle
+
+This document supports the main manuscript. Sections are cited there as
+``Supplementary Section S$n$''. Rows and predictions are constructed synthetic
+examples rather than independent road scenes unless stated otherwise. Percent
+values are rounded half up to two decimals. Section~\ref{sup:records} lists the
+archived records from which the reported values are read.
+
+Metric definitions follow Section~\ref{M-sec:setup-metrics} of the main text.
+Preferred-selection score (PSS) is the percentage of predictions selecting the
+preferred admissible candidate; constraint violation rate (CVR) is the
+percentage selecting a prohibited candidate; rule-pair accuracy (RPA) requires
+both reference labels in a rule pair. Unextractable answers receive zero PSS
+credit and count as neither violations nor admissible choices. The label-match
+calculation and archived result fields are unchanged by this terminology.
+
+\section{Motivating Alpamayo-R1 Diagnostics}\label{sup:alpamayo}
+
+These preliminary experiments use Alpamayo-R1-10B without additional training
+and assess sampled open-loop predictions under supplied experimental rules.
+They do not estimate executed driving violations, closed-loop safety, or a
+population-level road failure rate. Alpamayo-R1 (also named Alpamayo 1) is an
+earlier member of the model family than Alpamayo 1.5 evaluated in
+\emph{Drive the Thoughts}; their weights and evaluations are distinct.
+
+\textbf{Inputs and rule routes.} The speed test uses three NVIDIA PhysicalAI
+inputs and three inputs from YSHRobotics/CoC-Nusc, a third-party conversion of
+nuScenes to the PhysicalAI format. Each input is evaluated with three
+trajectory-generation seeds (42000, 43000, 44000). The user route adds the rule
+to the user prompt; the CoC route appends the supplied rule to the generated
+CoC continuation before trajectory generation. The latter is an intervention on
+the continuation, not a claim that the model generated the rule. Paired lower
+and upper limits share inputs and seeds.
+
+\textbf{Measurements.} The lower limits are 8.6, 0.9, and 13.9 m/s for the
+PhysicalAI inputs and 5.2, 5.0, and 0.6 m/s for the converted nuScenes inputs;
+each is at least 0.5 m/s above the estimated current speed. The corresponding
+upper limits are 9.9, 9.9, and 21.9 m/s for PhysicalAI and 9.9 m/s for all
+three converted nuScenes inputs. Segment-average
+speed is computed from consecutive predicted XY positions at 0.1 s spacing, and
+a violation occurs when any segment in the first two seconds exceeds the limit
+by more than 0.05 m/s. The hold test uses one low-speed input per source and
+three seeds, requesting a position within 0.2 m of the current location for two
+seconds; a violation means a sampled location exceeds 0.21 m (0.01 m tolerance).
+
+\begin{table}[h]
+\centering\small
+\caption{Alpamayo-R1 diagnostic constraint violations (outputs; three seeds per input).}
+\begin{tabular}{llcc}
+\toprule
+Source & Rule route & Speed violations & Hold violations\\
+\midrule
+PhysicalAI & User prompt & 6/9 & 3/3\\
+PhysicalAI & CoC continuation & 6/9 & 3/3\\
+Converted nuScenes & User prompt & 9/9 & 3/3\\
+Converted nuScenes & CoC continuation & 9/9 & 3/3\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Maximum sampled hold displacement across seeds is 2.330/2.420 m for PhysicalAI
+and 1.856/1.655 m for converted nuScenes (user/CoC routes). A 0.5 s hold test
+produced 3/3 violations per route for PhysicalAI and 0/3 for converted nuScenes.
+For each lower/upper-limit pair, the mean XY difference averages the distance
+between all 64 corresponding predicted positions over the full 6.4 s horizon,
+whereas violations are assessed over the first two seconds. The largest input-and-route mean
+over three seeds is 0.0868 m (converted nuScenes, user route); an individual
+trajectory-pair mean can reach 0.0962 m. Under the user route, the generated CoC did not
+include the supplied limit. Raw licensed images, videos, trajectories, and CoC
+outputs remain in restricted evidence packages; the converted source is
+YSHRobotics/CoC-Nusc (revision 994bdd94, CC BY-NC-SA 4.0), and NVIDIA
+PhysicalAI material retains its source restrictions.
+
+\section{Data, Splits, and Training Details}\label{sup:data}
+
+\textbf{Pedestrian entry.} Training uses 40 synthetic images and 960 rows per
+condition (clearance times 6.0--9.9 s); validation and test each use 10 images
+and 240 rows (10.0--10.9 s and 11.0--11.9 s). Each image yields three candidate
+patterns, four label rotations, and two waiting rules. Images do not overlap
+across splits. Paraphrase and unseen-duration evaluations reuse test images;
+the latter uses waits of 0.8 and 1.8 s and shifts candidate entry times by
+0.3 s.
+
+\textbf{Static and maneuver tasks.} Static training has 576 rows, 96 scene IDs,
+and 18 images; the primary test has 144 rows, 24 scene IDs, and 13 images, all
+of which also occur in training. The eight unseen-value images do not occur in
+training. Maneuver training has 384 rows and 192 scene IDs, and each maneuver
+evaluation set has 96 rows and 48 scene IDs, using two repeated schematic
+images. The data seed is 20260930.
+
+\textbf{Position holding.} Training, validation, and test contain 120, 16, and
+32 profiles (960, 128, and 256 rows). Related rows stay in the same split.
+
+\textbf{Progress scores and labels.} The pedestrian-entry generator assigns
+utilities 110, 100, 85, and 0 to ordered candidate templates; these are
+supplied synthetic scores, not values calculated from distance or speed. The
+position-hold generator varies score values across profiles and alternates the
+relative ranking of the candidate admissible for both durations and the
+candidate admissible only for the shorter duration; an additional candidate
+receives a lower score. In both tasks, A--D labels are cyclically reassigned to
+candidate behaviors.
+
+\textbf{Training.} LoRA (rank 8, $\alpha=16$, dropout 0.05) adapts the
+language-attention q/k/v/o projections of Qwen3-VL-2B-Instruct. Training uses
+bfloat16, AdamW (learning rate $2\times10^{-4}$, weight decay 0.01), batch size
+2 with accumulation 8, three epochs, and loss on answer tokens only. The final
+checkpoint is used without validation- or test-based selection. Input lengths
+differ across text conditions, so token counts and FLOPs are not matched.
+Fresh-adapter attempts interrupted before model saving were restarted from the
+same base and seed; only completed fits enter the aggregates.
+
+\section{Qualitative Lifecycle Specification}\label{sup:lifecycle}
+
+The qualitative specification interprets obligation $j$ at decision step $t$
+using a condition status $\mathit{truth}[j,t]\in\{\mathrm{TRUE},\mathrm{FALSE},
+\mathrm{UNKNOWN},\mathrm{CONFLICT}\}$, evidence acceptance $\mathit{valid}[j,t]$,
+and a Boolean obligation state $\mathit{active}[j,t]$. FALSE denotes confirmed
+resolution of the restricting condition, not a missing observation. Valid TRUE
+activates the obligation, valid FALSE releases it, and UNKNOWN, CONFLICT, or
+invalid evidence retains the previous state. The first decision uses a supplied
+initial state; later decisions use the preceding state.
+
+Entry permission is separate from obligation state:
+$\mathit{entry\_permitted}[t]=\bigwedge_j \mathit{clear}[j,t]$, where
+$\mathit{clear}[j,t]$ requires valid FALSE evidence for obligation $j$. Previous
+inactivity alone therefore does not permit entry. Starting inactive, the
+evidence sequence valid TRUE $\rightarrow$ UNKNOWN $\rightarrow$ FALSE
+$\rightarrow$ TRUE yields active $\rightarrow$ active $\rightarrow$ inactive
+$\rightarrow$ active, and entry is permitted only at the third decision.
+Unknown, conflicting, or invalid evidence marks the case for review; these
+evidence values differ from a solver's UNKNOWN result.
+
+The archived qualitative run contains 25 queries, all matching their expected
+verdicts. For example, if an obligation was active and the current evidence is
+UNKNOWN, asserting that it is now inactive must be UNSAT. These checks establish
+the specified update rules under supplied initial states and evidence
+sequences; they do not show that such sequences were correctly recovered from
+real-scene video. The learning experiments do not use this specification.
+
+\section{Additional Specification Checks}\label{sup:diversity}
+
+\textbf{Candidate-binding checks in the learning data.} Across the training,
+validation, and test splits of the six-task pedestrian-entry data, 5,760
+candidate-binding checks yield 3,840 SAT and 1,920 UNSAT outcomes; removing
+repeated assignments leaves 960 distinct assignments (540 SAT and 420 UNSAT). Of
+the 1,920 UNSAT checks, 480 bind entry before clearance and 1,440 bind entry
+after clearance but before the wait expires. Every outcome agrees with the
+separate integer rule, every row retains at least one admissible entry
+candidate, and every reference action is SAT. Static and maneuver candidate
+bindings comprise 5,088 checks (3,432 SAT and 1,656 UNSAT), and SMT agrees with
+the independent task rules on all 9,792 static and maneuver predictions. These counts are separate from
+the boundary queries and position-hold candidate checks in
+Section~\ref{M-sec:results-checks} of the main text.
+
+\textbf{Earlier fault injection on the expression-diversity specification.}
+Before the evaluation of the learning specifications
+(Section~\ref{M-sec:method-checks} of the main text), faults were injected into
+a pedestrian-entry specification developed for the expression-diversity study.
+It supports waits from 0.1 to 3.0 s and records units and the inclusive
+comparison explicitly. Concrete probes combine entry or non-entry with times at
+$-100$, 0, and $+100$ ms around release. Table~\ref{tab:sup-diversity} reports
+the 192 cases; the fault types and detecting layers match those for the
+learning specifications.
+
+\begin{table}[h]
+\centering\small
+\caption{Fault injection into the expression-diversity specification.}
+\label{tab:sup-diversity}
+\begin{tabular}{lcc}
+\toprule
+Case & Detected / cases & Detecting layer\\
+\midrule
+Changed sentence negation & 24/24 & Sentence correspondence\\
+Changed sentence duration & 24/24 & Sentence correspondence\\
+Deleted release condition & 24/24 & Logic--rule comparison\\
+Reversed comparison & 24/24 & Logic--rule comparison\\
+Changed specification duration & 24/24 & Evidence correspondence, logic--rule comparison\\
+Changed unit & 24/24 & Structural check\\
+Jointly wrong evidence and specification & 0/24 & Not detected\\
+Valid specification & 24/24 accepted & --\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Bypassing the checks accepts all 192 cases; applying them accepts 48, namely
+the valid specifications and the joint-error controls. In the representative
+query with clearance at 11.000 s, a 0.500 s wait, and entry at 11.499 s,
+tracking assertions gives an UNSAT core with four members (the entry gate,
+clearance time, entry time, and entry flag); deleting any one makes the
+remainder SAT. Expected UNSAT for a prohibited candidate is retained as
+evidence of exclusion. Unexpected UNSAT, unexpected SAT, or UNKNOWN returns the
+specification for review of its source, threshold, and clauses, followed by
+rechecking consistency, exclusion, and post-release feasibility.
+
+\section{Native Execution Checks of Related Systems}\label{sup:native}
+
+Table~\ref{tab:sup-native} records checks of the original execution paths of
+selected related methods. Released examples were run without adding our
+constraints or a candidate-selection adapter. These checks establish which
+native paths were exercised; they provide no shared-task ranking. Resource
+statements describe official sources inspected on 7 October 2026.
+
+\begin{table}[h]
+\centering\small
+\caption{Native execution checks.}\label{tab:sup-native}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.13\textwidth}>{\raggedright\arraybackslash}p{0.3\textwidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+Method & Native output & Check\\
+\midrule
+nl2spec & Temporal logic with language--subformula links & One original CLI example executed with three translation samples; interactive correction not exercised\\[2pt]
+NL2TL & Temporal logic from supplied requirements & Eleven original notebook examples executed with the official weights\\[2pt]
+DriveLM & Graph VQA and driving reasoning & Not executed: the LLaMA-7B base weights required by the released challenge baseline were unavailable to us; this is not the full DriveLM-Agent\\[2pt]
+DriveVLM & Scene analysis and hierarchical planning & Not executed: the inspected official repository contained project-page material but no inference code or weights\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Seed-Level and Detailed Results}\label{sup:seeds}
+
+\textbf{Fresh-adapter study.} Table~\ref{tab:sup-fresh} reports individual seeds
+with inputs matching each training condition, and Table~\ref{tab:sup-fresh-common}
+reports the CoC-trained adapters under common CNL. CNL-trained adapters receive
+the same input in both evaluations. The standard deviations in the main text are
+sample standard deviations over seeds ($n-1$ denominator). Each cell pools both
+durations: 240 pedestrian-entry rows or 128 position-hold rows per seed.
+
+\begin{table}[h]
+\centering\footnotesize
+\caption{Fresh adapters with training-matched inputs: preferred-selection score / constraint violation rate / rule-pair accuracy (\%).}
+\label{tab:sup-fresh}
+\begin{tabular}{llccc}
+\toprule
+Task & Training & Seed 42 & Seed 17 & Seed 123\\
+\midrule
+Pedestrian entry & CoC, CE & 49.58 / 25.00 / 0.00 & 50.00 / 12.92 / 0.00 & 50.00 / 20.83 / 0.00\\
+Pedestrian entry & CoC, CE + semantic & 50.00 / 0.00 / 0.00 & 50.00 / 0.00 / 0.00 & 50.00 / 0.00 / 0.00\\
+Pedestrian entry & CoC + CNL, CE & 99.17 / 0.00 / 98.33 & 99.17 / 0.42 / 98.33 & 97.08 / 2.92 / 94.17\\
+Pedestrian entry & CoC + CNL, CE + semantic & 100.00 / 0.00 / 100.00 & 97.08 / 2.50 / 94.17 & 95.83 / 0.00 / 91.67\\
+Hold, maxima & CoC, CE & 75.00 / 11.72 / 50.00 & 75.00 / 9.38 / 50.00 & 75.00 / 11.72 / 50.00\\
+Hold, maxima & CoC, CE + semantic & 75.00 / 0.00 / 50.00 & 75.00 / 1.56 / 50.00 & 73.44 / 3.13 / 48.44\\
+Hold, maxima & CoC + CNL, CE & 97.66 / 0.00 / 95.31 & 95.31 / 0.00 / 90.63 & 95.31 / 0.00 / 92.19\\
+Hold, maxima & CoC + CNL, CE + semantic & 93.75 / 0.00 / 87.50 & 96.09 / 0.00 / 93.75 & 98.44 / 0.00 / 96.88\\
+Hold, XY & CoC, CE & 71.09 / 12.50 / 46.88 & 73.44 / 7.81 / 48.44 & 73.44 / 12.50 / 50.00\\
+Hold, XY & CoC, CE + semantic & 74.22 / 1.56 / 50.00 & 75.00 / 0.00 / 50.00 & 75.00 / 0.00 / 50.00\\
+Hold, XY & CoC + CNL, CE & 93.75 / 0.78 / 87.50 & 92.19 / 1.56 / 84.38 & 94.53 / 2.34 / 89.06\\
+Hold, XY & CoC + CNL, CE + semantic & 90.63 / 0.00 / 81.25 & 90.63 / 5.47 / 81.25 & 96.88 / 0.78 / 93.75\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering\footnotesize
+\caption{CoC-trained fresh adapters with common CNL at evaluation: preferred-selection score / constraint violation rate / rule-pair accuracy (\%).}
+\label{tab:sup-fresh-common}
+\begin{tabular}{llccc}
+\toprule
+Task & Training & Seed 42 & Seed 17 & Seed 123\\
+\midrule
+Pedestrian entry & CoC, CE & 48.75 / 25.00 / 0.83 & 51.67 / 7.92 / 5.00 & 50.00 / 20.83 / 0.00\\
+Pedestrian entry & CoC, CE + semantic & 50.00 / 0.00 / 0.00 & 50.00 / 0.00 / 0.00 & 50.00 / 0.00 / 0.00\\
+Hold, maxima & CoC, CE & 78.13 / 6.25 / 56.25 & 80.47 / 3.13 / 60.94 & 76.56 / 10.16 / 53.13\\
+Hold, maxima & CoC, CE + semantic & 76.56 / 0.00 / 53.13 & 75.00 / 0.78 / 51.56 & 75.00 / 0.00 / 50.00\\
+Hold, XY & CoC, CE & 75.78 / 4.69 / 51.56 & 75.78 / 4.69 / 51.56 & 75.00 / 9.38 / 51.56\\
+Hold, XY & CoC, CE + semantic & 74.22 / 1.56 / 50.00 & 75.00 / 0.00 / 50.00 & 75.00 / 0.00 / 50.00\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Six-task study.} For pedestrian entry, three-seed means $\pm$ sample
+standard deviations are: P0 $49.86\pm0.24$ preferred-selection score,
+$19.17\pm7.11$ constraint violation rate, $0.00$ rule-pair accuracy;
+P1 $96.81\pm2.10$, $1.39\pm2.06$, $93.61\pm4.19$;
+P2 $98.06\pm1.88$, $0.83\pm0.83$, $96.11\pm3.76$.
+These standard deviations use the unrounded per-seed rates in
+\texttt{temporal-expansion-learning-2026-09-29-001/RESULT.json};
+the archived population-SD fields are unchanged.
+P2 does not dominate every
+seed; for example, seed 42 has no P1 violations and 0.83\% P2 violations.
+Table~\ref{tab:sup-static} gives static and maneuver details, including
+constraint-compliant completion.
+
+\begin{table}[h]
+\centering\footnotesize
+\caption{Static and maneuver results: preferred-selection score / constraint violation rate / constraint-compliant completion / rule-pair accuracy (\%), three-seed means.}
+\label{tab:sup-static}
+\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llccc}
+\toprule
+Family & Condition & Primary & Paraphrase & Unseen values\\
+\midrule
+Static & P0 & 50.00/24.31/75.69/0.00 & 50.00/24.31/75.69/0.00 & 50.00/22.92/77.08/0.00\\
+Static & P1 & 100.00/0.00/100.00/100.00 & 93.29/0.00/100.00/86.57 & 99.54/0.00/100.00/99.07\\
+Static & P2 & 100.00/0.00/100.00/100.00 & 80.32/7.87/92.13/60.65 & 97.22/0.23/99.77/94.44\\
+Maneuver & P0 & 50.00/30.90/69.10/0.00 & 50.00/30.90/69.10/0.00 & 50.00/30.90/69.10/0.00\\
+Maneuver & P1 & 100.00/0.00/100.00/100.00 & 100.00/0.00/100.00/100.00 & 100.00/0.00/100.00/100.00\\
+Maneuver & P2 & 98.96/0.00/100.00/97.92 & 97.92/2.08/97.92/95.83 & 98.96/0.00/100.00/97.92\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+On the combined maneuver set, preferred-selection score / constraint violation rate / constraint-compliant completion /
+rule-pair accuracy are 50.00 / 30.21 / 69.79 / 0.00 for P0, 94.10 / 0.69 / 99.31 / 88.19
+for P1 and 91.32 / 1.04 / 98.96 / 82.64 for P2. On the pedestrian-entry
+paraphrase, the alternative natural-language guard reaches 93.89 / 0.00
+(preferred-selection score/constraint violation rate).
+
+\textbf{Individual seeds for the six-task and additional comparisons.}
+Tables~\ref{tab:sup-primary-seeds}, \ref{tab:sup-temporal-robust-seeds}, and
+\ref{tab:sup-multitask-robust-seeds} give the archived seed values underlying
+main-text means. Seeds follow the protocol order 42, 17, and 123. Primary
+subtask scores and family-level robustness scores have different aggregation
+levels; their rows are not additional independent evaluations. Pedestrian-entry
+rows use 240 predictions per seed, static subtasks 48, maneuver subtasks 48,
+static family evaluations 144, and maneuver family evaluations 96.
+
+\begin{table}[tbp]
+\centering\footnotesize\setlength{\tabcolsep}{3pt}
+\caption{Six-task primary results by individual seed: preferred-selection score / constraint violation rate / rule-pair accuracy (\%).}
+\label{tab:sup-primary-seeds}
+\begin{tabular}{llccc}
+\toprule
+Task & Condition & Seed 42 & Seed 17 & Seed 123\\
+\midrule
+Pedestrian entry & P0 & 49.58 / 25.00 / 0.00 & 50.00 / 11.25 / 0.00 & 50.00 / 21.25 / 0.00\\
+Pedestrian entry & P1 & 97.08 / 0.00 / 94.17 & 94.58 / 3.75 / 89.17 & 98.75 / 0.42 / 97.50\\
+Pedestrian entry & P2 & 96.25 / 0.83 / 92.50 & 100.00 / 0.00 / 100.00 & 97.92 / 1.67 / 95.83\\
+Maximum speed & P0 & 50.00 / 22.92 / 0.00 & 50.00 / 25.00 / 0.00 & 50.00 / 25.00 / 0.00\\
+Maximum speed & P1 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00\\
+Maximum speed & P2 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00\\
+Minimum clearance & P0 & 50.00 / 22.92 / 0.00 & 50.00 / 25.00 / 0.00 & 50.00 / 25.00 / 0.00\\
+Minimum clearance & P1 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00\\
+Minimum clearance & P2 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00\\
+Minimum entry delay & P0 & 50.00 / 22.92 / 0.00 & 50.00 / 25.00 / 0.00 & 50.00 / 25.00 / 0.00\\
+Minimum entry delay & P1 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00\\
+Minimum entry delay & P2 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00\\
+Stopping & P0 & 50.00 / 20.83 / 0.00 & 50.00 / 25.00 / 0.00 & 50.00 / 25.00 / 0.00\\
+Stopping & P1 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00\\
+Stopping & P2 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00\\
+Lane change & P0 & 50.00 / 25.00 / 0.00 & 50.00 / 39.58 / 0.00 & 50.00 / 50.00 / 0.00\\
+Lane change & P1 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00\\
+Lane change & P2 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 93.75 / 0.00 / 87.50\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[tbp]
+\centering\footnotesize\setlength{\tabcolsep}{3pt}
+\caption{Pedestrian-entry representations and robustness by individual seed: preferred-selection score / constraint violation rate / rule-pair accuracy (\%).}
+\label{tab:sup-temporal-robust-seeds}
+\begin{tabular}{llccc}
+\toprule
+Evaluation & Condition & Seed 42 & Seed 17 & Seed 123\\
+\midrule
+Primary & P0 & 49.58 / 25.00 / 0.00 & 50.00 / 11.25 / 0.00 & 50.00 / 21.25 / 0.00\\
+Primary & P1 & 97.08 / 0.00 / 94.17 & 94.58 / 3.75 / 89.17 & 98.75 / 0.42 / 97.50\\
+Primary & P2 & 96.25 / 0.83 / 92.50 & 100.00 / 0.00 / 100.00 & 97.92 / 1.67 / 95.83\\
+Primary & Alternative guard & 95.83 / 3.33 / 91.67 & 99.17 / 0.00 / 98.33 & 99.17 / 0.00 / 98.33\\
+Primary & Logical text & 98.33 / 0.00 / 96.67 & 99.17 / 0.42 / 98.33 & 100.00 / 0.00 / 100.00\\
+Paraphrase & P0 & 49.58 / 25.00 / 0.00 & 50.00 / 11.25 / 0.00 & 50.00 / 21.25 / 0.00\\
+Paraphrase & P1 & 87.92 / 7.92 / 75.83 & 87.50 / 6.67 / 75.00 & 96.25 / 0.42 / 92.50\\
+Paraphrase & P2 & 93.33 / 1.25 / 86.67 & 99.17 / 0.83 / 98.33 & 98.33 / 1.67 / 96.67\\
+Paraphrase & Alternative guard & 92.08 / 0.00 / 84.17 & 90.00 / 0.00 / 80.00 & 99.58 / 0.00 / 99.17\\
+Paraphrase & Logical text & 98.33 / 0.00 / 96.67 & 99.17 / 0.42 / 98.33 & 100.00 / 0.00 / 100.00\\
+Unseen wait & P0 & 49.58 / 25.00 / 0.00 & 50.00 / 9.58 / 0.00 & 50.00 / 20.83 / 0.00\\
+Unseen wait & P1 & 98.75 / 0.00 / 97.50 & 92.92 / 6.25 / 85.83 & 98.33 / 0.42 / 96.67\\
+Unseen wait & P2 & 94.58 / 0.42 / 89.17 & 99.17 / 0.83 / 98.33 & 96.25 / 3.33 / 92.50\\
+Unseen wait & Alternative guard & 97.08 / 1.67 / 94.17 & 99.17 / 0.00 / 98.33 & 99.58 / 0.00 / 99.17\\
+Unseen wait & Logical text & 96.67 / 0.00 / 93.33 & 97.08 / 2.50 / 94.17 & 50.00 / 0.00 / 0.00\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[tbp]
+\centering\footnotesize\setlength{\tabcolsep}{3pt}
+\caption{Static and maneuver comparisons by individual seed: preferred-selection score / constraint violation rate / rule-pair accuracy (\%). Family values aggregate their subtasks.}
+\label{tab:sup-multitask-robust-seeds}
+\begin{tabular}{llccc}
+\toprule
+Family, evaluation & Condition & Seed 42 & Seed 17 & Seed 123\\
+\midrule
+Static, primary & P0 & 50.00 / 22.92 / 0.00 & 50.00 / 25.00 / 0.00 & 50.00 / 25.00 / 0.00\\
+Static, primary & P1 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00\\
+Static, primary & P2 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00\\
+Static, paraphrase & P0 & 50.00 / 22.92 / 0.00 & 50.00 / 25.00 / 0.00 & 50.00 / 25.00 / 0.00\\
+Static, paraphrase & P1 & 93.06 / 0.00 / 86.11 & 91.67 / 0.00 / 83.33 & 95.14 / 0.00 / 90.28\\
+Static, paraphrase & P2 & 84.72 / 6.94 / 69.44 & 80.56 / 8.33 / 61.11 & 75.69 / 8.33 / 51.39\\
+Static, unseen & P0 & 50.00 / 18.75 / 0.00 & 50.00 / 25.00 / 0.00 & 50.00 / 25.00 / 0.00\\
+Static, unseen & P1 & 100.00 / 0.00 / 100.00 & 98.61 / 0.00 / 97.22 & 100.00 / 0.00 / 100.00\\
+Static, unseen & P2 & 97.92 / 0.00 / 95.83 & 99.31 / 0.69 / 98.61 & 94.44 / 0.00 / 88.89\\
+Maneuver, primary & P0 & 50.00 / 22.92 / 0.00 & 50.00 / 32.29 / 0.00 & 50.00 / 37.50 / 0.00\\
+Maneuver, primary & P1 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00\\
+Maneuver, primary & P2 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 96.88 / 0.00 / 93.75\\
+Maneuver, paraphrase & P0 & 50.00 / 22.92 / 0.00 & 50.00 / 32.29 / 0.00 & 50.00 / 37.50 / 0.00\\
+Maneuver, paraphrase & P1 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00\\
+Maneuver, paraphrase & P2 & 100.00 / 0.00 / 100.00 & 93.75 / 6.25 / 87.50 & 100.00 / 0.00 / 100.00\\
+Maneuver, unseen & P0 & 50.00 / 25.00 / 0.00 & 50.00 / 28.13 / 0.00 & 50.00 / 39.58 / 0.00\\
+Maneuver, unseen & P1 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00\\
+Maneuver, unseen & P2 & 100.00 / 0.00 / 100.00 & 100.00 / 0.00 / 100.00 & 96.88 / 0.00 / 93.75\\
+Maneuver, combined & P0 & 50.00 / 25.00 / 0.00 & 50.00 / 28.13 / 0.00 & 50.00 / 37.50 / 0.00\\
+Maneuver, combined & P1 & 87.50 / 0.00 / 75.00 & 96.88 / 0.00 / 93.75 & 97.92 / 2.08 / 95.83\\
+Maneuver, combined & P2 & 89.58 / 0.00 / 79.17 & 98.96 / 1.04 / 97.92 & 85.42 / 2.08 / 70.83\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Continuation study.} Table~\ref{tab:sup-continuation} gives preferred-candidate selections before and after continuation (192 per cell).
+
+\begin{table}[h]
+\centering\footnotesize
+\caption{Position-hold continuation: preferred-candidate selections before $\to$ after training (of 192).}
+\label{tab:sup-continuation}
+\begin{tabular}{lccc}
+\toprule
+Representation, hold & P0 & P1 & P2\\
+\midrule
+Maxima, 0.5 s & $92\to129$ & $108\to172$ & $100\to182$\\
+Maxima, 2.0 s & $121\to167$ & $165\to189$ & $157\to189$\\
+XY, 0.5 s & $92\to119$ & $99\to156$ & $96\to174$\\
+XY, 2.0 s & $63\to169$ & $65\to175$ & $76\to188$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\clearpage
+\section{Pretrained-VLM Evaluation}\label{sup:pretrained}
+
+Both pretrained models are evaluated once per input with greedy decoding.
+The 12-token limit was fixed before execution; the 512-token evaluation with
+final-answer extraction was added after truncated explanations were observed.
+Both are reported. Unextractable answers count as incorrect and as neither
+violations nor admissible choices. Table~\ref{tab:sup-pretrained} gives all
+results. Rule-pair accuracy of the 8B model at the 12-token limit, recorded in the
+evaluation results with the same pair definition as for the fine-tuned
+adapters, is 0.83\% for pedestrian entry, 9.72\% for the static tasks and
+25.00\% for the maneuver tasks (means of their subtasks), and 51.56\% and 23.44\% for interval-maximum and XY position
+holding; an unextractable answer counts as incorrect.
+
+\begin{table}[h]
+\centering\footnotesize
+\caption{Pretrained models with CoC + CNL inputs: preferred-selection score / constraint violation rate (\%), answer-extraction failures (\%), and output-limit hits.}
+\label{tab:sup-pretrained}
+\begin{tabular}{lrlccc}
+\toprule
+Model & Limit & Task & PSS / CVR & Extraction failures & Limit hits\\
+\midrule
+2B & 12 & Pedestrian entry & 0.00 / 0.00 & 100.00 & 240/240\\
+2B & 12 & Maximum speed & 0.00 / 0.00 & 100.00 & 48/48\\
+2B & 12 & Minimum clearance & 0.00 / 0.00 & 100.00 & 48/48\\
+2B & 12 & Minimum entry delay & 0.00 / 0.00 & 100.00 & 48/48\\
+2B & 12 & Stopping & 0.00 / 0.00 & 100.00 & 48/48\\
+2B & 12 & Lane change & 0.00 / 0.00 & 100.00 & 48/48\\
+2B & 12 & Hold, maxima & 0.00 / 0.00 & 100.00 & 128/128\\
+2B & 12 & Hold, XY & 0.00 / 0.00 & 100.00 & 128/128\\
+2B & 512 & Pedestrian entry & 10.83 / 11.25 & 65.42 & 240/240\\
+2B & 512 & Maximum speed & 50.00 / 50.00 & 0.00 & 0/48\\
+2B & 512 & Minimum clearance & 50.00 / 50.00 & 0.00 & 0/48\\
+2B & 512 & Minimum entry delay & 54.17 / 14.58 & 31.25 & 15/48\\
+2B & 512 & Stopping & 0.00 / 0.00 & 100.00 & 48/48\\
+2B & 512 & Lane change & 37.50 / 8.33 & 54.17 & 26/48\\
+2B & 512 & Hold, maxima & 14.84 / 0.00 & 79.69 & 112/128\\
+2B & 512 & Hold, XY & 7.03 / 7.03 & 75.78 & 128/128\\
+8B & 12 & Pedestrian entry & 27.08 / 68.75 & 0.00 & 0/240\\
+8B & 12 & Maximum speed & 60.42 / 39.58 & 0.00 & 0/48\\
+8B & 12 & Minimum clearance & 54.17 / 45.83 & 0.00 & 0/48\\
+8B & 12 & Minimum entry delay & 50.00 / 50.00 & 0.00 & 0/48\\
+8B & 12 & Stopping & 50.00 / 25.00 & 0.00 & 0/48\\
+8B & 12 & Lane change & 75.00 / 0.00 & 0.00 & 0/48\\
+8B & 12 & Hold, maxima & 70.31 / 7.03 & 0.00 & 0/128\\
+8B & 12 & Hold, XY & 35.94 / 33.59 & 20.31 & 26/128\\
+8B & 512 & Pedestrian entry & 27.50 / 66.67 & 0.00 & 0/240\\
+8B & 512 & Maximum speed & 60.42 / 39.58 & 0.00 & 0/48\\
+8B & 512 & Minimum clearance & 54.17 / 45.83 & 0.00 & 0/48\\
+8B & 512 & Minimum entry delay & 50.00 / 50.00 & 0.00 & 0/48\\
+8B & 512 & Stopping & 50.00 / 25.00 & 0.00 & 0/48\\
+8B & 512 & Lane change & 75.00 / 0.00 & 0.00 & 0/48\\
+8B & 512 & Hold, maxima & 70.31 / 7.03 & 0.00 & 0/128\\
+8B & 512 & Hold, XY & 36.72 / 34.38 & 17.19 & 29/128\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{General Reasoning-Prompt Controls}\label{sup:reasoning}
+
+Zero-shot CoT appends its step-by-step trigger and then extracts an answer.
+Basic Plan-and-Solve uses the original planning-and-solving prompt, extracting
+directly when the specified answer marker is present and otherwise generating a
+second extraction response. Neither PS+ nor self-consistency is used. Reasoning
+limits are 128 tokens for Zero-shot CoT and 256 for Plan-and-Solve, with up to
+32 tokens for extraction. With greedy decoding, identical image-and-prompt
+inputs within a method and checkpoint reuse one output: 120, 24, and 38 unique
+inputs per family, giving 1,092 first-stage generations. Each method scores
+1,440 predictions (2,880 in total). All 546 unique Zero-shot CoT first-stage
+outputs and 498 of 546 Plan-and-Solve outputs are short label strings; the
+other 48 Plan-and-Solve outputs, all static, reach the 256-token limit before
+extraction. Table~\ref{tab:sup-reasoning} gives task-level results.
+
+\begin{table}[h]
+\centering\footnotesize
+\caption{Reasoning-prompt controls on CoC-only checkpoints: preferred-selection score / constraint violation rate (\%), three-seed means. Rule-pair accuracy is 0\% throughout.}
+\label{tab:sup-reasoning}
+\begin{tabular}{lccc}
+\toprule
+Task & P0 & Zero-shot CoT & Plan-and-Solve\\
+\midrule
+Pedestrian entry & 49.86 / 19.17 & 49.86 / 18.19 & 49.86 / 17.92\\
+Maximum speed & 50.00 / 24.31 & 50.00 / 25.00 & 50.00 / 25.69\\
+Minimum clearance & 50.00 / 24.31 & 50.00 / 25.00 & 50.00 / 25.69\\
+Minimum entry delay & 50.00 / 24.31 & 50.00 / 25.00 & 50.00 / 25.69\\
+Stopping & 50.00 / 23.61 & 50.00 / 23.61 & 50.00 / 25.00\\
+Lane change & 50.00 / 38.19 & 50.00 / 36.81 & 50.00 / 35.42\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Recorded Prediction Cases}\label{sup:cases}
+
+Two cases were selected from stored seed-42 test predictions by sorting records
+by scene ID and rule and taking (a) the first case in which P0 violates while
+P1 and P2 are correct and (b) the first P2 violation. They are explanatory,
+not representative samples. In case (a), clearance occurs at 11.0 s and a 1.5 s
+wait permits entry from 12.5 s; P0 selects entry at 11.5 s, whereas P1 and P2
+select the reference entry at 12.5 s. In case (b), clearance occurs at 11.4 s
+and entry is permitted from 12.9 s; P0 and P1 select the reference candidate,
+whereas P2 enters at 12.8 s, 0.1 s early. Labels rotate, so a letter does not
+identify a fixed behavior.
+
+\section{Follow-Up Diagnostics of Pedestrian-Entry Adapters}\label{sup:diagnostics}
+
+Nine existing P0, P1, and P2 adapters produce 2,160 exploratory predictions
+without new training (Table~\ref{tab:sup-diagnostics}). D1 changes boundaries,
+clearance instants, waits, or their combination; D2 changes wording; D3 uses
+original, blank, or redrawn images. Each bundle contains three semantic
+parameter groups and 24 rows per condition and seed. For D3, a group is a base
+case configuration evaluated with two waiting rules and four label rotations.
+Redrawn images alter the visual premise, so these preferred-selection scores
+are input-intervention results. P2 changes its
+choice on 25.00\% of blank-image and 19.44\% of redrawn-image cases, and P1 on
+18.06\% and 12.50\%.
+
+\begin{table}[h]
+\centering\footnotesize
+\caption{Follow-up diagnostics: preferred-selection score / constraint violation rate (\%), three-seed means.}
+\label{tab:sup-diagnostics}
+\begin{tabular}{lccc}
+\toprule
+Diagnostic & P0 & P1 & P2\\
+\midrule
+D1, boundary & 50.00 / 33.33 & 95.83 / 4.17 & 95.83 / 2.78\\
+D1, clearance only & 50.00 / 22.22 & 100.00 / 0.00 & 98.61 / 1.39\\
+D1, duration only & 50.00 / 20.83 & 98.61 / 1.39 & 97.22 / 2.78\\
+D1, joint & 50.00 / 22.22 & 100.00 / 0.00 & 98.61 / 1.39\\
+D2, canonical & 50.00 / 20.83 & 100.00 / 0.00 & 95.83 / 2.78\\
+D2, paraphrase 1 & 50.00 / 20.83 & 98.61 / 0.00 & 97.22 / 2.78\\
+D2, paraphrase 2 & 50.00 / 20.83 & 76.39 / 15.28 & 77.78 / 9.72\\
+D3, original image & 50.00 / 22.22 & 100.00 / 0.00 & 98.61 / 1.39\\
+D3, blank image & 50.00 / 13.89 & 81.94 / 2.78 & 76.39 / 1.39\\
+D3, redrawn image & 50.00 / 19.44 & 87.50 / 0.00 & 79.17 / 1.39\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Position-Hold Regression Diagnostic}\label{sup:regression}
+
+The regression set reuses 256 previously inspected diagnostic rows, separate
+from the new test set. Table~\ref{tab:sup-regression} gives strict violations,
+tolerance-based violations (0.01 m) in parentheses, and preferred-selection score after
+continuation. Before continuation, P2 had 75/192 strict violations in the
+XY, 2.0 s stratum. The smallest prohibited overshoot is 1 mm here, compared
+with 22 mm in the new test.
+
+\begin{table}[h]
+\centering\footnotesize
+\caption{Regression diagnostic after continuation: strict (tolerance) violations of 192 and preferred-selection score (\%).}
+\label{tab:sup-regression}
+\begin{tabular}{lcccccc}
+\toprule
+& \multicolumn{2}{c}{P0} & \multicolumn{2}{c}{P1} & \multicolumn{2}{c}{P2}\\
+Representation, hold & Viol. & PSS & Viol. & PSS & Viol. & PSS\\
+\midrule
+Maxima, 0.5 s & 0 (0) & 80.21 & 0 (0) & 90.63 & 0 (0) & 96.88\\
+Maxima, 2.0 s & 53 (18) & 70.83 & 16 (1) & 89.58 & 1 (0) & 98.44\\
+XY, 0.5 s & 5 (5) & 81.77 & 17 (17) & 79.69 & 40 (39) & 75.00\\
+XY, 2.0 s & 106 (53) & 41.67 & 79 (41) & 58.85 & 77 (50) & 59.38\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Data Records}\label{sup:records}
+
+\begingroup
+\Urlmuskip=0mu plus 1mu\relax
+Results are read from frozen evidence packages under
+\url{projects/04-guardsynth-coc/artifacts/public/}:
+\begin{itemize}
+\item \url{paper1-vlm-constraint-baselines-001}: fresh-adapter study and pretrained models;
+\item \url{paper1-position-hold-training-001}: continuation study and regression diagnostic;
+\item \url{paper1-learning-specification-faults-001}: fault injection into learning specifications;
+\item \begingroup\raggedright
+\url{paper1-constraint-composition-001/} contains two runs:\par
+\url{document-grounded-composition-2026-10-17-002}: document-grounded diagnostic;\par
+\url{constraint-composition-2026-10-17-001}: synthetic boundary diagnostic.
+Both are reported separately in Section~\ref{sup:composition}.\par\endgroup
+\item \url{paper1-method-preservation-001} and \url{paper1-temporal-diversity-001}: six-task study, representations, diagnostics, and specification checks;
+\item \url{paper1-reasoning-comparison-001}: reasoning-prompt controls;
+\item \url{paper1-external-methods-001/original-method-checks-2026-10-07-001/RESULT.json}: native execution checks in Section~\ref{sup:native}.
+\end{itemize}
+Restricted records are under
+\url{projects/04-guardsynth-coc/artifacts/restricted/}:
+\begin{itemize}
+\item \url{alpamayo-speed-limits-001/speed-limits-2026-10-07-001/RESULT.json}: PhysicalAI speed diagnostics;
+\item \url{alpamayo-nuscenes-speed-limits-001/speed-limits-2026-10-08-001/RESULT.json}: converted nuScenes speed diagnostics;
+\item \url{alpamayo-position-hold-001/position-hold-2026-10-08-001/RESULT.json}: position-hold diagnostics for both sources;
+\item \url{guardsynth-paper1-action-contract-001/scene18-action-contract-2026-09-08-002/query_checks.json}: qualitative lifecycle queries in Section~\ref{sup:lifecycle}.
+\end{itemize}
+The speed runs also contain \texttt{compliance\_metrics.csv} and
+\texttt{rule\_pair\_metrics.csv}; the position-hold run contains
+\texttt{hold\_metrics.csv}. Licensed source material remains in these restricted packages.
+\endgroup
+
+\section{Bounded Source-Composition Diagnostic}\label{sup:composition}
+
+
+\subsection*{Document-grounded compatibility diagnostic}
+
+The current main-text diagnostic uses manually interpreted clauses, not
+source documents generated for the experiment. Its source catalog records
+versions, official URLs, page/paragraph locators, reviewer paraphrases,
+selected roles, and exclusions. Eight official documents were inspected:
+NTSB's Tempe report, two FHWA signal publications, Waymo's June 2026 Jaguar
+guide, Highway Code Rules 129 and 219, the Cruise recall report, and
+49 CFR 392.10. The last three inform scope rather than executable cases:
+Cruise's full response guard is undisclosed; Rule 219 requires compliance
+with traffic signs; the railway stopping requirement has vehicle-class
+limits and exceptions. Two UNECE candidates (Regulations 152 and 157) were
+excluded from numerical models because direct official-PDF retrieval was
+blocked. Drafts or secondary copies were not substituted.
+
+The catalog stores manually reviewed metadata and paraphrases, not
+byte-preserved original PDFs. Scenario states are authored. The natural
+statements in Table~\ref{tab:sup-composition-sources} explain the
+formalization; their automatic extraction and parse-back are not evaluated.
+
+\begin{table}[h]
+\caption{Document-grounded conditions and authored inputs for composition
+checking. Formulas use SI units; execution uses integer ms/mm and exact
+cross-multiplication. Scenario values are hypothetical, not measured accident
+states. $b$ denotes choosing the stop branch; $m$ autonomous driving; $c$
+crossing; $q,n,f$ a stationary vehicle, necessity, and a clear road; $o,p,k,a_d$
+an open door, Park, applied parking brake, and deployed airbag. The faithful
+and omitted-exception encodings are alternatives, not simultaneous requirements.}
+\label{tab:sup-composition-sources}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\linewidth}{@{}p{0.20\linewidth}X p{0.30\linewidth}@{}}
+\toprule
+Source / role & Natural-language statement & Formal condition\\
+\midrule
+\multicolumn{3}{@{}l}{\textit{Braking:} $t_b,x\ge0$; selected emergency branch.}\\[3pt]
+NTSB policy record & The selected historical policy suppresses braking for 1 s. & $t_b\ge1$\\[3pt]
+Authored motion model & Constant speed before braking; constant deceleration $a$ thereafter. & $x\ge vt_b+v^2/(2a)$\\[3pt]
+Authored test objective & Stop within the supplied distance $d$. & $x\le d$\\[4pt]
+\hline
+\multicolumn{3}{@{}l}{\textit{Yellow interval:} only stop or constant-speed proceed.}\\[3pt]
+FHWA-informed stopping model & The stop branch needs reaction and stopping distance. & $b\Rightarrow d\ge v\rho+v^2/(2a)$\\[3pt]
+FHWA-informed phase model & The proceed branch reaches the stop line by yellow end. & $\neg b\Rightarrow d\le vY$\\[4pt]
+\hline
+\multicolumn{3}{@{}l}{\textit{Autonomous-driving interlock:} authored vehicle-state flags.}\\[3pt]
+Waymo operating guide & Any listed blocker prevents autonomous driving. & $(o\lor p\lor k\lor a_d)\Rightarrow\neg m$\\[3pt]
+Authored candidate & Test a candidate that drives autonomously. & $m=\top$\\[4pt]
+\hline
+\multicolumn{3}{@{}l}{\textit{Rule 129:} nearer line solid; all other exceptions absent.}\\[3pt]
+Rule 129, restricted & Crossing requires the stationary-vehicle exception's conditions. & $c\Rightarrow(q\land n\land f)$\\[3pt]
+Omitted-exception fault & Faulty alternative: prohibit crossing unconditionally. & $\neg c$\\[3pt]
+Authored candidate & Test crossing; separate controls hold instead. & $c=\top$\\
+\bottomrule
+\end{tabularx}
+\end{table}
+The platform compiler and solver are unchanged. Variables use integer ms
+and mm as dimensionless counts; inequalities are cross-multiplied to
+preserve exact rational stopping distances. Stop positions are conservatively
+rounded upward to the mm grid.
+
+For braking, the selected historical emergency branch requires a persistent
+hazard, no takeover, and no alternative path. Emergency-trigger eligibility
+is not reconstructed; the original trigger involved required deceleration
+above 7 m/s$^2$ or jerk magnitude above 5 m/s$^3$. The constant-deceleration
+model ignores jerk, so it is not the original vehicle dynamics. NTSB
+reports that avoidance already exceeded ADS braking specifications at
+recognition in the actual collision; we make no counterfactual claim about
+preventing Tempe.
+
+For $v\in\{10,15,20\}$ m/s, $a\in\{5,7\}$ m/s$^2$, and
+$\delta\in\{0,1\}$ s, distances bracket $v\delta+v^2/(2a)$ by one integer mm,
+after upward rounding. Each speed/deceleration pair also has a distance
+halfway between immediate and one-second-delayed stopping, tested under
+both delays (48 cases). Zero delay is an authored control. Distances shorter
+than immediate stopping remain in the grid to distinguish already-infeasible
+avoidance from delay incompatibility.
+
+Signal cases fix $\rho=1$ s and nominal $a=3$ m/s$^2$, a rounded value below
+FHWA's historical 10 ft/s$^2$ guidance, with speeds 10/15/20 m/s and yellow
+3/4/5 s. For each stopping and stop-line-reaching threshold $z$ in mm,
+distances include $\lfloor z\rfloor-1$, $\lceil z\rceil$, and
+$\lceil z\rceil+1$, plus the floored midpoint of the thresholds; the
+15 m/s, 3 s case also tests 50 m. Duplicate distances within a parameter
+setting are removed (64 cases). Only nominal stopping and unchanged-speed
+proceeding are modeled. The yellow endpoint uses a closed mathematical
+boundary, not a claim about legal permission at the exact instant red begins.
+We test reaching the stop line, not complete intersection clearance.
+For example, $v=15$ m/s, $\rho=1$ s, and $a=3$ m/s$^2$ require 52.5 m for
+nominal stopping, whereas 3 s of unchanged-speed travel reaches 45 m. At
+50 m from the stop line, neither branch is feasible; a 4 s interval admits
+proceeding. This is feasibility under the nominal two-action model, not
+impossibility of emergency braking or another manoeuvre.
+
+The interlock grid tests all 16 boolean combinations of door-open, Park,
+parking-brake-applied, and airbag-deployed states, each with an autonomous-drive
+or hold candidate (32 cases). Rolling and towing are outside this interlock.
+The exception grid tests the eight states of stationary vehicle, necessity,
+and clear road, each with cross/hold and faithful/omitted-exception variants
+(32 cases). Other Rule 129 exceptions are fixed absent. The omitted-exception
+variant is an intentional transcription fault, not the published rule.
+
+\begin{table}[h]
+\centering\small
+\caption{Independent full-combination feasibility references for the
+document-grounded grid, in SI units. $\delta$ is delay, $B$ any active
+interlock blocker, $E$ the three exception conditions together, and $F$ the
+faithful encoding.}
+\label{tab:sup-document-composition}
+\begin{tabular}{lcrr}
+\toprule
+Family & Full composition is SAT iff & Cases & Queries\\
+\midrule
+Braking & $v\delta+v^2/(2a)\le d$ & 48 & 384\\
+Yellow & $d\ge v\rho+v^2/(2a)\lor d\le vY$ & 64 & 256\\
+Interlock & $\neg m\lor\neg B$ & 32 & 128\\
+Exception & $\neg c\lor(F\land E)$ & 32 & 128\\
+\midrule
+Total & & 176 & 896\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Every subset is solved with an independent feasibility reference. All 896
+verdicts agree, all 832 SAT witnesses pass numeric checks, and UNKNOWN
+outcomes are zero. The 58 UNSAT full configurations have subset-minimal
+groups. Twelve braking cases require all three groups; six others already
+have an incompatible model/objective pair without the delay constraint.
+The 16 interlock hold controls and the 16 non-crossing controls are SAT.
+The faithful rule accepts crossing when all exception conditions hold,
+whereas the omitted-exception variant rejects it. These counts are separate
+from learning, fault injection, and the synthetic diagnostic below.
+
+\begingroup\raggedright
+The maintained runner and protocol are
+\path{document_grounded_composition.py} and
+\path{document_grounded_composition_protocol_v0_1.json} in
+\path{projects/04-guardsynth-coc/experiments/paper1_cnl_learning/}.
+The frozen run is
+\path{document-grounded-composition-2026-10-17-002} under
+\path{projects/04-guardsynth-coc/artifacts/public/paper1-constraint-composition-001/}.
+It contains \path{SOURCE_CATALOG.json}, cases, subset queries with SMT-LIB
+and witnesses, minimal conflict groups, independent-reference results, and
+input/output hashes. \path{REPORT_KO.md} includes natural/formal tables
+and the source-selection rationale.
+\par\endgroup
+
+\subsection*{Earlier synthetic boundary diagnostic}
+
+This earlier logical experiment uses supplied synthetic source records S1--S9
+listed in its frozen case records and report. Each source
+has its own ID and a predefined policy, operator-requirement, or
+modeling-assumption role. These are authored records in the protocol, not
+retrieved regulations or documents from actual organizations. The natural
+statements are explanatory templates instantiated from structured parameters;
+their translation or composition as CNL is not evaluated.
+
+\begingroup\raggedright
+The maintained protocol and runner are in
+\path{projects/04-guardsynth-coc/experiments/paper1_cnl_learning/}.
+Their filenames are \path{constraint_composition_protocol_v0_1.json}
+and \path{constraint_composition.py}. The entry and hold
+components call the unchanged learning-profile lowerers. The platform Core
+compiler and Z3 check the shared context alone and every nonempty subset of
+the two or three source groups. No VLM inference or training is involved.
+\par\endgroup
+
+The analytic feasibility reference for the full combination is given below.
+Every proper subset is feasible under the fixed parameter grid; each such
+verdict is also solved and checked. A SAT witness is independently checked
+against the numerical conditions, without interpreting the Core expressions.
+
+\begin{table}[h]
+\centering\small
+\caption{Full-combination feasibility references and query counts. $d$ is
+the entry deadline; $\tau$ is clearance time; $\Delta$ is waiting duration;
+$t_d$ is the departure sample time; $H$ is hold duration; $D$ is required
+displacement or distance; $V$ is the speed cap; $T$ is travel duration; and
+$\delta$ is the minimum release-to-entry delay.}
+\label{tab:sup-composition-reference}
+\begin{tabular}{lcrr}
+\toprule
+Composition & Full combination is SAT iff & Cases & Queries\\
+\midrule
+Entry wait + deadline & $\neg e\lor d\ge\tau+\Delta$ & 48 & 192\\
+Position hold + departure & $t_d>H\lor D\le200$ & 12 & 48\\
+Speed cap + progress & $D\le VT$ & 27 & 108\\
+Three-way timing & $d\ge\Delta+\delta$ & 36 & 288\\
+\midrule
+Total & & 123 & 636\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The frozen protocol specifies the complete original grid; the main text now
+emphasizes the separate document-grounded diagnostic described above. The entry cases include 12 controls without an entry obligation;
+these retain SAT despite incompatible bounds conditional on entry. Hold
+cases include the inclusive endpoint and the next listed post-release sample,
+separating a genuine simultaneous conflict from a permitted later departure.
+The speed cases assume nonnegative constant speed, and hold cases assume
+nonnegative longitudinal coordinates and zero lateral coordinates at listed
+samples. No interpolation, acceleration, or vehicle dynamics are inferred.
+
+All 123 contexts and individual groups are satisfiable. The 35 incompatible
+full combinations have subset-minimal conflict groups relative to the fixed
+context. Component-only checks identify none; pairwise checks identify 23,
+leaving 12 three-way conflicts with satisfiable pairs. Moving each conflicting
+threshold by one unit to its equality boundary gives 35 solved SAT controls.
+All 636 verdicts match the reference; all 601 SAT witnesses pass independent
+numeric checks, and UNKNOWN outcomes are zero. These counts are not pooled
+with the fault-injection cases, queries, or model predictions.
+
+\begingroup\raggedright
+The frozen run in Section~\ref{sup:records} contains
+\path{cases.jsonl} (source records, natural statements, formal conditions, and
+contexts), \path{queries.jsonl} (selected sources, verdicts, SMT-LIB, and
+witnesses), and \path{compositions.jsonl} (Core models and minimal conflict
+groups). \path{RESULT.json} reports aggregate and per-family counts;
+\path{RUN_MANIFEST.json} records source hashes and the solver runtime.
+\path{REPORT_KO.md} includes the source-by-source natural/formal tables.
+An UNSAT group diagnoses incompatibility under the supplied context, not the
+correctness of source evidence, which requirement should take priority, or
+whether an actual driving system is safe.
+\par\endgroup
+
+\end{document}

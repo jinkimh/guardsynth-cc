@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "project_id": "guardsynth-coc",
+  "archive_sha256": "4e4a6f97b07cf31faddc226a20560a7691ac93789edf6e50c7a7f39c306b84ec",
+  "archive_members": 1194,
+  "manifest_files": 1188,
+  "sanitized_files": 47,
+  "remaining_host_home_paths": 0,
+  "remaining_gpu_identifiers": 0,
+  "sensitive_credential_fields": 0,
+  "file_extensions": {
+    ".json": 274,
+    ".md": 2,
+    ".py": 34,
+    ".txt": 3,
+    ".jsonl": 394,
+    ".csv": 5,
+    ".png": 480,
+    "": 2
+  },
+  "original_inputs_unchanged": true,
+  "policy": "Public copies remove host home paths and GPU UUIDs; project-relative paths and measurement fields are retained. Original/public digests are distinguished in SOURCE_MANIFEST.json."
+}

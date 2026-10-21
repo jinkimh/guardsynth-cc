@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "unit_tests_passed": 16,
+  "full_reruns": {
+    "learning_specification_faults.py": {
+      "status": "PASS",
+      "aggregate": {
+        "cases": 384,
+        "valid_cases": 48,
+        "valid_accepted": 48,
+        "supported_errors": 288,
+        "supported_detected": 288,
+        "supported_kernel_detected": 192,
+        "shared_source_errors": 48,
+        "shared_source_missed": 48,
+        "unknown_cases": 0,
+        "probe_queries": 7392,
+        "by_kind": {
+          "valid": {
+            "cases": 48,
+            "detected": 0,
+            "kernel_detected": 0,
+            "layer_flags": {
+              "structural": 0,
+              "consistency": 0,
+              "logic_rule": 0,
+              "evidence": 0,
+              "sentence": 0
+            }
+          },
+          "duration_change": {
+            "cases": 48,
+            "detected": 48,
+            "kernel_detected": 48,
+            "layer_flags": {
+              "structural": 0,
+              "consistency": 0,
+              "logic_rule": 48,
+              "evidence": 48,
+              "sentence": 0
+            }
+          },
+          "reverse_comparison": {
+            "cases": 48,
+            "detected": 48,
+            "kernel_detected": 48,
+            "layer_flags": {
+              "structural": 0,
+              "consistency": 0,
+              "logic_rule": 48,
+              "evidence": 0,
+              "sentence": 0
+            }
+          },
+          "delete_release": {
+            "cases": 48,
+            "detected": 48,
+            "kernel_detected": 48,
+            "layer_flags": {
+              "structural": 0,
+              "consistency": 0,
+              "logic_rule": 48,
+              "evidence": 0,
+              "sentence": 0
+            }
+          },
+          "unit_error": {
+            "cases": 48,
+            "detected": 48,
+            "kernel_detected": 48,
+            "layer_flags": {
+              "structural": 48,
+              "consistency": 0,
+              "logic_rule": 0,
+              "evidence": 0,
+              "sentence": 0
+            }
+          },
+          "cnl_duration": {
+            "cases": 48,
+            "detected": 48,
+            "kernel_detected": 0,
+            "layer_flags": {
+              "structural": 0,
+              "consistency": 0,
+              "logic_rule": 0,
+              "evidence": 0,
+              "sentence": 48
+            }
+          },
+          "cnl_negation": {
+            "cases": 48,
+            "detected": 48,
+            "kernel_detected": 0,
+            "layer_flags": {
+              "structural": 0,
+              "consistency": 0,
+              "logic_rule": 0,
+              "evidence": 0,
+              "sentence": 48
+            }
+          },
+          "shared_source_error": {
+            "cases": 48,
+            "detected": 0,
+            "kernel_detected": 0,
+            "layer_flags": {
+              "structural": 0,
+              "consistency": 0,
+              "logic_rule": 0,
+              "evidence": 0,
+              "sentence": 0
+            }
+          }
+        }
+      }
+    },
+    "document_grounded_composition.py": {
+      "status": "PASS",
+      "aggregate": {
+        "cases": 176,
+        "full_sat": 118,
+        "full_unsat": 58,
+        "queries": 896,
+        "unknown": 0,
+        "mismatches": 0,
+        "sat_witnesses": 832,
+        "invalid_witnesses": 0,
+        "all_components_sat": 176,
+        "component_only_detected": 0,
+        "pairwise_detected": 46,
+        "minimal_conflict_groups": 58,
+        "pairwise_sat_full_unsat": 12
+      }
+    }
+  },
+  "solver": "Z3 5.0.0",
+  "scope": "Executed from sanitized exported source/data using only external Python dependencies and pinned solver; GPU training not rerun."
+}

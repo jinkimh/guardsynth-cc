@@ -1,0 +1,53 @@
+% !TeX root = ncaa-manuscript-en.tex
+% project_id: guardsynth-coc
+% Revised to follow the Introduction and agreed terminology on 2026-10-17.
+% The preceding Conclusion is preserved unchanged in 07-conclusion.tex.
+\section{Conclusion}\label{sec:conclusion}
+
+Driving models need to use external behavioral rules as conditions for action
+selection. Constraint compliance and preference among admissible actions are
+separate requirements: a choice can satisfy the constraint while missing the
+preferred candidate under the stated objective. We proposed GuardSynth to make
+case-specific learning constraints explicit and checkable. It binds fields to
+observations, supplied rules, and modeling assumptions, represents the
+constraint in EBLC, checks satisfiability and candidate admissibility, and
+generates CNL for CoC training inputs with specification--sentence correspondence checks.
+
+The behavioral evaluation measures constraint violations and selection of the
+preferred candidate separately. With matched initialization and identical CNL
+at evaluation, CE-only adapters trained with CNL achieve preferred-selection
+scores of 93.49--98.47\%, constraint violation rates of at most 1.56\%, and
+rule-pair accuracy of at least 86.98\%. CoC-only-trained adapters reach
+6.25--17.92\% violations and at most 56.77\% rule-pair accuracy. Neither
+semantic loss without constraint text nor the pretrained 8B model given the
+same rule reaches that paired performance. These findings support including
+case-specific constraints in supervised training as well as supplying them at
+inference for the evaluated adapters; they do not compare this approach with
+reinforcement learning.
+
+Specification evaluation addresses the construction path separately. Fault
+injection into the two learning specifications detects all 288 supported
+faults and accepts all 48 valid cases. Specification-level and sentence
+checks detect different faults. All 48 jointly wrong evidence--specification
+controls remain undetected, showing the need for independent evidence
+confirmation. Evidence and sentence correspondence checks and boundary probes for
+logic--rule comparison were added after training, so their
+detection results are not attributed as the cause of behavioral improvement.
+
+A separate bounded diagnostic combines documented policy and guidance with
+authored states, models, objectives, or candidate requests. It identifies
+58 incompatible configurations among 176 cases, including 12 three-way
+conflicts whose pairs remain satisfiable, and retains 118 compatible
+configurations. This supports joint
+consistency checking under explicit contexts, separately from the learning
+results and general driving-safety claims.
+
+The evidence comes from synthetic candidate selection, one fine-tuned 2B model
+family, and three optimization seeds. Rewording reduces preferred selection,
+and violations persist in a regression diagnostic with overshoots as small as
+1~mm. Future work should assess real-scene applicability, richer compositions of
+constraints and assumptions, trajectory-generating models, and deployment-time
+constraint provision. GuardSynth provides a development path that connects
+source-bound constraint construction, restricted specification checking, and language
+for learning while keeping constraint compliance and preferred selection as
+separate evaluation targets.

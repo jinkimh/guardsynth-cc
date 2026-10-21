@@ -45,3 +45,7 @@ tests only.
 
 The exact public-manifest exclusion policy is implemented in
 [`cli/checks/build_manifest.py`](cli/checks/build_manifest.py).
+
+## GuardSynth NCA reproducibility package
+
+The frozen [source, synthetic data and prediction records](projects/04-guardsynth-coc/artifacts/public/paper1-reproducibility-release-001/github-release-2026-10-21-002/README.md) include a standard-library metric verifier and formal-check reproduction instructions. Code in this distribution is MIT; synthetic data and generated records are CC BY 4.0. Licenses are scoped to this distribution, not the entire monorepo. Host home paths and GPU identifiers are removed from exported copies. Model weights and restricted road imagery are excluded.

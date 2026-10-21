@@ -1,0 +1,48 @@
+\section{Conclusion}\label{sec:conclusion}
+
+Compliance with externally specified behavioral conditions remains a reliability
+concern even for driving models that explain their decisions. We addressed this
+by including behavioral constraints in the training data of CoC-based driving
+models and proposed GuardSynth. GuardSynth binds each constraint field to an
+observation, a supplied rule, or a modeling assumption, represents the constraint
+as an EBLC specification, checks it within a restricted logical model, and
+appends CNL generated from the specification to the original CoC.
+
+Training with constraint sentences improved rule-dependent selection. We
+compared adapters with identical initialization and common CNL evaluation
+inputs, restricting this comparison to conditions trained with cross-entropy
+loss alone. Adapters trained with constraint sentences had violation rates of
+at most 1.56\% and rule-pair accuracy of at least 86.98\%. Adapters trained on
+CoC alone had violation rates of 6.25--17.92\% and rule-pair accuracy of at most
+56.77\%, despite receiving the same rules at evaluation. Neither training with
+semantic loss without rule text nor providing the same rule to an untrained
+Qwen3-VL-8B model attained the rule-pair accuracy of adapters trained with
+constraint text; the 8B model violated the rule in 68.75\% of pedestrian-entry
+predictions. Across six
+behavioral tasks, both natural-language constraints and EBLC-derived CNL
+improved rule-dependent selection, while shuffling case--constraint associations
+substantially reduced the gains. These findings support including case-specific
+constraints in training data as well as providing them at inference.
+
+GuardSynth adds checkability to training constraints. In fault-injection
+evaluation of the two specifications used for learning, the checking suite
+detected all 288 supported faults and accepted all 48 valid cases.
+Specification-level checks detected faults in the specification and logical
+formula, and only sentence correspondence detected faults in the generated
+CNL. The 48 cases in which evidence records
+and specifications were jointly wrong remained undetected, indicating that
+evidence validity requires independent confirmation beyond internal consistency
+checks. This evaluation, conducted after the training runs, assessed the
+checkability of the specifications; it does not account for the reported
+behavioral improvement.
+
+The training findings come from synthetic candidate-selection tasks, one 2B
+model family, and three optimization seeds. Performance declined under
+rewording, and violations persisted in the earlier XY diagnostic, whose prohibited
+candidates exceed the radius by as little as 1~mm. Future work will
+extend this path to assessing constraint applicability in real scenes,
+constraint-based training of trajectory-generating VLA models, and
+deployment-time constraint generation. GuardSynth provides a path for including
+case-specific constraints in training data and checking their construction and
+correspondence, enabling constraint-based learning to be developed in a
+checkable manner.

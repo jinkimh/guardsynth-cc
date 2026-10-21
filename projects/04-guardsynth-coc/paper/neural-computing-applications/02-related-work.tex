@@ -1,0 +1,162 @@
+% !TeX root = ncaa-manuscript-en.tex
+\section{Related Work}\label{sec:related-work}
+
+We distinguish three questions: how a model uses a supplied behavioral rule,
+how that rule is expressed and checked as a constraint, and how the constraint
+is delivered as learning input. The following studies address different parts
+of this path; constraint compliance and preferences among admissible actions
+are separate assessment targets.
+
+\subsection{Reasoning-Based Driving and Reasoning Faithfulness}
+
+Recent driving models connect visual observations, language reasoning,
+and action planning. Alpamayo-R1 combines Chain of Causation (CoC)
+reasoning with trajectory prediction and uses supervised fine-tuning
+and reinforcement learning to improve reasoning--action
+alignment~\cite{r1}. DriveLM connects perception, prediction, and
+planning through graph-structured question--answer pairs, while
+DriveVLM links scene description and analysis to hierarchical
+planning~\cite{r2,r3}. Drive-R1 addresses reasoning--planning
+misalignment and history-based shortcut learning through reward
+design~\cite{r5}. These studies develop learnable representations of
+driving decisions.\par
+
+Reasoning faithfulness and reasoning--action consistency raise
+related but distinct questions. Turpin et al.~\cite{Turpin2023} show that
+chain-of-thought explanations can omit factors influencing an answer,
+while Lanham et al.~\cite{Lanham2023} investigate whether predictions depend on the
+stated reasoning. In driving, Drive the
+Thoughts checks whether predicted trajectories match commitments
+expressed in VLA reasoning~\cite{r18}. These assessments concern reasoning
+faithfulness or reasoning--action consistency; constraint compliance with externally
+supplied behavioral constraints is a separate assessment target.\par
+
+\subsection{Traffic-Rule Formalization and Safety Enforcement}
+
+Formalized traffic rules provide a foundation for expressing
+admissible driving behavior. Esterle et al.~\cite{r6} encode traffic rules in
+linear temporal logic (LTL), and Maierhofer et al.~\cite{Maierhofer2020} formalize interstate
+rules for compliance assessment. Rulebooks
+represent rule priorities and the ordering of behavioral outcomes,
+whereas Responsibility-Sensitive Safety (RSS) defines mathematical
+conditions for safe behavior and responsibility~\cite{Censi2019,ShalevShwartz2017}.
+\par
+
+Checking the formalized rules themselves is also an established
+concern. Wan et al.~\cite{Wan2024} combine equivalence verification and model
+checking to assess the semantic consistency and correctness of digital
+traffic rules. DriveReg instead retrieves applicable
+regulations and incorporates them into language-model
+reasoning, supplying rules at inference~\cite{r7}. One of our controls shares
+this principle: adapters trained without rule
+text receive the rule only at evaluation
+(Table~\ref{tab:setup-related-controls}).\par
+
+Safety enforcement acts at another interface. Shielding restricts or
+corrects actions to satisfy temporal-logic specifications during
+learning or execution~\cite{Alshiekh2018}. Context-conditioned
+Hamilton--Jacobi reachability incorporates geometry, friction, and
+disturbances into a safety representation used by a control
+filter~\cite{r19}. GuardSynth acts on training data and leaves all candidates
+available at inference, making it complementary to mechanisms that filter
+proposed actions.\par
+
+\subsection{Natural-Language Formalization and Controlled Natural Language}
+
+Natural-language formalization connects readable requirements with
+machine-interpretable specifications. NL2TL abstracts atomic
+propositions and learns to translate requirements into temporal logic~\cite{r8}.
+nl2spec exposes correspondences between language fragments and
+subformulas so users can revise ambiguous or erroneous
+translations~\cite{r9}. Their central output is a formal
+specification. GuardSynth's language-generation stage reverses this mapping:
+it generates CNL from checked specifications and evaluates correspondence by
+parsing sentences back with a supported fixed grammar to recover their fields
+(Section~\ref{sec:method-checks}).\par
+
+Controlled natural language (CNL) restricts language to support a
+defined interpretation. Attempto Controlled English (ACE) connects
+restricted English syntax with logical representations~\cite{r10}, while Kuhn~\cite{r13}
+classifies CNLs by their properties and purposes.\par
+
+\subsection{Incorporating Constraints into Learning and Generation}
+
+Constraints can influence models through several mechanisms. Semantic
+loss converts logical knowledge into a training objective that
+encourages outputs to satisfy constraints~\cite{Xu2018}. We compare a
+categorical adaptation of this objective with supplying rules as input text
+(Section~\ref{sec:setup-comparisons}; Eq.~\ref{eq:setup-semantic-loss}). Giunchiglia
+et al.~\cite{Giunchiglia2022} survey a broader range of approaches for combining deep
+learning with logical constraints. Constrained
+decoding acts during generation: Grid Beam Search enforces the inclusion
+of specified words or phrases, while guided generation restricts outputs
+using regular expressions and grammars~\cite{Hokamp2017,Willard2023}.
+These mechanisms address constraint satisfaction at different levels;
+a training penalty, a lexical requirement, and a grammatical restriction
+provide different forms of control.\par
+
+Training with task instructions or rationale supervision can improve
+inference-time task performance. Wei et al.~\cite{Wei2022} instruction-tune
+FLAN to improve zero-shot performance on unseen task types, and
+Hsieh et al.~\cite{Hsieh2023} use model-generated rationales as auxiliary
+training targets for smaller models. Our study evaluates this principle with
+case-specific behavioral constraints and numerical parameters. Rule-paired
+evaluation holds scenes and candidates fixed while changing the supplied rule,
+and specification checking assesses construction and correspondence separately
+from the model's choices.\par
+
+Natural-language principles offer another route. Constitutional AI
+uses principles to guide self-critique, revision, and AI-feedback
+training~\cite{Bai2022}. Deliberative Alignment trains models to recall
+and reason over a reusable safety policy; category-specific specifications
+guide training-data generation and filtering~\cite{Guan2024}. The policy
+text is then removed from the prompts used for supervised fine-tuning.
+GuardSynth retains case-specific constraints and their numerical parameters
+in both training and evaluation inputs. Our P1 condition adds
+natural-language guards directly, while P2 uses EBLC-derived CNL at
+the same learning interface. Their comparison examines constraint wording and
+construction paths within this shared interface. Our preceding work showed
+that natural-language guards improve action selection~\cite{r4}; GuardSynth
+adds a checked construction path for such constraints.\par
+
+\subsection{Positioning of This Work}
+
+GuardSynth combines these foundations at the interface where behavioral
+constraints become learning data. It binds constraint fields to
+observations, supplied rules, or modeling assumptions; represents
+supported constraints as Evidence-Bound Lifecycle Contracts (EBLC);
+checks satisfiability and candidate admissibility within restricted logical models; and
+generates CNL appended to the original CoC. Its contribution is this
+connected development path. We also test whether constraints supplied during
+training improve rule-dependent selection relative to adapters fine-tuned
+without rule text and supplied the same rules only at evaluation. Checks are limited to supported profiles
+and supplied evidence. Model evaluation distinguishes constraint violations
+from selection of the preferred admissible candidate under a supplied
+objective. This path complements learning objectives and runtime filters;
+its evaluation uses supervised candidate selection rather than a comparison
+of supervised and reinforcement learning.\par
+
+Table~\ref{tab:related-work-scope} summarizes the main interfaces and
+assessment targets of the selected research.\par
+
+\begin{table}[htbp]
+\caption{Main interfaces and assessment targets of related research}\label{tab:related-work-scope}
+\footnotesize
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}>{\raggedright\arraybackslash}p{0.26\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}>{\raggedright\arraybackslash}p{0.36\textwidth}@{}}
+\toprule
+Research direction & Main interface & Main assessment or control target\\
+\midrule
+Reasoning-based driving~\cite{r1,r2,r3,r5} & Observations, reasoning, and planning & Driving performance and reasoning--action alignment\\\noalign{\vskip 3pt}
+Reasoning assessment~\cite{Turpin2023,Lanham2023,r18} & Explanations, predictions, or trajectories & Reasoning faithfulness or reasoning--trajectory consistency\\\noalign{\vskip 3pt}
+Traffic-rule formalization and verification~\cite{r6,Maierhofer2020,Censi2019,ShalevShwartz2017,Wan2024} & Informal rules and formal behavioral models & Rule semantics, priorities, correctness, or behavioral compliance\\\noalign{\vskip 3pt}
+Regulation-augmented reasoning~\cite{r7} & Retrieved regulations and scene reasoning & Selection and use of applicable regulations\\\noalign{\vskip 3pt}
+Shielding and safety filtering~\cite{Alshiekh2018,r19} & Proposed actions or control inputs & Satisfaction of specified safety conditions\\\noalign{\vskip 3pt}
+Natural-language formalization~\cite{r8,r9} & Language requirements and temporal logic & Translation quality and, in nl2spec, interactive correction\\\noalign{\vskip 3pt}
+Logical learning and constrained decoding~\cite{Xu2018,Giunchiglia2022,Hokamp2017,Willard2023} & Training objectives or generation procedures & Logical satisfaction, required lexical content, or output structure\\\noalign{\vskip 3pt}
+Instruction tuning and rationale distillation~\cite{Wei2022,Hsieh2023} & Task instructions or rationale supervision & Instruction generalization or data-efficient distillation\\\noalign{\vskip 3pt}
+Natural-language principle learning~\cite{Bai2022,Guan2024} & Principles, training examples, and policy reasoning & Alignment with supplied principles or safety specifications\\
+\midrule
+\textbf{GuardSynth} & \textbf{Source-bound contracts and CoC learning inputs} & \textbf{Supported contract properties, field--CNL correspondence, and separately measured constraint compliance and preferred selection}\\
+\botrule
+\end{tabular*}
+\end{table}

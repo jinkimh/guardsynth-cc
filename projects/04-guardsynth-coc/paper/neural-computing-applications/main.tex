@@ -1,0 +1,47 @@
+% !TeX root = ncaa-manuscript-en.tex
+% GuardSynth / Neural Computing and Applications format study.
+% Scope: title, abstract, keywords, Introduction through Conclusion.
+% Official Springer Nature template v3.1, December 2024; numbered sn-basic style.
+\documentclass[pdflatex,sn-basic,Numbered]{sn-jnl}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{array,tabularx}
+\raggedbottom
+
+\begin{document}
+
+\title[GuardSynth: Checkable Constraints for Candidate Selection]{GuardSynth: Checkable Behavioral Constraints for CoC-Augmented Candidate Selection}
+
+\author[1]{\fnm{Jin Hyun} \sur{Kim}}\email{jin.kim@gnu.ac.kr}
+\author[2]{\fnm{Yon} \sur{Vanommeslaeghe}}\email{yonvanom@engineering.upenn.edu}
+\author[2]{\fnm{Rahul} \sur{Mangharam}}\email{rahulm@seas.upenn.edu}
+\author*[3]{\fnm{Seung-Hyun} \sur{Kong}}\email{skong@kaist.ac.kr}
+\author*[4]{\fnm{Insup} \sur{Lee}}\email{lee@cis.upenn.edu}
+
+\affil[1]{\orgdiv{Department of AI and Information Engineering}, \orgname{Gyeongsang National University}, \orgaddress{\street{501 Jinjudae-ro}, \city{Jinju}, \postcode{52828}, \country{Republic of Korea}}}
+\affil[2]{\orgdiv{Department of Electrical and Systems Engineering}, \orgname{University of Pennsylvania}, \orgaddress{\street{200 South 33rd Street}, \city{Philadelphia}, \state{PA}, \postcode{19104}, \country{USA}}}
+\affil*[3]{\orgdiv{Cho Chun Shik Graduate School of Mobility}, \orgname{KAIST}, \orgaddress{\street{193 Munji-ro, Yuseong-gu}, \city{Daejeon}, \postcode{34051}, \country{Republic of Korea}}}
+\affil*[4]{\orgdiv{Department of Computer and Information Science}, \orgname{University of Pennsylvania}, \orgaddress{\street{3330 Walnut Street}, \city{Philadelphia}, \state{PA}, \postcode{19104}, \country{USA}}}
+
+\abstract{Natural-language reasoning supports autonomous-driving decisions in vision--language and vision--language--action models. Explanations alone leave open whether models will follow newly supplied constraints and select preferred admissible actions. Interactions among constraints motivate checking their construction; we evaluate single-constraint learning tasks and a separate bounded composition diagnostic. GuardSynth binds constraint fields to observations, supplied rules, and modeling assumptions in Evidence-Bound Lifecycle Contracts (EBLC). It checks satisfiability and candidate admissibility within supported models, generates Controlled Natural Language (CNL), and appends it to Chain-of-Causation (CoC) reasoning. Supported parsers check specification--sentence correspondence. The preferred-selection score is the percentage of predictions selecting the highest-scoring candidate satisfying all applicable constraints under the supplied synthetic objective. Rule-pair accuracy requires both rule-paired reference labels. In synthetic candidate-selection tasks, Qwen3-VL-2B-Instruct adapters receive identical evaluation CNL with matched initialization across three seeds. Under cross-entropy alone, CNL-trained adapters achieve preferred-selection scores of 93.49--98.47\%, constraint violation rates of 0.00--1.56\%, and rule-pair accuracy of at least 86.98\%; CoC-only-trained adapters fine-tuned without rule text have constraint violation rates of 6.25--17.92\% and reach at most 56.77\% rule-pair accuracy. Post-training fault injection detects all 288 supported faults and accepts all 48 valid cases, but misses 48 jointly wrong evidence--specification controls. Document-grounded composition checks find 58 incompatible configurations among 176 authored configurations, including 12 undetected by pairwise checks. GuardSynth provides checkable constraint construction and evidence that training with constraints improves rule-dependent selection relative to rule-free fine-tuning.}
+
+\keywords{Autonomous driving, behavioral constraints, Chain of Causation, controlled natural language, specification checking, vision-language models}
+
+\maketitle
+
+\input{01-introduction-v03-en}
+
+\input{02-related-work}
+\input{03-method}
+\input{04-experimental-setup}
+\input{05-results}
+\input{06-discussion}
+\input{07-conclusion-v02-en}
+
+\backmatter
+\input{declarations}
+
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,135 @@
+% English translation of the author's revised Korean Introduction.
+% The preceding Introduction is preserved unchanged in 01-introduction.tex.
+\section{Introduction}\label{sec:introduction}
+
+Vision-language models (VLMs) and vision-language-action (VLA) models connect
+visual observations and language information to action selection or trajectory
+prediction in autonomous driving. Recent work uses supervised fine-tuning and
+reinforcement learning to improve language reasoning and action prediction
+together~\cite{r1}. New proposals integrate future-scene modeling into planning
+or maintain language-based memories of past observations to support decisions
+over time~\cite{Wang2026DriveWLA,Yan2026ADMemo}. Evaluation also extends from
+individual prediction accuracy to closed-loop driving and behavioral changes
+under external instructions~\cite{Jia2026Bench2DriveVL,You2026Language2Drive}.
+
+Despite these advances, reliably connecting a model's judgment to the required
+behavior remains difficult. Drive the Thoughts reports only 74\% agreement between
+predicted trajectories and reasoning traces judged
+reliable~\cite{r18}. Language2Drive reports that models can succeed under one
+instruction yet fail under a feasible alternative when the initial scene is
+held fixed~\cite{You2026Language2Drive}. Generating an explanation or driving
+successfully under one condition therefore does not establish the ability to
+adjust behavior when external conditions change. We focus on using externally
+supplied behavioral rules as conditions for action selection. The same scene
+and candidates can admit different actions under different rules, so a model
+must comply with the rule and select an action appropriate to that condition.
+
+This requirement is distinct from explaining the reason for a driving
+decision. Driving models that reason in language express how an observed
+situation leads to a decision. Alpamayo-R1's Chain of Causation (CoC) is one
+example: it learns causal relationships between observations and decisions
+together with trajectory prediction~\cite{r1}. Such reasoning need not fully
+specify an external rule's applicability conditions and numerical parameters
+as a case-specific constraint. The scene and causal explanation can remain
+valid while different speed bounds, waiting durations, or stop-release
+conditions change the admissible actions. An action consistent with its
+explanation can therefore violate a separately supplied rule.
+
+Rule use requires both compliance and appropriate selection. Constraints
+define the admissible actions, and the selection objective ranks actions
+within that set; repeatedly choosing a waiting candidate admissible under
+either rule may avoid violations while missing permitted progress. We
+therefore measure violation rate and accuracy together, and rule-pair accuracy
+requires both cases in a pair to be correct when only the rule changes.
+
+Learning such selection raises the question of how training examples should
+express the correspondence among scenes, applicable rules, and actions.
+Providing a rule at inference makes the information available, but its effect
+on selection requires assessment. Our preliminary Alpamayo-R1 diagnostics,
+without additional training, also produced predictions violating explicitly
+supplied speed and position-hold rules on sampled
+PhysicalAI~\cite{nvidia2025physicalai} and converted
+nuScenes~\cite{caesar2020nuscenes} inputs. In a separate controlled
+candidate-selection study, we therefore test whether including constraints in
+training improves compliance and rule-dependent selection when every model
+receives the same rule at evaluation.
+
+When constraints become learning information, their construction and
+association with cases become data-quality concerns. Three difficulties arise.
+First, one constraint combines information with different roles: entry after
+pedestrian clearance involves an observed clearance time, a supplied waiting
+duration, and a modeling assumption of no subsequent reoccupation. These roles
+must be separated to trace the source of an error. Second, a fluent sentence
+can be attached to the wrong case or encode a logical restriction different
+from the intended one. Checks must therefore address correspondence with the
+case, evidence, and rule as well as the sentence itself. Third, mechanical
+checking requires a formal representation, whereas the model learns from
+natural language. Both specification--sentence correspondence and the model's
+behavioral use of the sentence require assessment.
+
+Existing research provides foundations for this connection. nl2spec lets
+users revise correspondences between language fragments and logical
+subformulas~\cite{r9}. Semantic loss incorporates logical constraints into a
+training objective to encourage constraint satisfaction~\cite{Xu2018}.
+Instruction tuning shows that training with instructions can improve
+performance on unseen task types~\cite{Wei2022}. Our preceding work showed
+that natural-language guards appended to CoC improve action
+selection~\cite{r4}. We connect these foundations in developing case-specific
+behavioral constraints: binding constraints with numerical parameters to case
+evidence, checking designated specification properties and sentence
+correspondence, and supplying the resulting language alongside the original
+reasoning as learning input.
+
+We propose GuardSynth for this development process, addressing the three
+difficulties in turn. It separates the roles of information by binding each
+constraint field to an observation, a supplied rule, or a modeling assumption.
+It makes the intended restriction checkable by representing applicability,
+action restrictions, persistence and release, timing, and evidence in
+Evidence-Bound Lifecycle Contracts (EBLC); supported specifications are lowered
+to Satisfiability Modulo Theories (SMT) queries that check consistency and
+designated properties within a restricted logical model. It connects the
+checked meaning to learning by rendering the specification as Controlled
+Natural Language (CNL) appended to the original CoC, with supported
+fixed-grammar parsers recovering fields from the generated sentences to check
+their correspondence with the specification.
+
+The evaluation separates the behavioral effect of training with constraints
+from specification checkability. In synthetic candidate-selection tasks with
+Qwen3-VL-2B-Instruct~\cite{qwen2025qwen3vl2b}, fresh adapters share initialization
+and evaluation inputs. Training with CNL under cross-entropy loss alone yields
+three-seed mean violation rates of at most 1.56\% and rule-pair accuracy of at
+least 86.98\% across pedestrian entry and the two position-hold representations,
+improving on CoC-only training. Across six behavioral tasks, both natural-language
+constraints and EBLC-derived CNL improve rule-dependent selection. These
+findings support including case-specific constraints in training data as well
+as supplying them at inference.
+
+A separate fault-injection evaluation of the two learning specifications
+detects all 288 errors of six supported types and accepts all 48 valid cases.
+It misses 48 cases in which the evidence record and specification are wrong
+together, identifying a boundary between internal correspondence checks and
+independent evidence confirmation. Source- and sentence-correspondence checks
+were added after training for this evaluation; their results are interpreted
+separately from the causes of behavioral improvement.
+
+Our contributions are:
+\begin{enumerate}
+\item A controlled evaluation of training with case-specific constraints.
+Identical initialization and evaluation inputs isolate the training-text
+comparison, while violation rate, accuracy, and rule-pair accuracy distinguish
+compliance from rule-dependent selection.
+\item A GuardSynth development path from evidence binding to natural-language
+learning inputs. It separates observations, supplied rules, and assumptions,
+constructs EBLC specifications, and connects restricted logical checking and
+field--sentence correspondence checks to CNL appended to CoC.
+\item An evaluation of checking layers and their detection scope for learning
+specifications. Fault injection into the two specifications used to generate
+learning inputs identifies complementary checks and their limits, separately
+from model compliance.
+\end{enumerate}
+
+Section~\ref{sec:related-work} reviews related work, and
+Section~\ref{sec:method} presents the problem setting and GuardSynth.
+Sections~\ref{sec:experimental-setup} and~\ref{sec:results} describe the
+experimental setup and results. Section~\ref{sec:discussion} discusses
+implications and limitations, and Section~\ref{sec:conclusion} concludes.

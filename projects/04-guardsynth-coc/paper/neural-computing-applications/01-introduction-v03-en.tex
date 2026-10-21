@@ -1,0 +1,196 @@
+% !TeX root = ncaa-manuscript-en.tex
+% English Introduction revised from the author's Korean draft on 2026-10-17.
+% The preceding version is preserved in 01-introduction-v02-en.tex.
+\section{Introduction}\label{sec:introduction}
+
+Vision-language models (VLMs) and vision-language-action (VLA) models connect
+visual observations and language information to action selection or trajectory
+prediction, with autonomous driving as a prominent application. Recent work uses supervised fine-tuning and
+reinforcement learning to improve language reasoning and action prediction
+together~\cite{r1}. Other proposals integrate future-scene modeling into planning
+or maintain language-based memories of past observations to support decisions
+over time~\cite{Wang2026DriveWLA,Yan2026ADMemo}. Evaluation also extends from
+individual prediction performance to closed-loop driving and behavioral changes
+under external instructions~\cite{Jia2026Bench2DriveVL,You2026Language2Drive}.
+
+Despite these advances, reliably connecting a model's judgment to the required
+behavior remains difficult. Drive the Thoughts reports only 74\% agreement
+between predicted trajectories and reasoning traces judged reliable~\cite{r18}.
+Language2Drive reports that models can succeed under one instruction yet fail
+under a feasible alternative when the initial scene is held
+fixed~\cite{You2026Language2Drive}. Generating an explanation or driving
+successfully under one condition therefore does not establish the ability to
+adjust behavior when external conditions change. We focus on using externally
+supplied behavioral rules as conditions for action selection. A supplied
+behavioral rule states a condition to apply in a particular case; its source
+may be a traffic regulation, an operator instruction, or an experimental
+policy. The same scene and action candidates can admit different actions
+under different rules.
+
+Using such rules is distinct from explaining the reason for a driving
+decision. Driving models that reason in language express how an observed
+situation leads to a decision. Alpamayo-R1's Chain of Causation (CoC) is one
+example: it learns causal relationships between observations and decisions
+together with trajectory prediction~\cite{r1}. Such reasoning need not fully
+specify an external rule's applicability conditions and numerical parameters
+as a case-specific behavioral constraint. Here, a behavioral constraint makes
+a supplied rule concrete through applicability conditions, action restrictions,
+timing, and release conditions, so that action admissibility can be assessed.
+The scene and causal explanation can remain valid while different speed
+bounds, waiting durations, or stop-release conditions change the admissible
+actions. An action consistent with its explanation can therefore violate a
+separately supplied constraint.
+
+Behavioral constraints determine which actions are admissible, but do not by
+themselves rank the admissible actions. For example, always choosing the longer
+wait under two different waiting rules may satisfy both rules while missing an
+opportunity for earlier permitted progress. Constraint compliance and
+preferences among admissible actions must therefore be distinguished. In our
+candidate-selection task, the goal is to satisfy the applicable constraints
+and select the admissible candidate with the highest supplied progress score.
+This score is a synthetic value assigned by the task generator; it is not a
+direct measurement of distance traveled or long-term driving efficiency.
+
+Learning this selection requires training examples to make the relationship
+among scenes, applicable rules, and actions explicit. It also requires checking
+whether constraints assembled from observations, supplied rules, and modeling
+assumptions express the intended behavioral conditions, and assessing whether
+the model uses them in its choices. Including a rule in the input alone does
+not establish such use. Our preliminary Alpamayo-R1 diagnostics, without
+additional training, produced predictions violating explicitly supplied speed
+and position-hold rules on sampled PhysicalAI~\cite{nvidia2025physicalai} and
+converted nuScenes~\cite{caesar2020nuscenes} inputs. In a separate controlled
+candidate-selection study, we therefore test whether including constraints in
+training improves constraint compliance and objective-based candidate selection
+when every model receives the same rule at evaluation.
+
+Behavioral constraints supplied for learning require rigorous validation to
+determine whether their combination satisfies the specified safety requirements
+under the stated assumptions. Combining behavioral conditions can restrict a
+necessary safety response. The 2018 fatal Uber collision in Tempe illustrates
+this concern. The National Transportation Safety Board (NTSB) reported emergency
+recognition 1.2~s before impact, followed by 1~s of braking suppression intended
+to reduce false-alarm responses. Only about 0.2~s remained afterward. The system
+also lacked maximum allowed braking solely for mitigation when collision
+avoidance exceeded its braking limits. The NTSB identified increased safety
+risk from this design~\cite{NTSB2019Tempe}. This illustrates why suppression
+timing must be checked against collision-response requirements.
+
+In the 2023 Cruise pedestrian collision, incorrect lateral-collision
+classification led to a pullover after an initial stop, dragging the
+pedestrian~\cite{Cruise2023Recall23E086}. This case highlights the need to
+examine the conditions governing transitions between remaining stationary and
+moving. Rule 129 of the United Kingdom's Highway Code generally prohibits
+crossing double white centre lines when the
+line on the driver's side is solid, but allows crossing when necessary to pass
+a stationary vehicle, provided the road is clear~\cite{DfT2015HighwayCode129}.
+This rule illustrates why specifications must preserve exceptions in the
+original rules: a constraint that omits this exception could block a lawful
+manoeuvre and prolong unnecessary waiting. Our learning experiments use
+single constraints, while a separate logical diagnostic combines conditions
+drawn from these and related documents, including the Tempe braking
+suppression and a restricted encoding of the Rule 129 exception, under
+explicitly authored states. It examines the joint feasibility of the stated
+conditions, rather than reconstructing the accidents or interpreting the
+regulations in full.
+
+These examples motivate treating behavioral constraints as checkable objects
+with explicit evidence and applicability. Supplying them as natural-language
+learning inputs raises three problems. First, the evidence and roles of
+observed facts, supplied rules, and modeling assumptions must be explicit, so
+that observation errors, rule misapplication, and unsuitable assumptions can
+be examined separately. Second, the specification must express the intended
+action restrictions and release conditions. For the learning specifications
+evaluated here, satisfiability and candidate admissibility must be checked
+under the supplied inputs and assumptions. When several supplied conditions apply, joint satisfiability must also be
+assessed under an explicit shared context. Third, mechanical checking
+requires a formal representation, whereas the model learns from natural
+language. Meaning must be preserved when the specification is rendered as a
+sentence, and model behavior must be evaluated separately: correspondence
+between a sentence and its specification does not establish constraint compliance.
+
+To address these problems, we propose GuardSynth. It first binds each
+constraint field to an observation, a supplied rule, or a modeling assumption,
+separating their roles. It represents applicability, action restrictions,
+persistence and release, timing, and evidence in Evidence-Bound Lifecycle
+Contracts (EBLC). Supported specifications are lowered to Satisfiability Modulo
+Theories (SMT) queries for satisfiability and candidate-admissibility checks
+within a restricted logical model. A separate composition diagnostic checks
+source conditions jointly under supplied contexts. GuardSynth then generates Controlled Natural Language
+(CNL) from the specification and appends it to the original CoC. For supported
+fixed grammars, parsing the generated sentence recovers fields for comparison
+with the specification. Our evaluation concerns the supported specifications
+and synthetic candidate-selection tasks used in this process.
+
+The evaluation separates the behavioral effect of training with constraints
+from specification checkability. Constraint violation rate is the proportion
+of all predictions that select a prohibited candidate. The
+\emph{preferred-selection score} is the proportion that select the most
+preferred admissible candidate under the specified objective. In our tasks,
+the preferred candidate has the highest supplied progress score among
+admissible candidates; selecting its label receives a score of one, and every
+other output receives zero. The mean is reported as a percentage. Rule-pair
+accuracy is the proportion of pairs for which both reference labels are
+selected when the scene and candidates are fixed and only the rule changes.
+These metrics distinguish constraint satisfaction from objective-based
+selection within the supplied candidate set.
+
+We evaluate fresh Qwen3-VL-2B-Instruct adapters~\cite{qwen2025qwen3vl2b} with
+matched initialization and the same CNL at evaluation over three training
+seeds. Training with CNL under cross-entropy loss alone yields three-seed mean
+constraint violation rates of at most 1.56\% and rule-pair accuracy of at least
+86.98\% across pedestrian entry and the two position-hold representations.
+This controlled comparison supports including case-specific constraints in
+training data as well as supplying them at inference for the evaluated
+adapters. Across six behavioral tasks, both natural-language guards (P1) and
+EBLC-derived CNL (P2) improve selection of the preferred candidate under the
+supplied rule; this comparison changes rule availability as well as training
+inputs.
+
+A separate fault-injection evaluation of the two specifications used to
+generate learning inputs detects all 288 errors of six supported types and
+accepts all 48 valid cases. All 48 jointly wrong evidence--specification
+controls remain undetected: the evidence record and specification are changed
+to the same wrong value. This identifies a boundary between internal
+correspondence checks and independent confirmation of the evidence itself.
+Evidence correspondence, sentence correspondence, and boundary probes for
+logic--rule comparison were added after training for this evaluation; their
+results are interpreted separately from the causes of behavioral improvement.
+
+A separate composition diagnostic combines manually formalized conditions
+from official documents with explicit modeling assumptions and authored
+states, candidates, or test objectives. Among 176 configurations, it identifies
+58 incompatible combinations, including 12 three-way conflicts for which
+every pair is satisfiable. All 118 compatible combinations are retained. These results concern joint logical
+feasibility under explicit contexts, rather than VLM behavior or a general
+vehicle-safety guarantee.
+
+Our contributions are:
+\begin{enumerate}
+\item A procedure for constructing case-specific behavioral constraints tied
+to their evidence. It separates observations, supplied rules, and modeling
+assumptions and links them to EBLC specifications with applicability, action
+restrictions, persistence, and release conditions, making the components and
+evidence of learning constraints explicit objects of checking.
+\item The GuardSynth development path connecting formal specification checks
+to natural-language learning inputs. It lowers supported specifications to SMT
+for satisfiability and candidate-admissibility checks within a restricted model,
+appends specification-derived CNL to the original CoC, and checks
+specification--sentence correspondence by parsing supported grammars. The same
+Core/SMT compiler checks bounded source combinations under shared contexts in a
+separate diagnostic that does not produce learning inputs.
+\item An experimental evaluation separating the effect of training with
+constraints from specification checkability. Matched initialization and
+evaluation inputs test improvements in constraint compliance and
+objective-based candidate selection, while separate fault injection identifies
+complementary checking layers and their detection limits. A separate
+composition diagnostic compares individual, pairwise, and joint consistency
+checks for supplied sources. Model behavior and
+the correctness of learning-constraint construction are assessed separately.
+\end{enumerate}
+
+Section~\ref{sec:related-work} reviews related work, and
+Section~\ref{sec:method} presents the problem setting and GuardSynth.
+Sections~\ref{sec:experimental-setup} and~\ref{sec:results} describe the
+experimental setup and results. Section~\ref{sec:discussion} discusses
+implications and limitations, and Section~\ref{sec:conclusion} concludes.

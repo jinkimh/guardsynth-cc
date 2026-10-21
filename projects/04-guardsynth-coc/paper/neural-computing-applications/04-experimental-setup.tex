@@ -1,0 +1,319 @@
+% !TeX root = ncaa-manuscript-en.tex
+\section{Experimental Setup}\label{sec:experimental-setup}
+
+This section defines two evaluation tracks: constraint compliance and preferred
+candidate selection by the model, and checking the specifications used to
+construct learning inputs. It defines the tasks and reference labels, the
+metrics and aggregation units, and the training and comparison protocols.
+All learning experiments use synthetic candidate selection; the protocol of
+the preliminary Alpamayo-R1 diagnostics is given in Supplementary Section S1.
+
+\subsection{Tasks and Data}\label{sec:setup-data}
+
+Each example contains an image, the original CoC, a constraint sentence when
+provided by the condition, descriptions of the supplied candidates, and a selection
+instruction (Fig.~\ref{fig:method-inputs}). Candidate measurements are supplied
+in text; the VLM does not estimate them from the image. Static tasks have two
+candidates; pedestrian entry, maneuver tasks, and position holding have four.
+
+\noindent\textbf{Six behavioral tasks.}
+The six tasks form three families. Static tasks apply maximum-speed,
+minimum-clearance, and minimum-entry-delay rules to numerical candidate
+summaries. Pedestrian-entry examples vary the clearance time, required wait,
+candidate entry times, and label assignments. Maneuver tasks concern stopping
+and lane changing. Examples occur in pairs with the same scene and candidates
+but different supplied rules, so the preferred candidate can change: entry 0.5 s
+after a zone clears is admissible under a 0.5 s waiting rule but prohibited
+under a 1.5 s rule.
+
+\noindent\textbf{Position holding.}
+This task uses the position-hold constraint in Section~\ref{sec:method-eblc}. Synthetic
+candidate profiles are presented as XY coordinates or as interval-maximum
+distances calculated from the same coordinates; images are diagrams of the
+profiles. Each profile yields eight rows: two label rotations, two hold
+durations, and two representations. The training, validation, and test splits
+contain 120, 16, and 32 profiles, with no profile shared across splits.
+
+Table~\ref{tab:setup-dataset-sizes} gives rows per input condition. P0, P1, and
+P2 share examples and splits, differing only in their constraint text. Rows are
+constructed examples rather than independent road videos. Pedestrian-entry
+images do not overlap across splits, whereas all 13 static primary-test images
+also occur in training and maneuver data reuse two diagrams. Static and
+maneuver results therefore measure the use of supplied constraints rather than
+visual generalization. Split inventories are given in Supplementary Section S2.
+
+\begin{table}[tbp]
+\caption{Synthetic dataset sizes per input condition. A dash denotes no
+separate validation split.}\label{tab:setup-dataset-sizes}
+\centering
+\small
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrrr@{}}
+\toprule
+Task family & Training & Validation & Primary test\\
+\midrule
+Pedestrian entry & 960 & 240 & 240\\
+Static (three tasks) & 576 & -- & 144\\
+Maneuver (two tasks) & 384 & -- & 96\\
+Position hold & 960 & 128 & 256\\
+\botrule
+\end{tabular*}
+\end{table}
+
+\noindent\textbf{Preferred candidates and reference labels.}
+As defined in Section~\ref{sec:method-problem}, the preferred candidate has the
+highest supplied progress score among admissible candidates; its label is the
+reference label. Admissibility is computed from the
+supplied rule and candidate values by integer calculations implemented
+separately from the logical encoding; position holding checks
+$x_i^2+y_i^2\le 200^2$ (mm) for every sample up to the hold endpoint. SMT
+candidate verdicts are compared with these calculations
+(Section~\ref{sec:results-checks}) and kept as metadata rather than placed in
+the prompt. The
+supervised response contains only the reference label. Progress scores are
+supplied synthetic values whose ordering among admissible candidates
+determines the preferred candidate. Labels rotate within each task's label
+set: A--B for static tasks and A--D for the other tasks (Supplementary Section S2). Score variation and label rotation reduce fixed
+associations between the answer and a label, position, or score, but do not
+remove shortcuts based on the supplied numerical values.
+
+\subsection{Metrics and Aggregation}\label{sec:setup-metrics}
+
+\noindent\textbf{Preferred-selection score (PSS)} assigns one to a prediction
+that selects the reference label of the highest-scoring admissible candidate,
+and zero to every other output. The mean is reported as a percentage. It
+measures how often the preferred candidate is selected, not the size of the
+progress-score difference when another candidate is selected.
+\textbf{Constraint violation rate (CVR)} is the percentage of all predictions
+that select a prohibited candidate. An admissible candidate with a lower
+progress score receives zero for preferred selection but is not a violation.
+The two metrics therefore need not sum to 100\%.
+\textbf{Rule-pair accuracy (RPA)} is the percentage of same-scene,
+same-candidate pairs with different supplied rules for which both reference
+labels are selected. Some position-hold pairs share a reference label, so
+this metric does not require a changed choice in every pair.
+\textbf{Constraint-compliant completion} is the percentage completing the task without
+selecting a prohibited candidate; it is auxiliary. Unextractable answers
+receive zero preferred-selection credit and count as neither violations nor
+admissible choices; their rate is reported separately. Thus, the complement of the
+constraint violation rate is not the admissible-choice rate when extraction
+failures occur. Position-hold violations use the strict 0.2 m radius, with a
+0.01 m tolerance reported only as an auxiliary measure.
+
+Reported seed standard deviations use the sample convention ($n-1$).
+Fresh-adapter results report means and sample standard deviations
+over three seeds. Each condition combines both durations, yielding 720
+pedestrian-entry predictions (240 rows $\times$ three seeds) or 384
+position-hold predictions per representation (128 rows $\times$ three seeds).
+Continuation results report counts per duration and
+representation (192 predictions from 64 rows and three seeds). Six-task and
+additional evaluations report three-seed means. Supplementary Section S6 gives
+individual seeds for the fresh-adapter, six-task, representation, and robustness
+comparisons; reasoning-prompt and exploratory diagnostics are detailed in
+Supplementary Sections S8 and S10. Seeds repeat optimization and do not add
+independent examples.
+
+Specification checks comprise the fault-injection evaluation of
+Section~\ref{sec:method-checks} (384 cases, 7,392 queries), the 5,376
+position-hold candidate checks, and, for the pedestrian-entry specification,
+one satisfiability query and 24 boundary-candidate queries for each of four
+waits (0.5, 1.5, 0.8, and 1.8 s), 100 queries in total. These units are
+reported separately from each other and from model-prediction denominators.
+\subsection{Model and Training Settings}\label{sec:setup-training}
+
+We fine-tune Qwen3-VL-2B-Instruct~\cite{qwen2025qwen3vl2b}, a model small
+enough for every comparison to be repeated with fresh adapters over three seeds
+under matched budgets; a larger model of the same family is evaluated without
+training (Section~\ref{sec:setup-comparisons}). Adaptation uses
+LoRA~\cite{r14} (rank 8, $\alpha=16$, dropout 0.05) with AdamW (learning rate
+$2\times10^{-4}$, weight decay 0.01), batch size 2, and gradient accumulation
+over eight steps. Each fit runs for three epochs with optimization seed 42, 17,
+or 123; pedestrian-entry and position-hold fits perform 180 updates, and static
+and maneuver fits 108 and 72. Within each task family, compared conditions
+share examples, epochs, optimizer settings, and the final-checkpoint policy;
+validation scores do not select checkpoints. Input lengths differ across text
+conditions. Fine-tuned adapters use greedy decoding with a 12-token answer
+limit.
+
+\subsection{Comparison Designs}\label{sec:setup-comparisons}
+
+Table~\ref{tab:setup-comparisons} distinguishes three studies by the information
+available during training and evaluation. Models trained with constraint text
+also receive it at evaluation, matching the intended use of case-specific
+constraints (Section~\ref{sec:discussion-training}).
+
+\begin{table}[tbp]
+\caption{Training and evaluation information in the three studies. Fresh
+adapters share their initialization within each task and seed.}
+\label{tab:setup-comparisons}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.14\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+Study & Training & Evaluation & Question\\
+\midrule
+Fresh-adapter study & Same pretrained base; CoC alone or CoC + CNL, each with or
+without semantic loss & (a) Training input type; (b) same CoC + CNL for all
+adapters & With evaluation information and initialization held fixed, do
+training constraints reduce violations and improve rule-dependent selection?\\[4pt]
+Continuation study & Existing pedestrian-entry adapters; P0: CoC,
+P1: CoC + natural-language guard, P2: CoC + CNL & Same CoC + P2 CNL for every
+adapter, before and after continuation & Does a constraint-bearing training
+history improve behavior under identical evaluation inputs?\\[4pt]
+Six tasks & P0: CoC; P1 and P2: CoC + respective constraints & Same input type
+as training & Do models use supplied constraints and change their choices when
+the rule changes?\\
+\botrule
+\end{tabularx}
+\end{table}
+
+\noindent\textbf{Fresh-adapter study.}
+We train new LoRA adapters from the same pretrained base on pedestrian entry and
+position holding. The $2\times2$ design crosses CoC-only versus CoC + CNL inputs
+with cross-entropy (CE) alone versus CE plus semantic loss; seed-specific
+initial LoRA tensors are identical across the four conditions. Two tasks, four
+conditions, and three seeds yield 24 fits. Our semantic loss is a categorical
+adaptation of Xu et al.~\cite{Xu2018}. At the first supervised answer-token
+position, let $z_a$ be the logit for label $a\in\mathcal{Y}=\{A,B,C,D\}$:
+\begin{equation}\label{eq:setup-semantic-loss}
+q_a=\frac{\exp z_a}{\sum_{b\in\mathcal{Y}}\exp z_b},\qquad
+\mathcal{L}_{\mathrm{train}}=\mathcal{L}_{\mathrm{CE}}
+-\lambda\log\!\sum_{a\in\mathcal{Y}_C}q_a,
+\end{equation}
+where $\mathcal{Y}_C\subseteq\mathcal{Y}$ is the set of labels whose candidates
+are admissible. We fix $\lambda=1$ before execution. Even with CoC-only inputs,
+the loss uses the example's admissible set, so rule information enters through
+the objective; inference neither filters candidates nor uses SMT. The protocol
+specifies evaluation with the training input type as primary and common-CNL
+evaluation as additional; we report both and emphasize the latter when
+comparing training conditions.
+
+\noindent\textbf{Continuation study.}
+We continue the nine pedestrian-entry adapters (P0, P1, P2 $\times$ three
+seeds) on 960 position-hold rows for 180 further updates. P0 receives the
+original CoC at both stages, while P1 and P2 receive their respective
+constraints at both stages. Before and after continuation, all adapters
+receive identical inputs with the P2 constraint sentence. The comparison
+therefore includes the effects of different training histories. Previously
+inspected profiles with prohibited candidates only 1 mm beyond the radius are
+reevaluated separately as a regression check (Supplementary Section S11).
+
+\noindent\textbf{Identifiability without rule text.}
+When the distinguishing rule is omitted, identical inputs can have different
+reference labels. Every six-task rule pair has different reference labels, giving a
+50\% preferred-selection score ceiling for rule-free inputs; in the position-hold set, half the
+pairs do, giving an empirical ceiling of 75\%. Fewer violations without rule
+text therefore do not show that a model changes its choice with the rule, and
+the six-task study measures the use of constraints supplied at both training
+and evaluation rather than a training benefit under identical information.
+Rule-pair accuracy and the common-CNL evaluation are used for this reason to
+assess rule-dependent selection directly.
+
+\noindent\textbf{Pretrained-VLM evaluation.}
+Qwen3-VL-2B-Instruct and Qwen3-VL-8B-Instruct~\cite{qwen2025qwen3vl2b,qwen2025qwen3vl8b}
+receive CoC and CNL without fine-tuning or demonstrations on all 736
+primary-test inputs, with one greedy response per input. The primary evaluation
+fixes a 12-token output limit before execution; after observing truncated
+explanations, we add a post-hoc evaluation with a 512-token limit and
+final-answer extraction, and report both, together with output-limit hits and
+answer-extraction failures. This comparison includes adaptation
+to the task format and is not a matched-budget training comparison.
+
+\subsection{Comparison Conditions and Related Approaches}\label{sec:setup-related}
+
+The systems reviewed in Section~\ref{sec:related-work} use different
+interfaces: DriveLM and DriveVLM address driving question answering and
+planning, while nl2spec and NL2TL output temporal-logic formulas rather than
+action labels~\cite{r2,r3,r8,r9}. Their native execution paths are documented
+in Supplementary Section S5; adding our constraints or an output adapter would
+evaluate modified methods. We instead use controls that share selected
+principles with prior work (Table~\ref{tab:setup-related-controls}); they are
+not reproductions of the cited systems.
+
+\begin{table}[tbp]
+\caption{Comparison conditions and principles shared with related approaches.
+Correspondences identify selected principles, not reproductions of complete
+systems.}\label{tab:setup-related-controls}
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{0.25\textwidth}@{}}
+\toprule
+Condition & Shared principle & Budget\\
+\midrule
+CNL at evaluation for CoC-only-trained adapters & Use of rules at inference;
+regulation-augmented reasoning also uses rules at this stage~\cite{r7} &
+Matched fresh-adapter training; continuation reported separately\\[4pt]
+CoC + CNL for pretrained 8B & Prompting a larger model with rules & No
+task-specific training\\[4pt]
+Categorical semantic loss & Constraints in the training objective~\cite{Xu2018}
+& Matched fresh-adapter training\\[4pt]
+General reasoning prompts & Zero-shot CoT and Plan-and-Solve~\cite{r16,r17}
+& No additional training; unequal generation limits\\[4pt]
+Logical-text control & Formal representation of requirements~\cite{r8,r9}
+& Matched pedestrian-entry training\\[4pt]
+P1 and alternative natural-language guards & Natural-language constraints in
+training~\cite{r4} & Matched within each task family\\
+\botrule
+\end{tabularx}
+\end{table}
+
+\subsection{Additional Evaluations}\label{sec:setup-additional}
+
+The following evaluations use archived checkpoints, including those from
+additional conditions trained with matched task-family budgets. Their rows are
+not added to the primary-test denominator. Procedures are detailed in
+Supplementary Sections S2, S8, and S10.
+\begin{itemize}
+\item \textbf{General reasoning prompts.} Zero-shot CoT (128 reasoning tokens)
+and basic Plan-and-Solve (256 tokens)~\cite{r16,r17} are applied to the final
+P0 checkpoints without rule information or further training. A first stage
+generates reasoning for each unique input (546 per method), and a second stage
+extracts the label; each method yields 1,440 predictions over three seeds.
+\item \textbf{Paraphrasing.} A held-out constraint wording is given to P1 and
+P2 on the 240, 144, and 96 primary-test rows of the three families; P0
+inputs, which contain no constraint text, are unchanged. A smaller exploratory
+diagnostic tests a second wording with 24 rows per wording and seed.
+\item \textbf{Unseen values.} Values and durations absent from training are
+used, such as pedestrian-entry waits of 0.8 and 1.8 s instead of 0.5 and 1.5 s.
+\item \textbf{Combined difficulty.} A 96-row maneuver set combines negation,
+clause order, equality boundaries, and m/cm units.
+\item \textbf{Alternative pedestrian-entry representations.} We report two
+additional conditions trained with the same budget as P0--P2: an alternative
+natural-language guard and a logical formula supplied as text. Each was evaluated on the 240 primary-test
+and 240 unseen-wait rows. The logical text is a model input, not a solver or
+translator output.
+\item \textbf{Image interventions.} Pedestrian-entry adapters receive original,
+blank, or redrawn images with clearance 1.0 s later, with all other inputs and
+the original references fixed (24 rows per condition, 648 predictions). Scores
+on redrawn images measure an input intervention rather than scene-understanding performance;
+we also report the fraction of choices that change relative to the original
+image.
+\end{itemize}
+
+\subsection{Bounded Constraint-Composition Diagnostic}\label{sec:setup-composition}
+
+This diagnostic, run after and independently of the training runs, evaluates the manually formalized
+source groups in Section~\ref{sec:method-composition}. A source catalog records
+the document version, URL, paragraph or page, supported interpretation, and
+scope. Eight official documents were inspected; two further UNECE candidates
+were excluded because their full official text could not be retrieved.
+The executed cases use four document families, with scenario states,
+candidate requests, motion assumptions, and test objectives marked as authored
+inputs. No operational log is used.
+
+Parameter grids bracket each feasibility threshold by 1 mm: braking (48
+cases; speeds of 10/15/20 m/s, decelerations of 5/7 m/s$^2$, and delays of
+0/1000 ms, with zero delay as a control), yellow-interval feasibility (64
+cases; nominal deceleration of 3 m/s$^2$, not an emergency-braking bound),
+all 16 interlock states with drive/hold candidates (32 cases), and all eight
+exception states with cross/hold candidates and faithful/omitted-exception
+encodings (32 cases). Supplementary Section S13 gives the full grids.
+
+The 176 configurations yield 896 queries, covering the context alone and
+every nonempty source subset. Verdicts are compared with independent
+rational feasibility calculations, and each SAT witness is checked numerically.
+For each UNSAT combination, all proper subsets identify subset-minimal
+conflict groups. We distinguish incompatibility introduced by suppression
+from avoidance already infeasible without it, and permission to cross from
+an obligation to cross. These configurations and queries are counted
+separately from fault injection, VLM predictions, and the earlier 123-case
+synthetic boundary diagnostic. Supplementary Section S13 records both
+protocols and their distinct scopes.
+

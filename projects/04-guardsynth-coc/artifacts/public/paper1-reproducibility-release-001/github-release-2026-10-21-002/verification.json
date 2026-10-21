@@ -1,0 +1,303 @@
+{
+  "status": "PASS",
+  "manifest_files": 1188,
+  "oracle_test_rows": 496,
+  "common_rule_means": [
+    {
+      "task": "position_hold",
+      "arm": "ce_no_rule",
+      "encoding": "interval_maxima",
+      "preferred_selection_score": 78.38541666666667,
+      "violation_rate": 6.510416666666667,
+      "rule_pair_score": 56.770833333333336
+    },
+    {
+      "task": "position_hold",
+      "arm": "ce_no_rule",
+      "encoding": "xy_waypoints",
+      "preferred_selection_score": 75.52083333333333,
+      "violation_rate": 6.25,
+      "rule_pair_score": 51.5625
+    },
+    {
+      "task": "position_hold",
+      "arm": "ce_rule",
+      "encoding": "interval_maxima",
+      "preferred_selection_score": 96.09375,
+      "violation_rate": 0.0,
+      "rule_pair_score": 92.70833333333333
+    },
+    {
+      "task": "position_hold",
+      "arm": "ce_rule",
+      "encoding": "xy_waypoints",
+      "preferred_selection_score": 93.48958333333333,
+      "violation_rate": 1.5625,
+      "rule_pair_score": 86.97916666666667
+    },
+    {
+      "task": "position_hold",
+      "arm": "semantic_no_rule",
+      "encoding": "interval_maxima",
+      "preferred_selection_score": 75.52083333333333,
+      "violation_rate": 0.2604166666666667,
+      "rule_pair_score": 51.5625
+    },
+    {
+      "task": "position_hold",
+      "arm": "semantic_no_rule",
+      "encoding": "xy_waypoints",
+      "preferred_selection_score": 74.73958333333333,
+      "violation_rate": 0.5208333333333334,
+      "rule_pair_score": 50.0
+    },
+    {
+      "task": "position_hold",
+      "arm": "semantic_rule",
+      "encoding": "interval_maxima",
+      "preferred_selection_score": 96.09375,
+      "violation_rate": 0.0,
+      "rule_pair_score": 92.70833333333333
+    },
+    {
+      "task": "position_hold",
+      "arm": "semantic_rule",
+      "encoding": "xy_waypoints",
+      "preferred_selection_score": 92.70833333333333,
+      "violation_rate": 2.0833333333333335,
+      "rule_pair_score": 85.41666666666667
+    },
+    {
+      "task": "temporal",
+      "arm": "ce_no_rule",
+      "encoding": "candidate_scalars",
+      "preferred_selection_score": 50.138888888888886,
+      "violation_rate": 17.916666666666668,
+      "rule_pair_score": 1.9444444444444444
+    },
+    {
+      "task": "temporal",
+      "arm": "ce_rule",
+      "encoding": "candidate_scalars",
+      "preferred_selection_score": 98.47222222222223,
+      "violation_rate": 1.1111111111111112,
+      "rule_pair_score": 96.94444444444444
+    },
+    {
+      "task": "temporal",
+      "arm": "semantic_no_rule",
+      "encoding": "candidate_scalars",
+      "preferred_selection_score": 50.0,
+      "violation_rate": 0.0,
+      "rule_pair_score": 0.0
+    },
+    {
+      "task": "temporal",
+      "arm": "semantic_rule",
+      "encoding": "candidate_scalars",
+      "preferred_selection_score": 97.63888888888889,
+      "violation_rate": 0.8333333333333334,
+      "rule_pair_score": 95.27777777777779
+    }
+  ],
+  "pretrained": [
+    {
+      "model": "2b",
+      "task": "temporal",
+      "encoding": "candidate_scalars",
+      "rows": 240,
+      "pairs": 120,
+      "preferred_selection_score": 0.0,
+      "violation_rate": 0.0,
+      "invalid_rate": 100.0,
+      "token_cap_rate": 100.0,
+      "rule_pair_score": 0.0
+    },
+    {
+      "model": "2b",
+      "task": "position_hold",
+      "encoding": "interval_maxima",
+      "rows": 128,
+      "pairs": 64,
+      "preferred_selection_score": 0.0,
+      "violation_rate": 0.0,
+      "invalid_rate": 100.0,
+      "token_cap_rate": 100.0,
+      "rule_pair_score": 0.0
+    },
+    {
+      "model": "2b",
+      "task": "position_hold",
+      "encoding": "xy_waypoints",
+      "rows": 128,
+      "pairs": 64,
+      "preferred_selection_score": 0.0,
+      "violation_rate": 0.0,
+      "invalid_rate": 100.0,
+      "token_cap_rate": 100.0,
+      "rule_pair_score": 0.0
+    },
+    {
+      "model": "8b",
+      "task": "temporal",
+      "encoding": "candidate_scalars",
+      "rows": 240,
+      "pairs": 120,
+      "preferred_selection_score": 27.083333333333332,
+      "violation_rate": 68.75,
+      "invalid_rate": 0.0,
+      "token_cap_rate": 0.0,
+      "rule_pair_score": 0.8333333333333334
+    },
+    {
+      "model": "8b",
+      "task": "position_hold",
+      "encoding": "interval_maxima",
+      "rows": 128,
+      "pairs": 64,
+      "preferred_selection_score": 70.3125,
+      "violation_rate": 7.03125,
+      "invalid_rate": 0.0,
+      "token_cap_rate": 0.0,
+      "rule_pair_score": 51.5625
+    },
+    {
+      "model": "8b",
+      "task": "position_hold",
+      "encoding": "xy_waypoints",
+      "rows": 128,
+      "pairs": 64,
+      "preferred_selection_score": 35.9375,
+      "violation_rate": 33.59375,
+      "invalid_rate": 20.3125,
+      "token_cap_rate": 20.3125,
+      "rule_pair_score": 23.4375
+    }
+  ],
+  "fault_aggregate_record": {
+    "cases": 384,
+    "valid_cases": 48,
+    "valid_accepted": 48,
+    "supported_errors": 288,
+    "supported_detected": 288,
+    "supported_kernel_detected": 192,
+    "shared_source_errors": 48,
+    "shared_source_missed": 48,
+    "unknown_cases": 0,
+    "probe_queries": 7392,
+    "by_kind": {
+      "valid": {
+        "cases": 48,
+        "detected": 0,
+        "kernel_detected": 0,
+        "layer_flags": {
+          "structural": 0,
+          "consistency": 0,
+          "logic_rule": 0,
+          "evidence": 0,
+          "sentence": 0
+        }
+      },
+      "duration_change": {
+        "cases": 48,
+        "detected": 48,
+        "kernel_detected": 48,
+        "layer_flags": {
+          "structural": 0,
+          "consistency": 0,
+          "logic_rule": 48,
+          "evidence": 48,
+          "sentence": 0
+        }
+      },
+      "reverse_comparison": {
+        "cases": 48,
+        "detected": 48,
+        "kernel_detected": 48,
+        "layer_flags": {
+          "structural": 0,
+          "consistency": 0,
+          "logic_rule": 48,
+          "evidence": 0,
+          "sentence": 0
+        }
+      },
+      "delete_release": {
+        "cases": 48,
+        "detected": 48,
+        "kernel_detected": 48,
+        "layer_flags": {
+          "structural": 0,
+          "consistency": 0,
+          "logic_rule": 48,
+          "evidence": 0,
+          "sentence": 0
+        }
+      },
+      "unit_error": {
+        "cases": 48,
+        "detected": 48,
+        "kernel_detected": 48,
+        "layer_flags": {
+          "structural": 48,
+          "consistency": 0,
+          "logic_rule": 0,
+          "evidence": 0,
+          "sentence": 0
+        }
+      },
+      "cnl_duration": {
+        "cases": 48,
+        "detected": 48,
+        "kernel_detected": 0,
+        "layer_flags": {
+          "structural": 0,
+          "consistency": 0,
+          "logic_rule": 0,
+          "evidence": 0,
+          "sentence": 48
+        }
+      },
+      "cnl_negation": {
+        "cases": 48,
+        "detected": 48,
+        "kernel_detected": 0,
+        "layer_flags": {
+          "structural": 0,
+          "consistency": 0,
+          "logic_rule": 0,
+          "evidence": 0,
+          "sentence": 48
+        }
+      },
+      "shared_source_error": {
+        "cases": 48,
+        "detected": 0,
+        "kernel_detected": 0,
+        "layer_flags": {
+          "structural": 0,
+          "consistency": 0,
+          "logic_rule": 0,
+          "evidence": 0,
+          "sentence": 0
+        }
+      }
+    }
+  },
+  "composition_aggregate_record": {
+    "cases": 176,
+    "full_sat": 118,
+    "full_unsat": 58,
+    "queries": 896,
+    "unknown": 0,
+    "mismatches": 0,
+    "sat_witnesses": 832,
+    "invalid_witnesses": 0,
+    "all_components_sat": 176,
+    "component_only_detected": 0,
+    "pairwise_detected": 46,
+    "minimal_conflict_groups": 58,
+    "pairwise_sat_full_unsat": 12
+  },
+  "scope": "Behavior metrics recomputed from predictions and independent integer oracles; checker aggregates read and checked here. Rerun checker scripts to validate SMT results."
+}

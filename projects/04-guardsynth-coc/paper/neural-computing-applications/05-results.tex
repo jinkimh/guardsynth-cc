@@ -1,0 +1,604 @@
+% !TeX root = ncaa-manuscript-en.tex
+\section{Results}\label{sec:results}
+
+The behavioral track first tests training with constraints under common-CNL
+evaluation and training-matched evaluation
+(Sections~\ref{sec:results-training} and~\ref{sec:results-semantic}), then
+examines continuation training (Section~\ref{sec:results-continuation}).
+The six-task and rule-pair results assess use of the supplied rule; reasoning,
+wording, value, and image controls examine alternative explanations and
+robustness. The specification track separately reports fault detection and
+candidate-verdict correspondence (Section~\ref{sec:results-checks}). A separate diagnostic tests composition
+consistency (Section~\ref{sec:results-composition}).
+Section~\ref{sec:results-summary} brings the two tracks together.
+
+Answer-extraction failures are zero in the fresh-adapter, continuation,
+regression, six-task, robustness, reasoning-prompt, and exploratory
+image/wording evaluations. The pretrained-model evaluations have nonzero
+failure rates, reported below and in Supplementary Section S7.
+
+\subsection{Constraint Training with Identical Evaluation Inputs}\label{sec:results-training}
+
+The fresh-adapter study uses two evaluations: inputs matching each training
+condition and a common-CNL evaluation for every adapter
+(Section~\ref{sec:setup-comparisons}). This subsection emphasizes the latter,
+which fixes evaluation information. Section~\ref{sec:results-semantic} reports
+the same adapters with training-matched inputs, keeping the effects of input
+information and loss design distinct.
+
+\noindent\textbf{Same initialization and evaluation inputs.}
+Table~\ref{tab:results-common-rule} compares the four fresh-adapter conditions;
+individual-seed values are given in Supplementary Section S6. In the CE-only
+comparison, the conditions differ in whether constraint sentences appear in
+training. With the same CNL at evaluation, CoC-only-trained adapters violate
+the rule in 17.92\% of pedestrian-entry predictions and 6.51\% and 6.25\% of
+position-hold predictions with interval maxima and XY coordinates, respectively.
+Training with CNL reduces these rates to 1.11\%, 0.00\%, and 1.56\%.
+Preferred-selection score increases from 50.14\%, 78.39\%, and 75.52\% to 98.47\%, 96.09\%,
+and 93.49\%. With initialization and evaluation information controlled, these
+differences support the benefit of including constraint text during training.
+
+\begin{table}[tbp]
+\caption{Fresh adapters with identical CNL at evaluation. Cells show preferred-selection score
+(first line) and constraint violation rate (second line), in percent, as mean $\pm$
+standard deviation over three seeds. Column labels describe training inputs.}
+\label{tab:results-common-rule}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}Xcccc@{}}
+\toprule
+Task & \shortstack{CoC\\CE} & \shortstack{CoC\\CE + semantic} &
+\shortstack{CoC + CNL\\CE} & \shortstack{CoC + CNL\\CE + semantic}\\
+\midrule
+Pedestrian entry & \shortstack{$50.14\pm1.46$\\$17.92\pm8.91$} &
+\shortstack{$50.00\pm0.00$\\$0.00\pm0.00$} &
+\shortstack{$98.47\pm1.20$\\$1.11\pm1.58$} &
+\shortstack{$97.64\pm2.14$\\$0.83\pm1.44$}\\[5pt]
+Position hold: maxima & \shortstack{$78.39\pm1.97$\\$6.51\pm3.52$} &
+\shortstack{$75.52\pm0.90$\\$0.26\pm0.45$} &
+\shortstack{$96.09\pm1.35$\\$0.00\pm0.00$} &
+\shortstack{$96.09\pm2.34$\\$0.00\pm0.00$}\\[5pt]
+Position hold: XY & \shortstack{$75.52\pm0.45$\\$6.25\pm2.71$} &
+\shortstack{$74.74\pm0.45$\\$0.52\pm0.90$} &
+\shortstack{$93.49\pm1.19$\\$1.56\pm0.78$} &
+\shortstack{$92.71\pm3.61$\\$2.08\pm2.96$}\\
+\botrule
+\end{tabularx}
+\end{table}
+
+CoC-only-trained preferred-selection score remains close to the rule-free input ceilings of
+50\% for pedestrian entry and 75\% for position holding, even after CNL is
+provided at evaluation. These ceilings apply when rule text is absent
+(Section~\ref{sec:setup-comparisons}); they are not mathematical upper bounds
+for the common-CNL inputs. Rule-pair accuracy also separates the CE-only
+conditions: CoC-only-trained adapters reach 1.94\%, 56.77\%, and 51.56\%,
+whereas CNL-trained adapters reach 96.94\%, 92.71\%, and 86.98\%. In these
+checkpoints, training with constraint text supports stronger rule-dependent
+selection than inference-time rule provision alone.
+
+\noindent\textbf{VLMs without task-specific training.}
+Table~\ref{tab:results-pretrained} reports Qwen3-VL-2B-Instruct and
+Qwen3-VL-8B-Instruct with the same CoC and CNL inputs but no task-specific
+training. Panel (a) reports selection scores together with answer-extraction
+failures. At the prespecified 12-token limit, every pretrained 2B response
+reaches the cap and yields no extractable label. Panel (b) reports the
+post-hoc 512-token evaluation on the three fresh-adapter tasks; extraction
+failures remain frequent. Full results and cap-hit counts are reported in
+Supplementary Section S7. The 8B model's primary constraint violation rate
+is 68.75\% for pedestrian entry, 25.00--50.00\% for the static tasks and
+stopping, and 7.03\% and 33.59\% for the two position-hold representations.
+Lane changing has no observed violations but 75.00\% preferred-selection score.
+
+Only XY-coordinate responses hit the 8B 12-token limit (26/128). With 512
+tokens, pedestrian-entry preferred-selection score / violation rate is
+27.50\% / 66.67\%, and XY position holding is 36.72\% / 34.38\%, with
+17.19\% extraction failures. Other 8B task scores are unchanged.
+
+\begin{table}[tbp]
+\caption{Pretrained 2B and 8B and CNL-trained 2B with CoC + CNL inputs.
+(a) Preferred-selection score / constraint violation rate / answer-extraction
+failure rate (\%). All use the prespecified 12-token limit; pretrained models
+give one greedy response per input, and trained scores are three-seed means.
+(b) Post-hoc 512-token results for pretrained 2B on the fresh-adapter tasks.}
+\label{tab:results-pretrained}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lccc@{}}
+\toprule
+\multicolumn{4}{@{}l}{\emph{(a) Prespecified 12-token evaluation}}\\[3pt]
+Task & 2B, no task training & 8B, no task training & 2B, CNL training\\
+\midrule
+Maximum speed & 0.00 / 0.00 / 100.00 & 60.42 / 39.58 / 0.00 & 100.00 / 0.00 / 0.00\\
+Minimum clearance & 0.00 / 0.00 / 100.00 & 54.17 / 45.83 / 0.00 & 100.00 / 0.00 / 0.00\\
+Minimum entry delay & 0.00 / 0.00 / 100.00 & 50.00 / 50.00 / 0.00 & 100.00 / 0.00 / 0.00\\
+Pedestrian entry & 0.00 / 0.00 / 100.00 & 27.08 / 68.75 / 0.00 & 98.47 / 1.11 / 0.00\\
+Stopping & 0.00 / 0.00 / 100.00 & 50.00 / 25.00 / 0.00 & 100.00 / 0.00 / 0.00\\
+Lane change & 0.00 / 0.00 / 100.00 & 75.00 / 0.00 / 0.00 & 97.92 / 0.00 / 0.00\\
+Position hold: maxima & 0.00 / 0.00 / 100.00 & 70.31 / 7.03 / 0.00 & 96.09 / 0.00 / 0.00\\
+Position hold: XY & 0.00 / 0.00 / 100.00 & 35.94 / 33.59 / 20.31 & 93.49 / 1.56 / 0.00\\
+\botrule
+\end{tabular*}
+\par\medskip
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lccc@{}}
+\toprule
+\multicolumn{4}{@{}l}{\emph{(b) Pretrained 2B, post-hoc 512-token evaluation (\%)}}\\[3pt]
+Task & Preferred-selection score & Violation rate & Extraction failures\\
+\midrule
+Pedestrian entry & 10.83 & 11.25 & 65.42\\
+Position hold: maxima & 14.84 & 0.00 & 79.69\\
+Position hold: XY & 7.03 & 7.03 & 75.78\\
+\botrule
+\end{tabular*}
+\par\smallskip\raggedright
+Unextractable answers receive zero preferred-selection credit and count as
+neither violations nor admissible choices; the pretrained 2B model's zero
+12-token violation rate therefore does not indicate compliance. Admissible
+lower-scoring choices also receive zero preferred-selection credit, so the
+three rates need not sum to 100\%. Trained pedestrian-entry and position-hold
+rows use fresh CE adapters; other trained rows use six-task P2 checkpoints.
+This is not a matched-training comparison across model sizes. Panel (b)
+changes the output limit and extraction protocol (Supplementary Section S7).
+\end{table}
+
+The comparison identifies limitations of inference-only rule provision on
+these inputs; it does not isolate a model-size effect. Because the pretrained
+2B evaluation has substantial extraction failures even at 512 tokens, these
+data also cannot isolate whether CoC-only fine-tuning reduced any prior
+rule-following ability.
+
+\subsection{Constraints in the Loss and in the Input}\label{sec:results-semantic}
+
+Table~\ref{tab:results-semantic} evaluates the four fresh-adapter conditions
+with inputs matching training. Without rule text, semantic loss reduces
+pedestrian-entry violations from 19.58\% to 0.00\%, and position-hold
+violations from 10.94\% to 1.56\% with maxima and 0.52\% with XY coordinates.
+However, preferred-selection score stays near the rule-free ceilings of 50\% and 75\%
+(Section~\ref{sec:setup-comparisons}), and rule-pair accuracy remains 0\%
+or approximately 50\%.
+
+Half the position-hold pairs share a reference label, permitting up to 75\%
+preferred-selection score without distinguishing their rules. Reduced violations therefore do
+not by themselves establish rule-dependent choice. The results are consistent
+with more conservative selections that are admissible under either rule,
+rather than improved discrimination between rules. Providing CNL only at
+evaluation does not close the preferred-selection score gap for the semantic-only-trained
+condition (Table~\ref{tab:results-common-rule}).
+
+\begin{table}[tbp]
+\caption{Fresh adapters evaluated with their training input type. Cells show
+preferred-selection score and constraint violation rate (\%, mean $\pm$ seed standard deviation) on the
+first two lines; parentheses give rule-pair accuracy (\%). CE denotes
+cross-entropy loss; semantic denotes the additional constraint loss defined
+in Eq.~\eqref{eq:setup-semantic-loss}.}
+\label{tab:results-semantic}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}Xcccc@{}}
+\toprule
+Task & \begin{tabular}[t]{@{}c@{}}CoC\\CE\end{tabular} &
+\begin{tabular}[t]{@{}c@{}}CoC\\CE + semantic\end{tabular} &
+\begin{tabular}[t]{@{}c@{}}CoC + CNL\\CE\end{tabular} &
+\begin{tabular}[t]{@{}c@{}}CoC + CNL\\CE + semantic\end{tabular}\\
+\midrule
+Pedestrian entry & \begin{tabular}[t]{@{}c@{}}$49.86\pm0.24$\\$19.58\pm6.14$\\(0.00)\end{tabular} &
+\begin{tabular}[t]{@{}c@{}}$50.00\pm0.00$\\$0.00\pm0.00$\\(0.00)\end{tabular} &
+\begin{tabular}[t]{@{}c@{}}$98.47\pm1.20$\\$1.11\pm1.58$\\(96.94)\end{tabular} &
+\begin{tabular}[t]{@{}c@{}}$97.64\pm2.14$\\$0.83\pm1.44$\\(95.28)\end{tabular}\\[5pt]
+Position hold: maxima & \begin{tabular}[t]{@{}c@{}}$75.00\pm0.00$\\$10.94\pm1.35$\\(50.00)\end{tabular} &
+\begin{tabular}[t]{@{}c@{}}$74.48\pm0.90$\\$1.56\pm1.56$\\(49.48)\end{tabular} &
+\begin{tabular}[t]{@{}c@{}}$96.09\pm1.35$\\$0.00\pm0.00$\\(92.71)\end{tabular} &
+\begin{tabular}[t]{@{}c@{}}$96.09\pm2.34$\\$0.00\pm0.00$\\(92.71)\end{tabular}\\[5pt]
+Position hold: XY & \begin{tabular}[t]{@{}c@{}}$72.66\pm1.35$\\$10.94\pm2.71$\\(48.44)\end{tabular} &
+\begin{tabular}[t]{@{}c@{}}$74.74\pm0.45$\\$0.52\pm0.90$\\(50.00)\end{tabular} &
+\begin{tabular}[t]{@{}c@{}}$93.49\pm1.19$\\$1.56\pm0.78$\\(86.98)\end{tabular} &
+\begin{tabular}[t]{@{}c@{}}$92.71\pm3.61$\\$2.08\pm2.96$\\(85.42)\end{tabular}\\
+\botrule
+\end{tabularx}
+\end{table}
+
+With CNL training inputs, adding semantic loss gives no consistent further
+benefit: preferred-selection score changes by $-0.83$ to $0.00$ percentage points and violation
+rate by $-0.28$ to $+0.52$ points. These three-seed estimates do not establish
+equivalence between the losses. In this setting, the loss penalty mainly
+reduces violations without supplying the rule-dependent input distinction,
+whereas training with rule text supports that distinction.
+
+\subsection{Position-Hold Continuation}\label{sec:results-continuation}
+
+The continuation study gives a similar direction of benefit under identical
+evaluation inputs (Table~\ref{tab:results-continuation};
+Section~\ref{sec:setup-comparisons}). Before position-hold training, adapters
+with constraint-bearing histories already make fewer violations when
+candidates are represented by interval maxima. For the
+2.0 s rule with interval maxima, P0, P1, and P2 violate the rule in 64, 23,
+and 20 of 192 predictions. After continuation, the counts are 22 (11.46\%),
+1 (0.52\%), and 0. P2 preferred-selection score rises from 81.77\% to 98.44\%, and P1 reaches
+the same preferred-selection score with one violation. Every condition receives the same rule
+at evaluation, so the differences cannot be attributed to withholding it
+from P0 at that stage. They reflect the compared training histories, including
+whether constraint sentences were supplied at both training stages.
+
+\begin{table}[tbp]
+\caption{Position-hold continuation: strict violation counts and preferred-selection score
+(\%) before $\to$ after training. Each cell summarizes 192 predictions (64 rows
+over three seeds). Evaluation inputs are identical across conditions.}
+\label{tab:results-continuation}
+\centering\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lcccccc@{}}
+\toprule
+& \multicolumn{3}{c}{Violations} & \multicolumn{3}{c}{Preferred-selection score (\%)}\\
+Representation, hold & P0 & P1 & P2 & P0 & P1 & P2\\
+\midrule
+Maxima, 0.5 s & $29\to0$ & $13\to1$ & $7\to1$ & $47.92\to67.19$ & $56.25\to89.58$ & $52.08\to94.79$\\
+Maxima, 2.0 s & $64\to22$ & $23\to1$ & $20\to0$ & $63.02\to86.98$ & $85.94\to98.44$ & $81.77\to98.44$\\
+XY, 0.5 s & $56\to1$ & $49\to5$ & $53\to3$ & $47.92\to61.98$ & $51.56\to81.25$ & $50.00\to90.63$\\
+XY, 2.0 s & $121\to23$ & $126\to16$ & $115\to4$ & $32.81\to88.02$ & $33.85\to91.15$ & $39.58\to97.92$\\
+\botrule
+\end{tabular*}
+\end{table}
+
+With XY coordinates and the 2.0 s rule, P2 preferred-selection score rises from 39.58\% to
+97.92\%, but four violations remain. Preferred-selection score and constraint compliance are distinct:
+under the 0.5 s rule with interval maxima, P0 makes no violations yet reaches
+only 67.19\% preferred-selection score, often selecting admissible candidates with lower progress.
+
+On the new position-hold test set, a 0.01 m tolerance leaves violation counts
+unchanged for both the fresh-adapter and continuation studies: every prohibited
+candidate exceeds the radius by at least 22 mm. The tolerance does affect the
+separate regression diagnostic, as reported in Supplementary Section S11.
+
+The earlier regression diagnostic remains difficult after training. Its
+XY/2.0 s stratum still yields 106, 79, and 77 violations out of
+192 for P0, P1, and P2. The smallest prohibited overshoot is 1 mm in that
+diagnostic, compared with 22 mm in the new primary test. The sets are not
+pooled; strict and tolerance-based regression results are reported separately
+in Supplementary Section S11. The new test supports improved synthetic
+selection, with remaining sensitivity to representation and small boundary
+overshoots.
+
+\subsection{Use of Supplied Constraints Across Six Tasks}\label{sec:results-six-tasks}
+
+Table~\ref{tab:results-six-tasks} reports the six-task comparison. P0 lacks rule
+information and remains near its design-imposed 50\% ceiling. Both P1 and P2
+have higher preferred-selection scores and lower constraint violation rates in every task. Their preferred-selection scores
+range from 96.81\% to 100\%, with violations at or below 1.39\%.
+Pedestrian-entry preferred-selection score exceeds P0 by 46.94 and 48.19 percentage points for
+P1 and P2, while violations decrease by 17.78 and 18.33 points. P1 and P2 tie
+on the three static tasks and stopping.
+
+\begin{table}[tbp]
+\caption{Six-task preferred-selection score / constraint violation rate (\%), three-seed means. These
+checkpoints are distinct from the fresh-adapter study in
+Tables~\ref{tab:results-common-rule} and~\ref{tab:results-semantic}.}
+\label{tab:results-six-tasks}
+\centering\footnotesize
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lccc@{}}
+\toprule
+Task & P0 & P1 & P2\\
+\midrule
+Maximum speed & 50.00 / 24.31 & 100.00 / 0.00 & 100.00 / 0.00\\
+Minimum clearance & 50.00 / 24.31 & 100.00 / 0.00 & 100.00 / 0.00\\
+Minimum entry delay & 50.00 / 24.31 & 100.00 / 0.00 & 100.00 / 0.00\\
+Pedestrian entry & 49.86 / 19.17 & 96.81 / 1.39 & 98.06 / 0.83\\
+Stopping & 50.00 / 23.61 & 100.00 / 0.00 & 100.00 / 0.00\\
+Lane change & 50.00 / 38.19 & 100.00 / 0.00 & 97.92 / 0.00\\
+\botrule
+\end{tabular*}
+\end{table}
+
+P2 lane-change errors select admissible but lower-progress candidates;
+constraint-compliant completion is 100\%. P2 pedestrian-entry constraint-compliant completion is 99.17\%.
+Supplying constraints in both training and evaluation inputs raises every task
+to near-ceiling preferred-selection score. Individual-seed values are given in Supplementary
+Section S6.
+
+\subsection{Selection under Rule Changes}\label{sec:results-association}
+
+Changing the rule while holding scene and candidates fixed tests whether
+choices change accordingly. Table~\ref{tab:results-association} reports
+rule-pair accuracy: P0 reaches 0\% in all three families, whereas P1 and P2
+reach 93.61--100\% and 96.11--100\%. Constraint-conditioned models change their
+choices with the rule despite unchanged visual input; P0's result reflects its
+missing rule information.
+
+In one recorded pedestrian-entry case, clearance
+occurs at 11.0 s and a 1.5 s wait permits entry from 12.5 s; P0 selects entry
+at 11.5 s, whereas P1 and P2 select the boundary entry at 12.5 s. This and a
+P2 violation case are described in Supplementary Section S9.
+
+\begin{table}[tbp]
+\caption{Six-task rule-pair accuracy (\%), three-seed means. Static and maneuver values aggregate
+their subtasks.}
+\label{tab:results-association}
+\centering\footnotesize
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lccc@{}}
+\toprule
+Family & P0 & P1 & P2\\
+\midrule
+Pedestrian entry & 0.00 & 93.61 & 96.11\\
+Static & 0.00 & 100.00 & 100.00\\
+Maneuver & 0.00 & 100.00 & 97.92\\
+\botrule
+\end{tabular*}
+\end{table}
+
+\subsection{General Reasoning-Prompt Controls}\label{sec:results-reasoning}
+
+With the rule omitted, general reasoning prompts leave P0 preferred-selection score and
+rule-pair accuracy unchanged
+(Section~\ref{sec:setup-additional}). Across the 480 primary-test rows, P0,
+Zero-shot CoT, and Plan-and-Solve all reach 49.93\% preferred-selection score, with violation
+rates of 23.06\%, 22.64\%, and 22.71\%, and 0\% rule-pair accuracy in every
+family. All 546 unique Zero-shot CoT first-stage outputs and 498 of 546 Plan-and-Solve
+outputs are short label strings, so the prompts do not establish multistep
+reasoning in these label-trained checkpoints. Because identical P0 inputs carry
+conflicting reference labels under different rules, no fixed output can exceed
+50\% preferred-selection score. Detailed outputs are given in Supplementary Section S8.
+
+\subsection{Representation, Wording, and Unseen Values}\label{sec:results-robustness}
+
+Table~\ref{tab:results-robustness} reports changed wording and numerical values.
+Paraphrase rows retain the primary-test cases and rules, so differences
+measure wording sensitivity rather than performance on additional independent
+scenes. Both constraint conditions substantially outperform P0 on unseen
+values. For pedestrian-entry paraphrases, P2 retains 96.94\% preferred-selection score and
+1.25\% violations, compared with 90.56\% and 5.00\% for P1.
+
+\begin{table}[tbp]
+\caption{Changed wording and values: preferred-selection score / constraint violation rate (\%),
+three-seed means. Paraphrases reuse primary-test cases.}
+\label{tab:results-robustness}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lccc@{}}
+\toprule
+Evaluation & P0 & P1 & P2\\
+\midrule
+Pedestrian entry: primary & 49.86 / 19.17 & 96.81 / 1.39 & 98.06 / 0.83\\
+\quad Paraphrase & 49.86 / 19.17 & 90.56 / 5.00 & 96.94 / 1.25\\
+\quad Unseen wait & 49.86 / 18.47 & 96.67 / 2.22 & 96.67 / 1.53\\[3pt]
+Static: primary & 50.00 / 24.31 & 100.00 / 0.00 & 100.00 / 0.00\\
+\quad Paraphrase & 50.00 / 24.31 & 93.29 / 0.00 & 80.32 / 7.87\\
+\quad Unseen values & 50.00 / 22.92 & 99.54 / 0.00 & 97.22 / 0.23\\[3pt]
+Maneuver: primary & 50.00 / 30.90 & 100.00 / 0.00 & 98.96 / 0.00\\
+\quad Paraphrase & 50.00 / 30.90 & 100.00 / 0.00 & 97.92 / 2.08\\
+\quad Unseen values & 50.00 / 30.90 & 100.00 / 0.00 & 98.96 / 0.00\\
+\quad Combined difficulty & 50.00 / 30.21 & 94.10 / 0.69 & 91.32 / 1.04\\
+\botrule
+\end{tabular*}
+\end{table}
+
+Static paraphrases reverse the ordering: P2 preferred-selection score falls from 100\% to
+80.32\%, with 7.87\% violations, while P1 reaches 93.29\% with no violations.
+Both the favorable pedestrian-entry result and the unfavorable static result
+are needed to characterize the CNL interface. On the combined maneuver set,
+P1 reaches 94.10\% preferred-selection score and 0.69\% violations, compared with 91.32\% and
+1.04\% for P2. P2 rule-pair accuracy falls from 97.92\% to 82.64\%.
+The combined test cannot identify whether negation, clause order, equality,
+or units individually cause the errors.
+
+A smaller exploratory diagnostic (24 rows per wording and seed) shows the same
+fragility: a second paraphrase lowers P1 and P2 preferred-selection score to 76.39\% and 77.78\%
+(Supplementary Section S10).
+
+Alternative expressions of the same pedestrian-entry rule also perform well
+on the primary test (individual seeds in Supplementary Section S6). An
+alternative natural-language guard matches P2 preferred-selection score at
+98.06\% (1.11\% violations), and logical text, a model-input control rather
+than a solver or translator output, reaches 99.17\% (0.14\%). On unseen waits,
+the natural-language guard reaches 98.61\% (0.56\%), whereas logical-text
+preferred-selection score falls to 81.25\% despite only 0.83\% violations.
+Low violation does not imply selecting the highest-progress admissible action.
+High primary-test scores thus hold across several rule representations,
+while robustness varies with wording and unseen values.
+
+\subsection{Dependence on Visual Input}\label{sec:results-visual}
+
+Image interventions test whether selections change when visual input is
+removed or conflicts with the retained case
+(Section~\ref{sec:setup-additional}). Although candidate values are supplied
+in text, choices depend on the image (three-seed means; full results in
+Supplementary Section S10). P2 preferred-selection score against the original
+reference falls from 98.61\% to 76.39\% with a blank image and 79.17\% with the
+redrawn image, and its choice changes on 25.00\% and 19.44\% of the paired
+cases. P1 falls from 100\% to 81.94\% and 87.50\%, with choice changes on
+18.06\% and 12.50\%; P0 stays at 50\%.
+
+P2 violations remain at 1.39\% in every image condition. Preferred-selection score loss
+therefore does not imply more prohibited choices; changes to admissible but
+lower-progress candidates also contribute. The 24 rows comprise three base case configurations, each paired with two
+waiting rules and four label rotations (Supplementary Section S10). With
+three training seeds, this is an exploratory input-dependence diagnostic.
+
+\subsection{Specification Checking}\label{sec:results-checks}
+
+Table~\ref{tab:results-faults} reports fault injection into the two
+specifications used for learning (protocol in Section~\ref{sec:method-checks}).
+All 48 valid cases pass, and the full suite detects all 288 supported faults:
+the structural, satisfiability, and logic--rule checks detect 192, and sentence
+correspondence detects the remaining 96 CNL faults. No fault made a
+specification unsatisfiable, so the satisfiability check flagged none. An error
+can trigger several layers, so layer counts are not summed. None of the 7,392
+probe queries returned UNKNOWN. All 48 jointly wrong evidence--specification
+controls remain undetected. If the rule record and its specification field
+change to the same wrong value, evidence correspondence and the logic--rule comparison
+still agree and the specification remains satisfiable, so detecting such errors
+requires evidence independent of the supplied record. An earlier evaluation on
+a separate pedestrian-entry specification shows the same correspondence
+between fault types and detecting layers (Supplementary Section S4).
+
+\begin{table}[tbp]
+\caption{Fault injection into the specifications used for learning. Each row
+has one case per base context (24 per task). Counts are accepted cases for
+valid specifications and detected cases otherwise; they are cases, not
+independent scenes. Detecting-layer names abbreviate the five checks in
+Section~\ref{sec:method-checks}.}
+\label{tab:results-faults}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.27\linewidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X cc@{}}
+\toprule
+Case & Injection location & Detecting layer & Entry & Hold\\
+\midrule
+Valid specification & None & None (accepted) & 24/24 & 24/24\\[3pt]
+Changed specification duration & Specification; source unchanged & Logic--rule, evidence & 24/24 & 24/24\\[3pt]
+Reversed comparison & Logical formula & Logic--rule & 24/24 & 24/24\\[3pt]
+Deleted release condition & Logical formula & Logic--rule & 24/24 & 24/24\\[3pt]
+Changed unit & Specification & Structural & 24/24 & 24/24\\[3pt]
+Changed sentence duration & CNL & Sentence & 24/24 & 24/24\\[3pt]
+Changed sentence negation & CNL & Sentence & 24/24 & 24/24\\[3pt]
+Jointly wrong evidence and specification & Source record and specification & Not detected & 0/24 & 0/24\\
+\midrule
+\multicolumn{3}{@{}l}{Supported faults: structural, satisfiability, logic--rule} & 96/144 & 96/144\\[3pt]
+\multicolumn{3}{@{}l}{Supported faults: full suite} & 144/144 & 144/144\\
+\botrule
+\end{tabularx}
+\end{table}
+
+Two further checks use different units from the fault-injection case counts.
+SMT verdicts agree with the independent integer admissibility calculation on
+all 5,376 position-hold candidate checks across training, validation, and test
+(Section~\ref{sec:setup-data}). This measures candidate-level correspondence
+with the supplied rule.
+
+For the pedestrian-entry specification, four wait values (0.5, 1.5, 0.8,
+and 1.8 s) yield 100 queries: four satisfiability and 96 boundary-candidate
+queries. All match their expected verdicts: 76 SAT, 24 UNSAT, and no UNKNOWN.
+These are counted separately from the 7,392 concrete queries in the
+fault-injection evaluation. To illustrate the inclusive boundary, with
+clearance at 11.000 s and a 0.500 s wait, entry at 11.499 s is UNSAT,
+whereas 11.500 s and 11.501 s are SAT.
+
+The checks identify supported disagreements among specifications, logical
+restrictions, sentences, and supplied rules.
+
+\subsection{Constraint-Composition Diagnostic}\label{sec:results-composition}
+
+Table~\ref{tab:results-composition} reports the document-grounded diagnostic
+(Sections~\ref{sec:method-composition} and~\ref{sec:setup-composition}). All 176
+contexts and individual source groups are satisfiable. Joint checks identify
+58 UNSAT and 118 SAT configurations. All 896 subset queries agree with the
+independent feasibility reference, with zero UNKNOWN outcomes; independent
+numeric checks validate all 832 SAT witnesses. These counts cover distinct
+compatibility questions, rather than 58 conflicting real-world policies.
+The 58 UNSAT configurations comprise 22 requirement conflicts (12 three-way
+braking and 10 yellow-interval), 6 objectives already infeasible without the
+delay policy, 22 candidate requests correctly blocked by a source condition,
+and 8 crossings rejected only by the omitted-exception fault.
+
+\begin{table}[tbp]
+\caption{Document-grounded conditions combined with authored states, models,
+objectives, or candidate requests. Counts are diagnostic configurations, not
+independent road scenes. Individual groups are SAT. Pairwise detection counts
+UNSAT full configurations having an UNSAT two-group subset. The exception
+row includes a deliberately faulty transcription and permitted/blocked
+candidate controls.}
+\label{tab:results-composition}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\linewidth}{@{}Xrrrr@{}}
+\toprule
+Composition & Cases & Full SAT & Full UNSAT & Pairwise detected\\
+\midrule
+Suppression + model + stopping goal & 48 & 30 & 18 & 6\\
+Yellow stop/proceed feasibility & 64 & 54 & 10 & 10\\
+Autonomous-driving interlock + candidate & 32 & 17 & 15 & 15\\
+Crossing exception + candidate & 32 & 17 & 15 & 15\\
+\midrule
+Total & 176 & 118 & 58 & 46\\
+\botrule
+\end{tabularx}
+\end{table}
+
+The suppression family contains 12 three-way conflicts with every pair SAT.
+For example, the authored state $v=10$ m/s, $a=5$ m/s$^2$, and $d=15$ m
+combines $t_b\ge1$, $x\ge10t_b+10$, and $x\le15$. Each pair is satisfiable;
+together they are inconsistent. Removing the delay admits stopping at 10 m
+in this simplified model. Six other configurations have an incompatible
+stopping model and objective even without suppression; their minimal groups
+correctly exclude the delay policy. This distinction prevents attributing
+already-infeasible avoidance to a policy interaction. These are hypothetical
+states, not the Tempe collision: NTSB reports that avoidance already exceeded
+ADS braking specifications at emergency recognition~\cite{NTSB2019Tempe}.
+Yellow-interval conflicts arise when neither the stop nor the proceed branch
+is feasible under the nominal model (example in Supplementary Section S13).
+
+All 16 interlock hold controls are SAT, while autonomous-driving requests
+conflict in the 15 states with at least one blocker. With all three Rule 129
+exception conditions true, the faithful encoding accepts a crossing candidate
+and the omitted-exception variant rejects it. Both encodings accept the
+non-crossing candidate; all 16 such controls are SAT. The exception result
+identifies an overly restrictive transcription, not a contradiction in the
+original rule. A single UNSAT verdict for a crossing candidate has the same
+form whether the candidate is correctly blocked or a permission was lost;
+comparing the faithful and omitted-exception encodings on the same candidate
+exposes the lost permission. Thus joint checks, read with explicit source
+roles and this encoding comparison, distinguish incompatible requirements,
+blocked candidates, and a lost permission.
+Supplementary Section S13 reports the earlier 123-case synthetic boundary
+diagnostic separately.
+
+\subsection{Summary of Findings}\label{sec:results-summary}
+
+Table~\ref{tab:results-summary} collects the central contrast. Every condition
+receives the same CoC + CNL inputs at evaluation; only training with constraint
+text yields both few violations and high rule-pair accuracy among the
+conditions shown.
+
+\begin{table}[htb]
+\caption{Central comparison with identical CoC + CNL evaluation inputs:
+preferred-selection score / constraint violation rate / rule-pair accuracy (\%). Fine-tuned rows are
+three-seed means of fresh 2B adapters (Tables~\ref{tab:results-common-rule}
+and~\ref{tab:results-semantic}; Supplementary Section S6); pretrained rows use the prespecified 12-token
+limit (Table~\ref{tab:results-pretrained}).}
+\label{tab:results-summary}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lccc@{}}
+\toprule
+Training & Pedestrian entry & Hold: maxima & Hold: XY\\
+\midrule
+\multicolumn{4}{@{}l}{\emph{Rules supplied only at evaluation}}\\
+None (pretrained 2B) & 0.00 / 0.00 / 0.00\textsuperscript{a} & 0.00 / 0.00 / 0.00\textsuperscript{a} & 0.00 / 0.00 / 0.00\textsuperscript{a}\\
+CoC, CE & 50.14 / 17.92 / 1.94 & 78.39 / 6.51 / 56.77 & 75.52 / 6.25 / 51.56\\
+CoC, CE + semantic loss & 50.00 / 0.00 / 0.00 & 75.52 / 0.26 / 51.56 & 74.74 / 0.52 / 50.00\\
+None (pretrained 8B) & 27.08 / 68.75 / 0.83 & 70.31 / 7.03 / 51.56 & 35.94 / 33.59 / 23.44\\[2pt]
+\multicolumn{4}{@{}l}{\emph{Constraint text supplied during training}}\\
+CoC + CNL, CE & \textbf{98.47 / 1.11 / 96.94} & \textbf{96.09 / 0.00 / 92.71} &
+\textbf{93.49 / 1.56 / 86.98}\\
+\botrule
+\end{tabular*}
+\par\smallskip\raggedright
+\textsuperscript{a}Answer-extraction failure is 100\% at the 12-token limit;
+the zero violation rate does not indicate compliance (Table~\ref{tab:results-pretrained}).
+8B rule-pair accuracy is taken from the evaluation record (Supplementary Section S7).
+\end{table}
+
+\begin{itemize}
+\item \textbf{Training with constraints.} Relative to CoC-only training, CNL
+training lowers violations from 17.92\% to 1.11\% on pedestrian entry and
+raises rule-pair accuracy from 1.94\% to 96.94\%
+(Section~\ref{sec:results-training}). Continuation training shows the same
+direction: with the 2.0 s rule and interval maxima, P0, P1, and P2 retain 22,
+1, and 0 violations of 192 (Section~\ref{sec:results-continuation}).
+\item \textbf{Alternatives without training-time rule text.} Semantic loss
+removes most violations but leaves preferred-selection score near the rule-free
+input ceilings of 50\% and 75\% under training-matched evaluation; the pretrained 8B model violates the rule in up to 68.75\% of
+predictions; general reasoning prompts leave P0 at 49.93\%
+(Sections~\ref{sec:results-training}, \ref{sec:results-semantic},
+and~\ref{sec:results-reasoning}).
+\item \textbf{Use of supplied constraints.} P1 and P2 reach
+96.81--100\% preferred-selection score on the six tasks, compared with about 50\% for P0,
+and change their choices when the rule changes
+(Sections~\ref{sec:results-six-tasks} and~\ref{sec:results-association}). P2 is
+not uniformly better than P1: on static paraphrases, P2 reaches 80.32\% versus
+93.29\% for P1 (Section~\ref{sec:results-robustness}).
+\item \textbf{Checkability.} The full check suite detects all 288 supported
+faults without rejecting the 48 valid cases, but misses all 48 jointly wrong
+evidence--specification controls (Section~\ref{sec:results-checks}).
+\item \textbf{Composition consistency.} A separate document-grounded diagnostic finds
+58 incompatible configurations despite satisfiable individual groups;
+12 require checking three sources together, beyond pairwise checks
+(Section~\ref{sec:results-composition}).
+\end{itemize}
+
